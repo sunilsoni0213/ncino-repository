@@ -1,7 +1,0 @@
-<apex:page docType="html-5.0"
-	showHeader="false"
-	standardStylesheets="false"
-	sidebar="false"
-	controller="nFORCE.RedirectController"
-	action="{!forwardToConfiguredPage}">
-</apex:page>

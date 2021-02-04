@@ -1,4 +1,0 @@
-<!-- @deprecated -->
-<apex:page standardController="LLC_BI__Loan__c">
-  <c:StatementLauncherUI />
-</apex:page>

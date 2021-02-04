@@ -1,3 +1,0 @@
-<apex:page >
-	<c:MessageHandler messageConfig="LifeCycle.MessageHandler.Configurations.SuccessMessage"/>
-</apex:page>

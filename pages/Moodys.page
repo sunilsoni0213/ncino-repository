@@ -1,3 +1,0 @@
-<apex:page standardController="Account" sidebar="false" showHeader="false">
-<apex:image value="{!$Resource.MainScreen}" height="810" width="1595" />
-</apex:page>

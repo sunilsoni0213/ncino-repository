@@ -1,4 +1,0 @@
-<apex:page standardController="Account" extensions="LLC_BI.CovenantManagerController" showHeader="false" sidebar="false">
-	<nFORCE:Includes enableLifeCycleApp="{!!hideLifecycle}"/>
-	<c:Covenant_Manager contextObjectId="{!objectId}" />
-</apex:page>

@@ -1,8 +1,0 @@
-<apex:page controller="nFORCE.TemplateController"
-	extensions="LLC_BI.DrawAppController,nFORCE.ScreenController">
-
-	<c:ncManageDrawRequest contextId="{!contextObjectId}"
-		summarySectionId="{!summarySectionId}"
-	/>
-
-</apex:page>

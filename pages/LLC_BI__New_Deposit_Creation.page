@@ -1,4 +1,0 @@
-<apex:page controller="LLC_BI.NewDepositForwardingController"
-	action="{!redirect}">
-
-</apex:page>

@@ -1,3 +1,0 @@
-<apex:page standardController="LLC_BI__LoanTeam__c" recordSetVar="Loan_Teams">
-	<c:TeamManagement />
-</apex:page>

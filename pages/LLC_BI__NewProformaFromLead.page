@@ -1,3 +1,0 @@
-<apex:page id="NewProformaFromLead" standardController="Lead">
-    <c:Proforma recordId="{!Lead.Id}"/>
-</apex:page>

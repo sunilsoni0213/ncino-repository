@@ -1,5 +1,0 @@
-<apex:page standardController="Holding__c" extensions="CallYahooQuotesImageController" showheader="false" sidebar="false">
-    <apex:form >
-      <apex:image url="{!imageURL}">
-    </apex:image></apex:form>
-</apex:page>

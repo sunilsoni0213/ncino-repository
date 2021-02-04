@@ -1,3 +1,0 @@
-<apex:page extensions="FormsGenActionController" action="{!navigateToForms}" standardController="LLC_BI__Scenario__c">
-    
-</apex:page>

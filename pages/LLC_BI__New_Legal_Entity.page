@@ -1,2 +1,0 @@
-<apex:page standardController="LLC_BI__Legal_Entities__c" extensions="LLC_BI.NewLegalEntityController" action="{!url}">
-</apex:page>

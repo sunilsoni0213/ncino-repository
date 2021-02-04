@@ -1,3 +1,0 @@
-<apex:page standardController="Opportunity" showHeader="true">
-    <apex:iframe src="https://ncino.invisionapp.com/share/E3RSA5XA8XP" height="1200px" scrolling="true" id="theIframe"/> 
-</apex:page>

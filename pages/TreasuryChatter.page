@@ -1,3 +1,0 @@
-<apex:page standardController="LLC_BI__Treasury_Service__c">
-<chatter:feedWithFollowers entityId="{!LLC_BI__Treasury_Service__c.Id}" />
-</apex:page>

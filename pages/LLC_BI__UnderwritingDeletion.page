@@ -1,4 +1,0 @@
-<apex:page standardController="LLC_BI__Underwriting_Summary__c"
-	extensions="LLC_BI.UnderwritingSummaryController"
-	action="{!deleteSpreads}">
-</apex:page>

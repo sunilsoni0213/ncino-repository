@@ -1,6 +1,0 @@
-<apex:page controller="nCRED.TranslationService"
-  contentType="application/json"
-  readOnly="true"
-  cache="true"
-  expires="600"
->{!pageResponse}</apex:page>

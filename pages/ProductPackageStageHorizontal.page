@@ -1,3 +1,0 @@
-<apex:page standardController="LLC_BI__Product_Package__c" sidebar="true">
-    <c:StageHorizontal objectName="{!IF(isNull($CurrentPage.parameters.app),LLC_BI__Product_Package__c.Name,'')}"/>
-</apex:page>

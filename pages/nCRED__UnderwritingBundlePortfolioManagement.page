@@ -1,3 +1,0 @@
-<!-- @deprecated -->
-<apex:page standardController="LLC_BI__Underwriting_Bundle__c" showHeader="false" sidebar="false">
-</apex:page>

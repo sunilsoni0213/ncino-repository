@@ -1,6 +1,0 @@
-<apex:page controller="nCRED.AttachmentService"
-  contentType="application/json"
-  readOnly="false"
-  cache="false"
-  action="{!performDml}"
->{!pageResponse}</apex:page>

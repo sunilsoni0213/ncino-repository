@@ -1,3 +1,0 @@
-<apex:page standardController="nCBC__Credit_Report__c" extensions="nCBC.VF_CreditReportViewer" action="{!OpenPage}">
-<apex:PageMessages escape="false" />
-</apex:page>

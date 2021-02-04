@@ -1,3 +1,0 @@
-<apex:page sideBar="false" showHeader="true" id="MassAdd">
-    <c:ncMassAdd />
-</apex:page>

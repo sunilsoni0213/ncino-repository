@@ -1,4 +1,0 @@
-<apex:page >
-	<c:AncillaryServicesMaintConfiguration />
-	<c:AncillaryServices />
-</apex:page>

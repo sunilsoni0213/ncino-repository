@@ -1,1 +1,0 @@
-/* Deprecated, define styles in design-system */

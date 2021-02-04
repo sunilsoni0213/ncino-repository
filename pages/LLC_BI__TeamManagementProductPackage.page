@@ -1,3 +1,0 @@
-<apex:page standardController="LLC_BI__Product_Package_Team__c" recordSetVar="Product_Package_Teams">
-	<c:TeamManagement />
-</apex:page>

@@ -1,5 +1,0 @@
-<apex:page >
-	<c:UniversalDocManConfigPortalDataService />
-	<c:UniversalDocManConfigPortalIncludes />
-	<c:UniversalDocManConfigPortal />
-</apex:page>

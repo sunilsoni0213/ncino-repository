@@ -1,3 +1,0 @@
-<apex:page controller="LPReferral" >
-  <iframe src="{!finalDestination}"></iframe>
-</apex:page>

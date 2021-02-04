@@ -1,3 +1,0 @@
-<apex:page controller="nSBA.ApplicationRedirectController" action="{!redirect}">
-
-</apex:page>

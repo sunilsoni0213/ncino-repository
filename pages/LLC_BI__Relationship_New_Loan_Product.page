@@ -1,3 +1,0 @@
-<apex:page standardController="Account" extensions="LLC_BI.RelationshipNewLoanController">
-	<c:Inline_Parent_Redirect destination="{!newLoanLink}" />
-</apex:page>

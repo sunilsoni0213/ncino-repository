@@ -1,4 +1,0 @@
-<apex:page showHeader="false" sidebar="false">
-	<apex:includeScript value="{!URLFOR($Resource.nFORMS__forms_generator)}"/>
-	<c:FormGeneratorAll />
-</apex:page>

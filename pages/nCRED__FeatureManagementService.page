@@ -1,5 +1,0 @@
-<apex:page controller="nCRED.FeatureManagementService"
-  contentType="application/json"
-  readOnly="true"
-  cache="false"
->{!response}</apex:page>

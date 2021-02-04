@@ -1,3 +1,0 @@
-<apex:page standardController="nFORCE__Group__c" extensions="GroupCloneWithRouteGroupsController" action="{!cloneWithRouteGroups}">
-   <apex:pageMessages />
-</apex:page>

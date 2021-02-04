@@ -1,4 +1,0 @@
-<apex:page showHeader="false" sidebar="false">
-    <p>System Properties Editor</p>
-    <!--<c:SystemProperties></c:SystemProperties>-->
-</apex:page>

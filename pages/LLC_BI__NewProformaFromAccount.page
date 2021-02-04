@@ -1,3 +1,0 @@
-<apex:page id="NewProformaFromAccount" standardController="Account">
-    <c:Proforma recordId="{!Account.Id}"/>
-</apex:page>

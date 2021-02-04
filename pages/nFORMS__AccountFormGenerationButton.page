@@ -1,2 +1,0 @@
-<apex:page standardController="Account" extensions="nFORMS.AccountFormGenerationButtonController" action="{!redirect}">
-</apex:page>

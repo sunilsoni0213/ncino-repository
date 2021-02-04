@@ -1,4 +1,0 @@
-<apex:page standardController="LLC_BI__Loan__c" extensions="nSBA.ETranReviewController">
-	<c:Includes enableLifeCycleApp="true" enableBS3Namespace="true"/>
-	<c:ETranReview loanId="{!id}"/>
-</apex:page>

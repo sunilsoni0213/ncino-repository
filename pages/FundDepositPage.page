@@ -1,3 +1,0 @@
-<apex:page >
-    <c:FundDepositComp pageController="FundDepositController"></c:FundDepositComp>
-</apex:page>

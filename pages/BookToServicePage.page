@@ -1,3 +1,0 @@
-<apex:page >
-    <c:BookToService pageController="BookToServiceController"></c:BookToService>
-</apex:page>

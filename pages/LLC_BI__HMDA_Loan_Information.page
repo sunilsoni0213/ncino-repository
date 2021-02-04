@@ -1,3 +1,0 @@
-<apex:page >
-	<apex:include pageName="nFORCE__KoDataGrid"/>
-</apex:page>

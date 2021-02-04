@@ -1,3 +1,0 @@
-<apex:page standardStylesheets="false" docType="html-5.0">
-	<c:StatementLauncherUI />
-</apex:page>

@@ -1,5 +1,0 @@
-<apex:page standardController="LLC_BI__Collateral_Type__c"
-    extensions="LLC_BI.Collateral2ManagementController"
-    action="{!duplicateCurrentDefaultPledgedCollateralEditScreen}">
-    <apex:pageMessages />
-</apex:page>

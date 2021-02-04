@@ -1,6 +1,0 @@
-<apex:page controller="nCRED.LaunchContextService"
-  readOnly="false"
-  action="{!performDml}"
-  cache="false"
-  contentType="application/json"
->{!pageResponse}</apex:page>

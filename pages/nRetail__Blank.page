@@ -1,3 +1,0 @@
-<apex:page showHeader="false" sidebar="false" extensions="nRetail.RetailLoanController" controller="nFORCE.TemplateController">
-
-</apex:page>
