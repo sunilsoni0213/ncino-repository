@@ -1,0 +1,15 @@
+<apex:page showHeader="false"
+	sidebar="false"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.NewCustomerSummaryAppController,LLC_BI.SessionController,nFORCE.ScreenController"
+	>
+
+	<c:NewCustomerSummaryIncludes />
+	<div id="ncNewCustomerSummary">
+		<c:NewCustomerSummaryPartial />
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<new-customer-summary></new-customer-summary>
+		<c:NewCustomerSummaryAppConfiguration />
+	</div>
+
+</apex:page>

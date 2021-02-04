@@ -1,0 +1,83 @@
+<apex:page controller="CBCFLD.ConfigurationController">
+	<c:Includes />
+	
+	<div class="nFlow">
+		<div class="force">
+			<!-- add to template as standard header panel -->
+			<div class="row-fluid">
+				<div class="pull-left">
+					<h4>{!$Label.CBC_Flood_Determination_Configuraton}</h4>
+				</div>
+				<div class="pull-right"></div>
+			</div>
+			<hr class="divider" />
+		</div>
+	
+		<apex:form id="configuration">
+			<div class="force">
+				<apex:outputPanel layout="none" styleClass="messages">
+					<div class="{!messageClass}"><apex:messages /></div>
+				</apex:outputPanel>
+			</div>
+			
+			<apex:pageBlock >
+				<div class="nFlow">
+					<table class="form-entry">
+						<tr>
+							<td class="label">{!$Label.cbcfld__enter_username}</td>
+							<td class="value"><apex:inputText value="{!cbcUsername}" /></td>
+						</tr>
+						<tr>
+							<td class="label">{!$Label.cbcfld__enter_password}</td>
+							<td class="value"><apex:inputSecret redisplay="true" value="{!cbcPassword}"/></td>
+						</tr>
+						<tr>
+							<td class="label">{!$Label.cbcfld__endpoint_url}</td>
+							<td class="value"><apex:inputText value="{!cbcEndpointUrl}"/></td>
+						</tr>
+						<tr>
+							<td class="label">{!$Label.cbcfld__available_request_types}</td>
+							<td class="value"><apex:inputText html-placeholder="{!$Label.cbcfld__eg_request_types}" value="{!requestTypes}"/></td>
+						</tr>
+						<tr>
+							<td class="label">{!$Label.cbcfld__available_product_types}</td>
+							<td class="value"><apex:inputText html-placeholder="{!$Label.cbcfld__eg_product_types}"  value="{!productTypes}"/></td>
+						</tr>
+						<tr>
+							<td class="label">{!$Label.cbcfld__enter_standard_comment}</td>
+							<td class="value"><apex:inputText value="{!standardComment}"/></td>
+						</tr>
+					</table>
+				</div>
+				<apex:pageBlockButtons location="bottom">
+				<apex:actionStatus id="is-form-submission">
+					<apex:facet name="stop">
+						<apex:commandButton styleClass="btn btn-primary" status="is-form-submission"
+						 value="{!$Label.cbcfld__save_configuration}" action="{!save}" reRender="configuration"/>
+					</apex:facet>
+					<apex:facet name="start">
+						<apex:commandButton styleClass="btn btn-primary" status="is-form-submission"
+							 value="{!$Label.cbcfld__processing}" disabled="true" />
+					</apex:facet>
+				</apex:actionStatus>
+				</apex:pageBlockButtons>
+			</apex:pageBlock>
+		</apex:form>
+		
+		<div class="force">
+			<hr class="divider" />
+			<div class="alert alert-info">
+				<ul>
+					<li>
+						<b>{!$Label.Valid_Request_Types}</b> {!$Label.Valid_Request_Type_Options}<br />
+						<p>{!$Label.Request_Type_Help_Hint}</p>
+					</li>
+					<li>
+						<b>{!$Label.Valid_Product_Types}</b> {!$Label.Valid_Product_Type_Options}<br />
+						<p>{!$Label.Product_Type_Help_Hint}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</apex:page>

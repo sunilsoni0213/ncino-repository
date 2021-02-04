@@ -1,0 +1,20 @@
+<apex:page showHeader="false"
+	controller="LLC_BI.ProductLineSelectionAppController"
+	extensions="LLC_BI.SidebarController"
+	sidebar="{!showSidebar}">
+
+	<c:ProductLineSelectionIncludes />
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncProductLineSelection">
+						<c:ProductLineSelectionPartial />
+						<product-line-selection></product-line-selection>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

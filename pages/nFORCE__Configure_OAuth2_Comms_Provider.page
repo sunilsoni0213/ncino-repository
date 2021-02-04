@@ -1,0 +1,28 @@
+<apex:page controller="nFORCE.OAuth2ConfigController"
+	action="{!saveAuthCode}"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false"
+	docType="html-5.0">
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" />
+	<apex:outputPanel layout="block" styleClass="container-fluid">
+		<apex:outputPanel layout="block" styleClass="row">
+			<apex:outputPanel layout="block" styleClass="col-xs-12">&nbsp;</apex:outputPanel>
+		</apex:outputPanel>
+		<apex:outputPanel layout="block" styleClass="row">
+			<apex:outputPanel layout="block" styleClass="col-xs-12">
+				<apex:outputPanel layout="block" styleClass="panel panel-info">
+					<apex:outputPanel layout="block" styleClass="panel-heading">
+						{!$CurrentPage.parameters.providerName+' '+$Label.nforce__org2org_org_details}
+					</apex:outputPanel>
+					<apex:outputPanel layout="block" styleClass="panel-body table-responsive">
+						<apex:messages styleClass="text-danger"/>
+						<apex:form >
+							<c:Configure_OAuth2_Comms_Provider uniqueName="{!$CurrentPage.parameters.providerName}" />
+						</apex:form>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:outputPanel>
+		</apex:outputPanel>
+	</apex:outputPanel>
+</apex:page>

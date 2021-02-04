@@ -1,0 +1,6 @@
+CreatedDate,Name
+2011-01-01T12:00:01.000+0000,ComplianceOpen
+2011-02-01T12:00:01.000+0000,UnderwritingOpen
+2011-03-01T12:00:01.000+0000,UnderwritingHold
+2011-04-01T12:00:01.000+0000,ClosedFundedHold
+2011-05-01T12:00:01.000+0000,ClosedFundedOpen

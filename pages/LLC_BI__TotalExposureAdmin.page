@@ -1,0 +1,106 @@
+<apex:page id="TotalExposureAdmin" controller="nFORCE.TemplateController" extensions="LLC_BI.TotalExposureAdminController">
+	<div class="slds" id="mainContainer">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<apex:outputPanel layout="inline">
+					{!$Label.llc_bi__total_exposure_admin_header}
+				</apex:outputPanel>
+			</apex:define>
+			<apex:define name="right" />
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div id="ncTotalExposureAdmin">
+							<c:TotalExposureAdminIncludes />
+							<c:TotalExposureAdminPartials />
+							<total-exposure-admin></total-exposure-admin>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+	<div id="ncTotalExposureAdminDetail">
+		<c:TotalExposureAdminDetailIncludes />
+		<c:TotalExposureAdminDetailPartials />
+		<div class="slds" id="detailContainer" style="display: none;">
+			<message></message>
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<apex:outputPanel layout="inline">
+						{!$Label.llc_bi__exposure_details}
+					</apex:outputPanel>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+								<total-exposure-admin-detail></total-exposure-admin-detail>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+		<div class="slds" id="paramsDetailContainer" style="display: none;">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<apex:outputPanel layout="inline">
+						{!$Label.llc_bi__additional_parameters}
+					</apex:outputPanel>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<total-exposure-admin-details-params></total-exposure-admin-details-params>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+		<div class="slds" id="accountExposureDetailContainer" style="display: none;">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<apex:outputPanel layout="inline">
+						{!$Label.llc_bi__total_exposure_on_relationship_header_text}
+					</apex:outputPanel>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<total-exposure-account-admin-detail></total-exposure-account-admin-detail>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+		<div class="slds" id="productPackageExposureDetailContainer" style="display: none;">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<apex:outputPanel layout="inline">
+						{!$Label.llc_bi__total_exposure_on_product_package}
+					</apex:outputPanel>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<total-exposure-admin-detail-product-package></total-exposure-admin-detail-product-package>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+	</div>
+</apex:page>

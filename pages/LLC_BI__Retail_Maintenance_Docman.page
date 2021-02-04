@@ -1,0 +1,19 @@
+<apex:page showHeader="false" sidebar="false" controller="LLC_BI.RetailDocmanAppController">
+
+	<apex:includeScript value="{!URLFOR($Resource.ncRetailDocman,
+		'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncRetailDocman,
+		'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncRetailDocman,
+		'controllers/AppController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncRetailDocman,
+		'providers/TopbarProvider.js')}" />
+
+	<nFORCE:ncPubsubIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<c:RetailMaintenanceDocmanConfiguration />
+
+	<div id="ncRetailDocman" ng-controller="AppController" />
+
+	<apex:include pageName="{!includedPageName}" />
+</apex:page>

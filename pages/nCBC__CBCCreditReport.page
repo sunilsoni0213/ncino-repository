@@ -1,0 +1,283 @@
+<apex:page standardController="nCBC__Credit_Report__c" extensions="nCBC.VF_CBCCreditReport" docType="html-5.0">
+	<c:Includes />
+	<nFORCE:Include_Navigator />
+
+	<div id="credit-report" class="force container-fluid">
+		<div class="row-fluid std-bottom-margin">
+			<h4>{!$Label.Consumer_Credit_Report}</h4>
+			 <a onclick="LifeCycle.Navigator.back();" class="btn btn-mini btn-primary pull-right ucWords">{!$Label.Go_Back}</a>
+		</div>
+		<!-- tab headers -->
+		<div role="tabpanel">
+			<ul class="nav nav-tabs" role="tablist">
+				<apex:repeat value="{!creditContacts}" var="contact" id="contact1">
+					<li role="presentation" class="{!contact.active}">
+						<a href="#{!contact.creditReportId}" aria-controls="{!contact.creditReportId}" role="tab" data-toggle="tab">{!contact.credReport.Contact__r.FirstName} {!contact.credReport.Contact__r.LastName} </a>
+					</li>
+				</apex:repeat>
+			</ul>
+		</div>
+		<!-- tab body -->
+		<div class="tab-content">
+			<apex:repeat value="{!creditContacts}" var="report" id="bl">
+				<div role="tabpanel" class="tab-pane fade {!report.active}" id="{!report.creditReportId}">
+					<div class="row-fluid">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="center-align" colspan="2">{!$Label.Credit_Report_Summary}</th>
+								</tr>
+							</thead>
+							<tr>
+								<td class="scores">
+									<apex:outputText value="{0,Number,###}" styleClass="fico-score std-bottom-margin">
+										<apex:param value="{!report.credReport.nCBC__FICO_Score__c}" />
+									</apex:outputText>
+									<apex:repeat value="{!report.creditScores}" var="cs" rendered="{!report.hasCreditScores}">
+										<div class="box span4 {!cs.modelName}">
+											<p class="{!cs.modelName}"> {!cs.modelName} </p>
+											<p>{!cs.scoreValue}</p>
+										</div>
+									</apex:repeat>
+								</td>
+								<td class="summary">
+									<div class="row-fluid std-bottom-margin">
+										<div class="box-summary span1">
+											<p class="open">{!$Label.ncbc__open}</p>
+											<p>{!report.OpenCount}</p>
+										</div>
+										<div class="box-summary span1">
+											<p class="public">{!$Label.ncbc__public}</p>
+											<p>{!report.PublicCount}</p>
+										</div>
+										<div class="box-summary span1">
+											<p class="collections">{!$Label.ncbc__collections}</p>
+											<p>{!report.ColCount}</p>
+										</div>
+										<div class="box-summary span1">
+											<p class="closed">{!$Label.ncbc__closed}</p>
+											<p>{!report.ClosedCount}</p>
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2 summary-name">{!$Label.ncbc__name}</div>
+										<div class="span4 summary-value">{!report.credReport.Contact__r.FirstName} {!report.credReport.Contact__r.LastName}</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2 summary-name">{!$Label.ncbc__ofac}</div>
+										<div class="span4 summary-value">{!report.credReport.nCBC__OFAC__c}</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2 summary-name">{!$Label.ncbc__report_date}</div>
+										<div class="span4 summary-value">
+											<apex:outputText value="{0, date, MMMM d','  yyyy}">
+												<apex:param value="{!report.credReport.nCBC__Underwriting_Score_Date__c}"/>
+											</apex:outputText>
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2 summary-name">{!$Label.ncbc__debt_service_total}</div>
+										<div class="span4 summary-value">$
+											<apex:outputText value="{0,Number,###,###}">
+												<apex:param value="{!report.DebtServiceTotal}" />
+											</apex:outputText>
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2 summary-name">{!$Label.ncbc__total_usage}</div>
+										<div class="span4 summary-value">$
+											<apex:outputText value="{0,Number,###,###}">
+												<apex:param value="{!report.TotalRevUsage}" />
+											</apex:outputText>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="row-fluid" >
+						<table class="table table-hover table-bordered table-striped">
+							<thead>
+								<tr>
+									<th colspan="10">{!$Label.Open_Accounts}</th>
+								</tr>
+							</thead>
+							<tr>
+								<th>{!$Label.Open_Date}</th>
+								<th>{!$Label.Holder}</th>
+								<th>{!$Label.Loan_Type}</th>
+								<th>{!$Label.Credit_Limit}</th>
+								<th>{!$Label.Balance_Amount}</th>
+								<th>{!$Label.R_I}</th>
+								<th>{!$Label.History}</th>
+								<th>{!$Label.Monthly_Payment}</th>
+								<th>{!$Label.x30_60_90}</th>
+								<th>-</th>
+							</tr>
+							<apex:repeat value="{!report.openAccounts}" var="cl" >
+								<tr>
+									<td><apex:outputText value="{!cl.openDate}"/></td>
+									<td><apex:outputText value="{!cl.holder}" /></td>
+									<td><apex:outputText value="{!cl.loanType}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.creditLimit}" /></apex:outputText></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.balance}" /></apex:outputText></td>
+									<td><apex:outputText value="{!cl.creditType}" /></td>
+									<td><apex:outputText value="{!cl.monthHst}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.monthPmt}" /></apex:outputText></td>
+									<td><apex:outputText value="{!cl.delinqOver30Days} / {!cl.delinqOver60Days} / {!cl.delinqOver90Days}" /></td>
+									<td><span class="label {!cl.label}"><apex:outputText value="{!cl.crStatus}"/></span></td>
+								</tr>
+							</apex:repeat>
+							<apex:outputPanel layout="none" rendered="{!!report.isOpenAccounts}">
+								<tr>
+									<td colspan="10">{!$Label.ncbc__no_records_returned}</td>
+								</tr>
+							</apex:outputPanel>
+							<tfoot>
+								<tr>
+									<th colspan="10"></th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<div class="row-fluid" >
+						<table class="table table-hover table-bordered table-striped">
+							<thead>
+								<tr>
+									<th colspan="10">{!$Label.Collections}</th>
+								</tr>
+							</thead>
+							<tr>
+								<th>{!$Label.Open_Date}</th>
+								<th>{!$Label.Holder}</th>
+								<th>{!$Label.Loan_Type}</th>
+								<th>{!$Label.Credit_Limit}</th>
+								<th>{!$Label.Balance_Amount}</th>
+								<th>{!$Label.R_I}</th>
+								<th>{!$Label.History}</th>
+								<th>{!$Label.Monthly_Payment}</th>
+								<th>{!$Label.x30_60_90}</th>
+								<th>-</th>
+							</tr>
+							<apex:repeat value="{!report.collections}" var="cl" >
+								<tr>
+									<td><apex:outputText value="{!cl.openDate}"/></td>
+									<td><apex:outputText value="{!cl.holder}" /></td>
+									<td><apex:outputText value="{!cl.loanType}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.creditLimit}" /></apex:outputText></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.balance}" /></apex:outputText></td>
+									<td><apex:outputText value="{!cl.creditType}" /></td>
+									<td><apex:outputText value="{!cl.monthHst}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.monthPmt}" /></apex:outputText></td>
+									<td><apex:outputText value="{!cl.delinqOver30Days} / {!cl.delinqOver60Days} / {!cl.delinqOver90Days}" /></td>
+									<td><span class="label {!cl.label}"><apex:outputText value="{!cl.crStatus}"/></span></td>
+								</tr>
+							</apex:repeat>
+							<apex:outputPanel layout="none" rendered="{!!report.isCollections}">
+								<tr>
+									<td colspan="10">{!$Label.ncbc__no_records_returned}</td>
+								</tr>
+							</apex:outputPanel>
+							<tfoot>
+								<tr>
+									<th colspan="10"></th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<div class="row-fluid" >
+						<table class="table table-hover table-bordered table-striped">
+							<thead>
+								<tr>
+									<th colspan="10">{!$Label.Public_Records}</th>
+								</tr>
+							</thead>
+							<tr>
+								<th>{!$Label.Filing_Date}</th>
+								<th>{!$Label.Amount}</th>
+								<th>{!$Label.Reference_Number}</th>
+								<th>{!$Label.Plaintiff}</th>
+								<th>{!$Label.Dispute}</th>
+								<th>{!$Label.Bk_Ast_Amt}</th>
+								<th>{!$Label.Bk_Lia_Amt}</th>
+								<th>{!$Label.Bk_Rep_Amt}</th>
+								<th>{!$Label.Bk_Adj_Amt}</th>
+								<th>-</th>
+							</tr>
+							<apex:repeat value="{!report.publicrecords}" var="pr" >
+								<tr>
+									<td><apex:outputText value="{!pr.fileDate}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!pr.amount}" /></apex:outputText></td>
+									<td><apex:outputText value="{!pr.docktId}" /></td>
+									<td><apex:outputText value="{!pr.plaintiff}" /></td>
+									<td><apex:outputText value="{!pr.dispute}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!pr.asstAmt}" /></apex:outputText></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!pr.liabAmt}" /></apex:outputText></td>
+									<td><apex:outputText value="{0, number, ###,###,###,###,###.## %}"><apex:param value="{!pr.repayPct}" /></apex:outputText></td>
+									<td><apex:outputText value="{0, number, ###,###,###,###,###.## %}"><apex:param value="{!pr.adjPct}" /></apex:outputText></td>
+									<td><span class="label {!pr.label}"><apex:outputText value="{!pr.prStatus}"/></span></td>
+								</tr>
+							</apex:repeat>
+							<apex:outputPanel layout="none" rendered="{!!report.isPublicRecords}">
+								<tr>
+									<td colspan="10">{!$Label.ncbc__no_records_returned}</td>
+								</tr>
+							</apex:outputPanel>
+							<tfoot>
+								<tr>
+									<th colspan="10"></th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<div class="row-fluid" >
+						<table class="table table-hover table-bordered table-striped">
+							<thead>
+								<tr>
+									<th colspan="10">{!$Label.Closed_Accounts}</th>
+								</tr>
+							</thead>
+							<tr>
+								<th>{!$Label.Open_Date}</th>
+								<th>{!$Label.Holder}</th>
+								<th>{!$Label.Loan_Type}</th>
+								<th>{!$Label.Credit_Limit}</th>
+								<th>{!$Label.Balance_Amount}</th>
+								<th>{!$Label.R_I}</th>
+								<th>{!$Label.History}</th>
+								<th>{!$Label.Monthly_Payment}</th>
+								<th>{!$Label.x30_60_90}</th>
+								<th>-</th>
+							</tr>
+							<apex:repeat value="{!report.closedAccounts}" var="cl" >
+								<tr>
+									<td><apex:outputText value="{!cl.openDate}"/></td>
+									<td><apex:outputText value="{!cl.holder}" /></td>
+									<td><apex:outputText value="{!cl.loanType}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.creditLimit}" /></apex:outputText></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.balance}" /></apex:outputText></td>
+									<td><apex:outputText value="{!cl.creditType}" /></td>
+									<td><apex:outputText value="{!cl.monthHst}" /></td>
+									<td><apex:outputText value="{0, number, $##,###,###,###,###,###}"><apex:param value="{!cl.monthPmt}" /></apex:outputText></td>
+									<td><apex:outputText value="{!cl.delinqOver30Days}/{!cl.delinqOver60Days}/{!cl.delinqOver90Days}" /></td>
+									<td><span class="label {!cl.label}"><apex:outputText value="{!cl.crStatus}"/></span></td>
+								</tr>
+							</apex:repeat>
+							<apex:outputPanel layout="none" rendered="{!!report.isClosedAccounts}">
+								<tr>
+									<td colspan="10">{!$Label.ncbc__no_records_returned}</td>
+								</tr>
+							</apex:outputPanel>
+							<tfoot>
+								<tr>
+									<th colspan="10"></th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<a onclick="LifeCycle.Navigator.navigateToURL('{!report.htmlReport}')" class="btn btn-mini ucWords">{!$LABEL.Show_CBC_Credit}</a>
+				</div>
+			</apex:repeat>
+		</div>
+	</div>
+</apex:page>

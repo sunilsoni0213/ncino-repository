@@ -1,0 +1,35 @@
+<apex:page >
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" enableBS3Namespace="true"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nDESIGN__template_base_theme_css)}" />
+	<div class="container-fluid force">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 no-gutter top-bar">
+					<apex:insert name="top-bar"/>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix visible-xs"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-3 col-lg-2">
+					<apex:insert name="sidebar"/>
+				</div>
+				<div class="clearfix visible-xs"></div>
+				<div class="col-sm-8 col-md-9 col-lg-10 body">
+					<div class="row">
+							<div class="col-xs-12 no-gutter banner">
+							<apex:insert name="banner"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 body-content">
+							<apex:insert name="body"/>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix visible-xs"></div>
+			</div>
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page standardController="nDESIGN__Screen_Section__c" docType="html-5.0">
+	<c:Includes enableLifeCycleApp="true" />
+	<c:Layout_Functions />
+	<apex:outputText rendered="false" value="{!nDESIGN__Screen_Section__c.Id} {!nDESIGN__Screen_Section__c.Name}" />
+	<c:Layout_Builder sectionParam="{!nDESIGN__Screen_Section__c}" />
+</apex:page>

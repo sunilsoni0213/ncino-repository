@@ -1,0 +1,63 @@
+<apex:page standardController="LLC_BI__Credit_Memo_Modifcation__c" extensions="LLC_BI.MemoController">
+	<!-- New UI -->
+	<apex:outputPanel rendered="{!inNewUI}">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<span>{!$Label.llc_bi__memo_fields_section}</span>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<apex:dataTable value="{!monitoredFields}"
+							var="fld"
+							styleClass="slds-table slds-table--bordered slds-table--striped">
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__memo_category}</apex:facet>
+								<apex:outputText value="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[fld.category.fieldName].label}"/>
+							</apex:column>
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__memo_field}</apex:facet>
+								<apex:outputText value="{!$ObjectType.LLC_BI__Loan__c.fields[fld.fieldName].label}"/>
+							</apex:column>
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__memo_current}</apex:facet>
+								<apex:outputField value="{!current[fld.fieldName]}"/>
+							</apex:column>
+							<apex:column rendered="{!!isReadOnlyType}">
+								<apex:facet name="header">{!$Label.llc_bi__memo_proposed}</apex:facet>
+								<apex:outputField value="{!proposed[fld.fieldName]}"/>
+							</apex:column>
+						</apex:dataTable>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</apex:outputPanel>
+	<!-- Old UI -->
+	<apex:outputPanel rendered="{!!inNewUI}">
+		<apex:form >
+			<apex:pageBlock >
+				<apex:pageBlockTable value="{!monitoredFields}" var="fld" rendered="{!monitoredFields.size> 0}">
+					<apex:column >
+						<apex:facet name="header">{!$Label.llc_bi__memo_category}</apex:facet>
+						<apex:outputText value="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[fld.category.fieldName].label}"/>
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">{!$Label.llc_bi__memo_field}</apex:facet>
+						<apex:outputText value="{!$ObjectType.LLC_BI__Loan__c.fields[fld.fieldName].label}"/>
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">{!$Label.llc_bi__memo_current}</apex:facet>
+						<apex:outputField value="{!current[fld.fieldName]}"/>
+					</apex:column>
+					<apex:column rendered="{!!isReadOnlyType}">
+						<apex:facet name="header">{!$Label.llc_bi__memo_proposed}</apex:facet>
+						<apex:outputField value="{!proposed[fld.fieldName]}"/>
+					</apex:column>
+				</apex:pageBlockTable>
+			</apex:pageBlock>
+		</apex:form>
+	</apex:outputPanel>
+</apex:page>

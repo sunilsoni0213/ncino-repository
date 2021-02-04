@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteBannerPhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteBannerPhotoAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteBannerPhotoAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UpdateBannerPhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UpdateBannerPhotoAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UpdateBannerPhotoAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>EmployeeNumber</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Officer_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Portal_Registration_Fields_Config</fullName>
+        <description>This field set is used to add additional fields to customer portals Self Registration Page.</description>
+        <label>Portal_Registration_Fields_Config</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PrecisionLender_Pricing</fullName>
+        <description>PrecisionLender Pricing Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PrecisionLender Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>EmployeeNumber</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Officer_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nFORCE__UI_Lookup_Fields</fullName>
+        <description>nCino User Interface</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Title</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Lookup Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nPortal__Portal_Registration_Fields</fullName>
+        <description>Deprecated - this fieldset has been replaced with manual configuration steps. Please reference install instructions for more information.</description>
+        <label>-D Portal Registration Fields</label>
+    </fieldSets>
+    <fields>
+        <fullName>AutoRemoveManagedLicense__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AutoRemoveManagedLicense</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DemoUser__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates the person is a demo user and will show in the &quot;Demo Personas&quot; component in the utility bar.  This can be changed on the user page or through the gear icon in the Demo Personas component.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the person is a demo user and will show in the &quot;Demo Personas&quot; component in the utility bar.  This can be changed on the user page or through the gear icon in the Demo Personas component.</inlineHelpText>
+        <label>Demo User</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mortgage_License_State__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Users select a state from this picklist to identify the issuing state that issued the Mortgage License. By default, it is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the state that issued the Mortgage License.</inlineHelpText>
+        <label>Mortgage License State</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__US_States_Abbreviated</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mortgage_License__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this mandatory field to capture a user&apos;s unique Mortgage License number. By default, it is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the user&apos;s unique Mortgage License number.</inlineHelpText>
+        <label>Mortgage License</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__NMLS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this mandatory field to capture a user&apos;s unique National Mortgage Licensing System (NMLS) number. By default, it is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the user&apos;s unique National Mortgage Licensing System (NMLS) number.</inlineHelpText>
+        <label>NMLS</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Officer_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used to specify a unique number assigned to the user (officer).</description>
+        <externalId>false</externalId>
+        <label>Officer Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Secured_Individual_Lending_Authority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used to specify the amount (currency) of the user&apos;s secured lending authority.</description>
+        <externalId>false</externalId>
+        <label>Secured Individual Lending Authority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Unsecured_Individual_Lending_Authority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used to specify the amount (currency) of the user&apos;s unsecured lending authority.</description>
+        <externalId>false</externalId>
+        <label>Unsecured Individual Lending Authority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__nCino_User__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated as enabled. This field indicates whether the user has a license for the nCino Platform or not.</description>
+        <externalId>false</externalId>
+        <formula>TRUE</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>nCino User</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lending_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This can be used to identify the loan officer ID or other unique code used internally.</inlineHelpText>
+        <label>Lending ID</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <externalId>false</externalId>
+        <label>Line of Business</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Small Business Banking</fullName>
+                    <default>false</default>
+                    <label>Small Business Banking</label>
+                </value>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Wealth</fullName>
+                    <default>false</default>
+                    <label>Wealth</label>
+                </value>
+                <value>
+                    <fullName>Global Finance</fullName>
+                    <default>false</default>
+                    <label>Global Finance</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Locale_Criteria_for_PB__c</fullName>
+        <externalId>false</externalId>
+        <label>Locale Criteria for PB</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English Australian</fullName>
+                    <default>false</default>
+                    <label>English Australian</label>
+                </value>
+                <value>
+                    <fullName>English U.S</fullName>
+                    <default>false</default>
+                    <label>English U.S</label>
+                </value>
+                <value>
+                    <fullName>English Canadian</fullName>
+                    <default>false</default>
+                    <label>English Canadian</label>
+                </value>
+                <value>
+                    <fullName>English U.K</fullName>
+                    <default>false</default>
+                    <label>English U.K</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ManagerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Managers_Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>Manager&apos;s Manager</label>
+        <relationshipName>Manager</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Branch__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Branch</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>AACT</fullName>
+                    <default>false</default>
+                    <label>AACT</label>
+                </value>
+                <value>
+                    <fullName>Asheville</fullName>
+                    <default>false</default>
+                    <label>Asheville</label>
+                </value>
+                <value>
+                    <fullName>Benton Harbor</fullName>
+                    <default>false</default>
+                    <label>Benton Harbor</label>
+                </value>
+                <value>
+                    <fullName>Berrien Springs</fullName>
+                    <default>false</default>
+                    <label>Berrien Springs</label>
+                </value>
+                <value>
+                    <fullName>Bible Way</fullName>
+                    <default>false</default>
+                    <label>Bible Way</label>
+                </value>
+                <value>
+                    <fullName>Buchanan</fullName>
+                    <default>false</default>
+                    <label>Buchanan</label>
+                </value>
+                <value>
+                    <fullName>Double R</fullName>
+                    <default>false</default>
+                    <label>Double R</label>
+                </value>
+                <value>
+                    <fullName>Fletcher</fullName>
+                    <default>false</default>
+                    <label>Fletcher</label>
+                </value>
+                <value>
+                    <fullName>Griffith</fullName>
+                    <default>false</default>
+                    <label>Griffith</label>
+                </value>
+                <value>
+                    <fullName>Gwinner</fullName>
+                    <default>false</default>
+                    <label>Gwinner</label>
+                </value>
+                <value>
+                    <fullName>Holland North</fullName>
+                    <default>false</default>
+                    <label>Holland North</label>
+                </value>
+                <value>
+                    <fullName>Holland South</fullName>
+                    <default>false</default>
+                    <label>Holland South</label>
+                </value>
+                <value>
+                    <fullName>Jenny Lind</fullName>
+                    <default>false</default>
+                    <label>Jenny Lind</label>
+                </value>
+                <value>
+                    <fullName>Marion East</fullName>
+                    <default>false</default>
+                    <label>Marion East</label>
+                </value>
+                <value>
+                    <fullName>Marion West</fullName>
+                    <default>false</default>
+                    <label>Marion West</label>
+                </value>
+                <value>
+                    <fullName>Mortgage Call Center</fullName>
+                    <default>false</default>
+                    <label>Mortgage Call Center</label>
+                </value>
+                <value>
+                    <fullName>Niles North</fullName>
+                    <default>false</default>
+                    <label>Niles North</label>
+                </value>
+                <value>
+                    <fullName>Niles South</fullName>
+                    <default>false</default>
+                    <label>Niles South</label>
+                </value>
+                <value>
+                    <fullName>Northwest</fullName>
+                    <default>false</default>
+                    <label>Northwest</label>
+                </value>
+                <value>
+                    <fullName>Reed Highschool</fullName>
+                    <default>false</default>
+                    <label>Reed Highschool</label>
+                </value>
+                <value>
+                    <fullName>Rogers Ave</fullName>
+                    <default>false</default>
+                    <label>Rogers Ave</label>
+                </value>
+                <value>
+                    <fullName>Sparks</fullName>
+                    <default>false</default>
+                    <label>Sparks</label>
+                </value>
+                <value>
+                    <fullName>St. Joseph</fullName>
+                    <default>false</default>
+                    <label>St. Joseph</label>
+                </value>
+                <value>
+                    <fullName>Statesville</fullName>
+                    <default>false</default>
+                    <label>Statesville</label>
+                </value>
+                <value>
+                    <fullName>Stevensville</fullName>
+                    <default>false</default>
+                    <label>Stevensville</label>
+                </value>
+                <value>
+                    <fullName>United Online</fullName>
+                    <default>false</default>
+                    <label>United Online</label>
+                </value>
+                <value>
+                    <fullName>Van Buren</fullName>
+                    <default>false</default>
+                    <label>Van Buren</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Primary_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Arkansas</fullName>
+                    <default>false</default>
+                    <label>Arkansas</label>
+                </value>
+                <value>
+                    <fullName>Nevada</fullName>
+                    <default>false</default>
+                    <label>Nevada</label>
+                </value>
+                <value>
+                    <fullName>N Michigan</fullName>
+                    <default>false</default>
+                    <label>N Michigan</label>
+                </value>
+                <value>
+                    <fullName>North Carolina</fullName>
+                    <default>false</default>
+                    <label>North Carolina</label>
+                </value>
+                <value>
+                    <fullName>S Michigan/Ohio/Indiana</fullName>
+                    <default>false</default>
+                    <label>S Michigan/Ohio/Indiana</label>
+                </value>
+                <value>
+                    <fullName>United Online</fullName>
+                    <default>false</default>
+                    <label>United Online</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Secured_Individual_Lending_Authority__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Secured Individual Lending Authority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Template_Identifier__c</fullName>
+        <description>Demo Spin Template Identifier</description>
+        <externalId>false</externalId>
+        <label>Template Identifier</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Unsecured_Individual_Lending_Authority__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Unsecured Individual Lending Authority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>User_Digitized_Signature__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This will be used to maintain User&apos;s Signature for Forms Generation.</inlineHelpText>
+        <label>User Digitized Signature</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nBIDCA__nCino_Data_User2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>nCino Analytics Reporting Field referenced in Created in nCino formula field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check box to indicate this user account is used for importing records via Informatica or API.</inlineHelpText>
+        <label>nCino Data User2</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nBRIDGER__Bridger_Password__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Password for Bridger login</description>
+        <externalId>false</externalId>
+        <label>Bridger Password</label>
+        <length>175</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>nBRIDGER__Bridger_Username__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Username for Bridger login</description>
+        <externalId>false</externalId>
+        <label>Bridger Username</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nPortal__Has_Reached_Ownership_Limit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This checkbox field indicates if the user has reached the configured maximum number of owned Accounts for role optimization</description>
+        <externalId>false</externalId>
+        <label>Has Reached Ownership Limit</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nPortal__Is_Customer_Portal_Account_Owner_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This checkbox field indicates whether or not this user owns Customer Portal user records.</description>
+        <externalId>false</externalId>
+        <label>Is Customer Portal Account Owner User</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nPortal__Sharing_History__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This long text field is automatically populated upon the deactivation of a Customer Portal User. It is used to capture all of the records to which the Portal User had sharing access.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This long text field is automatically populated upon the deactivation of a Customer Portal User. It is used to capture all of the records to which the Portal User had sharing access.</inlineHelpText>
+        <label>Customer Portal Sharing History</label>
+        <length>130000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nPortal__User_Created_Customer_Engagement_PW__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The system automatically selects this checkbox field if the user has created their own password for the Customer Engagement Solution (such as through self-registration, an online application workflow, or Single Sign-On).</description>
+        <externalId>false</externalId>
+        <label>User-Created Customer Engagement PW</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Gender__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>“F”, “M”, “U”</fullName>
+                    <default>false</default>
+                    <label>“F”, “M”, “U”</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nSBA__Lendable_Region__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the lender is allowed to make loans outside of the their area of operations.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether the lender is allowed to make loans outside of the their area of operations.</inlineHelpText>
+        <label>Lendable Region</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Lender_Tax_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Returns Company Tax ID Custom Label</description>
+        <externalId>false</externalId>
+        <formula>$Label.nsba__company_tax_id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lender Tax ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nSBA__SBA_Lender_FIRS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Returns SBA Lender FIRS Tax ID Custom Label</description>
+        <externalId>false</externalId>
+        <formula>$Label.nsba__sba_firs</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SBA Lender FIRS</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nmls_number__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the lender&apos;s NMLS number.</inlineHelpText>
+        <label>NMLS Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>ActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <columns>Managers_Manager__c</columns>
+        <columns>Secured_Individual_Lending_Authority__c</columns>
+        <columns>Unsecured_Individual_Lending_Authority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Users</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>AdminUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AllUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>Secured_Individual_Lending_Authority__c</columns>
+        <columns>Unsecured_Individual_Lending_Authority__c</columns>
+        <columns>MANAGER</columns>
+        <columns>Managers_Manager__c</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USERS.PHONE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Users</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>App_Portal_Users</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>nCino Community User</value>
+        </filters>
+        <label>App/Portal Users</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__ActiveUsers</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Users</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__AdminUsers</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__AllUsers</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Users</label>
+    </listViews>
+    <listViews>
+        <fullName>Remove_Managed_License_Users</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>AutoRemoveManagedLicense__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Remove Managed License Users</label>
+        <language>en_US</language>
+    </listViews>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupDialogsAdditionalFields>
+        <lookupFilterFields>FULL_NAME</lookupFilterFields>
+        <lookupFilterFields>CORE.USERS.PHONE</lookupFilterFields>
+        <lookupFilterFields>CORE.USERS.EMAIL</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.EXTENSION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.CELL</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>FULL_NAME</searchFilterFields>
+        <searchFilterFields>CORE.USERS.PHONE</searchFilterFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

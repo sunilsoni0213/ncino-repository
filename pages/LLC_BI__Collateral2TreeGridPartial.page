@@ -1,0 +1,249 @@
+<apex:page id="Collateral2TreeGridPartial" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false"
+		   sidebar="false" showHeader="false" contentType="text/html" docType="html-5.0"
+		   cache="true" expires="100" showChat="false" showQuickActionVfHeader="false">
+	<div class="ncTreeGridContainer">
+		<message />
+		<modalDialog ng-if="vm.isModalVisible" />
+
+		<div class="slds-m-bottom--small">
+			<span ng-if="vm.secondaryButton.show || vm.hasDropDownActionsButton" class="performActions">
+				<button ng-if="vm.secondaryButton.show"
+						ng-class="vm.secondaryButton.class === '' ? 'slds-button slds-button--neutral' : vm.secondaryButton.class"
+						ng-disabled="!vm.secondaryButton.enabled"
+						ng-click="vm.secondaryButton.action()">
+					{{vm.secondaryButton.label}}
+				</button>
+				<button ng-if="vm.hasDropDownActionsButton"
+						ng-class="vm.actionButtonClass === '' ? 'slds-button slds-button--brand' : vm.actionButtonClass"
+						ng-disabled="!vm.isDropDownActionsButtonEnabled"
+						ng-click="vm.performDropDownActions()">
+					{{vm.performActionsButtonLabel}}
+				</button>
+			</span>
+
+			<span ng-if="vm.hasGlobalActionDropdown" class="slds-button dropdown slds-float--left slds-m-right--medium" style="border-top:0;">
+				<select
+						ng-model="vm.treeGrid.globalOptions.value"
+						ng-options="option.label for option in vm.treeGrid.globalOptions.options track by option.label"
+						ng-disabled="!vm.isGlobalActionDropdownEnabled"
+						ng-change="vm.performGlobalDropDownActions(vm.treeGrid.globalOptions.value)"
+						class="slds-select">
+				</select>
+			</span>
+
+			<div class="schedule-actions">
+				<button ng-click="vm.parentController.showSearch()" class="slds-button slds-button--brand">{{vm.parentController.labels.addCollateral}}</button>
+			</div>
+		</div>
+
+		<nc-modal show="vm.alert_ra.isRendered"
+				  header="{{vm.alert_ra.label.heading}}"
+				  primary-action="vm.alert_ra.confirm()"
+				  primary-label="{{vm.alert_ra.label.confirm}}"
+				  cancel-action="vm.alert_ra.cancel()"
+				  cancel-label="{{vm.alert_ra.label.cancel}}">
+			{{vm.alert_ra.label.message}}
+		</nc-modal>
+
+		<div>
+			<table class="slds-table slds-table--bordered treeGrid">
+				<thead>
+					<th ng-repeat="column in vm.treeGrid.columns track by $index"
+						class="slds-text-heading--label"
+						ng-style="$first && {'padding-left':'18px'}">
+							<span class="slds-checkbox" ng-if="vm.isCheckBoxColumnByCell($index)">
+								<label class="slds-checkbox__label">
+									<input
+										type="checkbox"
+										ng-model="column.selected"
+										ng-change="vm.checkAll(column)" >
+									</input>
+									<span class="slds-checkbox--faux"></span>
+								</label>
+							</span>
+						<span ng-style="$first && {'padding-left':'9px'}">
+							{{column.label}}
+						</span>
+					</th>
+					<th></th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr ng-if="vm.hasTreeLoaded && vm.flattenedTreeGrid.length < 1">
+						<td class="noRecords" colspan="{{vm.treeGrid.columns.length}}">
+							{{vm.noRecordsFoundLabel}}
+						</td>
+					</tr>
+				</tbody>
+				<tbody ng-repeat="row in vm.flattenedTreeGrid" id="row.id">
+					<tr ng-class="(vm.isExpandable(row) && row.expanded) ? 'slds-is-selected' : ''">
+						<td
+							class="slds-cell-wrap"
+							ng-repeat="cell in row.cells track by $index"
+							ng-style="
+								$first && {'padding-left':((row.depth)*24)+'px'} ||
+								{'padding-left':'8px'}">
+							<img
+								class="cursor-pointer"
+								ng-if="$first && vm.hideCollapseExpandIcon!='true'"
+								ng-click="vm.toggleExpand(row)"
+								ng-style="
+									vm.isExpandable(row) && {'visibility':'visible'} ||
+									{'visibility':'hidden'}"
+								width="15" height="15" src="{{
+									row.expanded ?
+									'{!URLFOR($Resource.nFORCE__design_system,'assets/icons/utility/chevrondown_60.png')}' :
+									'{!URLFOR($Resource.nFORCE__design_system,'assets/icons/utility/chevronright_60.png')}'}}" />
+							<span class="ng-scope checkbox-margin" ng-if="vm.isStandardCheckBoxCell(cell)">
+								<input
+									type="checkbox"
+									ng-model="cell.selected"
+									ng-disabled="!cell.value.enabled" >
+								</input>
+							</span>
+							<span class="ng-scope checkbox-margin" ng-if="vm.isCheckBoxCell(cell)">
+								<input
+									type="checkbox"
+									ng-model="cell.selected"
+									ng-change="vm.onCheckBoxChanged(row,cell)" >
+								</input>
+							</span>
+							<span class="ng-scope slds-checkbox" ng-if="vm.isCheckBoxColumnByCell($index) == 'true'">
+								<label class="slds-checkbox__label">
+									<input
+										type="checkbox"
+										ng-model="cell.selected"
+										ng-change="vm.onCheckBoxChanged(row,cell)" >
+									</input>
+									<span class="slds-checkbox--faux"></span>
+								</label>
+							</span>
+							<svg-icon ng-if="$first"
+									  class="svg-icon-wrap"
+									  svg-class="slds-icon slds-icon--small"
+									  icon="{{vm.getUserDataValue(row.userData, 'iconType')}}"
+									  background-color="{{vm.getUserDataValue(row.userData, 'backgroundColor')}}"
+									  fill-color="{{vm.getUserDataValue(row.userData, 'iconColor')}}">
+							</svg-icon>
+
+							{{vm.getCellLabel(cell)}}
+
+							<a href=""
+							   ng-if="vm.isCellButton(cell)"
+							   ng-repeat="option in cell.options"
+							   ng-click="vm.performAction(row,cell, option)"
+							   ng-class="(option.enabled) ? '' : 'disabled'">
+								{{option.label}}
+							</a>
+							<ul ng-if="vm.isCellList(cell)">
+								<li ng-repeat="option in cell.options">{{option.label}}</li>
+							</ul>
+							<span
+								ng-if="vm.isCellBadge(cell)"
+								ng-repeat="option in cell.options"
+								class="slds-badge {{option.style}}">{{option.label}}</span>
+							<span
+								ng-if="vm.isCellTooltip(cell)"
+								ng-show="cell.value.label"
+								popover="popover"
+								class="popover-icon-warning"
+								data-content="{{cell.value.label}}"
+								ng-include="'{!URLFOR($Resource.nFORCE__design_system,'/assets/icons/utility/warning.svg')}'"></span>
+							<select
+								ng-if="vm.isCellDropDown(cell)"
+								ng-model="cell.value"
+								ng-options="option.label for option in cell.options track by option.label"
+								ng-change="vm.onDropdownChanged(row, cell)"
+								ng-disabled="!cell.value.enabled"
+								class="slds-select">
+							</select>
+						</td>
+						<td class="row-actions">
+							<div class="slds-truncate schedule-action-container" title="">
+								<a ng-click="vm.parentController.getRelatedPledgeRecords(row)">
+									{{vm.parentController.labels.loansPledged}}
+								</a>
+							</div>
+						</td>
+						<td>
+							<div class="dropdown">
+								<button data-toggle="dropdown"
+										class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+									<svg-icon icon="utility/down"
+										svg-class="slds-button--icon-xx-small"
+										container-class="slds-truncate"
+										background-color="transparent"
+										fill-color="#556A8C">
+									</svg-icon>
+								</button>
+								<ul aria-labelledby="tools-actions" class="dropdown-menu pull-right">
+									<li class="slds-dropdown__item" role="presentation">
+										<a href="" role="menuitem" tabindex="0" ng-click="vm.parentController.showEdit(row)">
+											<span class="slds-truncate" title="Edit">
+												{{vm.parentController.labels.editAction}}
+											</span>
+										</a>
+									</li>
+									<li class="slds-dropdown__item" role="presentation">
+										<a href="" role="menuitem" tabindex="-1" ng-click="vm.parentController.showRemove(row)">
+											<span class="slds-truncate" title="Remove">
+												{{vm.parentController.labels.removePledgeRecordConfirm}}
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-cell-wrap" ng-show="vm.parentController.isShow == row.id" ng-init="rowsFiltered = vm.parentController.relatedRecordsFilteredDefault">
+						<td class="slds-cell-wrap related-card-table__parent-container" colspan="{{vm.parentController.getLoansPledgedColspan(vm.treeGrid.columns)}}">
+							<article class="slds-card related-card-table">
+								<div ng-hide="vm.parentController.hideFilter()" class="slds-grid related-card-table__header-container">
+									<header class="slds-media slds-media_center slds-has-flexi-truncate">
+										<div class="slds-form-element slds-float--left">
+											<label class="slds-checkbox--toggle slds-grid slds-grid--vertical-align-center">
+												<span class="slds-p-right--small">{{vm.parentController.labels.productPackageFilter}}</span>
+												<input type="checkbox" ng-model="rowsFiltered" ng-disabled="vm.parentController.disableFilter()"/>
+												<span class="slds-checkbox--faux hover-blue" />
+												<span
+													ng-if="vm.parentController.disableFilter()"
+													class="slds-m-left--x-small"
+													popover="popover"
+													data-toggle="popover"
+													data-content="{{vm.parentController.labels.productPackageFilterTooltip}}">
+													<span class="fa fa-info-circle"></span>
+												</span>
+											</label>
+										</div>
+									</header>
+								</div>
+								<div class="slds-card__body">
+									<article class="schedule">
+										<div class="schedule-table">
+											<table class="slds-table related-card-table--bordered slds-no-row-hover slds-table--cell-buffer">
+												<thead>
+													<tr class="slds-text-title--caps">
+														<th ng-repeat="header in vm.parentController.currentRelatedModel.columns" scope="col">
+															<div class="slds-truncate schedule-title" title="Type">{{ header.title | uppercase }}</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr ng-repeat="loanRow in vm.parentController.currentRelatedModel.rows | filter:vm.parentController.filterRelatedRows(rowsFiltered)">
+														<td ng-repeat="loanColumn in vm.parentController.currentRelatedModel.columns" compile="vm.parentController.getValue(loanRow, loanColumn)"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</article>
+								</div>
+								<footer class="slds-card__footer">
+								</footer>
+							</article>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,3 @@
+<apex:page >
+    <center><apex:image style="max-width:1000px;max-height:1000px;" url="{!$Resource.AdditionalOffers}"/></center>
+</apex:page>

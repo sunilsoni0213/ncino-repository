@@ -1,0 +1,163 @@
+<apex:page standardController="LLC_BI__Product_Package__c" recordSetVar="productPackages" extensions="csaClaimSystemController">
+    <c:csaProductPackageClaimSystemIncludes />
+
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            angular.module('csaProductPackageClaimSystem').config(function (configProvider) {
+                configProvider.set({
+                    parameters: {
+                        productPackageIds: '{!recordIds}'
+                    }
+                });
+            });
+        })();
+    </script>
+
+    <div class="slds page" id="csaProductPackageClaimSystem" ng-controller="ProductPackageClaimSystemController as vm">
+        <div class="slds-page-header" role="banner">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media slds-media--center slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                            <img src="{{vm.config.images.deskImage}}" class="slds-icon slds-icon-custom-custom33"/>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-page-header__title slds-truncate slds-align-middle">
+                                {{vm.labels.claim_pp_title}}
+                            </p>
+                            <p class="slds-text-body--small page-header__info">
+                                {{vm.labels.claim_pp_subtitle}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+                    <div class="slds-button-group" role="group">
+                        <button class="slds-button slds-button--neutral"
+                                ng-click="vm.cancelButton()">
+                            {{vm.labels.cancel}}
+                        </button>
+                        <button class="slds-button slds-button--brand"
+                                ng-disabled="vm.isClaimDisabled"
+                                ng-click="vm.claimProductPackagesButton()">
+                            {{vm.labels.claim}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <message></message>
+
+        <div class="slds-grid slds-m-left--xx-large slds-m-right--xx-large">
+            <div class="slds-size--1-of-2 slds-col--padded slds-p-top--small">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label">{{vm.labels.select_user}}</label>
+                    <div class="slds-form-element__control">
+                        <div class="slds-select_container">
+                            <select id="user-list"
+                                    chosen="true"
+                                    class="slds-select"
+                                    placeholder-text-single="{{vm.labels.select_a_user}}"
+                                    max-shown-results="5"
+                                    on-change="vm.checkClaimStateModel()"
+                                    ng-model="vm.userId"
+                                    ng-options="key as value for (key , value) in vm.userOptions">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-size--1-of-2 slds-col--padded slds-p-top--small">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label">{{vm.labels.select_role}}</label>
+                    <div class="slds-form-element__control">
+                        <div class="slds-select_container">
+                            <select id="role-list"
+                                    chosen="true"
+                                    class="slds-select"
+                                    placeholder-text-single="{{vm.labels.select_a_role}}"
+                                    max-shown-results="3"
+                                    on-change="vm.checkClaimStateModel()"
+                                    ng-model="vm.roleId"
+                                    ng-options="key as value for (key , value) in vm.roleOptions">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="slds-m-top--medium slds-m-left--large">
+            <span class="slds-section__title">{{vm.labels.selected_PPs}}</span>
+        </h2>
+
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th scope="col" ng-repeat="fieldLabel in vm.fieldList">
+                        <div class="slds-truncate" title="{{fieldLabel}}">
+                            {{fieldLabel}}
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(key, value) in vm.productPackageList">
+                    <td ng-repeat="field in value">
+                        <field field="field" context-id="{{key}}"></field>
+                    </td>
+                </tr>
+                <tr ng-if="vm.productPackageListCount === 0">
+                    <td colspan="{{vm.fieldList.length}}" class="slds-text-align--center">
+                        <b>{{vm.labels.noRowsFound}}</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <nc-modal
+            show="vm.showRedirectModal"
+            header="{!$Label.CS_Choose_Redirect}"
+            primary-action="vm.cancelButton()"
+            primary-label="{!$Label.CS_Back_To_List_View}"
+            cancel-label="{!$Label.CS_Close_Modal}">
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="{!$Label.CS_Product_Package_Name_Header}">
+                                {!$Label.CS_Product_Package_Name_Header}
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="{!$Label.CS_Link_Header}">
+                                {!$Label.CS_Link_Header}
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(key, value) in vm.productPackageList">
+                        <td ng-repeat="field in value" ng-if="field.guid === 'LLC_BI__Product_Package__c_Name'">
+                            {{field.value}}
+                        </td>
+                        <td>
+                            <a href="" ng-click="vm.navigateToSObject(key, $event)">{!$Label.CD_GoTo}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </nc-modal>
+
+        <div ng-if="vm.isLoading">
+            <div role="dialog" class="slds-modal slds-fade-in-open" ng-if="!vm.showRedirectModal">
+                <div class="slds-modal__container">
+                    <spinner size="medium" message="{{vm.labels.loading_message}}"></spinner>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </div>
+    </div>
+</apex:page>

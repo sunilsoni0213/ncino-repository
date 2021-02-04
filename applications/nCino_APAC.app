@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>APAC_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Product_Package</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>LLC_BI__Product_Package__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Collateral_Real_Estate</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>LLC_BI__Collateral__c</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#085497</headerColor>
+        <logo>aussie</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>nCino APAC</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Feed</tabs>
+    <tabs>standard-Event</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>LLC_BI__Loan__c</tabs>
+    <tabs>LLC_BI__Deposit__c</tabs>
+    <tabs>LLC_BI__Product_Package__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>nRE__Referral__c</tabs>
+    <tabs>LLC_BI__Application__c</tabs>
+    <tabs>Online_App_Webpage</tabs>
+    <tabs>Online_App_Instagram</tabs>
+    <tabs>LLC_BI__Treasury_Service__c</tabs>
+    <tabs>Bank_Insights_Dashboard</tabs>
+    <tabs>LLC_BI__Collateral__c</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-OtherUserProfile</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>nFORCE__Route__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>nCino_APAC_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Contacted</masterLabel>
+        <translation>contactado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Open</masterLabel>
+        <translation>Abierto</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Qualified</masterLabel>
+        <translation>Calificado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unqualified</masterLabel>
+        <translation>Incondicional</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

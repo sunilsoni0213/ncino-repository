@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This junction object enables a user to connect a funding method type to a product in the product catalog.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>LLC_BI__Failure_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this rich text field with a &apos;failure&apos; message to display to a user upon failure funding of this funding method type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a failure message for users that unsuccessfully fund their account.</inlineHelpText>
+        <label>Failure Message</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Method_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this master-detail relationship with the funding method type associated with the product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the funding method type associated with a product.</inlineHelpText>
+        <label>Funding Method Type</label>
+        <referenceTo>LLC_BI__Funding_Method_Type__c</referenceTo>
+        <relationshipLabel>Product Funding Method Type Junctions</relationshipLabel>
+        <relationshipName>Product_Funding_Method_Type_Junctions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Lookup_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators optionally populate this text field. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Enter a unique identifier.</inlineHelpText>
+        <label>Lookup Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maximum_Funding_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this currency field with the maximum amount allowed to fund a product with the associated funding method type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a maximum funding amount.</inlineHelpText>
+        <label>Maximum Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Minimum_Funding_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this currency field with the minimum amount allowed to fund a product with the associated funding method type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a minimum funding amount.</inlineHelpText>
+        <label>Minimum Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this master-detail relationship with the product associated with the funding method type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select a product associated with the funding method type</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>LLC_BI__Product__c</referenceTo>
+        <relationshipLabel>Product Funding Method Type Junctions</relationshipLabel>
+        <relationshipName>Product_Funding_Method_Type_Junctions</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Success_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this rich text field with a &apos;success&apos; message to display to a user upon successful funding of this funding method type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a success message for users that successfully fund their account.</inlineHelpText>
+        <label>Success Message</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <label>Product Funding Method Type</label>
+    <nameField>
+        <displayFormat>PFMT-{000000}</displayFormat>
+        <label>Product Funding Method Type Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Funding Method Types</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

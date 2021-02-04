@@ -1,0 +1,21 @@
+<apex:page standardController="LLC_BI__Loan__c" sidebar="true">
+	<div class="force container-fluid">
+		<apex:outputPanel rendered="{!!isNull($CurrentPage.parameters.app)}">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					{!$Label.llc_bi__route_covenant_management}
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+		</apex:outputPanel>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<c:CovenantManagement objectName="{!IF(isNull($CurrentPage.parameters.app),LLC_BI__Loan__c.Name,'')}"/>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+	<apex:outputPanel id="loadingPanel">
+		<apex:composition template="nFORCE__Template_UI_Loading" />
+	</apex:outputPanel>
+
+	<div style="visibility: hidden; position: absolute;" id="docManFrame">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<apex:iframe src="{!$Page.NDOC__LoanDocManagerHTML}?id={!$CurrentPage.parameters.id}"
+							height="476px"/>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<script type="text/javascript">
+			(function(){
+				jQuery(window).load(
+					function(){
+						jQuery('[id$=":loadingPanel"]').hide();
+						jQuery('[id$=":headingPanel"]').show();
+						jQuery('#docManFrame').removeAttr('style');
+					}
+				);
+			})();
+	</script>
+</apex:page>

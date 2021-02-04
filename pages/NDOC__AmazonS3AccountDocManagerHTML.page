@@ -1,0 +1,27 @@
+<apex:page standardController="Account" extensions="NDOC.ExternalFileStorageSettingsController"
+	showHeader="false" sidebar="false">
+
+	<script type="text/javascript">
+		var __sfdcSessionId = '{!JSENCODE(GETSESSIONID())}';
+	</script>
+
+	<apex:includeScript value="{!URLFOR($Resource.NDOC__amazon_s3 , 'aws-sdk-2.1.10.min.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.NDOC__amazon_s3 , 'sjcl.min.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.NDOC__amazon_s3 , 'amazon_s3_filestore.js')}"/>
+
+	<c:DocManager3 />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			MyDocuments.init({
+				page: 'Account',
+				sessionId: __sfdcSessionId,
+				fileStore: new DocMan.AmazonS3FileStore({
+					associatedObjectId: '{!JSENCODE(Account.Id)}',
+					bucketName: '{!JSENCODE(S3BucketName)}',
+					endpointName: '{!JSENCODE(S3Endpoint)}'
+				})
+			});
+		});
+	</script>
+</apex:page>

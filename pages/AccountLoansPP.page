@@ -1,0 +1,162 @@
+<apex:page standardController="Account" extensions="AccountLoansPP" tabStyle="LLC_BI__Loan__c"> 
+    
+    <apex:sectionHeader title="Step 1 of 2" subtitle="{!productPackageName}" />
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <apex:slds />
+    <script>
+        function passId()
+            {
+                window.location = 'https://bankr-7314.cloudforce.com/0015w000029Ho1w';
+            }
+    </script>
+<div class="slds-scope">
+<apex:form id="loansPageBlock">
+                <div class="slds-page-header">
+                		<header>
+                            <svg aria-hidden="true" class="slds-icon slds-icon--medium slds-icon-standard-drafts slds-icon-text-default">
+                                <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#drafts')}"></use>
+                            </svg>
+                			Existing Products
+                		</header>
+                </div>
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="loans" >
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Product
+                                    </th>
+                                    <th>
+                                        Maturity Date
+                                    </th>
+                                    <th>
+                                    	Credit Action
+                                    </th>
+                                	<th>
+                                        Credit Action Notes
+                                	</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!loans}" var="l">
+                                <tr>
+                                        <td>
+                                            <apex:outputField value="{!l.Name}"/>
+                                        </td>
+                                        <td>
+                                      		<apex:outputField value="{!l.LLC_BI__Amount__c}"/>
+                                      	</td>
+                                      	<td>
+                                            <apex:outputField value="{!l.Full_Product_Name__c}"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputField value="{!l.LLC_BI__Maturity_Date__c}"/>
+                                        </td>
+                                        <td>
+                                        	<apex:inputField value="{!l.Credit_Action__c}"/>
+                                        </td>
+                                        <td>
+                                        	<apex:inputField value="{!l.Credit_Action_Notes__c}"/>
+                                        </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                <div class="slds-p-top_xx-large"></div>
+        <!-- Main conversion pageblock -->
+                <div class="slds-page-header">
+                    <header>
+                        <svg aria-hidden="true" class="slds-icon slds-icon--medium slds-icon-standard-product slds-icon-text-default">
+                            <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#product')}"></use>
+                        </svg>
+                            New Credit Requests   
+                    </header>
+                </div>
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="loans2" title="Add Loans" >
+                        <thead>
+                            <tr>
+                                <th>
+                                    Loan Name
+                                </th>
+                                <th>
+                                    Product Line
+                                </th>
+                                <th>
+                                    Product Type
+                                </th>
+                                <th>
+                                    Product
+                                </th>
+                                <th>
+                                    Amount
+                                </th>
+                                <th>
+                                    Term
+                                </th>
+                                <th>
+                                    Purpose
+                                </th>
+                                <th>
+                                    Proposed Index
+                                </th>
+                                <th>
+                                    Proposed Spread
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!loanlist}" var="lns">
+                                <tr>
+                                    <td>
+                                        <apex:inputField value="{!lns.Name}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Product_Line__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Product_Type__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Product__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Amount__c}"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Amortized_Term_Months__c}"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Description__c}"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Index__c}"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!lns.LLC_BI__Spread__c}"/>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+
+                    <table id="addRemoveGrid">
+                        <div class="slds-align_absolute-center slds-p-top_large">
+                        <apex:actionFunction name="addLoanRow" action="{!addLoanRow}"/>
+                            <button type="button" class="slds-button_neutral" onclick="addLoanRow();">Add Loan</button>&nbsp; &nbsp;
+                        <apex:actionFunction name="removeLoan" action="{!removeLastLoanRow}"/>
+                            <button type="button" class="slds-button_neutral" onclick="removeLoan();">Remove Loan</button>&nbsp; &nbsp;
+                        <apex:actionFunction name="previous" action="{!step2}"/>
+                            <button type="button" class="slds-button_neutral" onclick="previous();">Next</button>&nbsp; &nbsp;
+                            <button type="button" class="slds-button_neutral" onclick="passId();">Cancel</button>
+                        </div>
+                    </table> 
+</apex:form>
+</div>
+</html> 
+</apex:page>

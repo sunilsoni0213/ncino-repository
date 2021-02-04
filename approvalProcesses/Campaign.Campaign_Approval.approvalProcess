@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>StartDate</field>
+        <field>ExpectedRevenue</field>
+        <field>BudgetedCost</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>This routes the campaign for marketing approval which might also include reviewing the marketing collateral content. 
+1) Is it brand compliant? Font Style? Colors? 
+2) Does it have compliant messaging? Font Size?</description>
+        <label>Marketing Approval</label>
+        <name>Marketing_Approval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Active_True</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Status_on_the_Campaign</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Does this fall within the appropriate budget considerations?</description>
+        <label>Finance Approval</label>
+        <name>Finance_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>This enables workflow to ensure both Marketing and Finance (and other groups as your process dictates) have a clear understanding...
+1) of marketing collateral approval
+2) of budgetary approval</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Campaign.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Active_True</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Status_on_the_Campaign</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Status_Aborted</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Your_Campaign_Has_Been_Rejected_Please_reevaluate</name>
+            <type>Task</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Marketing Campaign Approval</label>
+    <processOrder>0</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

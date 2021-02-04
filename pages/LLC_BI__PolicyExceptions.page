@@ -1,0 +1,36 @@
+<apex:page >
+	<nFORCE:Internationalize />
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Sanitize />
+	<nFORCE:Include_Design_System flavor="vf" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap-datepicker.min.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap-datepicker.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'services/BrowserService.js')}" />
+	<nFORCE:ncFilterIncludes />
+	<nFORCE:ncFormElementsIncludes />
+
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__policyExceptionCSS)}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__policyExceptionApp)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'messages/MessageDirective.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'messages/MessageController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'messages/MessageService.js')}" />
+	<c:PolicyExceptionsDataService />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__policyExceptionController)}"/>
+
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<span>{!$Label.llc_bi__policy_exceptions_manage}</span>
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:PolicyExceptions />
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

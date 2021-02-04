@@ -1,0 +1,3 @@
+<apex:page id="ServiceWorker" contentType="application/javascript">
+importScripts('{!URLFOR($Resource.nCRED__service_worker, "service-worker.js")}');
+</apex:page>

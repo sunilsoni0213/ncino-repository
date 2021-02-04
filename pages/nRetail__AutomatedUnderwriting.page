@@ -1,0 +1,25 @@
+<apex:page id="AutomatedUnderwriting"
+	controller="nRetail.AutomatedUnderwritingController"
+	extensions="nFORCE.RemoteActionController">
+
+	<apex:slds />
+
+	<automated-underwriting
+		appRoute="{!$CurrentPage.parameters.app}"
+		destinationRoute="{!destinationRoute}"
+		nextRoute="{!nextHref}"
+		contextObjectId="{!contextObjectId}"
+		isAutoPricingEnabled="{!isAutoPricingEnabled}"
+		isTransactionAccessible="{!isTransactionAccessible}">
+	</automated-underwriting>
+
+	<script src="{!URLFOR($Resource.automated_underwriting, 'main.js')}"></script>
+	<script src="{!URLFOR($Resource.automated_underwriting, 'polyfills.js')}"></script>
+	<script src="{!URLFOR($Resource.automated_underwriting, 'runtime.js')}"></script>
+	<script src="{!URLFOR($Resource.automated_underwriting, 'vendor.js')}"></script>
+
+	<nFORCE:Include_Design_System components="true" />
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__nds, 'nds.bundle.css')}" />
+
+</apex:page>

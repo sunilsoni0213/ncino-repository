@@ -1,0 +1,24 @@
+<apex:page showheader="false" 
+	sidebar="false" 
+	standardStylesheets="false" 
+	lightningStyleSheets="true" 
+	controller="nFORCE.ConditionalLookupsAdminController">
+	<meta charset="utf-8" />
+	<base href="/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<apex:slds />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__nds, 'nds.bundle.css')}"/>
+	<c:ncUIIncludes ></c:ncUIIncludes>
+	<c:Include_Design_System components="true" />
+	<c:ncDataTablePartials />
+	<c:ncDataTableIncludes />
+	<c:ConditionalLookupsAdminConfiguration ></c:ConditionalLookupsAdminConfiguration>
+	<app-root></app-root>
+
+	<script type="application/javascript" src="{!URLFOR($Resource.conditionallookupsadmin, 'runtime.js')}"></script>
+	<script type="application/javascript" src="{!URLFOR($Resource.conditionallookupsadmin, 'es2015-polyfills.js')}" nomodule="1"></script>
+	<script type="application/javascript" src="{!URLFOR($Resource.conditionallookupsadmin, 'polyfills.js')}"></script>
+	<script type="application/javascript" src="{!URLFOR($Resource.conditionallookupsadmin, 'styles.js')}"></script>
+	<script type="application/javascript" src="{!URLFOR($Resource.conditionallookupsadmin, 'vendor.js')}"></script>
+	<script type="application/javascript" src="{!URLFOR($Resource.conditionallookupsadmin, 'main.js')}"></script>
+</apex:page>

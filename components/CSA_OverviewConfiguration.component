@@ -1,0 +1,56 @@
+<apex:component allowdml="true" controller="CSA_OverviewConfigurationController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Overview_Resource, 'Javascript.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.CSA_Overview_Resource, 'Stylesheet.css')}" />
+
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <div class="slds-card">
+                <div class="slds-card__header">
+                    <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small slds-truncate">
+                            <apex:outputtext value="{!$Label.Overview_Configuration}" />
+                        </h2>
+                    </div>
+                </div>
+                <div class="slds-card__body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="padding-addition-25">
+                                <apex:outputtext value="{!$Label.Overview_Instructions}" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <apex:commandbutton value="{!$Label.Overview_Install}" styleclass="btn btn-primary" action="{!install}" 
+                                                    rerender="theform, jscript" rendered="{!!isInstalled}" status="loading" />
+                                <apex:commandbutton value="{!$Label.Overview_Uninstall}" styleclass="btn btn-primary" action="{!uninstall}" 
+                                                    rerender="theform, jscript" rendered="{!isInstalled}" status="loading" />
+                                <apex:commandbutton value="{!$Label.Overview_Finish}" styleclass="btn btn-secondary" action="{!finish}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:form>
+    </div>
+    <apex:outputpanel id="jscript">
+        <script type="text/javascript">
+            jQuery(function() {
+                if('{!successMessage}' != '') {
+                    jQuery('#successMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-success">{!successMessage}</label>');
+                    setTimeout(function() {
+				        jQuery(".alert-success").remove();
+			        },5000);
+                }
+
+                if('{!errorMessage}' != '') {
+                    jQuery('#errorMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-danger">{!errorMessage}</label>');
+                    setTimeout(function() {
+				        jQuery(".alert-danger").remove();
+			        },10000);
+                }
+            });
+        </script>
+    </apex:outputpanel>
+</apex:component>

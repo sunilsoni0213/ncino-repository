@@ -1,0 +1,16 @@
+<apex:page >
+	<c:FeesCostsAdjustmentsIncludes />
+	<c:FeesCostsAdjustmentsConfiguration />
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncFeesCostsAdjustments">
+						<c:FeesCostsAdjustmentsPartial />
+						<fees-costs-adjustments></fees-costs-adjustments>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page showHeader="true" sidebar="true">
+	<apex:outputPanel layout="block" styleClass="row">
+		<apex:outputPanel layout="block" styleClass="col-xs-12">&nbsp;</apex:outputPanel>
+	</apex:outputPanel>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<apex:include pageName="{!$Page.SystemAdministration}"/>
+					</div>
+				</div>
+			</div>
+		</apex:define>
+	</apex:composition>
+</apex:page>

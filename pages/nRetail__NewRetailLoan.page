@@ -1,0 +1,19 @@
+<apex:page sidebar="false"
+	standardController="Account"
+	extensions="nRetail.NewLoanController"
+	title="{!$Label.nretail__new_retail_loan_page_title}">
+
+	<style>
+		.body-content{
+			margin-top: 10px;
+		}
+	</style>
+
+	<apex:composition template="nFORCE__Template_Landing">
+
+		<apex:define name="body">
+			<apex:include rendered="{!!isNull(route.nFORCE__Body__c)}" pageName="{!route.nFORCE__Body__c}" />
+		</apex:define>
+
+	</apex:composition>
+</apex:page>

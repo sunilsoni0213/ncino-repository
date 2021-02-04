@@ -1,0 +1,8 @@
+<apex:page controller="LLC_BI.DocuSignController" action="{!downloadAndSaveDocs}" showHeader="false" sidebar="false">
+	<apex:outputPanel >
+		<p>{!$Label.DocuSign_Request_Completed_Documents}</p>
+    	<script>
+    		window.parent.location='{!JSENCODE(returnUrl)}';
+    	</script>
+    </apex:outputPanel>
+</apex:page>

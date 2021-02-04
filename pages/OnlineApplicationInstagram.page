@@ -1,0 +1,5 @@
+<apex:page controller="OnlineApplicationInstagram" sidebar="false" showHeader="false">
+<center>
+    <apex:outputLink value="https://{!domainStringBefore}/CustomerPortal2/nPortal__SelfRegistration?core=es5" id="theLink"><apex:image style="height:100%" id="OnlineApplicationInstagram" value="{!$Resource.OnlineApplicationInstagram}" /></apex:outputLink>
+</center>
+</apex:page>

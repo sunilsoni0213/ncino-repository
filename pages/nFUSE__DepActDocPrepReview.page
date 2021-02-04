@@ -1,0 +1,77 @@
+<apex:page controller="nFUSE.DepActDocPrepReviewController"
+           showHeader="true"
+           sidebar="true"
+           docType="html-5.0">
+    <apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'util/continue-hack.js')}"/>
+
+    <nFORCE:ncPubsubIncludes />
+    <nFORCE:ncDataProvidersIncludes />
+    <apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, "apps/deposit_account_review_submit/app.js")}" />
+    <apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, "apps/deposit_account_review_submit/bootstrap.js")}" />
+    <apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, "apps/deposit_account_review_submit/controllers/AppController.js")}" />
+    <apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, "apps/deposit_account_review_submit/services/remotingService.js")}" />
+
+    <c:TransactionMonitor elementId="ncDepActDocPrep" handler="processPushTopicUpdate"/>
+    <div id="ncDepActDocPrep" ng-controller="AppController" ng-cloak="true">
+        <c:RequireAuthorization isAuthorized="{!$Permission.nFUSE__Document_Preparation_Workflow}" errorMessage="{!$Label.nfuse__no_docprep_permission}">
+            <apex:composition template="nFORCE__Template_View_1_Column">
+                <apex:define name="column-content">
+                    <apex:composition template="nFORCE__Template_View_Container">
+                        <apex:define name="content">
+                            <div class="force">
+                                <div class="col-sm-12 nopad">
+                                    <div class="repad">
+                                        <div id="Failure" style="display:none">
+                                            <apex:form >
+                                                <div class="col-sm-6">
+                                                    <div class="slds-notify slds-notify--toast slds-theme--error " role="alert">
+                                                        <span class="slds-assistive-text">{!$Label.DocPrep_Error_Badge}</span>
+                                                        <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                                                            <div class="slds-p-horizontal--small slds-size--1-of-12">
+                                                                <img src="{!URLFOR($Resource.nFORCE__design_system, "assets/icons/standard/unmatched_60.png")}"/>
+                                                            </div>
+                                                            <div class="slds-p-horizontal--small slds-size--11-of-12 font-lg slds-align-middle">
+                                                                <p>{!$Label.DocPrep_Error_Heading}</p>
+                                                            </div>
+                                                            <div class="slds-p-horizontal--small slds-size--1-of-12" />
+                                                            <div class="slds-p-horizontal--small slds-size--11-of-12 font-md">
+                                                                {!$Label.DocPrep_Status_Failure_1}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br/>
+
+                                                    <button id="communicationfailureretry"
+                                                            ng-click="retryDocGeneration()"
+                                                            class="btn btn-primary" >
+                                                        {!$Label.Generate_Documents}
+                                                    </button>
+
+                                                </div>
+                                            </apex:form>
+                                        </div>
+                                        <apex:outputPanel rendered="true">
+                                            <div id="Complete" style="display:block">
+                                                <br/>
+                                                <apex:messages id="errorMessage"/>
+                                                <p class="narrative-header">{!$Label.nfuse__deposit_account_review_page_header}</p>
+                                                <br/>
+                                                <script type="text/javascript">
+                                                    LifeCycle.blockUI();
+                                                </script>
+                                            </div>
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:define>
+                    </apex:composition>
+                </apex:define>
+            </apex:composition>
+        </c:RequireAuthorization>
+    </div>
+
+
+    <c:DepActDocPrepConfig />
+</apex:page>

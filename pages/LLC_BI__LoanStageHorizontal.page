@@ -1,0 +1,10 @@
+<apex:page standardController="LLC_BI__Loan__c">
+	<nFORCE:Include_Design_System components="true" />
+	<c:Include_AngularJS />
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<nFORCE:ncDataProvidersIncludes />
+
+	<c:LoanStageHorizontal />
+</apex:page>

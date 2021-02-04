@@ -1,0 +1,81 @@
+<apex:page controller="nCRED.StatementController"
+	extensions="nFORCE.RemoteActionController"
+	docType="html-5.0"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+>
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+	<head data-slds-path="{!URLFOR($Asset.SLDS, '')}">
+		<title>-</title>
+		<apex:stylesheet value="{!URLFOR($Resource.nCRED__spreads, 'spreads.css')}" />
+	</head>
+	<body id="{!statement.Id}" class="force commentableObject">
+
+	<apex:outputPanel rendered="{!canView}">
+		<apex:slds />
+
+		<nFORCE:LifeCycle_Functions />
+		<nFORCE:LiteForce_Functions />
+		<c:Spread_Functions />
+
+		<nFORCE:Internationalize />
+		<nFORCE:Include_Navigator />
+
+		<c:Spreads_Labels />
+		<c:Spread_Footnotes_Labels />
+		<c:Spread_Global_Analysis_Labels />
+		<c:Spread_Debt_Schedule_Labels />
+		<apex:outputPanel rendered="{!isCRE}">
+			<c:Rent_Roll_Labels />
+			<c:Sensitivity_Analysis_Labels />
+		</apex:outputPanel>
+
+		<style>
+			html {
+				background-color: #fdfdfd;
+			}
+			.slds-scope ::placeholder{
+				color: #767676 !important;
+			}
+		</style>
+
+		<div class="slds-scope">
+			<c:StatementPreloadStencil />
+			<spreads-app
+				statementId="{!statement.Id}"
+				bundleId="{!bundleId}"
+				spreadId="{!spreadId}"
+			></spreads-app>
+		</div>
+
+		<script src="{!URLFOR($Resource.spreads, 'polyfills.js')}"></script>
+		<script src="{!URLFOR($Resource.spreads, 'vendor.js')}"></script>
+		<script src="{!URLFOR($Resource.spreads, 'spreads.js')}"></script>
+		<link rel="stylesheet" href="{!URLFOR($Resource.nds, 'nds.bundle.css')}" />
+		<script src="{!URLFOR($Resource.nds, 'nds.js')}" data-resources-url="{!URLFOR($Resource.nds, 'nds/')}" />
+		<script id="spreads-init">
+			LifeCycle.currentApp = LifeCycle.currentApp || {
+				userId: '{!userId}'
+			};
+			LifeCycle.isSPAMode = true;
+			LifeCycle.msgs.msg_spread_base_vf_page_url = '{!$Page.Spread_Base}';
+			LifeCycle.isOcrInstalled = {!isOCRInstalled};
+			LifeCycle.msgs.msg_vf_includes_url = '{!URLFOR($Resource.vf_includes)}';
+			LifeCycle.SpreadData.RMAServices.rmaKey = '{!JSENCODE(rmaAwsToken)}';
+			LifeCycle.SpreadData.RMAServices.rmaURL = '{!JSENCODE(rmaAwsURL)}';
+			LifeCycle.SpreadData.RMAServices.rmaYEAR = '{!JSENCODE(rmaAwsYEAR)}';      
+			LifeCycle.SpreadData.RMAServices.rmaEnabled = {!rmaEnabled};
+			LifeCycle.Service.buffer = false;
+		</script>
+	</apex:outputPanel>
+
+	<!-- Can't Hang -->
+	<apex:outputPanel rendered="{!!canView}" >
+		<h1 style="font-size:1.5em;">{!$Label.ncred__missing_permissions}</h1>
+	</apex:outputPanel>
+	</body>
+	</html>
+</apex:page>

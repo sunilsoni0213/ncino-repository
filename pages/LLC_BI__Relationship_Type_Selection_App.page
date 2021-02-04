@@ -1,0 +1,60 @@
+<apex:page showHeader="false"
+	sidebar="false"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.RelationshipTypeAppController"
+	action="{!relationshipDetailsCheck}">
+
+<apex:composition template="nFORCE__Template_View_1_Column">
+	<apex:define name="column-content">
+		<apex:composition template="nFORCE__Template_View_Container">
+			<apex:define name="content">
+				<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngRelationshipTypeSelectionController)}" />
+				<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngAnchorDirective)}" />
+				<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngLabelProvider)}" />
+				<nFORCE:ncUIIncludes />
+				<nFORCE:Include_Navigator />
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12">
+							<p>{!$Label.What_Option_Best_Describes} </p>
+							<message></message>
+							<apex:form styleClass="form-vertical">
+								<div class="form-group">
+									<apex:outputPanel rendered="{!IF($CurrentPage.parameters.errorTypeAllowed !=null, false, true)}">
+										<p>
+											<apex:commandLink action="{!redirectToIndividual}"
+												styleClass="slds-button slds-button--neutral"
+												onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')">
+												{!$Label.llc_bi__individual}
+											</apex:commandLink>
+										</p>
+										<p>
+											<apex:commandLink action="{!redirectToBusiness}"
+												styleClass="slds-button slds-button--neutral"
+												onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')">
+												{!$Label.llc_bi__business_trust_or_estate}
+											</apex:commandLink>
+										</p>
+									</apex:outputPanel>
+								</div>
+							</apex:form>
+						</div>
+					</div>
+				</div>
+			</apex:define>
+		</apex:composition>
+	</apex:define>
+</apex:composition>
+<script>
+	angular.module('app').config(function(labelProvider){
+		labelProvider.setLabel('anchorText','{!$Label.New_Customer_Onboarding}');
+		labelProvider.setLabel('anchorSrc','{!accountIconURL}');
+		labelProvider.setLabel('anchorBackground','{!accountIconBackground}');
+		labelProvider.setLabel('typeErrorMsg','{!$Label.Relationship_Type_Error}');
+	}).config(function(configProvider){
+		configProvider.set({
+			errorShow: "{!JSENCODE($CurrentPage.parameters.errorTypeAllowed)}"
+		});
+	});
+</script>
+</apex:page>

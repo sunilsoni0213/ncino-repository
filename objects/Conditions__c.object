@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>Conditions</fullName>
+        <description>Loan Object Conditions Route</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Condition_Precedent_Subsequent__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Condition_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Condition_Specifics__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Due_Date2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date_Satisfied__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Conditions_Due_In__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Conditions_Overdue__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Conditions</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Snapshot_Conditions</fullName>
+        <description>Snapshot on Loan</description>
+        <displayedFields>
+            <field>Condition_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Condition_Specifics__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Condition_Precedent_Subsequent__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Conditions_Due_In__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Due_Date2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Conditions_Overdue__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Snapshot Conditions</label>
+    </fieldSets>
+    <fields>
+        <fullName>Condition_Precedent_Subsequent__c</fullName>
+        <externalId>false</externalId>
+        <label>Condition Precedent/Subsequent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Condition Precedent</fullName>
+                    <default>false</default>
+                    <label>Condition Precedent</label>
+                </value>
+                <value>
+                    <fullName>Condition Subsequent</fullName>
+                    <default>false</default>
+                    <label>Condition Subsequent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Condition_Specifics__c</fullName>
+        <externalId>false</externalId>
+        <label>Condition Specifics</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Condition_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Satisfactory Title Insurance</fullName>
+                    <default>false</default>
+                    <label>Satisfactory Title Insurance</label>
+                </value>
+                <value>
+                    <fullName>Each Guarantor will formally acknowledge each is aware of the terms and conditions of finance either by being party to the Facility Agreement or the execution of a separate document.</fullName>
+                    <default>false</default>
+                    <label>Each Guarantor will formally acknowledge each is aware of the terms and conditions of finance either by being party to the Facility Agreement or the execution of a separate document.</label>
+                </value>
+                <value>
+                    <fullName>A certified budget including 3-year historic &amp; forecast statement of financial position, statement of financial performance &amp; cashflow statement financial model, detailing discretionary &amp; non-discretionary Capital Expenditure for the next number of years</fullName>
+                    <default>false</default>
+                    <label>A certified budget including 3-year historic &amp; forecast statement of financial position, statement of financial performance &amp; cashflow statement financial model, detailing discretionary &amp; non-discretionary Capital Expenditure for the next number of years</label>
+                </value>
+                <value>
+                    <fullName>Duly executed by the Obligors and where appropriate in a registrable form</fullName>
+                    <default>false</default>
+                    <label>Duly executed by the Obligors and where appropriate in a registrable form</label>
+                </value>
+                <value>
+                    <fullName>From the Financier’s counsel in relation to the Transaction Documentation</fullName>
+                    <default>false</default>
+                    <label>From the Financier’s counsel in relation to the Transaction Documentation</label>
+                </value>
+                <value>
+                    <fullName>A copy of the Borrower’s most recent audited financial reports</fullName>
+                    <default>false</default>
+                    <label>A copy of the Borrower’s most recent audited financial reports</label>
+                </value>
+                <value>
+                    <fullName>Certified copies of all Material Contracts</fullName>
+                    <default>false</default>
+                    <label>Certified copies of all Material Contracts</label>
+                </value>
+                <value>
+                    <fullName>A copy of the corporate structure of the Borrower and its subsidiaries</fullName>
+                    <default>false</default>
+                    <label>A copy of the corporate structure of the Borrower and its subsidiaries</label>
+                </value>
+                <value>
+                    <fullName>Each shareholder agreement (if any)</fullName>
+                    <default>false</default>
+                    <label>Each shareholder agreement (if any)</label>
+                </value>
+                <value>
+                    <fullName>All fees and expenses, including all applicable taxes (including stamp duty) which are due</fullName>
+                    <default>false</default>
+                    <label>All fees and expenses, including all applicable taxes (including stamp duty) which are due</label>
+                </value>
+                <value>
+                    <fullName>A certificate signed by two directors of the Borrower certifying among other matters required by the Financier, its solvency and constituent documents and no Material Adverse Effect has occurred</fullName>
+                    <default>false</default>
+                    <label>A certificate signed by two directors of the Borrower certifying among other matters required by the Financier, its solvency and constituent documents and no Material Adverse Effect has occurred</label>
+                </value>
+                <value>
+                    <fullName>Title to mortgaged property</fullName>
+                    <default>false</default>
+                    <label>Title to mortgaged property</label>
+                </value>
+                <value>
+                    <fullName>The Financier is noted on insurance documents as first mortgagee over all assets and undertakings of the Obligors.</fullName>
+                    <default>false</default>
+                    <label>The Financier is noted on insurance documents as first mortgagee over all assets and undertakings of the Obligors.</label>
+                </value>
+                <value>
+                    <fullName>Evidence that satisfactory keyman insurance has been taken out in respect of all Key Management</fullName>
+                    <default>false</default>
+                    <label>Evidence that satisfactory keyman insurance has been taken out in respect of all Key Management</label>
+                </value>
+                <value>
+                    <fullName>Corporate benefit and that there is no breach of Chapter 2E or Part 2J.3 of the Corporations Act</fullName>
+                    <default>false</default>
+                    <label>Corporate benefit and that there is no breach of Chapter 2E or Part 2J.3 of the Corporations Act</label>
+                </value>
+                <value>
+                    <fullName>All necessary corporate and regulatory approvals and consents have been obtained and remain in full force and effect</fullName>
+                    <default>false</default>
+                    <label>All necessary corporate and regulatory approvals and consents have been obtained and remain in full force and effect</label>
+                </value>
+                <value>
+                    <fullName>The hedging policies of the Borrower (including in respect of interest rate and foreign exchange) which must be to the satisfaction of the Financier</fullName>
+                    <default>false</default>
+                    <label>The hedging policies of the Borrower (including in respect of interest rate and foreign exchange) which must be to the satisfaction of the Financier</label>
+                </value>
+                <value>
+                    <fullName>The Financier is satisfied as to its &apos;know your customer&apos; or similar identification and verification checks and procedures</fullName>
+                    <default>false</default>
+                    <label>The Financier is satisfied as to its &apos;know your customer&apos; or similar identification and verification checks and procedures</label>
+                </value>
+                <value>
+                    <fullName>The results of all searches, enquires and requisitions on the Financier&apos;s behalf with respect to each Obligor and the Secured Property, including all searches of the Personal Property Securities Register in respect of the Secured Property &amp; each Obligor.</fullName>
+                    <default>false</default>
+                    <label>The results of all searches, enquires and requisitions on the Financier&apos;s behalf with respect to each Obligor and the Secured Property, including all searches of the Personal Property Securities Register in respect of the Secured Property &amp; each Obligor.</label>
+                </value>
+                <value>
+                    <fullName>A valuation in respect of each real property (if any)</fullName>
+                    <default>false</default>
+                    <label>A valuation in respect of each real property (if any)</label>
+                </value>
+                <value>
+                    <fullName>Confirmation that the establishment fee specified in Item 3 of Schedule 1 (Variables Schedule) was paid on or before the date specified in Item 3 of Schedule 1 (Variables Schedule</fullName>
+                    <default>false</default>
+                    <label>Confirmation that the establishment fee specified in Item 3 of Schedule 1 (Variables Schedule) was paid on or before the date specified in Item 3 of Schedule 1 (Variables Schedule</label>
+                </value>
+                <value>
+                    <fullName>A copy of the Sale and Purchase agreement and any relevant document associated with a purchase, takeover or merger in respect of the [assets/shares] Target</fullName>
+                    <default>false</default>
+                    <label>A copy of the Sale and Purchase agreement and any relevant document associated with a purchase, takeover or merger in respect of the [assets/shares] Target</label>
+                </value>
+                <value>
+                    <fullName>Receipt of drawdown / rollover notices no later than 3 business days prior to the drawdown / rollover date</fullName>
+                    <default>false</default>
+                    <label>Receipt of drawdown / rollover notices no later than 3 business days prior to the drawdown / rollover date</label>
+                </value>
+                <value>
+                    <fullName>No Event of Default, Event of Review or potential Event of Default is subsisting or will result from the provision of the drawdown funds</fullName>
+                    <default>false</default>
+                    <label>No Event of Default, Event of Review or potential Event of Default is subsisting or will result from the provision of the drawdown funds</label>
+                </value>
+                <value>
+                    <fullName>Representations and Warranties are true and correct</fullName>
+                    <default>false</default>
+                    <label>Representations and Warranties are true and correct</label>
+                </value>
+                <value>
+                    <fullName>All necessary authorisations for the drawdown have been obtained</fullName>
+                    <default>false</default>
+                    <label>All necessary authorisations for the drawdown have been obtained</label>
+                </value>
+                <value>
+                    <fullName>Due diligence reports prepared by a relevant expert in relation to the acquisition, including (but not limited to): accounting, tax, legal, technical, environment and marketing</fullName>
+                    <default>false</default>
+                    <label>Due diligence reports prepared by a relevant expert in relation to the acquisition, including (but not limited to): accounting, tax, legal, technical, environment and marketing</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Guarantors Acknowledgement</controllingFieldValue>
+                <valueName>Each Guarantor will formally acknowledge each is aware of the terms and conditions of finance either by being party to the Facility Agreement or the execution of a separate document.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Due Diligence</controllingFieldValue>
+                <valueName>Due diligence reports prepared by a relevant expert in relation to the acquisition, including (but not limited to): accounting, tax, legal, technical, environment and marketing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sale and Purchase Agreement</controllingFieldValue>
+                <valueName>A copy of the Sale and Purchase agreement and any relevant document associated with a purchase, takeover or merger in respect of the [assets/shares] Target</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Draw Notice</controllingFieldValue>
+                <valueName>Receipt of drawdown / rollover notices no later than 3 business days prior to the drawdown / rollover date</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>No Default</controllingFieldValue>
+                <valueName>No Event of Default, Event of Review or potential Event of Default is subsisting or will result from the provision of the drawdown funds</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Representations and Warranties</controllingFieldValue>
+                <valueName>Representations and Warranties are true and correct</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Authorisations</controllingFieldValue>
+                <valueName>All necessary authorisations for the drawdown have been obtained</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Verification Certificate</controllingFieldValue>
+                <valueName>A certificate signed by two directors of the Borrower certifying among other matters required by the Financier, its solvency and constituent documents and no Material Adverse Effect has occurred</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Title</controllingFieldValue>
+                <valueName>Title to mortgaged property</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Insurance</controllingFieldValue>
+                <valueName>The Financier is noted on insurance documents as first mortgagee over all assets and undertakings of the Obligors.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Keyman Insurance</controllingFieldValue>
+                <valueName>Evidence that satisfactory keyman insurance has been taken out in respect of all Key Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Benefit</controllingFieldValue>
+                <valueName>Corporate benefit and that there is no breach of Chapter 2E or Part 2J.3 of the Corporations Act</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Approvals</controllingFieldValue>
+                <valueName>All necessary corporate and regulatory approvals and consents have been obtained and remain in full force and effect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hedging</controllingFieldValue>
+                <valueName>The hedging policies of the Borrower (including in respect of interest rate and foreign exchange) which must be to the satisfaction of the Financier</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>KYC</controllingFieldValue>
+                <valueName>The Financier is satisfied as to its &apos;know your customer&apos; or similar identification and verification checks and procedures</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Searches</controllingFieldValue>
+                <valueName>The results of all searches, enquires and requisitions on the Financier&apos;s behalf with respect to each Obligor and the Secured Property, including all searches of the Personal Property Securities Register in respect of the Secured Property &amp; each Obligor.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Budget</controllingFieldValue>
+                <valueName>A certified budget including 3-year historic &amp; forecast statement of financial position, statement of financial performance &amp; cashflow statement financial model, detailing discretionary &amp; non-discretionary Capital Expenditure for the next number of years</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transaction Documents</controllingFieldValue>
+                <valueName>Duly executed by the Obligors and where appropriate in a registrable form</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Legal Opinion</controllingFieldValue>
+                <valueName>From the Financier’s counsel in relation to the Transaction Documentation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accounts</controllingFieldValue>
+                <valueName>A copy of the Borrower’s most recent audited financial reports</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contracts</controllingFieldValue>
+                <valueName>Certified copies of all Material Contracts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Structure</controllingFieldValue>
+                <valueName>A copy of the corporate structure of the Borrower and its subsidiaries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Shareholder Loan Agreement</controllingFieldValue>
+                <valueName>Each shareholder agreement (if any)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Fees and Expenses</controllingFieldValue>
+                <valueName>All fees and expenses, including all applicable taxes (including stamp duty) which are due</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Valuations</controllingFieldValue>
+                <valueName>A valuation in respect of each real property (if any)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Establishment Fee</controllingFieldValue>
+                <valueName>Confirmation that the establishment fee specified in Item 3 of Schedule 1 (Variables Schedule) was paid on or before the date specified in Item 3 of Schedule 1 (Variables Schedule</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Condition_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Condition Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Transaction Documents</fullName>
+                    <default>false</default>
+                    <label>Transaction Documents</label>
+                </value>
+                <value>
+                    <fullName>Legal Opinion</fullName>
+                    <default>false</default>
+                    <label>Legal Opinion</label>
+                </value>
+                <value>
+                    <fullName>Accounts</fullName>
+                    <default>false</default>
+                    <label>Accounts</label>
+                </value>
+                <value>
+                    <fullName>Contracts</fullName>
+                    <default>false</default>
+                    <label>Contracts</label>
+                </value>
+                <value>
+                    <fullName>Corporate Structure</fullName>
+                    <default>false</default>
+                    <label>Corporate Structure</label>
+                </value>
+                <value>
+                    <fullName>Shareholder Loan Agreement</fullName>
+                    <default>false</default>
+                    <label>Shareholder Loan Agreement</label>
+                </value>
+                <value>
+                    <fullName>Fees and Expenses</fullName>
+                    <default>false</default>
+                    <label>Fees and Expenses</label>
+                </value>
+                <value>
+                    <fullName>Verification Certificate</fullName>
+                    <default>false</default>
+                    <label>Verification Certificate</label>
+                </value>
+                <value>
+                    <fullName>Title</fullName>
+                    <default>false</default>
+                    <label>Title</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Keyman Insurance</fullName>
+                    <default>false</default>
+                    <label>Keyman Insurance</label>
+                </value>
+                <value>
+                    <fullName>Corporate Benefit</fullName>
+                    <default>false</default>
+                    <label>Corporate Benefit</label>
+                </value>
+                <value>
+                    <fullName>Approvals</fullName>
+                    <default>false</default>
+                    <label>Approvals</label>
+                </value>
+                <value>
+                    <fullName>Hedging</fullName>
+                    <default>false</default>
+                    <label>Hedging</label>
+                </value>
+                <value>
+                    <fullName>KYC</fullName>
+                    <default>false</default>
+                    <label>KYC</label>
+                </value>
+                <value>
+                    <fullName>Searches</fullName>
+                    <default>false</default>
+                    <label>Searches</label>
+                </value>
+                <value>
+                    <fullName>Budget</fullName>
+                    <default>false</default>
+                    <label>Budget</label>
+                </value>
+                <value>
+                    <fullName>Valuations</fullName>
+                    <default>false</default>
+                    <label>Valuations</label>
+                </value>
+                <value>
+                    <fullName>Establishment Fee</fullName>
+                    <default>false</default>
+                    <label>Establishment Fee</label>
+                </value>
+                <value>
+                    <fullName>Guarantors Acknowledgement</fullName>
+                    <default>false</default>
+                    <label>Guarantors Acknowledgement</label>
+                </value>
+                <value>
+                    <fullName>Due Diligence</fullName>
+                    <default>false</default>
+                    <label>Due Diligence</label>
+                </value>
+                <value>
+                    <fullName>Sale and Purchase Agreement</fullName>
+                    <default>false</default>
+                    <label>Sale and Purchase Agreement</label>
+                </value>
+                <value>
+                    <fullName>Draw Notice</fullName>
+                    <default>false</default>
+                    <label>Draw Notice</label>
+                </value>
+                <value>
+                    <fullName>No Default</fullName>
+                    <default>false</default>
+                    <label>No Default</label>
+                </value>
+                <value>
+                    <fullName>Representations and Warranties</fullName>
+                    <default>false</default>
+                    <label>Representations and Warranties</label>
+                </value>
+                <value>
+                    <fullName>Authorisations</fullName>
+                    <default>false</default>
+                    <label>Authorisations</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Conditions_Due_In__c</fullName>
+        <externalId>false</externalId>
+        <formula>Due_Date2__c - TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Conditions Due In:</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conditions_Overdue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Conditions Overdue</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_Satisfied__c</fullName>
+        <description>Set date satisfied based on Status</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Status__c , &quot;Satisfied&quot;), NOW(), null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date Satisfied</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date2__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Loan_Lookup__r.LLC_BI__Closed_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Lookup__c</fullName>
+        <description>Lookup to Loan Object</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Conditions</relationshipLabel>
+        <relationshipName>Conditions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Satisfied</fullName>
+                    <default>false</default>
+                    <label>Satisfied</label>
+                </value>
+                <value>
+                    <fullName>Not Satisfied</fullName>
+                    <default>true</default>
+                    <label>Not Satisfied</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Conditions</label>
+    <nameField>
+        <displayFormat>C-{0000}</displayFormat>
+        <label>Conditions Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Conditions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

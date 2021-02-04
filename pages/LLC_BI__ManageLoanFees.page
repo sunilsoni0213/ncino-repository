@@ -1,0 +1,29 @@
+<apex:page controller="LLC_BI.FeesCostsAdjustmentsController" showHeader="false" sidebar="false">
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<apex:outputPanel layout="none" rendered="{!useOldFeeExperience}">
+						<div class="col-md-12">
+							<c:ManageFee />
+						</div>
+					</apex:outputPanel>
+					<apex:outputPanel layout="none" rendered="{!!useOldFeeExperience}">
+						<c:FeesCostsAdjustmentsIncludes />
+						<c:FeesCostsAdjustmentsConfiguration />
+						<div class="col-md-12">
+							<div id="ncFeesCostsAdjustments">
+								<nFORCE:DynamicTablePartials />
+								<nFORCE:ncScreenSectionFormBuilderPartials />
+								<nFORCE:ncDataTablePartials />
+								<c:ncAssociationCardPartial />
+								<c:FeesCostsAdjustmentsPartial />
+								<fees-costs-adjustments></fees-costs-adjustments>
+							</div>
+						</div>
+					</apex:outputPanel>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

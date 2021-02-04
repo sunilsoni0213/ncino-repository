@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>A financial institution can maintain distinct Communities for each of their branded institutions. This junction object is a link between email templates and the Institution object. Use this object to determine which emails are sent to users associated with a particular institution.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__EmailTemplate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Populate this text field with the Salesforce ID of the email template to be sent to users from the institution.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this text field with the Salesforce ID of the email template to be sent to users from the institution.</inlineHelpText>
+        <label>Email Template</label>
+        <length>18</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Email_Template_Purpose__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The data installer autopopulates this picklist field with the action or purpose the email template accomplishes. This enables the system to send the email template at the correct time. Best practice is to avoid manual edits to the field value.</description>
+        <externalId>false</externalId>
+        <label>Email Template Purpose</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Document Assigned - Bulk</fullName>
+                    <default>false</default>
+                    <label>Account Document Assigned - Bulk</label>
+                </value>
+                <value>
+                    <fullName>Account Document Rejected</fullName>
+                    <default>false</default>
+                    <label>Account Document Rejected</label>
+                </value>
+                <value>
+                    <fullName>Borrower Added (Existing)</fullName>
+                    <default>false</default>
+                    <label>Borrower Added (Existing)</label>
+                </value>
+                <value>
+                    <fullName>Borrower Added (New)</fullName>
+                    <default>false</default>
+                    <label>Borrower Added (New)</label>
+                </value>
+                <value>
+                    <fullName>Co-Owner Added (Existing)</fullName>
+                    <default>false</default>
+                    <label>Co-Owner Added (Existing)</label>
+                </value>
+                <value>
+                    <fullName>Co-Owner Added (New)</fullName>
+                    <default>false</default>
+                    <label>Co-Owner Added (New)</label>
+                </value>
+                <value>
+                    <fullName>Deposit Documents Assigned</fullName>
+                    <default>false</default>
+                    <label>Deposit Documents Assigned</label>
+                </value>
+                <value>
+                    <fullName>Deposit Document Rejected</fullName>
+                    <default>false</default>
+                    <label>Deposit Document Rejected</label>
+                </value>
+                <value>
+                    <fullName>Guarantor Added (Existing)</fullName>
+                    <default>false</default>
+                    <label>Guarantor Added (Existing)</label>
+                </value>
+                <value>
+                    <fullName>Guarantor Added (New)</fullName>
+                    <default>false</default>
+                    <label>Guarantor Added (New)</label>
+                </value>
+                <value>
+                    <fullName>Loan Document Assigned Email - Bulk</fullName>
+                    <default>false</default>
+                    <label>Loan Document Assigned Email - Bulk</label>
+                </value>
+                <value>
+                    <fullName>Loan Document Rejected Email</fullName>
+                    <default>false</default>
+                    <label>Loan Document Rejected Email</label>
+                </value>
+                <value>
+                    <fullName>Save and Continue</fullName>
+                    <default>false</default>
+                    <label>Save and Continue</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Institution__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Use this lookup field to select the institution for which you are selecting email templates.</description>
+        <externalId>false</externalId>
+        <label>Institution</label>
+        <referenceTo>LLC_BI__Institution__c</referenceTo>
+        <relationshipLabel>Institutions</relationshipLabel>
+        <relationshipName>Institutions</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>This field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. You can also use this field when importing data into nCino to efficiently associate related records without the need to know the internal ID for the record.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Email Template Institution</label>
+    <nameField>
+        <displayFormat>ETI-{000000000}</displayFormat>
+        <label>Email Template Institution Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Email Template Institutions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

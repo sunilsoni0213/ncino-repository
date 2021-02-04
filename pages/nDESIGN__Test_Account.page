@@ -1,0 +1,25 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		</head>
+		<body>
+			<c:Includes enableLifeCycleApp="true" runLifeCycleApp="false" />
+			<c:Layout_Functions />
+			<c:Navigation currentAppName="nCino_Layout" />
+			<apex:form >
+				<apex:outputText value="
+						{!Account.Id}
+						{!Account.Name}
+						{!Account.Type}
+						{!Account.CreatedDate}
+						{!Account.OwnerId}
+						{!Account.Owner.Id}
+						{!Account.Owner.Name}"
+					id="theHiddenInput" rendered="false"/>
+			</apex:form>
+			<c:LayoutDesigner contextObjectParam="{!Account}"
+				screenIdParam="{!$CurrentPage.parameters.screenId}"/>
+		</body>
+	</html>
+</apex:page>

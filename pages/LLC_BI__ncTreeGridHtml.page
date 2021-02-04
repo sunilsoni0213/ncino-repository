@@ -1,0 +1,7 @@
+<apex:page readOnly="true" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false"
+	sidebar="false" showHeader="false" contentType="text/html" docType="html-5.0" apiVersion="36.0"
+	cache="true" expires="100" showChat="false" showQuickActionVfHeader="false">
+
+	<apex:include pageName="{!$Page.nFORCE__ncTreeGridHtml}" />
+
+</apex:page>

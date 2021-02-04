@@ -1,0 +1,15 @@
+<apex:page showHeader="false"
+	sidebar="false"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.RelationshipDetailsController,nFORCE.SectionFormGeneratorController">
+	<c:RelationshipDetailsIncludes />
+	<apex:slds />
+	<div class="slds" id="relationshipDetailsApp">
+		<c:RelationshipDetailsPartial />
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<relationship-details></relationship-details>
+	</div>
+
+	<c:RelationshipDetailRoutes />
+	<c:RelationshipDetailsConfiguration contextObjectId="{!contextObjectId}" nextHref="{!nextHref.url}" />
+</apex:page>

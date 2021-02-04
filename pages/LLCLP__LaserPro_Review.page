@@ -1,0 +1,16 @@
+<apex:page standardController="LLC_BI__Loan__c" 
+	docType="html-5.0" 
+	showChat="false" 
+	sidebar="false" 
+	showQuickActionVfHeader="false" 
+	applyHtmlTag="false"
+	showHeader="false"
+	>
+	<div id="start-div" class="force">
+		<apex:outputText rendered="false" value="LLC_BI__Loan__c.Id" />
+		<nDESIGN:Loading_Modal enableBootstrap3="false"/>
+		<nXBI:Includes enableLifeCycleApp="true" runLifeCycleApp="true" />
+		<c:LP_Loan_Service_v1_0 buffer="false" escape="false" />
+		<c:LaserPro_Review loan="{!LLC_BI__Loan__c}" />
+	</div>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page standardController="Account"  extensions="LLC_BI.StatisticsDisplayController">
+<div style="margin-left: -18px;">
+	<apex:pageMessages />
+	<c:StatisticsComponent numberOfColumns="2"
+		uniqueStatsOnly="true"
+		objId="{!Account.Id}"
+		category="Statistics"
+		statisticsLinkFieldName="{!$Label.llc_bi__statistics_account_lookup_column_label}"
+		noStatsDescription="{!$Label.llc_bi__no_relationship_stats}"
+		/>
+</div>
+</apex:page>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>nFORCE__Attributes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to hold any additional information about this section</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>-D Attributes</label>
+        <length>1</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Content_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>-D Content Name</label>
+        <length>1</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Content__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Lookup to the content related to this section</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Content</label>
+        <referenceTo>nFORCE__Content__mdt</referenceTo>
+        <relationshipLabel>Sections</relationshipLabel>
+        <relationshipName>Sections</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Has_Resource__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Used to determine if this record has resources</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Has_Resource</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Used to determine if this section is currently active</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is_Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines the display order in the menu</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Section</label>
+    <pluralLabel>Sections</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

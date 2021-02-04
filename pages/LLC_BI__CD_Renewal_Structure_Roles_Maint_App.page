@@ -1,0 +1,6 @@
+<apex:page docType="html-5.0">
+
+	<c:StructureAndRoles />
+	<c:CDRenewalStructureAndRolesMaintConfig />
+
+</apex:page>

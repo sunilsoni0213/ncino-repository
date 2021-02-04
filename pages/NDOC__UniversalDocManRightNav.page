@@ -1,0 +1,16 @@
+<apex:page showHeader="false" sidebar="false">
+	<div class='rightNavContainer' ng-class="{'side-show': vm.rightNavDisplay}">
+		<div ng-show="vm.rightNavDisplay === vm.relationship">
+			<c:UniversalDocManRightNavRelationships />
+		</div>
+		<div ng-show="vm.rightNavDisplay === vm.archive">
+			<c:UniversalDocManRightNavArchive />
+		</div>
+		<div ng-show="vm.rightNavDisplay === vm.fileStaging">
+			<c:UniversalDocManFileStaging />
+		</div>
+		<div ng-show="vm.rightNavDisplay === vm.collateral">
+			<c:UniversalDocManRightNavCollateral />
+		</div>
+	</div>
+</apex:page>

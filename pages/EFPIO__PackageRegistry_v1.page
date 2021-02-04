@@ -1,0 +1,33 @@
+<apex:page sidebar="false"
+controller="nFORCE.TemplateController"
+showHeader="true"
+>
+<c:PackageRegistryConfig />
+<c:PackageRegistryService />
+<c:PackageRegistryIncludes />
+<div ng-app="packageRegistry" ng-cloak="ngCloak" ng-controller="packageRegistryController as pr">
+    
+    <div ng-if="!pr.hasViewAccess">
+        <div class="packageTitleContainer">
+            <div class="packageTitleContainerMessage off rounded">
+                <p class="registry-title">On Platform Orchestration : Access Denied</p>
+            </div>
+            <p>Please contact your administrator for access. Your user account requires the "Package Registry Info Access" permission to view this page.</p>
+        </div>
+    </div>
+    
+    <div ng-if="pr.hasViewAccess">
+        <dashboard />
+    </div>
+    
+    <div class="flex-center">
+        <div ng-if="pr.showSpinner===true" class="loading loading-dark">
+            <div class="loading-message loading-message-dark">
+                <p>{{pr.spinnerMessage}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</apex:page>

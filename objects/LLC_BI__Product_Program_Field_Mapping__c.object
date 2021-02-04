@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__Context_Object_Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not used because the product program selector feature is not being used. Provides the field API name for the object in context.</description>
+        <externalId>false</externalId>
+        <label>Context Object Field Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Context_Object_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not used because the product program selector feature is not being used. Provides the object API name in context.</description>
+        <externalId>false</externalId>
+        <label>Context Object Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is currently not used because the product program selector feature is not being used. Determines if the field mapping is active and should be used.</description>
+        <externalId>false</externalId>
+        <label>IsActive</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Program_Attribute_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not used because the product program selector feature is not being used. Defines an attribute name that associates the product program with field mapping.</description>
+        <externalId>false</externalId>
+        <label>Program Attribute Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Root_Object_Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not used because the product program selector feature is not in use. The API name of the id of the root object relative to the context object. If not set, it defaults to the API name of the root object.</description>
+        <externalId>false</externalId>
+        <label>Root Object Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Product Program Field Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

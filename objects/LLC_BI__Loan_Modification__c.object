@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Loan Modification Object is used to capture information about a modification on a loan.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>LLC_BI__Date_to_Colson__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used as part of the product. It is being reviewed to deprecate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date  this modification was sent to Colson for approval</inlineHelpText>
+        <label>Date to Colson</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Effective_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This date field is a manually entered and optional. It is used in the loan modification process to specify the date at which the modifications made will take effect.</description>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Explanation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is an optional free text area, that is manually entered when creating a loan modification. It  is used to specify the reasons that modifications are being made on the loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please identify why this loan modification is being proposed</inlineHelpText>
+        <label>Explanation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Lookup_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a formula field, that is automatically populated when starting a loan modification and is the modification&apos;s unique external ID, used in associating the modification to the original loan record. Loan modifications in general are not required but are optionally created based on financial institution business process.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Loan__r.LLC_BI__lookupKey__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Loan Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Mod_Detail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a free text area that is manually entered and optional. The field  is used to specify details of the loan modification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the specific details of the Loan Modification.</inlineHelpText>
+        <label>Loan Mod Detail</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Modification_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This checkbox is used to specify whether the loan modification has been sent for approval. If the box is checked, the loan modification has been sent. This field is automatically populated when the loan modification record is submitted for approval.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box when the loan modification has been sent</inlineHelpText>
+        <label>Loan Modification Sent</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field Deprecated.  Replaced by Loan_Lookup_Key__c.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Loan__r.LLC_BI__Loan_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>-D Loan Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a Master-Detail field that is automatically populated when starting a loan modification from the loan. The field is used to specify the loan that the modification is associated to. Loan modifications in general are not required but are optionally created based on financial institution business process.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Loan Modifications</relationshipLabel>
+        <relationshipName>Loan_Modifications</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mod_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist field that is optional and manually entered. It is used to specify whether a notification or a approval is assigned for this loan modification</description>
+        <externalId>false</externalId>
+        <label>Mod Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Notification</fullName>
+                    <default>true</default>
+                    <label>Notification</label>
+                </value>
+                <value>
+                    <fullName>Approval</fullName>
+                    <default>false</default>
+                    <label>Approval</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Modification_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist field that is manually entered, and is required only if Loan Modifications are used. It is used to specify the type of modification that is happening on the loan. Loan modifications in general are not required but are optionally created based on financial institution business process.</description>
+        <externalId>false</externalId>
+        <label>Modification Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Correct Existing Note</fullName>
+                    <default>false</default>
+                    <label>Correct Existing Note</label>
+                </value>
+                <value>
+                    <fullName>Extend Amortization</fullName>
+                    <default>false</default>
+                    <label>Extend Amortization</label>
+                </value>
+                <value>
+                    <fullName>Increase Loan Amount</fullName>
+                    <default>false</default>
+                    <label>Increase Loan Amount</label>
+                </value>
+                <value>
+                    <fullName>Interest Rate Reduction</fullName>
+                    <default>false</default>
+                    <label>Interest Rate Reduction</label>
+                </value>
+                <value>
+                    <fullName>Payment Deferral</fullName>
+                    <default>false</default>
+                    <label>Payment Deferral</label>
+                </value>
+                <value>
+                    <fullName>Reduce Loan Amount</fullName>
+                    <default>false</default>
+                    <label>Reduce Loan Amount</label>
+                </value>
+                <value>
+                    <fullName>Interest Only</fullName>
+                    <default>false</default>
+                    <label>Interest Only</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__New_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This currency field is used to specify a new amount. It is an optional and manually entered field. If applicable, it is the amount that is being proposed by the loan modification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If applicable, please enter newly proposed amount</inlineHelpText>
+        <label>New Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__New_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This percent field is used to specify a new interest rate. It is an optional and manually entered.  If applicable, it is the new rate that is being proposed by the loan modification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If applicable, please enter new proposed rate</inlineHelpText>
+        <label>New Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Objective__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a free text field used to specify what the modification hopes to accomplish. This field is manually entered and optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please identify what this modification hopes to accomplish</inlineHelpText>
+        <label>Objective</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Owner__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a manually selected, optional, picklist. It specifies which department owns the modification process.</description>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Compliance</fullName>
+                    <default>false</default>
+                    <label>Compliance</label>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>Servicing</fullName>
+                    <default>false</default>
+                    <label>Servicing</label>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+                <value>
+                    <fullName>Loan Ops</fullName>
+                    <default>false</default>
+                    <label>Loan Ops</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist used to specify the status of the loan modification throughout the approval process. This field can be manually entered or it can be populated via additional workflow configuration based on the approval process.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>In Review</fullName>
+                    <default>false</default>
+                    <label>In Review</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Loan Modification</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LM-{MM}-{YY}-{00}</displayFormat>
+        <label>Loan Modification Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loan Modifications</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,287 @@
+<apex:page standardController="LLC_BI__Credit_Memo_Modifcation__c" extensions="LLC_BI.MemoController">
+	<apex:pageMessages id="errors"/>
+	<apex:form rendered="{!error == false}">
+
+		<!-- New UI -->
+		<apex:outputPanel rendered="{!inNewUI}">
+			<nFORCE:ncDataProvidersIncludes />
+			<nFORCE:ncPubsubIncludes />
+			<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncAnchorController, 'application/App.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncAnchorController, 'application/Bootstrap.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncAnchorController, 'application/InputLookupFix.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncAnchorController, 'controllers/AppController.js')}" />
+			<c:EditMemoConfiguration memoName="{!memoName}" />
+			<div id="ncAnchorController" ng-controller="AppController" />
+				<div class="slds-p-bottom--small text-right">
+					<apex:commandButton action="{!cancel}" immediate="true" value="{!$Label.llc_bi__cancel}" styleClass="item btn btn-secondary text-right"/>
+					<apex:commandButton action="{!save}" value="{!$Label.llc_bi__save}" rendered="{!!inFinalStage}" styleClass="item btn btn-primary"/>
+				</div>
+
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span>{!$Label.llc_bi__memo_information_section}</span>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<div class="container-fluid">
+									<div class="col-xs-12">
+										<apex:variable value="{!0}" var="counter" />
+										<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+										<apex:repeat value="{!informationFieldSet}" var="fld">
+											<apex:variable var="counter" value="{!counter+1}"/>
+											<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+											<nFORCE:DivTagInjector sClass="row" isRendered="{!isRow}"/>
+											<div class="form-group col-xs-6">
+												<div class="row">
+													<apex:outputPanel rendered="{! ((!inFinalStage) && (!readOnlyFieldMap[fld.fieldPath]))}">
+														<div class="content-label col-xs-12">
+															<apex:outputLabel value="{!fld.label}" styleClass="{!IF(fld.required, 'is-required', '')}"/>
+														</div>
+														<div class="col-xs-12 content-body">
+															<apex:inputField value="{!memo[fld.fieldPath]}"
+																	required="{!fld.required}"
+																	label="{!fld.label}"
+																	styleClass="form-control" >
+																<apex:actionSupport event="onchange"
+																		action="{!updateInformationSection}"
+																		reRender="monitoredFields,errors"/>
+															</apex:inputField>
+														</div>
+													</apex:outputPanel>
+													<apex:outputPanel rendered="{! (inFinalStage) || (readOnlyFieldMap[fld.fieldPath])}">
+														<div class="content-label col-xs-12">
+															<apex:outputLabel value="{!fld.label}"/>
+														</div>
+														<div class="col-xs-12 content-body">
+															<apex:outputField value="{!memo[fld.fieldPath]}" label="{!fld.label}"/>
+														</div>
+													</apex:outputPanel>
+												</div>
+											</div>
+											<nFORCE:DivTagInjector close="{!NOT(isRow)}"/>
+										</apex:repeat>
+										<nFORCE:DivTagInjector close="{!isRow}"/>
+									</div>
+								</div>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span>{!$Label.llc_bi__memo_approval_section}</span>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<div class="container-fluid">
+									<div class="col-xs-12">
+										<apex:variable value="{!0}" var="counter" />
+										<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+										<apex:repeat value="{!approvalRequiredCategories}" var="category">
+											<apex:variable var="counter" value="{!counter+1}"/>
+											<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+											<nFORCE:DivTagInjector sClass="row" isRendered="{!isRow}"/>
+											<div class="col-xs-6">
+												<div class="row">
+													<div class="content-label col-xs-12">
+														<apex:outputLabel value="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[category.fieldName].label}" />
+													</div>
+													<div class="col-xs-12 content-body">
+														<apex:inputCheckbox value="{!memo[category.fieldName]}"
+																disabled="{!inFinalStage}">
+															<apex:actionSupport event="onclick"
+																	action="{!changeSelectedCategories}"
+																	reRender="monitoredFields" />
+														</apex:inputCheckbox>
+													</div>
+												</div>
+											</div>
+											<nFORCE:DivTagInjector close="{!NOT(isRow)}"/>
+										</apex:repeat>
+										<nFORCE:DivTagInjector close="{!isRow}"/>
+									</div>
+								</div>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span>{!$Label.llc_bi__memo_no_approval_section}</span>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<div class="container-fluid">
+									<div class="col-xs-12">
+										<apex:variable value="{!0}" var="counter" />
+										<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+										<apex:repeat value="{!approvalNotRequiredCategories}" var="category">
+											<apex:variable var="counter" value="{!counter+1}"/>
+											<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+											<nFORCE:DivTagInjector sClass="row" isRendered="{!isRow}"/>
+											<div class="col-xs-6">
+												<div class="row">
+													<div class="content-label col-xs-12">
+														<apex:outputLabel value="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[category.fieldName].label}" />
+													</div>
+													<div class="col-xs-12 content-body">
+														<apex:inputCheckbox value="{!memo[category.fieldName]}"
+																disabled="{!inFinalStage}">
+															<apex:actionSupport event="onclick"
+																	action="{!changeSelectedCategories}"
+																	reRender="monitoredFields" />
+														</apex:inputCheckbox>
+													</div>
+												</div>
+											</div>
+											<nFORCE:DivTagInjector close="{!NOT(isRow)}"/>
+										</apex:repeat>
+										<nFORCE:DivTagInjector close="{!isRow}"/>
+									</div>
+								</div>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+				<apex:actionRegion >
+					<apex:outputPanel id="monitoredFields" >
+						<apex:outputPanel rendered="{!monitoredFields.size > 0}">
+							<apex:composition template="nFORCE__Template_Heading">
+								<apex:define name="left">
+									<span>{!$Label.llc_bi__memo_fields_section}</span>
+								</apex:define>
+							</apex:composition>
+							<apex:composition template="nFORCE__Template_View_1_Column">
+								<apex:define name="column-content">
+									<apex:composition template="nFORCE__Template_View_Container">
+										<apex:define name="content">
+											<apex:dataTable value="{!monitoredFields}"
+												var="fld"
+												styleClass="slds-table slds-table--bordered slds-table--striped">
+
+												<apex:column >
+													<apex:facet name="header">{!$Label.llc_bi__memo_category}</apex:facet>
+													<apex:outputText value="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[fld.category.fieldName].label}"/>
+												</apex:column>
+												<apex:column >
+													<apex:facet name="header">{!$Label.llc_bi__memo_field}</apex:facet>
+													<apex:outputText value="{!$ObjectType.LLC_BI__Loan__c.fields[fld.fieldName].label}"/>
+												</apex:column>
+												<apex:column >
+													<apex:facet name="header">{!$Label.llc_bi__memo_current}</apex:facet>
+													<apex:outputField value="{!current[fld.fieldName]}"/>
+												</apex:column>
+												<apex:column rendered="{!!isReadOnlyType}">
+													<apex:facet name="header" >{!$Label.llc_bi__memo_proposed}</apex:facet>
+													<apex:inputField value="{!proposed[fld.fieldName]}" rendered="{!!inFinalStage}"/>
+													<apex:outputField value="{!proposed[fld.fieldName]}" rendered="{!inFinalStage}"/>
+												</apex:column>
+											</apex:dataTable>
+										</apex:define>
+									</apex:composition>
+								</apex:define>
+							</apex:composition>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:actionRegion>
+				<apex:outputPanel rendered="{!!inFinalStage}">
+					<apex:inputField value="{!memo.LLC_BI__Description__c}" />
+				</apex:outputPanel>
+				<apex:outputPanel rendered="{!inFinalStage}">
+					<apex:outputField value="{!memo.LLC_BI__Description__c}" />
+				</apex:outputPanel>
+		</apex:outputPanel>
+
+		<!-- Old UI -->
+		<apex:outputPanel rendered="{!!inNewUI}">
+			<apex:sectionHeader title="{!IF(inFinalStage,$Label.llc_bi__memo_view,$Label.llc_bi__memo_edit)}" subtitle="{!IF(memo.Id==null,$Label.llc_bi__memo_new,memo.Name)}"/>
+
+			<apex:pageBlock mode="edit">
+				<apex:pageBlockButtons >
+					<apex:outputPanel >
+						<apex:commandButton action="{!save}" value="{!$Label.llc_bi__save}" rendered="{!!inFinalStage}"/>
+						<apex:commandButton action="{!cancel}" immediate="true" value="{!$Label.llc_bi__cancel}"/>
+					</apex:outputPanel>
+				</apex:pageBlockButtons>
+
+				<apex:actionRegion >
+					<apex:pageBlockSection title="{!$Label.llc_bi__memo_information_section}" columns="2">
+						<apex:repeat value="{!informationFieldSet}" var="fld">
+							<apex:pageBlockSectionItem rendered="{! ((!inFinalStage) && (!readOnlyFieldMap[fld.fieldPath]))}">
+								<apex:outputLabel value="{!fld.label}"/>
+								<apex:inputField value="{!memo[fld.fieldPath]}" required="{!fld.required}" label="{!fld.label}">
+									<apex:actionSupport event="onchange" action="{!updateInformationSection}" reRender="monitoredfields,errors"/>
+								</apex:inputField>
+							</apex:pageBlockSectionItem>
+							<apex:pageBlockSectionItem rendered="{! (inFinalStage) || (readOnlyFieldMap[fld.fieldPath])}">
+								<apex:outputLabel value="{!fld.label}"/>
+								<apex:outputField value="{!memo[fld.fieldPath]}" label="{!fld.label}"/>
+							</apex:pageBlockSectionItem>
+						</apex:repeat>
+					</apex:pageBlockSection>
+				</apex:actionRegion>
+
+				<apex:actionRegion >
+				<apex:pageBlockSection title="{!$Label.llc_bi__memo_approval_section}" columns="2" rendered="{!approvalRequiredCategories.size > 0}">
+					<apex:repeat value="{!approvalRequiredCategories}" var="category">
+						<apex:inputCheckbox value="{!memo[category.fieldName]}" label="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[category.fieldName].label}" disabled="{!inFinalStage}">
+							<apex:actionSupport event="onclick" action="{!changeSelectedCategories}" reRender="monitoredfields,test" />
+						</apex:inputCheckbox>
+					</apex:repeat>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockSection title="{!$Label.llc_bi__memo_no_approval_section}" columns="2" rendered="{!approvalNotRequiredCategories.size > 0}">
+					<apex:repeat value="{!approvalNotRequiredCategories}" var="category">
+						<apex:inputCheckbox value="{!memo[category.fieldName]}" label="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[category.fieldName].label}" disabled="{!inFinalStage}">
+							<apex:actionSupport event="onclick" action="{!changeSelectedCategories}" reRender="monitoredfields"/>
+						</apex:inputCheckbox>
+					</apex:repeat>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockSection id="monitoredfields" title="{!$Label.llc_bi__memo_fields_section}" columns="1" >
+					<apex:pageBlockTable value="{!monitoredFields}" var="fld" rendered="{!monitoredFields.size > 0}">
+						<apex:column >
+							<apex:facet name="header">{!$Label.llc_bi__memo_category}</apex:facet>
+							<apex:outputText value="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields[fld.category.fieldName].label}"/>
+						</apex:column>
+						<apex:column >
+							<apex:facet name="header">{!$Label.llc_bi__memo_field}</apex:facet>
+							<apex:outputText value="{!$ObjectType.LLC_BI__Loan__c.fields[fld.fieldName].label}"/>
+						</apex:column>
+						<apex:column >
+							<apex:facet name="header">{!$Label.llc_bi__memo_current}</apex:facet>
+							<apex:outputField value="{!current[fld.fieldName]}"/>
+						</apex:column>
+						<apex:column rendered="{!!isReadOnlyType}">
+							<apex:facet name="header" >{!$Label.llc_bi__memo_proposed}</apex:facet>
+							<apex:inputField value="{!proposed[fld.fieldName]}" rendered="{!!inFinalStage}"/>
+							<apex:outputField value="{!proposed[fld.fieldName]}" rendered="{!inFinalStage}"/>
+						</apex:column>
+					</apex:pageBlockTable>
+				</apex:pageBlockSection>
+				</apex:actionRegion>
+
+				<apex:actionRegion >
+					<apex:pageBlockSection title="{!$Label.llc_bi__memo_description_section}" columns="1">
+						<apex:pageBlockSectionItem rendered="{!!inFinalStage}">
+							<apex:inputField value="{!memo.LLC_BI__Description__c}" label="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields.LLC_BI__Description__c.label}"/>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem rendered="{!inFinalStage}">
+							<apex:outputField value="{!memo.LLC_BI__Description__c}" label="{!$ObjectType.LLC_BI__Credit_Memo_Modifcation__c.fields.LLC_BI__Description__c.label}"/>
+						</apex:pageBlockSectionItem>
+					</apex:pageBlockSection>
+				</apex:actionRegion>
+
+			</apex:pageBlock>
+		</apex:outputPanel>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,95 @@
+<apex:page docType="html-5.0"
+	action="{!forwardToCustomStartPage}"
+	controller="nPortal.PortalLoginController"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false">
+
+	<html class="portal-html" lang="en">
+		<head>
+			<title>{!$Label.Portal_Login_Title}</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:include pageName="nPortal__PortalIncludes" />
+			<c:SelfRegistrationIncludes />
+			<c:SelfRegistrationDataService />
+			<c:PasswordDataService />
+			<c:LanguageDataService />
+			<c:PortalUserService />
+			<c:PortalConfiguration />
+		</head>
+		<body class="portal-body slds has-nstyle" ng-app="selfRegisterApp" ng-controller="SelfRegisterController as vm">
+			<portal-loader slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-loader>
+			<portal-message slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-message>
+			<div class="portal-wrapper-full" n-style="pso-login-background">
+				<div class="slds-grid slds-wrap">
+					<div class="portal-wrapper slds-size--1-of-1">
+						<c:PortalHeader />
+					</div>
+				</div>
+				<div class="portal-center-column slds-size--1-of-1
+					slds-medium-size--3-of-4 slds-large-size--2-of-4">
+					<responsive-heading
+						header-text="{!$Label.Login_Header}"
+						subheader-text="{!$Label.Login_Subheader}"
+						header-style="'pso-login-header'"
+						subheader-style="'pso-login-subheader'">
+					</responsive-heading>
+					<div class="portal-form-container slds-p-around--x-large
+						slds-m-top--x-large slds-m-bottom--large slds-m-horizontal--x-large
+						portal-media-icon-parent slds-theme--shade"
+						n-style="pso-section">
+						<form id="loginForm" name="loginForm" novalidate="true">
+							<div class="slds-form-element"
+								ng-class="{'slds-has-error' : loginForm.username.$invalid && vm.loginSubmitted == true}">
+								<label class="slds-form-element__label" n-style="pso-form-label">
+									{!$Label.Login_Email_Label}
+								</label>
+								<div class="slds-form-element__control">
+									<input type="text" class="slds-input" name="email" required="true"
+										ng-model="vm.login.email" n-style="pso-input" />
+								</div>
+							</div>
+							<div class="slds-form-element slds-m-top--small slds-m-bottom--small"
+								ng-class="{'slds-has-error' : loginForm.password.$invalid && vm.loginSubmitted == true}">
+								<label class="slds-form-element__label" n-style="pso-form-label">
+									{!$Label.Login_Password_Label}
+								</label>
+								<div class="slds-form-element__control">
+									<input type="password" class="slds-input" name="password" required="true"
+										ng-model="vm.login.password" n-style="pso-input" />
+								</div>
+							</div>
+							<a n-style="pso-action-link" ng-click="vm.redirect('{!URLFOR($Page.PortalForgotPassword)}')">
+								{!$Label.Login_Forgot_Password}
+							</a>
+							<div ng-show="vm.login.isFailed"
+								ng-cloak="true"
+								aria-live="polite"
+								aria-atomic="true"
+								class="slds-box slds-notify slds-notify--alert slds-theme--error portal-no-margin">
+								{!$Label.Login_Failed}
+							</div>
+							<div class="slds-grid slds-grid--align-center portal-no-margin">
+								<button class="slds-button slds-button--brand slds-m-top--large slds-size--1-of-1"
+									ng-click="vm.performLogin()" n-style="pso-button-primary">
+									{!$Label.Login}
+								</button>
+							</div>
+							<p class="slds-m-top--medium portal-center-text">
+								{!$Label.Login_New_Customer}
+								<a n-style="pso-action-link" ng-click="vm.redirect('{!URLFOR($Page.SelfRegistration)}')">
+									{!$Label.Login_New_Customer_Link}
+								</a>
+							</p>
+						</form>
+					</div>
+					<security-badges></security-badges>
+					<c:SecurityBadgeDataService />
+				</div>
+				<div class="push"></div>
+			</div>
+			<c:PortalFooter />
+		</body>
+	</html>
+</apex:page>

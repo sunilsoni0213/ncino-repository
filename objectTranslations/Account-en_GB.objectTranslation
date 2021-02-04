@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Relationship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Relationships</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Access</value>
+        </caseValues>
+        <name>account_access</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Access Level</value>
+        </caseValues>
+        <name>account_access_level</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Contact Role</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Contact Roles</value>
+        </caseValues>
+        <name>account_contact_role</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Creator</value>
+        </caseValues>
+        <name>account_creator</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Currency</value>
+        </caseValues>
+        <name>account_currency</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Description</value>
+        </caseValues>
+        <name>account_description</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Detail Page</value>
+        </caseValues>
+        <name>account_detail_page</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Division</value>
+        </caseValues>
+        <name>account_division</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Edit</value>
+        </caseValues>
+        <name>account_edit</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Fax</value>
+        </caseValues>
+        <name>account_fax</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Fields</value>
+        </caseValues>
+        <name>account_field</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship General</value>
+        </caseValues>
+        <name>account_general</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Hierarchy</value>
+        </caseValues>
+        <name>account_hierarchy</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship History</value>
+        </caseValues>
+        <name>account_history</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship History Archive</value>
+        </caseValues>
+        <name>account_history_archive</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship History Report</value>
+        </caseValues>
+        <name>account_history_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship ID</value>
+        </caseValues>
+        <name>account_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Information</value>
+        </caseValues>
+        <name>account_information</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Name</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Names</value>
+        </caseValues>
+        <name>account_name</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Name (Local)</value>
+        </caseValues>
+        <name>account_name_local</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Number</value>
+        </caseValues>
+        <name>account_number</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Owner</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Owners</value>
+        </caseValues>
+        <name>account_owner</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Owner Alias</value>
+        </caseValues>
+        <name>account_owner_alias</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Owner Report</value>
+        </caseValues>
+        <name>account_owner_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Owner Role</value>
+        </caseValues>
+        <name>account_owner_role</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Ownership</value>
+        </caseValues>
+        <name>account_ownership</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Phone</value>
+        </caseValues>
+        <name>account_phone</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Rating</value>
+        </caseValues>
+        <name>account_rating</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Record</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Records</value>
+        </caseValues>
+        <name>account_record</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Record Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Record Types</value>
+        </caseValues>
+        <name>account_record_type</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Report</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Reports</value>
+        </caseValues>
+        <name>account_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Sharing</value>
+        </caseValues>
+        <name>account_sharing</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Site</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Sites</value>
+        </caseValues>
+        <name>account_site</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Source</value>
+        </caseValues>
+        <name>account_source</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Stage ID</value>
+        </caseValues>
+        <name>account_stage_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Team</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Teams</value>
+        </caseValues>
+        <name>account_team</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Team Member</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Team Members</value>
+        </caseValues>
+        <name>account_team_member</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Team Member ID</value>
+        </caseValues>
+        <name>account_team_member_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Team Report</value>
+        </caseValues>
+        <name>account_team_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Territory</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Territories</value>
+        </caseValues>
+        <name>account_territory</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Tool</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Tools</value>
+        </caseValues>
+        <name>account_tool</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Types</value>
+        </caseValues>
+        <name>account_type</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Relationship View</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Relationship Views</value>
+        </caseValues>
+        <name>account_view</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Relationship</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Parent Relationships</value>
+        </caseValues>
+        <name>parent_account</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Relationship Division</value>
+        </caseValues>
+        <name>parent_account_division</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Relationship ID</value>
+        </caseValues>
+        <name>parent_account_id</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Parent Relationship Site</value>
+        </caseValues>
+        <name>parent_account_site</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Person Relationship Record</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Person Relationship Records</value>
+        </caseValues>
+        <name>person_account_record</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

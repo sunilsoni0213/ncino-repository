@@ -1,0 +1,43 @@
+<apex:page standardController="LLC_BI__Deposit__c" extensions="DepositIRAGlanceClass">
+
+
+<script type= "text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<center>
+<script type="text/javascript">
+
+google.charts.load('current', {packages: ['gauge']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+// we need a table to act as the datasource for the chart
+var data = new google.visualization.arrayToDataTable([
+    ['Label', 'Value'],
+    ['Age', {v:{!ContactObject.Customer_Age__c}}]
+   ]);
+          
+var options = {
+   width: 300, height: 200,
+   redFrom:0, redTo: 59.5,
+   greenFrom: 59.6, greenTo: 70.4,
+   yellowFrom: 70.5, yellowTo: 100,
+   minorTicks: 5,
+   majorTicks: ["0",,,,,,59.5,70.5,,,100],
+   min: 0,
+   max: 100
+ };
+
+
+//assign the chart to the appropriate div and draw the chart
+var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+chart.draw(data, options);
+}
+
+</script>
+
+<div id="chart_div" style="width: 300px; height: 200px;">
+    
+    </div>
+
+    </center>
+</apex:page>

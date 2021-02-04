@@ -1,0 +1,38 @@
+<apex:page standardController="LLC_BI__Covenant_Product__c" extensions="LLC_BI.CovenantProductController"
+	showHeader="true" sidebar="true">
+	<apex:form >
+		<apex:outputPanel >
+			<apex:sectionHeader title="Covenant Template" subtitle="Product Association"/>
+		</apex:outputPanel>
+		<apex:pageBlock >
+			<apex:pageBlockSection columns="1">
+				<!-- Product Line -->
+				<apex:outputLabel value="{!$Label.llc_bi__product_line}" for="productLine"/>
+				<apex:outputPanel id="pLinesList" layout="block" styleClass="value_c">
+					<apex:selectList value="{!productLineId}" multiselect="false" size="1" id="productLine">
+						<apex:selectOptions value="{!productLineList}"/>
+						<apex:actionSupport event="onchange" rerender="pTypeList,pList" />
+					</apex:selectList>
+				</apex:outputPanel>
+				<!-- Product Type -->
+				<apex:outputLabel value="{!$Label.llc_bi__product_type}" for="productType"/>
+				<apex:outputPanel id="pTypeList" layout="block" styleClass="value_c">
+					<apex:selectList value="{!productTypeId}" multiselect="false" size="1" id="productType">
+						<apex:selectOptions value="{!productTypeList}"/>
+						<apex:actionSupport event="onchange" rerender="pList" />
+					</apex:selectList>
+				</apex:outputPanel>
+				<!-- Product -->
+				<apex:outputLabel value="{!$Label.llc_bi__product}" for="product"/>
+				<apex:outputPanel id="pList" layout="block" styleClass="value_c">
+					<apex:selectList value="{!productId}" multiselect="false" size="1" id="product">
+						<apex:selectOptions value="{!productList}"/>
+					</apex:selectList>
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+		<apex:commandButton action="{!save}" value="{!$Label.llc_bi__save}" />
+		<apex:outputText escape="false" value="{!$Label.llc_bi__button_seperator}"/>
+		<apex:CommandLink action="{!cancel}" value="{!$Label.llc_bi__button_cancel}"/>
+	</apex:form>
+</apex:page>

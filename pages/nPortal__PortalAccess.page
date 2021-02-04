@@ -1,0 +1,424 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	controller="nPortal.PortalAccessController"
+	>
+
+	<html lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<apex:include pageName="nPortal__PortalAccessIncludes" />
+		<c:SelfRegistrationIncludes />
+		<c:PortalConfiguration />
+		<c:PortalAccessDataService />
+	</head>
+	<body>
+		<div class="slds" ng-app="portalAccessApp" ng-controller="portalAccessController as vm">
+			
+			<div ng-repeat="message in vm.messages" class="slds-m-horizontal--medium">
+				<div class="slds-notify_container slds-m-right_large slds-notify slds-notify--toast full-width-toast slds-theme--error" role="alert">
+					<span class="slds-assistive-text" ng-bind="message.type"></span>
+					<button ng-click="vm.closeAlert(message)" class="slds-button slds-button--icon-inverse slds-notify__close">
+						<img class="slds-icon slds-icon--small"
+						ng-src="{!URLFOR($Resource.nFORCE__SLDS0102)}/assets/icons/action/close_120.png" />
+					<span class="slds-assistive-text">{!$Label.Close}</span>
+					</button>
+					<div class="slds-notify__content slds-grid">
+						<div class='slds-icon slds-icon--small slds-m-right--small'>
+							<img height="15" 
+								ng-src="{!URLFOR($Resource.Global_Resources,'images/warning.png')}" />
+						</div>
+						<div class="slds-col slds-align-middle">
+							<h2 class="slds-text-heading--small wrap-on-newline" ng-bind="message.text"></h2>
+							<div class="wrap-on-newline" ng-if="message.subText" ng-bind="message.subText"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<apex:outputPanel layout="none" rendered="{!(hasPermissionSet == false)}">
+								<div class="slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3
+									portal-center-column">
+									<div class="portal-center-text">
+										<svg class="portal-default-message-icon" aria-hidden="true">
+											<use xlink:href="{!URLFOR($Asset.SLDS,
+												'assets/icons/utility-sprite/svg/symbols.svg#lock')}">
+											</use>
+										</svg>
+									</div>
+									<p class="portal-center-text slds-m-top--medium">
+										{!$Label.Portal_Access_No_Permissions}
+									</p>
+								</div>
+							</apex:outputPanel>
+							<apex:outputPanel layout="none" rendered="{!(hasPermissionSet == true)}">
+								<div class="slds-grid slds-wrap slds-p-left--small slds-p-right--small">
+									<div class="slds-grid slds-size--1-of-1 slds-wrap slds-m-bottom--large"
+										ng-class="{'slds-m-top--large': vm.isLoanContext()}"
+										ng-show="vm.contextObjectType && !vm.isIndividualAccountContext()" ng-cloak="true">
+										<div class="slds-col">
+											<h1 class="slds-text-heading--large portal-top-margin--none">
+												{!$Label.Portal_Access_Header}
+											</h1>
+											<h2 class="slds-text-heading--medium slds-m-top--medium portal-top-margin--small"
+												ng-bind="vm.accessSubheader">
+											</h2>
+										</div>
+										<div class="slds-col slds-no-flex slds-container--right slds-m-top--medium
+											 slds-button-group">
+											<button class="slds-button"
+												ng-class="(vm.showEnabled && vm.showDisabled) ? 'slds-button--brand' : 'slds-button--neutral'"
+												ng-click="vm.showAll()">{!$Label.All}</button>
+											<button class="slds-button"
+												ng-class="(vm.showEnabled && !vm.showDisabled) ? 'slds-button--brand' : 'slds-button--neutral'"
+												ng-click="vm.showEnabledOnly()">{!$Label.Enabled}</button>
+											<button class="slds-button"
+												ng-class="(!vm.showEnabled && vm.showDisabled) ? 'slds-button--brand' : 'slds-button--neutral'"
+												ng-click="vm.showDisabledOnly()">{!$Label.Disabled}</button>
+										</div>
+									</div>
+									<!-- Stencil for cards -->
+									<div class="portal-stencil slds-grid slds-wrap slds-size--1-of-1"
+										ng-show="!vm.entities">
+										<div class="slds-grid slds-wrap portal-detail-row slds-size--1-of-1
+											slds-grid--vertical-align-center slds-p-around--medium slds-m-bottom--medium"
+											ng-repeat="item in [0, 1]"
+											ng-cloak="true">
+											<div class="slds-size--1-of-2 slds-medium-size--3-of-12 slds-large-size--3-of-12"
+												resizer="true"
+												ng-class="{'slds-order--1': !(isMediumOrBigger)}">
+												<div class="slds-media slds-media--center slds-size--1-of-1">
+													<div class="slds-media__figure slds-icon_container">
+														<div class="portal-stencil-square"></div>
+													</div>
+													<div class="slds-media__body">
+														<div class="portal-stencil-fill portal-stencil-wide"></div>
+													</div>
+												</div>
+											</div>
+											<div class="slds-size--1-of-1 slds-medium-size--7-of-12 slds-large-size--7-of-12"
+												resizer="true"
+												ng-class="{'slds-order--3 slds-m-top--medium': !(isMediumOrBigger)}">
+												<div class="slds-grid slds-wrap">
+													<div class="slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3"
+														resizer="true"
+														ng-class="{'slds-m-top--medium': !(isMediumOrBigger)}">
+														<div class="portal-stencil-fill portal-stencil-wide"></div>
+														<div class="portal-stencil-fill portal-stencil-wide slds-m-top--small"></div>
+													</div>
+													<div class="slds-size--1-of-2 slds-medium-size--1-of-3 slds-large-size--1-of-3"
+														resizer="true"
+														ng-class="{'slds-m-top--medium': !(isMediumOrBigger)}">
+														<div class="portal-stencil-fill portal-stencil-wide"></div>
+														<div class="portal-stencil-fill portal-stencil-wide slds-m-top--small"></div>
+													</div>
+													<div class="slds-size--1-of-2 slds-medium-size--1-of-3 slds-large-size--1-of-3"
+														resizer="true"
+														ng-class="{'slds-m-top--medium': !(isMediumOrBigger)}">
+														<div class="portal-stencil-fill portal-stencil-wide"></div>
+														<div class="portal-stencil-fill portal-stencil-wide slds-m-top--small"></div>
+													</div>
+												</div>
+											</div>
+											<div class="slds-medium-size--1-of-12 slds-large-size--1-of-12"
+												resizer="true"
+												ng-class="{'slds-col slds-align--absolute-center slds-m-top--medium slds-m-bottom--x-small slds-order--4':
+												!(isMediumOrBigger)}">
+												<div class="slds-float--right">
+													<div class="portal-stencil-fill portal-stencil-slim"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /Stencil for cards -->
+									<div class="slds-size--1-of-1"
+										 ng-class="{'animated fadeIn': (vm.entities && vm.entities.length == 0)}"
+										 ng-show="vm.entities && vm.entities.length == 0"
+										 ng-cloak="true">
+										<div class="portal-center-text">
+											<svg class="portal-default-message-icon" aria-hidden="true">
+												<use xlink:href="{!URLFOR($Asset.SLDS,
+													'assets/icons/utility-sprite/svg/symbols.svg#topic')}">
+												</use>
+											</svg>
+										</div>
+										<h2 class="slds-text-heading--medium slds-m-top--medium portal-top-margin--small
+											portal-center-text"
+											ng-bind="vm.emptyHeader">
+										</h2>
+										<p class="portal-center-text portal-top-margin--small" ng-bind="vm.emptySubheader">
+										</p>
+									</div>
+									<div class="slds-grid slds-wrap slds-size--1-of-1"
+										ng-class="{'animated fadeIn': (vm.entities)}"
+										ng-show="vm.entities">
+										<div class="slds-grid slds-wrap portal-detail-row slds-size--1-of-1 slds-grid--vertical-align-center
+											slds-p-around--medium slds-m-bottom--medium slds-align--absolute-center"
+											ng-repeat="entity in vm.entities"
+											ng-show="((entity.hasAccess && vm.showEnabled) || (!entity.hasAccess && vm.showDisabled))"
+											ng-cloak="true">
+											<div class="slds-size--1-of-2 slds-medium-size--3-of-12 slds-large-size--3-of-12"
+												resizer="true"
+												ng-class="{'slds-order--1': !(isMediumOrBigger)}">
+												<div class="slds-media slds-media--center slds-size--1-of-1">
+													<div class="slds-media__figure slds-icon_container slds-icon-custom-custom27"
+														ng-show="!entity.isLongLoading">
+														<svg class="slds-icon slds-icon--medium" aria-hidden="true">
+															<use xlink:href="{!URLFOR($Asset.SLDS,
+																'assets/icons/standard-sprite/svg/symbols.svg#user')}">
+															</use>
+														</svg>
+													</div>
+													<div class="slds-media__figure slds-align--absolute-center"
+														ng-show="entity.isLongLoading">
+														<div class="portal-loader-icon-partial portal-loader-icon-small"
+															 n-style="pso-loader-icon-partial"
+															 style="background-image: url({!URLFOR($Resource.nFORCE__SLDS0102,
+																 'assets/images/spinners/slds_spinner.gif')})" />
+													</div>
+													<div class="slds-media__body">
+														<h3 class="slds-text-heading--medium portal-top-margin--none
+															slds-p-right--small slds-truncate"
+															ng-bind="(entity.firstName || '') + ' ' + (entity.lastName || '')">
+														</h3>
+													</div>
+												</div>
+											</div>
+											<div class="slds-size--1-of-1 slds-medium-size--7-of-12 slds-large-size--7-of-12"
+												resizer="true"
+												ng-class="{'slds-order--3 slds-m-top--medium': !(isMediumOrBigger)}">
+												<div class="slds-grid slds-wrap">
+													<div class="slds-size--1-of-1 slds-medium-size--2-of-4
+													slds-large-size--2-of-4 slds-truncate"
+														resizer="true"
+														ng-class="{'slds-m-top--medium': !(isMediumOrBigger)}">
+														<p class="slds-text-title--caps portal-top-margin--none">
+															{!$Label.Portal_Access_Email_Header}
+														</p>
+														<p class="portal-top-margin--none slds-p-right--x-small slds-truncate"
+														   ng-bind="entity.email">
+														</p>
+													</div>
+													<div class="slds-size--1-of-2 slds-medium-size--1-of-4
+													slds-large-size--1-of-4 slds-truncate"
+														resizer="true"
+														ng-class="{'slds-m-top--medium': !(isMediumOrBigger)}">
+														<p class="slds-text-title--caps portal-top-margin--none">
+															{!$Label.Portal_Access_Role_Header}
+														</p>
+														<p class="portal-top-margin--none" ng-bind="entity.role">
+														</p>
+													</div>
+													<div class="slds-size--1-of-2 slds-medium-size--1-of-4
+													slds-large-size--1-of-4 slds-truncate"
+														resizer="true"
+														ng-class="{'slds-m-top--medium': !(isMediumOrBigger)}">
+														<p class="slds-text-title--caps portal-top-margin--none">
+															{!$Label.Portal_Access_Last_Login_Header}
+														</p>
+														<p class="portal-top-margin--none" ng-bind="vm.filterDate(entity.lastLogin)">
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="slds-size--1-of-2 slds-medium-size--1-of-12 slds-large-size--1-of-12"
+												resizer="true"
+												ng-class="{'slds-order--2 slds-align-end slds-m-top--medium': !(isMediumOrBigger)}">
+												<p class="slds-text-title--caps portal-top-margin--none">
+													{!$Label.Portal_Access_Enabled_Header}
+												</p>
+												<div class="slds-form-element slds-m-top--xx-small">
+													<label class="slds-checkbox--toggle slds-grid
+													slds-grid--vertical-align-center portal-bottom-padding--none">
+														<input type="checkbox" ng-change="vm.toggleAccess(entity, vm.contextId)"
+															ng-model="entity.hasAccess" ng-disabled="entity.isLoading" />
+														<span class="slds-checkbox--faux" data-check-on="✓"></span>
+													</label>
+												</div>
+											</div>
+											<div class="slds-medium-size--1-of-12 slds-large-size--1-of-12"
+												resizer="true"
+												ng-class="{'slds-col slds-align--absolute-center slds-m-top--medium slds-m-bottom--x-small slds-order--4':
+													!(isMediumOrBigger)}">
+												<a class="slds-float--right"
+													ng-show="!vm.isIndividualAccountContext()"
+													ng-click="entity.showDetails = !entity.showDetails">
+													<img width="20" height="20" class="portal-chevron-icon"
+														src="{!URLFOR($Resource.nFORCE__SLDS0102,
+															'assets/icons/utility/chevronright_60.png')}"
+														ng-class="{'portal-rotate-90': entity.showDetails}">
+													</img>
+												</a>
+											</div>
+											<div class="slds-tabs--default portal-accordion"
+												resizer="true"
+												ng-class="{'slds-order--5': !(isMediumOrBigger),
+													'portal-accordion-visible': entity.showDetails || vm.isIndividualAccountContext(),
+													'portal-accordion-hidden': !(entity.showDetails || vm.isIndividualAccountContext())}">
+												<ul class="slds-tabs--default__nav portal-tab-list" role="tablist">
+													<li class="slds-tabs--default__item slds-text-heading--label"
+														ng-class="{'slds-active': (!entity.selectedDetailTabIndex ||
+														entity.selectedDetailTabIndex == 0)}"
+														ng-click="entity.selectedDetailTabIndex = 0"
+														title="{!$Label.Portal_Access_Tab_ToDo}"
+														role="presentation">
+														<a class="slds-tabs--default__link" role="tab" tabindex="0"
+															aria-selected="{{entity.selectedDetailTabIndex == 0}}">
+															{!$Label.Portal_Access_Tab_ToDo}
+														</a>
+													</li>
+													<li class="slds-tabs--default__item slds-text-heading--label"
+														ng-show="entity.relationships && entity.relationships.length > 0"
+														ng-class="{'slds-active': (entity.selectedDetailTabIndex == 1)}"
+														ng-click="entity.selectedDetailTabIndex = 1"
+														title="{!$Label.Portal_Access_Tab_Relationships}"
+														role="presentation">
+														<a class="slds-tabs--default__link" role="tab" tabindex="1"
+															aria-selected="{{entity.selectedDetailTabIndex == 1}}">
+															{!$Label.Portal_Access_Tab_Relationships}
+														</a>
+													</li>
+													<li class="slds-tabs--default__item slds-text-heading--label"
+														ng-show="entity.loans && entity.loans.length > 0"
+														ng-class="{'slds-active': (entity.selectedDetailTabIndex == 2)}"
+														ng-click="entity.selectedDetailTabIndex = 2"
+														title="{!$Label.Portal_Access_Tab_Loans}"
+														role="presentation">
+														<a class="slds-tabs--default__link" role="tab" tabindex="2"
+															aria-selected="{{entity.selectedDetailTabIndex == 2}}">
+															{!$Label.Portal_Access_Tab_Loans}
+														</a>
+													</li>
+													<li class="slds-tabs--default__item slds-text-heading--label"
+														ng-show="entity.deposits && entity.deposits.length > 0"
+														ng-class="{'slds-active': (entity.selectedDetailTabIndex == 3)}"
+														ng-click="entity.selectedDetailTabIndex = 3"
+														title="{!$Label.Portal_Access_Tab_Deposits}"
+														role="presentation">
+														<a class="slds-tabs--default__link" role="tab" tabindex="3"
+															aria-selected="{{entity.selectedDetailTabIndex == 3}}">
+															{!$Label.Portal_Access_Tab_Deposits}
+														</a>
+													</li>
+												</ul>
+												<div id="tab-default-1" class="slds-tabs--default__content portal-tab-content"
+													role="tabpanel"
+													ng-class="(entity.selectedDetailTabIndex == null || entity.selectedDetailTabIndex == 0) ? 'animated fadeIn slds-show' : 'animated fadeOut slds-hide'">
+													<div ng-init="vm.loadTodoDocuments(entity)">
+														<p class="slds-p-bottom--small slds-title portal-top-margin--small"
+															ng-show="(!entity.todoDocs || entity.todoDocs.length > 0)">
+															{!$Label.Portal_Access_Table_Description_Todo}
+														</p>
+														<div class="slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3
+															portal-center-column"
+															ng-show="entity.todoDocs && entity.todoDocs.length == 0 && !entity.todoLocked"
+															ng-cloak="true">
+															<div class="portal-center-text slds-m-top--medium">
+																<svg class="portal-default-message-icon" aria-hidden="true">
+																	<use xlink:href="{!URLFOR($Asset.SLDS,
+																		'assets/icons/utility-sprite/svg/symbols.svg#topic')}">
+																	</use>
+																</svg>
+															</div>
+															<h2 class="slds-text-heading--medium slds-m-top--medium portal-top-margin--small
+																portal-center-text"
+																ng-bind="vm.label.Portal_Access_Empty_Todo_Header">
+															</h2>
+															<p class="portal-center-text portal-top-margin--small"
+																ng-bind="vm.label.Portal_Access_Empty_Todo_Text.replace('{0}', entity.firstName)">
+															</p>
+														</div>
+														<div class="slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3
+															portal-center-column"
+															ng-show="entity.todoLocked"
+															ng-cloak="true">
+															<div class="portal-center-text">
+																<svg class="portal-default-message-icon slds-m-top--small" aria-hidden="true">
+																	<use xlink:href="{!URLFOR($Asset.SLDS,
+																		'assets/icons/utility-sprite/svg/symbols.svg#lock')}">
+																	</use>
+																</svg>
+															</div>
+															<p class="portal-center-text portal-top-margin--small">
+																{!$Label.Portal_Access_No_ToDo_Access}
+															</p>
+														</div>
+														<portal-data-table data="entity.todoDocs"
+															badge-field="'status'"
+															badge-class-map="vm.todoBadgeMap"
+															columns="vm.todoDocColumns">
+														</portal-data-table>
+													</div>
+												</div>
+												<div id="tab-default-2" class="slds-tabs--default__content portal-tab-content"
+													 role="tabpanel"
+													 ng-class="(entity.selectedDetailTabIndex == 1) ? 'animated fadeIn slds-show' : 'animated fadeOut slds-hide'">
+													<div ng-init="vm.retrieveRelationships(entity)">
+														<p class="slds-p-bottom--small slds-title portal-top-margin--small"
+															ng-bind="vm.label.Portal_Access_Table_Description_Relationships.replace('{0}', entity.accountName).replace('{1}', entity.firstName)">
+														</p>
+														<portal-data-table data="entity.relationships"
+															columns="vm.relationshipColumns"
+															user-context="entity"
+															id-property="'sid'" enabled-property="'hasAccess'"
+															ontoggle="vm.toggleTabItemAccess(entity, row)"
+															icon-path="'{!URLFOR($Asset.SLDS,
+																'assets/icons/standard-sprite/svg/symbols.svg#account')}'">
+														</portal-data-table>
+													</div>
+												</div>
+												<div id="tab-default-3" class="slds-tabs--default__content portal-tab-content"
+													role="tabpanel"
+													ng-class="(entity.selectedDetailTabIndex == 2) ? 'animated fadeIn slds-show' : 'animated fadeOut slds-hide'">
+													<div ng-init="vm.retrieveLoans(entity)">
+														<p class="slds-p-bottom--small slds-title portal-top-margin--small">
+															{!$Label.Portal_Access_Table_Description_Loans}
+														</p>
+														<portal-data-table data="entity.loans"
+															columns="vm.loanColumns"
+															user-context="entity"
+															id-property="'sid'" enabled-property="'hasAccess'"
+															ontoggle="vm.toggleTabItemAccess(entity, row)"
+															icon-path="'{!URLFOR($Asset.SLDS,
+																'assets/icons/custom-sprite/svg/symbols.svg#custom17')}'">
+														</portal-data-table>
+													</div>
+												</div>
+												<div id="tab-default-4" class="slds-tabs--default__content portal-tab-content"
+													role="tabpanel"
+													ng-class="(entity.selectedDetailTabIndex == 3) ? 'animated fadeIn slds-show' : 'animated fadeOut slds-hide'">
+													<div ng-init="vm.retrieveDeposits(entity)">
+														<p class="slds-p-bottom--small slds-title portal-top-margin--small">
+															{!$Label.Portal_Access_Table_Description_Deposits}
+														</p>
+														<portal-data-table data="entity.deposits"
+															columns="vm.depositColumns"
+															user-context="entity"
+															id-property="'sid'" enabled-property="'hasAccess'"
+															ontoggle="vm.toggleTabItemAccess(entity, row)"
+															icon-path="'{!URLFOR($Asset.SLDS,
+																'assets/icons/custom-sprite/svg/symbols.svg#custom41')}'">
+														</portal-data-table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</apex:outputPanel>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+	</body>
+	</html>
+</apex:page>

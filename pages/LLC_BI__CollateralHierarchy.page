@@ -1,0 +1,9 @@
+<apex:page showHeader="false" sidebar="false" standardController="LLC_BI__Collateral__c" extensions="nFORCE.TemplateController,LLC_BI.CollateralHierarchyController">
+	<c:CollateralCreationIncludes />
+	<c:ncCollateralHierarchyConfiguration />
+	<div id="ncCollateralCreation" class="force slds ui-container">
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<c:ncCollateralCreationPartials />
+		<collateral-creation />
+	</div>
+</apex:page>

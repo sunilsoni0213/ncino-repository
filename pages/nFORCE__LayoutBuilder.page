@@ -1,0 +1,15 @@
+<apex:page standardController="nFORCE__Screen_Section__c" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		</head>
+		<body class="shade">
+			<c:Includes enableLifeCycleApp="true" />
+			<c:Layout_Functions />
+			<c:LayoutBuilder_Functions />
+			<c:Navigation currentAppName="nCino_User_Interface" />
+			<apex:include pageName="nFORCE__SectionBuilder" />
+			<c:LayoutBuilder sectionParam="{!nFORCE__Screen_Section__c}" sectionId="{!nFORCE__Screen_Section__c.Id}"/>
+		</body>
+	</html>
+</apex:page>

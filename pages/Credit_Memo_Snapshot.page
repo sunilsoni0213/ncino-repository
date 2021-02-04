@@ -1,0 +1,23 @@
+<apex:page standardStylesheets="false" showHeader="false" sideBar="false">
+        <nFORCE:Include_Messenger />
+        <nFORCE:Includes enableBootstrap3="true" enableFontAwesome="true" enableBS3Namespace="true" enableLifeCycleApp="true" runLifeCycleApp="false" includeIEHacks="false"/>
+        <nFORCE:Include_Design_System flavor="bs3" />
+        <nFORCE:Include_Navigator />
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+ 
+        <nFORCE:ncDataSnapshot comparableSectionId="{!$CurrentPage.parameters.ssid}"
+                contextId="{!$CurrentPage.parameters.id}"
+                guid="snapshotguid">
+        </nFORCE:ncDataSnapshot>
+        <script>
+            (function(){
+                var div = document.getElementsByClassName('slds-scope')[0];
+                var config = { attributes: true, childList: true, subtree: true };
+ 
+                var observer = new MutationObserver(function() {
+                    Messenger.publish('Content:Resize', document.body.scrollHeight);
+                });
+                observer.observe(div, config);
+            })();
+        </script>
+</apex:page>

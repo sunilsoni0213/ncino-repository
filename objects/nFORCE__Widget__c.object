@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Data__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It contains JSON formatter parameters for the widget.</description>
+        <externalId>false</externalId>
+        <label>Data</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Icon__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Icon</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Angular__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This field is populated automatically by a formula based on the selection in nFORCE__Type__c. This type of widget displays angular.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(nFORCE__Type__c, &apos;Angular&apos;),true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is_Angular</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Knockout__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This field is populated automatically by a formula based on the selection in nFORCE__Type__c. This type of widget displays knockout, such as the CKE Editor used by the Credit Memo narrative sections.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(nFORCE__Type__c, &apos;Knockout&apos;),true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is_Knockout</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Narrative__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This field is populated automatically by a formula based on the selection in nFORCE__Type__c. This type of widget displays the deprecated Live Editor.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(nFORCE__Type__c, &apos;Narrative&apos;) || (ISPICKVAL(nFORCE__Type__c, &apos;Knockout&apos;) &amp;&amp; CONTAINS( Name, &apos;Narrative&apos;)),true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Narrative</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parameters__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The value should include JSON parameters to configure vendor-specific widgets. {htmlGenerator: nCinoAwesomeHtmlKnockoutGenerator}</description>
+        <externalId>false</externalId>
+        <label>Parameters</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Eight__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Eight</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Eleven__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Eleven</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Fifteen__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Fifteen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Five__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Five</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Four__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Four</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Fourteen__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Fourteen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Nine__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Nine</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_One__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource One</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Seven__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Seven</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Six__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Six</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Ten__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Ten</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Thirteen__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Thirteen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Three__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Three</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Twelve__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Twelve</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Script_Resource_Two__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a static javascript resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A static javascript resource to load with the widget.</inlineHelpText>
+        <label>Script Resource Two</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Eight__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Eight</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Five__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Five</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Four__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Four</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Nine__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Nine</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_One__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource One</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Seven__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Seven</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Six__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Six</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Ten__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Ten</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Three__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Three</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Stylesheet_Resource_Two__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Any value added will reference a cascading style sheet (CSS) resource used to load the widget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A cascading style sheet (CSS) resource to load with the widget.</inlineHelpText>
+        <label>Stylesheet Resource Two</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. It determines what logic should be used when loading the widget. The values are Narrative (no longer used), Knockout, and Angular.</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Narrative</fullName>
+                    <default>false</default>
+                    <label>Narrative</label>
+                </value>
+                <value>
+                    <fullName>Knockout</fullName>
+                    <default>false</default>
+                    <label>Knockout</label>
+                </value>
+                <value>
+                    <fullName>Angular</fullName>
+                    <default>false</default>
+                    <label>Angular</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__View__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. This field is used to specify HTML markup to use when loading and displaying the widget.</description>
+        <externalId>false</externalId>
+        <label>View</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Widget</label>
+    <nameField>
+        <label>Widget Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Widgets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

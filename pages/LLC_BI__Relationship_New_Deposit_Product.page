@@ -1,0 +1,3 @@
+<apex:page standardController="Account" extensions="LLC_BI.ProductViewController">
+	<c:Inline_Parent_Redirect destination="{!newDepositLink}" />
+</apex:page>

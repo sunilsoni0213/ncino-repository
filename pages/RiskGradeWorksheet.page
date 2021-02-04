@@ -1,0 +1,210 @@
+<apex:page standardcontroller="LLC_BI__Annual_Review__c" sidebar="false" showheader="false">
+<style type="text/css">
+    #hor-minimalist-a
+    {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 12px;
+        background: #fff;
+        margin: 55px 0 45x 0;
+        width: 480px;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    #hor-minimalist-a th
+    {
+        font-size: 14px;
+        font-weight: normal;
+        color: #039;
+        padding: 10px 8px;
+        border-bottom: 2px solid #6678b1;
+    }
+    #hor-minimalist-a td
+    {
+        color: #333;
+        padding: 9px 8px 8px 8px;
+        font-weight: bold;
+    }
+    #hor-minimalist-a tbody tr:hover td
+    {
+        color: #000;
+    }
+    
+    /* Second minimalist */
+    #hor-minimalist-a2
+    {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 12px;
+        background: #fff;
+        margin: 0 0 45x 0;
+        width: 480px;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    #hor-minimalist-a2 th
+    {
+        font-size: 14px;
+        font-weight: normal;
+        color: #039;
+        padding: 10px 8px;
+        border-bottom: 2px solid #6678b1;
+        text-align: center;
+    }
+    #hor-minimalist-a2 td
+    {
+        color: #333;
+        padding: 9px 8px 0px 8px;
+    }
+    #hor-minimalist-a2 tbody tr:hover td
+    {
+        color: #000;
+    }
+</style>
+
+<apex:form >
+<br />
+<apex:commandButton action="{!quicksave}" value="Update Review Summary"/>
+<br />
+
+<br />
+    <table id="hor-minimalist-a">
+        <thead>
+        <tr>
+            <th scope="col">Grade</th>
+            <th scope="col">Cash Flow Coverage</th>
+            <th scope="col">Global Cash Flow</th>
+            <th scope="col">AP Stress Index</th>
+            <th scope="col">Owner Experience</th>
+            <th scope="col">Revenue Growth (%)</th>
+            <th scope="col">Credit Score (Lowest if > 2)</th>
+            <th scope="col">Pers. / Bus. Liquidity</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>2.5x or higher</td>
+            <td>2.5x or higher</td>
+            <td><apex:outputText value="<"></apex:outputText>= 4</td>
+            <td>>7 years</td>
+            <td>>10%</td>
+            <td>751 or higher</td>
+            <td>>$100,000</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>2.49x - 1.75x</td>
+            <td>2.49x - 1.75x</td>
+            <td>4.1 - 5.9</td>
+            <td>6 - 7 years</td>
+            <td>5% - 10%</td>
+            <td>725 - 750</td>
+            <td>$50,000 - $100,000</td>
+        </tr>
+    
+        <tr>
+            <td>3</td>
+            <td>1.74x - 1.25x</td>
+            <td>1.74x - 1.25x</td>
+            <td>6.0 - 7.5</td>
+            <td>3 - 5 years</td>
+            <td>2% - 5%</td>
+            <td>675 - 724</td>
+            <td>$10,000 - $49,000</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>1.24x - 1.10x</td>
+            <td>1.24x - 1.10x</td>
+            <td>7.6 - 8.4</td>
+            <td>2 years</td>
+            <td>Flat - <apex:outputText value="<"></apex:outputText>2%</td>
+            <td>650 - 674</td>
+            <td>$5,000 - $9,999</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>1.09x - 1.00x</td>
+            <td>1.09x - 1.00x</td>
+            <td>8.5 - 10.4</td>
+            <td>1 year</td>
+            <td><apex:outputText value="<"></apex:outputText>0% - (2)%</td>
+            <td>625 - 649</td>
+            <td>$0 - $4,999</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0.99x - 0.75x</td>
+            <td>0.99x - 0.75x</td>
+            <td>10.5 - 11.4</td>
+            <td><apex:outputText value="<"></apex:outputText>1 with transition period</td>
+            <td>(3)% - (6)%</td>
+            <td>600 - 624</td>
+            <td>Less than $0</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0.74x - 0.5x</td>
+            <td>0.74x - 0.5x</td>
+            <td>11.5 - 12.4</td>
+            <td>N/A</td>
+            <td>(6)% - (10)%</td>
+            <td>Less than 600</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">8</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">0.5x or below</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">0.5x or below</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">>12.4</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">N/A</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">Less than (8)%</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">Exception</td>
+            <td style="padding-bottom: 5px; border-bottom: 1px solid #CCC;">N/A</td>
+        </tr>
+        
+        <tr>
+            <td>Actual</td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Cash_Flow_Coverage_actual__c}"/></td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Global_Cash_Flow__c}"/></td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__AP_Stress_Index_actual__c}"/></td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Management_Experience_actual__c}"/></td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Revenue_Growth_actual__c}"/></td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Credit_Score_actual__c}"/></td>
+            <td><apex:inputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Pers_Bus_Liquidity_actual__c}"/></td>
+        </tr>
+        <tr>
+            <td>Risk Grade</td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Cash_Flow_Coverage_RG__c}"/></td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Global_Cash_Flow_G2__c}"/></td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__AP_Stress_Index_RG__c}"/></td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Management_Experience_RG__c}"/></td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Revenue_Growth_RG__c}"/></td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Credit_Score_RG__c}"/></td>
+            <td><apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Pers_Bus_Liquidity_RG__c}"/></td>
+        </tr>
+        </tbody>
+    </table>
+
+<apex:outputPanel rendered="{!IF(LLC_BI__Annual_Review__c.LLC_BI__Override__c>0,true,false)}">
+<p style="font-size: 14px;"><strong>Final Risk Grade:  <apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Override__c}"/></strong></p>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!IF(ISBLANK(LLC_BI__Annual_Review__c.LLC_BI__Override__c),true,false)}">
+<p style="font-size: 14px;"><strong>Final Risk Grade:  <apex:outputField value="{!LLC_BI__Annual_Review__c.LLC_BI__Final_Risk_Grade__c}"/></strong></p>
+</apex:outputPanel>
+<!-- 
+<br />
+<apex:image value="{!$Resource.Risk_Grade_Worksheet}"></apex:image>
+<br />
+ -->
+<apex:commandButton action="{!quicksave}" value="Update Review Summary"/>
+<br />
+</apex:form>
+</apex:page>

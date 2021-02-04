@@ -1,0 +1,62 @@
+<apex:page showHeader="false" sidebar="false" controller="nFORCE.TemplateController" extensions="LLC_BI.CCFinishController"
+	action="{!setContextRelationship}">
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngRelationshipTypeSelectionController)}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngAnchorDirective)}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngLabelProvider)}" />
+	<style>
+		.no-toolbar-spacer{
+			margin-top:50px;
+		}
+		.force h3{
+			display:block;
+			font-family: 'Salesforce Sans';
+			font-weight: 300;
+			font-size: 1.25rem;
+			line-height: 1.25;
+			margin-right: 1.5rem;
+			margin-bottom: 0rem;
+			margin-left: 0;
+		}
+		.force p{
+			color: rgb(22, 50, 92);
+			font-family: 'Salesforce Sans';
+			line-height: 1.375;
+			margin-top: .75rem;
+			margin-right: 1.5rem;
+			margin-bottom: .75rem;
+		}
+	</style>
+	<div class="no-toolbar-spacer">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left" />
+			<apex:define name="right" />
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<c:Template_Finish leftBtnText="{!$Label.llc_bi__finish_button_product_creation}"
+							leftBtnLink="{!primaryRelationshipId}"
+							isLeftBtnId="true"
+							rightBtnText="{!$Label.llc_bi__continue_to_add_products}"
+							rightBtnLink="{!nextWorkflow}"
+							headerText="{!$Label.llc_bi__customer_creation_success_header}"
+							descriptionText="{!Description}"/>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<script>
+		angular.module('app').config(function(labelProvider){
+			labelProvider.setLabel('anchorText','{!anchorText}');
+			labelProvider.setLabel('anchorSrc','{!accountIconURL}');
+			labelProvider.setLabel('anchorBackground','{!accountIconBackground}');
+		});
+	</script>
+
+
+</apex:page>

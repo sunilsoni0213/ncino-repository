@@ -1,0 +1,96 @@
+<apex:page showHeader="false"
+	sidebar="true"
+	extensions="nRetail.ApplicationDetailsController"
+	controller="nFORCE.TemplateController">
+
+	<script>
+		// Lightning compatibility hack for Form Builder
+		if (!window.UserContext.initialize) {
+			window.UserContext.initialize = function() {}
+		}
+	</script>
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncFormBuilderIncludes />
+	<nFORCE:Include_Design_System components="true" />
+	<apex:slds />
+
+	<c:nrCommonIncludes />
+	<c:ApplicantScheduleConfiguration />
+	<c:ApplicantSearchConfiguration />
+	<c:ApplicationDetailsIncludes />
+	<c:ApplicationDetailsConfiguration />
+	<c:PushTopicListener elementToAttachTo="topbar-events-scope" topic="TransactionLogUpdate" />
+	<c:SetSldsScope elementIdsToKeepScopeOn="app-details,application-details-alerts" 
+		elementSelectorsToAddScopeTo="div.top-bar-controls,div.terms-conditions"
+	/>
+
+	<div id="application-details" ng-controller="ApplicationDetailsController as vm">
+
+		<div id="application-details-alerts" class="slds-m-horizontal--medium slds-scope">
+			<message></message>
+		</div>
+		<LLC_BI:EntityInvolvementModal />
+		<applicant-schedule></applicant-schedule>
+
+		<div class="ng-cloak slds-panel slds-m-horizontal--medium slds-m-top--large slds-p-around--large section-name-wrapper" ng-if="vm.applicationForm.screenSectionId">
+			<div class="slds-m-bottom--large section-name" ng-bind="vm.applicationForm.sectionName"></div>
+			<nc-screen-section-form-builder
+				section-id="{{vm.applicationForm.screenSectionId}}"
+				context-id="{{vm.applicationForm.contextObjectId}}"
+				show-loading-icon="vm.applicationForm.showLoadingIcon">
+			</nc-screen-section-form-builder>
+		</div>
+
+		<div id="app-details" class="slds-scope" ng-if="vm.applicants.length > 0">
+			<div ng-if="vm.showTabs" class="slds-m-horizontal--medium slds-m-top--large">
+				<applicant-tabs applicants="vm.applicants"></applicant-tabs>
+			</div>
+
+			<div ng-if="!vm.showTabs" ng-repeat="applicant in vm.applicants track by applicant.contextObjectId"
+				 class="slds-card slds-m-horizontal--medium slds-m-top--large slds-p-around--medium">
+				<div class="slds-card__header section-name" ng-bind="applicant.name"></div>
+				<div class="slds-card__body">
+					<multi-screen-section-form applicant-name="applicant.name" form-configs="applicant.formConfigs"></multi-screen-section-form>
+				</div>
+			</div>
+		</div>
+
+		<div
+			ng-if="vm.terms.length > 0 && vm.hasSession"
+			class="slds-panel slds-m-horizontal--medium slds-m-top--large slds-p-around--large section-name-wrapper acknowledgment-section">
+			<div class="slds-grid">
+				<div class="slds-m-right--x-small">
+					<checkbox
+						required="true"
+						on-change="vm.disableCheckbox"
+						checked="vm.termsChecked"
+						ng-attr-disabled="vm.termsDisabled ? 'disabled' : ''" />
+				</div>
+				<div class="slds-col" ng-bind-html="vm.buildAcknowledgement('{!$User.FirstName}','{!$User.LastName}')">
+				</div>
+			</div>
+		</div>
+
+		<topbar-events></topbar-events>
+		<!-- temporary styling fix -->
+		<style>
+			html {
+				font-size: unset !important;
+			}
+			.force .ui-container p.product-type-text {
+				font-size: 0.75rem;
+			}
+			.force .ui-container div.product-text {
+				font-size: 1.1rem;
+			}
+			abbr.slds-required {
+				text-decoration: none;
+			}
+			.force ul {
+				list-style: none;
+			}
+		</style>
+	</div>
+</apex:page>

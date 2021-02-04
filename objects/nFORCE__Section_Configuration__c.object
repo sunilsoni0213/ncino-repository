@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Display_Order__c</fullName>
+        <defaultValue>1.01</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically by the Layout Builder tool on the parent screen section. This field determines the display order of section configurations on a screen section using ascending order.</description>
+        <externalId>false</externalId>
+        <label>Display Order</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Set_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated automatically by the Layout Builder tool on the parent screen section. It stores the name of the field set being used to determine what fields to display in Credit Memo or the UI.</description>
+        <externalId>false</externalId>
+        <label>Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Filter_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is populated by the Section Builder tool. The field denotes whether a section configuration should return only records that meet the specified criteria. The value should use appropriate syntax for the WHERE clause of a SOQL query. The default value is empty and returns all records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is optional and is populated by the Section Builder tool. The field denotes whether a tier should return only records that meet the specified criteria. The value should use appropriate syntax for the WHERE clause of a SOQL query.</inlineHelpText>
+        <label>Filter Criteria</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Layout__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically by the Layout Builder tool on the parent screen section. This field specifies the layout associated with the section configuration. It specifies the layout of the fields in the credit memo for the field set associated with this record.</description>
+        <externalId>false</externalId>
+        <label>Layout</label>
+        <referenceTo>nFORCE__Layout__c</referenceTo>
+        <relationshipLabel>Section Configurations</relationshipLabel>
+        <relationshipName>Section_Configurations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Limit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is populated by an administrator. When used with the appropriate section resources, the numeric value is used to limit the returned records. It may also be used to return offset records when the value of nFORCE__Offset_By_Limit__c field is set to true. The default value is 0 to return all records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is optional and is populated by an administrator. When used with the appropriate section resources, the numeric value is used to limit the returned records. The default value is 0 to return all records.</inlineHelpText>
+        <label>Limit</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Offset_By_Limit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is populated by an administrator. The default value is false, which denotes that the value of nFORCE__Limit__c is a hard set limit. When updated to true, the field enables returning offset records with appropriate section resource.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is optional and is populated by an administrator. The default value is false, which denotes that the value of Limit is a hard set limit. When updated to true, the field enables returning offset records with appropriate section resource.</inlineHelpText>
+        <label>Offset By Limit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parent_Configuration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically by the Layout Builder tool on the parent screen section. This field specifies a parent layout associated with the layout record you are viewing. Parent layouts are used to ensure parent-child navigational integreity between section configurations, as well as determining the display order.</description>
+        <externalId>false</externalId>
+        <label>Parent Configuration</label>
+        <referenceTo>nFORCE__Section_Configuration__c</referenceTo>
+        <relationshipLabel>Child Configurations</relationshipLabel>
+        <relationshipName>Child_Configurations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parent_Relationship_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically by the Layout Builder tool on the parent screen section. It is used to store parent-child navigational data, so the screen section can properly display data on child or parent objects of the screen section&apos;s sObject_Type (value in nFORCE__sObject_Type__c field).</description>
+        <externalId>false</externalId>
+        <label>Parent Relationship Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Screen_Section__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated automatically by the Layout Builder tool on the parent screen section. This field specifies the screen section associated with the section configuration. It provides the screen section with the fields to be used.</description>
+        <externalId>false</externalId>
+        <label>Screen Section</label>
+        <referenceTo>nFORCE__Screen_Section__c</referenceTo>
+        <relationshipLabel>Section Configurations</relationshipLabel>
+        <relationshipName>Section_Configurations</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Section_Header__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated by Section Builder when the administrator adds a value on the tier&apos;s header tab. It is used by the view generator to create a smaller header for a specific tier.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A header to display at the top of this section.</inlineHelpText>
+        <label>Section Header</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Sort_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is populated by the Section Builder tool. The field denotes whether a section configuration should return records in a specified sorted order. The value should use appropriate syntax for the ORDER BY clause of a SOQL query. The default value is empty and returns records in no specific order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is optional and is populated by the Section Builder tool. The field denotes whether a tier should return records in a specified sorted order. The value should use appropriate syntax for the ORDER BY clause of a SOQL query.</inlineHelpText>
+        <label>Sort Criteria</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Unique__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is populated by the Section Builder tool. This field denotes whether a section configuration should return only unique records.  When the value is set to true, the view generator will respect the setting and generate appropriate html markup. In a hierarchy of dependent section configurations, only a single record should have a true value to ensure proper markup is generated. The default value is false and will result in view generator creating markup that lists all returned records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is optional and is populated by the Section Builder tool. This field denotes whether a tier should return only unique records. When the value is set to true, the generated html code will respect the setting.</inlineHelpText>
+        <label>Unique</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__sObject_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated automatically by the Layout Builder tool on the parent screen section. This field specifies the object of the field set used for the section configuration.</description>
+        <externalId>false</externalId>
+        <label>sObject Type</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Section Configuration</label>
+    <listViews>
+        <fullName>ID_Document_Sections</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>nFORCE__Field_Set_Key__c</columns>
+        <columns>nFORCE__Screen_Section__c</columns>
+        <columns>nFORCE__Parent_Relationship_Name__c</columns>
+        <columns>nFORCE__Parent_Configuration__c</columns>
+        <columns>nFORCE__sObject_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Field_Set_Key__c</field>
+            <operation>equals</operation>
+            <value>LLC_BI__Id_Document_Drivers_License,LLC_BI__Id_Document_State_Id,LLC_BI__Id_Document_AlienRegistrationCard</value>
+        </filters>
+        <filters>
+            <field>nFORCE__Field_Set_Key__c</field>
+            <operation>equals</operation>
+            <value>Drivers_License</value>
+        </filters>
+        <label>ID Document Sections</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>nFORCE__All</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Field_Set_Key__c</columns>
+        <columns>nFORCE__Screen_Section__c</columns>
+        <columns>nFORCE__Parent_Relationship_Name__c</columns>
+        <columns>nFORCE__Parent_Configuration__c</columns>
+        <columns>nFORCE__sObject_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>SC-{000000000}</displayFormat>
+        <label>Section Configuration Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Section Configurations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>nFORCE__Child_Display_Order</fullName>
+        <active>true</active>
+        <description>Ensures children configurations are ordered after their parents.</description>
+        <errorConditionFormula>AND( NOT( ISBLANK( nFORCE__Parent_Configuration__c ) ) , nFORCE__Display_Order__c  &lt;=  nFORCE__Parent_Configuration__r.nFORCE__Display_Order__c )</errorConditionFormula>
+        <errorMessage>Child configurations must follow their parents in display order.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>nFORCE__Parent_Integrity</fullName>
+        <active>false</active>
+        <description>Ensures Parent Configuration and Parent Relationship Name are both populated if one is.</description>
+        <errorConditionFormula>OR( AND(  NOT( ISBLANK( nFORCE__Parent_Configuration__c ) )  , ISBLANK( nFORCE__Parent_Relationship_Name__c ) ) , AND( NOT( ISBLANK( nFORCE__Parent_Relationship_Name__c ) ) , ISBLANK( nFORCE__Parent_Configuration__c ) ) )</errorConditionFormula>
+        <errorMessage>Parent Configuration and Parent Relationship Name must both be set.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>LLC_BI__Loan__c.LLC_BI__Amount__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Principal_Balance__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>LLC_BI__Loan__c.LLC_BI__Product_Line__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Card</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_ACC_INDUSTRY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cards with Relationships</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$LLC_BI__Loan__c@LLC_BI__Loan__c.LLC_BI__Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LLC_BI__Loan__c.Application_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

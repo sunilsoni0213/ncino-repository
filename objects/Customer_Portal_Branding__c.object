@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Application_Body_Header__c</fullName>
+        <defaultValue>&quot;474747&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the text color inside the body of the application. 
+&quot;Let&apos;s Determine Your Eligibility&quot;</inlineHelpText>
+        <label>Application Body Header (Light Blue)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BackgroundId__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the Image in customer portal that displays behind the welcome text.</inlineHelpText>
+        <label>Customer Portal Hero Image</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Button_Color__c</fullName>
+        <defaultValue>&quot;c94c06&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the Main button color you see while navigating through the application and customer portal.</inlineHelpText>
+        <label>Primary Button Color (Purple)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Card_Header_Background_Color__c</fullName>
+        <defaultValue>&quot;#003b71&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the background color for the header of things like the marketplace product headers, your to-do items header, etc.</inlineHelpText>
+        <label>Card Header Background Color (Orange)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Card_Header_Text_Color__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the color of the text on things like marketplace and your to-do items headers.</inlineHelpText>
+        <label>Card Header Text Color (Red)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dashboard_Link_Text__c</fullName>
+        <defaultValue>&quot;333333&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the color of the text for links for Dashboard, Accounts, Marketplace and Username in the topbar in customer portal</inlineHelpText>
+        <label>Dashboard Link Text (Yellow)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dashboard_Topbar_Header__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Changes the main header on the Customer Portal Dashboard.</inlineHelpText>
+        <label>Dashboard Topbar Header (Green)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Icon_Color__c</fullName>
+        <defaultValue>&quot;c94c06&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the color of all the icons in portal and online application, including the main application section and tiles.</inlineHelpText>
+        <label>Icon Color (Red)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Navigation_Bar_Color__c</fullName>
+        <defaultValue>&quot;003b71&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This Changes the Color for the Navigation Dots and Bar whenever the stage is active.</inlineHelpText>
+        <label>Navigation Bar Color (Green)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Navigation_Text_Color__c</fullName>
+        <defaultValue>&quot;003b71&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Changes the text color for stages in the navigation.</inlineHelpText>
+        <label>Navigation Text Color (Green)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Online_Application_Hero_Image__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the image that sits at the top of all online application screens.</inlineHelpText>
+        <label>Online Application Hero Image</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Online_Application_Topbar_Header_Text__c</fullName>
+        <defaultValue>&quot;FFFFFF&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the main header text color on all online application screens.</inlineHelpText>
+        <label>Online Application Topbar Text (Yellow)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secondary_Button_Color__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the color of the secondary button (if a section has a second button on it). 
+&quot;Apply with this business&quot; Button on Your Business Route.</inlineHelpText>
+        <label>Secondary Button Color (Blue)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tile_Header_Text__c</fullName>
+        <defaultValue>&quot;#474747&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This changes the header text for Tiles (FAQs, Loan Team, Need Help) in customer portal and online application</inlineHelpText>
+        <label>Tile Header Text (Green)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Customer Portal Branding</label>
+    <nameField>
+        <label>Customer Portal Branding Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Customer Portal Branding</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Generate_Branding</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Branding</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+sforce.connection.sessionId = &quot;{!$Api.Session_ID}&quot; 
+var res = sforce.connection.describeSObjects([&apos;Customer_Portal_Branding__c&apos;]); 
+var newId = res[0].keyPrefix; 
+var a = new sforce.SObject(&quot;Customer_Portal_Branding__c&quot;); 
+a.Id = &quot;{!Customer_Portal_Branding__c.Id}&quot;; 
+var executeMethod; 
+
+try { 
+executeMethod = sforce.apex.execute(&quot;CustomerPortalBrandingController&quot;, 
+&quot;UpdateSR&quot;,{CpBrandingId:a.Id}); 
+alert(&apos;Branding has been saved successfully&apos;); 
+} catch(err){ 
+alert(&quot;An error has occurred uploading your branding template &quot; + 
+err); 
+} 
+sforce.connection.query( 
+&quot;SELECT Id, nFORCE__Brand_JSON__c FROM nFORCE__Brand__c WHERE Name = &apos;nSight Financial&apos;&quot;, 
+{ onSuccess : handleUpdate , onFailure : doNothing }); 
+
+
+function handleUpdate(result) { 
+result = result.getArray(&apos;records&apos;); 
+result[0].nFORCE__Brand_JSON__c = executeMethod; 
+sforce.connection.update(result); 
+
+} 
+function doNothing(result) { 
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,76 @@
+<apex:page controller="LLC_BI.TeamManagementController">
+	<apex:outputPanel layout="none" rendered="{!isNull($CurrentPage.parameters.app)}" >
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__team_management_bundle)}" />
+		<nFORCE:Include_Analytics />
+		<nFORCE:Include_Bootstrap3 flavor="force" />
+		<nFORCE:Loading_Modal />
+	</apex:outputPanel>
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+	
+	<apex:outputPanel rendered="{!isNull($CurrentPage.parameters.app)}">
+		<apex:sectionHeader title="{!$Label.llc_bi__assign_a_team}" subtitle="{!teamreferenceobject['Name']}"/>
+	</apex:outputPanel>
+
+	<div class="force">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<div class="container container-fluid pull-left">
+					<apex:form styleClass="form-horizontal">
+
+						<apex:pageBlock title="{!$Label.llc_bi__select_a_team}"
+							rendered="{!teamreferenceobject != null}"
+							mode="{!IF(isNull($CurrentPage.parameters.app),'detail','maindetail')}">
+
+							<div class="form-group col-sm-4">
+								<apex:selectList value="{!selectedTeam}"
+									multiselect="false"
+									size="1"
+									id="selectedTeamList"
+									styleClass="form-control">
+									<apex:actionSupport event="onchange" reRender="panel"/>
+									<apex:selectOptions value="{!availableTeams}"/>
+								</apex:selectList><br /><br />
+							</div>
+
+							<apex:outputPanel id="panel">
+								<apex:pageBlock title="{!$Label.llc_bi__team_members}"
+									id="teamMembers"
+									mode="{!IF(isNull($CurrentPage.parameters.app),'detail','maindetail')}">
+
+									<apex:pageMessages id="messages"/>
+									<apex:pageBlockTable value="{!selectedTeamMembers}"
+										var="member"
+										columns="2"
+										id="memberTable"
+										rendered="{!teamMembersExist}"
+										styleClass="table table-hover">
+
+										<apex:column headerValue="{!$Label.llc_bi__user}"
+											value="{!member.LLC_BI__User__c}"/>
+										<apex:column headerValue="{!$Label.llc_bi__role}"
+											value="{!member.Role__r.Name}"/>
+									</apex:pageBlockTable>
+
+								</apex:pageBlock>
+							</apex:outputPanel>
+
+							<apex:outputPanel >
+								<apex:commandButton value="{!$Label.llc_bi__assign_team}"
+									action="{!assignTeam}"
+									id="assignTeamButton"
+									onclick="Utils.blockUI();"
+									styleClass="btn btn-primary" />
+								<apex:commandButton action="/{!URLFOR(teamreferenceobject.Id)}"
+									value="{!$Label.llc_bi__cancel}"
+									styleClass="btn btn-link"/>
+							</apex:outputPanel>
+
+						</apex:pageBlock>
+
+					</apex:form>
+				</div>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

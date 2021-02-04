@@ -1,0 +1,372 @@
+<apex:page controller="LLC_BI.FeeManagementController" showHeader="false" sidebar="false" standardStylesheets="true" title="Fee Management" docType="html-5.0" applyHtmlTag="true">
+
+	<nFORCE:Includes enableFontAwesome="true" enableBS3Namespace="true" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__FeeManagement, 'FeeManagementJS.js')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__FeeManagement, 'FeeManagementCSS.css')}" />
+
+	<apex:form id="theform">
+		<div class="force">
+			<nFORCE:Navigation currentAppName="Bankr_Base_Installation" />
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<a href="{!$Label.Fee_Back_Link}">
+							<i class="fa fa-arrow-left"/>&nbsp;
+							<apex:outputText value="{!$Label.llc_bi__fee_back}"></apex:outputText>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="jumbotron">
+							<div class="text-center">
+								<h1><apex:outputText value="{!$Label.llc_bi__fee_title}"></apex:outputText></h1>
+								<p><apex:outputText value="{!$Label.llc_bi__fee_subtitle}"></apex:outputText></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8">
+						<apex:outputPanel id="themessages">
+							<apex:pageMessages />
+						</apex:outputPanel>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center">
+							<apex:commandButton value="{!$Label.llc_bi__fee_save}" action="{!updateRecords}" styleClass="btn btn-success" status="saveloading" reRender="theform, jscript" rendered="{!tableShow}">
+								<apex:actionStatus id="saveloading">
+									<apex:facet name="start">
+										<img src="/img/loading.gif"/>
+									</apex:facet>
+								</apex:actionStatus>
+							</apex:commandButton>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_cancel}" action="{!cancel}" styleClass="btn btn-danger" reRender="theform, jscript" rendered="{!tableShow}" />&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_add_new}" action="{!addNew}" styleClass="btn btn-primary" reRender="TheTable, jscript" status="saveloading" rendered="{!tableShow}"/>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_manage_assignment}" styleClass="btn btn-default" action="{!showAssignment}" reRender="theform, jscript" rendered="{!tableShow}"/>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_create_join}" styleClass="btn btn-success" action="{!createJoinsProd}" reRender="theform, jscript" rendered="{!assignByProductShow}" status="createjoinprodstatus">
+								<apex:actionStatus id="createjoinprodstatus">
+									<apex:facet name="start">
+										<img src="/img/loading.gif"/>
+									</apex:facet>
+								</apex:actionStatus>
+							</apex:commandButton>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_remove_join}" styleClass="btn btn-danger" action="{!removeJoinsProd}" reRender="theform, jscript" rendered="{!assignByProductShow}" status="removejoinprodstatus">
+								<apex:actionStatus id="removejoinprodstatus">
+									<apex:facet name="start">
+										<img src="/img/loading.gif"/>
+									</apex:facet>
+								</apex:actionStatus>
+							</apex:commandButton>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_create_join}" styleClass="btn btn-success" action="{!createJoinsFee}" reRender="theform, jscript" rendered="{!assignByFeeShow}" status="createjoinfeestatus">
+								<apex:actionStatus id="createjoinfeestatus">
+									<apex:facet name="start">
+										<img src="/img/loading.gif"/>
+									</apex:facet>
+								</apex:actionStatus>
+							</apex:commandButton>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_remove_join}" styleClass="btn btn-danger" action="{!removeJoinsFee}" reRender="theform, jscript" rendered="{!assignByFeeShow}" status="removejoinfeestatus">
+								<apex:actionStatus id="removejoinfeestatus">
+									<apex:facet name="start">
+										<img src="/img/loading.gif"/>
+									</apex:facet>
+								</apex:actionStatus>
+							</apex:commandButton>&nbsp;
+							<apex:commandButton value="{!$Label.llc_bi__fee_done}" styleClass="btn btn-primary" action="{!doneShow}" reRender="theform, jscript" rendered="{!assignByFeeShow || assignByProductShow}"/>
+						</div>
+					</div>
+				</div>
+
+				<apex:outputPanel id="TheTable" rendered="{!tableShow}" styleClass="manageFees">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-hover table-striped">
+									<thead>
+										<tr>
+											<th/>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_fee_type_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_fee_code_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_start_date_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_end_date_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_fee_amount_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_paid_by_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_calculation_type_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_includ_apr_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_is_multiple_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_add_fin_charge_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_include_mapr_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__stage}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_category_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_record_type_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fee_active_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fees_screen_section_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fees_basis_source_column_header}"></apex:outputText>
+											</th>
+											<th class="text-center">
+												<apex:outputText value="{!$Label.llc_bi__fees_percentage_column_header}"></apex:outputText>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<apex:outputPanel rendered="{!feesList.size <= 0}">
+											<tr>
+												<td colspan="11" class="text-center">
+													<apex:outputText value="{!$Label.llc_bi__fee_list_empty_message}"></apex:outputText>
+												</td>
+											</tr>
+										</apex:outputPanel>
+										<apex:repeat rendered="{!feesList.size > 0}" value="{!feesList}" var="Fee">
+											<tr class="text-center">
+												<td style="vertical-align:middle;">
+													<a href="{!URLFOR($Action.Template_Records__c.Delete, Fee.Id, [retURL='/apex/LLC_BI__FeeManagement'], true)}" class="text-danger" data-toggle="tooltip" title="Delete" onclick="return confirm('{!$Label.Fee_Management_Delete}')">
+														<i class="fa fa-trash"/>
+													</a>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Picklist_1__c}" styleClass="form-control form-required" required="true"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Picklist_3__c}" styleClass="form-control form-required" required="true"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Start_Date__c}" styleClass="form-control"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__End_Date__c}" styleClass="form-control"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Currency_Field_1__c}" styleClass="form-control"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Picklist_2__c}" styleClass="form-control form-required" required="true"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Picklist_4__c}" styleClass="form-control"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Checkbox_1__c}"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Checkbox_2__c}"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Checkbox_3__c}"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Checkbox_4__c}"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Text_Field_2__c}" styleClass="form-control"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Category__c}" styleClass="form-control form-required" required="true"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Record_Type__c}" styleClass="form-control form-required" required="true"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:outputField value="{!Fee.LLC_BI__Is_Active__c}"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Screen_Section__c}" styleClass="form-control"/>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:inputField value="{!Fee.LLC_BI__Basis_Source__c}" styleClass="form-control"/>
+												</td>
+                                                <td style="vertical-align:middle;">
+                                                    <apex:inputField value="{!Fee.LLC_BI__Percentage__c}" styleClass="form-control"/>
+                                                </td>
+											</tr>
+										</apex:repeat>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2">
+												<apex:outputText value="{!$Label.llc_bi__fee_page} {!setCon.PageNumber} of {!CEILING(setCon.ResultSize/setCon.PageSize)}"></apex:outputText>
+											</td>
+											<td align="center" colspan="10">
+												<apex:commandLink action="{!setCon.Previous}" value="« {!$Label.llc_bi__fee_previous_button}" rendered="{!setCon.HasPrevious}"/>
+												<apex:outputText style="color: #ccc;" value="« {!$Label.llc_bi__fee_previous_button}" rendered="{!NOT(setCon.HasPrevious)}"></apex:outputText>
+												&nbsp;&nbsp;
+												<apex:commandLink action="{!setCon.Next}" value="{!$Label.llc_bi__fee_next_button} »" rendered="{!setCon.HasNext}"/>
+												<apex:outputText style="color: #ccc;" value="{!$Label.llc_bi__fee_next_button} »" rendered="{!NOT(setCon.HasNext)}"></apex:outputText>
+											</td>
+											<td colspan="2">
+												<div class="row">
+													<div class="col-sm-7">
+														<div class="text-right">
+															<apex:outputText value="{!$Label.llc_bi__fee_per_page_label}"></apex:outputText>
+														</div>
+													</div>
+													<div class="col-sm-5">
+														<apex:selectList value="{!setCon.PageSize}" size="1" styleClass="form-control">
+																<apex:selectOption itemValue="20" itemLabel="20"/>
+																<apex:selectOption itemValue="25" itemLabel="25" />
+																<apex:selectOption itemValue="50" itemLabel="50"/>
+																<apex:selectOption itemValue="75" itemLabel="75"/>
+																<apex:selectOption itemValue="100" itemLabel="100"/>
+																<apex:actionSupport event="onchange" reRender="theform"/>
+														</apex:selectList>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+					</div>
+				</apex:outputPanel>
+
+				<apex:outputPanel rendered="{!choiceShow}" id="ChoiceShowPanel">
+					<div class="row">
+						<div class="col-md-offset-4 col-md-3">
+							<div class="form-group">
+								<label class="control-label">
+									<apex:outputText value="{!$Label.llc_bi__fee_choice_label}"></apex:outputText>
+								</label>
+								<apex:selectList value="{!selectBy}" size="1" styleClass="form-control">
+									<apex:selectOption itemValue="None" itemLabel="{!$Label.llc_bi__fee_picklist_label_none_selected}" />
+									<apex:selectOption itemValue="Assign By Fee" itemLabel="{!$Label.llc_bi__fee_assign_by_fee}"/>
+									<apex:selectOption itemValue="Assign By Product" itemLabel="{!$Label.llc_bi__fee_assign_by_product}"/>
+									<apex:actionSupport event="onchange" reRender="theform, jscript, themessages" action="{!SelectionMade}" status="selectstatus"/>
+									<apex:actionStatus id="selectstatus">
+										<apex:facet name="start">
+												<img src="/img/loading.gif"/>
+										</apex:facet>
+									</apex:actionStatus>
+								</apex:selectList>
+							</div>
+						</div>
+					</div>
+				</apex:outputPanel>
+
+				<apex:outputPanel rendered="{!assignByProductShow}" id="AssignByProductShowPanel">
+					<div class="row">
+						<div class="col-md-offset-3 col-md-6">
+							<div class="form-group">
+								<label class="control-label">
+									<apex:outputText value="{!$Label.llc_bi__fee_select_product}"></apex:outputText>
+								</label>
+								<apex:selectList styleClass="form-control" value="{!productSelected}" size="1">
+									<apex:selectOptions value="{!products}"/>
+									<apex:actionSupport event="onchange" reRender="feesPanel, jscript, themessages" status="Productstatusloading"/>
+									<apex:actionStatus id="Productstatusloading">
+										<apex:facet name="start">
+											<img src="/img/loading.gif"/>
+										</apex:facet>
+									</apex:actionStatus>
+								</apex:selectList>
+							</div>
+						</div>
+					</div>
+					<apex:outputPanel id="feesPanel">
+						<div class="row">
+							<div class="col-md-offset-1 col-md-5">
+								<div class="form-group">
+									<label class="control-label">
+										<apex:outputText value="{!$Label.llc_bi__fee_available_fees}"></apex:outputText>
+									</label>
+									<apex:selectList styleClass="form-control" value="{!availableFees}" multiselect="true" size="6">
+										<apex:selectOptions value="{!availableFeesList}"/>
+									</apex:selectList>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<label class="control-label">
+										<apex:outputText value="{!$Label.llc_bi__fee_used_fees}"></apex:outputText>
+									</label>
+									<apex:selectList styleClass="form-control" value="{!usedFees}" multiselect="true" size="6">
+										<apex:selectOptions value="{!usedFeesList}"/>
+									</apex:selectList>
+								</div>
+							</div>
+						</div>
+					</apex:outputPanel>
+				</apex:outputPanel>
+
+				<apex:outputPanel rendered="{!assignByFeeShow}" id="AssignByFeeShowPanel">
+					<div class="row">
+						<div class="col-md-offset-3 col-md-6">
+							<div class="form-group">
+								<label class="control-label">
+									<apex:outputText value="{!$Label.llc_bi__fee_select_default_fee}"></apex:outputText>
+								</label>
+								<apex:selectList styleClass="form-control" value="{!feeSelected}" size="1">
+									<apex:selectOptions value="{!templateFees}"/>
+									<apex:actionSupport event="onchange" reRender="ProductsPanel, jscript, themessages" status="TemplateFeesstatusloading"/>
+									<apex:actionStatus id="TemplateFeesstatusloading">
+										<apex:facet name="start">
+												<img src="/img/loading.gif"/>
+										</apex:facet>
+									</apex:actionStatus>
+								</apex:selectList>
+							</div>
+						</div>
+					</div>
+					<apex:outputPanel id="ProductsPanel">
+						<div class="row">
+							<div class="col-md-offset-1 col-md-5">
+								<div class="form-group">
+									<label class="control-label">
+										<apex:outputText value="{!$Label.llc_bi__fee_available_products}"></apex:outputText>
+									</label>
+									<apex:selectList styleClass="form-control" value="{!availableProducts}" multiselect="true" size="6">
+										<apex:selectOptions value="{!availableProductsFees}"/>
+									</apex:selectList>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<label class="control-label">
+										<apex:outputText value="{!$Label.llc_bi__fee_used_products}"></apex:outputText>
+									</label>
+									<apex:selectList styleClass="form-control" value="{!usedProducts}" multiselect="true" size="6">
+										<apex:selectOptions value="{!usedProductsFees}"/>
+									</apex:selectList>
+								</div>
+							</div>
+						</div>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</div>
+		</div>
+	</apex:form>
+</apex:page>

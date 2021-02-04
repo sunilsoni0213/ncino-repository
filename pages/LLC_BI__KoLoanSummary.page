@@ -1,0 +1,50 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="nFORCE.ScreenController">
+	<apex:include pageName="nFORCE__Error_Message_Handler" />
+
+	<apex:repeat value="{!screenSections}" var="section">
+		<div data-bind="if: ('{!section.nFORCE__Default_Rendered__c}' == 'true') " >
+			<apex:variable var="GUID" value="{!section.Id}{!guid}" />
+			<apex:variable var="APP_NAME" value="LayoutBody{!GUID}" />
+			<nFORCE:KoVirtualBinding code="with: $root.{!APP_NAME}" />
+
+			<nFORCE:KoVirtualBinding code="if: screenResource" />
+			<nFORCE:KoVirtualBinding code="with: screenResource" />
+			<div data-bind="ifnot: $parent.isEditing">
+				<nFORCE:KoVirtualBinding code="template: {
+												name: 'grid-cell-template',
+												if: propertyList().length > 0,
+												foreach: propertyList }"
+					close="true" />
+				<nFORCE:KoVirtualBinding code="template: {
+												name: 'fieldset-warning-template',
+												if: propertyList().length == 0 }"
+					close="true" />
+			</div>
+
+			<nFORCE:KoVirtualBinding close="true" />
+			<nFORCE:KoVirtualBinding close="true" />
+			<nFORCE:KoVirtualBinding close="true" />
+			<nFORCE:RegisterLayoutDesignerApp sObjectJSON="{!contextObjectJSON}"
+				guid="{!GUID}" sectionId="{!section.id}" appName="{!APP_NAME}" />
+		</div>
+	</apex:repeat>
+
+	<script type="text/html" id="grid-cell-content-template">
+			<div class="col-xs-3 output">
+				<c:KoVirtualBinding code="template: { name: 'field-label-template', data: $data }"
+					close="true" />
+				<c:KoVirtualBinding code="template: { name: 'field-output-template', data: $data }"
+					close="true" />
+			</div>
+	</script>
+
+	<script type="text/html" id="grid-cell-template">
+			<c:KoVirtualBinding code="template: { name: 'grid-cell-content-template', data: $data }" close="true" />
+		<div data-bind="if: (($index() % 2) != 0)"/>
+	</script>
+
+	<nFORCE:KoFieldLabelTemplate />
+	<nFORCE:KoFieldOutputTemplate />
+	<nFORCE:KoSectionFieldSetWarningTemplate />
+</apex:page>

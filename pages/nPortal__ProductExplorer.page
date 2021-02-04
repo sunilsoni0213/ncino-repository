@@ -1,0 +1,52 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false">
+
+	<title>{!$Label.Marketplace_Title}</title>
+
+	<div ng-app="dashboardApp"
+	 	ng-controller="ProductExplorerController as pvm">
+		<div class="slds-p-top--medium slds-p-bottom--medium">
+			<div class="slds-grid slds-grid--align-center"
+				ng-if="pvm.products == null">
+				<stencil
+					class="slds-size--1-of-1 slds-m-top--large"
+					has-mobile-stencil="true"
+					animation-path="{!URLFOR($Resource.Customer_Portal, 'animations/MarketplaceStencil.json')}">
+				</stencil>
+			</div>
+			<div class="slds-card slds-m-top--medium" ng-cloak="true" n-style="pso-card"
+				ng-repeat="product in ::pvm.products"
+				ng-show="pvm.products != null"
+				ng-class="{'animated fadeIn': (pvm.products != null)}">
+				<div class="slds-card__header slds-grid" n-style="pso-card-header">
+					<div class="slds-media slds-media--center slds-has-flexi-truncate">
+						<div class="slds-media__body">
+							<h2 class="slds-text-heading--small slds-truncate" n-style="pso-card-header-text"
+								ng-bind="::product.name">
+							</h2>
+						</div>
+					</div>
+					<div class="slds-no-flex">
+						<div class="slds-button-group">
+							<a href="{!URLFOR($Page.OnlineApplication)}?new=true&productId={{::product.sid}}"
+								class="slds-button slds-button--brand slds-button--small"
+								n-style="pso-button-primary"
+								ng-click="pvm.showLoader('{!$Label.Marketplace_Apply_Loading_Message}')">
+								{!$Label.Apply}
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="slds-card__body portal-card-contents slds-p-left--medium
+					slds-p-right--medium slds-p-top--medium slds-p-bottom--medium
+					slds-table slds-table--bordered" n-style="pso-card-body">
+					<p class="portal-formatted-content"
+						ng-bind-html="pvm.toTrusted(product.description)">
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</apex:page>

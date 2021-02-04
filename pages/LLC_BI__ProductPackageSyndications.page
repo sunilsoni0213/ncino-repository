@@ -1,0 +1,18 @@
+<apex:page standardController="LLC_BI__Product_Package__c">
+	<nFORCE:Include_Design_System flavor="vf" />
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<span>{!$Label.llc_bi__syndication_participation_summary}</span>
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:ProductPackageSyndicationGroup />
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

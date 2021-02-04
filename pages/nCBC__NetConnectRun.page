@@ -1,0 +1,7 @@
+<apex:page standardController="Contact" extensions="nCBC.VF_NetConnectController" action="{!autoRun}">
+
+  <apex:sectionHeader title="Cannot Fetch FICO, OFAC, and Credit Report"/>
+  <apex:outputPanel >
+		<apex:messages /><a href="/{!Contact.Id}">View User</a>
+  </apex:outputPanel>
+</apex:page>

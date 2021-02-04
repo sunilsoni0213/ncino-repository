@@ -1,0 +1,76 @@
+<apex:page controller="NDOC.ExternalFileStorageConfigController" sidebar="false" standardStylesheets="false" docType="html-5.0">
+	<nFORCE:Includes enableBS3Namespace="true" />
+	<apex:outputPanel layout="block" styleClass="force">
+		<apex:form >
+			<apex:outputPanel layout="block" styleClass="row" id="container">
+				<h3 class="col-xs-offset-3">{!$Label.ndoc__external_storage_config_name}</h3>
+				<br/><br/>
+
+				<!-- editing view -->
+				<apex:outputPanel layout="block" styleClass="form-horizontal" rendered="{!isEditing}">
+					<apex:outputPanel layout="block" styleClass="form-group" >
+						<span class="col-xs-3 control-label">
+							{!S3EnabledProperty.nFORCE__Key__c}
+						</span>
+						<div class="col-xs-8">
+							<apex:inputCheckbox disabled="false" value="{!S3EnabledProperty.nFORCE__Value__c}" style="margin-top: 10px">
+								<apex:actionSupport event="onchange" 
+									action="{!toggleS3Enabled}" 
+									rerender="container" />
+							</apex:inputCheckbox>
+						</div>
+					</apex:outputPanel>
+
+					<apex:repeat value="{!S3SystemProperties}" var="e" rendered="{!S3SystemProperties.size > 0}">
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<span class="col-xs-3 control-label">
+								{!e.nFORCE__Key__c}
+							</span>
+							<div class="col-xs-8">
+								<apex:inputText disabled="false" html-placeholder="{!e.nFORCE__Key__c}" styleClass="form-control" value="{!e.nFORCE__Value__c}" ></apex:inputText>
+							</div>
+						</apex:outputPanel>
+					</apex:repeat>
+
+					<apex:outputPanel layout="block" styleClass="form-group" >
+						<apex:outputPanel layout="block" styleClass="col-xs-offset-3 col-xs-9" >
+							<apex:commandButton styleClass="btn btn-primary" value="{!$Label.ndoc__save}" action="{!save}"/>
+							<apex:commandLink styleClass="btn btn-link" action="{!cancel}" >{!$Label.ndoc__cancel}</apex:commandLink>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:outputPanel><!-- / editing view -->
+
+				<!-- read only view -->
+				<apex:outputPanel layout="block" styleClass="form-horizontal" rendered="{!!isEditing}">
+					<apex:outputPanel layout="block" styleClass="form-group" >
+						<span class="col-xs-3 control-label">
+							{!S3EnabledProperty.nFORCE__Key__c}
+						</span>
+						<div class="col-xs-8">
+							<apex:inputCheckbox disabled="true" value="{!S3EnabledProperty.nFORCE__Value__c}" style="margin-top: 10px"></apex:inputCheckbox>
+						</div>
+					</apex:outputPanel>
+
+					<apex:repeat value="{!S3SystemProperties}" var="e" rendered="{!S3SystemProperties.size > 0}">
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<span class="col-xs-3 control-label">
+								{!e.nFORCE__Key__c}
+							</span>
+							<div class="col-xs-8">
+								<apex:inputText id="name" disabled="true" html-placeholder="{!e.nFORCE__Key__c}" styleClass="form-control" value="{!e.nFORCE__Value__c}" ></apex:inputText>
+							</div>
+						</apex:outputPanel>
+					</apex:repeat>
+
+					<apex:outputPanel layout="block" styleClass="form-group">
+						<apex:outputPanel styleClass="col-xs-offset-3 col-xs-9" >
+							<apex:commandButton styleClass="btn btn-primary" value="{!$Label.ndoc__edit}" action="{!edit}" />
+							<apex:outputLink styleClass="btn btn-link"  value="{!NULLVALUE($CurrentPage.parameters.returnUrl, $Page.LLC_BI__SystemAdministration)}" >{!$Label.ndoc__back}</apex:outputLink>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:outputPanel><!-- /read only view -->
+
+			</apex:outputPanel><!-- /container -->
+		</apex:form>
+	</apex:outputPanel>
+</apex:page>

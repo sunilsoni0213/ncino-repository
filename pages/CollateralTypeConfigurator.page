@@ -1,0 +1,2 @@
+<apex:page standardController="LLC_BI__Collateral_Type__c" extensions="nFORCE.TemplateController,CollateralTypeConfiguratorController" action="{!updateTypeConfiguration}">
+</apex:page>

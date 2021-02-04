@@ -1,0 +1,6 @@
+<apex:page standardController="Account" extensions="LLC_BI.NewCustomerOnboardingController">
+	<nFORCE:Include_Navigator />
+	<script>
+		LifeCycle.Navigator.navigateToRoute('{!JSENCODE(ncoUrl)}');
+	</script>
+</apex:page>

@@ -1,0 +1,38 @@
+<apex:component controller="BookToServiceController" allowDML="True">
+       <apex:attribute name="pageController"
+           type="String"
+           required="true"
+           description="Review Controller instantiated with the base page."/>
+        <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <apex:slds />
+        <div class="slds-scope">
+<div class="demo-only" style="height: 640px;">
+  <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Book to Servicing System</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <p>Are you sure you would like to proceed with booking?</p>
+      </div>
+      <footer class="slds-modal__footer">
+          <apex:form >
+        <apex:commandButton styleClass="slds-button slds-button_brand" value="Book to Servicing" action="{!goBack}" />
+        <apex:commandButton styleClass="slds-button slds-button_neutral" value="Cancel" action="{!goBack}" />
+          </apex:form>
+        <!--<button class="slds-button slds-button_neutral" Action="{!goBack}">Cancel</button>-->
+        <!--<button class="slds-button slds-button_brand">Book to Servicing</button>-->
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+        </div>
+    </html>
+</apex:component>

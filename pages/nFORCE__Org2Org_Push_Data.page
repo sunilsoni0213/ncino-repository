@@ -1,0 +1,8 @@
+<apex:page standardController="nFORCE__Data_Store__c"
+	recordSetVar="data"
+	extensions="nFORCE.Org2OrgDataPushController"
+	action="{!pushData}"
+	showHeader="true"
+	sidebar="true"
+	docType="html-5.0">
+</apex:page>

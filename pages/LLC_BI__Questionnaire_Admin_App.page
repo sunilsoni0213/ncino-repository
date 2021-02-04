@@ -1,0 +1,57 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false"
+	controller="nFORCE.TemplateController">
+	<apex:slds />
+	<nFORCE:Include_Design_System components="true" />
+
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Route />
+	<apex:styleSheet value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'css/Style.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'jquery/css/jquery-sortable-0.9.13.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'jquery/js/jquery-sortable-0.9.13-min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'providers/RemotingProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'controllers/AppController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'controllers/GroupController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'controllers/NewGroupController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'controllers/QuestionnaireController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'controllers/RulesController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'constants/constants.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire_Admin, 'components/NewQuestionForm.component.js')}" />
+
+	<nFORCE:ncModal />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+	<nFORCE:ncUIIncludes />
+
+	<div id="ncQuestionnaireAdmin" ng-controller="AppController">
+	<c:QuestionnaireAdminPartials />
+	<nFORCE:ncScreenSectionFormBuilderPartials />
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="row questionnaire">
+											<message></message>
+											<ng-view></ng-view>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+	</div>
+
+	<c:QuestionnaireAdminConfiguration />
+	<c:QuestionnaireAdminRoutes />
+</apex:page>

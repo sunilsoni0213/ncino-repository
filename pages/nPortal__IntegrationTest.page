@@ -1,0 +1,135 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<html class="portal-html" lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<apex:include pageName="nPortal__PortalIncludes" />
+		<apex:includeScript value="{!URLFOR($Resource.nPortal__Customer_Portal, 'controllers/integrationTestController.js')}" />
+		<c:PortalConfiguration />
+		<c:LanguageDataService />
+		<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102,
+				'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	</head>
+	<body class="portal-body slds has-nstyle" ng-app="onlineAppApp">
+		<portal-loader slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-loader>
+		<portal-message slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-message>
+		<div class="portal-wrapper-full" n-style="pso-wrapper" ng-app="customerPortalApp"
+			 ng-controller="integrationTestController as vm">
+			<div class="slds-grid slds-wrap">
+				<div class="portal-wrapper slds-size--1-of-1">
+					<c:PortalHeader />
+				</div>
+			</div>
+			<div class="slds-grid slds-wrap">
+				<div class="portal-center-column slds-size--2-of-3 slds-m-top--large">
+					<div class="slds-grid slds-wrap">
+						<div class="slds-page-header slds-page-header--object-home slds-size--1-of-1">
+							<div class="slds-grid">
+								<div class="slds-col slds-has-flexi-truncate">
+									<div class="slds-media slds-no-space slds-grow">
+										<div class="slds-media__figure">
+										<span class="slds-icon_container">
+											<svg class="slds-icon slds-icon-standard-lead portal-header-icon"
+												 aria-hidden="true">
+												<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+													'/assets/icons/action-sprite/svg/symbols.svg#apex')}"></use>
+											</svg>
+										</span>
+										</div>
+										<div class="slds-media__body">
+											<p class="slds-text-title--caps slds-line-height--reset">
+												Perform SendService calls with a specified payload and observe the asynchronous response through Transaction Log Polling
+											</p>
+											<h1 class="slds-page-header__title slds-p-right--x-small">
+												<button class="slds-button slds-button--reset slds-type-focus slds-truncate"
+													aria-haspopup="true" title="this should match My Leads">
+												<span class="slds-grid slds-has-flexi-truncate slds-grid--vertical-align-center">
+													<span class="slds-truncate">
+														Integrations Framework Test
+													</span>
+												</span>
+												</button>
+											</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slds-grid slds-wrap slds-m-top--large">
+						<div class="slds-form--stacked slds-p-around--medium slds-theme--shade slds-size--1-of-1">
+							<h3 class="slds-text-heading--small slds-m-bottom--large">Request Parameters</h3>
+							<div class="slds-form-element slds-size--1-of-2">
+								<label class="slds-form-element__label">Plugin Name</label>
+								<div class="slds-form-element__control">
+									<input type="text" class="slds-input" placeholder="Enter a plugin name..."
+										ng-model="vm.pluginName" />
+								</div>
+							</div>
+							<div class="slds-form-element slds-size--1-of-2">
+								<label class="slds-form-element__label">Plugin Version</label>
+								<div class="slds-form-element__control">
+									<input type="text" class="slds-input" placeholder="Enter a plugin version..."
+										ng-model="vm.pluginVersion" />
+								</div>
+							</div>
+							<div class="slds-form-element">
+								<label class="slds-form-element__label">Request Body</label>
+								<div class="slds-form-element__control">
+								<textarea class="slds-textarea portal-code-area" placeholder="Enter request JSON"
+									ng-model="vm.requestBody">
+								</textarea>
+								</div>
+							</div>
+							<button
+								class="slds-button slds-button--brand slds-size--1-of-1"
+								n-style="pso-button-primary"
+								ng-click="vm.performRequest()">
+								Send
+								<svg aria-hidden="true" class="slds-icon" fill="#FFFFFF">
+									<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0122,
+										'/assets/icons/utility-sprite/svg/symbols.svg#sales_path')}"></use>
+								</svg>
+							</button>
+							<transaction-log-monitor externalid="vm.transactionLogId"></transaction-log-monitor>
+							<div class="slds-form-element slds-m-top--large">
+								<label class="slds-form-element__label">Response Body</label>
+								<div class="slds-form-element__control">
+									<textarea class="slds-textarea portal-code-area" readonly="true"
+										ng-model="vm.response">
+									</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="push"></div>
+		</div>
+		<c:PortalFooter />
+		<!-- Script Dependencies -->
+		<c:ApplicationTopbarService />
+		<c:ApplicationNavDataService />
+		<c:OnlineFormsDataService />
+		<c:SecurityBadgeDataService />
+		<c:TileDataService />
+		<c:SearchDataService />
+		<c:OwnersDataService />
+		<c:LoanTeamPanel />
+		<c:OnlineFormsDataService />
+		<c:EidVerificationService />
+		<c:FundingDataService />
+		<c:DocumentDataService />
+		<c:TransactionLogDataService />
+		<c:IntegrationTestDataService />
+		<!-- /Script Dependencies -->
+	</body>
+	</html>
+</apex:page>

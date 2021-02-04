@@ -1,0 +1,19 @@
+<apex:page id="AmortizationStructure"
+	docType="html-5.0"
+	showHeader="false"
+	sidebar="false"
+	applyBodyTag="false"
+	applyHtmlTag="false"
+	standardStylesheets="false">
+
+	<html>
+		<nFORCE:Include_Design_System components="true" />
+		<apex:slds />
+		<body>
+			<c:AmortizationStructure >
+				<nFORCE:Include_Analytics defer="true"/>
+				<script defer="defer" type="application/javascript" src="{!URLFOR($Resource.nforce__navigator, 'lib/navigator-visualforce.js')}"></script>
+			</c:AmortizationStructure>
+		</body>
+	</html>
+</apex:page>

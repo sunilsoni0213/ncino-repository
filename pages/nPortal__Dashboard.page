@@ -1,0 +1,15 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false">
+
+	<title>{!$Label.Dashboard_Title}</title>
+
+	<div ng-app="dashboardApp">
+		<div class="slds-p-top--medium slds-p-bottom--medium">
+			<offers-available-cards></offers-available-cards>
+			<todo-list></todo-list>
+			<c:PortalFileUploader />
+		</div>
+	</div>
+</apex:page>

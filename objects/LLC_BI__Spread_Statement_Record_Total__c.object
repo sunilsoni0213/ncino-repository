@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>LLC_BI__Debit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is driven by user selection during creation of the spread statement record total (group total). When enabled, the spread statement record total (group total) is treated as a debit. When disabled, the spread statement record total is treated as a credit. By default, it is disabled. After initial creation, this cannot be edited within the spreading application, it must be edited through the Salesforce interface.</description>
+        <externalId>false</externalId>
+        <label>Debit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Global_Analysis_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is driven by user selection during creation of the spread statement record total (group total). When &quot;Cash Flow&quot; or &quot;Debt Service&quot; is selected, the value(s) for this spread statement record total (group total) will be used in global analysis for a relationship using the underwriting bundle this spread statement record total is associated with. By default, this picklist is set to None. After initial creation, this cannot be edited within the spreading application, it must be edited through the Salesforce interface.</description>
+        <externalId>false</externalId>
+        <label>Global Analysis Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>true</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Cash Flow</fullName>
+                    <default>false</default>
+                    <label>Cash Flow</label>
+                </value>
+                <value>
+                    <fullName>Debt Service</fullName>
+                    <default>false</default>
+                    <label>Debt Service</label>
+                </value>
+                <value>
+                    <fullName>Total Assets</fullName>
+                    <default>false</default>
+                    <label>Total Assets</label>
+                </value>
+                <value>
+                    <fullName>Total Liabilities</fullName>
+                    <default>false</default>
+                    <label>Total Liabilities</label>
+                </value>
+                <value>
+                    <fullName>Total Equity</fullName>
+                    <default>false</default>
+                    <label>Total Equity</label>
+                </value>
+                <value>
+                    <fullName>Adjusted Total Assets</fullName>
+                    <default>false</default>
+                    <label>Adjusted Total Assets</label>
+                </value>
+                <value>
+                    <fullName>Adjusted Total Liabilities</fullName>
+                    <default>false</default>
+                    <label>Adjusted Total Liabilities</label>
+                </value>
+                <value>
+                    <fullName>Adjusted Total Equity</fullName>
+                    <default>false</default>
+                    <label>Adjusted Total Equity</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Group_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is driven by user selection during creation of the spread statement record total (group total). This field controls the display of the value(s) for the spread statement record total (group total). &quot;Financial&quot; dispalys the value with a currency sign. &quot;Percentage&quot; displays the value with the decimal moved two two places to the right and with a percentage sign. &quot;Decimal&quot; displays the value with no signs. By default, this field is set to Financial. After initial creation, this cannot be edited within the spreading application, it must be edited through the Salesforce interface.</description>
+        <externalId>false</externalId>
+        <label>Group Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Financial</fullName>
+                    <default>true</default>
+                    <label>Financial</label>
+                </value>
+                <value>
+                    <fullName>Percentage</fullName>
+                    <default>false</default>
+                    <label>Percentage</label>
+                </value>
+                <value>
+                    <fullName>Decimal</fullName>
+                    <default>false</default>
+                    <label>Decimal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Hide_All_Records__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This defaults to false. Manually update to change. If this is set to true all the records belonging to this group will be hidden from view but will still be included in the calculation of the total.</description>
+        <externalId>false</externalId>
+        <label>Hide All Records</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Hide_Column_Totals__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This defaults to false. Manually update to change. Controls the visibility of column totals below a group.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls the visibility of column totals below a group.</inlineHelpText>
+        <label>Hide Column Totals</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Hide_Currency_Symbol__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Group_Type__c field.</description>
+        <externalId>false</externalId>
+        <label>-D Hide Currency Symbol</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Include_In_Total__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is driven by user selection within the spreading application. When enabled, the spread statement record total (group) is not displayed in the spread statement. When disabled, it is displayed. By default, it is disabled.</description>
+        <externalId>false</externalId>
+        <label>Include In Total</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Grand_Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>deprecated field use Is_Summary_Group__c instead</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Spread_Statement_Type__r.LLC_BI__Spread_Statement_Total_Group__c  =  Id , true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>-D Is Grand Total</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Summary_Group__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This defaults to false. Manually update to change. Linked Records in this type of group are displayed normally and are non-editable, except for users with Configuration permission.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Typically, this type of group is used to display the columns totals for each group of records in the statement.</inlineHelpText>
+        <label>Is_Summary_Group</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__KPI_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is driven by user selections within the spreading application. When &quot;Standard Highlight&quot; is selected, the spread statement record total (group total) is treated as a highlight that cannot be deselected by a user. When &quot;User Highlight&quot; is selected, the spread statement record total can be deselected by a user. If neither are selected, the spread statement record is not treated as a highlight. By default, this picklist is set to none.</description>
+        <externalId>false</externalId>
+        <label>Highlights Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard Highlight</fullName>
+                    <default>false</default>
+                    <label>Standard Highlight</label>
+                </value>
+                <value>
+                    <fullName>User Highlight</fullName>
+                    <default>false</default>
+                    <label>User Highlight</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Publish_On_Init_Event__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional If set, SpreadStatement will trigger an event of this type when its first rendered with its period total values.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set this value to allow other applications to execute when a total is initialized.</inlineHelpText>
+        <label>Publish On Init Event</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Publish_On_Update_Event__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional If set, SpreadStatement will trigger an event of this type when it&apos;s first rendered with it&apos;s period total value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set this value to allow other applications to execute when a total is updated.</inlineHelpText>
+        <label>Publish On Update Event</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Row_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is driven by user selection during creation of the spread statement record total (group total). This field determines the order the spread statement record totals in the spread statement template. After initial creation, this cannot be edited within the spreading application, it must be edited through the Salesforce interface.</description>
+        <externalId>false</externalId>
+        <label>Row Number</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Show_Math__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field drives the ability to see the operators being used to calculate the group total.</description>
+        <externalId>false</externalId>
+        <label>Show Math</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Source_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The system auto-populates this optional lookup field with the id of the cloned group from the Spreads Statement Total Group template.</description>
+        <externalId>false</externalId>
+        <label>Source Group</label>
+        <referenceTo>LLC_BI__Spread_Statement_Record_Total__c</referenceTo>
+        <relationshipLabel>Cloned Spread Statement Total Groups</relationshipLabel>
+        <relationshipName>Cloned_Spread_Statement_Total_Groups</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Spread_Statement_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated automatically whenever a spread statement record total (group total) is created within the spreading applicaiton. This field specifies the spread Statement type associated with the Spread Statement record total.</description>
+        <externalId>false</externalId>
+        <label>Spread Statement Type</label>
+        <referenceTo>LLC_BI__Spread_Statement_Type__c</referenceTo>
+        <relationshipLabel>Spread Statement Total Groups</relationshipLabel>
+        <relationshipName>Spread_Statement_Total_Groups</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Title__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is driven by user selection within the spreading application. The value in this field is what displays in the group header for a group as opposed to the spread statement record total name, which displays as the sum line item name.</description>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is set automatically whenver a spread statement record total (group total) is created. It specifies the type of spread statement record: &quot;Standard&quot; is is the default and used for all user created groups. &quot;Knockout&quot; is used for &quot;Operating Expenses&quot; in the NOI Statement, as it is a custom group.</description>
+        <externalId>false</externalId>
+        <label>Total Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>true</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Knockout</fullName>
+                    <default>false</default>
+                    <label>Knockout</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Spread Statement Total Group</label>
+    <listViews>
+        <fullName>All</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Title__c</columns>
+        <columns>LLC_BI__Spread_Statement_Type__c</columns>
+        <columns>LLC_BI__Row_Number__c</columns>
+        <columns>LLC_BI__Debit__c</columns>
+        <columns>LLC_BI__Is_Grand_Total__c</columns>
+        <columns>LLC_BI__Is_Summary_Group__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__Is_Summary_Group__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All2</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Title__c</columns>
+        <columns>LLC_BI__Spread_Statement_Type__c</columns>
+        <columns>LLC_BI__Row_Number__c</columns>
+        <columns>LLC_BI__Debit__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Spread Statement Record Total Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Spread Statement Total Groups</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

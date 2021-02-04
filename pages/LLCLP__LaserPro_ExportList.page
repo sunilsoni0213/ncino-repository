@@ -1,0 +1,75 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLCLP.LaserProExportController">
+	<c:Include_jQuery />
+	<c:Include_jQuery_Custom />
+	<c:Include_jQuery_FormatCurrency />
+	<nFORCE:Include_Analytics />
+	<c:Include_Bootstrap />
+	<nFORCE:Loading_Modal />
+
+	<script>
+		window.Utils = {
+			blockUI: function() {
+				jQuery("#loading-modal").modal("show");
+			},
+			unblockUI: function() {
+				jQuery("#loading-modal").modal("hide");
+			}
+		};
+	</script>
+
+	<apex:form >
+		<apex:actionFunction name="deleteAttachment" action="{!deleteAttachment}" 
+				reRender="laserProAttachments" onComplete="Utils.unblockUI();">
+			<apex:param name="firstParam" assignTo="{!attachmentId}" value="" />
+		</apex:actionFunction>
+		<apex:variable var="attachmentList" value="{!attachments}" />
+		<apex:pageBlock id="laserProAttachments">
+			<apex:pageBlockButtons rendered="{!IF(hasLaserProPermission,true,false)}">
+				<apex:commandButton action="{!saveExportFile}" value="{!$Label.llclp__export_to_laserpro}" 
+					onclick="Utils.blockUI();" />
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection columns="1">
+				<apex:outputPanel rendered="{!IF(resultsFound,true,false)}">
+					<apex:pageBlockTable value="{!attachmentList}" var="attachment">
+						<apex:column >
+							<apex:facet name="header">{!$Label.llclp__action}</apex:facet>
+							<apex:outputLink styleClass="actionLink" 
+								value="{!URLFOR($Action.Attachment.Download, attachment.id)}">
+								{!$Label.llclp__download}
+							</apex:outputLink>&nbsp;|&nbsp;
+							<apex:outputLink onclick="deleteLaserProExport('{!attachment.id}');" 
+								value="#" rendered="{!IF(hasLaserProPermission,true,false)}">{!$Label.llclp__delete}
+							</apex:outputLink>
+							<apex:outputPanel rendered="{!IF(hasLaserProPermission,false,true)}">
+								{!$Label.llclp__delete}
+							</apex:outputPanel>
+						</apex:column>
+						<apex:column >
+							<apex:facet name="header">{!$Label.llclp__file_name}</apex:facet>
+							<apex:outputText value="{!attachment.Name}" />
+						</apex:column>
+						<apex:column >
+							<apex:facet name="header">{!$Label.llclp__exported_by}</apex:facet>
+							<a href="/{!attachment.CreatedById}" target="_blank">
+								<apex:outputText value="{!userNameMap[attachment.CreatedById]}"/></a>
+							<apex:outputText value=", "/>
+							<apex:outputField value="{!attachment.CreatedDate}" />
+						</apex:column>
+					</apex:pageBlockTable>
+				</apex:outputPanel>
+				<apex:outputPanel rendered="{!IF(resultsFound,false,true)}">
+					{!$Label.llclp__no_records}
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+
+	<script type="text/javascript">
+		function deleteLaserProExport(attachmentId) {
+			if (confirm("{!$Label.Confirmation}")) {
+				Utils.blockUI();
+				deleteAttachment(attachmentId);
+			}
+		}
+	</script>
+</apex:page>

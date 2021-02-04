@@ -1,0 +1,160 @@
+<apex:page controller="LLC_BI.DocuSignController">
+	<apex:outputPanel rendered="{!isNull($CurrentPage.parameters.app)}">
+		<nFORCE:Includes enableBS3Namespace="true" />
+	</apex:outputPanel>
+		<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+		<apex:stylesheet value="{!URLFOR($Resource.nFORCE__nCino_preloaders, 'css/loading_spinner_3.css')}" />
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+	<apex:outputPanel id="thepage">
+		<apex:pageMessages id="showmsg"></apex:pageMessages>
+		<apex:outputPanel id="thelists" rendered="{!signurl == null}">
+			<div id="theforce" class="force">
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span>{!$Label.llc_bi__docusign_heading_documents_in_progress}</span>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<apex:form id="theform0" styleClass="form-horizontal">
+									<div id="thediv" class="force">
+										<apex:outputText value="{!$Label.llc_bi__docusign_no_documents_in_progress}" rendered="{!!hasDocumentsInProgress}"/>
+										<apex:outputPanel id="inprogresspanel" layout="none" rendered="{!signurl == null && hasDocumentsInProgress}">
+											<table id="inprogresstable"  class="table table-hover table-striped" >
+												<thead>
+													<tr class="text-left">
+														<th><apex:outputText value="{!$Label.llc_bi__docusign_heading_date}"/></th>
+														<th><apex:outputText value="{!$Label.llc_bi__docusign_template}"/></th>
+														<th><apex:outputText value="{!$Label.llc_bi__docusign_document_status}"/></th>
+														<th><apex:outputText value="{!$Label.llc_bi__docusign_action_header}"/></th>
+													</tr>
+												</thead>
+												<tbody>
+													<apex:repeat rendered="true" value="{!envelopes}" var="document">
+														<apex:outputPanel layout="none" rendered="{!document.signAvailable || document.downloadAvailable}" >
+															<tr class="text-left" style="vertical-align:middle;">
+																<td style="vertical-align:middle;"><apex:outputField value="{!document.envelope.LastModifiedDate}" styleClass="form-control-static"/>
+																</td>
+																<td style="vertical-align:middle;"><apex:outputText value="{!document.envelope.Name}" styleClass="form-control-static"/>
+																</td>
+																<td style="vertical-align:middle;" styleClass="form-control-static">
+																	<apex:outputText value="{!document.envelope.LLC_BI__Status__c}"/>
+																		&nbsp;
+																		<apex:OutputLink value="{!URLFOR($Action.Attachment.Download,document.envelope.LLC_BI__Attachment_Id__c)}"
+																			target="_parent"
+																			rendered="{!document.envelope.LLC_BI__Attachment_Id__c != null}">({!$Label.llc_bi__docusign_view_attachment})
+																		</apex:OutputLink>
+																</td>
+																<td style="vertical-align:middle;">
+																	<apex:commandLink action="{!signDocument}"
+																		value="{!$Label.llc_bi__docusign_action_sign}"
+																		target="_parent"
+																		rendered="{!document.signAvailable}"
+																		status="ajaxPleaseWait"
+																		reRender="thepage">
+																			<apex:param name="actionId" assignTo="{!actionId}" value="{!document.envelope.Id}"/>
+																	</apex:commandLink>
+																	<apex:commandLink action="{!downloadDocument}"
+																		value="{!$Label.llc_bi__docusign_action_download}"
+																		rendered="{!document.downloadAvailable}"
+																		status="ajaxPleaseWait"
+																		reRender="thepage">
+																			<apex:param name="actionId" assignTo="{!actionId}" value="{!document.envelope.Id}"/>
+																	</apex:commandLink>
+																</td>
+															</tr>
+														</apex:outputPanel>
+													</apex:repeat>
+												</tbody>
+											</table>
+										</apex:outputPanel>
+									</div>
+								</apex:form>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span>{!$Label.llc_bi__docusign_heading_recently_completed_documents}</span>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<apex:form id="theform" styleClass="form-horizontal">
+					    			<div id="thediv" class="force">
+					    			<apex:outputPanel id="thepanel1">
+					    				<apex:outputPanel id="thepanel" layout="none" rendered="{!signurl == null}" >
+					    					<apex:outputText value="{!$Label.llc_bi__docusign_no_recently_completed_documents}" rendered="{!!hasRecentlyCompletedDocuments}"/>
+					    					<apex:outputText id="thetable" rendered="{!hasRecentlyCompletedDocuments}">
+												<table id="thetablex"  class="table table-hover table-striped" >
+													<thead>
+														<tr class="text-left">
+															<th><apex:outputText value="Date"/></th>
+															<th><apex:outputText value="{!$Label.llc_bi__docusign_template}"/></th>
+															<th><apex:outputText value="{!$Label.llc_bi__docusign_document_status}"/></th>
+														</tr>
+													</thead>
+													<tbody>
+														<apex:repeat rendered="true" value="{!envelopes}" var="document">
+														<apex:outputPanel layout="none" rendered="{!!document.signAvailable && !document.downloadAvailable}" >
+															<tr class="text-left" style="vertical-align:middle;">
+																<td >
+																	<apex:outputField value="{!document.envelope.LastModifiedDate}" styleClass="form-control-static"/>
+																</td>
+																<td>
+																	<apex:outputText value="{!document.envelope.Name}" styleClass="form-control-static"/>
+																</td>
+																<td styleClass="form-control-static">
+																	<apex:outputText value="{!document.envelope.LLC_BI__Status__c}"/>
+														            &nbsp;
+														            <apex:OutputLink value="{!URLFOR($Action.Attachment.Download,document.envelope.LLC_BI__Attachment_Id__c)}"
+																			target="_parent"
+																			rendered="{!document.envelope.LLC_BI__Attachment_Id__c != null}">({!$Label.llc_bi__docusign_view_attachment})
+														            </apex:OutputLink>
+																</td>
+															</tr>
+															</apex:outputPanel>
+														</apex:repeat>
+													</tbody>
+												</table>
+											</apex:outputText>
+										</apex:outputPanel>
+									</apex:outputPanel>
+					    			</div>
+								</apex:form>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+			</div>
+		</apex:outputPanel> <!--thelists -->
+
+		<apex:outputPanel id="signiframe" rendered="{!signurl != null}">
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<apex:form id="theform0" styleClass="form-horizontal">
+								<apex:iframe src="{!signurl}" rendered="{!signurl != null}"/>
+							</apex:form>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</apex:outputPanel>
+
+	</apex:outputPanel>
+
+	<apex:form >
+		<apex:actionPoller id="thePoller"
+			action="{!pollerAction}"
+			interval="15"
+			enabled="{!downloadQueued && signUrl==null}"
+			reRender="thelists,thePoller"/>
+	</apex:form>
+</apex:page>

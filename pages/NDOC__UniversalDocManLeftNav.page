@@ -1,0 +1,166 @@
+<apex:page showHeader="false" sidebar="false" controller="NDOC.UniversalDocManController" extensions="NDOC.PlaceholderDataController">
+	<div class="col-md-2 col-sm-3 col-xs-12 leftNav no-gutter leftNavSize" style="position: relative;">
+		<div ng-controller='LeftNavController as leftNavController'>
+			<div
+				class="headers clickFocus allDocumentsPadding truncate"
+				title="{!$Label.All_Documents}"
+				ng-click="controller.placeholderFilter(); controller.isCategoriesOpen = false"
+				ng-class="{'bold': !controller.placeholderFilterValue
+					&& !controller.isFilterByPortalEnabled
+					&& !controller.isFilterByReadyForEsignature
+					&& !controller.isFilterByCategories}">
+				<div
+					class="countCircle"
+					ng-bind="controller.placeholderService.placeholders.length">
+				</div>
+				{!$Label.All_Documents}
+			</div>
+			<div
+				ng-if="controller.isLoanDocMan"
+				class="headers clickFocus truncate"
+				title="{!$Label.Owned_By_Me}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-click="controller.placeholderFilter({ownerId: '{!currentUser}'})"
+				ng-class="{'bold': controller.placeholderFilterValue
+					&& controller.placeholderFilterValue.ownerId
+					&& !controller.isFilterByCategories}">
+				<div
+					class="countCircle"
+					ng-bind="(controller.placeholderService.placeholders | filter: {ownerId:
+					'{!currentUser}'}).length">
+				</div>
+				{!$Label.Owned_By_Me}
+			</div>
+			<div
+				class="headers clickFocus truncate"
+				title="{!$Label.Customer_Portal}"
+				ng-click="controller.filterByPortalEnabled()"
+				ng-class="{'bold': controller.isFilterByPortalEnabled
+					&& !controller.isFilterByReadyForEsignature
+					&& !controller.isFilterByCategories}">
+				<div
+					class="countCircle"
+					ng-bind="(controller.placeholderService.placeholders | filter: {portalEnabled: true})
+					.length">
+				</div>
+				{!$Label.Customer_Portal}
+			</div>
+			<div
+				class="headers clickFocus truncate"
+				title="E-Signature"
+				ng-click="controller.filterByReadyForEsignature()"
+				ng-class="{'bold': controller.isFilterByReadyForEsignature
+					&& !controller.isFilterByPortalEnabled
+					&& !controller.isFilterByCategories}">
+				<div
+					class="countCircle"
+					ng-bind="(controller.placeholderService.placeholders | filter: {readyForEsignature: true})
+					.length">
+				</div>
+				{!$Label.E_Signature}
+			</div>
+			<hr class="leftNavSeparator"/>
+			<div
+				class="clickFocus headers noCircleHorizontalAlign truncate"
+				title="{!$Label.Relationships}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-class="{'bold': vm.rightNavDisplay === vm.relationship && vm.isLoaded }"
+				ng-if="controller.showRelationshipLink && controller.permissionService.hasRelationshipImport()"
+				ng-click="vm.toggleRightNav(vm.relationship)">
+					{!$Label.Relationships}
+			</div>
+			<div
+				class="clickFocus headers noCircleHorizontalAlign truncate"
+				title="{!$Label.Collateral}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-class="{'bold': vm.rightNavDisplay === vm.collateral && vm.isLoaded }"
+				ng-if="controller.showCollateralLink && controller.permissionService.hasCollateralImport()"
+				ng-click="vm.toggleRightNav(vm.collateral)">
+					{!$Label.Collateral}
+			</div>
+			<div
+				class="headers clickFocus truncate"
+				title="{!$Label.File_Staging}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-click="vm.toggleRightNav(vm.fileStaging)"
+				ng-class="{'bold': vm.rightNavDisplay === vm.fileStaging && vm.isLoaded }">
+				<div
+					class="countCircle"
+					ng-bind="vm.fileStagingService.stagedFiles.length">
+				</div>
+					{!$Label.File_Staging}
+			</div>
+			<div
+				ng-if="leftNavController.showArchiveLink"
+				class="headers clickFocus truncate"
+				title="{!$Label.Archive}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-click="vm.toggleRightNav(vm.archive)"
+				ng-class="{'bold': vm.rightNavDisplay === vm.archive && vm.isLoaded }">
+				<div
+					class="countCircle"
+					ng-bind="archivedFiles.length">
+				</div>
+				{!$Label.Archive}
+			</div>
+
+			<div ng-if="leftNavController.customLinks.length > 0">
+				<hr class="leftNavSeparator"/>
+				<div
+					class="clickFocus headers truncate"
+					title="{{::customLink.elementCaption}}"
+					ng-repeat="customLink in leftNavController.customLinks"
+					ng-if="customLink.showElement"
+					ng-click="customLink.onClick('{!JSENCODE($CurrentPage.parameters.id)}')">
+					{{::customLink.elementCaption}}
+				</div>
+			</div>
+			<hr class="leftNavSeparator"/>
+			<div
+				class="clickFocus headers truncate"
+				ng-click="controller.isCategoriesOpen = !controller.isCategoriesOpen">
+				{!UPPER($Label.Filter_By_Categories)}
+				<img width="12" height="12"
+					class="pull-right clickFocus"
+					ng-show="!controller.isCategoriesOpen"
+					src="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/icons/utility/chevronright_60.png')}"/>
+				<img width="12" height="12"
+					class="pull-right clickFocus"
+					ng-show="controller.isCategoriesOpen"
+					src="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/icons/utility/chevrondown_60.png')}"/>
+			</div>
+			<div class="slds-scrollable--y" ng-if="controller.isCategoriesOpen">
+				<div class="headers clickFocus truncate slds-checkbox"
+					ng-repeat="docType in controller.docTypeOptions"
+					ng-hide="$first">
+					<label class="slds-checkbox__label">
+						<input
+								type="checkbox"
+								ng-checked="{{controller.selectedCategories.includes(docType.name)}}"
+								ng-click="controller.filterByCategories(docType.name)">
+						</input>
+						<span class="slds-checkbox--faux"></span>
+					</label>
+					{{::docType.name}}
+				</div>
+			</div>
+			<div class="headers truncate clickFocus"
+				  ng-show="!controller.isCategoriesOpen && controller.isFilterByCategories"
+				  ng-repeat="categoryName in controller.selectedCategories">
+				<span class="slds-pill slds-pill_link">
+					<a href="" class="slds-pill__action">
+						<span class="slds-pill__label">{{categoryName}}</span>
+					</a>
+					<button class="slds-button slds-button_icon slds-button_icon slds-button--x-small slds-pill__remove"
+							  ng-click="controller.selectCategory(categoryName)"
+							  title="Remove">
+						<svg class="slds-button__icon" aria-hidden="true">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+						</svg>
+						<span class="slds-assistive-text">Remove</span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,92 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="LLC_BI.FacilityDisplayController">
+	<nFORCE:Include_Design_System flavor="bs3"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<apex:form id="facilityform">
+		<apex:actionStatus id="blockui" rendered="{!!isNull($CurrentPage.parameters.app)}">
+			<apex:facet name="start">
+				<script type="text/javascript">
+					LifeCycle.blockUI();
+				</script>
+			</apex:facet>
+			<apex:facet name="stop">
+				<script type="text/javascript">
+					LifeCycle.unblockUI();
+				</script>
+			</apex:facet>
+		</apex:actionStatus>
+		<apex:pageMessages id="pageMessages"/>
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+					{!$Label[tableTitle]}
+			</apex:define>
+			<apex:define name="right" />
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div class="slds" >
+							<div class="slds-p-bottom--small" align="center">
+								<apex:outputPanel layout="none" rendered="{!hasProductPackageLoanEdit}">
+									<apex:actionStatus id="saveStatus">
+										<apex:facet name="stop">
+											<apex:commandButton status="saveStatus"
+													immediate="false"
+													styleClass="btn btn btn-secondary"
+													value="Save"
+													action="{!saveFacilities}"
+													rerender="facilityform"/>
+										</apex:facet>
+										<apex:facet name="start">
+											<apex:commandButton value="Saving..."
+													disabled="true"
+													styleClass="btn btn-secondary"
+													status="saveStatus" />
+										</apex:facet>
+									</apex:actionStatus>
+
+									<apex:outputPanel layout="none" id="redirectPanel" >
+										<apex:outputText rendered="{!shouldRedirectPage}">
+											<script type="text/javascript">
+												window.top.location.href = '{!JSENCODE(URLENCODE(redirectPageUrl))}';
+											</script>
+										</apex:outputText>
+									</apex:outputPanel>
+								</apex:outputPanel>
+							</div>
+							<div class="slds-scrollable--x">
+								<apex:dataTable styleClass="slds-table slds-table--bordered slds-no-row-hover"
+										value="{!pendingfacilities}" var="row">
+									<apex:repeat value="{!fields}" var="f">
+										<apex:column headerClass="slds-text-heading--label">
+											<apex:facet name="header">{!f.Label}</apex:facet>
+											<apex:outputField value="{!row[f]}"
+													rendered="{!IF(OR(f=='Name',OR(AND(hasProductPackageLoanEdit,contains(lower(editableFields),lower(f))))),false,true)}"/>
+											<apex:inputField value="{!row[f]}"
+													rendered="{!IF(AND(hasProductPackageLoanEdit,contains(lower(editableFields),lower(f))),true,false)}"/>
+											<apex:outputLink value="/{!row.id}"
+													target="_parent"
+													rendered="{!IF(f=='Name',true,false)}">
+													{!row.Name}
+											</apex:outputLink>
+										</apex:column>
+									</apex:repeat>
+									<apex:column width="20">
+										<apex:facet name="header">{!$Label.llc_bi__action}</apex:facet>
+										<apex:outputLink value="/{!row.id}/e?retURL={!productPackageId}"
+												styleClass="actionLink"
+												target="_parent">{!$Label.llc_bi__edit}</apex:outputLink>
+									</apex:column>
+								</apex:dataTable>
+								<apex:outputPanel layout="none"
+										rendered="{!IF(pendingfacilities == null || pendingfacilities.size == 0, true, false)}">
+									<apex:outputText value="{!$Label.llc_bi__related_list_no_records_to_display}"/>
+								</apex:outputPanel>
+							</div>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</apex:form>
+</apex:page>

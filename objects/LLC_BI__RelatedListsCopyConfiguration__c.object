@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Related Lists to be copied with an Object copy</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__Label__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and required when utilizing the related list copy configuration option. This field is the Label used when displaying the list.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label used when displaying the list</inlineHelpText>
+        <label>Label</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Related_List_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and required when utilizing the related list copy configuration option. This field specifies the name of a related list of data to copy.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of a related list of data to copy</inlineHelpText>
+        <label>Related List Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__SObject_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and required when utilizing the related list copy configuration option. This field specifies the sObject Type to which the lists apply.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SObject Type to which the lists apply</inlineHelpText>
+        <label>SObject Type</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Selected_Default__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and required when utilizing the related list copy configuration option. This field is used as an Indicator the field should be selected by default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicator if the field should be selected by default.</inlineHelpText>
+        <label>Selected Default</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sort_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and required when utilizing the related list copy configuration option. This field specifies the ranking used to order entries in the list.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Ranking used to order entries in the list</inlineHelpText>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Related Lists Copy Configuration</label>
+    <visibility>Public</visibility>
+</CustomObject>

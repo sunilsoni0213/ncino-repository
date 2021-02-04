@@ -1,0 +1,7 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.Navigation" showHeader="false" standardStylesheets="false">
+	<div class="row">
+		<div class="col-xs-12 no-gutter menu">
+			<c:Template_Main_Menu menu="{!menu}" />
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,124 @@
+<apex:page showHeader="false" sidebar="false" standardController="Account" extensions="LLC_BI.TreasuryServicesSummaryAppController,nFORCE.RemoteActionController">
+	<script>
+		(function() {
+			angular.module('ncTreasuryServicesSummary')
+				.config(function(treasuryMaintenanceRemotingProvider, configProvider){
+					treasuryMaintenanceRemotingProvider.setEndpoint({
+						remoteAction: '{!$RemoteAction.RemoteActionController.invoke}'
+					})
+				})
+			})();
+	</script>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__treasury_services_summary_bundle)}" />
+	<apex:outputPanel layout="none" rendered="{!$CurrentPage.parameters.app == null}">
+		<nFORCE:Include_Analytics />
+		<c:Include_Bootstrap />
+		<nFORCE:Loading_Modal />
+	</apex:outputPanel>
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<nFORCE:ncTreeGridIncludes />
+	<nFORCE:ncPubsubIncludes />
+	<nFORCE:Include_Navigator />
+
+	<div class="slds" id="TMSummaryPage">
+		<div ng-controller="TreasuryServicesSummaryAppController as vm" id="ncTreasuryServicesSummary">
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<div class="row">
+						<div class="slds-m-bottom--small slds-float--right">
+							<button
+								ng-disabled="vm.treasuryIds.length === 0"
+								ng-click="vm.navigateToMaintenance('{!relationshipId}', '{!packagePrefix}')"
+								class="slds-button slds-x-small-buttons--stacked slds-button--brand">
+								{!$Label.Button_Continue}
+							</button>
+						</div>
+					</div>
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<tree-grid
+								template-url="{!$Page.ncTreeGridHtml}"
+								no-records-found-label="{!$Label.No_Records}"
+								icon-collapsed="{!URLFOR($Resource.nForce__SLDS0102, 'assets/icons/utility/chevronright_60.png')}"
+								icon-expanded="{!URLFOR($Resource.nForce__SLDS0102, 'assets/icons/utility/chevrondown_60.png')}"
+								remoting-service="{!$RemoteAction.RemoteActionController.invoke}"
+								get-tree-data-ra="{!packagePrefix}.TreasuryServicesSummaryAppController.GetTreeGridDataEndpoint"
+								context-id="{!relationshipId}"
+								max-depth="4" />
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+			<br />
+			<div id="MaintenanceHistory">
+				<div class="slds-text-heading--small slds-p-bottom--small slds-size--12-of-12 slds-float--left">
+					{!$Label.Maintenance_History}
+				</div>
+				<apex:outputPanel id="maintenanceTablePanel">
+					<apex:pageBlock rendered="{!maintenanceChecklists.size > 0}" id="maintenanceTable">
+						<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+							<thead>
+								<tr class="slds-text-heading--label slds-table--bordered slds-is-sortable slds-is-sorted slds-text-link--reset">
+									<apex:repeat value="{!relatedFields}" var="f">
+										<th>{!f.label}</th>
+									</apex:repeat>
+									<th>{!$Label.Treasury_Maintenance_Request_Items}</th>
+									<th>{!$Label.Treasury_Maintenance_Request_Services}</th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<apex:repeat value="{!maintenanceChecklists}" var="maintenance">
+									<tr>
+										<apex:repeat value="{!relatedFields}" var="f">
+											<td>{!maintenance[f.fieldPath]}</td>
+										</apex:repeat>
+										<td>{!maintenance.Requirements__r.size}</td>
+										<td class="slds-cell-wrap">{!treasuryServiceNames[maintenance.Id]}</td>
+										<td>
+											<!-- Wrap the Angular links in an unstyled VF tag so that we can conditionally render serverside-->
+											<apex:variable var="*" value="hasViewAccess" rendered="{!hasViewAccess}">
+												<a href="#" ng-click="vm.viewMaintenanceHistory('{!maintenance.Id}')">{!$Label.llc_bi__maintenance_history_view}</a>
+											</apex:variable>
+										</td>
+										<td>
+											<apex:variable var="*" value="hasEditAccess" rendered="{!hasEditAccess && isEditStatus[maintenance.Id]==true}">
+												<a href="#" ng-click="vm.editMaintenanceHistory('{!maintenance.Id}', '{!relationshipId}')">{!$Label.llc_bi__edit}</a>
+											</apex:variable>
+										</td>
+										<td>
+											<apex:form id="maintenanceForm" html-ng-non-bindable="true">
+												<apex:actionRegion >
+													<!-- This onClick cannot return true, if it does, the action will not be called.
+														The confirm dialog should only be permitted to return false. -->
+													<apex:commandLink action="{!removeMaintenanceHistory}"
+														onclick="if(!confirm('{!$Label.llc_bi__delete_tm_maintenance_prompt}')) return false;"
+														reRender="maintenanceTablePanel, emptyHistory"
+														rendered="{!hasDeleteAccess && isDeleteStatus[maintenance.Id]==true}"
+													>
+														<apex:param name="pid" value="{!maintenance.Id}" assignTo="{!selectedChecklist}"/>
+														{!$Label.llc_bi__maintenance_history_delete}
+													</apex:commandLink>
+												</apex:actionRegion>
+											</apex:form>
+										</td>
+									</tr>
+								</apex:repeat>
+							</tbody>
+						</table>
+					</apex:pageBlock>
+				</apex:outputPanel>
+				<apex:outputPanel id="emptyHistory">
+					<apex:pageBlock rendered="{!maintenanceChecklists.size == 0}">
+						<div class="slds-text-heading--x-small slds-size--12-of-12" style="font-weight: bold;">
+							{!$Label.llc_bi__no_maintenance_history_records}
+						</div>
+					</apex:pageBlock>
+				</apex:outputPanel>
+			</div>
+		</div>
+	</div>
+</apex:page>

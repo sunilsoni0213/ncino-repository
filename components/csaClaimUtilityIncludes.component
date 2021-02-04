@@ -1,0 +1,8 @@
+<apex:component layout="none">
+    <nFORCE:Include_Navigator />
+    <nFORCE:ncDataProvidersIncludes />
+
+    <apex:includeScript value="{!URLFOR($Resource.csaClaimUtility, 'application/App.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaClaimUtility, 'components/Field.component.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaClaimUtility, 'services/FieldType.service.js')}"/>
+</apex:component>

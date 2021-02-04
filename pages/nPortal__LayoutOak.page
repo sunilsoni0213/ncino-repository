@@ -1,0 +1,52 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	controller="nPortal.PortalController"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<div class="portal-wrapper-full" n-style="pso-wrapper">
+		<div class="slds-grid slds-wrap">
+			<div class="slds-size--1-of-1 slds-medium-size--2-of-6 slds-large-size--1-of-6">
+				<dashboard-navigation display="vertical"></dashboard-navigation>
+			</div>
+			<div class="slds-size--1-of-1 slds-medium-size--4-of-6 slds-large-size--5-of-6
+				portal-content-section">
+				<div class="slds-grid slds-wrap">
+					<div class="slds-size--1-of-1">
+						<apex:include pageName="nPortal__DashboardHeaderHero" />
+						<div class="slds-m-right--large slds-m-top--large slds-medium-show top-right">
+							<user-navigation></user-navigation>
+						</div>
+					</div>
+				</div>
+				<div class="slds-grid"
+					resizer="true"
+					ng-class="{'slds-wrap': !isLarge,
+						'slds-grid--align-center': isLarge}">
+					<div class="slds-size--1-of-1 slds-large-size--4-of-6 slds-shrink-none"
+						resizer="true">
+						<div ng-class="{'slds-p-horizontal--large': !isLarge}">
+							<apex:include rendered="{!!isNull(route.nFORCE__Body__c)}"
+								pageName="{!IF(isNull(route.nFORCE__Body__c), 'nFORCE__Blank', route.nFORCE__Body__c)}" />
+						</div>
+						<div
+							resizer="true"
+							ng-class="{'slds-size--1-of-1': !isLarge,
+								'slds-col slds-no-space': isLarge}">
+							<apex:outputPanel layout="none"
+								rendered="{!!isNull(route.nFORCE__App__c) && route.nFORCE__App__c == dashboardAppName}">
+								<your-products></your-products>
+							</apex:outputPanel>
+							<tile-component display="horizontal"></tile-component>
+						</div>
+						<security-badges></security-badges>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="push"></div>
+	</div>
+</apex:page>

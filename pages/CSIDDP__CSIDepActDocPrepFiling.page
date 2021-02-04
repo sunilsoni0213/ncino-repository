@@ -1,0 +1,7 @@
+<apex:page id="CSIDepActDocPrepFiling"
+           controller="CSIDDP.CSIDepActDocPrepFilingController"
+           showHeader="false"
+           sideBar="false"
+           docType="html-5.0"
+           action="{!startFilingDocuments}">
+</apex:page>

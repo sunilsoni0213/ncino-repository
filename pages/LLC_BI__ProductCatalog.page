@@ -1,0 +1,28 @@
+<apex:page id="ProductCatalog"
+	showHeader="false"
+	standardStylesheets="false"
+	sidebar="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	docType="html-5.0">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head></head>
+		<c:Include_AngularJS />
+		<nFORCE:ncUIIncludes />
+		<nFORCE:Includes enablefontawesome="true" enableBS3Namespace="true" />
+		<nFORCE:Include_Design_System flavor="vf" />
+		<nFORCE:Include_Design_System flavor="bs3" />
+
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+		<nFORCE:ncDataProvidersIncludes />
+
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'application/App.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'services/ProductCatalogRemoting.service.js')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'css/Style.css')}" />
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'controllers/productCatalogController.js')}" />
+		<body>
+			<c:ProductCatalog />
+			<c:ProductCatalogDataService />
+		</body>
+	</html>
+</apex:page>

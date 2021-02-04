@@ -1,0 +1,42 @@
+<apex:page controller="nCBC.LoanBorrowerSelectionController" action="{!autoCreditPull}" docType="html-5.0">
+	<c:Includes />
+	<apex:form >
+		<div class="force container-fluid">
+			<div class="row-fluid std-bottom-margin">
+				<div class="pull-left" >
+					<h3>{!pageTitle}</h3>
+				</div>
+				<div class="pull-right">
+					<apex:commandButton action="{!goBack}" styleClass="btn btn-xs btn-primary" value="{!$Label.ncbc__go_back}" id="Goback"/>
+					<apex:commandButton action="{!performCreditPull}" styleClass="btn btn-xs btn-success" value="{!$Label.ncbc__new_request}" id="NewCredit" style="margin-left:15px"/>
+				</div>
+			</div>
+		</div>
+		<hr class="divider" />
+		<apex:outputPanel id="panel" rendered="{!NOT(pageErrorState)}" >
+			<div class="force container-fluid">
+				<apex:pageBlock >
+					<apex:pageBlockSection rendered="{!borrowerList.Size != 1}">
+						<apex:repeat value="{!borrowerList}" var="borrowerSelector" id="theRepeat">
+							<apex:commandButton value="{!borrowerSelector.borrowerName}" action="{!setSelected}" id="theValue" rerender="myMessages, panel" styleClass="{!IF(borrowerSelector.isSelected == true,'btn btn-success selected','')} selector">
+								<apex:param name="selectedIndex" value="{!borrowerSelector.index}" assignTo="{!selectedIndex}"/>
+							</apex:commandButton>
+						<br/><br/>
+						</apex:repeat>
+					</apex:pageBlockSection>
+				</apex:pageBlock>
+			</div>
+			<apex:pageBlock >
+				<apex:pageBlockSection rendered="{!realEstateEnablePrompt}" >
+					<h2>{!$Label.ncbc__real_estate_prompt}:</h2>
+						<apex:selectList value="{!selectedRealEstateOption}" multiselect="false" size="1">
+							<apex:selectOptions value="{!realEstateDropDownOptions}"/>
+						</apex:selectList>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+		</apex:outputPanel>
+	</apex:form>
+	<apex:outputPanel rendered="{!pageErrorState}">
+		<apex:PageMessages escape="false" />
+	</apex:outputPanel>
+</apex:page>

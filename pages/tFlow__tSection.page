@@ -1,0 +1,16 @@
+<apex:page >
+	<c:Includes />
+	
+	<div class="ncino">
+		<div class="workspace">
+			<div class="left"><br />
+				<div class="menu force">
+					<apex:insert name="menu"/>
+				</div>
+			</div>
+			<div class="right">
+				<apex:insert name="body"/>
+			</div>
+		</div>
+	</div>
+</apex:page>

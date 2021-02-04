@@ -1,0 +1,60 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="customDocusignController" lightningStylesheets="true" docType="html-5.0" title="nCino Docusign">
+    <apex:slds />
+    <apex:pageMessages ></apex:pageMessages>
+    
+    <div class="slds-p-around_small">
+        <p class="slds-p-vertical--medium slds-text-heading--large">
+            nCino Docusign
+        </p>
+    </div>
+    
+    <apex:form >
+        <div class="slds-var-p-left_medium">
+            Choose which Placeholder and Entities you would like to add to the Docusign Envelope
+            <br />
+        </div>
+        <br />
+        <div class="slds-form slds-form_stacked slds-var-p-left_medium slds-var-p-right_medium">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">
+                <abbr class="slds-required" title="required">*</abbr>Select a Placeholder Ready For Docusign</label>
+                <div class="slds-form-element__control">
+                    <div class="slds-select_container">
+                        <apex:selectList size="1" value="{!selectedDocco}" required="true" styleClass="slds-select">
+                            <apex:selectOptions value="{!Placeholders}" />
+                        </apex:selectList>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <apex:datatable value="{!dscol}" var="d" id="table" styleClass="slds-table slds-table_bordered slds-table_cell-buffer slds-cell-wrap">
+            <apex:column >
+                <apex:facet name="header">Name</apex:facet>
+                <apex:outputText value="{!d.name}" />
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Involvement Type</apex:facet>
+                <apex:outputText value="{!d.involvementType}" />
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Email</apex:facet>
+                <apex:outputText value="{!d.email}" />
+                <!-- <apex:inputText value="{!d.email}" /> -->
+            </apex:column>
+            <apex:column >
+                <apex:facet name="header">Signer Role</apex:facet>
+                <apex:selectList styleClass="slds-select" size="1" value="{!d.signerRole}">
+                    <apex:selectOptions value="{!signerRoles}" />
+                </apex:selectList>
+            </apex:column>
+            <!-- <apex:column >
+                <apex:facet name="header">Signer Order</apex:facet>
+                <apex:inputText value="{!d.signerOrder}" />
+            </apex:column> -->
+        </apex:dataTable>
+        <br></br>
+<!--    <apex:commandButton action="{!sendToDocusignSync}" value="Amend before Send" />    -->
+    <apex:commandButton action="{!sendToDocusign}" value="Send to Docusign!" />       
+    </apex:form>
+</apex:page>

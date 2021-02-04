@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The different types or forms of identification documentation available.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>CSI_Comm_DocPrep</fullName>
+        <description>CSI DocPrep</description>
+        <displayedFields>
+            <field>LLC_BI__Id_Document_Requirement__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Screen_Section__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSI_DepAct_DocPrep</fullName>
+        <description>CSI_DepAct_DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Agency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Id_Document_Requirement__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_DepAct_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI Comm DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PrecisionLender_Pricing</fullName>
+        <description>PrecisionLender Pricing Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PrecisionLender Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Agency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This picklist field is manually populated when configuring ID Document Types. The picklist values are the names of the state or national agency which issued the identification (driver’s license, passport) presented to the financial institution by the natural person associated with the transaction. This data is used for the financial institution’s Customer Identification Program.</description>
+        <externalId>false</externalId>
+        <label>Agency</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DMV</fullName>
+                    <default>false</default>
+                    <label>DMV</label>
+                </value>
+                <value>
+                    <fullName>Government</fullName>
+                    <default>false</default>
+                    <label>Government</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Display_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this number field to determine the display order of this ID Document Type selection on the ID Scan page in Customer Engagement.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a number to determine the display order of the ID Document.</inlineHelpText>
+        <label>Display Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__External_Id_Document_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional text field to display the external names that Customer Portal users should see in place of the ID Document Type name.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the ID Document name to display in place of the ID Document Type name.</inlineHelpText>
+        <label>External ID Document Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__ID_Document_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this picklist to allow the user to choose the document category. (By default, it is BLANK)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the document category.</inlineHelpText>
+        <label>ID Document Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Passport</fullName>
+                    <default>false</default>
+                    <label>Passport</label>
+                </value>
+                <value>
+                    <fullName>Driver License</fullName>
+                    <default>false</default>
+                    <label>Driver License</label>
+                </value>
+                <value>
+                    <fullName>ID Card</fullName>
+                    <default>false</default>
+                    <label>ID Card</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__ID_Document_Sides__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this number field to determine how many sides need to be captured based on the ID Document type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the ID Document type to help the system determine how many sides need to be captured.</inlineHelpText>
+        <label>ID Document Sides</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Id_Document_Image_Back__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this long text area with the URL for the image that would replace the generic placeholder image for the back of this ID Document Type. By default, the system displays a generic placeholder image.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the image URL for an image hosted online. If that does not work, upload an image to Documents, set image visibility to public, and then enter the image URL.</inlineHelpText>
+        <label>ID Document Image (Back)</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Id_Document_Image_Front__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this long text area with the URL for the image that would replace the generic placeholder image for the front of this ID Document Type. By default, the system displays a generic placeholder image.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the image URL for an image hosted online. If that does not work, upload an image to Documents, set image visibility to public, and then enter the image URL.</inlineHelpText>
+        <label>ID Document Image (Front)</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Id_Document_Requirement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and is automatically set when the Platform package is installed. This field identifies the ID document requirements for this identification document type.</description>
+        <externalId>false</externalId>
+        <label>Id Document Requirement</label>
+        <referenceTo>LLC_BI__Id_Document_Requirement__c</referenceTo>
+        <relationshipLabel>Id Document Types</relationshipLabel>
+        <relationshipName>Id_Document_Types</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Portal_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this checkbox to enable the ID Document for Customer Portal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the checkbox to enable the ID Document.</inlineHelpText>
+        <label>Is Portal Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Placeholder_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this text field to store the name of an existing Account Document Placeholder that ID Scan uses to store the submitted photo of an ID Document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the placeholder.</inlineHelpText>
+        <label>Placeholder Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Quick_Tips__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this rich text to control the guidance that customers receive when they upload ID Documents.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this functionality to guide you through the upload process for ID Documents.</inlineHelpText>
+        <label>Quick Tips</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Screen_Section__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be manually configured to display a field set while collecting ID documents during New Customer Onboarding. It indicates the screen section for the document type.</description>
+        <externalId>false</externalId>
+        <label>Screen Section</label>
+        <referenceTo>nFORCE__Screen_Section__c</referenceTo>
+        <relationshipName>Identification_Document_Types</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Id_Type_Other_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional text field with a description of the &apos;other&apos; type of identification provided by the additional signature.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the description of the &apos;other&apos; type of identification the additional signature provides.</inlineHelpText>
+        <label>Identification Type Other Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Identification_Type_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators select the type of identification provided by the additional signature from this optional picklist.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the type of identification the additional signature provides.</inlineHelpText>
+        <label>Identification Type Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Driver&apos;s License</fullName>
+                    <default>false</default>
+                    <label>Driver&apos;s License</label>
+                </value>
+                <value>
+                    <fullName>Passport</fullName>
+                    <default>false</default>
+                    <label>Passport</label>
+                </value>
+                <value>
+                    <fullName>Military Identification Card</fullName>
+                    <default>false</default>
+                    <label>Military Identification Card</label>
+                </value>
+                <value>
+                    <fullName>State Issued Identification Card</fullName>
+                    <default>false</default>
+                    <label>State Issued Identification Card</label>
+                </value>
+                <value>
+                    <fullName>United States Citizenship and Immigration Services (USCIS) Documentation</fullName>
+                    <default>false</default>
+                    <label>United States Citizenship and Immigration Services (USCIS) Documentation</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>NATO ID</fullName>
+                    <default>false</default>
+                    <label>NATO ID</label>
+                </value>
+                <value>
+                    <fullName>Other Military Status of Forces ID</fullName>
+                    <default>false</default>
+                    <label>Other Military Status of Forces ID</label>
+                </value>
+                <value>
+                    <fullName>U.S. Department of State ID</fullName>
+                    <default>false</default>
+                    <label>U.S. Department of State ID</label>
+                </value>
+                <value>
+                    <fullName>U.S. Department of Homeland Security ID</fullName>
+                    <default>false</default>
+                    <label>U.S. Department of Homeland Security ID</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Other_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators enter a description of the &apos;other&apos; type of identification provided by the additional signature.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a description of the &apos;other&apos; type of identification provided by the additional signature.</inlineHelpText>
+        <label>Other Description</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Id Document Type</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Id Document Type Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Id Document Types</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>LLC_BI__Id_Document_Requirement__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

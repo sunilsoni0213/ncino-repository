@@ -1,0 +1,62 @@
+<apex:page showHeader="false" sidebar="false" controller="nFORCE.TemplateController" >
+
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngRelationshipTypeSelectionController)}" />
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngAnchorDirective)}" />
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngLabelProvider)}" />
+    <style>
+    .no-toolbar-spacer{
+        margin-top:50px;
+    }
+    .force h3{
+        display:block;
+        font-family: 'Salesforce Sans';
+        font-weight: 300;
+        font-size: 1.25rem;
+        line-height: 1.25;
+        margin-right: 1.5rem;
+        margin-bottom: 0rem;
+        margin-left: 0;
+    }
+    .force p{
+        color: rgb(22, 50, 92);
+        font-family: 'Salesforce Sans';
+        line-height: 1.375;
+        margin-top: .75rem;
+        margin-right: 1.5rem;
+        margin-bottom: .75rem;
+    }
+    </style>
+    <div class="no-toolbar-spacer">
+        <apex:composition template="nFORCE__Template_Heading">
+            <apex:define name="left" />
+            <apex:define name="right" />
+        </apex:composition>
+
+        <div class="ui-container">
+            <apex:composition template="nFORCE__Template_View_1_Column">
+                <apex:define name="column-content">
+                    <apex:composition template="nFORCE__Template_View_Container">
+                        <apex:define name="content">
+                            <c:Questionnaire_Component leftBtnText="Finish"
+                                leftBtnLink="/{!contextobjectId}"
+                                rightBtnText=""
+                                rightBtnLink=""
+                                headerText="Needs Assessment Status"
+                                descriptionText="Thank you for updating our customer records."/>
+                        </apex:define>
+                    </apex:composition>
+                </apex:define>
+            </apex:composition>
+        </div>
+    </div>
+
+    <script>
+        angular.module('app').config(function(labelProvider){
+            labelProvider.setLabel('anchorText','');
+            labelProvider.setLabel('anchorSrc','');
+            labelProvider.setLabel('anchorBackground','');
+        });
+    </script>
+
+
+</apex:page>

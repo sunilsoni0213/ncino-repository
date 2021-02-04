@@ -1,0 +1,102 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+
+	<apex:include pageName="nFORCE__Error_Message_Handler" />
+
+	<apex:composition template="nFORCE__Template_Knockout_Screen">
+		<apex:define name="knockout-content">
+			<span data-bind="if: screenResource().isHierarchy">
+
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span data-bind="template: { name: 'heading-template', data: sectionName }" />
+					</apex:define>
+					<apex:define name="right">
+						<apex:outputPanel layout="none" rendered="{!ISBLANK($CurrentPage.parameters.readonly)}">
+							<span data-bind="template: {
+								name: 'button-edit-field-set-template',
+								if: screenResource().hasChildren(),
+								data: [ screenResource().children()[0].configuration.sObjectType,
+										screenResource().children()[0].configuration.fieldSetKey ] }" />
+						</apex:outputPanel>
+						<apex:outputPanel layout="none" rendered="{!NOT(ISBLANK($CurrentPage.parameters.readonly))}">
+							<span data-bind="template: {
+								name: 'button-edit-field-set-template',
+								if: screenResource().hasChildren(),
+								data: [ screenResource().children()[0].data.configuration.sObjectType,
+										screenResource().children()[0].data.configuration.fieldSetKey ] }" />
+						</apex:outputPanel>
+					</apex:define>
+				</apex:composition>
+
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<apex:outputPanel layout="none" rendered="{!ISBLANK($CurrentPage.parameters.readonly)}">
+								<span data-bind="if: screenResource().hasChildren() && screenResource().children()[0].isList()">
+									<span data-bind="template: {
+											name: 'table-children-template',
+											data: screenResource().children()[0] }" />
+								</span>
+								</apex:outputPanel>
+								<apex:outputPanel layout="none" rendered="{!NOT(ISBLANK($CurrentPage.parameters.readonly))}">
+								<span data-bind="if: screenResource().hasChildren() && screenResource().children()[0].isList()">
+									<table class="table table-condensed table-hover">
+										<thead data-bind="foreach: {data: screenResource().children()[0].children()[0].data.descriptors.fields, as: 'item'}">
+											<tr data-bind="foreach: {data:Object.keys(item), as: 'key'}">
+												<c:KoVirtualBinding code="if: item[key].isVisible"/>
+												<th data-bind="text: item[key].fieldLabel" />
+												<c:KoVirtualBinding close="true" />
+											</tr>
+										</thead>
+										<tbody data-bind="foreach: {data:screenResource().children()[0].children(), as: 'child'}" >
+										<tr data-bind="foreach: {data:Object.keys(child.data.propertyBag), as: 'field'}">
+											<c:KoVirtualBinding code="if: child.data.descriptors.fields[field].isVisible"/>
+											<td data-bind="template: 'field-output-template-layoutviewer'"/>
+											<c:KoVirtualBinding close="true" />
+										</tr>
+										</tbody>
+									</table>
+								</span>
+								</apex:outputPanel>
+								<div data-bind="if: showLoader">
+									<div
+										role="status"
+										class="slds-spinner slds-spinner--medium slds-spinner--brand"
+										style="top: 96% !important;">
+										<span class="slds-assistive-text">Loading</span>
+										<div class="slds-spinner__dot-a"></div>
+										<div class="slds-spinner__dot-b"></div>
+									</div>
+								</div>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+			</span>
+		</apex:define>
+		<apex:define name="dynamic-templates" />
+		<apex:define name="static-templates">
+			<c:KoHeadingTemplate />
+			<c:KoEmptyListTemplate />
+			<c:KoSectionFieldSetWarningTemplate />
+			<c:KoFieldOutputTemplate />
+			<c:KoTableHeadCellTemplate />
+			<c:KoTableBodyCellTemplate />
+			<c:KoTableHeadRowTemplate />
+			<c:KoTableBodyRowTemplate />
+			<c:KoTableTemplate />
+			<c:KoTableChildrenTemplate />
+			<c:KoButtonEditFieldSetTemplate />
+		</apex:define>
+	</apex:composition>
+
+	<script type="text/javascript">
+		(function(){
+			if(LifeCycle){
+				LifeCycle.infiniteScrollLoad = true;
+			}
+		}());
+	</script>
+
+</apex:page>

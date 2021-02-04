@@ -1,0 +1,24 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<div class="slds-p-top--x-large slds-p-bottom--x-large"
+		resizer="true"
+		ng-class="{'slds-p-left--x-large ': isMediumOrBigger}"
+		n-style="pso-dashboard-topbar">
+		<h2 resizer="true"
+			ng-class="{'slds-text-heading--large': isMediumOrBigger,
+				'slds-text-heading--small portal-center-text': !isMediumOrBigger}"
+			n-style="pso-dashboard-topbar-header">
+			{!$Label.Dashboard_Topbar_Header}
+		</h2>
+		<h2 class="slds-text-heading--small slds-medium-show slds-m-top--small"
+			n-style="pso-dashboard-topbar-smallheader">
+			{!$Label.Dashboard_Topbar_Subheader}
+		</h2>
+	</div>
+</apex:page>

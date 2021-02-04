@@ -1,0 +1,36 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.Navigation" showHeader="false" standardStylesheets="false">
+
+	<c:Include_AngularJS />
+
+	<c:ncDataProvidersIncludes />
+	<c:ncUIIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation_bundle)}"/>
+	
+	<div id="ncSecondaryNavigation">
+		<nc-secondary-navigation
+			context-id="{!contextObjectId}"
+			current-page="{!host}/apex/{!$CurrentPage.Name}"
+			app-resolved="{!appResolved}"
+			session-id="{!$CurrentPage.parameters.sid}">
+		</nc-secondary-navigation>
+
+		<script>
+			(function() {
+				'use strict';
+				angular.module('ncSecondaryNavigation')
+					.config(['secondaryNavigationRemotingProvider', 'configProvider',
+						function (secondaryNavigationRemotingProvider, configProvider) {
+							secondaryNavigationRemotingProvider.setEndpoint({
+								getMenu: '{!$RemoteAction.Navigation.getMenu}'
+							});
+
+							configProvider.set({
+								disableNavigationTextTransform: {!disableNavigationTextTransform}
+							});
+						}
+					]);
+			})();
+		</script>
+	</div>
+</apex:page>

@@ -1,0 +1,20 @@
+<apex:page standardController="Account"
+	extensions="LLC_BI.TotalExposureController"
+	sidebar="false">
+	<nFORCE:Include_Design_System flavor="bs3"/>
+
+	<div class="force slds">
+		<c:ncTotalExposure providers="{!providers}"
+			summarySectionId="{!summarySectionId}"
+			addDebtModalSectionId="{!addDebtModalSectionId}"
+			excludeDebtModalEnableSectionId="{!excludeDebtModalEnableSectionId}"
+			excludeDebtModalDisableSectionId="{!excludeDebtModalDisableSectionId}"
+			expandLoanSectionId="{!expandLoanRelationshipSectionId}"
+			expandDebtSectionId="{!expandDebtRelationshipSectionId}"
+			isHouseholdMember="{!isHouseholdMember}"
+			accountId="{!account.Id}"
+			accountName="{!account.Name}"
+			isRecalculateEnabled="{!isRecalculateEnabled}"
+			ns="{!namespace}" />
+	</div>
+</apex:page>

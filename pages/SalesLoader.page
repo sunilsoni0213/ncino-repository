@@ -1,0 +1,17 @@
+<apex:page controller="salesDataLoader">
+    
+    <h2 style="margin-left: 5px;">Document Manager or Loan Stage History Status</h2>
+    <br />
+        <div style="margin-left: 5px; margin-top: 5px; padding: 10px; border: 1px solid #C4C4C4; background-color: #e2e2e2; width: 400px;">
+        	<apex:outputText value="{!historyStatus}" id="historyUpdate" rendered="true"></apex:outputText>
+            <apex:outputText value="{!docStatus}" id="docUpdate" rendered="true"></apex:outputText>
+        </div>
+    <br />
+    <apex:form >
+        <apex:commandButton action="{!initDocMan}" value="Run Document Manager Loader" rerender="docUpdate"/>
+        <br />
+        <br />
+        <apex:commandButton action="{!initAllHistory}" value="Run Loan Stage History Loader" rerender="historyUpdate" />
+    </apex:form>
+    
+</apex:page>

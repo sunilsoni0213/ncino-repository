@@ -1,0 +1,65 @@
+<apex:page showHeader="false" sidebar="false"
+   	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.DepositMaintenanceLandingController"
+	action="{!createSession}">
+
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDepositMaintenanceLanding, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDepositMaintenanceLanding, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDepositMaintenanceLanding, 'controllers/AppController.js')}" />
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}" />
+
+
+	<div id="ncDepositMaintenanceLanding" ng-controller="AppController" class="ng-cloak">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div class="container-fluid">
+
+							<div ng-if="!{!canPerformMaintenance}">
+								<div class="slds-box slds-theme--error" >
+									{!errorMessage}
+								</div>
+								<message></message>
+								<a href="/{!depositId}" class="slds-button slds-button--brand">{!$Label.Back_to_Product}</a>
+							</div>
+
+							<div class="row" ng-if="{!canPerformMaintenance}">
+								<div class="col-xs-12">
+									<p>{!$Label.Deposit_Maintenance_Landing_Copy}</p>
+									<form class="form-vertical">
+										<div class="form-group">
+											<p>
+												<a href="{!productDetailsHref}" class="slds-button slds-button--neutral">{!$Label.Update_Product}</a>
+											</p>
+											<p ng-show="'{!superCategory}' == 'CD' && {!showRenewCD}">
+												<a href="" class="slds-button slds-button--neutral" ng-click="renewCD()">{!$Label.Renew_CD}</a>
+											</p>
+											<p>
+												<a href="{!structureAndRolesHref}" class="slds-button slds-button--neutral">{!$Label.Update_Roles}</a>
+											</p>
+											<p>
+												<a href="{!ancillaryServicesHref}" class="slds-button slds-button--neutral">{!$Label.Update_Ancillary_Services}</a>
+											</p>
+											<p>
+												<a href="{!beneficiaryHref}" class="slds-button slds-button--neutral">{!$Label.Update_Beneficiaries}</a>
+											</p>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<c:DepositMaintenanceLandingConfiguration />
+
+</apex:page>

@@ -1,0 +1,178 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds" ng-app="onlineAppApp" ng-cloak="true">
+			<div ng-controller="OwnersController as oc">
+				<route>
+					<form name="oc.onlineFormForm" novalidate="true">
+						<div class="portal-form-section slds-m-vertical--medium"
+							n-style="pso-section-inner">
+							<div class="slds-grid slds-wrap"
+								ng-repeat="owner in oc.owners">
+								<div class="slds-grow-none slds-size--1-of-1 slds-m-top--medium"
+									ng-class="{'slds-col--padded': owner.existing,
+									'slds-col': !owner.existing}">
+									<strong ng-class="{'slds-p-left--small': !owner.existing}">
+										{!$Label.Co_Owner} {{$index + 1}}
+									</strong>
+									<div ng-if="owner.existing" class="portal-owner-card">
+										<div class="slds-card slds-m-top--xx-small">
+											<div class="slds-card__body slds-p-horizontal--medium slds-p-vertical--medium"
+												n-style="pso-search-result-body">
+												<div class="slds-media slds-col slds-size--1-of-1">
+													<div class="slds-media__figure" resizer="true"
+														ng-class="{'slds-p-left--small slds-p-right--small': isSmallOrBigger}">
+													<span class="slds-icon_container slds-icon_container--circle"
+														n-style="pso-section-icon" resizer="true"
+														ng-class="{'portal-avatar-icon': isSmallOrBigger,
+															'portal-avatar-icon-small': !(isSmallOrBigger)}">
+														<svg aria-hidden="true" class="slds-icon slds-icon--large">
+															<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+																'/assets/icons/standard-sprite/svg/symbols.svg#avatar')}"></use>
+														</svg>
+													</span>
+													</div>
+													<div class="slds-media__body portal-break-word">
+														<strong ng-bind="oc.getFullName(owner)"
+															n-style="pso-avatar-detail-item">
+														</strong>
+														<p class="slds-text-body--small">
+															<span ng-bind="oc.getAddress(owner)"></span><br/>
+															<span ng-bind="owner.mobile"></span><br/>
+															<span ng-bind="owner.email"></span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<button class="slds-button slds-button--neutral slds-size--1-of-1"
+											n-style="pso-button-secondary"
+											ng-click="oc.showRemoveOwnerDialog($index)">
+											{!$Label.Remove_Owner_Button}
+										</button>
+									</div>
+									<div class="slds-grid slds-wrap"
+										ng-if="!owner.existing">
+										<div class="slds-m-top--medium slds-form-element
+											slds-grow-none slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2"
+											 ng-class="{'slds-has-error' : onlineFormForm.firstName{{$index}}.$invalid && oc.onlineFormSubmitted == true}">
+											<label class="slds-form-element__label" n-style="pso-form-label">
+												{!$Label.First_Name}
+											</label>
+											<div class="slds-form-element__control">
+												<input class="slds-input" n-style="pso-placeholder pso-input"
+													type="text" name="firstName{{$index}}" ng-model="owner.firstName" ng-required="true" />
+											</div>
+										</div>
+										<div class="slds-m-top--medium slds-form-element
+											slds-grow-none slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2"
+											 ng-class="{'slds-has-error' : onlineFormForm.lastName{{$index}}.$invalid && oc.onlineFormSubmitted == true}">
+											<label class="slds-form-element__label" n-style="pso-form-label">
+												{!$Label.Last_Name}
+											</label>
+											<div class="slds-form-element__control">
+												<input class="slds-input" n-style="pso-placeholder pso-input"
+													type="text" name="lastName{{$index}}" ng-model="owner.lastName" ng-required="true" />
+											</div>
+										</div>
+										<div class="slds-m-top--medium slds-form-element
+											slds-grow-none slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2"
+											 ng-class="{'slds-has-error' : onlineFormForm.email{{$index}}.$invalid && oc.onlineFormSubmitted == true}">
+											<label class="slds-form-element__label" n-style="pso-form-label">
+												{!$Label.Email}
+											</label>
+											<div class="slds-form-element__control">
+												<input class="slds-input" n-style="pso-placeholder pso-input"
+													type="text" name="email{{$index}}" ng-model="owner.email" ng-required="true" />
+											</div>
+										</div>
+										<div class="slds-m-top--medium slds-form-element
+											slds-grow-none slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2"
+											 ng-class="{'slds-has-error' : onlineFormForm.mobile{{$index}}.$invalid && oc.onlineFormSubmitted == true}">
+											<label class="slds-form-element__label" n-style="pso-form-label">
+												{!$Label.Owners_Mobile}
+											</label>
+											<div class="slds-form-element__control">
+												<input class="slds-input" n-style="pso-placeholder pso-input"
+													type="text" name="mobile{{$index}}" ng-model="owner.mobile" ng-required="true" />
+											</div>
+										</div>
+										<div class="slds-m-top--medium slds-form-element
+											slds-grow-none slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2"
+											ng-if="oc.connectionRoles.length > 0"
+											ng-class="{'slds-has-error' : onlineFormForm.connectionRole{{$index}}.$invalid && oc.onlineFormSubmitted == true}">
+											<label class="slds-form-element__label" n-style="pso-form-label">
+												{!$Label.Owners_Connection_Role}
+											</label>
+											<div class="slds-form-element__control">
+												<div class="slds-select_container">
+													<select class="slds-select"
+														name="connectionRole{{$index}}" ng-model="owner.connectionRole"
+														ng-required="true" n-style="pso-select"
+														ng-options="role.value as role.label for role in ::oc.connectionRoles">
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="slds-m-top--small slds-form-element slds-col--padded
+											slds-grow-none slds-size--1-of-1">
+											<button class="slds-button" ng-click="oc.showRemoveOwnerDialog($index)"
+												n-style="pso-action-link">
+												{!$Label.Remove_Owner_Button}
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slds-grid slds-wrap">
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+								<button class="slds-button slds-button--neutral slds-size--1-of-1"
+									ng-click="oc.addOwner()" n-style="pso-button-secondary">
+									<span ng-if="oc.owners.length == 0">
+										{!$Label.Add_Owner_Button}
+									</span>
+									<span ng-if="oc.owners.length > 0">
+										{!$Label.Add_Another_Owner_Button}
+									</span>
+								</button>
+							</div>
+							<div class="slds-size--1-of-1">
+								<terms-and-agreements form-name="oc.onlineFormForm" form-submitted="onlineFormForm.onlineFormSubmitted"></terms-and-agreements>
+							</div>
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+								<button class="slds-button slds-button--brand slds-size--1-of-1"
+									ng-disabled="oc.onlineFormForm.$invalid"
+									ng-click="oc.saveOwners()"
+									n-style="pso-button-primary">
+									{!$Label.Next_Button}
+								</button>
+							</div>
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-top--small">
+								<button class="slds-button slds-size--1-of-1"
+									n-style="pso-action-link"
+									ng-click="oc.saveAndExit()">
+									{!$Label.Save_Button}
+								</button>
+							</div>
+						</div>
+						<portal-dialog conf="oc.removeDialog" confirm="oc.removeDialog.confirm()"
+							cancel="oc.removeDialog.cancel()">
+						</portal-dialog>
+					</form>
+				</route>
+			</div>
+		</body>
+	</html>
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page showHeader="false" sidebar="false" controller="nFORCE.TemplateController">
+	<c:Collateral2ProdPkgConfiguration />
+	<div id="ncCollateral2" class="slds">
+		<nFORCE:ncDataTablePartials />
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<c:ncCollateral2Partials />
+		<c:ncEditCollateralModalPartials />
+		<c:ncAssociationCardPartial />
+		<collateral />
+	</div>
+</apex:page>

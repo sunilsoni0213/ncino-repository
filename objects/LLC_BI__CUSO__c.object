@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>CUSO IDP</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__IdP_Initiated_Login_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>IDP URL of child cuso</description>
+        <externalId>false</externalId>
+        <label>IdP-Initiated Login URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>CUSO</label>
+    <visibility>Public</visibility>
+</CustomObject>

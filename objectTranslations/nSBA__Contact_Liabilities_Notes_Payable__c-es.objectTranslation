@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Contact Liabilities Notes Payable --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Contact Liabilities Notes Payable --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Contact Liabilities Notes Payable Name --></nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,36 @@
+<apex:page docType="html-5.0" standardController="LLC_BI__Loan__c">
+	<div id="detail" style="display:none;">
+		<apex:detail subject="{!LLC_BI__Loan__c.Id}"
+					 inlineEdit="false"
+					 relatedList="true"
+					 title="false" />
+	</div>
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<script type="text/javascript">
+		(function(window) {
+			jQuery.noConflict();
+
+			if(window.location != window.top.location) {
+				window.top.location = window.location.href.replace("&inline=1", "");
+			}
+
+			else {
+				jQuery(document).ready(function(){
+					jQuery(".bDetailBlock .pbTitle").hide();
+					jQuery("#topButtonRow").css("text-align", "center");
+					jQuery("#bottomButtonRow").css("text-align", "center");
+					jQuery("#detail").show();
+				});
+			}
+		})(this);
+	</script>
+	<script type="text/javascript">
+        if (location.href.match(/inline=1/)) {
+            // remove this breaking parameter on load
+            window.top.location=location.href.replace(/inline=1/, '');
+        }
+	</script>
+</apex:page>

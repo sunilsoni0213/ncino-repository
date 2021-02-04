@@ -1,0 +1,286 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="DocumentChecklistController" showHeader="false" standardStylesheets="false">
+	<!-- Style Sheets in this Section -->
+		<apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/bootstrap3/css/bootstrap.min.css')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.DataTables, '/media/css/jquery.dataTables.css')}" />
+	<!-- END Style Sheets Section -->
+	<!-- Custom Style -->
+	<style type="text/css">
+	    .thebox{
+	        margin: 15px;
+	        width:auto;
+	        height:400px;
+	        background-color:#F0F0F0;
+	        border-radius:15px;
+	        }
+	        
+	    .left-side{
+	        float:left;
+	        width:16.66666667%;
+	        background-color:#FFF;
+	        height:400px;
+	        }
+	        
+	    .right-side{
+	        float:left;
+	        width:83.33333333%;
+	        height:400px;
+	        }
+	    
+	    .border-green{border-left-color:#88C240;border-left-width:5px;}
+	    .border-blue{border-left-color: #2D79D7;border-left-width:5px;}
+	    .border-red{border-left-color: #BA202F;border-left-width:5px;}
+	    .border-yellow{border-left-color: #F5AB3F;border-left-width:5px;}
+	    .border-gray{border-left-color: #666;border-left-width:5px;}
+	    .border-black{border-left-color: #000000;border-left-width:5px;}
+
+	    .txt-yellow{color:#F5AB3F;}
+	    .txt-green{color:#88C240;}
+	    .txt-red{color: #BA202F;}
+	    .txt-blue{color: #2D79D7;}
+	    .txt-grey{color: #666;}
+	    .txt-black{color: #000000;}
+	    
+	    .center{text-align:center;margin-top:100px;}
+
+	    .shift-right-tiny{padding-left: 5px; }
+	    
+	</style>
+	<!-- END Custom Style -->
+
+
+	<div class="thebox">
+    <div class="left-side">
+        <div class="list-group" role="tablist" id="myTab">
+            <a href="#tab1" class="list-group-item border-green" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-lock txt-green"></i>&nbsp;&nbsp;Approved <span class="badge">{!TotalApproved}</span></a>
+            <a href="#tab2" class="list-group-item border-blue" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-ok txt-blue"></i>&nbsp;&nbsp;Reviewed <span class="badge">{!TotalReviewed}</span></a>
+            <a href="#tab3" class="list-group-item border-black" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-file txt-black"></i>&nbsp;&nbsp;In-File <span class="badge">{!TotalInFile}</span></a>
+            <a href="#tab4" class="list-group-item border-gray" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-folder-open txt-grey"></i>&nbsp;&nbsp;Open <span class="badge">{!TotalOpen}</span></a>
+            <a href="#tab5" class="list-group-item border-yellow" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-warning-sign txt-yellow"></i>&nbsp;&nbsp;Waived <span class="badge">{!TotalWaived}</span></a>
+            <a href="#tab6" class="list-group-item border-red" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-remove txt-red"></i>&nbsp;&nbsp;Exception <span class="badge">{!TotalException}</span></a>
+            <a href="#chart" class="list-group-item border-black" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-stats txt-black"></i>&nbsp;&nbsp;Chart</a>
+        </div>
+    </div>
+
+    <div class="right-side tab-content" id="myTabcontent">
+    	<div class="tab-pane active" id="chart">
+			<div class="row">
+				<div class="col-sm-11">
+					<canvas id="canvas" height="300" width="900"></canvas>
+				</div>
+			</div>
+    	</div>
+        <div class="tab-pane" id="tab1">
+            <h4 class="shift-right-tiny txt-green"><u>Approved Documents:</u></h4>
+            <div class="row">
+            	<div class="col-xs-12">
+            		<table class="table table-hoover thelook">
+			        	<thead>
+			        		<th></th>
+			        		<th>Document Names</th>
+			        	</thead>
+			        	<tbody>
+			        		<apex:repeat value="{!ApprovedList}" var="al">
+			        			<tr>
+			        				<td width="30px"><input type="checkbox" checked="checked" disabled="disabled" /></td>
+			        				<td>{!al.Name}</td>
+			        			</tr>
+			        		</apex:repeat>
+			        	</tbody>
+			        </table>
+            	</div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab2">
+            <h4 class="shift-right-tiny txt-blue"><u>Reviewed Documents:</u></h4>
+            <div class="row">
+            	<div class="col-xs-12">
+		            <table class="table table-hoover thelook">
+		            	<thead>
+		            		<th></th>
+		            		<th>Document Names</th>
+		            	</thead>
+		            	<tbody>
+		            		<apex:repeat value="{!ReviewedList}" var="al">
+		            			<tr>
+		            				<td width="30px"><input type="checkbox" checked="checked" disabled="disabled" /></td>
+		            				<td>{!al.Name}</td>
+		            			</tr>
+		            		</apex:repeat>
+		            	</tbody>
+		            </table>
+		        </div>
+			</div>
+        </div>
+        <div class="tab-pane" id="tab3">
+            <h4 class="shift-right-tiny txt-black"><u>In-File Documents:</u></h4>
+            <div class="row">
+            	<div class="col-xs-12">
+		            <table class="table table-hoover thelook">
+		            	<thead>
+		            		<th></th>
+		            		<th>Document Names</th>
+		            	</thead>
+		            	<tbody>
+		            		<apex:repeat value="{!InFileList}" var="al">
+		            			<tr>
+		            				<td width="30px"><input type="checkbox" checked="checked" disabled="disabled" /></td>
+		            				<td>{!al.Name}</td>
+		            			</tr>
+		            		</apex:repeat>
+		            	</tbody>
+		            </table>
+            	</div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab4">
+            <h4 class="shift-right-tiny txt-grey"><u>Open Documents:</u></h4>
+            <div class="row">
+            	<div class="col-xs-12">
+		            <table class="table table-hoover thelook">
+		            	<thead>
+		            		<th width="30px"></th>
+		            		<th>Document Names</th>
+		            	</thead>
+		            	<tbody style="height:350px;">
+		            		<apex:repeat value="{!OpenList}" var="al">
+		            			<tr>
+		            				<td width="30px"><input type="checkbox" checked="checked" disabled="disabled" /></td>
+		            				<td>{!al.Name}</td>
+		            			</tr>
+		            		</apex:repeat>
+		            	</tbody>
+		            </table>
+		    	</div>
+		   	</div>
+        </div>
+        <div class="tab-pane" id="tab5">
+            <h4 class="shift-right-tiny txt-yellow"><u>Waived Documents:</u></h4>
+            <div class="row">
+            	<div class="col-xs-12">
+		            <table class="table table-hoover thelook">
+		            	<thead>
+		            		<th></th>
+		            		<th>Document Names</th>
+		            	</thead>
+		            	<tbody>
+		            		<apex:repeat value="{!WaivedList}" var="al">
+		            			<tr>
+		            				<td width="30px"><input type="checkbox" checked="checked" disabled="disabled" /></td>
+		            				<td>{!al.Name}</td>
+		            			</tr>
+		            		</apex:repeat>
+		            	</tbody>
+		            </table>
+            	</div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab6">
+            <h4 class="shift-right-tiny txt-red"><u>Exception Documents:</u></h4>
+            <div class="row">
+            	<div class="col-xs-12">
+		            <table class="table table-hoover thelook">
+		            	<thead>
+		            		<th></th>
+		            		<th>Document Names</th>
+		            	</thead>
+		            	<tbody>
+		            		<apex:repeat value="{!ExceptionList}" var="al">
+		            			<tr>
+		            				<td width="30px"><input type="checkbox" checked="checked" disabled="disabled" /></td>
+		            				<td>{!al.Name}</td>
+		            			</tr>
+		            		</apex:repeat>
+		            	</tbody>
+		            </table>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+	<!-- Javascript Section -->
+		<apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/jquery/js/jquery.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/bootstrap3/js/bootstrap.min.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.Charts_master, '/Chart.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.DataTables, '/media/js/jquery.dataTables.js')}"/>
+	<!-- END Javascript Section -->
+	<!-- Custom Script -->
+		<script>
+			$(document).ready(function() {
+			    $('table.thelook').dataTable( {
+			        "scrollY":        "230px",
+			        "paging":         false,
+			        "order": [[ 1, "asc" ]]
+			    });
+			});
+		</script>
+		<script>
+		$('#myTab a').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		});
+		</script>
+		<script>
+			var barChartData = {
+				labels : ["Borrower Details", "Entity Docs", "Insurance", "Other", "Real Estate", "Underwriting", "Coporate", "Financials", "Leases", "Purchase Contracts", "UCC", "Unused"],
+				datasets : [
+					{
+						//Approved Section
+						fillColor : "rgba(136,194,64,0.5)",
+						strokeColor : "rgba(136,194,64,0.8)",
+						highlightFill: "rgba(136,194,64,0.75)",
+						highlightStroke: "rgba(136,194,64,1)",
+						data : [{!NumberApproved}]
+					},
+					{
+						//Reviewed
+						fillColor : "rgba(45,121,215,0.5)",
+						strokeColor : "rgba(45,121,215,0.8)",
+						highlightFill : "rgba(45,121,215,0.75)",
+						highlightStroke : "rgba(45,121,215,1)",
+						data : [{!NumberReviewed}]
+					},
+					{
+						//In-File
+						fillColor : "rgba(0,0,0,0.5)",
+						strokeColor : "rgba(0,0,0,0.8)",
+						highlightFill: "rgba(0,0,0,0.75)",
+						highlightStroke: "rgba(0,0,0,1)",
+						data : [{!NumberInFile}]
+					},
+					{
+						//Open
+						fillColor : "rgba(102,102,102,0.5)",
+						strokeColor : "rgba(102,102,102,0.8)",
+						highlightFill: "rgba(102,102,102,0.75)",
+						highlightStroke: "rgba(102,102,102,1)",
+						data : [{!NumberOpen}]
+					},
+					{
+						//Wavied
+						fillColor : "rgba(245,171,63,0.5)",
+						strokeColor : "rgba(245,171,63,0.8)",
+						highlightFill: "rgba(245,171,63,0.75)",
+						highlightStroke: "rgba(245,171,63,1)",
+						data : [{!NumberWavied}]
+					},
+					{
+						//Exception
+						fillColor : "rgba(186,32,47,0.5)",
+						strokeColor : "rgba(186,32,47,0.8)",
+						highlightFill: "rgba(186,32,47,0.75)",
+						highlightStroke: "rgba(186,32,47,1)",
+						data : [{!NumberException}]
+					}
+				]
+
+			}
+			window.onload = function(){
+				var ctx = document.getElementById("canvas").getContext("2d");
+				window.myBar = new Chart(ctx).Bar(barChartData, {
+					responsive : true
+				});
+			}
+		</script>
+	<!-- END Custom Script -->
+</apex:page>

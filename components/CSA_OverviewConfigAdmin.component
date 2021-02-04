@@ -1,0 +1,235 @@
+<apex:component allowdml="true" controller="CSA_OverviewConfigAdminController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Overview_Resource, 'Javascript.js')}" />
+    
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <div class="force messages success" id="successMessage" />
+            <div class="force messages error" id="errorMessage" />
+            <apex:outputpanel layout="block" rendered="{!showHome}">
+                <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Overview_Add_new}" action="{!overviewNew}"
+                                    rerender="theform" status="loading" />
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Name.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Stage_Status_Product_Line_Name__c.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Category_Name__c.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Order__c.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Report_Id__c.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Report_Name__c.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Is_Active__c.Label}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$Label.Overview_Actions}" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!overviewList}" var="o">
+                                <tr>
+                                    <td>
+                                        <apex:outputfield value="{!o.Name}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputfield value="{!o.Stage_Status_Product_Line_Name__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputfield value="{!o.Category_Name__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputfield value="{!o.Order__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputfield value="{!o.Report_Id__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputfield value="{!o.Report_Name__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputfield value="{!o.Is_Active__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Overview_Activate}" 
+                                                            action="{!overviewActivate}" rerender="theform" status="loading" 
+                                                            rendered="{!!o.Is_Active__c}">
+                                            <apex:param name="overviewId" value="{!o.Id}" assignto="{!overviewId}" />
+                                        </apex:commandbutton>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Overview_Deactivate}" 
+                                                            action="{!overviewDeactivate}" rerender="theform" status="loading" 
+                                                            rendered="{!o.Is_Active__c}">
+                                            <apex:param name="overviewId" value="{!o.Id}" assignto="{!overviewId}" />
+                                        </apex:commandbutton>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Overview_Delete}" 
+                                                            action="{!overviewDelete}" rerender="theform" status="loading" 
+                                                            onclick="if(!confirm('{!$Label.Overview_Confirm_Msg}')){return false;}">
+                                            <apex:param name="overviewId" value="{!o.Id}" assignto="{!overviewId}" />
+                                        </apex:commandbutton>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Overview_Edit}" 
+                                                            action="{!overviewEdit}" rerender="theform" status="loading">
+                                            <apex:param name="overviewId" value="{!o.Id}" assignto="{!overviewId}" />
+                                        </apex:commandbutton>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </apex:outputpanel>
+
+            <apex:outputpanel layout="block" rendered="{!showNew || showEdit}">
+                <div class="form-horizontal col-md-6">
+                    <div class="form-group">
+                        <div class="col-sm-4 content-label">
+                            <div class="content-label">
+                                <label class="form-control-static input-sm">
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Name.Label}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 content-body">
+                            <apex:inputfield value="{!overview.Name}" styleclass="form-control input-sm"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-6">
+                    <div class="form-group">
+                        <div class="col-sm-4 content-label">
+                            <div class="content-label">
+                                <label class="form-control-static input-sm">
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Category_Name__c.Label}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 content-body">
+                            <apex:selectlist size="1" value="{!overview.Category_Name__c}" styleclass="form-control input-sm">
+                                <apex:selectoptions value="{!categoryPicklist}" />
+                                <apex:actionsupport event="onchange" rerender="sspChange, reportBlock" status="loading" />
+                            </apex:selectlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-6">
+                    <div class="form-group">
+                        <div class="col-sm-4 content-label">
+                            <div class="content-label">
+                                <label class="form-control-static input-sm">
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Stage_Status_Product_Line_Name__c.Label}" />
+                                </label>
+                            </div>
+                        </div>
+                        <apex:outputpanel layout="block" styleclass="col-sm-6 content-body" id="sspChange">
+                            <apex:selectlist size="1" value="{!overview.Stage_Status_Product_Line_Name__c}" styleclass="form-control input-sm" 
+                                             rendered="{!overview.Category_Name__c == 'Usable_Stage'}">
+                                <apex:selectoptions value="{!stagePicklist}" />
+                            </apex:selectlist>
+                            <apex:selectlist size="1" value="{!overview.Stage_Status_Product_Line_Name__c}" styleclass="form-control input-sm" 
+                                             rendered="{!overview.Category_Name__c == 'Usable_Status'}">
+                                <apex:selectoptions value="{!statuspicklist}" />
+                            </apex:selectlist>
+                            <apex:selectlist size="1" value="{!overview.Stage_Status_Product_Line_Name__c}" styleclass="form-control input-sm" 
+                                             rendered="{!overview.Category_Name__c == 'Usable_Product_Line'}">
+                                <apex:selectoptions value="{!productlinepicklist}" />
+                            </apex:selectlist>
+                            <apex:inputfield value="{!overview.Stage_Status_Product_Line_Name__c}" styleclass="form-control input-sm" 
+                                             rendered="{!overview.Category_Name__c == ''}" />
+                        </apex:outputpanel>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-6">
+                    <div class="form-group">
+                        <div class="col-sm-4 content-label">
+                            <div class="content-label">
+                                <label class="form-control-static input-sm">
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Order__c.Label}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 content-body">
+                            <apex:inputfield value="{!overview.Order__c}" styleclass="form-control input-sm" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-6">
+                    <div class="form-group">
+                        <div class="col-sm-4 content-label">
+                            <div class="content-label">
+                                <label class="form-control-static input-sm">
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Report_Name__c.Label}" />
+                                </label>
+                            </div>
+                        </div>
+                        <apex:outputpanel layout="block" styleclass="col-sm-6 content-body" id="reportBlock">
+                            <apex:selectlist size="1" value="{!overview.Report_Id__c}" styleclass="form-control input-sm" 
+                                             disabled="{!overview.Category_Name__c != 'Usable_Stage'}">
+                                <apex:selectoptions value="{!reportsPicklist}" />
+                            </apex:selectlist>
+                        </apex:outputpanel>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-6">
+                    <div class="form-group">
+                        <div class="col-sm-4 content-label">
+                            <div class="content-label">
+                                <label class="form-control-static input-sm">
+                                    <apex:outputtext value="{!$ObjectType.Overview_Properties__c.fields.Is_Active__c.Label}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 content-body">
+                            <apex:inputfield value="{!overview.Is_Active__c}" styleclass="input-sm checkbox-inline" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Overview_Save}" action="{!overviewSaveNew}"
+                                            rerender="theform" status="loading" rendered="{!showNew}">
+                            <apex:param name="isSaveNew" value="false" assignto="{!isSaveNew}" />
+                        </apex:commandbutton>
+                        <apex:commandbutton styleclass="btn btn-secondary" value="{!$Label.Overview_Save_New}" action="{!overviewSaveNew}"
+                                            rerender="theform" status="loading" rendered="{!showNew}">
+                            <apex:param name="isSaveNew" value="true" assignto="{!isSaveNew}" />
+                        </apex:commandbutton>
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Overview_Save}" action="{!overviewSaveEdit}"
+                                            rerender="theform" status="loading" rendered="{!showEdit}"/>
+                        <apex:commandbutton styleclass="btn btn-link" value="{!$Label.Overview_Back}" action="{!back}"
+                                            rerender="theform" status="loading"/>
+                    </div>
+                </div>
+            </apex:outputpanel>
+
+            <script type="text/javascript">
+                jQuery(function() {
+                    if('{!successMessage}' != '') {
+                        jQuery('#successMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-success">{!successMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-success").remove();
+			            },5000);
+                    }
+
+                    if('{!errorMessage}' != '') {
+                        jQuery('#errorMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-danger">{!errorMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-danger").remove();
+			            },10000);
+                    }
+                });
+            </script>
+        </apex:form>
+    </div>
+</apex:component>

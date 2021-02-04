@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Share_Institution_Records_With_Customer_Portal_2_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Institution Records With Customer Portal 2 Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal_2</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>LLC_BI__Community_Name__c</field>
+            <operation>equals</operation>
+            <value>Customer Portal 2</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Institution_Records_With_Customer_Portal_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Institution Records With Customer Portal Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>LLC_BI__Community_Name__c</field>
+            <operation>equals</operation>
+            <value>Customer Portal</value>
+        </criteriaItems>
+    </sharingGuestRules>
+</SharingRules>

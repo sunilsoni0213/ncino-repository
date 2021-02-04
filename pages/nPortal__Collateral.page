@@ -1,0 +1,329 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds" ng-app="onlineAppApp">
+			<route>
+				<div ng-controller="CollateralController as ctc">
+					<form name="onlineFormForm" novalidate="true">
+						<div class="portal-form-section slds-m-vertical--medium"
+							n-style="pso-section-inner"
+							ng-if="ctc.isSuggestedCollateralEnabled != null && ctc.canPledgeMultipleCollateral != null">
+							<div ng-if="!ctc.displayForm && (ctc.isSuggestedCollateralEnabled || ctc.canPledgeMultipleCollateral)">
+								<div class="slds-container--center slds-container--small portal-center-text"
+									ng-if="!ctc.pledgedCollateral || ctc.pledgedCollateral.length == 0">
+									<p class="slds-form-element__label portal-empty-state-text"
+										n-style="pso-empty-state-text" ng-show="ctc.isCollateralRequired">
+										{!$Label.Collateral_Empty_State}
+									</p>
+									<p class="slds-form-element__label portal-empty-state-text"
+										n-style="pso-empty-state-text" ng-show="!ctc.isCollateralRequired">
+										{!$Label.Collateral_Empty_State_Not_Required}
+									</p>
+								</div>
+								<div class="slds-m-top--medium slds-p-left--medium slds-p-right--medium"
+									ng-show="ctc.pledgedCollateral && ctc.pledgedCollateral.length > 0">
+									<h2 class="slds-text-heading--label slds-m-bottom--small"
+										n-style="pso-subsection-header">
+										{!$Label.Collateral_Pledged_Header}
+									</h2>
+									<div class="slds-grid slds-wrap slds-size--1-of-1"
+										ng-show="ctc.pledgedCollateral && ctc.pledgedCollateral.length > 0">
+										<div class="slds-grid slds-wrap portal-detail-row slds-size--1-of-1 slds-grid--vertical-align-center
+											slds-p-top--medium slds-m-bottom--medium portal-white-bg"
+											ng-class="{'slds-align--absolute-center': !isMediumOrBigger,
+												'slds-p-horizontal--medium': isLarge}"
+											n-style="pso-pledged-card"
+											ng-repeat="pledged in ctc.pledgedCollateral">
+											<div class="slds-size--1-of-1 slds-medium-size--4-of-12 slds-large-size--3-of-12
+												slds-align--absolute-center slds-m-bottom--medium">
+												<img class="portal-collateral-type-image"
+													ng-src="{{pledged.collateralType.image == null ? '{!URLFOR($Resource.Global_Resources,"images/collateral_default_image.png")}'
+														: pledged.collateralType.image}}"
+													alt="{{pledged.collateralType.name}}">
+												</img>
+												<div class="slds-text-title slds-m-top--x-small portal-center-text"
+													ng-bind="::pledged.collateralType.name">
+												</div>
+											</div>
+											<div class="slds-size--1-of-1 slds-medium-size--8-of-12 slds-large-size--7-of-12
+												slds-p-horizontal--medium slds-m-bottom--small portal-center-column"
+												ng-class="{'slds-m-top--small' : !isMediumOrBigger}">
+												<div ng-class="(pledged.collateralType.displayFieldSetName && pledged.displayFields == null)
+													|| (!pledged.collateralType.displayFieldSetName) ? 'slds-show' : 'animated fadeOut slds-hide'">
+													<div class="portal-stencil-fill-thin portal-stencil-wide"></div>
+													<div class="portal-stencil-fill-thin portal-stencil-medium slds-m-top--small"></div>
+													<div class="portal-stencil-fill-thin portal-stencil-wide slds-m-top--small"></div>
+												</div>
+												<div ng-class="(pledged.displayFields && pledged.displayFields.length > 0) ? 'animated fadeIn slds-show' : 'animated fadeOut slds-hide'">
+													<div class="slds-grid slds-wrap slds-grid--pull-padded"
+														ng-init="fields = ctc.getFormattedDisplayFields(pledged.displayFields)">
+														<div class="slds-form-element slds-col--padded slds-grow-none
+															slds-size--1-of-1 slds-small-size--1-of-2 portal-break-word"
+															ng-repeat="fld in ::fields"
+															ng-if="fld.type !== '{!$Label.Field_Type_Id}' && !fld.isHidden">
+															<span class="slds-form-element__label portal-full-width
+																slds-truncate"
+																n-style="pso-form-label"
+																ng-bind="::fld.label"
+																title="{{::fld.label}}">
+															</span>
+															<div class="slds-form-element__control">
+																<div class="slds-form-element__static portal-full-width
+																	slds-truncate"
+																	n-style="pso-review-value">
+																	<output-field field="fld"></output-field>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="slds-size--1-of-1 slds-medium-size--3-of-12 slds-large-size--2-of-12"
+												ng-class="{'slds-m-top--small': !isLarge}">
+												<button class="slds-button slds-button--neutral card-bottom-button slds-float--right"
+													resizer="true"
+													ng-class="{'slds-size--1-of-1 card-bottom-button-small': (!isLarge),
+														'portal-collateral-card-button slds-m-bottom--x-small': (isLarge)}"
+													n-style="pso-button-secondary"
+													ng-disabled="pledged.isSuggested"
+													ng-click="ctc.editCollateral($index)">
+													{!$Label.Collateral_Edit_Pledged}
+												</button>
+												<button class="slds-button slds-button--neutral card-bottom-button slds-float--right"
+													resizer="true"
+													ng-class="{'slds-size--1-of-1 card-bottom-button-small': (!isLarge),
+														'portal-collateral-card-button slds-m-bottom--medium': (isLarge)}"
+													n-style="pso-button-secondary"
+													ng-click="ctc.showRemovePledgedDialog($index)">
+													{!$Label.Collateral_Remove_Pledged}
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slds-container--center slds-container--small portal-center-text">
+									<button class="slds-button slds-button--neutral slds-m-top--medium slds-m-bottom--medium"
+										n-style="pso-button-secondary"
+										ng-disabled="!ctc.canPledgeMultipleCollateral && ctc.pledgedCollateral && ctc.pledgedCollateral.length > 0"
+										ng-click="ctc.showForm()">
+										{!$Label.Collateral_Add_New}
+									</button>
+								</div>
+							</div>
+							<div ng-if="ctc.displayForm || !(ctc.isSuggestedCollateralEnabled || ctc.canPledgeMultipleCollateral)">
+								<div class="slds-grid slds-wrap">
+									<div class="slds-form-element slds-grow-none slds-col--padded slds-size--1-of-1">
+										<div ng-if="ctc.collateralTypes && ctc.collateralTypes.length > 1">
+											<div class="slds-form-element__label" n-style="pso-form-label" >
+												<apex:outputText value="{!$Label.nportal__collateral_type}" escape="false" />
+											</div>
+											<div class="slds-form-element__control">
+												<div class="slds-select_container">
+													<select class="slds-select"
+														name="selected_collateral_type"
+														ng-model="ctc.selectedCollateralType"
+														ng-options="collateralType.name for collateralType in ctc.collateralTypes track by collateralType.name"
+														n-style="pso-select"
+														required="true"
+														ng-change="ctc.selectCollateralType()">
+													</select>
+												</div>
+											</div>
+										</div>
+										<div ng-if="ctc.selectedCollateralType != undefined && ctc.selectedCollateralType != null">
+											<div class="slds-grid slds-grid--align-center slds-p-horizontal--large slds-p-bottom--small"
+												ng-if="ctc.screen.sections == null">
+												<stencil
+													class="slds-size--1-of-1 slds-m-top--large"
+													has-mobile-stencil="true"
+													animation-path="{!URLFOR($Resource.Online_Application, 'animations/FormStencil.json')}">
+												</stencil>
+											</div>
+											<div class="portal-form-section"
+												n-style="pso-section-inner"
+												ng-repeat="section in ctc.screen.sections"
+												ng-if="!section.parentSectionId || section.meetsDisplayCriteria">
+												<h3 ng-if="::section.portalHeaderText"
+													class="slds-text-heading--small slds-m-top--large"
+													n-style="pso-smallheader" resizer="true"
+													ng-class="{'slds-m-left--small': !(isMediumOrBigger)}"
+													ng-bind="::section.portalHeaderText">
+												</h3>
+												<h3 ng-if="::section.portalSubheaderText" class="slds-form-element__label"
+													n-style="pso-form-label" resizer="true"
+													ng-class="{'slds-m-left--small': !(isMediumOrBigger)}"
+													ng-bind="::section.portalSubheaderText">
+												</h3>
+												<div class="slds-grid slds-wrap" ng-class="{'portal-read-only-section slds-m-top--small': !section.isEditable}"
+													n-style="{{(!section.isEditable) ? 'pso-read-only-section' : ''}}">
+													<input-field
+														ng-repeat="field in ::section.fieldSet.fields"
+														class="slds-size--1-of-1 slds-medium-size--1-of-{{::field.sldsColSize || 1}}
+															slds-large-size--1-of-{{::field.sldsColSize || 1}}"
+														screen="ctc.screen"
+														section="section"
+														field="field"
+														should-validate="ctc.onlineFormSubmitted"
+														form="onlineFormForm"
+														set-lookup-validity="vm.setLookupValidity()">
+													</input-field>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slds-m-top--medium slds-p-left--medium slds-p-right--medium"
+							ng-if="!ctc.displayForm && ctc.isSuggestedCollateralEnabled">
+							<h2 class="slds-text-heading--label slds-m-bottom--small"
+								ng-if="ctc.suggestedCollateral && ctc.suggestedCollateral.length > 0"
+								n-style="pso-subsection-header">
+								{!$Label.Suggested_Collateral_Header}
+							</h2>
+							<div ng-show="ctc.suggestedCollateral == undefined" class="slds-align--absolute-center">
+								<div class="portal-loader-icon-partial" n-style="pso-loader-icon-partial"
+									style="background-image: url({!URLFOR($Resource.nFORCE__SLDS0102,
+										'assets/images/spinners/slds_spinner.gif')})">
+								</div>
+							</div>
+							<div ng-if="ctc.isSuggestedCollateralEnabled && ctc.userHadSuggestedCollateral &&
+								ctc.suggestedCollateral && ctc.suggestedCollateral.length == 0">
+								<p>
+									<apex:outputText value="{!$Label.nportal__suggested_collateral_empty_state}" escape="false" />
+								</p>
+							</div>
+							<div class="slds-grid slds-wrap slds-size--1-of-1"
+								ng-class="{'animated fadeIn': (ctc.suggestedCollateral && ctc.suggestedCollateral.length > 0)}"
+								ng-if="ctc.suggestedCollateral && ctc.suggestedCollateral.length > 0">
+								<div class="slds-grid slds-wrap portal-detail-row slds-size--1-of-1 slds-grid--vertical-align-center
+									slds-p-top--small slds-m-bottom--small portal-white-bg"
+									ng-class="{'slds-align--absolute-center': !isMediumOrBigger,
+										'slds-p-horizontal--medium': isLarge}"
+									n-style="pso-detail-card"
+									ng-repeat="suggested in ctc.suggestedCollateral">
+									<div class="slds-size--1-of-1 slds-medium-size--4-of-12 slds-large-size--3-of-12
+										slds-align--absolute-center slds-m-bottom--medium">
+										<img class="portal-collateral-type-image"
+											ng-src="{{suggested.collateralType.image == null ? '{!URLFOR($Resource.Global_Resources,"images/collateral_default_image.png")}'
+												: suggested.collateralType.image}}"
+											alt="{{::suggested.collateralType.name}}">
+										</img>
+										<div class="slds-text-title slds-m-top--x-small portal-center-text"
+											ng-bind="::suggested.collateralType.name">
+										</div>
+									</div>
+									<div class="slds-size--1-of-1 slds-medium-size--8-of-12 slds-large-size--7-of-12
+										slds-p-horizontal--medium slds-m-bottom--small portal-center-column"
+										ng-class="{'slds-m-top--small' : !isMediumOrBigger}"
+										ng-init="ctc.loadSuggestedCollateralFields(suggested)">
+										<div ng-class="(suggested.collateralType.displayFieldSetName
+											&& suggested.displayFields == null) || (!suggested.collateralType.displayFieldSetName) ? 'slds-show' : 'animated fadeOut slds-hide'">
+											<div class="portal-stencil-fill-thin portal-stencil-wide"></div>
+											<div class="portal-stencil-fill-thin portal-stencil-medium slds-m-top--small"></div>
+											<div class="portal-stencil-fill-thin portal-stencil-wide slds-m-top--small"></div>
+										</div>
+										<div ng-class="(suggested.displayFields && suggested.displayFields.length > 0) ? 'animated fadeIn slds-show' : 'animated fadeOut slds-hide'">
+											<div class="slds-grid slds-wrap slds-grid--pull-padded"
+												ng-if="suggested.displayFields.length > 0"
+												ng-init="fields = ctc.getFormattedDisplayFields(suggested.displayFields)">
+												<div class="slds-form-element slds-col--padded slds-grow-none
+													slds-size--1-of-1 slds-small-size--1-of-2 portal-break-word"
+													ng-repeat="fld in ::fields"
+													ng-if="fld.type !== '{!$Label.Field_Type_Id}'">
+													<span class="slds-form-element__label portal-full-width
+														slds-truncate"
+														n-style="pso-form-label"
+														ng-bind="::fld.label"
+														title="{{::fld.label}}">
+													</span>
+													<div class="slds-form-element__control">
+														<div class="slds-form-element__static portal-full-width
+															slds-truncate"
+															n-style="pso-review-value">
+															<output-field field="fld"></output-field>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slds-size--1-of-1 slds-medium-size--3-of-12 slds-large-size--2-of-12"
+										ng-class="{'slds-m-top--small': !isLarge}">
+										<button
+											class="slds-button slds-button--neutral card-bottom-button slds-float--right"
+											resizer="true"
+											ng-disabled="!ctc.canPledgeMultipleCollateral && ctc.pledgedCollateral && ctc.pledgedCollateral.length > 0"
+											ng-class="{'slds-size--1-of-1 card-bottom-button-small': (!isLarge),
+												'portal-collateral-card-button slds-m-bottom--x-small': (isLarge)}"
+											n-style="pso-button-secondary"
+											ng-click="ctc.addSuggestedCollateralToPledged($index)">
+											{!$Label.Suggested_Collateral_Button_Pledge}
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slds-grid slds-wrap">
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium slds-m-bottom--small">
+								<button class="slds-button slds-button--brand slds-size--1-of-1"
+									ng-if="ctc.displayForm || !(ctc.isSuggestedCollateralEnabled || ctc.canPledgeMultipleCollateral)"
+									ng-disabled="(!onlineFormForm.$valid) || ctc.isSaveCollateralInProgress"
+									ng-click="ctc.saveCollateral(true)"
+									n-style="pso-button-primary">
+									{!$Label.Next_Button}
+								</button>
+								<button class="slds-button slds-button--brand slds-size--1-of-1"
+									ng-if="!ctc.displayForm && (ctc.isSuggestedCollateralEnabled || ctc.canPledgeMultipleCollateral)"
+									ng-disabled="(!ctc.pledgedCollateral || ctc.pledgedCollateral.length == 0) && ctc.isCollateralRequired"
+									ng-click="ctc.skipForm()"
+									n-style="pso-button-primary">
+									{!$Label.Next_Button}
+								</button>
+							</div>
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-bottom--small"
+								ng-if="!ctc.isCollateralRequired && !ctc.canPledgeMultipleCollateral && !ctc.isSuggestedCollateralEnabled">
+								<button class="slds-button slds-button--neutral slds-size--1-of-1"
+									ng-click="ctc.skipForm()"
+									n-style="pso-button-secondary">
+									{!$Label.Skip_Button}
+								</button>
+							</div>
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-bottom--small"
+								ng-if="::ctc.canPledgeMultipleCollateral || ctc.isSuggestedCollateralEnabled"
+								ng-show="ctc.displayForm">
+								<button class="slds-button slds-button--neutral slds-size--1-of-1"
+									n-style="pso-button-secondary"
+									ng-click="ctc.hideForm()">
+									{!$Label.Cancel_Button}
+								</button>
+							</div>
+							<div class="slds-col--padded slds-size--1-of-1">
+								<button ng-disabled="ctc.isSaveCollateralInProgress"
+									class="slds-button slds-size--1-of-1"
+									n-style="pso-action-link"
+									ng-click="ctc.saveCollateralAndExit();">
+									{!$Label.Save_Button}
+								</button>
+							</div>
+						</div>
+						<portal-dialog conf="ctc.removeDialog" confirm="ctc.removeDialog.confirm()"
+							cancel="ctc.removeDialog.cancel()">
+						</portal-dialog>
+					</form>
+				</div>
+			</route>
+		</body>
+	</html>
+</apex:page>

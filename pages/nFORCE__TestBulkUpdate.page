@@ -1,0 +1,14 @@
+<apex:page id="TestBulkUpdate">
+	<c:Include_AngularJS />
+	<c:ncUIIncludes />
+	<c:ncDataProvidersIncludes />
+	<c:ncScreenSectionFormBuilderIncludes />
+	<c:BulkFieldUpdaterConfiguration />
+
+	<div id="ncBulkFieldUpdater" class="slds">
+		<c:DynamicTablePartials />
+		<c:BulkFieldUpdaterPartials />
+
+		<bulk-field-updater></bulk-field-updater>
+	</div>
+</apex:page>

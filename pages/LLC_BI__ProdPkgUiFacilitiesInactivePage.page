@@ -1,0 +1,45 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="LLC_BI.ProdPkgUiFacilitiesInactiveController" sidebar="false" showHeader="false" >
+	<nFORCE:Includes />
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<nFORCE:Include_Design_System flavor="bs3"/>
+	<nFORCE:ncTreeGridIncludes />
+
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			{!$Label[tableTitleLabelName]}
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+
+	<div class="slds">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div ng-app="ncTreeGrid">
+							<tree-grid
+								template-url="{!$Page.ProdPkgGridHtmlPage}"
+								perform-actions-button-label="{!$Label.Product_Package_Facilities_Inactive_Perform_Actions}"
+								no-records-found-label="{!$Label.Product_Package_Facilities_Inactive_No_Records_Found}"
+								get-tree-data-ra="{!$RemoteAction.ProdPkgUiFacilitiesInactiveController.getTreeGridData}"
+								perform-tree-action-ra="{!$RemoteAction.ProdPkgUiFacilitiesInactiveController.performTreeGridAction}"
+								context-id="{!Product_Package__c.Id}"
+								max-depth="1" 
+								alert-confirm-ra="{!$RemoteAction.ProdPkgUiFacilitiesInactiveController.alertConfirmAction}"
+								hide-collapse-expand-icon="true"
+								alert-labels="{
+									heading: '{!$Label.Product_Package_Facilities_Inactive_Alert_Heading}', 
+									message: '{!$Label.Product_Package_Facilities_Inactive_Alert_Message}', 
+									cancel: '{!$Label.Product_Package_Facilities_Inactive_Alert_Cancel}', 
+									confirm: '{!$Label.Product_Package_Facilities_Inactive_Alert_Confirm}'
+								}"
+							/>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+</apex:page>

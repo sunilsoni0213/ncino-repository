@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Chief_Credit_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Credit</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Credit_Analyst</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Admin</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Team_Leader</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>LLC_BI__Amount__c</field>
+        <field>LLC_BI__Product_Line__c</field>
+        <field>LLC_BI__Product_Type__c</field>
+        <field>LLC_BI__Product__c</field>
+        <field>LLC_BI__InterestRate__c</field>
+        <field>LLC_BI__Stage__c</field>
+        <field>LLC_BI__Status__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>UNsecured CCO ILA Approval</label>
+        <name>UNsecured_CCO_ILA_Approval</name>
+    </approvalStep>
+    <description>Approval process when a loan meets the following conditions:  
+(1) Loan is UNsecured
+(2) Loan Amount is NOT Within a Loan Officer&apos;s UNsecured ILA
+(3) Loan Amount is NOT Within the Manger&apos;s UNsecured ILA
+(4) Loan Amount NOT Within the Manager&apos;s Manager UNsecured ILA 
+(5) Lending Authority is NOT Suspended 
+(6) Total Exposure &lt;= CCO UNsecured Individual Lending Authority</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND (
+LLC_BI__Account__r.Total_Exposure__c  &gt; LLC_BI__Loan_Officer__r.Unsecured_Individual_Lending_Authority__c,
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Manager.Unsecured_Individual_Lending_Authority__c,
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Manager.Manager.Unsecured_Individual_Lending_Authority__c,
+LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Manager.Manager.Manager.Unsecured_Individual_Lending_Authority__c,
+LLC_BI__Product_Reference__r.Unsecured_Product__c = TRUE,
+ISPICKVAL (LLC_BI__Stage__c , &apos;Underwriting&apos;),
+LLC_BI__Employee_Loan__c = FALSE,
+LLC_BI__Reg_O_Loan__c = FALSE)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Loan_Approval_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Credit_Approval_Date_Today</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Proposal</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Loan_Rejection_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Loan_Stage_Approval_Loan_Committee</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>UNsecured CCO ILA</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Managers_Manager__c</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>2</processOrder>
+    <recallActions>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

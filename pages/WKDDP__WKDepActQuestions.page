@@ -1,0 +1,29 @@
+<apex:page showHeader="true"
+	sidebar="true"
+	docType="html-5.0" >
+
+	<div id="Complete">
+		<apex:outputPanel >
+			<div class="force">
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<div>
+							<h2>{!$Label.wkddp__wkdepact_docprep_document_information}</h2>
+						</div>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<apex:messages id="errorMessages"/>
+								<c:WKDepActDocPrepQuestions />
+								<br/>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+			</div>
+		</apex:outputPanel>
+	</div>
+</apex:page>

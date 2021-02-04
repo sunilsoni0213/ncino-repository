@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <label>-D TaskManagerModalForm</label>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>24</minorNumber>
+        <namespace>nDESIGN</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>852</minorNumber>
+        <namespace>nFORCE</namespace>
+    </packageVersions>
+</ApexComponent>

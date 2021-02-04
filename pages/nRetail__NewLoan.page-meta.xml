@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>37.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <label>New Retail Loan Page - Template</label>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>719</minorNumber>
+        <namespace>LLC_BI</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>820</minorNumber>
+        <namespace>nFORCE</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>317</minorNumber>
+        <namespace>nFUSE</namespace>
+    </packageVersions>
+</ApexPage>

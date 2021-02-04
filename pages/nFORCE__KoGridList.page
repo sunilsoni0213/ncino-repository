@@ -1,0 +1,7 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+
+<apex:include pageName="nFORCE__Error_Message_Handler" />
+<apex:include pageName="nFORCE__KoDataGrid" />
+<apex:include pageName="nFORCE__KoRelatedList" />
+
+</apex:page>

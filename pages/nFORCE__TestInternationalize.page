@@ -1,0 +1,105 @@
+<apex:page id="TestLocalize" controller="nFORCE.InternationalizeController">
+	<c:Internationalize />
+
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageBlockSection title="Internationalized Formatting Examples" columns="1" id="wrapper">
+				<apex:outputText label="Current Locale" value="" styleClass="idLocale"/>
+				<apex:outputText label="Country (English)" value="" styleClass="idCountryEnglish"/>
+				<apex:outputText label="Country (Native)" value="" styleClass="idCountryNative"/>
+				<apex:outputText label="Currency Symbol" value="" styleClass="idCurrencySymbol"/>
+				<apex:outputText label="Short Date" value="" styleClass="idShortDate"/>
+				<apex:outputText label="Long Date" value="" styleClass="idLongDate"/>
+				<apex:outputText label="Short Time" value="" styleClass="idShortTime"/>
+				<apex:outputText label="Long Time" value="" styleClass="idLongTime"/>
+				<apex:outputText label="Long Date/Short Time" value="" styleClass="idLongDateShortTime"/>
+				<apex:outputText label="Long Date/Long Time" value="" styleClass="idLongDateLongTime"/>
+				<apex:outputText label="Number (123,456.7899)" value="" styleClass="idNumber"/>
+				<apex:outputText label="Default Currency" value="" styleClass="idDefaultCurrency"/>
+				<apex:selectList id="selected_list" value="{!recordCurrency}"
+						multiselect="false" label="Record Currency" size="1" required="false">
+					<apex:selectOption itemLabel="-- choose --" itemValue=""/>
+					<apex:selectOption itemLabel="ESP" itemValue="ESP"/>
+					<apex:selectOption itemLabel="GBP" itemValue="GBP"/>
+					<apex:selectOption itemLabel="EUR" itemValue="EUR"/>
+				</apex:selectList>
+				<apex:outputText label="Currency (100,000.0000)" value="" styleClass="idCurrency"/>
+				<apex:outputText label="Percentage (.123456)" value="" styleClass="idPercentage"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			// IDs get munged, so I use a throwaway CSS class names to locate elements.
+			document.getElementsByClassName('idLocale')[0].innerText = window.LifeCycle.Internationalize.getLocale();
+			document.getElementsByClassName('idCountryEnglish')[0].innerText = window.LifeCycle.Internationalize.getCountryEnglish();
+			document.getElementsByClassName('idCountryNative')[0].innerText = window.LifeCycle.Internationalize.getCountryNative();
+			document.getElementsByClassName('idCurrencySymbol')[0].innerText = window.LifeCycle.Internationalize.getCurrencySymbol();
+
+			document.getElementsByClassName('idShortDate')[0].innerText = window.LifeCycle.Internationalize.format(
+				new Date(),
+				window.LifeCycle.Internationalize.formats.datetime.SHORT_DATE
+			);
+
+			document.getElementsByClassName('idLongDate')[0].innerText = window.LifeCycle.Internationalize.format(
+				new Date(),
+				window.LifeCycle.Internationalize.formats.datetime.LONG_DATE
+			);
+
+			document.getElementsByClassName('idShortTime')[0].innerText = window.LifeCycle.Internationalize.format(
+				new Date(),
+				window.LifeCycle.Internationalize.formats.datetime.SHORT_TIME
+			);
+
+			document.getElementsByClassName('idLongTime')[0].innerText = window.LifeCycle.Internationalize.format(
+				new Date(),
+				window.LifeCycle.Internationalize.formats.datetime.LONG_TIME
+			);
+
+			document.getElementsByClassName('idLongDateShortTime')[0].innerText = window.LifeCycle.Internationalize.format(
+				new Date(),
+				window.LifeCycle.Internationalize.formats.datetime.LONG_DATE_SHORT_TIME
+			);
+
+			document.getElementsByClassName('idLongDateLongTime')[0].innerText = window.LifeCycle.Internationalize.format(
+				new Date(),
+				window.LifeCycle.Internationalize.formats.datetime.LONG_DATE_LONG_TIME
+			);
+
+			document.getElementsByClassName('idNumber')[0].innerText = window.LifeCycle.Internationalize.format(123456.7899, 'N');
+
+			document.getElementsByClassName('idDefaultCurrency')[0].innerText = window.LifeCycle.Internationalize.getDefaultCurrency();
+			document.getElementsByClassName('idCurrency')[0].innerText = window.LifeCycle.Internationalize.format(100000.0000, 'C', '{!JSENCODE(recordCurrency)}');
+
+			document.getElementsByClassName('idPercentage')[0].innerText = window.LifeCycle.Internationalize.format(.123456, 'P');
+
+			document.querySelectorAll('[name$="selected_list"]')[0].addEventListener(
+				'change',
+				function() {
+					window.LifeCycle.Internationalize.init(
+						window.LifeCycle.Internationalize.getLocale(),
+						{
+							multiCurrencyEnabled: true,
+							userCurrencyIsoCode: this.value,
+							conversionRates: {
+								ESP: 1,
+								EUR: 1,
+								GBP: 1
+							}
+						}
+					);
+
+					var convertedCurrency;
+					convertedCurrency = window.LifeCycle.Internationalize.format(
+						100000.0000,
+						'C',
+						this.value
+					);
+					document.getElementsByClassName('idCurrency')[0].innerText = convertedCurrency;
+				},
+				false
+			);
+		});
+	</script>
+
+</apex:page>

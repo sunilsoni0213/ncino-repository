@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="false">
+	<apex:composition template="DMAdmin__DMTemplate">
+		<apex:define name="setTab">
+			<script>
+				$(document).ready(function() {
+					document.getElementById("cfgLink").className += "active";
+				});
+			</script>
+		</apex:define>
+		<apex:define name="content">
+			<c:DMcfgComponent />
+		</apex:define>
+	</apex:composition>
+</apex:page>

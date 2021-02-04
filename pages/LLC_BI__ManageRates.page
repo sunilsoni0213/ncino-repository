@@ -1,0 +1,26 @@
+<apex:page >
+  <apex:includeScript value="/lightning/lightning.out.js" />
+  <nFORCE:Includes enableBS3Namespace="true" />
+  <div class="force">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-single">
+          <div class="container-fluid">
+            <div class="row">
+              <div id="lightning" />
+              <script>
+                $Lightning.use("{!$Label.Namespace}:RateApp", function() {
+                  $Lightning.createComponent(
+                      "{!$Label.Namespace}:RateTable", {
+                        label : "RateTable"
+                      }, "lightning", function(cmp) {
+                      });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</apex:page>

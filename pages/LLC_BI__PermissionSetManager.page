@@ -1,0 +1,64 @@
+<apex:page showHeader="true" sidebar="true" controller="LLC_BI.PermissionSetManagerController">
+	<nFORCE:Includes enableBS3Namespace="true" />
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+	<apex:sectionHeader subtitle="{!$Label.llc_bi__permission_set_manager_header}">
+		<apex:form id="form">
+		<div class="force">
+		<div class="container-fluid">
+			<div class="row">
+				<div class=".col-xs-12 .col-sm-6 .col-lg-8">
+					<p>{!$Label.llc_bi__permission_set_manager_intro}</p>
+					<hr/>
+				</div>
+			</div>
+
+			<apex:outputPanel styleClass="force messages" id="messages">
+				<apex:messages styleClass="alert alert-danger" />
+			</apex:outputPanel>
+			<apex:outputPanel styleClass="force messages successMessage" id="successMessage" >
+					<apex:outputLabel value="{!successMessage}"
+						styleClass="alert alert-success"
+						rendered="{!successMessage != null}"/>
+						<apex:actionPoller action="{!clearMessage}" reRender="successMessage"
+				interval="10" enabled="{!successMessage != null}"/>
+			</apex:outputPanel>
+
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-4">
+					<h5>{!$Label.llc_bi__permission_set_manager_select_roles}</h5><br/><br/>
+					<apex:selectList value="{!selectedRoles}" multiselect="true" size="15">
+						<apex:selectOptions value="{!availableRoles}"/>
+					</apex:selectList>
+				</div>
+				<div class="col-xs-6 col-sm-4">
+					<h5>{!$Label.llc_bi__permission_set_manager_select_profiles}</h5><br/><br/>
+					<apex:selectList value="{!selectedProfiles}" multiselect="true" size="15">
+						<apex:selectOptions value="{!availableProfiles}"/>
+					</apex:selectList>
+				</div>
+			</div>
+			<div class="row">
+				<div class=".col-xs-12 .col-sm-6 .col-lg-8">
+					<hr/>
+					<h5>{!$Label.llc_bi__permission_set_manager_select_permission}</h5><br/><br/>
+					<apex:selectList value="{!selectedPermissionSet}" size="1" required="true"
+						label="{!$Label.llc_bi__permission_set_manager}">
+						<apex:selectOptions value="{!availablePermissionSets}"/>
+					</apex:selectList>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class=".col-xs-12 .col-sm-6 .col-lg-8">
+				<hr/>
+					<apex:commandButton styleClass="btn btn-sm btn-primary"
+						value="{!$Label.llc_bi__permission_set_manager_assign}" action="{!save}"
+						reRender="successMessage,messages" status="ajaxPleaseWait"/>
+				</div>
+			</div>
+		</div>
+		</div>
+		</apex:form>
+	</apex:sectionHeader>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page standardController="LLC_BI__Loan__c"
+    extensions="LLC_BI.LoanButtonController"
+    action="{!copyLoanButton}">
+	<apex:outputField value="{!LLC_BI__Loan__c.LLC_BI__Account__c}" rendered="false"/>
+    <apex:outputField value="{!LLC_BI__Loan__c.LLC_BI__Product_Package__c}" rendered="false"/>
+</apex:page>

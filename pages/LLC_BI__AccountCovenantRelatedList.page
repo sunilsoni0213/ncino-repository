@@ -1,0 +1,80 @@
+<apex:page standardController="Account"
+	extensions="LLC_BI.CovenantRelatedListController"
+	showHeader="false"
+	sidebar="false">
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__account_covenant_related_list_bundle)}" />
+
+	<nFORCE:Include_Analytics />
+	<c:Include_Bootstrap />
+
+	<apex:form >
+		<div class="force">
+			<apex:pageBlock >
+				<apex:pageBlockButtons location="top">
+					<apex:outputLink value="{!URLFOR($Page.LLC_BI__AccountCovenantManagement, null, [id=accountId])}"
+						target="_top"
+						styleClass="btn btn-sm">
+						{!$Label.llc_bi__manage_covenants}
+					</apex:outputLink>
+
+					<apex:outputPanel rendered="{!covenants.size > 0 || isFiltered}">
+						<div class="pull-right">
+							<apex:commandLink value="{!$Label.llc_bi__show_all_covenants}"
+								action="{!isActiveFilterSet}"
+								rendered="{!isFiltered}"
+								style="text-decoration: underline"/>
+							<apex:outputText value="{!$Label.llc_bi__show_all_covenants}"
+								rendered="{!NOT(isFiltered)}"/>
+
+							<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+
+							<apex:commandLink value="{!$Label.llc_bi__show_active_covenants}"
+								action="{!isActiveFilterSet}"
+								rendered="{!NOT(isFiltered)}"
+								style="text-decoration: underline"/>
+							<apex:outputText value="{!$Label.llc_bi__show_active_covenants}"
+								rendered="{!isFiltered}"/>
+						</div>
+					</apex:outputPanel>
+
+				</apex:pageBlockButtons>
+
+				<apex:pageBlockTable value="{!covenants}"
+					var="covenant"
+					rendered="{!covenants.size > 0}"
+					id="covenantTable">
+
+					<apex:column headerValue="{!$ObjectType.LLC_BI__Covenant2__c.fields.LLC_BI__Covenant_Type__c.Label}">
+						<apex:outputLink value="/{!covenant}"
+							target="_top">
+						{!covenant.Covenant_Type__r.Name}
+						</apex:outputLink>
+					</apex:column>
+
+					<apex:column headerValue="{!$ObjectType.LLC_BI__Loan_Covenant__c.fields.LLC_BI__Loan__c.Label}">
+						<apex:outputLink value="/{!covenant.Loan_Covenants__r[0].Loan__c}"
+							target="_top" rendered="{!covenant.Loan_Covenants__r.size > 0}">
+						{!covenant.Loan_Covenants__r[0].Loan__r.Name}
+						</apex:outputLink>
+					</apex:column>
+
+					<apex:column value="{!covenant.LLC_BI__Frequency__c}" rendered="{!fields == null}"/>
+ 					<apex:column value="{!covenant.LLC_BI__Next_Evaluation_Date__c}"  rendered="{!fields == null}"/>
+ 					<apex:column value="{!covenant.LLC_BI__Financial_Indicator_Value__c}"  rendered="{!fields == null}"/>
+ 					<apex:column value="{!covenant.LLC_BI__Active__c}"  rendered="{!fields == null}"/>
+
+					<apex:repeat value="{!fields}" var="f" rendered="{!fields != null}">
+						<apex:column headerValue="{!f.label}">
+							<apex:outputField value="{!covenant[f.fieldPath]}"/>
+						</apex:column>
+					</apex:repeat>
+				</apex:pageBlockTable>
+
+				<apex:outputPanel rendered="{!covenants.size == 0}">
+					<div>{!$Label.llc_bi__no_records}</div>
+				</apex:outputPanel>
+			</apex:pageBlock>
+		</div>
+	</apex:form>
+</apex:page>

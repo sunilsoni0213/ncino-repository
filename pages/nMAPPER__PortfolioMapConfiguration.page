@@ -1,0 +1,72 @@
+<apex:page controller="nMAPPER.PortfolioMapConfigurationController" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<nDESIGN:Includes enableLifeCycleApp="true" runLifeCycleApp="false" />
+		</head>
+		<body>
+			<nDESIGN:Navigation currentAppName="Portfolio_Map"/>
+			<apex:form >
+				<apex:outputPanel layout="block" styleClass="row" id="container">
+
+					<apex:outputPanel layout="block" styleClass="form-horizontal" rendered="{!isEditing}">
+						<apex:repeat value="{!systemProperties}" var="e">
+							<apex:outputPanel layout="block" styleClass="form-group" >
+								<span class="col-xs-3 control-label">
+									{!e.nFORCE__Key__c}
+								</span>
+								<div class="col-xs-8">
+									<apex:inputText id="name" disabled="false" html-placeholder="{!e.nFORCE__Key__c}" styleClass="form-control" value="{!e.nFORCE__Value__c}" ></apex:inputText>
+								</div>
+							</apex:outputPanel>
+						</apex:repeat>
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="block" styleClass="form-horizontal" rendered="{!isEditing}">
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<apex:outputPanel layout="block" styleClass=" col-xs-offset-9 col-xs-2" >
+								<apex:commandButton styleClass="form-control btn btn-primary" value="{!$Label.nmapper__save}" action="{!save}"/>
+							</apex:outputPanel>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<apex:outputPanel layout="block" styleClass=" col-xs-offset-9 col-xs-2" >
+								<apex:outputLink styleClass="form-control btn btn-primary"  value="{!NULLVALUE($CurrentPage.parameters.returnUrl, $Page.nFORCE__System_Configuration)}" >{!$Label.nmapper__back}</apex:outputLink>
+							</apex:outputPanel>
+						</apex:outputPanel>
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="block" styleClass="form-horizontal" rendered="{!!isEditing}">
+						<apex:repeat value="{!systemProperties}" var="e" id="readOnlySystemProperties">
+							<apex:outputPanel layout="block" styleClass="form-group" >
+								<span class="col-xs-3 control-label">
+									{!e.nFORCE__Key__c}
+								</span>
+								<div class="col-xs-8">
+									<apex:inputText id="name" disabled="true" html-placeholder="{!e.nFORCE__Key__c}" styleClass="form-control" value="{!e.nFORCE__Value__c}" ></apex:inputText>
+								</div>
+							</apex:outputPanel>
+						</apex:repeat>
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="block" styleClass="form-horizontal" rendered="{!!isEditing}">
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<apex:outputPanel layout="block" styleClass=" col-xs-offset-9 col-xs-2" >
+								<apex:commandButton styleClass="form-control btn btn-primary" value="{!$Label.nmapper__edit}" action="{!edit}" />
+							</apex:outputPanel>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<apex:outputPanel layout="block" styleClass=" col-xs-offset-9 col-xs-2" >
+								<apex:outputLink styleClass="form-control btn btn-primary"  value="{!NULLVALUE($CurrentPage.parameters.returnUrl, $Page.nFORCE__System_Configuration)}" >{!$Label.nmapper__back}</apex:outputLink>
+							</apex:outputPanel>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="form-group" >
+							<apex:outputPanel layout="block" styleClass=" col-xs-offset-9 col-xs-2" >
+								<apex:commandButton styleClass="form-control btn btn-primary" value="{!$Label.nmapper__batch_geocode}" action="{!executeBatchGeocode}" />
+							</apex:outputPanel>
+						</apex:outputPanel>
+					</apex:outputPanel>
+
+				</apex:outputPanel>
+			</apex:form>
+		</body>
+	</html>
+</apex:page>

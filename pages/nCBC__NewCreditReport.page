@@ -1,0 +1,101 @@
+<apex:page standardController="nCBC__Credit_Report__c" showHeader="true" tabStyle="nCBC__Credit_Report__c">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<style>
+/* styles for modal window */
+.modal-overlay  
+{  
+    position:fixed;  
+    top:0;  
+    right:0;  
+    bottom:0;  
+    left:0;  
+    height:100%;  
+    width:100%;  
+    margin:0; 
+    padding:0;  
+    background:#777;  
+    opacity:.75;  
+    filter: alpha(opacity=75);  
+    -moz-opacity: 0.75;
+    z-index:101;  
+}  
+.modal-window  
+{  
+    position:fixed;  
+    top:50%;  
+    left:50%;  
+    margin:0;  
+    padding:0;  
+    z-index:102;  
+}  
+.close-window  
+{  
+    position:absolute;  
+    width:43px;  
+    height:43px;  
+    right:16px;  
+    top:8px;  
+    background:transparent url('{!$Resource.CloseButton}') no-repeat scroll right top;
+    text-indent:-99999px;  
+    overflow:hidden;  
+    cursor:pointer;  
+    opacity:.5;  
+    filter: alpha(opacity=50);  
+    -moz-opacity: 0.5;  
+}  
+.close-window:hover  
+{  
+    opacity:.99;  
+    filter: alpha(opacity=99);  
+    -moz-opacity: 0.99;  
+}  
+</style>
+
+<script>
+//javascript for modal window 
+var modalWindow = {  
+    parent:"body",  
+    windowId:null,  
+    content:null,  
+    width:null,  
+    height:null,  
+    close:function()  
+    {  
+        $(".modal-window").remove();  
+        $(".modal-overlay").remove();  
+    },  
+    open:function()  
+    {  
+        var modal = "";  
+        modal += "<div class=\"modal-overlay\"></div>";  
+        modal += "<div id=\"" + this.windowId + "\" class=\"modal-window\" style=\"width:" + this.width + "px; height:" + this.height + "px; margin-top:-" + (this.height / 2) + "px; margin-left:-" + (this.width / 2) + "px;\">";  
+        modal += this.content;  
+        modal += "</div>";      
+  
+        $(this.parent).append(modal);  
+  
+        $(".modal-window").append("<a class=\"close-window\"></a>");  
+        $(".close-window").click(function(){modalWindow.close();});  
+        $(".modal-overlay").click(function(){modalWindow.close();});  
+    }  
+}; 
+
+</script>
+<script>
+//more js for modal window 
+var openMyModal = function(source)  
+{  
+    modalWindow.windowId = "myModal";  
+    modalWindow.width = 1000;  
+    modalWindow.height = 600;  
+    modalWindow.content = "<iframe width='1000' height='600' frameborder='0' scrolling='yes' allowtransparency='true' src='" + source + "'></iframe>";  
+    modalWindow.open();  
+}; 
+
+</script> 
+
+ <apex:sectionHeader subtitle="{!nCBC__Credit_Report__c.Name}" title="Credit Report"/>
+ <apex:detail subject="{!nCBC__Credit_Report__c.Id}" relatedList="false" title="false"/>
+ <apex:relatedList list="NotesAndAttachments" />
+</apex:page>

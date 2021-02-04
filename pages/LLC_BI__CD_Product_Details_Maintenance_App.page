@@ -1,0 +1,25 @@
+<apex:page docType="html-5.0"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.ProductDetailsMaintenanceAppController">
+
+	<apex:includeScript value="{!URLFOR($Resource.ncProductDetailsMaintenance,
+		'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncProductDetailsMaintenance,
+		'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncProductDetailsMaintenance,
+		'controllers/AppController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncProductDetailsMaintenance,
+		'providers/TopbarProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/App.js')}" />
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}" />
+
+
+	<c:DepositProductDetailsMaintenance />
+	<c:CDProductDetailsMaintenanceConfiguration />
+
+</apex:page>

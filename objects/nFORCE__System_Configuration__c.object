@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>nFORCE__Allows_Reconfiguration__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The field indicates if the the user is allowed to change the configuration associated with the System Configuration Record once it has been configured. If set to FALSE the configure button in the nCino Administration user interface will be disabled once the initial configuration is complete.</description>
+        <externalId>false</externalId>
+        <label>Allows Reconfiguration</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Class_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. It contains the fully qualified name of a Apex class that implements the ISystemConfigurable interface or the ASystemConfigurable abstract class.</description>
+        <externalId>false</externalId>
+        <label>Class Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Help_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field contains text that describes the System Configuration to the user in the nCino Administration user interface.</description>
+        <externalId>false</externalId>
+        <label>Help Text</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The field indicates if the System Configuration record is active and should be displayed to the user in the nCino Administration user interface.</description>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Configured__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The field indicates if the configuration associated with the System Configuration record has been done. If the field is set to TRUE the the user will not have the option in the nCino Administration interface to configure the data unless the &apos;Allows Reconfiguration&apos; field is set to to TRUE.</description>
+        <externalId>false</externalId>
+        <label>Is Configured</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Link__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The field indicates if the link contained in the &apos;Link URL&apos; field should be displayed to the user.</description>
+        <externalId>false</externalId>
+        <label>Is Link</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Link_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is conditional and must be specified if the &apos;Is Link&apos; field is set to TRUE. The field contains the link that will be displayed to the user if the &apos;Is Link&apos; field is set to TRUE.</description>
+        <externalId>false</externalId>
+        <label>Link URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>System Configuration</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,153 @@
+<apex:page >
+	<c:Internationalize />
+
+	<c:Include_AngularJS_Reset />
+	<c:Include_AngularJS />
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_MomentJS />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/utils-bundle.js')}" />
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'boocctstrap-datepicker.min.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap-datepicker.min.js')}" />
+
+	<c:Include_Bootstrap />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__bootstrap, '/css/bootstrap-font.css')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'services/BrowserService.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncFilters_bundle)}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncFormElements_bundle)}" />
+
+	<style>
+	  .fieldLabel {
+		 color: #4a4a56;
+		 font-size: 91%;
+		 font-weight: bold;
+		 padding-left: 5rem;
+		 padding-right: 1rem;
+		 text-align: right;
+	  }
+	  tr {
+		 height: 25px;
+	  }
+   </style>
+
+
+	<script>
+	  var app = angular.module('nc-testangular', []);
+	  app.controller('AppController', function($scope) {
+		 var intl = window.LifeCycle.Internationalize;
+		 $scope.intlTestNumber = 123456.7899;
+		 $scope.intlTestPercentage = .123456;
+		 $scope.intlTestDate = 1503420185415;
+		 $scope.intlTestDatePicker = 1503420185415;
+		 $scope.intlTestInputNumber = 23423.345687686876886756;
+		 $scope.intlTestInputNumber2 = 8345.456456457;
+		 $scope.intlTestInputCurrency = 3443.45456456;
+
+		 $scope.showTestIntlInputNumber = function(){
+			console.log($scope.intlTestInputNumber);
+		 }
+
+		 $scope.showTestIntlInputNumber2 = function(){
+			console.log($scope.intlTestInputNumber2);
+		 }
+
+		 $scope.showTestIntlInputCurrency = function(){
+			console.log($scope.intlTestInputCurrency);
+		 }
+
+		 $scope.showTestIntlInputDatePicker = function(){
+			console.log($scope.intlTestDatePicker);
+		 }
+
+	  });
+
+	  // Bind all the disparate Angular modules to a single reference module.
+	  angular.module('CombineModules', ['nc-testangular', 'app', 'ncFilters', 'ncFormElements'])
+
+	  document.addEventListener( 'DOMContentLoaded', function( event ) {
+		 document.getElementsByClassName('idLocale')[0].innerText = window.LifeCycle.Internationalize.getLocale();
+	  });
+   </script>
+
+	<apex:pageBlock >
+		<apex:pageBlockSection title="Internationalized Formatting Examples using Angular" columns="1">
+			<div style="margin-bottom: 2rem;">
+				The <strong>CONVERT USD To CNY</strong> example requires a Multi-Currency org with USD and CNY currencies configured.
+			</div>
+			<div ng-app="CombineModules" ng-controller="AppController" id="nc-testangular">
+				<table>
+					<tr>
+						<td class="fieldLabel">LOCALE</td>
+						<td class="idLocale"></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">SHORT DATE</td>
+						<td><span ng-bind="(intlTestDate | intl:'d':true)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">LONG DATE</td>
+						<td><span ng-bind="(intlTestDate | intl:'D':true)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">SHORT TIME</td>
+						<td><span ng-bind="(intlTestDate | intl:'t':true)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">LONG TIME</td>
+						<td><span ng-bind="(intlTestDate |intl:'T':true)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">LONG DATE TIME</td>
+						<td><span ng-bind="(intlTestDate | intl:'F':true)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">NUMBER (123,456.7899)</td>
+						<td><span ng-bind="(intlTestNumber | intl:'N3':false)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">CURRENCY (123,456.7899)</td>
+						<td><span ng-bind="(intlTestNumber | intl:'C':false)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">CONVERT USD To CNY</td>
+						<td><span ng-bind="(intlTestNumber | intl:'C':false:'USD':'CNY')" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">PERCENTAGE</td>
+						<td><span ng-bind="(intlTestPercentage | intl:'P':false)" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Number</td>
+						<td><input type="text" inputnumber="true" scale="4" ng-model="intlTestInputNumber" /></td>
+						<td><button ng-click="showTestIntlInputNumber()">SHOW NUMBER VALUE IN CONSOLE</button></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Number</td>
+						<td><input type="text" inputnumber="true" ng-model="intlTestInputNumber2" /></td>
+						<td><button ng-click="showTestIntlInputNumber2()">SHOW NUMBER VALUE IN CONSOLE</button></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Currency</td>
+						<td><input type="text" inputcurrency="true" ng-model="intlTestInputCurrency" /></td>
+						<td><button ng-click="showTestIntlInputCurrency()">SHOW CURRENCY VALUE IN CONSOLE</button></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Date Picker</td>
+						<td>
+							<input class="datepicker" type="text" ng-model="intlTestDatePicker" intlinputdate="true" />
+						</td>
+						<td><button ng-click="showTestIntlInputDatePicker()">SHOW DATE VALUE IN CONSOLE</button></td>
+					</tr>
+				</table>
+			</div>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+
+</apex:page>

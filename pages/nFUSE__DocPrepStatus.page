@@ -1,0 +1,127 @@
+<apex:page controller="nFUSE.DocPrepStatusPageController"
+	showHeader="false"
+	sidebar="false"
+	docType="html-5.0" >
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'util/continue-hack.js')}"/>
+	<nFORCE:Include_Navigator />
+	<c:RequireAuthorization isAuthorized="{!$Permission.nFUSE__Document_Preparation_Workflow}" errorMessage="{!$Label.nfuse__no_docprep_permission}">
+		<c:PushTopicRegistration topic="TransactionLogUpdate" callback="processLogUpdate"/>
+		<script type="text/javascript">
+			function isContinueView(){
+				if(getURLParameter("{!JSENCODE(originString)}").includes("{!JSENCODE(continueSubstring)}")){
+					document.getElementById("{!JSENCODE(successMessage)}").style.display = "block";
+					document.getElementById("{!JSENCODE(inProgressMessage)}").style.display = "none";
+				}
+			}
+
+			function getURLParameter(name) {
+				return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+			}
+
+			function processLogUpdate(message) {
+				var messageStatus = message.data.sobject.{!JSENCODE(nameSpace)}Transaction_Status__c;
+				var logId = message.data.sobject.{!JSENCODE(nameSpace)}External_Id__c;
+				if (messageStatus!="{!JSENCODE(inProgressMessage)}" && logId == "{!JSENCODE(transactionLogId)}") {
+					if (messageStatus == "{!JSENCODE(completeMessage)}") {
+						document.getElementById("{!JSENCODE(successMessage)}").style.display="block";
+						document.getElementById("{!JSENCODE(inProgressMessage)}").style.display = "none";
+					} else if (messageStatus.toLowerCase().indexOf('error') > -1 || messageStatus.toLowerCase().indexOf('fail') > -1) {
+						document.getElementById("{!JSENCODE(failureMessage)}").style.display="block";
+						document.getElementById("{!JSENCODE(inProgressMessage)}").style.display = "none";
+					}
+				}
+			}
+		</script>
+		<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/sldsSpinner.css')}"/>
+
+		<div class="force">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<div>{!$Label.nfuse__docprep_status_header}</div>
+				</apex:define>
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<div class="col-sm-12">
+								<div id="InProgress">
+									<div class="row dark-box container-fluid">
+										<div class="col-md-2" style="padding-bottom:175px;">
+											<div class="slds-spinner_container" style="background-color:transparent; padding: 140px 10px 55px 45px;">
+												<div role="status" class="slds-spinner slds-spinner--large">
+													<span class="slds-assistive-text">Loading</span>
+													<div class="slds-spinner__dot-a"></div>
+													<div class="slds-spinner__dot-b"></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-9" style="padding: 0px 0px 0px 0px">
+											<div id="InfoHeader" style="text-transform: uppercase;">
+												<h4>{!$Label.DocPrep_Status_Info_Header}</h4>
+												{!$Label.DocPrep_Status_Info_Sub_Header}
+											</div>
+											<br/>
+											<div class="font-md">
+												{!$Label.DocPrep_Status_Info}
+											</div>
+											<br/>
+											<div>
+												{!$Label.DocPrep_Status_Info2}
+											</div>
+											<br/>
+										</div>
+									</div>
+									<br/>
+								</div>
+								<div id="Success" style="display:none">
+									<h4>{!$Label.DocPrep_Status_Success}</h4>
+									<br/>
+									<p class="narrative">{!$Label.DocPrep_Status_Success_Detail}</p>
+									<br/>
+									<apex:form >
+										<apex:commandButton id="goNext"
+											action="{!goNext}"
+											styleClass="btn btn-primary"
+											value="{!$Label.nfuse__docprep_status_continue}"
+											onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')"/>
+									</apex:form>
+									<br/>
+								</div>
+								<div id="Failure" style="display:none">
+									<h4>{!$Label.DocPrep_Status_Failure}</h4>
+									<br/><br/>
+									<div class="container-fluid">
+										<div class="row dark-box dark-box-red narrative">
+											<div class="col-md-2">
+												<img style="width: 50px" src="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/icons/standard/unmatched_60.png')}"/>
+											</div>
+											<div class="col-md-9" style="padding: 10px 0px 10px 0px">
+												<span class="font-md">{!$Label.DocPrep_Status_Failure_1}</span>
+												<br/><br/>
+												<span class="font-md">{!$Label.DocPrep_Status_Failure_2}</span>
+											</div>
+										</div>
+									</div>
+									<br/><br/>
+									<apex:form >
+										<apex:commandButton id="goBack"
+											action="{!goBack}"
+											styleClass="btn btn-primary"
+											value="{!$Label.nfuse__docprep_status_retry}"
+											onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')"/>
+									</apex:form>
+									<br/>
+								</div>
+							</div>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+		<script type="text/javascript">
+			isContinueView();
+		</script>
+	</c:RequireAuthorization>
+</apex:page>

@@ -1,0 +1,46 @@
+<apex:page docType="html-5.0" sidebar="false"
+	standardController="Account"
+	extensions="nFUSE.VerificationsController,LLC_BI.RedirectController,LLC_BI.DefaultAppController,nFORCE.TemplateController">
+	<c:Include_AngularJS />
+	<nFORCE:Include_Navigator />
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<script type="text/javascript">
+		if (!LifeCycle) {
+			LifeCycle = {};
+		}
+
+		if (!LifeCycle.setupBlockUI) {
+			LifeCycle.setupBlockUI = function() {
+				jQuery("#loading-modal").modal({
+					backdrop: "static",
+					keyboard: false,
+					show: false
+				});
+			}
+		}
+	</script>
+
+	<apex:form styleClass="slds">
+		<div class="slds-p-top--small slds-p-left--small">
+			<apex:commandButton id="btnBack"
+				action="{!setRelationshipId}"
+				styleClass="slds-button slds-button--neutral"
+				value="< {!$Label.nfuse__verifications_backtorelationship}"
+				onComplete="LifeCycle.Navigator.navigateToSObject('{!relationshipId}')"/>
+		</div>
+	</apex:form>
+
+	<br/>
+
+	<apex:composition template="nFORCE__Template_Landing">
+		<apex:define name="body">
+			<apex:include pageName="nFUSE__VerificationsChecklist" />
+		</apex:define>
+	</apex:composition>
+
+	<!--Hack to hide extra div for a subheader created by the nFORCE_Template_Landing page-->
+	<script type="text/javascript">
+		jQuery('.sub-navigation-content').hide();
+	</script>
+</apex:page>

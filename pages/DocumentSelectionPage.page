@@ -1,0 +1,159 @@
+<apex:page controller="DocumentSelectionController" ShowHeader="false" sidebar="false" standardStylesheets="false">
+    <apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/bootstrap3/css/bootstrap.min.css')}"/>
+    <style>
+        .overlay {
+            display: none;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            top: 0;
+            opacity: 0.3;
+            -moz-opacity: 0.3;
+            width: 100%;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+            filter: alpha(opacity=30);
+            background: #000;
+            -khtml-opacity: 0.3;
+            z-index: 1020;
+        }
+        .loader {
+            background: url('/img/loading32.gif') scroll no-repeat 0 0;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            left: 50%;
+            z-index: 1300;
+        }
+        .break {
+            margin-bottom: 15px;
+        }
+    </style>
+    <div id="load_scrl" class="loadingBox loader" style="display:none"></div>
+    <div class="loadingBox overlay"></div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="https://c.na14.content.force.com/servlet/servlet.ImageServer?id=0155w000002tbfK&oid=00D5w000005UhIk" height="100%" width="60%" />
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-user"></i>
+                        {!ProfileName}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/home/home.jsp"><i class="glyphicon glyphicon-home"></i>Home</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/secur/logout.jsp"><i class="glyphicon glyphicon-log-out"></i>Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <apex:form >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <i class="glyphicon glyphicon-circle-arrow-left"></i>
+                    <a href="/{!CurrentAccountId}">Back To {!CurrentAccountName}</a>
+                </div>
+                <div class="col-xs-12">
+                    <h4>Find Documents:</h4>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Please Fill out the following:</p>
+                </div>
+                <div class="col-xs-12">
+                    <form class="form-horizontal" role="form">
+                        <apex:outputPanel id="theForm">
+                        <div class="form-group">
+                            <label for="inputEmail3" style="padding-top:7px;margin-bottom:0;text-align: right;" class="col-sm-2 control-label">Relationship:</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="loanname" value="{!CurrentAccountName}" class="form-control" disabled="disabled" />
+                                <input type="hidden" id="loanid" value="{!CurrentAccountId}" />
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="form-group">
+                            <label for="inputPassword3" style="padding-top:7px;margin-bottom:0;text-align: right;" class="col-sm-2 control-label">Loan:</label>
+                            <div class="col-sm-10">
+                                <apex:selectList styleClass="form-control" value="{!loanId}" size="1">
+                                    <apex:actionSupport event="onchange" rerender="theForm"/>
+                                    <apex:selectOptions value="{!Loans}"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="form-group">
+                            <label for="inputPassword3" style="padding-top:7px;margin-bottom:0;text-align: right;" class="col-sm-2 control-label">Document:</label>
+                            <div class="col-sm-10">
+                                <apex:selectList styleClass="form-control" value="{!attachmentId}" size="1">
+                                    <apex:selectOptions value="{!Attachments}"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="form-group">
+                            <label for="inputPassword3" style="padding-top:7px;margin-bottom:0;text-align: right;" class="col-sm-2 control-label">Document Tab:</label>
+                            <div class="col-sm-10">
+                                <apex:selectList styleClass="form-control" value="{!docTabId}" size="1">
+                                    <apex:actionSupport event="onchange" rerender="theForm"/>
+                                    <apex:selectOptions value="{!Tabs}"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="form-group">
+                            <label for="inputPassword3" style="padding-top:7px;margin-bottom:0;text-align: right;" class="col-sm-2 control-label">Document Type:</label>
+                            <div class="col-sm-10">
+                                <apex:selectList styleClass="form-control" value="{!docTypeId}" size="1">
+                                    <apex:selectOptions value="{!Types}"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <apex:commandLink styleClass="btn btn-success" value="Add to Document Manager" action="{!Create}"/>
+                                <a href="/{!CurrentAccountId}" class="btn btn-link btn-primary">Cancel</a>
+                            </div>
+                        </div>
+                        </apex:outputPanel>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <apex:actionStatus id="loading" onstart="loading(true)" onstop="loading(false)"/>
+    </apex:form>
+    <!-- Javascript Section -->
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/jquery/js/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/bootstrap3/js/bootstrap.min.js')}"/>
+    <apex:outputPanel id="jscript">
+        <script>
+            function loading(val) {
+                if (val) {
+                    $('#load_scrl').css('top', $(document).scrollTop() + 200);
+                    $('.loadingBox').show();
+                } else {
+                    $('.loadingBox').hide();
+                }
+            }
+        </script>
+    </apex:outputPanel>
+    <!-- END Javascript Section -->
+</apex:page>

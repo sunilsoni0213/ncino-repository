@@ -1,0 +1,35 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" readOnly="true" controller="nFORCE.RemoteActionController" applyBodyTag="false" applyHtmlTag="false">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+		<head data-slds-path="{!URLFOR($Asset.SLDS, '')}">
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+			<script>
+				self['__designSystemPath'] = "{!URLFOR($Asset.SLDS, '')}";
+				window.LifeCycle = window.LifeCycle || {};
+				window.LifeCycle.Service = window.LifeCycle.Service || {};
+			</script>
+			<title>{!$Label.Configure_Template}</title>
+			<nFORCE:LiteForce_Functions />
+			<apex:slds />
+		</head>
+		<body class="slds slds-scope">
+			<script>
+				window.lazyLoadedPlugins = {
+					powerpaste: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/powerpaste/plugin.js')}",
+					advcode: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/advcode/plugin.js')}",
+					toc: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/toc/plugin.js')}",
+					formatpainter: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/formatpainter/plugin.js')}",
+					lists: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/lists/plugin.js')}",
+					checklist: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/checklist/plugin.js')}",
+					advlist: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/advlist/plugin.js')}",
+					pageembed: "{!URLFOR($Resource.html_templating, 'app/tinymce/plugins/pageembed/plugin.js')}",
+				};
+			</script>
+			<html-templating contextId="{!$CurrentPage.parameters.id}"></html-templating>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_templating, 'main.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_templating, 'polyfills.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_templating, 'runtime.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_templating, 'styles.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_templating, 'vendor.js')}"></script>
+		</body>
+	</html>
+</apex:page>

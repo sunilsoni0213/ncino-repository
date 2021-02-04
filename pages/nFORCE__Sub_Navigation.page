@@ -1,0 +1,62 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.SubNavigation" showHeader="false" standardStylesheets="false">
+
+	<c:Include_AngularJS />
+
+	<c:ncDataProvidersIncludes />
+	<c:ncUIIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation_bundle)}" />
+	
+	<div id="ncTertiaryNavigation">
+		<nc-tertiary-navigation
+			context-id="{!contextObjectId}"
+			current-page="{!host}/apex/{!$Currentpage.Name}"
+			app-resolved="{!appResolved}"
+			session-id="{!$CurrentPage.parameters.sid}">
+		</nc-tertiary-navigation>
+
+		<script>
+			(function(){
+				'use strict';
+				var resizeId;
+				jQuery(document).ready(function () {
+					jQuery(window).resize(function() {
+						clearTimeout(resizeId);
+						resizeId = setTimeout(doneResizing, 500);
+					});
+					function doneResizing(){
+						jQuery(window).resize(function() {
+							jQuery("#tertiary-navigation").itemOverflow(
+								'#tertiary-navigation', '#tertiary-navigation-dropdown');
+						});
+					}
+				});
+			})();
+		</script>
+
+		<script>
+			(function(){
+				'use strict';
+				angular.module('ncTertiaryNavigation')
+					.config(['tertiaryNavigationRemotingProvider', 'configProvider',
+						function(tertiaryNavigationRemotingProvider, configProvider) {
+							tertiaryNavigationRemotingProvider.setEndpoint({
+								getMenu: '{!$RemoteAction.SubNavigation.getMenu}'
+							});
+
+							configProvider.set({
+								disableNavigationTextTransform: {!disableNavigationTextTransform}
+							});
+						}
+					]);
+
+				angular.module('ncDataProviders')
+					.config(function(labelProvider) {
+						labelProvider.setLabels({
+							More: "{!$Label.More}"
+						});
+					});
+			})();
+		</script>
+	</div>
+</apex:page>

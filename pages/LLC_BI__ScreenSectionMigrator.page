@@ -1,0 +1,71 @@
+<apex:page controller="LLC_BI.ScreenSectionMigratorController" showHeader="true" sidebar="true">
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__screen_section_migrator_bundle)}" />
+	<nFORCE:Include_Bootstrap3 flavor="force" />
+
+	<apex:sectionHeader subtitle="{!$Label.llc_bi__screen_section_migration}">
+		<div class="bPageTitle">
+			<div class="ptBreadcrumb">&nbsp;«
+				<a href="{!$Page.SystemAdministration}">{!$Label.Back_to_Admin_Page}</a>
+			</div>
+		</div>
+		<apex:form id="form">
+			<div class="force">
+				<apex:outputPanel styleClass="force messages" id="messages">
+					<apex:messages styleClass="alert alert-danger" />
+				</apex:outputPanel>
+				<apex:outputPanel styleClass="force messages successMessage" id="successMessage" >
+					<apex:outputLabel value="{!successMessage}"
+						styleClass="alert alert-success"
+						rendered="{!successMessage != null && !isQueued}"/>
+				</apex:outputPanel>
+				<apex:actionPoller reRender="queued,migrateButton,messages,successMessage" interval="10" enabled="{!isQueued}"/>
+				<apex:outputPanel id="queued">
+					<apex:outputPanel rendered="{!isQueued}">
+						<apex:outputPanel layout="block" styleClass="ui-state-highlight ui-corner-all ncino-admin-info">
+							<p>
+								<apex:outputPanel styleClass="ui-icon ui-icon-info pull-left">
+								</apex:outputPanel>
+								<apex:outputText value="{!$Label.llc_bi__system_admin_update_currently_queued}" escape="false" />
+								<img src="/img/loading.gif"></img>
+							</p>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:outputPanel>
+				<h4>{!$Label.llc_bi__screen_section_migration_header_1}</h4>
+				<hr/>
+				<apex:dataTable var="oldScreenSection" value="{!oldScreenSection}"
+					styleClass="table">
+					<apex:column headerValue="{!$ObjectType.nFORCE__Screen__c.Label}">
+						<apex:selectList size="1" multiselect="false" value="{!oldScreenSection['screenName']}">
+							<apex:actionSupport event="onchange" rerender="oldscreenSectionSelect"/>
+							<apex:selectOptions value="{!oldScreenSection['screens']}"/>
+						</apex:selectList>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.nFORCE__Screen_Section__c.Label}">
+						<apex:selectList size="1" id="oldscreenSectionSelect" multiselect="false" value="{!oldScreenSection['screenSectionName']}">
+							<apex:selectOptions value="{!oldScreenSection['screenSections']}"/>
+						</apex:selectList>
+					</apex:column>
+				</apex:dataTable>
+
+				<h4>{!$Label.llc_bi__screen_section_migration_header_2}</h4>
+				<hr/>
+				<apex:dataTable var="newScreenSection" value="{!newScreenSections}"
+					styleClass="table table-hover">
+					<apex:column headerValue="{!$Label.llc_bi__screen_section_id}">
+						<apex:inputText value="{!newScreenSection['screenSectionId']}"/>
+					</apex:column>
+					<apex:column headerValue="{!$ObjectType.nFORCE__Screen_Section__c.fields.nFORCE__Display_Order__c.Label}">
+						<apex:inputText maxlength="18" value="{!newScreenSection['displayOrder']}"/>
+					</apex:column>
+				</apex:dataTable>
+				<apex:outputPanel id="migrateButton">
+					<apex:commandButton rendered="{!!isQueued}" styleClass="btn btn-sm btn-primary"
+						value="{!$Label.llc_bi__migrate_screen_sections}" action="{!save}" 
+						reRender="queued,migrateButton,messages,successMessage"/>
+				</apex:outputPanel>
+			</div>
+		</apex:form>
+	</apex:sectionHeader>
+</apex:page>

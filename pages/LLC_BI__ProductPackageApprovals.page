@@ -1,0 +1,33 @@
+<apex:page standardController="LLC_BI__Product_Package__c" showHeader="false" sidebar="false" extensions="LLC_BI.ProductPackageApprovalsController,nFORCE.RemoteActionController">
+	<nFORCE:Includes />
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<nFORCE:Include_Design_System flavor="bs3"/>
+	<nFORCE:ncTreeGridIncludes />
+	<div class="slds">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<c:PropagatedApprovalNotification />
+						<div ng-app="ncTreeGrid">
+							<tree-grid
+								remoting-service="{!$RemoteAction.RemoteActionController.invoke}"
+								template-url="{!$Page.ncTreeGridHtml}"
+								perform-actions-button-label="{!$Label.Package_Credit_Perform_Actions}"
+								no-records-found-label="{!$Label.Package_Credit_No_Records_Found}"
+								perform-tree-action-ra="LLC_BI.ProductPackageApprovalsController.PerformTreeGridActionEndpoint"
+								get-tree-data-ra="LLC_BI.ProductPackageApprovalsController.GetTreeGridDataEndpoint"
+								context-id="{!Product_Package__c.Id}"
+								max-depth="4"
+								reRender="thePanel"
+								alert-save-ra="LLC_BI.ProductPackageApprovalsController.AlertSaveActionEndpoint"
+								context-params="{!$User.UIThemeDisplayed}"
+								/>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

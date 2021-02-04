@@ -1,0 +1,44 @@
+<apex:page docType="html-5.0"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.ProductMaintenanceFinishAppController">
+
+	<apex:includeScript value="{!URLFOR($Resource.ncAnchorController,
+			'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncAnchorController,
+			'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncAnchorController,
+			'controllers/AppController.js')}" />
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+
+	<div id="ncAnchorController" ng-controller="AppController" ng-cloak="cloak">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row">
+										<message></message>
+										<c:Template_Finish leftBtnText="{!$Label.llc_bi__finish}"
+											leftBtnLink="{!depositId}"
+											leftBtnStyle="btn btn-secondary"
+											isLeftBtnId="true"
+											headerText="{!$Label.llc_bi__product_maintenance_finish_header}"
+											descriptionText="{!$Label.llc_bi__product_maintenance_finish_paragraph}"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<c:ProductMaintenanceFinishConfiguration />
+
+</apex:page>

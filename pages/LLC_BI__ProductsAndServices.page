@@ -1,0 +1,130 @@
+<apex:page standardController="Account" tabStyle="Account" extensions="LLC_BI.ProductViewController" showHeader="false" sidebar="false" >
+
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__visualforce_tweaks_css, 'visualforce_tweaks.css')}" />
+
+	<apex:outputPanel layout="block" style="margin-top:1em;">
+		<apex:outputLink value="{!newLoanLink}" target="_parent" styleClass="btn btn-default"
+			style="text-decoration:none;padding:4px;">
+			{!$Label.llc_bi__new_loan_product}
+		</apex:outputLink>
+		<apex:outputLink value="{!newDepositLink}" target="_parent" styleClass="btn btn-default"
+			style="text-decoration:none;padding:4px;">
+			{!$Label.llc_bi__new_deposit_product}
+		</apex:outputLink>
+		<apex:outputLink value="{!newEntityInvolvementLink}" target="_parent" styleClass="btn btn-default"
+			style="text-decoration:none;padding:4px;">
+			{!$Label.llc_bi__new_entity_involvement}
+		</apex:outputLink>
+	</apex:outputPanel>
+
+	<apex:tabPanel switchType="client"
+		selectedTab="loans"
+		id="productTabs"
+		style="margin-top: 1.5em;"
+		activeTabClass="activeTab"
+		inactiveTabClass="inactiveTab">
+
+		<apex:tab label="{!$Label.llc_bi__loans}" name="loans" id="loansTab">
+			<apex:pageBlock >
+
+				<apex:outputPanel rendered="{!involvementsWithLoans.size = 0}" >
+					{!$Label.llc_bi__no_loans}
+				</apex:outputPanel>
+
+				<apex:pageBlockTable value="{!involvementsWithLoans}"
+					var="entity"
+					rendered="{!involvementsWithLoans.size > 0}">
+					<apex:column headerValue="{!$Label.llc_bi__name}" width="200">
+						<apex:outputPanel >
+							<apex:outputLink value="/{!entity.LLC_BI__Loan__c}" target="_parent">
+								<apex:outputField value="{!entity.Loan__r.Name}" />
+							</apex:outputLink>
+						</apex:outputPanel>
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__borrower_type}" >
+						<apex:outputField value="{!entity.LLC_BI__Borrower_Type__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__loan_number}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__lookupKey__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__stage}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Stage__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__product}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Product_Line__c}" />
+						&nbsp;{!$Label.Product_Display_Separator}&nbsp;
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Product_Type__c}" />
+						&nbsp;{!$Label.Product_Display_Separator}&nbsp;
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Product__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__principal_balance}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Principal_Balance__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__payment_details}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Payment_Schedule__c}" />
+						<apex:outputPanel rendered="{!entity.Loan__r.LLC_BI__Payment_Type__c != null}">
+							(<apex:outputField value="{!entity.Loan__r.LLC_BI__Payment_Type__c}" />)
+						</apex:outputPanel>
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__payment}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__Monthly_Payment__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__close_date}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__CloseDate__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__interest_rate}" >
+						<apex:outputField value="{!entity.Loan__r.LLC_BI__InterestRate__c}" />
+					</apex:column>
+				</apex:pageBlockTable>
+
+			</apex:pageBlock>
+		</apex:tab>
+
+		<apex:tab label="{!$Label.llc_bi__deposits_tab_title}" name="deposits" id="depositsTab">
+			<apex:pageBlock >
+
+				<apex:outputPanel rendered="{!involvementsWithDeposits.size = 0}" >
+					{!$Label.llc_bi__no_deposits}
+				</apex:outputPanel>
+
+				<apex:pageBlockTable value="{!involvementsWithDeposits}"
+					var="entity"
+					rendered="{!involvementsWithDeposits.size > 0}">
+					<apex:column headerValue="{!$Label.llc_bi__name}" width="200">
+						<apex:outputLink value="/{!entity.LLC_BI__Deposit__c}" target="_parent">
+							<apex:outputField value="{!entity.Deposit__r.Name}"/>
+						</apex:outputLink>
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__relationship_type}" >
+						<apex:outputField value="{!entity.LLC_BI__Relationship_Type__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__balance}" >
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Amount__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__open_date}" >
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Open_Date__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__interest_rate}" >
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Interest_Rate__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__stage}" >
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Stage__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__status}" >
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Status__c}" />
+					</apex:column>
+					<apex:column headerValue="{!$Label.llc_bi__product}" >
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Product_Line__c}" />
+						&nbsp;{!$Label.Product_Display_Separator}&nbsp;
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Product_Type__c}" />
+						&nbsp;{!$Label.Product_Display_Separator}&nbsp;
+						<apex:outputField value="{!entity.Deposit__r.LLC_BI__Product__c}" />
+					</apex:column>
+				</apex:pageBlockTable>
+
+			</apex:pageBlock>
+		</apex:tab>
+
+	</apex:tabPanel>
+
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants an nCino Premium License user the ability to edit charts of accounts from within the Spreading application.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Edit Underwriting Chart of Accounts for Salesforce License -D</label>
+    <license>Salesforce</license>
+</PermissionSet>

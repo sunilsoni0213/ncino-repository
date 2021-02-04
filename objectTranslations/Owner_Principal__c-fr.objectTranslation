@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Owner/Principal --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Owner/Principal --></value>
+    </caseValues>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Owner/Principal Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

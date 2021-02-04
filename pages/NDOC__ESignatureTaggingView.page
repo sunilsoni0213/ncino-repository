@@ -1,0 +1,49 @@
+<apex:page title="{!$Label.ndoc__e_signature_tagging_view_title}"
+	sidebar="false"
+	showHeader="false"
+	controller="NDOC.UniDocManRemoteActionController"
+	extensions="nFORCE.RemoteActionController,NDOC.ESignatureTaggingController">
+
+	<c:Include_AngularJS />
+	<apex:includeScript value="{!URLFOR($Resource.NDOC__universalDocMan, 'app/eSignaturePreparation/eSignaturePreparation.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.NDOC__universalDocMan, 'app/eSignaturePreparation/eSignaturePreparationRemoting.js')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.NDOC__universalDocMan, 'content/css/eSignaturePreparation.css')}"/>
+
+	<apex:slds />
+
+	<div id="ESignTaggingApp">
+		<div ng-controller="ESignaturePrep as ctrl">
+			<div ng-if="ctrl.showLoadingModal">
+				<div role="status" class="slds-spinner slds-spinner_large">
+					<span class="slds-assistive-text">{!$Label.Working}</span>
+					<div class="slds-spinner__dot-a"></div>
+					<div class="slds-spinner__dot-b"></div>
+				</div>
+				<div class="slds-text-heading--medium slds-p-around--small working-text">
+					{!$Label.Working}
+				</div>
+				<div class="slds-backdrop slds-backdrop_open"></div>
+			</div>
+			<button
+				ng-click="ctrl.saveAndClose()"
+				class="slds-button slds-button--brand slds-float--right slds-m-right--x-large">
+				{!$Label.Save_and_Close}
+			</button>
+			<apex:iframe src="{!taggingUrl}" />
+		</div>
+	</div>
+
+	<script>
+		if (!window.DocumentManager) {
+			window.DocumentManager = {};
+		}
+		if (!window.DocumentManager.namespace) {
+			window.DocumentManager.namespace = '{!JSENCODE(namespacePrefix)}';
+
+			window.DocumentManager.namespace =
+				window.DocumentManager.namespace ?
+					window.DocumentManager.namespace.replace('__', '.') :
+					'nDOC.'
+		}
+	</script>
+</apex:page>

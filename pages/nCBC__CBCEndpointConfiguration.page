@@ -1,0 +1,122 @@
+<apex:page controller="nCBC.CBCEndpointConfigurationController" docType="html-5.0" showHeader="true"
+	sidebar="true">
+	<apex:form id="config">
+		<apex:pageBlock >
+			<div class="container-fluid" style="padding:10px">
+				<h4 style="padding-right:20px">{!$Label.ncbc__cbc_soft_pull_endpoint_configuration}</h4>
+				<div class="col-lg-3">{!$Label.ncbc__cbc_endpoint}</div>
+				<div class="col-lg-3">
+					<apex:inputText size="75" value="{!softConfig.endpoint}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_username}</div>
+				<div class="col-lg-3">
+					<apex:inputText size="75" value="{!softConfig.username}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_password}
+				</div>
+				<div class="col-lg-3">
+					<apex:inputSecret redisplay="true"
+						size="75"
+						value="{!softConfig.password}"
+						rendered="true" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_timeout}
+				</div>
+				<div class="col-lg-3">
+					<apex:input type="number" value="{!softConfig.timeout}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_use_equifax}
+					<apex:inputCheckbox value="{!softConfig.useEquifax}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_use_experian}
+					<apex:inputCheckbox value="{!softConfig.useExperian}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_use_transunion}
+					<apex:inputCheckbox value="{!softConfig.useTransUnion}" />
+				</div>
+			</div>
+			<div style="width:100%; height:1px; background:black;"></div>
+			<div class="container-fluid" style="padding:10px">
+				<h4 style="padding-right:20px">{!$Label.CBC_Hard_Pull_Endpoint_Configuration}</h4>
+				<div class="col-lg-3">
+					{!$Label.CBC_Endpoint}
+				</div>
+				<div class="col-lg-3">
+					<apex:inputText size="75" value="{!hardConfig.endpoint}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_username}
+				</div>
+				<div class="col-lg-3">
+					<apex:inputText size="75" value="{!hardConfig.username}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_password}
+				</div>
+				<div class="col-lg-3">
+					<apex:inputSecret redisplay="true" size="75" value="{!hardConfig.password}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_timeout}
+				</div>
+				<div class="col-lg-3">
+					<apex:input type="number" value="{!hardConfig.timeout}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_use_equifax}
+					<apex:inputCheckbox value="{!hardConfig.useEquifax}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_use_experian}
+					<apex:inputCheckbox value="{!hardConfig.useExperian}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_use_transunion}
+					<apex:inputCheckbox value="{!hardConfig.useTransUnion}" />
+				</div>
+			</div>
+			<div style="width:100%; height:1px; background:black;"></div>
+			<div class="container-fluid" style="padding:10px">
+				<h4 style="padding-right:20px">
+					{!$Label.CBC_Real_Estate_Endpoint_Configuration}
+				</h4>
+				<div class="col-lg-3">
+					{!$Label.CBC_Endpoint}
+				</div>
+				<div class="col-lg-3">
+					<apex:inputText size="75" value="{!realEstateConfig.endpoint}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_username}
+				</div>
+				<div class="col-lg-3">
+					<apex:inputText size="75" value="{!realEstateConfig.username}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_password}</div>
+				<div class="col-lg-3">
+					<apex:inputSecret redisplay="true" size="75" value="{!realEstateConfig.password}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_timeout}</div>
+				<div class="col-lg-3">
+					<apex:input type="number" value="{!realEstateConfig.timeout}" />
+				</div>
+				<div class="col-lg-3">
+					{!$Label.ncbc__cbc_prompt_enabled}
+					<apex:inputCheckbox value="{!realEstateConfig.promptEnabled}" />
+				</div>
+			</div>
+			<apex:commandButton styleClass="btn btn-primary" value="Save" action="{!save}" />
+			<apex:commandButton value="{!$Label.ncbc__go_back}"
+				styleClass="btn btn-primary"
+				action="{!goBack}" />
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

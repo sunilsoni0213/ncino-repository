@@ -1,0 +1,65 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="LLC_BI.FacilityDisplayController">
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__facility_bundle)}" />
+	<c:Include_Bootstrap />
+
+	<script>
+		function setFocusOnLoad() {}
+	</script>
+
+	<apex:form >
+		<apex:pageMessages id="pageMessages"/>
+		<apex:pageBlock id="mainPageBlock" mode="mainDetail">
+			<div align="center">
+				<apex:outputPanel rendered="{!hasProductPackageLoanEdit}">
+					<apex:commandButton value="Save" action="{!saveFacilities}" rerender="redirectPanel,pageMessages" status="ajaxPleaseWait" />
+					<apex:outputPanel id="redirectPanel" >
+						<apex:outputText rendered="{!shouldRedirectPage}">
+							<script type="text/javascript">
+								window.top.location.href = '{!JSENCODE(URLENCODE(redirectPageUrl))}';
+							</script>
+						</apex:outputText>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</div>
+
+			<br />
+
+			<apex:pageBlockSection columns="1">
+				<apex:pageBlockTable value="{!pendingfacilities}" var="row" footerclass="pShowMore">
+					<apex:column width="20">
+						<apex:facet name="header">Action</apex:facet>
+						<apex:outputLink value="/{!row.id}?retURL={!productPackageId}" styleClass="actionLink" target="_parent">Edit</apex:outputLink>
+					</apex:column>
+
+					<apex:repeat value="{!fields}" var="f">
+						<apex:column >
+							<apex:facet name="header">{!f.Label}</apex:facet>
+							<apex:outputField value="{!row[f]}"
+								rendered="{!IF(OR(f=='Name',OR(AND(hasProductPackageLoanEdit,contains(lower(editableFields),lower(f))))),false,true)}" />
+							<apex:inputField value="{!row[f]}"
+								rendered="{!IF(AND(hasProductPackageLoanEdit,contains(lower(editableFields),lower(f))),true,false)}"/>
+							<apex:outputLink value="/{!row.id}" target="_parent" rendered="{!IF(f=='Name',true,false)}">{!row.Name}</apex:outputLink>
+						</apex:column>
+					</apex:repeat>
+
+					<!--footer is added to mimic the style of the related list framework -->
+					<apex:facet name="footer">
+						<apex:outputPanel ></apex:outputPanel>
+					</apex:facet>
+
+					<apex:facet name="header">
+						<apex:outputPanel layout="block" style="text-align:center">
+						<apex:outputText styleClass="headerRow" value="{!$Label[tableTitle]}" rendered="{!IF(tableTitle != null && (LEN(tableTitle) > 0), true, false)}" />
+						</apex:outputPanel>
+					</apex:facet>
+				</apex:pageBlockTable>
+
+				<apex:outputPanel rendered="{!IF(pendingfacilities == null || pendingfacilities.size == 0, true, false)}">
+					<apex:outputText value="{!$Label.llc_bi__related_list_no_records_to_display}"/>
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+
+	<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+</apex:page>

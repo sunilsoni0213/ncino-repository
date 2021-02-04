@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:outputLabel value="{!$Label.nretail__deprecated_method}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__fieldset_error}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__communication_error}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__loan_id}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__loan_id_description}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__income_error}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__retrieve_pricing_options}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__retrieve_pricing_options_description}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__filter_pricing_options_by_dti}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__filter_pricing_options_by_dti_description}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__error_found_with_rule}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__retail_loan_group_name}" rendered="false"/>
+    <apex:outputLabel value="{!$Label.nretail__loan_not_found}" rendered="false"/>
+
+</apex:page>

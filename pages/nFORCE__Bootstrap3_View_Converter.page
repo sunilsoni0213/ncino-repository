@@ -1,0 +1,5 @@
+<apex:page standardController="nFORCE__View__c" extensions="nFORCE.Bootstrap3ViewsConverterController" action="{!save}">
+	<apex:form >
+		<apex:outputText value="{!nFORCE__View__c.Id} {!nFORCE__View__c.nFORCE__Edit__c} {!nFORCE__View__c.nFORCE__Read_Only__c} {!nFORCE__View__c.nFORCE__Preview__c}" rendered="false"/>
+	</apex:form>
+</apex:page>

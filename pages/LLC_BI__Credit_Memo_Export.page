@@ -1,0 +1,54 @@
+<apex:page renderAs="pdf" applyBodyTag="false" showHeader="false" sidebar="false" controller="LLC_BI.CreditMemoController">
+	<head>
+		<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__credit_memo_pdf_css)}" />
+
+		<link href="{!URLFOR($Resource.nFORCE__ncDataSnapshot, 'css/Style.css')}" type="text/css" rel="stylesheet" />
+		<link href="/resource/{!creditMemoExportCSS}" type="text/css" rel="stylesheet" />
+
+	</head>
+	<div class="logoImage">
+		<img src="/resource/{!creditMemoLogo}" />
+	</div>
+	<div class="loanName contextObjectName">
+		<apex:outputText value="{!contextObjectName}" />
+	</div>
+	<div class="creditMemoName">
+		<apex:outputText value="{!creditMemoName}" />
+	</div>
+	<div class="currentTimestamp">
+		<apex:outputText value="{!currentTimestamp}" />
+	</div>
+	<div class="generatedBy">
+		<apex:outputText value="{!JSENCODE($Label.llc_bi__generated_by)} {!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)}" />
+	</div>
+
+	<apex:outputText value="{!creditMemoResource}" escape="false" />
+
+	<body>
+		<div class="container">
+			<apex:variable var="cnt" value="{!0}" />
+			<apex:repeat value="{!renderedViews}" var="view">
+				<apex:outputPanel rendered="{!!view.screenSection.nFORCE__Inactive__c}">
+					<apex:outputPanel rendered="{!view.screenSection.nFORCE__Break_Page_Before__c}">
+						<div style="page-break-before:always"></div>
+					</apex:outputPanel>
+					<div class="{!view.cssClass}">
+						<apex:outputPanel rendered="{!NOT(view.screenSection.nFORCE__Headless__c)}">
+							<div class="row">
+								<div class="col-xs-12">
+									<h3><apex:outputText value="{!view.screenSection.Name}"/></h3>
+								</div>
+							</div>
+							<div style="clear:both;"></div>
+						</apex:outputPanel>
+						<apex:outputText value="{!view.renderedView}" escape="false"/>
+					</div>
+					<apex:outputPanel rendered="{!view.screenSection.nFORCE__Break_Page_After__c}">
+						<div style="page-break-after:always"></div>
+					</apex:outputPanel>
+					<div style="clear:both;"></div>
+				</apex:outputPanel>
+			</apex:repeat>
+		</div>
+	</body>
+</apex:page>

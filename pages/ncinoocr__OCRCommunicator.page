@@ -1,0 +1,2 @@
+<apex:page controller="ncinoocr.OCROAuth2Controller" action="{!updateCommunicationProvider}" >
+</apex:page>

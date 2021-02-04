@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Share_Brand_Records_With_Customer_Portal_2_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Brand Records With Customer Portal 2 Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal_2</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>nSight Financial Personal</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Brand_Records_With_Customer_Portal_2_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Brand Records With Customer Portal 2 User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal_2</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>nSight Financial</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Brand_Records_With_Customer_Portal_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Brand Records With Customer Portal Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>nSight Financial</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Brand_Records_With_Customer_Portal_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Brand Records With Customer Portal Users</label>
+        <sharedTo>
+            <guestUser>Customer_Portal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>nSight Financial Personal</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Brand_Records_With_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Brand Records With Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>nFORCE__Is_Applied__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Brand_Records_With_Guest_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Brand Records With Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal_2</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>nFORCE__Is_Applied__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingGuestRules>
+</SharingRules>

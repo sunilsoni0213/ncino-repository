@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>A set of key-value pairs that can be used to set organization-wide parameters</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__Category_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. It indicates the category of the system property. The combination of the category and the key is used to uniquely identify the system property.</description>
+        <externalId>false</externalId>
+        <label>Category Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It describes the system property in more depth.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the custom setting implemented in order to describe the Category and System Property.</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. It indicates if the system property is active. If the system property is not active, it will not be used.</description>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. The combination of the category and the key is used to uniquely identify the system property.</description>
+        <externalId>false</externalId>
+        <label>Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. It indicates the value of the system property.</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>System Properties</label>
+    <listViews>
+        <fullName>Memo_View</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Category_Name__c</columns>
+        <columns>LLC_BI__Is_Active__c</columns>
+        <columns>LLC_BI__Key__c</columns>
+        <columns>LLC_BI__Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>Memo</value>
+        </filters>
+        <label>Memo View</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Underwriting</fullName>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>LLC_BI__Category_Name__c</columns>
+        <columns>LLC_BI__Is_Active__c</columns>
+        <columns>LLC_BI__Key__c</columns>
+        <columns>LLC_BI__Value__c</columns>
+        <columns>SETUP_TYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>underwriting</value>
+        </filters>
+        <label>Underwriting</label>
+        <language>en_US</language>
+    </listViews>
+    <visibility>Public</visibility>
+</CustomObject>

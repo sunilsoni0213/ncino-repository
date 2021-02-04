@@ -1,0 +1,5 @@
+<apex:page standardController="Contact" extensions="nCBC.VF_CBCCreditPull" action="{!autoRun}" rendered="true">
+	<apex:pageMessages escape="false" />
+	<apex:outputLink value="/{!creditReportId}" rendered="{!NOT(creditReportId==null)}">{!$Label.ncbc__view_credit_report}</apex:outputLink><br/>
+	<apex:outputLink value="/{!Contact.id}">Return to {!Contact.FirstName} {!Contact.LastName}</apex:outputLink>
+</apex:page>

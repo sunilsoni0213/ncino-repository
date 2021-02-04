@@ -1,0 +1,60 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	controller="nPortal.OnlineApplicationController"
+	extensions="nPortal.LayoutController"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	action="{!initApp}"
+	>
+
+	<html class="portal-html" lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:include pageName="nPortal__PortalIncludes" />
+			<c:OnlineApplicationIncludes />
+			<c:SelfRegistrationIncludes />
+			<c:PortalConfiguration />
+			<apex:includeScript value="{!URLFOR($Resource.nFORCE__nforms, 'nforms.min.js')}" />
+			<c:IdScanIncludes />
+			<c:OffersIncludes />
+		</head>
+		<body class="portal-body slds has-nstyle" ng-app="onlineAppApp">
+			<portal-loader slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-loader>
+			<animated-loader></animated-loader>
+			<portal-message slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-message>
+			<handle-hash-change />
+
+			<apex:include pageName="{!IF(isNull(layoutPage), 'LayoutHatteras', layoutPage)}" />
+
+			<c:PortalFooter />
+
+			<!-- Script Dependencies -->
+			<c:ApplicationTopbarService />
+			<c:ApplicationNavDataService />
+			<c:OnlineFormsDataService />
+			<c:SecurityBadgeDataService />
+			<c:TileDataService />
+			<c:SearchDataService />
+			<c:OwnersDataService />
+			<c:LoanTeamPanel />
+			<c:EidVerificationService />
+			<c:FundingDataService />
+			<c:DocumentDataService />
+			<c:TransactionLogDataService />
+			<c:CollateralDataService />
+			<c:AncillaryServicesDataService />
+			<c:PollingDataService />
+			<c:PasswordDataService />
+			<c:PortalUserService />
+			<c:LanguageDataService />
+			<c:portalQuestionnaireDataService />
+			<c:IdScanDataService />
+			<c:CreditDataService />
+			<c:OffersDataService />
+			<!-- /Script Dependencies -->
+		</body>
+	</html>
+</apex:page>

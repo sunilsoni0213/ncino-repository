@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Chief_Credit_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Chief_Executive_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Team_Leader</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Senior_Credit_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>LLC_BI__Account__c</field>
+        <field>LLC_BI__Amount__c</field>
+        <field>LLC_BI__Product_Line__c</field>
+        <field>LLC_BI__Product_Type__c</field>
+        <field>LLC_BI__Product__c</field>
+        <field>LLC_BI__InterestRate__c</field>
+        <field>LLC_BI__isRenewal__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>LLC_BI__Loan_Officer__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is UNsecured 
+(2) Loan Amount is Within a Loan Officer&apos;s ILA 
+(3) Total Exposure &lt;= UNsecured Individual Lending Authority</description>
+        <entryCriteria>
+            <formula>LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Unsecured_Individual_Lending_Authority__c</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Unsecured ILA Approval Process</label>
+        <name>Unsecured_ILA_Approval_Process</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is UNsecured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s UNsecured ILA 
+(3) Loan Amount IS Within Manager&apos;s UNsecured ILA 
+(4) Total Exposure &lt;= Manager&apos;s UNsecured Individual Lending Authority</description>
+        <entryCriteria>
+            <formula>AND ( 
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Unsecured_Individual_Lending_Authority__c, 
+LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Manager.Unsecured_Individual_Lending_Authority__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>UNsecured Manager ILA Approval Process</label>
+        <name>UNsecured_Manager_ILA_Approval_Process</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>pilar.daniels.pgjtctwwmzrn@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is UNsecured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s UNsecured ILA 
+(3) Loan Amount is NOT Within the Manger&apos;s UNsecured ILA 
+(4) Loan Amount IS Within the Manager&apos;s Manager UNsecured ILA
+(5) Total Exposure &lt;= Manager&apos;s Manager UNsecured Individual Lending Authority</description>
+        <entryCriteria>
+            <formula>AND ( 
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Unsecured_Individual_Lending_Authority__c, 
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Manager.Unsecured_Individual_Lending_Authority__c, 
+LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Manager.Manager.Unsecured_Individual_Lending_Authority__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>UNsecured Manager&apos;s Manager ILA</label>
+        <name>UNsecured_Manager_s_Manager_ILA</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>demomastertest.2j708bheislu@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is UNsecured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s UNsecured ILA 
+(3) Loan Amount is Within the CEO&apos;s UNsecured ILA 
+(4) Total Exposure &lt;= $400,000</description>
+        <entryCriteria>
+            <formula>AND (
+LLC_BI__Amount__c &gt;100000,
+LLC_BI__Amount__c &lt;= 300000)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>UNsecured CEO ILA</label>
+        <name>UNsecured_CEO_ILA</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>katie.wahl.w6eiuhmipu8b@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>pilar.daniels.pgjtctwwmzrn@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is UNsecured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s UNsecured ILA 
+(3) Loan Amount is Within the SCO + CCO Combined ILA 
+(4) Total Exposure &lt;= $400,000</description>
+        <entryCriteria>
+            <formula>AND ( 
+LLC_BI__Amount__c &gt; 300000, 
+LLC_BI__Amount__c &lt;= 400000)</formula>
+        </entryCriteria>
+        <label>UNsecured SCO + CCO ILA</label>
+        <name>UNsecured_SCO_CCO_ILA</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Approval process when a loan meets the following conditions: 
+(1) Total Exposure &lt;= $400,000 
+(2) Loan is UNSECURED
+(3) Risk Grade is &lt; 6
+(4) Employee Loan = FALSE
+(5) Reg O = FALSE</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND (
+LLC_BI__Product_Reference__r.Unsecured_Product__c = TRUE,
+LLC_BI__Account__r.Total_Exposure__c &lt;= 400000,
+ISPICKVAL(LLC_BI__Stage__c , &apos;Underwriting&apos;),
+ISPICKVAL(LLC_BI__Status__c , &apos;Open&apos;),
+LLC_BI__Employee_Loan__c = FALSE,
+LLC_BI__Reg_O_Loan__c = FALSE)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Loan_Approval_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Credit_Approval_Date_Today</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Last_Approval_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Proposal</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_is_Review_Ready_upon_approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Loan_Last_Approval_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Rejection_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Loan_Stage_Approval_Loan_Committee</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Unsecured Loan Approval Processes</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>5</processOrder>
+    <recallActions>
+        <action>
+            <name>Loan_Last_Approval_Status_Removed</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

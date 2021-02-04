@@ -1,0 +1,9 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="nFORCE.ScreenController">
+
+	<c:Beneficiary />
+
+	<c:BeneficiaryConfiguration nextHref="{!nextHref.url}"
+		contextId="{!contextObjectId}"
+		sectionId="{!screenSections[0].Id}"/>
+</apex:page>

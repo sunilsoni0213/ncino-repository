@@ -1,0 +1,162 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController">
+
+<c:Includes enableBootstrap3="true" enableFontAwesome="true" enableBS3Namespace="true" enableLifeCycleApp="true" runLifeCycleApp="false"/>
+
+<c:LifeCycle_Functions />
+<c:KoHeadingTemplate />
+<c:KoWidget_Templates />
+
+<apex:repeat value="{!screenSections}" var="section"> 
+	<apex:outputPanel layout="block" rendered="{!NOT(ISBLANK(section.Widget__r ))}">
+		<apex:variable var="APP_GUID" value="{!section.Id}{!guid}"/>
+
+		<div data-bind="stopBinding: true">
+			<div id="{!section.Id}">
+
+				<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<span data-bind="text: screenSection.name" />
+				</apex:define>
+				<apex:define name="right" />
+				</apex:composition>
+
+				<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<div class="col-xs-12">
+								<div class="raw_html" style="display: none">
+									<apex:outputText value="{!section.Widget__r.nFORCE__View__c}" escape="false" />
+								</div>
+							</div>
+						</apex:define>
+					</apex:composition>
+
+				</apex:define>
+				</apex:composition>
+
+			</div>
+		</div>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_One__c != null && section.Widget__r.nFORCE__Script_Resource_One__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_One__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Two__c != null && section.Widget__r.nFORCE__Script_Resource_Two__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Two__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Three__c != null && section.Widget__r.nFORCE__Script_Resource_Three__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Three__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Four__c != null && section.Widget__r.nFORCE__Script_Resource_Four__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Four__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Five__c != null && section.Widget__r.nFORCE__Script_Resource_Five__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Five__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Six__c != null && section.Widget__r.nFORCE__Script_Resource_Six__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Six__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Seven__c != null && section.Widget__r.nFORCE__Script_Resource_Seven__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Seven__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Eight__c != null && section.Widget__r.nFORCE__Script_Resource_Eight__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Eight__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Nine__c != null && section.Widget__r.nFORCE__Script_Resource_Nine__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Nine__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Ten__c != null && section.Widget__r.nFORCE__Script_Resource_Ten__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Ten__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Eleven__c != null && section.Widget__r.nFORCE__Script_Resource_Eleven__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Eleven__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Twelve__c != null && section.Widget__r.nFORCE__Script_Resource_Twelve__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Twelve__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Thirteen__c != null && section.Widget__r.nFORCE__Script_Resource_Thirteen__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Thirteen__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Fourteen__c != null && section.Widget__r.nFORCE__Script_Resource_Fourteen__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Fourteen__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Script_Resource_Fifteen__c != null && section.Widget__r.nFORCE__Script_Resource_Fifteen__c != ''}">
+			<apex:includeScript value="{!URLFOR($Resource[section.Widget__r.nFORCE__Script_Resource_Fifteen__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_One__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_One__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_One__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Two__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Two__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Two__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Three__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Three__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Three__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Four__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Four__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Four__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Five__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Five__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Five__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Six__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Six__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Six__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Seven__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Seven__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Seven__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Eight__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Eight__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Eight__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Nine__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Nine__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Nine__c])}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!section.Widget__r.nFORCE__Stylesheet_Resource_Ten__c != null && section.Widget__r.nFORCE__Stylesheet_Resource_Ten__c != ''}">
+			<apex:stylesheet value="{!URLFOR($Resource[section.Widget__r.nFORCE__Stylesheet_Resource_Ten__c])}"/>
+		</apex:outputPanel>
+		<c:RegisterKoWidget recordId="{!contextObjectId}" 
+				screenSectionId="{!section.Id}"
+				widgetId="{!section.nFORCE__Widget__c}"
+				appName="{!section.Widget__r.Name}"
+				guid="{!APP_GUID}" />
+	</apex:outputPanel>
+</apex:repeat>
+
+<script type="text/javascript">
+(function(app){
+	jQuery(function(){
+		jQuery('div.raw_html').each(function(){
+			var text = jQuery(this).text();
+			var html = unescapeHTML(text);
+			jQuery(this).html(html);
+			jQuery(this).show();
+		});
+	});
+})();
+</script>
+
+</apex:page>

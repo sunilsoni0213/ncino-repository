@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Product_Type_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Product Type Object is used to to track Product Types,  which is the middle level in the Product Hierarchy</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CSA_PSC_Overview</fullName>
+        <description>Used for Product Type List</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Booked_Config_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Closed_Config_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Excluded_Config_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Rdy_To_Trans_Confg_Cnt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSA PSC Overview</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSIDDP__CSI_DepAct_DocPrep</fullName>
+        <description>CSI DepAct DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Usage_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI DepAct DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSI_DepAct_DocPrep</fullName>
+        <description>CSI DepAct DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Usage_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI DepAct DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Comm DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Usage_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI Comm DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Expere_DocPrep</fullName>
+        <description>Expere_DocPrep</description>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PrecisionLender_Pricing</fullName>
+        <description>PrecisionLender Pricing Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PrecisionLender Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKDDP__WK_DepAct_DocPrep</fullName>
+        <description>WK DepAct DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__configKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Default_App__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Default_Collateral_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Interest_Accrual_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maintenance_App__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Offer_Fieldset__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Booked_Config_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Closed_Config_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Booked__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Closed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Excluded__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ready_To_Transmit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Excluded_Config_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_State_Rdy_To_Trans_Confg_Cnt__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Usage_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>WK DepAct DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Booked__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically whenever a child product state config record is created with &quot;LLC_BI__Booked__c&quot; enabled. This field links to a Product State Config Pivot record which specifies all &quot;states&quot; (stage and status) that are considered &quot;Booked&quot; for this product type in the system.</description>
+        <externalId>false</externalId>
+        <label>Product State Config Booked</label>
+        <referenceTo>LLC_BI__Product_State_Config_Pivot__c</referenceTo>
+        <relationshipLabel>Product Types Booked</relationshipLabel>
+        <relationshipName>Product_Types</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional, but required for deposit product types. It is manually populated. This field is used to specify the type of account that this product type relates to.</description>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>Savings</fullName>
+                    <default>false</default>
+                    <label>Savings</label>
+                </value>
+                <value>
+                    <fullName>Certificate of Deposit</fullName>
+                    <default>false</default>
+                    <label>Certificate of Deposit</label>
+                </value>
+                <value>
+                    <fullName>CESA</fullName>
+                    <default>false</default>
+                    <label>CESA</label>
+                </value>
+                <value>
+                    <fullName>HSA</fullName>
+                    <default>false</default>
+                    <label>HSA</label>
+                </value>
+                <value>
+                    <fullName>IRA</fullName>
+                    <default>false</default>
+                    <label>IRA</label>
+                </value>
+                <value>
+                    <fullName>Money Market</fullName>
+                    <default>false</default>
+                    <label>Money Market</label>
+                </value>
+                <value>
+                    <fullName>Vehicle</fullName>
+                    <default>false</default>
+                    <label>Vehicle</label>
+                </value>
+                <value>
+                    <fullName>Unsecured Term</fullName>
+                    <default>false</default>
+                    <label>Unsecured Term</label>
+                </value>
+                <value>
+                    <fullName>Unsecured Line of Credit</fullName>
+                    <default>false</default>
+                    <label>Unsecured Line of Credit</label>
+                </value>
+                <value>
+                    <fullName>HELOC</fullName>
+                    <default>false</default>
+                    <label>HELOC</label>
+                </value>
+                <value>
+                    <fullName>Other Term Loans</fullName>
+                    <default>false</default>
+                    <label>Other Term Loans</label>
+                </value>
+                <value>
+                    <fullName>Refinance</fullName>
+                    <default>false</default>
+                    <label>Refinance</label>
+                </value>
+                <value>
+                    <fullName>Purchase</fullName>
+                    <default>false</default>
+                    <label>Purchase</label>
+                </value>
+                <value>
+                    <fullName>Specialty</fullName>
+                    <default>false</default>
+                    <label>Specialty</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Closed__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically whenever a child product state config record is created with &quot;LLC_BI__Closed__c&quot; enabled. This field links to a Product State Config Pivot record which specifies all &quot;states&quot; (stage and status) that are considered &quot;Closed&quot; for this product type in the system.</description>
+        <externalId>false</externalId>
+        <label>Product State Config Closed</label>
+        <referenceTo>LLC_BI__Product_State_Config_Pivot__c</referenceTo>
+        <relationshipLabel>Product Types Closed</relationshipLabel>
+        <relationshipName>Product_Types_Closed</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Collapsed_Offer_Card_Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this text field to specify the field set that appears in the collapsed offer cards for this product type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the field set with all necessary fields that appear in the collapsed offer card for this product type.</inlineHelpText>
+        <label>Collapsed Offer Card Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Default_App__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field houses a default app value for product types if a product doesn&apos;t have an associated app (group/route combination for navigation).</description>
+        <externalId>false</externalId>
+        <label>Default App</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Default_Collateral_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the default collateral type for this product type record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick the value of the desired default collateral type.</inlineHelpText>
+        <label>Default Collateral Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Excluded__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically whenever a child product state config record is created with &quot;LLC_BI__Is_Excluded_From_Stage_Duration__c&quot; enabled. This field links to a Product State Config Pivot record which specifies all &quot;states&quot; (stage and status) that are considered Excluded for this product type in the system. It is used to specify stages that are should be eclused from stage duration in the system.</description>
+        <externalId>false</externalId>
+        <label>Product State Config Excluded</label>
+        <referenceTo>LLC_BI__Product_State_Config_Pivot__c</referenceTo>
+        <relationshipLabel>Product State Config Excluded</relationshipLabel>
+        <relationshipName>Product_Types_Excluded</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Expanded_Offer_Card_Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this text field to specify the field set that appears in the expanded offer cards for this product type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the field set with all necessary fields that appear in the expanded offer card for this product type.</inlineHelpText>
+        <label>Expanded Offer Card Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Accrual_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually selected. This field sets the interest accrual methodology for determining the amount of interest owed per period. It is used for Rate &amp; Payment streams.</description>
+        <externalId>false</externalId>
+        <label>Interest Accrual Method</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>30_360</fullName>
+                    <default>false</default>
+                    <label>30_360</label>
+                </value>
+                <value>
+                    <fullName>Actual_360</fullName>
+                    <default>false</default>
+                    <label>Actual_360</label>
+                </value>
+                <value>
+                    <fullName>Actual_365</fullName>
+                    <default>false</default>
+                    <label>Actual_365</label>
+                </value>
+                <value>
+                    <fullName>Actual_Actual</fullName>
+                    <default>false</default>
+                    <label>Actual_Actual</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Deposit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set. This checkbox field is selected if the product object field on the parent product line is set to deposit.</description>
+        <externalId>false</externalId>
+        <formula>CONTAINS(TEXT(LLC_BI__Product_Line__r.LLC_BI__Product_Object__c), &quot;Deposit__c&quot;)</formula>
+        <label>Is Deposit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set. This checkbox field is selected if the product object field on the parent product line is set to Loan.</description>
+        <externalId>false</externalId>
+        <formula>CONTAINS(TEXT(LLC_BI__Product_Line__r.LLC_BI__Product_Object__c), &quot;Loan__c&quot;)</formula>
+        <label>Is Loan</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Information_Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Manually populate this text field with the name of a field set that contains the input fields that should appear on a product type. This allows for the dynamic display of the loan information input fields.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of a field set that maps to this product type.</inlineHelpText>
+        <label>Loan Information Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maintenance_App__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field automatically populates via the treasury maintenance configuration. It associates converted treasury services to product-specific maintenance actions. This field corresponds to the unique app name on the route object to control what is displayed to users. Default is null.</description>
+        <externalId>false</externalId>
+        <label>Maintenance App</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Offer_Fieldset__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Manually populate this text field with the name of a field set that contains the fields that should appear on an offer. When the terms of the product are updated, the populated fields allow for the dynamic display of offers.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manually populate this text field with the name of a field set that contains the fields that should appear on an offer. When the terms of the product are updated, the populated fields allow for the dynamic display of offers.</inlineHelpText>
+        <label>Offer Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is calculated via a roll-up. This is the number of Products related to the Product Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of Products related to the Product Type.</inlineHelpText>
+        <label>Product Count</label>
+        <summaryForeignKey>LLC_BI__Product__c.LLC_BI__Product_Type__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Line__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when creating a product type from a product line, otherwise it is manually populated. This field is used to lookup to Product Line to associate with the Product Type.</description>
+        <externalId>false</externalId>
+        <label>Product Line</label>
+        <referenceTo>LLC_BI__Product_Line__c</referenceTo>
+        <relationshipLabel>Product Types</relationshipLabel>
+        <relationshipName>Product_Types</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_State_Booked_Config_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically. It is a Roll Up Summary used to calculate how many Product State Configs have &quot;LLC_BI__Booked__c&quot; checked. This value is limited to 10, as that is the number of &quot;states&quot; that can be recorded in the LLC_BI__Product_State_Config_Pivot__c table.</description>
+        <externalId>false</externalId>
+        <label>Product State Booked Config Count</label>
+        <summaryFilterItems>
+            <field>LLC_BI__Product_State_Config__c.LLC_BI__Is_Booked__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>LLC_BI__Product_State_Config__c.LLC_BI__Product_Type__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_State_Closed_Config_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically. It is a Roll Up Summary used to calculate how many Product State Configs have &quot;LLC_BI__Closed__c&quot; selected. This value is limited to 10, as that is the number of &quot;states&quot; that can be recorded in the LLC_BI__Product_State_Config_Pivot__c table.</description>
+        <externalId>false</externalId>
+        <label>Product State Closed Config Count</label>
+        <summaryFilterItems>
+            <field>LLC_BI__Product_State_Config__c.LLC_BI__Is_Closed__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>LLC_BI__Product_State_Config__c.LLC_BI__Product_Type__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_State_Excluded_Config_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically. It is a Roll Up Summary used to calculate how many Product State Configs have &quot;LLC_BI__Is_Excluded_From_Stage_Duration__c&quot; checked. This value is limited to 10, as that is the number of &quot;states&quot; that can be recorded in the LLC_BI__Product_State_Config_Pivot__c table.</description>
+        <externalId>false</externalId>
+        <label>Product State Excluded Config Count</label>
+        <summaryFilterItems>
+            <field>LLC_BI__Product_State_Config__c.LLC_BI__Is_Excluded_From_Stage_Duration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>LLC_BI__Product_State_Config__c.LLC_BI__Product_Type__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_State_Rdy_To_Trans_Confg_Cnt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically. It is a Roll Up Summary used to calculate how many Product State Configs have &quot;LLC_BI__Is_Ready_to_Transmit__c&quot; checked. This value is limited to 10, as that is the number of &quot;states&quot; that can be recorded in the LLC_BI__Product_State_Config_Pivot__c table.</description>
+        <externalId>false</externalId>
+        <label>Product State Rdy to Transmit Config Cnt</label>
+        <summaryFilterItems>
+            <field>LLC_BI__Product_State_Config__c.LLC_BI__Is_Ready_To_Transmit__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>LLC_BI__Product_State_Config__c.LLC_BI__Product_Type__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Ready_To_Transmit__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically whenever a child product state config record is created with &quot;LLC_BI__Is_Ready_To_Transmit__c&quot; enabled. This field links to a Product State Config Pivot record which specifies all &quot;states&quot; (stage and status) that are considered Ready to Transmit for this product type in the system. This is used to specify stages that are considered &quot;Ready to Transmit&quot; to the CUSO.</description>
+        <externalId>false</externalId>
+        <label>Product State Config Ready To Transmit</label>
+        <referenceTo>LLC_BI__Product_State_Config_Pivot__c</referenceTo>
+        <relationshipLabel>Product Types Ready To Transmit</relationshipLabel>
+        <relationshipName>Product_Types_Ready_To_Transmit</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Recalculate_Offers_Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this text field with the field set name that contains the desired fields to be displayed in the recalculate offers component on the offers page. By default, this field set is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Manually populate this text field with the name of a field set that contains the fields that should appear in the recalculate offers component for this product type.</inlineHelpText>
+        <label>Recalculate Offers Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Reference_Image__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this image field to display the image associated with each product type. By default, the system displays either the designated product image or the default image.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Click an image to begin the process associated with the product type.</inlineHelpText>
+        <label>Reference Image</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Start_Production_Application__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional text field to define the group or route to which the system directs the user after the user selects a product type. The system only uses the app or route defined in this field on the initial creation of the new loan or product. By default, it is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When the user selects a product type, the system redirects them to the app or route name entered here.</inlineHelpText>
+        <label>Start Product Application</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Usage_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. This field determines the availability of its products as they relate to Doc Man and Product VF Pages.</description>
+        <externalId>false</externalId>
+        <label>Usage Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Loan</fullName>
+                    <default>true</default>
+                    <label>Loan</label>
+                </value>
+                <value>
+                    <fullName>Global</fullName>
+                    <default>false</default>
+                    <label>Global</label>
+                </value>
+                <value>
+                    <fullName>Business</fullName>
+                    <default>false</default>
+                    <label>Business</label>
+                </value>
+                <value>
+                    <fullName>Treasury Management</fullName>
+                    <default>false</default>
+                    <label>Treasury Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__configKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated. The Config Key field is an auto-number and is used to apply a unique Name and Number to the product type allowing it to be used with the Config Key configuration.</description>
+        <displayFormat>KY_PT_{00000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Config Key</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This Field is used to specify a unique identifier for Product Type records.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nPortal__Online_Application_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is used to indicate if the product type is
+           available for use in Customer Portal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this field to enable this product type for Customer Portal online applications.</inlineHelpText>
+        <label>Online Application Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nPortal__Online_Application_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup which maps to a UI Framework Group record that represents the Online Application used for this Product Type.</description>
+        <externalId>false</externalId>
+        <label>Online Application Group</label>
+        <referenceTo>nFORCE__Group__c</referenceTo>
+        <relationshipLabel>Product Types</relationshipLabel>
+        <relationshipName>Product_Types</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nPortal__Online_Application_Header_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Header text that appears on the Self Registration page for this product type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Header text to be displayed on the Self Registration page for this product type.</inlineHelpText>
+        <label>Online Application Header Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nPortal__Online_Application_Subheader_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subheader text that appears beneath the Online Application Header Text on the Self Registration page for this product type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Subheader text to be displayed beneath the Header text on the Self Registration page for this product type.</inlineHelpText>
+        <label>Online Application Subheader Text</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nRetail__Display_Monthly_Expenses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional checkbox field to determine if the monthly expenses will or will not be displayed. By default, this box is unchecked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the borrower’s monthly expenses will be displayed on the Financial Overview route.</inlineHelpText>
+        <label>Display Monthly Expenses</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__eTran_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the SBA eTran specific code that represents this product type.</description>
+        <externalId>false</externalId>
+        <label>eTran Value</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Product Type</label>
+    <nameField>
+        <label>Product Type Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Product Types</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>LLC_BI__Product_Line__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__lookupKey__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>LLC_BI__Product_Line__c</lookupFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>LLC_BI__Product_State_Booked_Config_Count</fullName>
+        <active>true</active>
+        <errorConditionFormula>LLC_BI__Product_State_Booked_Config_Count__c &gt; 10</errorConditionFormula>
+        <errorMessage>A maximum of 10 booked config records per product type is currently supported.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Product_State_Closed_Config_Count</fullName>
+        <active>true</active>
+        <errorConditionFormula>LLC_BI__Product_State_Closed_Config_Count__c &gt; 10</errorConditionFormula>
+        <errorMessage>A maximum of 10 closed config records per product type is currently supported.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Product_State_Excluded_Config_Count</fullName>
+        <active>true</active>
+        <errorConditionFormula>LLC_BI__Product_State_Excluded_Config_Count__c &gt; 10</errorConditionFormula>
+        <errorMessage>A maximum of 10 excluded config records per product type is currently supported.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Product_State_Rdy_To_Trans_Confg_Cnt</fullName>
+        <active>true</active>
+        <errorConditionFormula>LLC_BI__Product_State_Rdy_To_Trans_Confg_Cnt__c &gt; 10</errorConditionFormula>
+        <errorMessage>A maximum of 10 ready to transmit config records per product type is currently supported.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>LLC_BI__Batch_Update_Loans</fullName>
+        <availability>online</availability>
+        <description>This button will execute a batch update for all loans affected by the currently defined Product State Configs.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Batch Update Loans</masterLabel>
+        <openType>sidebar</openType>
+        <page>LLC_BI__Product_State_Config_Batch_Update</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>LLC_BI__Batch_Update_Stage_Duration</fullName>
+        <availability>online</availability>
+        <description>This button will execute a batch update for all loan stage history records affected by the currently defined Product State Configs.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Batch Update Stage Duration</masterLabel>
+        <openType>sidebar</openType>
+        <page>LLC_BI__Excluded_Stage_Duration_Batch_Update</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

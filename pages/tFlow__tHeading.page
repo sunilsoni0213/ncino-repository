@@ -1,0 +1,13 @@
+<apex:page >
+	<div class="force">
+		<div class="row-fluid">
+			<div class="pull-left">
+				<h4><apex:insert name="content-left"/></h4>
+			</div>
+			<div class="pull-right">
+				<apex:insert name="content-right"/>
+			</div>
+		</div>
+		<hr class="divider" />
+	</div>
+</apex:page>

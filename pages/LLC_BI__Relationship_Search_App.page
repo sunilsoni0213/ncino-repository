@@ -1,0 +1,52 @@
+<apex:page docType="html-5.0"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.RelationshipSearchAppController">
+
+	<c:RelationshipSearchIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncCustomerCreationSearch, 'application/App.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncCustomerCreationSearch, 'application/Bootstrap.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncCustomerCreationSearch, 'controllers/CustomerCreationSearchController.js')}"/>
+
+	<c:CustomerCreationSearchConfiguration />
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="ncCustomerCreationSearch"
+									  ng-controller="CustomerCreationSearchController as vm" class="ng-cloak">
+									<p class="slds-p-vertical--medium">
+										{!$Label.Relationship_Search_P1}
+									</p>
+									<relationship-search ng-if="!vm.isIndividual"
+																skip-individual-accounts="true"
+																selected-relationship="vm.selection"
+																has-searched="vm.hasSearched"
+																on-search="vm.setRelationshipName(searchTerm)">
+									</relationship-search>
+
+									<individual-search ng-if="vm.isIndividual"
+															 selected-individual="vm.selection"
+															 has-searched="vm.hasSearched"
+															 on-search="vm.setIndividualName(firstName, lastName)">
+									</individual-search>
+
+									<button class="slds-button slds-button--brand slds-float--right slds-m-top--medium"
+											  ng-if="vm.hasSearched && vm.shouldShowNewCustomerButton()"
+											  ng-click="vm.createNewCustomer()">
+										{!$Label.Relationship_Search_New_Customer}
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

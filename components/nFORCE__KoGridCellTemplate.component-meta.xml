@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>32.0</apiVersion>
+    <description>Provides the default markup for a grid cell.  Define a &apos;grid-cell-content&apos; Knockout template to inject the cell&apos;s content.</description>
+    <label>KoGridCellTemplate</label>
+</ApexComponent>

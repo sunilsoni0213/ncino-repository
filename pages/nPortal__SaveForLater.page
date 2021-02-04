@@ -1,0 +1,64 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<html class="portal-html" lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<title>{!$Label.Save_For_Later_Title}</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:include pageName="nPortal__PortalIncludes" />
+		</head>
+		<body class="portal-body slds has-nstyle" ng-app="customerPortalApp">
+			<div class="portal-wrapper-full" n-style="pso-wrapper">
+				<div class="slds-grid slds-wrap">
+					<div class="portal-wrapper slds-size--1-of-1">
+						<c:PortalHeader />
+					</div>
+				</div>
+				<div>
+					<div class="portal-center-column slds-col--padded slds-size--1-of-1
+						slds-medium-size--3-of-4 slds-large-size--2-of-4">
+						<responsive-heading
+							header-text="{!$Label.Save_Exit_Header}"
+							subheader-text="{!$Label.Save_Exit_Sub_Header}">
+						</responsive-heading>
+						<div class="slds-form--stacked slds-p-left--x-large slds-p-right--x-large
+							slds-p-top--x-large slds-p-bottom--xx-large slds-m-top--xx-large
+							portal-media-icon-parent slds-theme--shade" n-style="pso-section">
+							<span class="slds-icon_container slds-icon-action-email
+								slds-icon_container--circle portal-media-icon-child" n-style="pso-section-icon">
+								<img height="60" class="slds-icon"
+									src="{!URLFOR($Resource.nFORCE__SLDS0102,
+										'/assets/icons/action/email_120.png')}" />
+							</span>
+							<h2 class="slds-text-heading--medium portal-center-text slds-m-top--medium" n-style="pso-smallheader">
+								{!$Label.Save_Exit_Check_Email_Header}
+							</h2>
+							<p class="slds-m-top--medium portal-center-text">
+								{!$Label.Save_Exit_Check_Email_Text_1}
+								{!SUBSTITUTE($CurrentPage.parameters.email, ' ', '+')}{!$Label.Save_Exit_Check_Email_Text_2}
+								{!$Label.Save_Exit_Contact_Email} {!$Label.Save_Exit_Check_Email_Text_3}
+							</p>
+							<div class="slds-grid slds-grid--align-center portal-no-margin">
+								<a class="slds-button slds-button--neutral slds-m-top--large slds-size--3-of-4"
+									href="{!$Page.PortalLogin}" n-style="pso-button-secondary">
+									{!$Label.Save_Exit_Check_Email_Login_Button}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<c:PortalFooter />
+			<c:PortalConfiguration />
+			<c:PasswordDataService />
+			<c:PortalUserService />
+			<c:LanguageDataService />
+		</body>
+	</html>
+</apex:page>

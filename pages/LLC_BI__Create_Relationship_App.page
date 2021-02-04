@@ -1,0 +1,20 @@
+<apex:page docType="html-5.0"
+	showHeader="false"
+	sideBar="false"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.RelationshipTypeAppController"
+	action="{!relationshipDetailsCheck}"
+>
+	<apex:slds />
+	<c:CreateRelationshipIncludes />
+
+	<div class="nds-section slds-clearfix slds-p-bottom_medium">
+		<div id="createRelationship">
+			<c:CreateRelationshipConfiguration />
+			<c:CreateRelationshipPartial />
+			<create-relationship></create-relationship>
+		</div>
+		<c:CustomerCreationSearch />
+	</div>
+
+</apex:page>

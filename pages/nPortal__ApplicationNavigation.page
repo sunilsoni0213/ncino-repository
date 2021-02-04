@@ -1,0 +1,8 @@
+<apex:page sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+	<application-navigation display="vertical"></application-navigation>
+</apex:page>

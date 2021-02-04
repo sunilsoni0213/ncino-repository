@@ -1,0 +1,44 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+	<c:BorrowingStructureIncludes />
+	<c:AuthorizedSignerIncludes />
+	<apex:slds />
+	<c:SetSldsScope elementSelectorsToAddScopeTo="div.terms-conditions"
+	/>
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncBorrowingStructure">
+						<c:EntityInvolvementModal />
+						<c:BorrowingStructurePartial />
+						<nFORCE:ncScreenSectionFormBuilderPartials />
+						<nFORCE:ncDataTablePartials />
+						<nFORCE:ncDataTableIncludes />
+						<c:ncAssociationCardPartial />
+						<borrowing-structure></borrowing-structure>
+					</div>
+				</apex:define>
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncAuthorizedSigner">
+						<c:AuthorizedSignerPartial />
+						<nFORCE:ncDataTablePartials />
+						<nFORCE:ncDataTableIncludes />
+						<c:ncAssociationCardPartial />
+						<authorized-signer></authorized-signer>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+	<!-- temporary styling fix -->
+	<style>
+		abbr.slds-required {
+			text-decoration: none;
+		}
+	</style>
+
+</apex:page>

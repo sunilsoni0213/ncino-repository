@@ -1,0 +1,23 @@
+<apex:page >
+  <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="When I have a working integration to my document preparation provider for things like signature cards, W-9’s," />
+                <br/>
+                <apex:outputtext value="and other compliance related documents, this is where I will launch that integration and electronically pass the information.." />
+                <br/>
+                <br/>
+                <apex:outputtext value="Once the information is passed through the integration, my documents will appear in the “Documents” area of nCino, complete and ready for execution." />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                 <c:DepositDocPrepComp />   
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

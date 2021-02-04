@@ -1,0 +1,83 @@
+<apex:page controller="LLC_BI.TestProductSelectionController">
+	<apex:form >
+
+		<apex:pageblock id="pgblk" mode="edit">
+
+			<apex:pageBlockSection title="Product Program Selection" columns="1"
+				rendered="true">
+
+				<apex:pageblockSectionItem >
+					<apex:outputText value="Loan" />
+					<apex:inputField value="{!tempEntity.LLC_BI__Loan__c}" />
+				</apex:pageblockSectionItem>
+
+				<apex:pageblockSectionItem >
+					<apex:outputText value="Product" />
+					<apex:inputField value="{!tempLoan.LLC_BI__Product_Reference__c}" />
+				</apex:pageblockSectionItem>
+
+				<apex:pageblockSectionItem >
+					<apex:outputText value="" />
+					<apex:commandButton value="Create Test Loan"
+						action="{!createTestLoan}" status="actionStatusBlockUnblock"
+						rerender="pgblk" />
+				</apex:pageblockSectionItem>
+				<apex:pageblockSectionItem >
+					<apex:outputText value="" />
+					<apex:commandButton value="Get Product Programs"
+						action="{!getProductPrograms}" status="actionStatusBlockUnblock"
+						rerender="pgblk" />
+				</apex:pageblockSectionItem>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="All Product Programs Available Product"
+				columns="1" rendered="true">
+				<apex:pageBlockTable value="{!allProductPrograms}" var="item"
+					width="100%">
+					<apex:column width="10%">
+						<apex:facet name="header">Action</apex:facet>
+						<apex:outputLink title="" value="/{!item.Id}"
+							style="font-weight:bold">View</apex:outputLink>&nbsp;|&nbsp;
+       						<a href="javascript:if (window.confirm('Are you sure?')) ');"
+							style="font-weight: bold">Del</a>
+					</apex:column>
+					<apex:column width="20%">
+						<apex:facet name="header">Program Name</apex:facet>{!item.Name}
+            </apex:column>
+					<apex:column width="5%">
+						<apex:facet name="header">Qualification Template</apex:facet>{!item.Qualification_Template__r.Name}
+            </apex:column>
+
+					<apex:column width="5%">
+						<apex:facet name="header">Feature Template</apex:facet>{!item.Feature_Template__r.Name}
+            </apex:column>
+
+
+				</apex:pageBlockTable>
+
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="Product Programs Matching for Selected Loan" columns="1"
+				rendered="true">
+				<apex:pageBlockTable value="{!programDisplayList}" var="item"
+					width="100%">
+					<apex:column width="10%">
+						<apex:facet name="header">Action</apex:facet>
+						<apex:outputLink title="" value="/{!item.programId}"
+							style="font-weight:bold">View</apex:outputLink>&nbsp;|&nbsp;
+       						<a href="javascript:if (window.confirm('Are you sure?')) ');"
+							style="font-weight: bold">Del</a>
+					</apex:column>
+					<apex:column width="20%">
+						<apex:facet name="header">Program Name</apex:facet>{!item.programName}
+		            </apex:column>
+					<apex:column width="20%">
+						<apex:facet name="header">Interest Rate</apex:facet>{!item.attr1}
+		            </apex:column>
+		            <apex:column width="20%">
+						<apex:facet name="header">Loan Duration</apex:facet>{!item.attr2}
+		            </apex:column>
+				</apex:pageBlockTable>
+				
+			</apex:pageBlockSection>
+		</apex:pageblock>
+	</apex:form>
+</apex:page>

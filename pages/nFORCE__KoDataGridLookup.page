@@ -1,0 +1,60 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+
+<apex:include pageName="nFORCE__Error_Message_Handler" />
+
+<apex:composition template="nFORCE__Template_Knockout_Screen">
+<apex:define name="knockout-content">
+	<span data-bind="if: screenResource().isHierarchy">
+
+	<apex:composition template="nFORCE__Template_Heading">
+	<apex:define name="left">
+		<span data-bind="template: { name: 'heading-template', data: sectionName }" />
+	</apex:define>
+	<apex:define name="right">
+		<span data-bind="if: screenResource().hasChildren() &&
+			typeof screenResource().children()[0].configuration != 'undefined' &&
+			screenResource().children()[0].configuration != null">
+			<span data-bind="template: {
+				name: 'button-edit-field-set-template',
+				data: [ screenResource().children()[0].configuration.sObjectType,
+						screenResource().children()[0].configuration.fieldSetKey ] }"/>
+		</span>
+	</apex:define>
+	</apex:composition>
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+	<apex:define name="column-content">
+
+		<apex:composition template="nFORCE__Template_View_Container">
+		<apex:define name="content">
+			<span data-bind="if: screenResource().hasChildren() &&
+				screenResource().children()[0].isFlat() &&
+				screenResource().children()[0].guid() != null">
+				<span data-bind="template: {
+						name: 'vf-grid-template-' + guid() + '-' + screenResource().children()[0].guid(),
+						data: screenResource().children()[0] }" />
+			</span>
+		</apex:define>
+		</apex:composition>
+
+	</apex:define>
+	</apex:composition>
+
+	</span>
+</apex:define>
+<apex:define name="dynamic-templates">
+	<c:KoVf1stGenChildGridsTemplate appguid="{!APP_GUID}"
+			contextObjectParam="{!contextObject}"
+			screenSectionParam="{!section}" />
+</apex:define>
+<apex:define name="static-templates">
+	<c:KoHeadingTemplate />
+	<c:KoSectionFieldSetWarningTemplate />
+	<c:KoFieldLabelTemplate />
+	<c:KoFieldOutputTemplate />
+	<c:KoFieldInputTemplate />
+	<c:KoButtonEditFieldSetTemplate />
+</apex:define>
+</apex:composition>
+
+</apex:page>

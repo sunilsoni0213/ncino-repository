@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Id Verification --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Id Verification --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Id Document Name --></nameFieldLabel>
+</CustomObjectTranslation>

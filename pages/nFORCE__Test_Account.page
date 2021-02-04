@@ -1,0 +1,24 @@
+<apex:page standardController="Account" showHeader="false"
+			  sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		</head>
+
+		<body>
+
+			<apex:outputPanel >
+				<span style="display: none">{!account.name}</span>
+			</apex:outputPanel>
+			<c:Navigation currentAppName="nCino_User_Interface" />
+			<c:LayoutDesigner contextObjectParam="{!account}"
+				saveBodyAsAttachment="{!IF(ISBLANK($CurrentPage.parameters.attachment),
+						true, $CurrentPage.parameters.attachment)}"
+				screenIdParam="{!$CurrentPage.parameters.screenId}"
+				isReadOnly="{!IF(ISBLANK($CurrentPage.parameters.readonly),
+						true, $CurrentPage.parameters.readonly)}"/>
+			<apex:includeScript value="{!URLFOR($Resource.nFORCE__knockout_custom_ui)}" />
+		</body>
+
+	</html>
+</apex:page>

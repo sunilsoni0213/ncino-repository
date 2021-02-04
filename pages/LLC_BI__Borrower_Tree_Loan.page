@@ -1,0 +1,4 @@
+<apex:page standardController="LLC_BI__Loan__c" showHeader="false" sidebar="false" extensions="LLC_BI.BorrowerTree" docType="html-5.0">
+	<c:Borrower_Tree recordId="{!LLC_BI__Loan__c.Id}"
+		recordType="Loan" />
+</apex:page>

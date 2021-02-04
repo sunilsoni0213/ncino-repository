@@ -1,0 +1,112 @@
+<apex:page controller="CSIDDP.CSIDepActDocPrepCompletionController"
+	showHeader="false"
+	sidebar="false"
+	docType="html-5.0" >
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap3/css/bootstrap-force.min.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/jquery-bundle.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncUIIncludes />
+	<apex:includeScript value="{!URLFOR($Resource.CSIDDP__ncCsiDocPrepCompletion, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.CSIDDP__ncCsiDocPrepCompletion, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.CSIDDP__ncCsiDocPrepCompletion, 'controllers/AppController.js')}" />
+	<nFUSE:PushTopicRegistration topic="TransactionLogUpdate" callback="processLogUpdate"/>
+
+	<div id="ncCsiDocPrepCompletion" ng-controller="AppController" ng-cloak="true" />
+
+	<!--Error Pre Workflow Services-->
+	<apex:outputPanel id="TransactionError" rendered="{!errorsPresent}" >
+		<apex:form >
+			<div class="col-sm-6">
+				<br/>
+				<div class="slds-notify slds-notify--toast slds-theme--error " role="alert">
+					<span class="slds-assistive-text">{!$Label.nFUSE__DocPrep_Error_Badge}</span>
+					<div class="slds-grid slds-wrap slds-grid--pull-padded">
+						<div class="slds-p-horizontal--small slds-size--1-of-12">
+							<img src="{!URLFOR($Resource.nFORCE__design_system, "assets/icons/standard/unmatched_60.png")}"/>
+						</div>
+						<div class="slds-p-horizontal--small slds-size--11-of-12 font-lg slds-align-middle">
+							<p>{!$Label.nFUSE__DocPrep_Error_Heading}</p>
+						</div>
+						<div class="slds-p-horizontal--small slds-size--1-of-12" />
+						<div class="slds-p-horizontal--small slds-size--11-of-12 font-md">
+							<apex:messages />
+						</div>
+					</div>
+				</div>
+				<br/>
+				<input
+					type="button"
+					class="btn btn-primary"
+					value="{!$Label.nFUSE__Generate_Documents}"
+					onclick="retryGenerateDocs();"/>
+
+			</div>
+		</apex:form>
+	</apex:outputPanel>
+
+	<!--Error Post Workflow Service-->
+	<div id="Error" style="display:none">
+		<apex:form >
+			<div class="col-sm-6">
+				<br/>
+				<div class="slds-notify slds-notify--toast slds-theme--error " role="alert">
+					<span class="slds-assistive-text">{!$Label.nFUSE__DocPrep_Error_Badge}</span>
+					<div class="slds-grid slds-wrap slds-grid--pull-padded">
+						<div class="slds-p-horizontal--small slds-size--1-of-12">
+							<img src="{!URLFOR($Resource.nFORCE__design_system, "assets/icons/standard/unmatched_60.png")}"/>
+						</div>
+						<div class="slds-p-horizontal--small slds-size--11-of-12 font-lg slds-align-middle">
+							<p>{!$Label.nFUSE__DocPrep_Error_Heading}</p>
+						</div>
+						<div class="slds-p-horizontal--small slds-size--1-of-12" />
+						<div class="slds-p-horizontal--small slds-size--11-of-12 font-md">
+							<p>{!$Label.nFUSE__DocPrep_Redirect_URL_Missing}</p>
+						</div>
+					</div>
+				</div>
+				<br/>
+				<input
+					type="button"
+					onclick="reSubmitDocuments();"
+					class="btn btn-primary"
+					value="{!$Label.nFUSE__Generate_Documents}"/>
+				<apex:actionFunction name="rerenderInProgress" rerender="InProgress"/>
+			</div>
+		</apex:form>
+	</div>
+
+	<!-- CSI Workflow Service -->
+	<div id="InProgress" style="display:block">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:outputPanel rendered="{!docprepurl != null && vendorStatus == docViewerStatus}">
+					<apex:iframe id="DocViewer" scrolling="true" src="{!docprepurl}"/>
+				</apex:outputPanel>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<div id="StoringDocs" style="display:none">
+		<apex:form >
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<apex:actionFunction name="storingDocuments"/>
+							<br/>
+							<p class="narrative-header">{!$Label.csiddp__csi_depact_docprep_storing_documents}</p>
+							<br/>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</apex:form>
+	</div>
+
+	<c:CSIDepActDocPrepCompletionConfig />
+	<c:CSIDepActDocPrepPushTopicConfig />
+</apex:page>

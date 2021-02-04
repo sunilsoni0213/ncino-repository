@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This object maps fields from a REST request to Salesforce fields.</description>
+    <fields>
+        <fullName>nFUSE__App_Plugin_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the nCino productized integration for which the custom mapping should be used</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>App Plugin Type</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Data_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The destination Schema displayType</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Data Type</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__From_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The source field name from which to extract the value</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>From Field</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Is_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If the ToField in the TosObject requires a value - this value should be true</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Plugin_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the plugin for which this custom mapping should apply. If left blank, custom mapping will apply to all plugins of productized integration in scope</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Plugin Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Process_Context__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Context to which this custom mapping item should apply</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Process Context</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__To_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field into which to place the value mapped from the source field</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>To Field</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When true, the customMapping item will be used to map a value. When false, the value will be ignored in the source</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Map Item</label>
+    <pluralLabel>Map Items</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

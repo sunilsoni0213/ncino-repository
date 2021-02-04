@@ -1,0 +1,43 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<div class="slds-card slds-m-top--xx-small" n-style="pso-avatar-card"
+		 ng-repeat="teamMember in ltvm.loanTeam">
+		<div class="slds-card__body slds-p-vertical--medium portal-left-override">
+			<div class="slds-media slds-col slds-size--1-of-1 slds-col--padded">
+				<div class="slds-media__figure">
+					<span class="slds-icon_container slds-icon_container--circle"
+						  n-style="pso-avatar-image-area">
+						<img class="slds-avatar slds-avatar--circle"
+							 ng-src="{{teamMember.photoUrl}}"
+							 alt="{{teamMember.firstName + ' ' + teamMember.lastName}}" n-style="pso-avatar-image"
+							 width="50px" />
+					</span>
+				</div>
+				<div class="slds-media__body" n-style="pso-avatar-body">
+					<strong n-style="pso-avatar-detail-item">
+						{{teamMember.firstName + ' ' + teamMember.lastName}}
+					</strong>
+					<p class="slds-text-body--small">
+						<span n-style="pso-avatar-detail-item">
+							{{teamMember.moniker}}
+						</span>
+						<br />
+						<span class="portal-break-word" n-style="pso-avatar-detail-item">
+							{{teamMember.email}}
+						</span>
+						<br />
+						<span n-style="pso-avatar-detail-item">
+							{{teamMember.phone}}
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</apex:page>

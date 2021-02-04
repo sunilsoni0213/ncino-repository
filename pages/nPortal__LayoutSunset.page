@@ -1,0 +1,54 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+
+	<div class="portal-wrapper-full slds-m-bottom--xx-large" n-style="pso-wrapper">
+		<div class="slds-grid slds-wrap">
+			<div class="portal-wrapper slds-size--1-of-1">
+				<c:PortalHeader />
+			</div>
+			<div class="slds-size--1-of-1"
+				ng-class="{'portal-application-hero': isMediumOrBigger}"
+				resizer="true"
+				n-style="pso-application-hero">
+				<div class="slds-grid slds-grid--align-center">
+					<div class="slds-col slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--3-of-4
+						slds-p-left--large slds-p-right--large">
+						<page-include bind-to="topbar"></page-include>
+					</div>
+				</div>
+			</div>
+			<div class="slds-size--1-of-1">
+				<div class="slds-grid"
+					resizer="true"
+					ng-class="{'slds-wrap': !isLarge,
+					'slds-grid--align-center': isLarge}">
+					<div class="slds-size--1-of-1 slds-large-size--4-of-6 slds-shrink-none
+						slds-p-horizontal--large">
+						<page-include bind-to="body"></page-include>
+					</div>
+					<div resizer="true"
+						ng-class="{'slds-size--1-of-1': !isLarge,
+						'slds-col slds-no-space slds-p-top--medium': isLarge}">
+						<tile-component display="vertical"></tile-component>
+					</div>
+				</div>
+				<security-badges></security-badges>
+			</div>
+		</div>
+	</div>
+	<div class="slds-size--1-of-1 slds-fixed-bottom slds-p-bottom--medium"
+		ng-class="{'slds-p-top--x-large slds-p-bottom--large': isMediumOrBigger}"
+		resizer="true"
+		n-style="pso-wizard-container">
+		<div class="slds-grid slds-grid--align-center">
+			<div class="slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--3-of-4
+					slds-p-left--large slds-p-right--large">
+				<apex:include pageName="{!$Page.ApplicationNavigationHorizontal}" />
+			</div>
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessHoursSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessHours>
+        <active>true</active>
+        <default>true</default>
+        <fridayEndTime>18:00:00.000Z</fridayEndTime>
+        <fridayStartTime>08:00:00.000Z</fridayStartTime>
+        <mondayEndTime>18:00:00.000Z</mondayEndTime>
+        <mondayStartTime>08:00:00.000Z</mondayStartTime>
+        <name>Primary</name>
+        <thursdayEndTime>18:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>08:00:00.000Z</thursdayStartTime>
+        <timeZoneId>America/New_York</timeZoneId>
+        <tuesdayEndTime>18:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>08:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>18:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>08:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <holidays>
+        <businessHours>Primary</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>Christmas Day</name>
+        <recurrenceDayOfMonth>25</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2014-12-25</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <activityDate>2015-10-12</activityDate>
+        <isRecurring>false</isRecurring>
+        <name>Columbus Day</name>
+    </holidays>
+    <holidays>
+        <isRecurring>true</isRecurring>
+        <name>Independance Day</name>
+        <recurrenceDayOfMonth>4</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>July</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-07-04</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <isRecurring>true</isRecurring>
+        <name>Labor Day</name>
+        <recurrenceDayOfWeek>Monday</recurrenceDayOfWeek>
+        <recurrenceInstance>First</recurrenceInstance>
+        <recurrenceMonthOfYear>September</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-09-05</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+    <holidays>
+        <activityDate>2016-01-18</activityDate>
+        <isRecurring>false</isRecurring>
+        <name>Martin Luther King Day</name>
+    </holidays>
+    <holidays>
+        <isRecurring>true</isRecurring>
+        <name>Memorial Day</name>
+        <recurrenceDayOfWeek>Monday</recurrenceDayOfWeek>
+        <recurrenceInstance>Last</recurrenceInstance>
+        <recurrenceMonthOfYear>May</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-05-30</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+    <holidays>
+        <isRecurring>true</isRecurring>
+        <name>New Year&apos;s Day</name>
+        <recurrenceDayOfMonth>1</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-01</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <activityDate>2016-02-15</activityDate>
+        <isRecurring>false</isRecurring>
+        <name>President&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <isRecurring>true</isRecurring>
+        <name>Thanksgiving</name>
+        <recurrenceDayOfWeek>Thursday</recurrenceDayOfWeek>
+        <recurrenceInstance>Fourth</recurrenceInstance>
+        <recurrenceMonthOfYear>November</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-11-26</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+    <holidays>
+        <isRecurring>true</isRecurring>
+        <name>Veteran&apos;s Day</name>
+        <recurrenceDayOfMonth>11</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>November</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-11-11</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+</BusinessHoursSettings>

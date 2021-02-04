@@ -1,0 +1,97 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.VF_LoanRenewalHistoryController">
+	<nFORCE:Include_Navigator />
+	<apex:Messages />
+	<apex:pageBlock mode="{!IF(ISNULL($CurrentPage.parameters.app),'','main')}detail">
+		<apex:pageBlockTable value="{!renewalHistoryResults}" var="h" rendered="{!IF(resultsFlag,true,false)}">
+			<apex:column rendered="{!h.isDeleted == true}">
+				<apex:facet name="header">{!$Label.llc_bi__loan_name}</apex:facet>
+				<span style="font-weight:{!IF(h.currentRevision,'bold','normal')}">{!h.renewalLoanName}</span>
+			</apex:column>
+			<apex:column rendered="{!NOT(h.isDeleted == true)}">
+				<apex:facet name="header">{!$Label.llc_bi__loan_name}</apex:facet>
+				<span style="font-weight:{!IF(h.currentRevision,'bold','normal')}">
+				<apex:outputLink value="#" onclick="handleRedirect('{!h.renewalLoanId}');">{!h.renewalLoanName}</apex:outputLink>
+				</span>
+			</apex:column>
+
+			<apex:column >
+				<apex:facet name="header">{!$Label.llc_bi__loan_number}</apex:facet>
+				<span style="font-weight:{!IF(h.currentRevision,'bold','normal')}">{!h.loanNumber}</span>
+			</apex:column>
+
+			<apex:column >
+				<apex:facet name="header">{!$Label.llc_bi__loan_type}</apex:facet>
+				<span style="font-weight:{!IF(h.currentRevision,'bold','normal')}">{!h.loanType}</span>
+			</apex:column>
+
+				<!-- does this include status and stage of the revision loan? -->
+			<apex:column >
+				<apex:facet name="header">{!$Label.llc_bi__loan_status}</apex:facet>
+				<span style="font-weight:{!IF(h.currentRevision,'bold','normal')}">{!h.revisionStatusTranslated}</span>
+			</apex:column>
+
+			<apex:column rendered="{!NOT(h.isDeleted == true)}">
+				<apex:facet name="header">{!$Label.llc_bi__amount}</apex:facet>
+				<span style="font-weight:{!IF(h.currentRevision,'bold','normal')}">{!h.formattedAmount}</span>
+			</apex:column>
+
+			<apex:column rendered="{!h.isDeleted == true}">
+				<apex:facet name="header">{!$Label.llc_bi__amount}</apex:facet>
+				<apex:outputText style="font-weight:{!IF(h.currentRevision,'bold','normal')}" value="{0}">
+					<apex:param value="{!$Label.llc_bi__field_not_available}" />
+				</apex:outputText>
+			</apex:column>
+
+			<apex:column rendered="{!NOT(h.isDeleted == true)}">
+				<apex:facet name="header">{!$Label.llc_bi__close_date}</apex:facet>
+				<apex:outputText style="font-weight:{!IF(h.currentRevision,'bold','normal')}" value="{0}">
+					<apex:param value="{!h.closeDate}" />
+				</apex:outputText>
+			</apex:column>
+
+			<apex:column rendered="{!h.isDeleted == true}">
+				<apex:facet name="header">{!$Label.llc_bi__close_date}</apex:facet>
+				<apex:outputText style="font-weight:{!IF(h.currentRevision,'bold','normal')}" value="{0}">
+					<apex:param value="{!$Label.llc_bi__field_not_available}" />
+				</apex:outputText>
+			</apex:column>
+
+			<apex:column rendered="{!NOT(h.isDeleted == true)}">
+				<apex:facet name="header">{!$Label.llc_bi__maturity_date}</apex:facet>
+				<apex:outputText style="font-weight:{!IF(h.currentRevision,'bold','normal')}" value="{0}">
+					<apex:param value="{!h.maturityDate}" />
+				</apex:outputText>
+			</apex:column>
+
+			<apex:column rendered="{!h.isDeleted == true}">
+				<apex:facet name="header">{!$Label.llc_bi__maturity_date}</apex:facet>
+				<apex:outputText style="font-weight:{!IF(h.currentRevision,'bold','normal')}" value="{0}">
+					<apex:param value="{!$Label.llc_bi__field_not_available}" />
+				</apex:outputText>
+			</apex:column>
+		</apex:pageBlockTable>
+
+	<apex:outputPanel layout="none" rendered="{!IF(resultsFlag==false,true,false)}">
+		<apex:outputText value="{!$Label.llc_bi__no_renewals_or_modifications}" />
+		<apex:outputText value="{!loanName}" style="font-style:italic" />
+		<apex:outputPanel layout="none" rendered="{!ISNULL($CurrentPage.parameters.app)}">&nbsp;
+			<apex:outputLink value="{!newRenewalUrl}" target="_top">
+				<apex:outputText value="{!$Label.llc_bi__start_renewal_modification}" />
+			</apex:outputLink>&nbsp;
+			<apex:outputText value="{!$Label.llc_bi__for_this_loan}" />
+		</apex:outputPanel>
+	</apex:outputPanel>
+
+	</apex:pageBlock>
+
+	<script type="text/javascript">
+		function handleRedirect(ret, retUrl) {
+			if (ret !== null && ret !== '') {
+				LifeCycle.Navigator.navigateToSObject(ret);
+			} else if (retUrl !== null && retUrl !== '' ) {
+				LifeCycle.Navigator.navigateToURL(retUrl);
+			}
+		}
+	</script>
+
+</apex:page>

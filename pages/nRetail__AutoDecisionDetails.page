@@ -1,0 +1,35 @@
+<apex:page standardStylesheets="false"
+	sidebar="true"
+	docType="html-5.0"
+	controller="nFORCE.TemplateController"
+	extensions="nRetail.AutoDecisionDetailsController"
+	action="{!updateSession}">
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncPubsubIncludes />
+	<c:nrCommonIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<apex:includeScript value="{!URLFOR($Resource.nRetail__AutoDecisionDetails, 'autoDecisionDetails.app.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nRetail__AutoDecisionDetails, 'autoDecisionDetails.controller.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nRetail__nrVendor, 'angular-route.min.js')}" />
+
+	<script>
+		(function(){
+			'use strict';
+			angular.module('nrAutoDecisionDetails')
+			.config(function(configProvider){
+				configProvider.set({
+					loanId: '{!JSENCODE(loan.Id)}',
+					scorecardId: '{!JSENCODE(scorecardId)}',
+					approvalHref: '{!JSENCODE(approvalHref)}',
+					nextHref: '{!JSENCODE(nextHref.url)}',
+					primaryButtonText: 'test',
+					sid: '{!JSENCODE($Api.Session_ID)}',
+					getScorecard: '{!$RemoteAction.AutoDecisionDetailsController.getScorecard}',
+					continueText: '{!JSENCODE($Label.Continue)}',
+					approvalText: '{!JSENCODE($Label.Submit_For_Approval)}'
+				});
+			});
+		})();</script>
+	<span id="auto-decision" ng-controller="AutoDecisionDetailsController"></span>
+	<apex:include pageName="{!$Page.LLC_BI__LoanAutoDecisionScorecardDetail}" />
+</apex:page>

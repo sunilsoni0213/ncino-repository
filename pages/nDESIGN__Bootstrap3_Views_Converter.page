@@ -1,0 +1,5 @@
+<apex:page standardController="nDESIGN__View__c" extensions="nDESIGN.Bootstrap3ViewsConverterController" recordSetVar="views" action="{!save}">
+	<apex:repeat value="{!views}" var="view">
+		<apex:outputText value="{!view.Id} {!view.nDESIGN__Edit__c} {!view.nDESIGN__Read_Only__c} {!view.nDESIGN__Preview__c}" rendered="false"/>
+	</apex:repeat>
+</apex:page>

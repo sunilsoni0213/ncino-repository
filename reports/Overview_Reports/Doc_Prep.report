@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Loan_Officer__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Amount__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Product_Line__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Product_Type__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Product_Reference__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__InterestRate__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Loan__c.LLC_BI__Stage__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>LLC_BI__Loan__c.LLC_BI__Stage__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Doc Prep</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Doc Prep</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$LLC_BI__Loan__c@LLC_BI__Loan__c.LLC_BI__Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>LLC_BI__Loan__c.LLC_BI__Amount__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LLC_BI__Loan__c.Application_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

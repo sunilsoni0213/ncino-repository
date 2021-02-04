@@ -1,0 +1,69 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false" >
+   <head>
+       <style>
+           .divClass {
+               float: left;
+               display: none !important;
+           }
+       </style>
+   </head>
+
+   <div id="img" class="divClass">
+       
+   </div>
+   <br/>
+   <div style="float:right;">
+       <a href="javascript:printSnap()">Print</a>
+   </div>
+   <nFORCE:ncDataSnapshotCurrentValues comparableSectionId="{!screenSections[0].Id}" contextId="{!contextObjectId}" guid="my-guid" />
+   <iframe name="print_frame1" width="0" height="0" frameborder="0" src="about:blank"/>
+
+   <script>
+       function printSnap() {
+
+           var snapContainer = document.getElementsByTagName('snapshot-container')[0];
+           var image = document.getElementById('img');
+           var clone = snapContainer.firstElementChild.cloneNode(true);
+           snapContainer.appendChild(clone);
+
+           var tds = clone.getElementsByTagName('button');
+           for(var i=0;i<tds.length;i++){
+               tds[i].style.display="none";
+           }
+           var tds2 = clone.getElementsByTagName('table');
+           for(var i=0;i<tds2.length;i++){
+               tds2[i].style.borderWidth = "thin";
+               tds2[i].style.fontFamily  = "verdana";
+               tds2[i].style.justifyContent= "space-around";
+               tds2[i].style.textAlign = "left";
+               tds2[i].style.tabSize = "40";
+               tds2[i].style.tableLayout = "auto";
+               tds2[i].style.borderCollapse = "collapse";
+           }
+           var tds3 = clone.getElementsByTagName('h3');
+           for(var i=0;i<tds3.length;i++){
+               tds3[i].style.fontFamily = "verdana";
+           }
+           var tds4 = clone.getElementsByTagName('th');
+           for(var i=0;i<tds4.length;i++){
+               tds4[i].style.borderStyle = "solid";
+               tds4[i].style.textAlign = "left";
+               tds4[i].style.borderWidth = "thin";
+           }
+           var tds5 = clone.getElementsByTagName('tr');
+           for(var i=0;i<tds5.length;i++){
+               tds5[i].style.borderStyle = "solid";
+               tds5[i].style.borderWidth = "thin";
+           }
+           var tds6 = clone.getElementsByTagName('td');
+           for(var i=0;i<tds6.length;i++){
+               tds6[i].style.borderStyle = "solid";
+               tds6[i].style.borderWidth = "thin";
+           }
+           window.frames["print_frame1"].document.body.innerHTML=image.innerHTML;
+           window.frames["print_frame1"].document.body.innerHTML+=clone.innerHTML;
+           window.frames["print_frame1"].window.focus();
+           window.frames["print_frame1"].window.print();
+       }
+   </script>
+</apex:page>

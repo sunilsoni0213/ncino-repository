@@ -1,0 +1,25 @@
+<apex:page standardController="LLC_BI__Legal_Entities__c" standardStylesheets="false"  recordSetVar="entities" extensions="LLC_BI.BorrowerTree" docType="html-5.0">
+	<c:Borrower_Tree_Common />
+
+	<apex:outputPanel layout="none" rendered="{!ISNULL($CurrentPage.parameters.app)}">
+		<div class="force">
+			<div data-bind="if: window.borrowerTreeApp.performingAjax">
+				<c:Loading_Top_Right />
+			</div>
+			<c:Borrower_Tree_Search_Account accountId="{!$CurrentPage.parameters.Id}"/>
+		</div>
+	</apex:outputPanel>
+
+	<apex:outputPanel layout="none" rendered="{!NOT(ISNULL($CurrentPage.parameters.app))}">
+		<div data-bind="if: window.borrowerTreeApp.performingAjax">
+			<c:Loading_Top_Right />
+		</div>
+		<c:Borrower_Tree_Search_Account accountId="{!$CurrentPage.parameters.Id}"/>
+	</apex:outputPanel>
+
+	<script type="text/javascript">
+		jQuery(function(){
+			var app = new borrowerTreeApp.LoanSearchApp().run('{!$CurrentPage.parameters.Id}');
+		});
+	</script>
+</apex:page>

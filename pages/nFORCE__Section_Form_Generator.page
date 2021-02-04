@@ -1,0 +1,125 @@
+<apex:page readOnly="true" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false"
+			sidebar="false" showHeader="false" contentType="text/xhtml" docType="html-5.0"
+			controller="nFORCE.SectionFormGeneratorController">
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_MomentJS />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/utils-bundle.js')}" />
+
+	<c:Internationalize />
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Route />
+
+	<c:ncUIIncludes />
+	<c:ncDataProvidersIncludes />
+
+	<c:ncFormBuilderIncludes />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncFilters_bundle)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncFormElements_bundle)}" />
+
+		<apex:form >
+			<apex:variable value="{!0}" var="counter"/>
+			<apex:repeat value="{!order}" var="field">
+				<apex:variable var="counter" value="{!IF(field.isVisible, counter+1, counter)}"/>
+				<apex:variable var="isRow" value="{!IF((mod(counter,2)==0), false, true)}"/>
+				<c:DivTagInjector sClass="row"
+										isRendered="{!isRow && (field.isVisible)}"/>
+				<div class="form-group col-xs-6"
+					  ng-if="{!(field.isVisible) && !(screenSection.Is_Editable__c)}">
+					<div class="row content-label">
+						<label class="col-xs-11">{!field.fieldLabel}</label>
+					</div>
+					<div class="row default-row-value">
+						<div class="col-xs-11 content-body">
+							<apex:outputPanel layout="none">
+								<apex:outputField html-ng-bind="generated.{!field.guid}.value"
+														value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+														styleClass="form-control "/>
+							</apex:outputPanel>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group col-xs-6"
+					  ng-if="{!field.isVisible && (screenSection.Is_Editable__c)}">
+					<div class="row content-label">
+						<label
+							class="col-xs-11 {!If(field.isRequired,'is-required','')}">{!field.fieldLabel}</label>
+					</div>
+					<div class="row">
+						<div class="col-xs-11 content-body">
+
+							<apex:outputPanel layout="none"
+								rendered="{!OR(UPPER(field.fieldType) == 'DECIMAL',
+									UPPER(field.fieldType) == 'INTEGER',
+									UPPER(field.fieldType) == 'DOUBLE')}">
+								<input type="text"
+									class="form-control"
+									inputnumber="true"
+									scale="{!field.Scale}"
+									ng-model="generated.{!field.guid}.value"
+									ng-change="generated.{!field.guid}.isDirty = true"
+									ng-class="{requiredInput : {!OR(field.isRequired)}}"
+									ng-required="{!field.isRequired}"
+									value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+									styleClass="form-control"
+								/>
+							</apex:outputPanel>
+							<apex:outputPanel layout="none"
+								rendered="{!OR(UPPER(field.fieldType) == 'CURRENCY')}">
+								<input type="text"
+									class="form-control"
+									inputcurrency="true"
+									ng-model="generated.{!field.guid}.value"
+									ng-change="generated.{!field.guid}.isDirty = true"
+									ng-class="{requiredInput : {!OR(field.isRequired)}}"
+									ng-required="{!field.isRequired}"
+									value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+									styleClass="form-control"
+								/>
+							</apex:outputPanel>
+							<apex:outputPanel layout="none" rendered="{!UPPER(field.fieldType) = 'DATE'}">
+								<input type="text"
+									class="form-control"
+									intlinputdate="true"
+									ng-model="generated.{!field.guid}.value"
+									ng-change="generated.{!field.guid}.isDirty = true"
+									ng-class="{requiredInput : {!OR(field.isRequired)}}"
+									ng-required="{!field.isRequired}"
+									value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+									styleClass="form-control"
+								/>
+							</apex:outputPanel>
+							<apex:outputPanel layout="none"
+								rendered="{!OR(UPPER(field.fieldType) == 'REFERENCE')}">
+								<apex:inputField html-ng-required="{!field.isRequired}"
+										html-ng-model="generated.{!field.guid}.value"
+										html-ng-change="generated.{!field.guid}.isDirty = true"
+										required="{!field.isRequired}"
+										value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+										styleClass="reference-input"/>
+							</apex:outputPanel>
+							<apex:outputPanel layout="none"
+								rendered="{!!OR(UPPER(field.fieldType) == 'DECIMAL',
+									UPPER(field.fieldType) == 'INTEGER',
+									UPPER(field.fieldType) == 'CURRENCY',
+									UPPER(field.fieldType) == 'DOUBLE',
+									UPPER(field.fieldType) == 'DATE',
+									UPPER(field.fieldType) == 'DATETIME',
+									UPPER(field.fieldType) == 'REFERENCE')}">
+								<apex:inputField html-ng-required="{!field.isRequired}"
+										html-ng-model="generated.{!field.guid}.value"
+										html-ng-change="generated.{!field.guid}.isDirty = true"
+										required="{!field.isRequired}"
+										value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+										styleClass="form-control"/>
+							</apex:outputPanel>
+						</div>
+					</div>
+				</div>
+				<c:DivTagInjector close="{!NOT(isRow) && (field.isVisible)}"/>
+			</apex:repeat>
+		</apex:form>
+</apex:page>

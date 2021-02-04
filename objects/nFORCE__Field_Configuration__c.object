@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Field_Configuration_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Extends a field for the given object with additional features. Can be optionally tied to Routes.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>nFORCE__UI_Administration_Field_Configuration</fullName>
+        <availableFields>
+            <field>nFORCE__Alternate_Label__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Conditional_Display_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Default_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Field_Hint__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Format_Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Format_Enabled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Format_Expression__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Format_Message__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Is_Header__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Output_Expression__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Route__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__SLDS_Column_Size__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Tooltip_Contents__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Tooltip_Enabled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Tooltip_Text__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>UI Administration field configuration fields.</description>
+        <displayedFields>
+            <field>nFORCE__Screen_Section__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__sObject_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Field_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Editable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Read_Only__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Hidden__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Required__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Important__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Filter_Display_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Filter_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Administration Field Configuration</label>
+    </fieldSets>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Field_Configurations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Alternate_Label__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Replacement label text or a question referencing the extended field.</description>
+        <externalId>false</externalId>
+        <label>Alternate Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Conditional_Display_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and must be manually populated. It stores the Forms syntax that is used to dictate whether a conditional field set should be displayed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is optional and must be manually populated. It stores the Forms syntax that is used to dictate whether a conditional field set should be displayed.</inlineHelpText>
+        <label>-D Conditional Display Criteria</label>
+        <length>2048</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Default_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Value ensures that the value inserted in this field is stored when no value is manually input by the user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows configuration of a default value that a field is populated with on initial loading of a form.</inlineHelpText>
+        <label>Default Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Hint__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text entered in this optional field displays as a placeholder in the input area until the user inputs text. The field hint text guides the user on formatting or validation requirements.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Text that will display as a placeholder in the input area, guiding the user on formatting and validation.</inlineHelpText>
+        <label>Field Hint</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The name of the field being extended.</description>
+        <externalId>false</externalId>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Filter_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this long text field with lookup filter criteria. The system applies this criteria to generate lookup results. The default value is null.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to define lookup filter criteria that the system uses to generate lookup results.</inlineHelpText>
+        <label>Filter Criteria</label>
+        <length>2048</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Filter_Display_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this 255 character text field with the name of the lookup filter criteria. The system displays this name to users in lookup results. The default value is null.</description>
+        <externalId>false</externalId>
+        <label>Filter Display Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Format_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A description of the logic applied in the format expression to aid in understanding what input is accepted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the format expression used to indicate what types of inputs are acceptable.</inlineHelpText>
+        <label>Format Rule Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Format_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines whether or not the defined Format Expression will be enforced for this field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If unchecked, the rule defined for Format Expression will not be applied.</inlineHelpText>
+        <label>Format Validation Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Format_Expression__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A regular expression for validating the format of this field. If specified, the UI will enforce contents matching the format specified and provide a specified error message if the format is not matched.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter an optional regular expression for enforcing a particular format for the field&apos;s contents.</inlineHelpText>
+        <label>Format Expression</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Format_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The error message to display to the user when a field does not match the format expression specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a message to display to the user when their input does not match the format specified in Format Expression.</inlineHelpText>
+        <label>Format Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED--This field is manually populated. When checked, it is used to mark if a Field Configuration is active. When unchecked, it is inactive and not used. By default, it is unchecked.</description>
+        <externalId>false</externalId>
+        <label>-D Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Editable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. When checked, it is used to override a field in a read only screen section in the UI to be editable. When unchecked, it is not used. By default, it is unchecked.</description>
+        <externalId>false</externalId>
+        <label>Is Editable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Filter_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional field to make a Field Configuration available for use with Conditional Lookups. By default, it is unchecked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to make this Field Configuration available for use with Conditional Lookups.</inlineHelpText>
+        <label>Is Filter Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Header__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional field is a manually populated checkbox on the Field Configuration object. By default, it is not selected. When selected, it will display the field&apos;s value next to the object name in the snapshot.</description>
+        <externalId>false</externalId>
+        <label>Is Header</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Hidden__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When this boolean field is active, the field being configured does not display on online application forms. However, the field value is preserved and is submitted for processing along with the rest of the online application. Use Is Hidden in conjunction with Default Value to submit the online application with a default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this setting to hide this field on supported forms.</inlineHelpText>
+        <label>Is Hidden</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Important__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional field is a manually populated checkbox on the Field Configuration object. When selected, an icon will display beside the associated field on the Snapshot report.</description>
+        <externalId>false</externalId>
+        <label>Is Important</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Read_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. When enabled, it is used to override a field in an editable screen section in the UI to be read only. When disabled, it is not used. By default, it is disabled.</description>
+        <externalId>false</externalId>
+        <label>Is Read Only</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. When enabled, it is used to override a field in an editable screen section in the UI to be required. When disabled, it is not used. By default, it is disabled.</description>
+        <externalId>false</externalId>
+        <label>Is Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Output_Expression__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use Output Expression to provide an expression that specifies the format of text displayed in a read-only view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a formatting expression for displaying the value of this field as text.</inlineHelpText>
+        <label>Output Expression</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Route__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to a Route. If none is specified the Field Configuration can be applied everywhere.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify the Route that this Field Configuration will apply to, otherwise it will be applied everywhere.</inlineHelpText>
+        <label>Route</label>
+        <referenceTo>nFORCE__Route__c</referenceTo>
+        <relationshipLabel>Field Configuration Route</relationshipLabel>
+        <relationshipName>Field_Configuration_Route</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__SLDS_Column_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The size of the column used for this field in the SLDS Grid. This number is the denominator of the fraction 1/x that gives the percentage of the row the field&apos;s column will span.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify the size of the SLDS Grid column this field should span. This number will be divided into 1 to give the percentage of the row the field will span. For example, a value of 3 will equate to 33.333% of the row.</inlineHelpText>
+        <label>SLDS Grid Column Size</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Screen_Section__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. It is used to specify a screen section which this record should be applied to.</description>
+        <externalId>false</externalId>
+        <label>Screen Section</label>
+        <referenceTo>nFORCE__Screen_Section__c</referenceTo>
+        <relationshipLabel>Field Configurations</relationshipLabel>
+        <relationshipName>Section_Field_Configuration</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Tooltip_Contents__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The text contents of the tooltip displayed after clicking the tooltip link.</description>
+        <externalId>false</externalId>
+        <label>Tooltip Contents</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Tooltip_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines whether or not a tooltip will be displayed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this field to enable a tooltip for this field.</inlineHelpText>
+        <label>Tooltip Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Tooltip_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The text to be displayed in the tooltip link.</description>
+        <externalId>false</externalId>
+        <label>Tooltip Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__sObject_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The object to which an extended field belongs.</description>
+        <externalId>false</externalId>
+        <label>sObject Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nPortal__Picklist_Buttons_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If this is a picklist field, select this option to render the picklist as a set of selectable buttons.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this field being configured is a picklist, select this option to render the picklist as a set of selectable buttons.</inlineHelpText>
+        <label>Picklist Buttons Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Field Configuration</label>
+    <nameField>
+        <displayFormat>FC-{000000}</displayFormat>
+        <label>Field Configuration Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Field Configurations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>nFORCE__Editable_or_Read_Only</fullName>
+        <active>true</active>
+        <description>This validation rule ensures that a field configuration record cannot be both Editable and Read Only.</description>
+        <errorConditionFormula>nFORCE__Is_Read_Only__c &amp;&amp;  nFORCE__Is_Editable__c</errorConditionFormula>
+        <errorMessage>A field cannot be both Editable and Read-Only.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

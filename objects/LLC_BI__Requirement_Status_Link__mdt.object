@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The system uses this object to link a Smart Checklist Requirement to a Linked Value.</description>
+    <fields>
+        <fullName>LLC_BI__Linked_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this required string field when they use the packaged Requirement Status Link custom metadata type. It contains the value that the system links to a Smart Checklist Requirement Status. If an administrator does not use the packaged custom metadata type, they must manually populate this field.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If an administrator does not use the packaged custom metadata type, they must manually populate this field.</inlineHelpText>
+        <label>Linked Value</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Reviewed</fullName>
+                    <default>false</default>
+                    <label>Reviewed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Exception</fullName>
+                    <default>false</default>
+                    <label>Exception</label>
+                </value>
+                <value>
+                    <fullName>In-File</fullName>
+                    <default>false</default>
+                    <label>In-File</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Review</fullName>
+                    <default>false</default>
+                    <label>Awaiting Review</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Requirement_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this required picklist field when they use the packaged Requirement Status Link custom metadata type. It contains the value that the system links to a Linked Value. If an administrator does not use the packaged custom metadata type, they must manually populate this field.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If an administrator does not use the packaged custom metadata type, they must manually populate this field.</inlineHelpText>
+        <label>Requirement Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Assigned</fullName>
+                    <default>false</default>
+                    <label>Assigned</label>
+                </value>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>On-hold</fullName>
+                    <default>false</default>
+                    <label>On-hold</label>
+                </value>
+                <value>
+                    <fullName>Canceled</fullName>
+                    <default>false</default>
+                    <label>Canceled</label>
+                </value>
+                <value>
+                    <fullName>To Do</fullName>
+                    <default>true</default>
+                    <label>To Do</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Requirement Status Link</label>
+    <pluralLabel>Requirement Status Links</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,825 @@
+<apex:page standardController="nCBC__Credit_Report__c" extensions="nCBC.VF_CreditReport">
+<html>
+<head>
+<style type="text/css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+body {
+	font-family: "lucida sans unicode","lucida grande",sans-serif;
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	padding:0px;
+	margin:0px;
+}
+p{
+color:#2f2b2b;
+font-size:11px;
+line-height:16px;
+margin-top:5px;
+margin-bottom:5px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.hidden{
+display:none;
+}
+.clearDiv{
+	clear:both;
+}
+.center{
+	display:block;
+	margin:0px auto;
+}
+.floatleft{
+	float:left;
+}
+.floatright{
+	float:right;
+}
+
+.padding{
+	padding:10px;
+}
+
+.spacer{
+	height:20px;
+	display:block;
+	}
+.smspacer{
+	height:12px;
+	display:block;
+	}
+.lgspacer{
+	height:36px;
+	display:block;
+	}
+	
+.marginleft{
+	margin-left:20px;
+}
+.marginright{
+	margin-right:20px;
+}
+
+.smmarginleft{
+	margin-left:10px;
+}
+.smmarginright{
+	margin-right:10px;
+}
+.rounded8{
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+overflow:hidden;
+}
+
+.rounded6{
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+overflow:hidden;
+}
+
+.rounded4{
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+overflow:hidden;
+}
+
+
+.shadow{
+text-shadow: 1px 1px 1px #767676;
+filter: dropshadow(color=#767676, offx=1, offy=1); 
+}
+.boxshadow{
+-webkit-box-shadow: 0px 0px 2px 0px #999999;
+-moz-box-shadow: 0px 0px 2px 0px #999999;
+box-shadow: 0px 0px 2px 0px #999999; 
+
+}
+
+.ltgrey{
+background-color:#f8f8f8;
+}
+.border{
+	border: 1px solid #ebebeb;
+}
+
+/*-------- ALREADY IN PORTAL STYLE.css ---------------*/
+body{
+	background-color: #FFF;
+	background-image: url(images/background/bgMainTrees.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-attachment: fixed;
+}
+
+/* COLORS */
+.white{
+color:#fff;
+}
+.whiteback{
+background-color:#fff;
+}
+.grey1back{
+background-color:#f7f7f7;
+}
+.grey2back{
+background-color:#fcfcfc;
+}
+.ltblueback{
+background-color:#f1f8fd;
+}
+
+
+
+.ltblue1sidebarback{
+background-color:#c3d4e0;
+}
+.ltblue2sidebarback{
+background-color:#eaf0f4;
+}
+.black {
+color:#2c2c2c;
+}
+.red{
+color:#c41230;
+}
+.redback{
+background-color:#c41230;
+}
+.dkblue{
+color:#0c2e43;
+}
+.dkblueback{
+background-color:#0c2e43;
+}
+.blue{
+color:#2d5b78;
+}
+.blueback{
+background-color:#2d5b78;
+}
+
+.grey{
+	color:#666666;
+}
+
+
+
+
+/*------------- CREDIT REPORT STYLES -------------*/
+
+
+
+
+#reportheader{
+	width:100%;
+	min-height:60px;
+	background-image: url(images/icons/liveoakbank-white.png);
+	background-repeat: no-repeat;
+	background-position: 98% 10px;	
+}
+#reportheader h1 {
+font-size:18px;
+line-height:28px;
+padding:15px 60px;
+margin:0px;
+display:block;
+font-weight:bold;
+}
+
+
+#reportcontent h1 {
+font-size:26px;
+line-height:28px;
+}
+#reportcontent h2 {
+	font-size:20px;
+	line-height:24px;
+	font-weight: bold;
+}
+#reportcontent h3 {
+	font-size:14px;
+line-height:20px;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+#reportcontent h4 {
+	font-size:13px;
+line-height:20px;
+margin-top:5px;
+margin-bottom:15px;
+}
+#creditreport{
+	width:96%;
+	background-color: #FEE9DC;
+}
+
+.col50{
+width:40%;
+}
+.reportwrapper{
+	width:98%;
+	height:auto;
+	background-color:#F1F0EE;
+	background-image: url(images/icons/add_32.png);
+	background-repeat: no-repeat;
+	background-position: right 5px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+.tablewrapper{
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	position: relative;
+	margin-bottom:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #78A0B7;
+	border-right-color: #78A0B7;
+	border-bottom-color: #78A0B7;
+	border-left-color: #78A0B7;
+}
+
+
+
+table.datatable {
+	font-family:arial;
+	color:#333333;
+	background-color: #CDCDCD;
+	font-size: 8pt;
+	line-height: 10pt;
+	width: 100%;
+	text-align: left;
+	font-weight: normal;
+	letter-spacing:-.1pt;
+	position:relative;
+	z-index:11;
+	cursor:default;
+	
+}
+table.datatable thead tr th, table.datatable tfoot tr th {
+	font-size: 8pt;
+	padding: 8px 4px;
+	cursor:pointer;
+	
+	background-color: #e6EEEE;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #78A0B7;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #78A0B7;
+}
+
+table.datatable thead tr th:hover, table.datatable tfoot tr th:hover{
+	background-color: #D1E9FF;
+}
+table.datatable thead tr .header {
+	background-image: url(images/icons/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.datatable tbody td {
+	color: #3D3D3D;
+	padding: 6px 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #91C2DD;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #91C2DD;	
+}
+table.datatable tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.datatable thead tr .headerSortUp {
+	background-image: url(images/icons/asc.gif);
+}
+table.datatable thead tr .headerSortDown {
+	background-image: url(images/icons/desc.gif);
+}
+table.datatable thead tr .headerSortDown, table.datatable thead tr .headerSortUp {
+	background-color: #B6CCDF;
+}
+table.datatable thead tr th.last, table.datatable tbody tr td.last{
+	border-right-style: none;
+}
+
+h3.tabletitle{
+	font-size:20px;
+line-height:24px;
+	font-weight: bold;
+	letter-spacing: -0.3pt;
+	text-align: left;
+	display: block;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 11px;
+	padding-left: 0px;
+}
+span.state{
+font-size:12px;
+font-weight:bold;
+}
+.hoverstate{
+	background-color:#F3FFE0;
+	cursor:pointer;
+	z-index:10;
+}
+.activestate{
+	background-color:#fff;
+	cursor:pointer;
+	z-index:10;
+	background-image: url(images/icons/close_32.png);
+}
+/*------------- CREDIT SLIDER STYLES -------------*/
+#creditsliderwrapper{
+	width:100%;
+	height:auto;
+	background-color:#F1F0EE;
+	padding:0px;
+
+}
+#creditslider{
+	width:1000px;
+	height:60px;
+	background-color:#fff;
+	padding:0px;
+	margin:0px auto;
+	display:block;
+	background-image: url({!$Resource.creport_slider}); /* url(images/slider/slider-background.jpg); */
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	overflow:visible;
+}
+#creditslider .number{
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: -0.3pt;
+	padding:5px 7px;
+	background-color:#FFFFFF;
+}
+#sliderleft, #sliderright{
+	width:49.5%;
+	opacity: 0;
+	display:inline;
+	padding-top:14px;
+	height:25px;
+}
+
+
+</style>
+<style type="text/css">@import "assets/css/default.css";</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="{!$Resource.jquery_tablesorter}"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function() 
+    { 
+			$(".tablewrapper").hide();
+			$(".reportwrapper").bind({
+			click: function() {
+		    if( $(this).find(".tablewrapper").is(":visible") ) {
+		  // element is visible
+		  $(this).find(".tablewrapper").slideUp();
+		  $(this).removeClass("activestate");
+			}
+		else {
+		  // element is not visible
+		  $(this).find(".tablewrapper").slideDown();
+		  $(this).addClass("activestate");
+		}
+		  },
+		  
+		  mouseover: function() {
+		    // do something on mouseenter
+			$(this).addClass("hoverstate");
+		  },
+		  mouseout: function() {
+		    // do something on mouseexit
+			$(this).removeClass("hoverstate");
+		  }
+		});
+		
+		var lowNum = $('#lownum').text().replace(/\,/g, '');
+		var lowNumFin = parseInt(lowNum);
+		
+		var highNum = $('#highnum').text().replace(/\,/g, '');
+		var highNumFin = parseInt(highNum);
+		
+		var percentage = parseFloat(((highNumFin - lowNumFin) / highNumFin) * 100).toFixed(1);
+		var percentageback = parseInt((percentage / 2) + 25);
+		var percentageremain = parseInt(100 - (percentage));
+		
+		var rightNumbercol = parseInt(percentageremain);
+		
+		var leftNumbercol = parseInt(99.5 - (rightNumbercol));
+		
+		
+		if(leftNumbercol < 15){
+		var leftNumberFIN = 10;
+		var rightNumberFIN = 88;
+		
+		} 
+		else if(leftNumbercol > 85){
+		var leftNumberFIN = 74;
+		var rightNumberFIN = 25;
+		
+		}
+		else{
+		var leftNumberFIN = leftNumbercol;
+		var rightNumberFIN = parseInt(percentageremain);
+		};
+		
+		$('#percentage').text(percentage + '%');
+		
+		$('#creditslider').delay(500).animate({
+		    backgroundPosition: percentageback + '% 50%'
+		  }, 2000, function() {
+		    // Animation complete.
+		  //alert(percentageremain);
+		  });
+		  
+		 $('#sliderright').delay(800).animate({
+		    width: leftNumberFIN + '%'
+		  }, 800, function() {
+					  $(this).animate({
+					  opacity: 1
+					  
+					  }, 1000);
+		    // Animation complete.
+		  });
+		  
+		$('#sliderleft').delay(800).animate({
+		    width: rightNumberFIN + '%'
+		  }, 800, function() {
+		  		$(this).animate({
+					  opacity: 1
+					  
+					  }, 1000);
+		    // Animation complete.
+		  });
+
+		$("#publictable").tablesorter();
+		$("#delinqtable").tablesorter();
+		$("#collecttable").tablesorter();
+		$("#goodstandingtable").tablesorter();
+    }
+); 
+	
+	</script>
+</head>
+<body>
+<!-- 
+<div id="reportheader" class="redback">
+ <h1 class="white">Personal Credit Report</h1> 
+<div class="clearDiv"></div>
+</div>
+ -->
+<div class="clearDiv spacer"></div>
+
+<div id="reportcontent">
+
+<!---- SORT DATA TABLE START ---->
+<div id="creditreport" class="padding rounded8 boxshadow">
+<div class="clearDiv smspacer"></div>
+<div class="col50 floatleft marginleft">
+		<div>Experian Credit Report</div>
+        <div style="min-height:50px;">
+        <h2 class="blue">{!Credit_Report__c.Contact__r.FirstName} {!Credit_Report__c.Contact__r.LastName} <a href="/apex/CreditReportPrint?id={!Credit_Report__c.Id}" target="_blank"><apex:image value="{!$Resource.nCBC__creport_print}" width="21" height="21" title="Print Credit Report" /></a></h2>
+        <div class="clearDiv"></div>
+        <span class="state red">State: {!Credit_Report__c.Contact__r.LLC_BI__Home_State__c}</span>
+        <div class="clearDiv"></div>
+        </div>
+<h4 class="blue"><strong>FICO Score:</strong> <span class="red"><apex:outputText value="{!FICO}" /></span></h4>
+<div class="clearDiv"></div>
+<h4 class="blue"><strong>Total Balance:</strong> <span class="black">$<apex:outputText value="{0,Number,###,###}"><apex:param value="{!TotalBalance}" /></apex:outputText></span></h4>
+<div class="clearDiv"></div>
+<!--
+<h4 class="blue"><strong>Total Rev. Limit:</strong> <span class="black">$<apex:outputText value="{0,Number,###,###}"><apex:param value="{!CreditLimit}" /></apex:outputText></span></h4>
+<div class="clearDiv"></div>
+<h4 class="blue"><strong>Total Rev. Usage:</strong> <span class="black">$<apex:outputText value="{0,Number,###,###}"><apex:param value="{!TotalRevUsage}" /></apex:outputText></span></h4>
+<div class="clearDiv"></div>
+-->
+</div>
+
+<div class="col50 floatright">
+        <div style="min-height:50px;">
+        <h2 class="blue">{!Credit_Report__c.Contact__r.Account.Name}</h2>
+        <div class="clearDiv"></div>
+        </div>
+<h4 class="blue"><strong>OFAC:</strong> <span class="red"><apex:outputText value="{!OFAC}" /></span></h4>
+<div class="clearDiv"></div>
+<h4 class="blue"><strong>Debt Service Total:</strong> <span class="black">$<apex:outputText value="{0,Number,###,###}"><apex:param value="{!DebtServiceTotal}" /></apex:outputText></span></h4>
+<div class="clearDiv"></div>
+<!-- <h4 class="blue"><strong>% Rev. Avail:</strong> <apex:outputText value="{!PercentVal}" escape="false"></apex:outputText></h4>  -->
+</div>
+
+<div class="clearDiv spacer"></div>
+<div class="center" style="width: 1000px;">
+
+	<div class="floatleft">
+		<span style="font-weight: bold; color: #2D5B78; font-size: 14px;">Revolving Usage</span>
+	</div>
+
+	<div class="floatright">
+		<span style="font-weight: bold; color: #2D5B78; font-size: 14px;">Revolving Limit</span>
+	</div>
+
+</div>
+<div class="clearDiv" style="height: 10px;"></div>
+
+<div id="creditslider" class="rounded6 center boxshadow">
+
+	<div id="sliderleft" class="floatleft">
+	    <div id="lownum" class="number floatleft dkblue rounded4 smmarginleft">
+	    <apex:outputText value="{0,Number,###,###}"><apex:param value="{!TotalRevUsage}" /></apex:outputText>
+	    </div>
+    </div>
+    
+    <div id="sliderright" class="floatright">
+	    <div id="percentage" class="number floatleft dkblue rounded4 smmarginright">
+	    55
+	    </div>
+    	
+    	<div id="highnum" class="number floatright dkblue rounded4 smmarginright">
+    	
+    	<apex:outputText value="{0,Number,###,###}"><apex:param value="{!CreditLimit}" /></apex:outputText>
+    </div>
+    </div>
+</div>
+ 
+<div class="clearDiv spacer"></div>
+
+<!-- Public Records -->
+<div class="reportwrapper rounded6 center boxshadow">
+<h3 class="tabletitle red shadow">Public Records ({!PRCount})</h3>
+    <div class="clearDiv"></div>
+	<div class="tablewrapper">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="publictable" class="datatable tablesorter">
+    <thead>
+  <tr>
+    <th scope="col">Status</th>
+    <th scope="col">Status Date</th>
+    <th scope="col">Filing Date</th>
+    <th scope="col">Evaluation</th>
+    <th scope="col">Amount</th>
+    <th scope="col">Comment</th>
+    <th scope="col">Court</th>
+    <th scope="col">Ref. #</th>
+    <th scope="col">Plantiff</th>
+    <th scope="col">Dispute</th>
+    <th scope="col">ECOA</th>
+    <th scope="col">Bk Ast Amt</th>
+    <th scope="col">Bk Lia Amt</th>
+    <th scope="col">Bk Rep Amt</th>
+    <th scope="col" class="last">Bkrpt Adj Amt</th>
+  </tr>
+  </thead>
+  <tbody> 
+  
+	<apex:outputText escape="false" value="{!HTML_PR}"></apex:outputText>
+  
+  </tbody> 
+</table>
+    
+    <div class="clearDiv"></div>
+</div>
+
+<div class="clearDiv"></div>
+</div>
+<div class="clearDiv spacer"></div>
+<!---- SORT DATA TABLE END ---->
+
+<!-- Delinquency -->
+<div class="reportwrapper rounded6 center boxshadow">
+<h3 class="tabletitle red shadow">Delinquency ({!DelCount})</h3>
+    <div class="clearDiv"></div>
+	<div class="tablewrapper">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="delinqtable" class="datatable tablesorter">
+    <thead>
+  <tr>
+    <th scope="col">Open Date</th>
+    <th scope="col">Holder</th>
+    <th scope="col">Account Type</th>
+    <th scope="col">Credit Limit</th>
+    <th scope="col">Bal Date</th>
+    <th scope="col">Bal Amt</th>
+    <th scope="col">Status</th>
+    <th scope="col">Open/Closed</th>
+    <th scope="col">R/I</th>
+    <th scope="col">History</th>
+    <th scope="col">1st Del Date</th>
+    <th scope="col">Over 30</th>
+    <th scope="col">Over 60</th>
+    <th scope="col">Over 90</th>
+    <th scope="col">Mo. Pmt</th>
+    <th scope="col" class="last">Mo. Pmt Type</th>
+  </tr>
+  </thead>
+  <tbody> 
+  
+	<apex:outputText escape="false" value="{!HTML_Delinq}"></apex:outputText>
+  
+  </tbody> 
+</table>
+    
+    <div class="clearDiv"></div>
+</div>
+
+<div class="clearDiv"></div>
+</div>
+<div class="clearDiv spacer"></div>
+<!---- SORT DATA TABLE END ---->
+
+
+<!---- SORT DATA TABLE START ---->
+<div class="reportwrapper rounded8 center boxshadow">
+<h3 class="tabletitle red shadow">Collections ({!ColCount})</h3>
+    <div class="clearDiv"></div>
+	<div class="tablewrapper">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="collecttable" class="datatable tablesorter">
+    <thead>
+  <tr>
+    <th scope="col">Open Date</th>
+    <th scope="col">Holder</th>
+    <th scope="col">Account Type</th>
+    <th scope="col">Credit Limit</th>
+    <th scope="col">Bal Date</th>
+    <th scope="col">Bal Amt</th>
+    <th scope="col">Status</th>
+    <th scope="col">Open/Closed</th>
+    <th scope="col">R/I</th>
+    <th scope="col">History</th>
+    <th scope="col">1st Del Date</th>
+    <th scope="col">Over 30</th>
+    <th scope="col">Over 60</th>
+    <th scope="col">Over 90</th>
+    <th scope="col">Mo. Pmt</th>
+    <th scope="col" class="last">Mo. Pmt Type</th>
+  </tr>
+  </thead>
+   <tbody> 
+
+	<apex:outputText escape="false" value="{!HTML_Collection}"></apex:outputText>
+  
+  </tbody> 
+</table>
+    
+    <div class="clearDiv"></div>
+</div>
+
+<div class="clearDiv"></div>
+</div>
+<div class="clearDiv spacer"></div>
+<!---- SORT DATA TABLE END ---->
+
+
+
+<!---- SORT DATA TABLE START ---->
+<div class="reportwrapper rounded8 center boxshadow">
+<h3 class="tabletitle red shadow">Open Accounts in Good Standing ({!TLOCount})</h3>
+    <div class="clearDiv"></div>
+	<div class="tablewrapper">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="goodstandingtable" class="datatable tablesorter">
+    <thead>
+  <tr>
+    <th scope="col">Open Date</th>
+    <th scope="col">Holder</th>
+    <th scope="col">Account Type</th>
+    <th scope="col">Credit Limit</th>
+    <th scope="col">Bal Date</th>
+    <th scope="col">Bal Amt</th>
+    <th scope="col">Status</th>
+    <th scope="col">R/I</th>
+    <th scope="col">History</th>
+    <th scope="col">1st Del Date</th>
+    <th scope="col">Over 30</th>
+    <th scope="col">Over 60</th>
+    <th scope="col">Over 90</th>
+    <th scope="col">Mo. Pmt</th>
+    <th scope="col" class="last">Mo. Pmt Type</th>
+  </tr>
+  </thead>
+   <tbody> 
+   
+	<apex:outputText escape="false" value="{!HTML_TLO}"></apex:outputText>
+  
+  </tbody> 
+</table>
+    
+    <div class="clearDiv"></div>
+</div>
+
+<div class="clearDiv"></div>
+</div>
+<div class="clearDiv spacer"></div>
+<!---- SORT DATA TABLE END ---->
+
+<!---- SORT DATA TABLE START ---->
+<div class="reportwrapper rounded8 center boxshadow">
+<h3 class="tabletitle red shadow">Closed Accounts in Good Standing ({!TLCCount})</h3>
+    <div class="clearDiv"></div>
+	<div class="tablewrapper">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="goodstandingtable" class="datatable tablesorter">
+    <thead>
+  <tr>
+    <th scope="col">Open Date</th>
+    <th scope="col">Holder</th>
+    <th scope="col">Account Type</th>
+    <th scope="col">Credit Limit</th>
+    <th scope="col">Bal Date</th>
+    <th scope="col">Bal Amt</th>
+    <th scope="col">Status</th>
+    <th scope="col">R/I</th>
+    <th scope="col">History</th>
+    <th scope="col">1st Del Date</th>
+    <th scope="col">Over 30</th>
+    <th scope="col">Over 60</th>
+    <th scope="col">Over 90</th>
+    <th scope="col">Mo. Pmt</th>
+    <th scope="col" class="last">Mo. Pmt Type</th>
+  </tr>
+  </thead>
+   <tbody> 
+   
+	<apex:outputText escape="false" value="{!HTML_TLC}"></apex:outputText>
+  
+  </tbody> 
+</table>
+    
+    <div class="clearDiv"></div>
+</div>
+
+<div class="clearDiv"></div>
+</div>
+<div class="clearDiv spacer"></div>
+<!---- SORT DATA TABLE END ---->
+
+
+<div class="clearDiv"></div>
+</div><!---- CREDIT REPORT END ---->
+</div><!---- CONTENT END ---->
+
+</body>
+</html>
+</apex:page>

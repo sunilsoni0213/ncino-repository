@@ -1,0 +1,131 @@
+<apex:page showHeader="true" sidebar="true" controller="nFORCE.TestTreeGridController" extensions="nFORCE.RemoteActionController">
+	<c:Includes />
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}"/>
+	<c:Include_Design_System flavor="bs3"/>
+	<c:ncTreeGridIncludes />
+	<c:ncPubsubIncludes />
+
+	<style>
+		.fieldsets {
+			border: 1px solid #c0c0c0 !important;
+			margin: 0 2px !important;
+			padding: 0.35em 0.625em 0.75em !important;
+			width: 300px !important;
+			float: left !important;
+		}
+	</style>
+
+
+
+
+
+	<div class="slds">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div id="testTreeGrid">
+								<script type="text/ng-template" id="testTreeGridTemplate.partial.html">
+
+									<fieldset class="fieldsets">
+										<legend>Modal on Action</legend>
+										<label>Show Modal: <input type="checkbox"
+											ng-model="vm.showAlert" /></label><br />
+										Heading: <input type="text" ng-model="vm.labels.heading" /><br />
+										Body: <input type="text" ng-model="vm.labels.message" /><br />
+										Cancel: <input type="text" ng-model="vm.labels.cancel" /><br />
+										Confirm: <input type="text" ng-model="vm.labels.confirm" /><br />
+									</fieldset>
+									<fieldset class="fieldsets">
+										<legend>Action Button</legend>
+										Class: <input type="text" ng-model="vm.actionButtonClass" /><br />
+									</fieldset>
+									<fieldset class="fieldsets">
+										<legend>Secondary Button</legend>
+										<label>Secondary: <input type="checkbox"
+											ng-model="vm.secondaryButton.show" /></label><br />
+										Title: <input type="text" ng-model="vm.secondaryButton.label" /><br />
+										Class: <input type="text" ng-model="vm.secondaryButton.class" /><br />
+										<label>Enabled: <input type="checkbox"
+											ng-model="vm.secondaryButton.enabled" /></label><br />
+									</fieldset>
+									<div style="clear: both;"></div>
+									<tree-grid
+										remoting-service="{!$RemoteAction.RemoteActionController.invoke}"
+										guid="{{guid}}"
+										template-url="{!$Page.ncTreeGridHtml}"
+										no-records-found-label="No Records Found"
+										get-tree-data-ra-context="{!packagePrefix}.TestTreeGridController.getTreeGridData"
+										perform-tree-action-ra="{!packagePrefix}.TestTreeGridController.PerformTreeGridActionEndpoint"
+										context-id="0"
+										max-depth="4"
+										alert-save-ra="{!packagePrefix}.TestTreeGridController.AlertSaveActionEndpoint"
+										context-params="{!params}"
+										cancel-button-label="Cancel"
+										cancel-button-url="/apex/TestTreeGridController"
+										perform-actions-button-label="Perform Actions"
+										is-perform-actions-btn-enabled="true"
+										propagate-drop-down-change="true"
+										hide-collapse-expand-icon="false"
+										perform-actions-button-has-alert="vm.showAlert"
+										alert-labels="vm.labels"
+										action-button-class="vm.actionButtonClass"
+										secondary-button="vm.secondaryButton"
+									/>
+								</script>
+							<test-tree-grid></test-tree-grid>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+
+	<script>
+		(function(angular){
+			'use strict';
+
+			angular.element(document).ready(function() {
+				angular.bootstrap(document.getElementById('testTreeGrid'), ['testTreeGrid']);
+			});
+
+			angular.module('testTreeGrid', ['ncUI', 'ncTreeGrid', 'ncPubsub'])
+				.component('testTreeGrid', {
+				controllerAs:'vm',
+				controller: testTreeGrid,
+				templateUrl: 'testTreeGridTemplate.partial.html'
+				});
+
+			testTreeGrid.$inject = ['$scope', 'pubsub', 'messageService'];
+			function testTreeGrid($scope, pubsub, messageService){
+				$scope.guid = 'fakeGuid';
+				this.showAlert = true;
+				this.labels = {
+					heading: 'headingLabel',
+					message: 'messageLabel',
+					cancel: 'cancelLabel',
+					confirm: 'confirmLabel'
+				};
+				this.secondaryButton = {
+					show: true,
+					label: 'secondary Button',
+					action: function(){
+						alert('Secondary Button Dynamic Action: ' + this.label);
+					}
+				};
+				this.treeGridReceiveTreeGrid = function(vm) {
+					if(vm.treeGrid.rows[0].cells[8]){
+						vm.treeGrid.rows[0].cells[8].value = { label: 'TestEdit' };
+						console.log(vm.getCellByName(vm.treeGrid.rows[0], 'modal Time'));
+						vm.getCellByName(vm.treeGrid.rows[0], 'modal Time').value.label = 'TestEdit2';
+						console.log(vm.getCellByName(vm.treeGrid.rows[0], 'modal Time'));
+						console.log(vm.treeGrid.rows[0].cells[8]);
+					}
+				};
+				pubsub.subscribe('treeGrid.receiveTreeGrid-' + $scope.guid, this.treeGridReceiveTreeGrid);
+			}
+		})(window.angular);
+	</script>
+</apex:page>

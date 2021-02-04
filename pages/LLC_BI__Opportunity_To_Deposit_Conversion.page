@@ -1,0 +1,12 @@
+<apex:page sidebar="false" controller="LLC_BI.OpportunityConversionAppController"
+	action="{!createRecordsAndRedirect}">
+	<nFORCE:Include_Design_System flavor="vf" />
+	<div class="slds force">
+		<apex:outputPanel layout="none" rendered="{!displayError}">
+			<div class="slds-box slds-theme--error">{!errorMessage}</div>
+			<br/>
+			<br/>
+			<p><a href="/{!opportunityId}" class="slds-button slds-button--neutral">{!$Label.Back_To_Opportunity}</a></p>
+		</apex:outputPanel>
+	</div>
+</apex:page>

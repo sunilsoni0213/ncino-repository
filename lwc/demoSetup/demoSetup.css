@@ -1,0 +1,68 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.demo-setup-grid {
+    margin-bottom: 40px;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.left-panel {
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    background: rgb(35,58,195);
+    background-image: linear-gradient(112deg, #233AC3 0%, #0F0A61 54%);
+}
+
+.right-panel {
+    border-radius: 0 5px 5px 0;
+    background: #F3F2F2;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 3rem;
+}
+
+.left-panel-heading {
+    font-size: 2.45rem;
+    font-weight: 500;
+    margin-top: 50px;
+    line-height: 3rem;
+}
+
+.slds-progress-bar {
+    width: 55%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.slds-progress-bar__value {
+    background: #2AF39A;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.light-font-weight {
+    font-weight: 300;
+}
+
+.step-count {
+    color: #29F39A;
+    font-weight: 700;
+}
+
+.refresh-button {
+    margin-left: 1.5rem;
+    margin-top: .75rem;
+}
+
+.fixed-section {
+    position: fixed;
+    width: calc(33.3333333333% - 8px);
+}

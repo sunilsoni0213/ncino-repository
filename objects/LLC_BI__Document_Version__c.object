@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Version Data object stores placeholder version history.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>OneSpan_ESignature</fullName>
+        <availableFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Enlarged_Preview_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__External_Download_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__External_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__External_Preview_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__External_Thumbnail_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Offloaded_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Offloaded__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Preview_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Published_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Published__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Ready_For_Offload__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>OneSpan-ESignature Integration</description>
+        <displayedFields>
+            <field>LLC_BI__Placeholder_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Content_Version_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Title__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Document_Store__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__File_Extension__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__File_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OneSpan ESignature</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Content_Version_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not required but is automatically populated. It is a soft reference to Convent Version.</description>
+        <externalId>false</externalId>
+        <label>Content Version</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Document_Store__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field auto-populates and is required. This field associates the Document Store record where the file is held.</description>
+        <externalId>false</externalId>
+        <label>Document Store</label>
+        <referenceTo>LLC_BI__Document_Store__c</referenceTo>
+        <relationshipLabel>Document Versions</relationshipLabel>
+        <relationshipName>Document_Version_Store_Indices</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enlarged_Preview_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. This field stores the contents enlarged preview url.</description>
+        <externalId>false</externalId>
+        <formula>if(LLC_BI__File_Extension__c = &apos;png&apos; || LLC_BI__File_Extension__c = &apos;jpg&apos; || LLC_BI__File_Extension__c = &apos;jpeg&apos; || LLC_BI__File_Extension__c = &apos;bmp&apos; || LLC_BI__File_Extension__c = &apos;tiff&apos; || LLC_BI__File_Extension__c = &apos;tif&apos;,
+			&quot;/sfc/servlet.shepherd/version/download/&quot;+LLC_BI__Content_Version_Id__c+&quot;?asPdf=false&amp;operationContext=CHATTER&quot;,
+			&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=SVGZ&amp;versionId=&quot; + LLC_BI__Content_Version_Id__c)</formula>
+        <label>Enlarged Preview URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__External_Download_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated download link for a file hosted on external storage.</description>
+        <externalId>false</externalId>
+        <label>External Download URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__External_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated external ID for a document stored on external storage.</description>
+        <externalId>false</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__External_Preview_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated full-preview link for a file hosted on external storage (if available).</description>
+        <externalId>false</externalId>
+        <label>External Preview URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__External_Thumbnail_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated thumbnail-preview link for a file hosted on external storage (if available).</description>
+        <externalId>false</externalId>
+        <label>External Thumbnail URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__File_Extension__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not required but is automatically populated. This text field is used to specify a file extension.</description>
+        <externalId>false</externalId>
+        <label>File Extension</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__File_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not required but is automatically populated. This text field is used to specify a file type.</description>
+        <externalId>false</externalId>
+        <label>File Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Offloaded_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated time stamp on the document version record specifying the last time a document (and its associated metadata) was offloaded to external storage.</description>
+        <externalId>false</externalId>
+        <label>Offloaded Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Offloaded__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated indicator on the document version record specifying the document (and its associated metadata) has been offloaded to external storage.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Offloaded_Date__c), false, true)</formula>
+        <label>Offloaded</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Placeholder_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not required but is automatically populated. It is a soft reference to a placeholder.</description>
+        <externalId>false</externalId>
+        <label>Placeholder Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Preview_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. This field stores the contents preview url.</description>
+        <externalId>false</externalId>
+        <formula>&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=THUMB720BY480&amp;versionId=&quot; + LLC_BI__Content_Version_Id__c</formula>
+        <label>Preview URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Published_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated time stamp on the document version record specifying when the document (and its associated metadata) was successfully published to external storage.</description>
+        <externalId>false</externalId>
+        <label>Published Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Published__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An automatically populated indicator on the document version record specifying the document has been successfully published to external storage.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Published_Date__c), false, true)</formula>
+        <label>Published</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Ready_For_Offload__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>An automatically populated indicator on the document version record specifying that a document has met the criteria for offload to external storage.</description>
+        <externalId>false</externalId>
+        <label>Ready for Offload</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Title__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required but is automatically populated. This text field is used to specify a file title.</description>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NDOC__Preview_Url_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This value represents the number of possible preview URLs that exist for the current document version.</description>
+        <externalId>false</externalId>
+        <label>Preview Url Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ncinoocr__OCR_Corrections__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the JSON representation of corrections made to the OCR results. Defaults to empty. Will be populated automatically when OCR value corrections are saved.</description>
+        <externalId>false</externalId>
+        <label>Data Recognition Corrections</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ncinoocr__OCR_Request_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The response token recieved when the document was submitted to AWS used for calls in the same context.</description>
+        <externalId>false</externalId>
+        <label>Data Recognition Request Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ncinoocr__OCR_Results__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the JSON representation of the OCR results. Defaults to empty. Will be populated automatically when OCR is completed.</description>
+        <externalId>false</externalId>
+        <label>Data Recognition Results</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ncinoocr__OCR_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The OCR document status field is used to track the document&apos;s progress through the OCR process. Defaults to an empty string. Field is not required.</description>
+        <externalId>false</externalId>
+        <label>Data Recognition Document Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                    <label>Error</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>Verified</fullName>
+                    <default>false</default>
+                    <label>Verified</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Document Version</label>
+    <nameField>
+        <displayFormat>DV-{0000000000}</displayFormat>
+        <label>Document Version Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Document Versions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission allows a user to delete renewed or modified loans from the credit actions page.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Credit Actions Delete</label>
+</PermissionSet>

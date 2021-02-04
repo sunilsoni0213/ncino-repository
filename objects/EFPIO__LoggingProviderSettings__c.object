@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Provides ability to specify the logging provider that will be used within the framework.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>EFPIO__LoggingLevels__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The comma delimited list of logging levels. Only System.LoggingLevel enum values are valid for use. This is a cumulative list, so if you only specify ERROR, only logs with ERROR will be stored, however, if you specify INFO, then INFO, WARN, and ERROR logs will be stored. If you specify &quot;WARN, FINE&quot; then only the highest level will be taken into account - FINE in this case, which will consist of FINE, DEBUG, INFO, WARN, and ERROR. Valid values are NONE,ERROR,WARN,INFO,DEBUG,FINE,FINER,FINEST</description>
+        <externalId>false</externalId>
+        <label>Logging Levels to Capture</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__LoggingMaxRetryAttempts__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The maximum amount of times to attempt to retry a DML interaction before erroring.</description>
+        <externalId>false</externalId>
+        <label>Logging Max Retry Attempts</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__LoggingProvider__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified name of the logging provider implementing the EFPIO.ILoggingProvider_v1 interface and extending the LoggingBaseProvider_v1 base class.</description>
+        <externalId>false</externalId>
+        <label>Logging Provider</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>EFPIO - Logging Provider Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

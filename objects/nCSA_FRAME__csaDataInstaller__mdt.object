@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Ability to log Data Installers for Accelerators</description>
+    <fields>
+        <fullName>nCSA_FRAME__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Define if Data Installer is Active for Usage.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nCSA_FRAME__Icon_Path__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Path to selected Icon</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Path to selected Icon</inlineHelpText>
+        <label>Icon Path</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nCSA_FRAME__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Order to appear on List</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Please Select a Number from 12- keeping in mind other acceleratos, ask a lead for details</inlineHelpText>
+        <label>Order</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nCSA_FRAME__Page_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API Name of the Page</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>API Name of the Page</inlineHelpText>
+        <label>Page Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nCSA_FRAME__Route_App_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Route App Name</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>App Name of Route, csa-data-installer is prefixed</inlineHelpText>
+        <label>Route App_Name</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nCSA_FRAME__Route_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Route Name</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Name of the route that will be created</inlineHelpText>
+        <label>Route Name</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>csaDataInstaller</label>
+    <pluralLabel>csaDataInstallers</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,29 @@
+<apex:page docType="html-5.0"
+	sidebar="false" showHeader="false"
+	standardController="LLC_BI__Deposit__c"
+	extensions="LLC_BI.DefaultAppController,nFORCE.TemplateController">
+	<apex:pageBlock html-style="display:none"/>
+	<apex:composition template="nFORCE__Template_Base">
+
+		<apex:define name="topbar">
+			<apex:include rendered="{!!isNull(route.nFORCE__Topbar__c)}"
+				pageName="{!route.nFORCE__Topbar__c}" />
+		</apex:define>
+
+		<apex:define name="navigation">
+			<apex:include rendered="{!!isNull(route.nFORCE__Navigation__c)}"
+				pageName="{!route.nFORCE__Navigation__c}" />
+		</apex:define>
+
+		<apex:define name="subNavigation">
+			<apex:include rendered="{!!isNull(route.nFORCE__Sub_Navigation__c)}"
+				pageName="{!route.nFORCE__Sub_Navigation__c}" />
+		</apex:define>
+
+		<apex:define name="body">
+			<apex:include rendered="{!!isNull(route.nFORCE__Body__c)}"
+				pageName="{!route.nFORCE__Body__c}" />
+		</apex:define>
+
+	</apex:composition>
+</apex:page>

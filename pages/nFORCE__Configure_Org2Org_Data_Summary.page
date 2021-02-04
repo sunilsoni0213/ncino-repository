@@ -1,0 +1,31 @@
+<apex:page controller="nFORCE.ConfgOrg2OrgDataSummaryController"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false"
+	docType="html-5.0">
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" />
+	<apex:outputPanel layout="block" styleClass="force">
+		<apex:outputPanel layout="block" styleClass="ui-container">
+			<apex:outputPanel layout="block" styleClass="container-fluid">
+				<apex:outputPanel layout="block" styleClass="row">
+					<apex:outputPanel layout="block" styleClass="col-xs-12">&nbsp;</apex:outputPanel>
+				</apex:outputPanel>
+				<apex:outputPanel layout="block" styleClass="row">
+					<apex:outputPanel layout="block" styleClass="col-xs-12">
+						<apex:outputPanel layout="block" styleClass="panel panel-info">
+							<apex:outputPanel layout="block" styleClass="panel-heading">
+								{!$CurrentPage.parameters.providerName+' '+$Label.nforce__org2org_data_details}
+							</apex:outputPanel>
+							<apex:outputPanel layout="block" styleClass="panel-body table-responsive">
+								<apex:messages styleClass="text-danger"/>
+								<apex:form styleClass="form-inline">
+									<c:Configure_Org2Org_Data_Summary />
+								</apex:form>
+							</apex:outputPanel>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:outputPanel>
+		</apex:outputPanel>
+	</apex:outputPanel>
+</apex:page>

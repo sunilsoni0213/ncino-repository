@@ -1,0 +1,29 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+	<c:ncVehicleValuationIncludes />
+	<c:ncVehicleValuationConfiguration />
+	<nFORCE:Include_Design_System components="true" />
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncVehicleValuation">
+						<c:ncVehicleValuationPartials />
+						<nFORCE:ncScreenSectionFormBuilderPartials />
+						<vehicle-valuation-tool></vehicle-valuation-tool>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+	<style>
+		.col-sm-12 {
+			float: none;
+		}
+		.vv-summary-details .slds-col {
+			margin: 0 0 0 5px;
+		}
+	</style>
+	
+</apex:page>

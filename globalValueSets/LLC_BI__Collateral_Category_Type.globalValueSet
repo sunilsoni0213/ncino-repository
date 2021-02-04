@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </customValue>
+    <description>Category type for the collateral type object.</description>
+    <masterLabel>Collateral Category Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

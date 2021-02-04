@@ -1,0 +1,220 @@
+<apex:page controller="LLC_BI.SystemAdminController" title="nCino Admin" action="{!initializePage}" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+			<nFORCE:Includes enableLifeCycleApp="true" runLifeCycleApp="false" />
+			<cInclude_jQuery_UI_css />
+		</head>
+		<body>
+			<div class="container-fluid">
+				<div class="">
+					<apex:outputPanel layout="block">
+						<apex:outputText value="{!$Label.llc_bi__system_admin_installed_version}" escape="false" />
+						<apex:outputPanel id="ncinoVersionSpan" styleClass="ncino-version">
+							&nbsp;<apex:outputText value="{!installedVersion}" />
+						</apex:outputPanel>&nbsp;
+						<apex:outputPanel layout="block" id="upgrade_status" styleClass="">
+							<apex:outputPanel layout="block" rendered="{!isInstalled}">
+								<p>
+									<apex:outputText value="{!$Label.llc_bi__system_admin_last_updated_on}" />
+									&nbsp;<apex:outputText value="{!lastInstalledTime}" />&nbsp;
+									<apex:outputText value="{!$Label.llc_bi__system_admin_last_updated_by}" />
+									&nbsp;<apex:outputText value="{!lastInstalledBy}" />
+									<apex:outputPanel rendered="{!covenantsButtonEnabled && covenantsPropertyExists}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_covenant_migrated}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!!covenantsButtonEnabled}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_covenant_not_migrated}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!collateral2Migrated && collateral2PropertyExists}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_collateral_migrated}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!collateral2_1Migrated && collateral2_1PropertyExists}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_collateral2_1migrated}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!creditMemoExportUpgraded}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_export_enabled}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!creditMemoNarrativeUpgraded}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_narrative_upgraded}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!creditMemoSpreadsAppendixDebtScheduleUpgraded}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_spreads_appendix_debt_schedule_upgraded}"/>
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!isTreasuryManagementUpgraded}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_tm_updated_text}" />
+									</apex:outputPanel>
+									<apex:outputPanel rendered="{!isLeasingInstalled}">
+										<br/><apex:outputText value="{!$Label.llc_bi__system_admin_leasing_installed}" />
+									</apex:outputPanel>
+								</p>
+							</apex:outputPanel>
+
+							<apex:outputPanel layout="block">
+								<apex:outputPanel layout="block">&nbsp;</apex:outputPanel>
+							</apex:outputPanel>
+
+							<apex:form id="install_updates_batch_info">
+								<apex:outputPanel layout="block" rendered="{!isBatchApexRunningFromInstall}">
+									<apex:repeat value="{!batchApexRunningFromInstall}" var="job">
+										<apex:outputPanel layout="block"
+											rendered="{!job.ExtendedStatus==''}"
+											style="border-color:#D8DDE6"
+											styleClass="ui-state-error ui-corner-all ncino-admin-info">
+											<apex:outputText value="{!$Label.llc_bi__system_admin_update_in_progress}" />
+											<p>
+												<apex:image value="/img/loading.gif" rendered="{!job.Status=='Preparing'|| job.Status=='Processing'}" />
+												<apex:outputText value="{!job.Status} ({!job.JobItemsProcessed}/{!job.TotalJobItems}) "/>
+												<apex:outputPanel rendered="{!job.ExtendedStatus!=''}" styleClass="ui-icon ui-icon-alert" style="display:inline-block" />
+												<apex:outputText value=" {!job.ExtendedStatus} "/>
+											</p>
+										</apex:outputPanel>
+										<apex:outputPanel layout="block"
+											rendered="{!job.ExtendedStatus!=''}"
+											styleClass="ui-state-error ui-corner-all ncino-admin-info">
+											<apex:outputText value="{!$Label.llc_bi__system_admin_update_in_progress}" />
+											<p>
+												<apex:image value="/img/loading.gif" rendered="{!job.Status=='Preparing'|| job.Status=='Processing'}" />
+												<apex:outputText value="{!job.Status} ({!job.JobItemsProcessed}/{!job.TotalJobItems}) "/>
+												<apex:outputPanel rendered="{!job.ExtendedStatus!=''}" styleClass="ui-icon ui-icon-alert" style="display:inline-block"/>
+												<apex:outputText value=" {!job.ExtendedStatus} "/>
+											</p>
+										</apex:outputPanel>
+										<apex:outputPanel layout="block">
+											<apex:outputPanel layout="block">&nbsp;</apex:outputPanel>
+										</apex:outputPanel>
+									</apex:repeat>
+
+								</apex:outputPanel>
+								<apex:actionPoller action="{!checkIsBatchApexRunningFromInstall}" enabled="{!shouldCheckForUpdateProgress}" interval="5" reRender="install_updates_batch_info" />
+							</apex:form>
+
+
+
+							<apex:outputPanel rendered="{!errorOccurred}">
+								<apex:outputPanel layout="block" styleClass="ui-state-error ui-corner-all ncino-admin-info">
+								<p>
+									<apex:outputPanel styleClass="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"/>
+									<apex:outputText value="{!errorMessage}"/>
+								</p>
+								<p>
+									<apex:outputPanel styleClass="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"/>
+									<apex:outputText value="{!triggerErrorMessage}" rendered="{!triggerErrorMessage != null}"/>
+								</p>
+								</apex:outputPanel><br/>
+							</apex:outputPanel>
+
+							<apex:outputPanel rendered="{!!isQueued}">
+								<apex:outputPanel layout="block" rendered="{!!isInstalled}" styleClass="ui-state-highlight ui-corner-all ncino-admin-info">
+								<p>
+									<apex:outputPanel styleClass="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"/>
+									<apex:outputText value="{!$Label.llc_bi__system_admin_upgrade_not_installed}" escape="false" />
+								</p>
+								</apex:outputPanel>
+							</apex:outputPanel>
+
+							<apex:outputPanel rendered="{!isQueued}">
+								<apex:outputPanel layout="block" styleClass="ui-state-highlight ui-corner-all ncino-admin-info">
+									<p>
+										<apex:outputPanel styleClass="ui-icon ui-icon-info" style="float: left; margin-right: .3em;">
+										</apex:outputPanel>
+										<apex:outputText value="{!$Label.llc_bi__system_admin_update_currently_queued}" escape="false" />
+										<img src="/img/loading.gif" />
+									</p>
+								</apex:outputPanel><br/>
+							</apex:outputPanel>
+
+							<apex:form styleClass="row">
+								<apex:outputPanel id="trigger_upgrade_button" styleClass="col-sm-2" layout="block" rendered="false" >
+									<apex:commandButton action="{!queueTriggerInstaller}" value="{!$Label.llc_bi__system_admin_trigger_update_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_button" styleClass="col-sm-2" layout="block" rendered="{!!isQueued && creditMemoForceScreenUpgraded}" >
+									<apex:commandButton action="{!queueInstaller}" value="{!$Label.llc_bi__system_admin_update_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_batch_button" styleClass="col-sm-2" layout="block" rendered="false" >
+									<apex:commandButton action="{!runBatchUpgrades}" value="{!$Label.llc_bi__system_admin_update_batch_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_covenants_button" styleClass="col-sm-2" layout="block" rendered="{!!covenantsButtonEnabled && covenantsPropertyExists && creditMemoForceScreenUpgraded}">
+									<apex:commandButton action="{!runCovenantsUpgrades}" value="{!$Label.llc_bi__system_admin_update_covenants_button}"  styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_collateral2_button" styleClass="col-sm-2" layout="block" rendered="{!!collateral2Migrated && covenantsPropertyExists && creditMemoForceScreenUpgraded}" >
+									<apex:commandButton action="{!runCollateralUpgrades}" value="{!$Label.llc_bi__system_admin_update_collateral_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_fee_button" styleClass="col-sm-2" layout="block" rendered="{!!feeButtonEnabled && feePropertyExists}">
+									<apex:commandButton action="{!runFeeUpgrades}" value="{!$Label.llc_bi__system_admin_update_fees_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="add_policy_exeption_button" styleClass="col-sm-2" layout="block" rendered="{!!policyExceptionExampleButtonEnabled && policyExceptionExamplePropertyExists}">
+									<apex:commandButton action="{!runPolicyExceptionExamplesInstall}" value="{!$Label.llc_bi__install_example_policy_exceptions}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+
+								<apex:outputPanel id="install_leasing_button" styleClass="col-sm-2" layout="block" rendered="{!collateral2Migrated && !isLeasingInstalled}" >
+									<apex:commandButton action="{!runLeasingInstaller}" value="{!$Label.llc_bi__system_admin_install_leasing_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+
+								<apex:outputPanel id="update_docMan_visbility_button" styleClass="col-sm-2" layout="block"
+									rendered="{!(!isDocManVisibilityUpgraded) && isEnhancedSharingOn && isCommunityEnabled}">
+									<apex:commandButton action="{!runDocManVisibilityInstaller}" value="{!$Label.llc_bi__system_admin_update_docman_visibility_button}" styleClass="btn btn-info">
+									</apex:commandButton>
+								</apex:outputPanel>
+								<apex:actionPoller action="{!checkQueued}" interval="5" enabled="{!isQueued}"
+									reRender="upgrade_button,upgrade_status,upgrade_batch_button,upgrade_covenants_button,upgrade_cm_export_button,upgrade_cm_narrative_button"/>
+							</apex:form><br/>
+							<apex:form styleClass="row">
+								<apex:outputPanel id="upgrade_cm_export_button" styleClass="col-xs-2" layout="block" rendered="{!!creditMemoExportUpgraded && creditMemoExportPropertyExists}">
+									<apex:commandButton action="{!runCreditMemoExportUpgrades}" value="{!$Label.llc_bi__system_admin_cm_export_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_narrative_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoNarrativeUpgraded && creditMemoNarrativePropertyExists}">
+										<apex:commandButton action="{!runCreditMemoNarrativeUpgrades}" value="{!$Label.llc_bi__system_admin_cm_narrative_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_force_layout_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoForceLayoutUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceLayoutUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_layout_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_commercial_collateral2_1" styleClass="col-xs-2" layout="block" rendered="{!!collateral2_1Migrated && collateral2Migrated && collateral2_1PropertyExists}">
+										<apex:commandButton action="{!runCommercialCollateral2_1Upgrades}" value="{!$Label.llc_bi__system_admin_upgrade_commercial_collateral2_1_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_force_section_config_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoForceSectionConfigUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceSectionConfigUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_section_config_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_force_screen_section_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoForceScreenSectionUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceScreenSectionUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_screen_section_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_force_screen_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoForceScreenUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceScreenUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_screen_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+
+								<apex:outputPanel id="upgrade_cm_force_view_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoForceViewUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceViewUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_view_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_force_widget_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoForceWidgetUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceWidgetUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_widget_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_force_attachments_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoAttachmentUpgraded}">
+										<apex:commandButton action="{!runCreditMemoForceAttachmentUpgrades}" value="{!$Label.llc_bi__system_admin_cm_force_attachments_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_cm_spreads_appendix_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!creditMemoSpreadsAppendixDebtScheduleUpgraded &&
+									creditMemoSpreadsAppendixDebtSchedulePropertyExists }">
+										<apex:commandButton action="{!runCreditMemoSpreadsAppendixUpgrades}" value="{!$Label.llc_bi__system_admin_cm_spreads_appendix_debt_schedule_button}" styleClass="btn btn-info"/>
+								</apex:outputPanel>
+								<apex:outputPanel id="upgrade_tm_button" styleClass="col-xs-2" layout="block"
+									rendered="{!!isTreasuryManagementUpgraded}">
+										<apex:commandButton action="{!runTreasuryManagementUpgrades}"
+											value="{!$Label.llc_bi__system_admin_tm_update_button}"
+											styleClass="btn btn-info" />
+								</apex:outputPanel>
+							</apex:form>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</div>
+			</div>
+		</body>
+	</html>
+</apex:page>

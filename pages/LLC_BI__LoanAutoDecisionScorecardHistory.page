@@ -1,0 +1,66 @@
+<apex:page controller="LLC_BI.LoanAutoDecisionScorecardHistory" showHeader="false" sideBar="false">
+	<nFORCE:Include_Design_System flavor="vf" />
+	<nFORCE:Include_Navigator />
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<span>{!$Label.llc_bi__loan_auto_decision_history_header}</span>
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div class="row col-md-12 slds-m-bottom--small slds-m-left--none">
+						<p>{!$Label.llc_bi__auto_decision_history_intro}</p>
+					</div>
+					<div class="row col-md-12 slds-m-left--none slds-scrollable--x">
+						<apex:form id="decision_scorecard_list">
+							<table class="slds-table slds-table--bordered">
+								<thead>
+									<tr class="slds-text-heading--label">
+										<th>{!$Label.llc_bi__loan_auto_decision_decision}</th>
+										<th>
+											<apex:commandLink action="{!sortOutputByCreatedDate}" reRender="decision_scorecard_list">
+												{!$Label.llc_bi__comment_date}
+												<apex:image value="{!URLFOR($Resource.nFORCE__design_system, 'assets/icons/utility/arrowdown_60.png')}"
+													rendered="{!sortDescending}"
+													styleClass="slds-m-left--xxx-small"
+													style="vertical-align:baseline;width:10px" />
+												<apex:image value="{!URLFOR($Resource.nFORCE__design_system, 'assets/icons/utility/arrowup_60.png')}"
+													rendered="{!!sortDescending}"
+													styleClass="slds-m-left--xxx-small"
+													style="vertical-align:baseline;width:10px" />
+											</apex:commandLink>
+										</th>
+										<th>{!$Label.Team_Member}</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<apex:repeat var="scorecard" value="{!scorecards}">
+										<tr>
+											<td>{!scorecard.LLC_BI__Result__c}</td>
+											<td>
+												<apex:outputText value="{0, date, MMM d','  yyyy}">
+													<apex:param value="{!scorecard.CreatedDate}" />
+												</apex:outputText>
+											</td>
+											<td>{!scorecard.CreatedBy.Name}</td>
+											<td>
+												<a onclick="LifeCycle.Navigator.navigateToRoute('{!$CurrentPage.Name}?id={!$CurrentPage.parameters.id}&app={!app}&scorecardId={!scorecard.Id}')">{!$Label.llc_bi__view_scorecard}</a>
+											</td>
+										</tr>
+									</apex:repeat>
+								</tbody>
+							</table>
+						</apex:form>
+						<apex:outputPanel layout="none" rendered="{!scorecards.size == 0}">
+							<p class="text-center">{!$Label.llc_bi__auto_decision_history_none}</p>
+						</apex:outputPanel>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

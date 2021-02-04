@@ -1,0 +1,97 @@
+<apex:page readOnly="true" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false"
+           sidebar="false" showHeader="false" contentType="text/html" docType="html-5.0" apiVersion="36.0"
+           cache="true" expires="100" showChat="false" showQuickActionVfHeader="false">
+
+    <div class="ncTreeGridContainer">
+        <message />
+        <modalDialog ng-if="vm.isModalVisible" />
+        <div ng-if="vm.hasDropDownActionsButton" class="performActions">
+            <button
+                    ng-disabled="!vm.isDropDownActionsButtonEnabled"
+                    ng-click="vm.performDropDownActions()"
+            >{{vm.performActionsButtonLabel}}</button>
+        </div>
+        <table class="slds-table slds-table--bordered slds-no-row-hover treeGrid">
+            <thead>
+            <tr>
+                <th ng-repeat="column in vm.treeGrid.columns" class="slds-text-heading--label">
+                    {{column.label}}
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-if="vm.hasTreeLoaded && vm.flattenedTreeGrid.length < 1">
+                <td class="noRecords" colspan="{{vm.treeGrid.columns.length}}">
+                    {{vm.noRecordsFoundLabel}}
+                </td>
+            </tr>
+            <tr
+                    ng-repeat="row in vm.flattenedTreeGrid"
+                    ng-class="(vm.isExpandable(row) && row.expanded) ? 'slds-is-selected' : ''">
+                <td
+                        class="slds-cell-wrap"
+                        ng-repeat="cell in row.cells"
+                        ng-style="
+							$first && {'padding-left':((row.depth+1)*24)+'px'} ||
+							{'padding-left':'8px'}">
+                    <img
+                            ng-if="$first && vm.hideCollapseExpandIcon!='true'"
+                            ng-click="vm.toggleExpand(row)"
+                            ng-style="
+								vm.isExpandable(row) && {'visibility':'visible'} ||
+								{'visibility':'hidden'}"
+                            width="15" height="15" src="{{
+								row.expanded ?
+								'{!URLFOR($Resource.nFORCE__design_system,'assets/ico
+								ns/utility/chevrondown_60.png')}' :
+								'{!URLFOR($Resource.nFORCE__design_system,'assets/icons/utility/chevronright_60.png')}'}}" />
+                    {{vm.getCellLabel(cell)}}
+                    <a href=""
+                       ng-if="vm.isCellButton(cell)"
+                       ng-repeat="option in cell.options"
+                       ng-click="vm.performAction(row,cell, option)"
+                       ng-class="(option.enabled) ? '' : 'disabled'"
+                    >{{option.label}}</a>
+                    <ul ng-if="vm.isCellList(cell)">
+                        <li ng-repeat="option in cell.options">{{option.label}}</li>
+                    </ul>
+                    <span
+                            ng-if="vm.isCellBadge(cell)"
+                            ng-repeat="option in cell.options"
+                            class="slds-badge {{option.style}}">{{option.label}}</span>
+                    <select
+                            ng-if="vm.isCellDropDown(cell)"
+                            ng-model="cell.value"
+                            ng-options="option.label for option in cell.options track by option.label"
+                            ng-change="vm.onDropdownChanged(row, cell)"
+                            class="slds-select">
+                    </select>
+                    <div class="force" ng-if="vm.isCellListAction(cell)" aria-expanded="true">
+                        <div class="item btn-group tools-actions">
+                            <div class="dropdown">
+                                <button data-toggle="dropdown"
+                                        class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                                    <img
+                                            class="slds-button__icon slds-button__icon--hint slds-button__icon--small"
+                                            src="{!URLFOR($Resource.nFORCE__design_system,
+                                              '/assets/icons/utility/down_60.png')}">
+                                    </img>
+                                </button>
+                                <ul aria-labelledby="tools-actions" class="dropdown-menu pull-right">
+                                    <li ng-repeat="option in cell.options">
+                                        <a href=""
+                                           ng-click="vm.performAction(row, cell, option)"
+                                           ng-class="(option.enabled) ? '' : 'disabled'"
+                                        >{{option.label}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</apex:page>

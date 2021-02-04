@@ -1,0 +1,16 @@
+<apex:page >
+	<div class="content-footing">
+		<div class="visible-md visible-lg pull-left content-footing-left">
+			<apex:insert name="left"/>
+		</div>
+		<div class="visible-md visible-lg pull-right content-footing-right">
+			<apex:insert name="right"/>
+		</div>
+		<div class="visible-xs visible-sm pull-left content-footing-left">
+			<apex:insert name="left"/>
+		</div>
+		<div class="visible-xs visible-sm pull-right content-footing-right">
+			<apex:insert name="right"/>
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,31 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+	<c:ProductPackageBorrowingStructureIncludes />
+	<apex:slds />
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncProductPackageBorrowingStructure">
+						<c:EntityInvolvementModal />
+						<c:ProductPackageBorrowingStructurePartial />
+						<nFORCE:ncScreenSectionFormBuilderPartials />
+						<nFORCE:ncDataTablePartials />
+						<nFORCE:ncDataTableIncludes />
+						<c:ncAssociationCardPartial />
+						<nFORCE:ncModal />
+						<product-package-borrowing-structure></product-package-borrowing-structure>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+	<!-- temporary styling fix -->
+	<style>
+		abbr.slds-required {
+			text-decoration: none;
+		}
+	</style>
+
+</apex:page>

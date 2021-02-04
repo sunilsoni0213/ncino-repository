@@ -1,0 +1,13 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.StandardSetControllerPasser" recordSetVar="facilities"
+		title="{!$Label.llc_bi__manage} {!$Label.llc_bi__loan_facilities}" docType="html-5.0">
+
+	<nFORCE:Include_Design_System flavor="bs3"/>
+
+	<c:Search_And_Select_Set standardControllerParam="{!standardController}"
+		searchLookupFieldParam="Product_Package__c"
+		searchSelfReferenceFieldParam="ParentLoan__c"
+		groupingFieldParam="Highest__c"
+		returnTopLevelRecordsOnly="true"
+		fieldSetString="Manage_Loan_Facilities"
+		searchLookupFieldNullParam="{!productPackageNullConfig}"/>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page showHeader="false" standardStylesheets="false">
+	<div class="row view-container slds-clearfix">
+		<apex:insert name="content"/>
+	</div>
+</apex:page>

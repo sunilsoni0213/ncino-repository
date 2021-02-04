@@ -1,0 +1,5 @@
+<apex:page controller="UpdateWebAppLink" sidebar="false" showHeader="false">
+<center>
+    <apex:outputLink value="https://{!domainStringBefore}/CustomerPortal/nPortal__SelfRegistration?core=es5" id="theLink"><apex:image style="width:100%" id="CustomerPortalWebsite" value="{!$Resource.OnlineApplicationWebpage}" /></apex:outputLink>
+</center>
+</apex:page>

@@ -1,0 +1,4 @@
+<apex:page >
+	<c:Includes enableLifeCycleApp="true" enableBootstrapCss="true"/>
+	<c:LayoutDesigner />
+</apex:page>

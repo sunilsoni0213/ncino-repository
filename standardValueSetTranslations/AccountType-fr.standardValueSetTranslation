@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Charity</masterLabel>
+        <translation>Charité</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Corporation</masterLabel>
+        <translation>société</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Estate</masterLabel>
+        <translation>Biens</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Financial Institution</masterLabel>
+        <translation>Institution financière</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Household</masterLabel>
+        <translation>Ménage</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Individual</masterLabel>
+        <translation>Individuel</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Institutional Investor</masterLabel>
+        <translation>Investisseur institutionnel</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Limited Liability Company</masterLabel>
+        <translation>Société à responsabilité limitée</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Limited Partnership</masterLabel>
+        <translation>Partenariat limite</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Municipality</masterLabel>
+        <translation>Municipalité</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partnership</masterLabel>
+        <translation>Partenariat</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sole Proprietorship</masterLabel>
+        <translation><!-- Sole Proprietorship --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Trust</masterLabel>
+        <translation>Confiance</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

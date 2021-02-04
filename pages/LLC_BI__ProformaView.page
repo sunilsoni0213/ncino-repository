@@ -1,0 +1,25 @@
+<apex:page standardController="Account">
+	<apex:outputpanel layout="none">
+		<nFORCE:Includes enablefontawesome="true" enableBS3Namespace="true" />
+		<nFORCE:Include_Design_System flavor="vf"/>
+		<nFORCE:Include_Design_System flavor="bs3"/>
+
+		<c:Include_AngularJS />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/App.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}" />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/ConfigProvider.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/UIProvider.js')}"/>
+
+		<nFORCE:ncUIIncludes />
+		<nFORCE:ncDataProvidersIncludes />
+
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaView, 'application/App.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaView, 'providers/RemotingProvider.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaView, 'controllers/ProformaViewController.js')}"/>
+
+		<c:ProformaViewConfiguration contextId="{!Account.Id}"/>
+
+		<c:ProformaView contextId="{!Account.Id}"/>
+	</apex:outputpanel>
+</apex:page>

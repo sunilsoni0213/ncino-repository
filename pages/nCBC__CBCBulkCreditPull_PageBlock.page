@@ -1,0 +1,173 @@
+<apex:page standardController="Contact" extensions="nCBC.VF_CBCBulkCreditPull_PageBlock" >
+<head>
+	<style>  		
+		.table {
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.container {
+			overflow: hidden;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.divider {
+			float: left;
+			padding: 10px;
+			padding-top: 35px;
+			vertical-align: middle;
+			text-align: center;
+		}
+		
+		.filterLabel {
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.filterData {
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		
+		.filterN {
+			margin-left: 15px;
+			margin-bottom: 15px;
+			text-align: center;
+			width: 40px;
+		}
+	</style>
+	<link rel="stylesheet" href="{!URLFOR($Resource.llc_bi__llc_web_ui, 'jquery/css/redmond/jquery-ui-1.8.18.custom.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'jquery/js/jquery-1.7.1.min.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'jquery/js/jquery-ui-1.8.18.custom.min.js')}"/>
+	<script>		
+		function selectAll(cb){
+			var checkboxes = document.getElementsByTagName("input");
+			
+			for (var i=0; i < checkboxes.length; i++){
+				if (checkboxes[i].id.indexOf("cb")!=-1){
+					checkboxes[i].checked = cb.checked;
+				}
+			}
+		}	
+		
+		function hideText(){
+			var element = document.getElementById('NDays');
+			window.alert('test');
+			var render = Boolean('{!JSENCODE(IF(renderNFilter,"true", "false"))}');
+			
+			if (render){
+				element.style.display = 'block';			
+			} else { 		
+				element.style.display = 'none';			
+			}
+		}
+	</script>
+</head>
+	
+<apex:form >		
+	<apex:pageBlock id="Filter">			
+		<apex:pageMessage rendered="{!formMessageRendered}" severity="{!formMessageSeverity}" summary="{!formMessageSummary}" strength="3" />
+		<apex:pageBlockButtons location="bottom">
+			<apex:commandButton value="Show Contacts to Pull" action="{!showContacts}" reRender="Filter,ContactsSection,PullReports" />
+		</apex:pageBlockButtons>
+		
+		 <apex:pageBlockSection title="Filter Contacts" columns="1">
+		 	<apex:outputPanel >
+		 		<div style="width: 300px; float: left; padding-left: 15px;">
+					<div class="filterLabel">Credit Pull Result: 
+						<apex:selectList value="{!creditStatus}" size="1" styleClass="filterData">
+							<apex:selectOption itemValue="" itemLabel="Nothing" />
+							<apex:selectOptions value="{!statusList}" />
+						</apex:selectList>
+					</div>					
+				</div>
+					
+		 		<div style="width: 300px; float: left; padding-left: 200px;">
+					<div class="filterLabel">Credit Type: 
+						<apex:selectList value="{!creditType}" size="1" styleClass="filterData" >
+							<apex:selectOption itemValue="" itemLabel="Nothing" />
+							<apex:selectOptions value="{!typeList}" />
+						</apex:selectList>	
+					</div>						
+				</div>
+				
+		 		<div style="width: 300px; float: left; padding-left: 300px;">
+					<div class="filterLabel">Last Credit Pull is Older Than:
+						<apex:selectList value="{!nDaysValue}" size="1" styleClass="filterData" label="test" >
+							<apex:selectOption itemValue="" itemLabel="Nothing" />
+							<apex:selectOption itemValue="30" itemLabel="1 Month" />
+							<apex:selectOption itemValue="90" itemLabel="3 Months" />
+							<apex:selectOption itemValue="180" itemLabel="6 Months" />
+							<apex:selectOption itemValue="365" itemLabel="1 Year" />
+							<apex:selectOption itemValue="custom" itemLabel="Custom" onclick="hideText();" />
+							<apex:actionSupport event="onchange" action="{!hideNFilter}" reRender="NDays,Filter" />
+						</apex:selectList>
+					</div>
+				
+					<div style="width: 300px; float: left;" id="NDays">
+						<apex:outputText value="Older Than (in Days):" styleClass="filterLabel" rendered="{!renderNFilter}" />
+						<apex:inputText value="{!nDaysCustom}" styleClass="filterN" rendered="{!renderNFilter}" />
+					</div>
+				</div>
+		 	</apex:outputPanel>					
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+	
+	<apex:pageBlock id="ContactsSection">
+		<apex:pageBlockButtons location="bottom">
+			<apex:commandButton id="PullReports" value="Pull Credit Reports" action="{!PullCreditReports}" disabled="{!disableBulkRetrieval}" reRender="test,ContactsSection,BatchSection,Filter" />
+		</apex:pageBlockButtons>
+		
+		<apex:pageBlockSection title="Contacts" columns="1">
+			<apex:pageBlockTable value="{!contacts}" var="con" styleClass="table" rowClasses="odd, even">
+				<apex:column >	
+					<apex:facet name="header">
+						<apex:inputCheckbox title="Select All Contacts" value="{!contactsCheckbox}">
+							<apex:actionSupport event="onclick" action="{!GetSelected}" onsubmit="selectAll(this);" reRender="ContactsSection" />
+						</apex:inputCheckbox>
+					</apex:facet>
+					
+					<apex:inputCheckbox id="cb" value="{!con.isChecked}">
+						<apex:actionSupport event="onclick" action="{!GetSelected}" reRender="ContactsSection" />
+					</apex:inputCheckbox>
+				</apex:column>
+				<apex:column headerValue="Last Name">
+	    			<a href='/{!con.cont.Id}' target='_blank'>{!con.cont.LastName}</a>
+				</apex:column>
+				<apex:column headerValue="First Name" value="{!con.cont.firstname}" />
+				<apex:column headerValue="Type" value="{!con.cont.LLC_BI__Type__c}" />
+				<apex:column headerValue="Credit Retrieval Status" value="{!con.cont.nCBC__Credit_Retrieval_Status__c}" />
+				<apex:column headerValue="SS#" value="{!ssnField}" />
+				<apex:column headerValue="Address" value="{!con.cont.LLC_BI__Home_Address__c}" />
+				<apex:column headerValue="Account Name" value="{!con.cont.Account.Name}" />
+				<apex:column headerValue="Date of Last Retrieval" value="{!con.cont.nCBC__Last_Credit_Pull_Date__c}" />
+				<apex:facet name="footer">
+					<apex:outputText value="Total Selected: {!numContactsSelected}" />
+				</apex:facet>
+			</apex:pageBlockTable>
+			<apex:outputText value="{!bulkPullResult}" />
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+
+	<apex:pageBlock id="BatchSection">
+		<apex:pageBlockButtons >
+			<apex:commandButton id="RefreshBatch" value="Refresh My Batch" disabled="{!disableBatchRefresh}" action="{!RefreshBatch}" reRender="BatchSection" />
+			<apex:commandButton id="ViewMyBatch" value="View My Batches" action="{!ViewMyBatches}" reRender="BatchSection" />
+		</apex:pageBlockButtons>
+
+		<apex:pageBlockSection title="Batch Job(s)" columns="1">
+			<apex:outputText value="Last Batch Table Refresh: {!LastBatchRefresh}" rendered="{!disableRetrievalTime}" />
+			<apex:pageBlockTable value="{!apexBatchJobs}" var="job" rowClasses="odd, even" styleClass="table">
+				<apex:column headerValue="Created By" value="{!job.CreatedById}" />
+				<apex:column headerValue="Date Created" value="{!job.CreatedDate}" />
+				<apex:column headerValue="Job Type" value="{!job.JobType}" />
+				<apex:column headerValue="Status" value="{!job.Status}" />
+				<apex:column headerValue="Errors" value="{!job.NumberOfErrors}"/>
+				<apex:column headerValue="Error Details" value="{!job.ExtendedStatus}"/>
+			</apex:pageBlockTable>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

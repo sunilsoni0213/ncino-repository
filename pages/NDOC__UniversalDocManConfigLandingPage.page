@@ -1,0 +1,27 @@
+<apex:page >
+	<c:Include_jQuery />
+	<c:Include_jQuery_Custom />
+	<c:Include_jQuery_FormatCurrency />
+
+	<c:Include_MomentJS />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/utils-bundle.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__bootstrap, '/css/bootstrap-force.min.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap3.custom.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__DESIGN_SYSTEM,
+		'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+	<div class="force slds">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<div>{!$Label.ndoc__universal_docman_config}</div>
+				<div>{!$Label.ndoc__universal_docman_config_subtitle}</div>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container"/>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

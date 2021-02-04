@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is used to create a junction between Context objects and to orchestrate the order in which they are processed.</description>
+    <fields>
+        <fullName>LLC_BI__Context_Node__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional field contains a reference to a context object.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This field contains a reference to a context object.</inlineHelpText>
+        <label>Context Node</label>
+        <referenceTo>LLC_BI__Context__mdt</referenceTo>
+        <relationshipLabel>Linked Contexts (Context Node)</relationshipLabel>
+        <relationshipName>Linked_Contexts</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Context_Relationship__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Relationship field on joining context object that references next context</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Relationship field on joining context object that references next context</inlineHelpText>
+        <label>Context Relationship</label>
+        <length>45</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Joining_Context__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional field contains a reference to a context object that is intended to be joined to the Context_Node.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This field contains a context object to be joined to the object in Context_Node</inlineHelpText>
+        <label>Joining Context</label>
+        <referenceTo>LLC_BI__Context__mdt</referenceTo>
+        <relationshipLabel>Linked Contexts (Joining Context)</relationshipLabel>
+        <relationshipName>Joining_Contexts</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Joining_Relationship__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Relationship field on context object that references joining context</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Relationship field on context object that references joining context</inlineHelpText>
+        <label>Joining Relationship</label>
+        <length>45</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Next_Context__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional field contains a reference to a Context__mdt object that will come after the current Context__mdt.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This field contains a Context__mdt object that will come next after the current Context_Node is processed.</inlineHelpText>
+        <label>Next Context</label>
+        <referenceTo>LLC_BI__Context__mdt</referenceTo>
+        <relationshipLabel>Linked Contexts (Next Context)</relationshipLabel>
+        <relationshipName>Next_Contexts</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <label>Linked Context</label>
+    <pluralLabel>Linked Contexts</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

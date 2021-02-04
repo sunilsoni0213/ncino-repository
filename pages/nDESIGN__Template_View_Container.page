@@ -1,0 +1,5 @@
+<apex:page >
+	<div class="row view-container">
+		<apex:insert name="content"/>
+	</div>
+</apex:page>

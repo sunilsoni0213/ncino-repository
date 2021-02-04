@@ -1,0 +1,17 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+	<c:RecalculateLoanIncludes />
+	<apex:slds />
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncRecalculateLoan">
+						<c:RecalculateLoanPartial />
+						<recalculate-loan></recalculate-loan>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

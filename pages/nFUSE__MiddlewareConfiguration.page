@@ -1,0 +1,59 @@
+<apex:page controller="nFUSE.MiddlewareConfigurationController" showHeader="true" sidebar="true">
+	<style type="text/css">
+		.force .row {
+			padding-bottom: 10px
+		}
+	</style>
+	<div class="force">
+		<div style="padding:20px">
+			<h4 style="padding-right:20px">{!$Label.nfuse__middleware_configuration}</h4>
+		</div>
+		<apex:form id="configuration">
+			<div>
+				<apex:outputPanel layout="none" styleClass="messages">
+					<div>
+						<apex:messages />
+					</div>
+				</apex:outputPanel>
+			</div>
+			<apex:pageBlock >
+				<div class="container-fluid" style="padding:10px">
+					<div class="row">
+						<div class="col-lg-9">
+							{!$Label.nfuse__middleware_configuration_named_credential_notice}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3"> {!$Label.nfuse__middleware_username}</div>
+						<div class="col-lg-9">
+							<apex:inputText size="75" value="{!configuration.username}"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3">{!$Label.nfuse__middleware_password}</div>
+						<div class="col-lg-9">
+							<apex:inputSecret size="75" value="{!configuration.password}" redisplay="true" required="false"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3">{!$Label.nfuse__middleware_endpoint_url}</div>
+						<div class="col-lg-9">
+							<apex:inputText size="75" value="{!configuration.endpoint}"/>
+							{!$Label.nfuse__middleware_configuration_callout_example}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3">{!$Label.nfuse__middleware_certificate_name}</div>
+						<div class="col-lg-9">
+							<apex:inputText size="75" value="{!configuration.certificate}"/>
+						</div>
+					</div>
+				</div>
+				<apex:pageBlockButtons location="bottom">
+					<apex:commandButton styleClass="btn btn-primary" value="Save" action="{!save}"/>
+					<apex:commandButton value="{!$Label.nfuse__go_back}" styleClass="btn btn-primary" action="{!goBack}"/>
+				</apex:pageBlockButtons>
+			</apex:pageBlock>
+		</apex:form>
+	</div>
+</apex:page>

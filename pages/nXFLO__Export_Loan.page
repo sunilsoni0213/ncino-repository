@@ -1,0 +1,7 @@
+<apex:page standardController="LLC_BI__Loan__c" docType="html-5.0" showChat="false" sidebar="false">
+	<apex:outputText rendered="false" value="LLC_BI__Loan__c.Id" />
+	<nXBI:Includes enableLifeCycleApp="true" runLifeCycleApp="true" />
+	<c:Includes />
+	<nXBI:Loan_Service_v1_0 buffer="false" escape="false" />
+	<c:Flo_Exporter loan="{!LLC_BI__Loan__c}" />
+</apex:page>

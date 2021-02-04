@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Given Name</value>
+        </caseValues>
+        <name>first_name_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Given Name (Local)</value>
+        </caseValues>
+        <name>first_name_local_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Surname</value>
+        </caseValues>
+        <name>last_name_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Surname (Local)</value>
+        </caseValues>
+        <name>last_name_local_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,292 @@
+<apex:page controller="nFORMS.FormManagerController">
+	<apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'selectize/selectize.bootstrap2.css')}" />
+	<nFORCE:Includes enableBS3Namespace="true" enableLifeCycleApp="true"/>
+	<apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'selectize/selectize.min.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102,
+			'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<script>
+		function getSelectize() {
+			jQuery('.selectize').selectize({
+				maxOptions: 900,
+				maxItems:1,
+				loadingClass: 'selectizeLoad',
+				valueField: 'value',
+				labelField: 'label',
+				searchField: 'label',
+				placeholder: '{!$Label.Form_Manager_Search_Objects}',
+				load: function(query, callback) {
+					if (!query.length) return callback();
+						Visualforce.remoting.Manager.invokeAction(
+							'{!$RemoteAction.FormManagerController.getPrimaryObjects}',
+							query,
+							function(options, event) {
+								if (event.status) {
+									callback(options);
+								} else {
+									callback();
+								}
+							}
+						);
+				}
+			});
+		}
+	</script>
+	<apex:sectionHeader title="{!$Label.nforms__form_manager_title}" subtitle="Home" />
+	<apex:pageMessages />
+	<apex:outputPanel id="pagePanel">
+
+		<apex:outputPanel id="listPanel" rendered="{!currentView.isList}">
+			<apex:form id="listPanelForm">
+				<apex:outputPanel >
+					<apex:outputLabel value="{!$Label.nforms__form_manager_filter_label}" for="filter"
+						style="font-weight: bold; margin-right: 5px" />
+					<apex:selectList id="filter" value="{!filterObject}" size="1">
+						<apex:actionSupport event="onchange" reRender="listPanelBlock"/>
+						<apex:selectOptions value="{!filterOptions}"/>
+					</apex:selectList>
+				</apex:outputPanel>
+				<br/><br/>
+				<apex:pageBlock id="listPanelBlock" mode="detail"
+					title="{!$Label.nforms__form_manager_list_title}">
+					<apex:pageBlockButtons location="top">
+						<apex:commandLink value="{!$Label.nforms__form_generator_buttons_back}"
+								rendered="{!returnObjectId != null}"
+								action="{!backRedirect}"
+								target="_parent"/>
+						<apex:commandButton action="{!loadEditView}"
+							value="{!$Label.nforms__form_manager_buttons_new}" reRender="pagePanel"/>
+					</apex:pageBlockButtons>
+					<apex:pageBlockTable value="{!templates}" var="template">
+						<apex:column >
+							<apex:facet name="header">
+								<apex:commandLink action="{! sortOutputByName }" reRender="listPanelBlock">
+									{!$Label.nforms__form_manager_name_label}
+								</apex:commandLink>
+							</apex:facet>
+							<apex:commandLink action="{!loadTemplateView}"
+								value="{!template.Name}" reRender="pagePanel">
+								<apex:param name="templateId" value="{!template.Id}"/>
+							</apex:commandLink>
+						</apex:column>
+						<apex:column >
+							<apex:facet name="header">{!$Label.nforms__form_manager_description_label}</apex:facet>
+							<apex:outputText value="{!template.nFORMS__Description__c}"/>
+						</apex:column>
+						<apex:column >
+							<apex:facet name="header">{!$Label.nforms__form_manager_primary_label}</apex:facet>
+							<apex:outputText value="{!template.nFORMS__Primary_Object__c}"/>
+						</apex:column>
+						 <apex:column >
+							<apex:facet name="header">{!$Label.nforms__form_manager_enforce_masking_label}</apex:facet>
+							<apex:inputCheckBox value="{!template.nFORMS__Enforce_Masking__c}" disabled="true"/>
+						 </apex:column>
+						<apex:column >
+							<apex:commandButton value="{!$Label.nforms__form_manager_buttons_delete}" action="{!deleteTemplate}" reRender="pagePanel"
+								styleClass="btn btn-mini" onclick="if(!confirm('{!$Label.nforms__form_manager_delete_message}')){return};">
+								<apex:param name="templateId" value="{!template.Id}"/>
+							</apex:commandButton>
+						</apex:column>
+					</apex:pageBlockTable>
+				</apex:pageBlock>
+			</apex:form>
+		</apex:outputPanel>
+
+		<apex:outputPanel id="editPanel" rendered="{!currentView.isEdit}">
+			<apex:form id="editPanelForm">
+				<apex:pageBlock title="{!$Label.nforms__form_manager_edit_title}" mode="edit">
+					<apex:pageBlockButtons location="both">
+						<apex:commandButton action="{!save}" reRender="pagePanel"
+							value="{!$Label.nforms__form_manager_buttons_save}">
+							<apex:param name="templateId" value="{!template.Id}"/>
+						</apex:commandButton>
+						<apex:commandButton action="{!cancel}" immediate="true" reRender="pagePanel"
+							value="{!$Label.nforms__form_manager_buttons_cancel}">
+							<apex:param name="templateId" value="{!template.Id}"/>
+						</apex:commandButton>
+					</apex:pageBlockButtons>
+					<apex:pageBlockSection showHeader="false" columns="1">
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$Label.nforms__form_manager_name_label}"/>
+							<apex:outputPanel >
+								<apex:inputField value="{!template.Name}" required="true"/>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$Label.nforms__form_manager_description_label}"/>
+							<apex:outputPanel >
+								<apex:inputTextArea value="{!template.nFORMS__Description__c}" cols="50"/>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$Label.nforms__form_manager_primary_label}"/>
+							<apex:outputPanel >
+								<apex:inputField styleClass="selectize" value="{!template.nFORMS__Primary_Object__c}" required="true"/>
+								<script>
+								getSelectize();
+								</script>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$Label.nforms__form_manager_output_label}"/>
+							<apex:outputPanel >
+								<apex:selectList value="{!template.nFORMS__Output_Type__c}" size="1" required="true">
+									<apex:selectOptions value="{!outputTypes}"/>
+								</apex:selectList>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$Label.nforms__form_manager_form_purpose_label}"/>
+							<apex:outputPanel >
+								<apex:selectList value="{!template.nFORMS__Form_Purpose__c}" size="1" required="true">
+									<apex:selectOptions value="{!formPurposes}"/>
+								</apex:selectList>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$Label.nforms__form_manager_active_label}"/>
+							<apex:outputPanel >
+								<apex:inputCheckbox value="{!template.nFORMS__Is_Active__c}" required="true"/>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem rendered="{!saveToDocManEnabled}">
+							 <apex:outputLabel value="{!$Label.nforms__save_to_document_manager}"/>
+							 <apex:outputPanel >
+									<apex:inputCheckbox value="{!template.nFORMS__Save_To_Docman__c}" required="true"/>
+							 </apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$ObjectType.nFORMS__Form_Template__c.fields.nFORMS__Enforce_Masking__c.Label}"/>
+							<apex:outputPanel >
+								<apex:inputCheckbox value="{!template.nFORMS__Enforce_Masking__c}" required="false" disabled="{!hasNoPermission}" />
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+						<apex:pageBlockSectionItem >
+							<apex:outputLabel value="{!$ObjectType.nFORMS__Form_Template__c.fields.nFORMS__Filter__c.Label}"/>
+							<apex:outputPanel >
+								<apex:inputTextArea value="{!template.nFORMS__Filter__c}" cols="50"/>
+							</apex:outputPanel>
+						</apex:pageBlockSectionItem>
+					</apex:pageBlockSection>
+				</apex:pageBlock>
+			</apex:form>
+		</apex:outputPanel>
+
+		<apex:outputPanel id="templatePanel" rendered="{!currentView.isTemplate}">
+			<apex:form >
+				<apex:commandLink action="{!cancel}" reRender="pagePanel"
+					value="{!$Label.nforms__form_manager_back_link}"/>
+				<br/><br/>
+			</apex:form>
+			<apex:pageBlock title="{!$Label.nforms__form_manager_template_title}">
+				<apex:pageBlockButtons location="top">
+					<apex:form >
+						<apex:commandButton action="{!loadEditView}" reRender="pagePanel"
+							value="{!$Label.nforms__form_manager_buttons_edit}">
+							<apex:param name="templateId" value="{!template.Id}"/>
+						</apex:commandButton>
+						<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();"
+						id="ajaxPleaseWait" />
+						<apex:commandButton action="{!availableFieldsRedirect}" immediate="true"
+							value="{!$Label.nforms__form_manager_buttons_show_available_fields}"
+							status="ajaxPleaseWait" reRender="true"/>
+					</apex:form>
+				</apex:pageBlockButtons>
+				<apex:pageBlockSection showHeader="false" columns="1">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_name_label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.Name}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_description_label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Description__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_primary_label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Primary_Object__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_output_label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Output_Type__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_form_purpose_label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Form_Purpose__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_active_label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Is_Active__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$ObjectType.nFORMS__Form_Template__c.fields.nFORMS__Enforce_Masking__c.Label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Enforce_Masking__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem rendered="{!saveToDocManEnabled}">
+						<apex:outputLabel value="{!$Label.nforms__save_to_document_manager}"/>
+						<apex:outputPanel >
+							 <apex:outputText value="{!template.nFORMS__Save_To_Docman__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$Label.nforms__form_manager_document_label}"/>
+						<apex:outputPanel >
+							<apex:outputPanel rendered="{!hasAttachment}">
+								<apex:form >
+									<apex:outputLink value="{!URLFOR($Action.Attachment.Download, attachment.id)}">
+										{!attachment.Name}
+									</apex:outputLink>
+									<apex:commandButton style="margin-left: 15px"
+										reRender="pagePanel" action="{!removeAttachment}"
+										value="{!$Label.nforms__form_manager_buttons_remove_attachment}"/>
+									<span id="configureBtn">
+										<apex:commandButton rendered="{!template.nFORMS__Output_Type__c=='HTML'}"
+											action="{!configureRedirect}" value="{!$Label.nforms__configure_template}"/>
+									</span>
+								</apex:form>
+							</apex:outputPanel>
+							<apex:outputPanel rendered="{!!hasAttachment}">
+								<apex:form >
+									<apex:inputFile value="{!attachment.Body}" fileName="{!attachment.Name}" />
+									<span id="uploadBtn">
+										<apex:commandButton action="{!upload}" value="{!$Label.nforms__form_manager_buttons_upload}"
+											onclick="$('#uploadBtn').hide();$('#uploadImg').show();"/>
+									</span>
+									<span id="configureBtn">
+										<apex:commandButton rendered="{!template.nFORMS__Output_Type__c=='HTML'}"
+											action="{!configureRedirect}" value="{!$Label.nforms__configure_template}"/>
+									</span>
+									<span id="uploadImg" class="hidden">
+										<img
+											src="{!$Resource.spinner_gif}"
+											width="25px" style="vertical-align:middle"/>
+										<span>Uploading</span>
+									</span>
+								</apex:form>
+							</apex:outputPanel>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{!$ObjectType.nFORMS__Form_Template__c.fields.nFORMS__Filter__c.Label}"/>
+						<apex:outputPanel >
+							<apex:outputText value="{!template.nFORMS__Filter__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+		</apex:outputPanel>
+
+	</apex:outputPanel>
+</apex:page>

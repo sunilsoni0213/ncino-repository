@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users to change the status of a placeholder to Approved (if their role is also specified in Placeholder Approval Roles) in the Deposit Account Opening View and the Relationship View.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Document Manager Review Deposit Documents</label>
+</PermissionSet>

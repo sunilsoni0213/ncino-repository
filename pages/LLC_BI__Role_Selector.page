@@ -1,0 +1,17 @@
+<apex:page standardController="LLC_BI__Team_Keys__c" extensions="LLC_BI.RoleSelectorController" showHeader="false" sidebar="false">
+	<apex:form >
+		<apex:pageBlock id="thePageBlock" mode="edit">
+			<apex:pageBlockButtons >
+				<apex:commandButton value="{!$Label.llc_bi__save}" action="{!save}"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection columns="1">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="{!$Label.llc_bi__roles}"/>
+					<apex:selectList value="{!selectedRoles}" multiselect="true" size="5">
+						<apex:selectOptions value="{!availableRoles}"/>
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+		</apex:pageblock>
+	</apex:form>
+</apex:page>

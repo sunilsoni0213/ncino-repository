@@ -1,0 +1,19 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+	<c:ProductPackageDepositsIncludes />
+	<apex:slds />
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncProductPackageDeposits">
+						<c:ProductPackageDepositsPartial />
+						<nFORCE:ncDataTableIncludes />
+						<product-package-deposits></product-package-deposits>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+</apex:page>

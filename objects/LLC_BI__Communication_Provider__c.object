@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>The 3rd party communication providers that interact with the LifeCycle product</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__Billable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether this communication provider is billed via the LifeCycle product</description>
+        <externalId>false</externalId>
+        <label>Billable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Class_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The name of the concrete class that implements the ILifeCycleCommunicator interface</description>
+        <externalId>false</externalId>
+        <label>Class Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Destination__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The destination address of the 3rd party for the communicator.</description>
+        <externalId>false</externalId>
+        <label>Destination</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It identifies whether a Third Party Communication Provider can send data to nCino. Checked = True. Unchecked = False.</description>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Communication Providers</label>
+    <visibility>Public</visibility>
+</CustomObject>

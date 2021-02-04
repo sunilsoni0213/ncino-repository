@@ -1,0 +1,111 @@
+<apex:page controller="CollateralManagementController"
+    tabStyle="LLC_BI__Loan__c"
+    showHeader="true"
+    sidebar="false">
+
+    <apex:form >
+        <apex:sectionHeader title="Collateral Management Demo"/>
+        <apex:pagemessages />
+
+        <apex:pageBlock mode="detail" title="Collateral Addition" id="typePageBlock">
+            <apex:pageBlockSection id="table" columns="2" collapsible="false" title="What type of Collateral are you adding?">
+                    <apex:selectList size="1" multiselect="false" value="{!collateralTypeName}" label="Collateral Type:">
+                        <apex:actionSupport event="onchange" action="{!processCollateralTypeChange}" 
+                            rerender="subType,collateralDetailPanel,CollateralOwnershipPanel,CollateralPledgePanel"/>
+                        <apex:selectOptions value="{!collateralTypeOptions}"/>
+                    </apex:selectList>
+                    <apex:selectList size="1" multiselect="false" value="{!collateralSubtypeName}" label="Collateral Subtype:" id="subType" disabled="{!subTypeDisabled}">
+                        <apex:actionSupport event="onchange" action="{!processCollateralSubtypeChange}" 
+                            rerender="collateralDetailPanel,CollateralOwnershipPanel,CollateralPledgePanel,typePageBlock"/>
+                        <apex:selectOptions value="{!collateralSubTypeOptions[CollateralTypeName]}"/>
+                    </apex:selectList>
+            </apex:pageBlockSection>
+                            <apex:pageBlockButtons location="bottom">
+                                    <apex:commandButton value="Save" 
+                                        action="{!saveCollateral}"
+                                        rendered="{!collateralSubtypeIsSelected}"/>
+                                    <apex:commandButton value="Cancel" 
+                                        action="{!cancel}"/>
+                            </apex:pageBlockButtons>
+        </apex:pageBlock>
+
+        <apex:outputPanel id="collateralDetailPanel">
+            <apex:outputPanel rendered="{!collateralSubtypeIsSelected}" id="collateralDetail">
+                <apex:pageBlock mode="detail" title="Collateral Details">
+                    <apex:pageBlockSection id="table" columns="2" collapsible="true" title="Specify the Details for you Collateral">
+                        <apex:repeat value="{!collateralFieldList}" var="collateralField">
+                            <apex:inputField value="{!collateralRecords[0][collateralField.fieldPath]}" label="{!collateralField.label}"/>
+                        </apex:repeat>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+        <apex:outputPanel id="CollateralOwnershipPanel">
+            <apex:outputPanel rendered="{!collateralSubtypeIsSelected}" id="ownershipDetail">
+                <apex:pageBlock mode="detail" title="Collateral Ownership Details">
+                    <apex:pageBlockSection id="ownershipSection" columns="1" collapsible="true" title="Specify the Ownership Details for you Collateral">
+                    <apex:pageBlockTable value="{!collateralOwnershipList}" var="ownership">
+                        <apex:column >
+                                <apex:facet name="header"><apex:outputText value="Own"/>
+                                </apex:facet>
+                            <apex:inputCheckbox value="{!ownership.selected}"/>
+                        </apex:column>
+                        <apex:repeat value="{!ownershipFieldNames}" var="fld">
+                            <apex:column >
+                                <apex:facet name="header"><apex:outputText value="{!ownershipTitleMap[fld]}"/>
+                                </apex:facet>
+                                
+                                <apex:inputField value="{!ownership.obj[fld]}" 
+                                    rendered="{!IF(fld=='LLC_BI__Account__c' || fld=='LLC_BI__Relationship_Type__c',false,true)}"/>
+                                <apex:outputField value="{!ownership.obj[fld]}" 
+                                    rendered="{!IF(fld=='LLC_BI__Account__c' || fld=='LLC_BI__Relationship_Type__c',true,false)}"/>
+                            </apex:column>
+                        </apex:repeat>
+                        <apex:facet name="header">
+                            <apex:outputPanel layout="block" style="text-align:center">
+                            <apex:outputText styleClass="headerRow" value="Collateral Ownership" rendered="true"/>
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                </apex:pageBlock>               
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        
+        <apex:outputPanel id="CollateralPledgePanel">
+            <apex:outputPanel rendered="{!collateralSubtypeIsSelected}" id="pledgeDetail">
+                <apex:pageBlock mode="detail" title="Collateral Pledge Details">
+                    <apex:pageBlockSection id="pledgeSection" columns="1" collapsible="true" title="Specify the Pledge Details for your Collateral">
+ 
+                    <apex:pageBlockTable value="{!collateralPledgedList}" var="pledge">
+                        <apex:column >
+                                <apex:facet name="header"><apex:outputText value="Pledge"/>
+                                </apex:facet>
+                            <apex:inputCheckbox value="{!pledge.selected}"/>
+                        </apex:column>
+                        <apex:repeat value="{!pledgeFieldNames}" var="fld">
+                            <apex:column >
+                                <apex:facet name="header"><apex:outputText value="{!pledgeTitleMap[fld]}"/>
+                                </apex:facet>
+                                
+                                <apex:inputField value="{!pledge.obj[fld]}" 
+                                    rendered="{!IF(fld=='LLC_BI__Loan__c',false,true)}"/>
+                                <apex:outputField value="{!pledge.obj[fld]}" 
+                                    rendered="{!IF(fld=='LLC_BI__Loan__c',true,false)}"/>
+                            </apex:column>
+                        </apex:repeat>
+                        <apex:facet name="header">
+                            <apex:outputPanel layout="block" style="text-align:center">
+                            <apex:outputText styleClass="headerRow" value="Collateral Pledge to Loans" rendered="true"/>
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+    </apex:form>
+</apex:page>

@@ -1,0 +1,4 @@
+<apex:page standardcontroller="LLC_BI__Annual_Review__c" sidebar="false" showheader="false">
+	<nFORCE:Includes enableLifeCycleApp="true" enableBS3Namespace="true" />
+	<c:Risk_Grade_Worksheet reviewId="{!LLC_BI__Annual_Review__c.Id}" />
+</apex:page>

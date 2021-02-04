@@ -1,0 +1,88 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="nFORCE.ScreenController"
+	showHeader="false"
+	standardStylesheets="false">
+
+	<nFORCE:Include_Design_System flavor="vf"/>
+
+	<div class="force slds">
+		<div class="slds-grid full-height proforma-root-container">
+			<div class="slds-col sub-flex-grid">
+				<div class="nav-container proforma-topbar-container">
+					<apex:insert name="topbar"/>
+				</div>
+				<div class="main-container proforma-main-container">
+					<apex:insert name="body"/>
+				</div>
+			</div>
+			<div class="slds-col right-container proforma-right-container">
+				<apex:insert name="right-column"/>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		body{
+			margin: 0;
+		}
+
+		table#bodyTable{
+			padding: 0;
+		}
+
+		td.slds-scope.noSidebarCell{
+			padding: 0;
+		}
+
+		td.noSidebarCell {
+			padding: 0;
+		}
+
+		.full-height{
+			min-height: 100vh;
+		}
+
+		.sub-flex-grid{
+			display: flex;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			justify-content: flex-start;
+			-ms-flex-pack: flex-start;
+			align-items: stretch;
+			align-content: stretch;
+		}
+
+		.main-container{
+			flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			min-height: 100vh;
+		}
+
+		.slds .slds-col.right-container{
+			flex: 0 0 auto;
+			-ms-flex: 0 0 auto;
+			max-width: 450px;
+			height: 100%;
+		}
+
+		@media (max-width: 992px) {
+
+			.slds .slds-grid.full-height{
+				display: block;
+			}
+
+			.slds .slds-col.right-container{
+				max-width: 100vw;
+			}
+
+			.main-container{
+				flex: 1 1 auto;
+				-ms-flex: 1 1 auto;
+				min-height: auto;
+			}
+
+		}
+	</style>
+
+</apex:page>

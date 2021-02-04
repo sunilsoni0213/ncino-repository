@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Adverse Action Object stores information regarding the reasons for declined loans.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Doc Prep</description>
+        <displayedFields>
+            <field>LLC_BI__Decline_Reason_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Decline_Reason_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Decline_Reason_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Decline_Reason_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>UI_Loan_AdverseAction</fullName>
+        <description>New UI for Adverse Action</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Approved_by_Credit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Withdraw_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Decline_Reason_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI-Loan-AdverseAction</label>
+    </fieldSets>
+    <fields>
+        <fullName>AA_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>AA Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Under Review</fullName>
+                    <default>false</default>
+                    <label>Under Review</label>
+                </value>
+                <value>
+                    <fullName>Loan Declined</fullName>
+                    <default>false</default>
+                    <label>Loan Declined</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Approved_by_Credit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A Checkbox that indicates this loan was approved by credit prior to declination.</description>
+        <externalId>false</externalId>
+        <label>Approved by Credit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text area for a user who is declining the loan to enter notes/ comments further explaining reasons for declination</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Provider__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Picklist of option available to the financial institution for the user to select where the credit information for the loan was obtained from.</description>
+        <externalId>false</externalId>
+        <label>Credit Provider</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Equifax</fullName>
+                    <default>false</default>
+                    <label>Equifax</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Decline_Reason_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>a Picklist of options for the primary reason the loan was declined</description>
+        <externalId>false</externalId>
+        <label>Decline Reason 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Insufficient number of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Insufficient number of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unacceptable type of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Unacceptable type of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify credit references</fullName>
+                    <default>false</default>
+                    <label>Unable to verify credit references</label>
+                </value>
+                <value>
+                    <fullName>Income insufficient for amount of credit requested</fullName>
+                    <default>false</default>
+                    <label>Income insufficient for amount of credit requested</label>
+                </value>
+                <value>
+                    <fullName>Excessive obligations in relation to income</fullName>
+                    <default>false</default>
+                    <label>Excessive obligations in relation to income</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify income</fullName>
+                    <default>false</default>
+                    <label>Unable to verify income</label>
+                </value>
+                <value>
+                    <fullName>Temporary or irregular employment</fullName>
+                    <default>false</default>
+                    <label>Temporary or irregular employment</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify employment</fullName>
+                    <default>false</default>
+                    <label>Unable to verify employment</label>
+                </value>
+                <value>
+                    <fullName>Length of employment</fullName>
+                    <default>false</default>
+                    <label>Length of employment</label>
+                </value>
+                <value>
+                    <fullName>Length of residence</fullName>
+                    <default>false</default>
+                    <label>Length of residence</label>
+                </value>
+                <value>
+                    <fullName>Temporary residence</fullName>
+                    <default>false</default>
+                    <label>Temporary residence</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify residence</fullName>
+                    <default>false</default>
+                    <label>Unable to verify residence</label>
+                </value>
+                <value>
+                    <fullName>No credit file</fullName>
+                    <default>false</default>
+                    <label>No credit file</label>
+                </value>
+                <value>
+                    <fullName>Limited credit experience</fullName>
+                    <default>false</default>
+                    <label>Limited credit experience</label>
+                </value>
+                <value>
+                    <fullName>Poor credit performance with us</fullName>
+                    <default>false</default>
+                    <label>Poor credit performance with us</label>
+                </value>
+                <value>
+                    <fullName>Delinquent past or present credit obligations with others</fullName>
+                    <default>false</default>
+                    <label>Delinquent past or present credit obligations with others</label>
+                </value>
+                <value>
+                    <fullName>Collection action or judgement</fullName>
+                    <default>false</default>
+                    <label>Collection action or judgement</label>
+                </value>
+                <value>
+                    <fullName>Garnishment or attachment</fullName>
+                    <default>false</default>
+                    <label>Garnishment or attachment</label>
+                </value>
+                <value>
+                    <fullName>Foreclosure or repossession</fullName>
+                    <default>false</default>
+                    <label>Foreclosure or repossession</label>
+                </value>
+                <value>
+                    <fullName>Bankruptcy</fullName>
+                    <default>false</default>
+                    <label>Bankruptcy</label>
+                </value>
+                <value>
+                    <fullName>Value or type of collateral not sufficient</fullName>
+                    <default>false</default>
+                    <label>Value or type of collateral not sufficient</label>
+                </value>
+                <value>
+                    <fullName>Lack of established earnings record</fullName>
+                    <default>false</default>
+                    <label>Lack of established earnings record</label>
+                </value>
+                <value>
+                    <fullName>Slow or past due in trade or loan payments</fullName>
+                    <default>false</default>
+                    <label>Slow or past due in trade or loan payments</label>
+                </value>
+                <value>
+                    <fullName>Number of recent inquiries on credit bureau report</fullName>
+                    <default>false</default>
+                    <label>Number of recent inquiries on credit bureau report</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Decline_Reason_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A Picklist of options to select the secondary reason the loan was declined</description>
+        <externalId>false</externalId>
+        <label>Decline Reason 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Insufficient number of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Insufficient number of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unacceptable type of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Unacceptable type of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify credit references</fullName>
+                    <default>false</default>
+                    <label>Unable to verify credit references</label>
+                </value>
+                <value>
+                    <fullName>Income insufficient for amount of credit requested</fullName>
+                    <default>false</default>
+                    <label>Income insufficient for amount of credit requested</label>
+                </value>
+                <value>
+                    <fullName>Excessive obligations in relation to income</fullName>
+                    <default>false</default>
+                    <label>Excessive obligations in relation to income</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify income</fullName>
+                    <default>false</default>
+                    <label>Unable to verify income</label>
+                </value>
+                <value>
+                    <fullName>Temporary or irregular employment</fullName>
+                    <default>false</default>
+                    <label>Temporary or irregular employment</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify employment</fullName>
+                    <default>false</default>
+                    <label>Unable to verify employment</label>
+                </value>
+                <value>
+                    <fullName>Length of employment</fullName>
+                    <default>false</default>
+                    <label>Length of employment</label>
+                </value>
+                <value>
+                    <fullName>Length of residence</fullName>
+                    <default>false</default>
+                    <label>Length of residence</label>
+                </value>
+                <value>
+                    <fullName>Temporary residence</fullName>
+                    <default>false</default>
+                    <label>Temporary residence</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify residence</fullName>
+                    <default>false</default>
+                    <label>Unable to verify residence</label>
+                </value>
+                <value>
+                    <fullName>No credit file</fullName>
+                    <default>false</default>
+                    <label>No credit file</label>
+                </value>
+                <value>
+                    <fullName>Limited credit experience</fullName>
+                    <default>false</default>
+                    <label>Limited credit experience</label>
+                </value>
+                <value>
+                    <fullName>Poor credit performance with us</fullName>
+                    <default>false</default>
+                    <label>Poor credit performance with us</label>
+                </value>
+                <value>
+                    <fullName>Delinquent past or present credit obligations with others</fullName>
+                    <default>false</default>
+                    <label>Delinquent past or present credit obligations with others</label>
+                </value>
+                <value>
+                    <fullName>Collection action or judgement</fullName>
+                    <default>false</default>
+                    <label>Collection action or judgement</label>
+                </value>
+                <value>
+                    <fullName>Garnishment or attachment</fullName>
+                    <default>false</default>
+                    <label>Garnishment or attachment</label>
+                </value>
+                <value>
+                    <fullName>Foreclosure or repossession</fullName>
+                    <default>false</default>
+                    <label>Foreclosure or repossession</label>
+                </value>
+                <value>
+                    <fullName>Bankruptcy</fullName>
+                    <default>false</default>
+                    <label>Bankruptcy</label>
+                </value>
+                <value>
+                    <fullName>Value or type of collateral not sufficient</fullName>
+                    <default>false</default>
+                    <label>Value or type of collateral not sufficient</label>
+                </value>
+                <value>
+                    <fullName>Lack of established earnings record</fullName>
+                    <default>false</default>
+                    <label>Lack of established earnings record</label>
+                </value>
+                <value>
+                    <fullName>Slow or past due in trade or loan payments</fullName>
+                    <default>false</default>
+                    <label>Slow or past due in trade or loan payments</label>
+                </value>
+                <value>
+                    <fullName>Number of recent inquiries on credit bureau report</fullName>
+                    <default>false</default>
+                    <label>Number of recent inquiries on credit bureau report</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Decline_Reason_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A Picklist of options to select an additional (third) reason the loan was declined</description>
+        <externalId>false</externalId>
+        <label>Decline Reason 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Insufficient number of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Insufficient number of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unacceptable type of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Unacceptable type of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify credit references</fullName>
+                    <default>false</default>
+                    <label>Unable to verify credit references</label>
+                </value>
+                <value>
+                    <fullName>Income insufficient for amount of credit requested</fullName>
+                    <default>false</default>
+                    <label>Income insufficient for amount of credit requested</label>
+                </value>
+                <value>
+                    <fullName>Excessive obligations in relation to income</fullName>
+                    <default>false</default>
+                    <label>Excessive obligations in relation to income</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify income</fullName>
+                    <default>false</default>
+                    <label>Unable to verify income</label>
+                </value>
+                <value>
+                    <fullName>Temporary or irregular employment</fullName>
+                    <default>false</default>
+                    <label>Temporary or irregular employment</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify employment</fullName>
+                    <default>false</default>
+                    <label>Unable to verify employment</label>
+                </value>
+                <value>
+                    <fullName>Length of employment</fullName>
+                    <default>false</default>
+                    <label>Length of employment</label>
+                </value>
+                <value>
+                    <fullName>Length of residence</fullName>
+                    <default>false</default>
+                    <label>Length of residence</label>
+                </value>
+                <value>
+                    <fullName>Temporary residence</fullName>
+                    <default>false</default>
+                    <label>Temporary residence</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify residence</fullName>
+                    <default>false</default>
+                    <label>Unable to verify residence</label>
+                </value>
+                <value>
+                    <fullName>No credit file</fullName>
+                    <default>false</default>
+                    <label>No credit file</label>
+                </value>
+                <value>
+                    <fullName>Limited credit experience</fullName>
+                    <default>false</default>
+                    <label>Limited credit experience</label>
+                </value>
+                <value>
+                    <fullName>Poor credit performance with us</fullName>
+                    <default>false</default>
+                    <label>Poor credit performance with us</label>
+                </value>
+                <value>
+                    <fullName>Delinquent past or present credit obligations with others</fullName>
+                    <default>false</default>
+                    <label>Delinquent past or present credit obligations with others</label>
+                </value>
+                <value>
+                    <fullName>Collection action or judgement</fullName>
+                    <default>false</default>
+                    <label>Collection action or judgement</label>
+                </value>
+                <value>
+                    <fullName>Garnishment or attachment</fullName>
+                    <default>false</default>
+                    <label>Garnishment or attachment</label>
+                </value>
+                <value>
+                    <fullName>Foreclosure or repossession</fullName>
+                    <default>false</default>
+                    <label>Foreclosure or repossession</label>
+                </value>
+                <value>
+                    <fullName>Bankruptcy</fullName>
+                    <default>false</default>
+                    <label>Bankruptcy</label>
+                </value>
+                <value>
+                    <fullName>Value or type of collateral not sufficient</fullName>
+                    <default>false</default>
+                    <label>Value or type of collateral not sufficient</label>
+                </value>
+                <value>
+                    <fullName>Lack of established earnings record</fullName>
+                    <default>false</default>
+                    <label>Lack of established earnings record</label>
+                </value>
+                <value>
+                    <fullName>Slow or past due in trade or loan payments</fullName>
+                    <default>false</default>
+                    <label>Slow or past due in trade or loan payments</label>
+                </value>
+                <value>
+                    <fullName>Number of recent inquiries on credit bureau report</fullName>
+                    <default>false</default>
+                    <label>Number of recent inquiries on credit bureau report</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Decline_Reason_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A Picklist of options to select an additonal (fourth) reason the loan was declined</description>
+        <externalId>false</externalId>
+        <label>Decline Reason 4</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Insufficient number of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Insufficient number of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unacceptable type of credit references provided</fullName>
+                    <default>false</default>
+                    <label>Unacceptable type of credit references provided</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify credit references</fullName>
+                    <default>false</default>
+                    <label>Unable to verify credit references</label>
+                </value>
+                <value>
+                    <fullName>Income insufficient for amount of credit requested</fullName>
+                    <default>false</default>
+                    <label>Income insufficient for amount of credit requested</label>
+                </value>
+                <value>
+                    <fullName>Excessive obligations in relation to income</fullName>
+                    <default>false</default>
+                    <label>Excessive obligations in relation to income</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify income</fullName>
+                    <default>false</default>
+                    <label>Unable to verify income</label>
+                </value>
+                <value>
+                    <fullName>Temporary or irregular employment</fullName>
+                    <default>false</default>
+                    <label>Temporary or irregular employment</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify employment</fullName>
+                    <default>false</default>
+                    <label>Unable to verify employment</label>
+                </value>
+                <value>
+                    <fullName>Length of employment</fullName>
+                    <default>false</default>
+                    <label>Length of employment</label>
+                </value>
+                <value>
+                    <fullName>Length of residence</fullName>
+                    <default>false</default>
+                    <label>Length of residence</label>
+                </value>
+                <value>
+                    <fullName>Temporary residence</fullName>
+                    <default>false</default>
+                    <label>Temporary residence</label>
+                </value>
+                <value>
+                    <fullName>Unable to verify residence</fullName>
+                    <default>false</default>
+                    <label>Unable to verify residence</label>
+                </value>
+                <value>
+                    <fullName>No credit file</fullName>
+                    <default>false</default>
+                    <label>No credit file</label>
+                </value>
+                <value>
+                    <fullName>Limited credit experience</fullName>
+                    <default>false</default>
+                    <label>Limited credit experience</label>
+                </value>
+                <value>
+                    <fullName>Poor credit performance with us</fullName>
+                    <default>false</default>
+                    <label>Poor credit performance with us</label>
+                </value>
+                <value>
+                    <fullName>Delinquent past or present credit obligations with others</fullName>
+                    <default>false</default>
+                    <label>Delinquent past or present credit obligations with others</label>
+                </value>
+                <value>
+                    <fullName>Collection action or judgement</fullName>
+                    <default>false</default>
+                    <label>Collection action or judgement</label>
+                </value>
+                <value>
+                    <fullName>Garnishment or attachment</fullName>
+                    <default>false</default>
+                    <label>Garnishment or attachment</label>
+                </value>
+                <value>
+                    <fullName>Foreclosure or repossession</fullName>
+                    <default>false</default>
+                    <label>Foreclosure or repossession</label>
+                </value>
+                <value>
+                    <fullName>Bankruptcy</fullName>
+                    <default>false</default>
+                    <label>Bankruptcy</label>
+                </value>
+                <value>
+                    <fullName>Value or type of collateral not sufficient</fullName>
+                    <default>false</default>
+                    <label>Value or type of collateral not sufficient</label>
+                </value>
+                <value>
+                    <fullName>Lack of established earnings record</fullName>
+                    <default>false</default>
+                    <label>Lack of established earnings record</label>
+                </value>
+                <value>
+                    <fullName>Slow or past due in trade or loan payments</fullName>
+                    <default>false</default>
+                    <label>Slow or past due in trade or loan payments</label>
+                </value>
+                <value>
+                    <fullName>Number of recent inquiries on credit bureau report</fullName>
+                    <default>false</default>
+                    <label>Number of recent inquiries on credit bureau report</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Flag__c</fullName>
+        <deprecated>false</deprecated>
+        <description>When set, this triggers apex that updates the stage of the loan.
+flag: 1 = update</description>
+        <externalId>false</externalId>
+        <label>Loan Flag</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Master- Detail associating the Adverse Action with the appropriate loan.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Adverse Actions</relationshipLabel>
+        <relationshipName>Adverse_Actions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Withdraw_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is to specify a reason why the loan is being withdrawn.</description>
+        <externalId>false</externalId>
+        <label>Withdraw Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Application approved but not accepted</fullName>
+                    <default>false</default>
+                    <label>Application approved but not accepted</label>
+                </value>
+                <value>
+                    <fullName>Application withdrawn</fullName>
+                    <default>false</default>
+                    <label>Application withdrawn</label>
+                </value>
+                <value>
+                    <fullName>File closed for incompletenesss</fullName>
+                    <default>false</default>
+                    <label>File closed for incompletenesss</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Adverse Action</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AA-{0000000000}</displayFormat>
+        <label>Adverse Action Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Adverse Actions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

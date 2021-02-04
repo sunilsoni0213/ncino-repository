@@ -1,0 +1,4 @@
+<apex:page standardController="LLC_BI__Product_Type__c"
+	extensions="LLC_BI.ExcludedStageDurationBatchController"
+	action="{!executeBatchUpdate}">
+</apex:page>

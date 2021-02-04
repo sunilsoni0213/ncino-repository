@@ -1,0 +1,61 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController">
+	<apex:repeat value="{!screenSections}" var="section">
+		<apex:variable var="GUID" value="{!section.Id}{!guid}"/>
+		<apex:variable var="APP_NAME" value="LayoutBody{!GUID}" />
+		<nFORCE:KoVirtualBinding code="with: $root.{!APP_NAME}"/>
+			<nFORCE:KoVirtualBinding code="if: screenResource" />
+				<nFORCE:KoVirtualBinding code=" with: screenResource().children()[0].children()[0]" />
+					<apex:composition template="nFORCE__Template_Heading">
+						<apex:define name="left">
+							<nFORCE:KoVirtualBinding code="template: { name: 'heading-template'}" close="true" />
+						</apex:define>
+						<apex:define name="right">
+						</apex:define>
+					</apex:composition>
+					<apex:composition template="nFORCE__Template_View_1_Column">
+						<apex:define name="column-content">
+							<div class="table-responsive">
+								<table class="table table-condensed">
+									<thead data-bind="with: children()[0]">
+										<tr data-bind="foreach: propertyList">
+											<nFORCE:KoVirtualBinding code="if: fieldType() === Layout.DATA.fieldTypes.ID" />
+												<th />
+											<nFORCE:KoVirtualBinding close="true" />
+											<nFORCE:KoVirtualBinding code="ifnot: fieldType() === Layout.DATA.fieldTypes.ID" />
+												<th data-bind="text: fieldLabel" />
+											<nFORCE:KoVirtualBinding close="true" />
+										</tr>
+									</thead>
+									<tbody data-bind="foreach: children">
+										<tr data-bind="css: { 'bg-info': propertyList()[propertyList().length - 1].value() === '{!contextObject.Id}' },
+												foreach: propertyList">
+											<nFORCE:KoVirtualBinding code="if: fieldType() === Layout.DATA.fieldTypes.ID" />
+												<nFORCE:KoVirtualBinding code="if: value() === '{!contextObject.Id}'" />
+													<td />
+												<nFORCE:KoVirtualBinding close="true" />
+												<nFORCE:KoVirtualBinding code="ifnot: value() === '{!contextObject.Id}'" />
+													<td><a data-bind="attr: { href: '{!$Page.LLC_BI__Treasury_Service_Wizard}?Id=' + value() }">{!$Label.llc_bi__visit}</a></td>
+												<nFORCE:KoVirtualBinding close="true" />
+											<nFORCE:KoVirtualBinding close="true" />
+											<nFORCE:KoVirtualBinding code="ifnot: fieldType() === Layout.DATA.fieldTypes.ID" />
+												<td data-bind="template: { name: 'field-output-template', data: $data}" />
+											<nFORCE:KoVirtualBinding close="true" />
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</apex:define>
+					</apex:composition>
+				<nFORCE:KoVirtualBinding close="true" />
+			<nFORCE:KoVirtualBinding close="true"/>
+		<nFORCE:KoVirtualBinding close="true"/>
+
+		<nFORCE:RegisterLayoutDesignerApp sObjectJSON="{!contextObjectJSON}"
+			guid="{!GUID}"
+			sectionId="{!section.id}"
+			appName="{!APP_NAME}"/>
+	</apex:repeat>
+
+	<nFORCE:KoFieldOutputTemplate />
+	<nFORCE:KoHeadingTemplate />
+</apex:page>

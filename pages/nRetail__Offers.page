@@ -1,0 +1,25 @@
+<apex:page showHeader="false" sidebar="false" extensions="nRetail.OffersController" controller="nFORCE.TemplateController">
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncFormBuilderIncludes />
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+	<c:nrCommonIncludes />
+
+	<c:UnderwritingDetailsConfiguration />
+	<c:OffersConfiguration />
+
+	<div id="offers" class="slds-grid" ng-controller="offersController as vm">
+		<div class="slds-size--2-of-3">
+			<message />
+			<header amount="{{ vm.approvedFor }}"></header>
+			<pricing-option ng-show="vm.data.options.length > 0"
+				ng-repeat="option in vm.data.options track by $index" model="option">
+			</pricing-option>
+			<card ng-hide="vm.data.options.length > 0" message="{!$Label.No_Offers_Reason}"></card>
+		</div>
+		<div class="slds-size--1-of-3">
+			<scenarios model="vm.scenariosModel"></scenarios>
+		</div>
+	</div>
+
+</apex:page>

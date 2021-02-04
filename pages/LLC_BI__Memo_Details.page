@@ -1,0 +1,11 @@
+<apex:page >
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncPubsubIncludes />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncMemo, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncMemo, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncMemo, 'controllers/MemoDetailsAppController.js')}" />
+	<c:MemoDetailsConfiguration />
+	<div id="ncMemo" ng-controller="MemoDetailsAppController" />
+	<apex:include pageName="nFORCE__KoDataGrid" />
+	<apex:include pageName="LLC_BI__MemoData" />
+</apex:page>

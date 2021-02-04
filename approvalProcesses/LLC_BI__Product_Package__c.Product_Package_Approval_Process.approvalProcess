@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>LLC_BI__Status__c</field>
+        <field>LLC_BI__Primary_Officer__c</field>
+        <field>LLC_BI__Total_Loan_Facilities_Amount__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Conditions Required:
+
+- Number of Loan Facilities &lt;= 5
+- Total Loan Facilities Amount &lt;= $100mm
+- Risk Rating &lt;= 4</description>
+        <entryCriteria>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <criteriaItems>
+                <field>LLC_BI__Product_Package__c.LLC_BI__Risk_Rating__c</field>
+                <operation>lessOrEqual</operation>
+                <value>4</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>LLC_BI__Product_Package__c.LLC_BI__Loan_Facilities_Count__c</field>
+                <operation>lessOrEqual</operation>
+                <value>5</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>LLC_BI__Product_Package__c.LLC_BI__Total_Loan_Facilities_Amount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>100000000</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Initial Approval</label>
+        <name>Initial_Approval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>demomastertest.2j708bheislu@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>katie.wahl.w6eiuhmipu8b@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Conditions Required: 
+
+- Number of Loan Facilities &gt; 5
+- Total Loan Facilities Amount &gt; $100mm
+- Risk Rating &gt; 4</description>
+        <entryCriteria>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <criteriaItems>
+                <field>LLC_BI__Product_Package__c.LLC_BI__Risk_Rating__c</field>
+                <operation>greaterThan</operation>
+                <value>4</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>LLC_BI__Product_Package__c.LLC_BI__Loan_Facilities_Count__c</field>
+                <operation>greaterThan</operation>
+                <value>5</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>LLC_BI__Product_Package__c.LLC_BI__Total_Loan_Facilities_Amount__c</field>
+                <operation>greaterThan</operation>
+                <value>100000000</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Loan Committee</label>
+        <name>Loan_Committee</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Representative Example of Product Package Approval Process when the following conditions are met:
+
+- Status = New
+- Number of Loan Facilities &gt;= 1
+- Total Loan Facilities Amount &gt;= $1 
+- Risk Rating &gt;= 1</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>LLC_BI__Product_Package__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Status_In_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Product Package Approval Process</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>Status_Recalled</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

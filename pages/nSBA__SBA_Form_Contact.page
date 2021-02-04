@@ -1,0 +1,6 @@
+<apex:page controller="nSBA.SBAContactController" tabStyle="Account">
+
+  <c:SBAFormContactComponent />
+  <apex:include pageName="nFORCE__KoDataGrid" />
+
+</apex:page>

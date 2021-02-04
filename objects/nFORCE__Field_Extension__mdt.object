@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>nFORCE__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. When enabled, it indicates that this field extension is active. When disabled, the field extension is not active. By default, it is active.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. This field stores the name of the field being extended.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Field Name</label>
+        <length>60</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Mask_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. It is manually populated. It indicates the type of masking that must be applied to the field when displayed to an user. This impacts all users regardless of permission.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Masking</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>true</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Last 4 in Clear</fullName>
+                    <default>false</default>
+                    <label>Last 4 in Clear</label>
+                </value>
+                <value>
+                    <fullName>Mask All Characters</fullName>
+                    <default>false</default>
+                    <label>Mask All Characters</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Object_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. This field indicates the fully qualified name of the object for the field which the extension applies.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Object Name</label>
+        <length>60</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm.</description>
+        <externalId>true</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Field Extension</label>
+    <pluralLabel>Field Extension</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,1 @@
+public class DemoSetupException extends Exception{}

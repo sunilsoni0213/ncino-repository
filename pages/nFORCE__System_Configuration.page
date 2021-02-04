@@ -1,0 +1,23 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" >
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" />
+	<c:Include_Navigator />
+	<apex:outputPanel layout="block" styleClass="container-fluid">
+		<apex:outputPanel layout="block" styleClass="row">
+			<apex:outputPanel layout="block" styleClass="col-xs-12">&nbsp;</apex:outputPanel>
+		</apex:outputPanel>
+		<apex:outputPanel layout="block" styleClass="row">
+			<apex:outputPanel layout="block" styleClass="col-xs-12">
+				<apex:outputPanel layout="block" styleClass="panel panel-info">
+					<apex:outputPanel layout="block" styleClass="panel-heading">
+					{!$Label.nforce__system_configuration}
+					</apex:outputPanel>
+					<apex:outputPanel layout="block" styleClass="panel-body">
+						<apex:form >
+							<c:System_Configuration />
+						</apex:form>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:outputPanel>
+		</apex:outputPanel>
+	</apex:outputPanel>
+</apex:page>

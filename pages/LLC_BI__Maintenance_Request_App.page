@@ -1,0 +1,31 @@
+<apex:page >
+
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Route />
+	<apex:styleSheet value="{!URLFOR($Resource.ncMaintenanceRequest,
+		'css/Style.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncMaintenanceRequest,
+		'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncMaintenanceRequest,
+		'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncMaintenanceRequest,
+		'controllers/MaintenanceRequestController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncMaintenanceRequest,
+		'controllers/NewMaintenanceRequestController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncMaintenanceRequest,
+		'services/MaintenanceRequestDataService.js')}" />
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncPubsubIncludes />
+	<c:MaintenanceRequestConfiguration />
+	<c:MaintenanceRequestRoutes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}" />
+
+	<div id="ncMaintenanceRequest" ng-controller="MaintenanceRequestController" ng-cloak="cloak">
+		<ng-view></ng-view>
+	</div>
+
+
+</apex:page>

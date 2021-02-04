@@ -1,0 +1,48 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" sidebar="false" standardStylesheets="false">
+	<c:Include_AngularJS />
+
+	<c:ncUIIncludes />
+	<c:ncDataProvidersIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncFilters_bundle)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncFormElements_bundle)}" />
+
+	<div class="slds" id="ncScreenSectionFormBuilder">
+		<apex:repeat value="{!screenSections}" var="section">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<span>{!section.name}</span>
+				</apex:define>
+				<apex:define name="right">
+					<apex:outputPanel layout="none" rendered="{!AND(section.Section_Configurations__r.size > 0, userHasFrameworkAdministratorPermission)}">
+						<nc-edit-field-set-button
+							entity="{!section.sObject_Type__c}"
+							field-set-key="{!section.Section_Configurations__r[0].Field_Set_Key__c}">
+						</nc-edit-field-set-button>
+					</apex:outputPanel>
+				</apex:define>
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<message></message>
+							<nc-screen-section-form-builder
+								section-id="{!section.id}"
+								context-id="{!contextObjectId}"
+								is-editable="{!section.Is_Editable__c}"
+								default-editable="{!section.Default_Editable__c}"
+								save-on-change="{!section.Auto_Save__c}"
+								guid="{!section.id}{!guid}">
+								<apex:composition template="nFORCE__Template_UI_Loading" />
+							</nc-screen-section-form-builder>
+
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</apex:repeat>
+
+	</div>
+	<c:ncScreenSectionFormBuilderIncludes />
+</apex:page>

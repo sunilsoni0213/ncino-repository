@@ -1,0 +1,186 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.VF_AdverseActionController">
+
+<nFORCE:Includes enableBS3Namespace="true" isAnalyticsDisabled="true" isInternationalizeDisabled="true"/>
+
+<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}"/>
+<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+
+<apex:sectionHeader title="{!$Label.llc_bi__decline_withdraw_header}"
+	subtitle="{!loanName}"
+	rendered="{!!pendingApproval && isNull($CurrentPage.parameters.app)}"/>
+
+<apex:sectionHeader id="header" title="{!$Label.llc_bi__this_functionality_is_not_available_header}" rendered="{!pendingApproval}"/>
+
+	<div class="force">
+		<apex:outputPanel layout="none" rendered="{!$CurrentPage.parameters.app != null}">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<span>
+						{!$Label.llc_bi__adverse_action}
+					</span>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+		</apex:outputPanel>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<apex:form styleClass="form-horizontal">
+							<apex:outputPanel rendered="{!!pendingApproval}" >
+								<h4><apex:outputText value="{!$Label.llc_bi__indicate_adverse_action}"/></h4>
+								<hr/>
+								<div class="radioLabel content-body">
+									<apex:selectRadio value="{!selectedLoanAction}" id="selectedLoanAction" layout="pageDirection" >
+										<apex:actionSupport event="onchange"
+										rerender="declineForm,withdrawForm,buttonPanel" />
+										<apex:selectOptions value="{!loanActions}"/>
+									</apex:selectRadio>
+								</div>
+							</apex:outputPanel>
+							<div class="col-sm-6">
+								<apex:outputPanel id="declineForm" styleClass="row" layout="block">
+									<apex:outputPanel rendered="{!!pendingApproval && isDeclineLoan}" layout="none">
+										<br/>
+										<h4><apex:outputText value="{!$Label.llc_bi__select_reasons_for_decline}"/></h4>
+										<br/><br/>
+										<apex:messages styleClass="alert alert-danger"/>
+										<div class="form-group">
+											<label for="reason1" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Reason_1}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:selectList value="{!reason1}" size="1" id="reason1" styleClass="input-sm form-control">
+													<apex:selectOptions value="{!reasons}"/>
+												</apex:selectList>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="reason2" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Reason_2}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:selectList value="{!reason2}" size="1" id="reason2" styleClass="input-sm form-control">
+													<apex:selectOptions value="{!reasons}"/>
+												</apex:selectList>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="reason3" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Reason_3}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:selectList value="{!reason3}" size="1" id="reason3" styleClass="input-sm form-control">
+													<apex:selectOptions value="{!reasons}"/>
+												</apex:selectList>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="reason4" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Reason_4}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:selectList value="{!reason4}" size="1" id="reason4" styleClass="input-sm form-control">
+													<apex:selectOptions value="{!reasons}"/>
+												</apex:selectList>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="creditProvider" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Credit_Provider}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:selectList value="{!creditProvider}" size="1" id="creditProvider" styleClass="input-sm form-control">
+													<apex:selectOptions value="{!providers}"/>
+												</apex:selectList>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="addtComments" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Additional_Comments}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:inputTextarea value="{!comments}"
+													rows="6"
+													styleClass="input-sm form-control"/>
+											</div>
+										</div>
+									</apex:outputPanel>
+								</apex:outputPanel>
+
+								<apex:outputPanel id="withdrawForm" styleClass="row" layout="block">
+									<apex:outputPanel rendered="{!!pendingApproval && !isDeclineLoan && selectedLoanAction != null}" layout="none">
+										<br/>
+										<apex:messages styleClass="alert alert-danger"/>
+										<h4><apex:outputText value="{!$Label.llc_bi__select_reason_for_withdrawal}"/></h4>
+										<br/>
+										<br/>
+										<div class="form-group">
+											<label for="withdrawList" class="col-sm-3 col-md-2 content-label dropdown-label">
+											{!$Label.Reason_1}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:selectList value="{!withdrawReason}" size="1" id="withdrawList" styleClass="input-sm form-control">
+													<apex:selectOptions value="{!withdrawReasons}"/>
+												</apex:selectList>
+											</div>
+											<div class="col-sm-7"></div>
+										</div>
+
+										<div class="form-group">
+											<label
+												for="additionalComments" class="col-sm-3 col-md-2 content-label dropdown-label">
+												{!$Label.Additional_Comments}
+											</label>
+											<div class="col-sm-5 content-body">
+												<apex:inputTextarea value="{!comments}"
+													cols="80"
+													rows="6"
+													id="additionalComments"
+													styleClass="input-sm form-control"/>
+											</div>
+											<div class="col-sm-7"></div>
+										</div>
+									</apex:outputPanel>
+								</apex:outputPanel>
+								<div class="form-group">
+									<apex:outputPanel id="buttonPanel"  layout="block">
+										<apex:outputPanel rendered="{!!pendingApproval}" layout="none">
+											<apex:commandButton action="{!declineLoan}"
+												value="{!$Label.llc_bi__button_continue}"
+												rerender="declineForm,withdrawForm,buttonPanel"
+												styleClass="btn btn-primary col-md-3 col-lg-2"
+												disabled="{!IF(selectedLoanAction == null,true,false)}"
+												status="ajaxPleaseWait"/>
+
+											<apex:commandButton action="{!returnToLoan}"
+												value="{!$Label.llc_bi__button_cancel}"
+												rerender="declineForm,withdrawForm,buttonPanel"
+												styleClass="btn btn-link col-md-3 col-lg-2"/>
+											<div class="col-sm-10"></div>
+										</apex:outputPanel>
+									</apex:outputPanel>
+								</div>
+
+								<apex:outputPanel rendered="{!pendingApproval}" >
+									<h1><apex:outputText value="{!$Label.llc_bi__feature_not_accessible}"/></h1>
+									<ul>
+										<li>{!$Label.llc_bi__cannot_decline_loan}</li>
+									</ul>
+									<br/>
+									<br/>
+									<apex:commandButton action="{!returnToLoan}" value="{!$Label.llc_bi__cancel}"/>
+								</apex:outputPanel>
+							</div>
+						</apex:form>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

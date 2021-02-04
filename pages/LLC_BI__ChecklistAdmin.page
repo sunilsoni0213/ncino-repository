@@ -1,0 +1,10 @@
+<apex:page id="ChecklistAdmin"
+	showHeader="true"
+	applyBodyTag="true"
+	applyHtmlTag="true"
+	docType="html-5.0"
+	standardStylesheets="false">
+
+	<c:ChecklistAdminIncludes />
+	<c:ChecklistAdmin />
+</apex:page>

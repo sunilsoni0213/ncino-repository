@@ -1,0 +1,24 @@
+<apex:page contentType="application/json"
+	readOnly="true"
+	applyHtmlTag="false"
+	standardStylesheets="false"
+	showHeader="false"
+	cache="false"
+	sidebar="false"
+	controller="nFORCE.RemoteActionController">{
+	"topbarIcon": "{!URLFOR($Resource.ncinoocr__niq_visual_assets, '/images/nIQ-logo.svg')}",
+	"checkIcon": "{!URLFOR($Resource.nFORCE__ncSectionBuilder, '/images/greenCheck.svg')}",
+	"whiteCheck": "{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#approval')}",
+	"userIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#user')}",
+	"documentIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#document')}",
+  "warningIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}",
+  "addIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#add')}",
+	"closeIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}",
+	"errorIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error')}",
+	"graphIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/custom-sprite/svg/symbols.svg#custom102')}",
+	"gearIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/custom-sprite/svg/symbols.svg#custom108')}",
+	"bookIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/custom-sprite/svg/symbols.svg#custom55')}",
+	"remoteAction": "{!$RemoteAction.RemoteActionController.invoke}",
+	"chevronDown": "{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#chevrondown')}",
+	"addFormIcon": "{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#add_relationship')}"
+}</apex:page>

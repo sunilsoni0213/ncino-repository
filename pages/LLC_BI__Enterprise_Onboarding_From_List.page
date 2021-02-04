@@ -1,0 +1,64 @@
+<apex:page standardController="Account"
+	extensions="LLC_BI.EnterpriseOnboardingController,LLC_BI.NewCustomerCreationBaseController,LLC_BI.SidebarController"
+	sidebar="{!showSidebar}"
+	recordSetVar="accounts">
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<apex:styleSheet value="{!URLFOR($Resource.LLC_BI__ncRelationshipSearch, 'css/individual.css')}" />
+
+	<apex:outputPanel rendered="{!!hideLeftNav}">
+		<div id="app" ng-controller="AppController">
+			<apex:composition template="nFORCE__Template_Base">
+
+			<apex:define name="topbar">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Topbar__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Topbar__c)}" />
+			</apex:define>
+
+			<apex:define name="navigation">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Navigation__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Navigation__c)}"/>
+			</apex:define>
+
+			<apex:define name="subNavigation">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Sub_Navigation__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Sub_Navigation__c)}" />
+			</apex:define>
+
+			<apex:define name="body">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Body__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Body__c)}" />
+			</apex:define>
+
+			</apex:composition>
+		</div>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!hideLeftNav}">
+		<div id="app" ng-controller="AppController">
+			<apex:composition template="nFORCE__Template_Landing">
+
+			<apex:define name="topbar">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Topbar__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Topbar__c)}" />
+			</apex:define>
+
+			<apex:define name="navigation">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Navigation__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Navigation__c)}"/>
+			</apex:define>
+
+			<apex:define name="subNavigation">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Sub_Navigation__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Sub_Navigation__c)}" />
+			</apex:define>
+
+			<apex:define name="body">
+				<apex:include pageName="{!IF(isNull(route.nFORCE__Body__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Body__c)}" />
+			</apex:define>
+
+			</apex:composition>
+		</div>
+	</apex:outputPanel>
+
+	<c:BreadcrumbPublisher breadcrumbs="{!breadcrumbs}" />
+
+	<script>
+		jQuery(function(){
+			jQuery('.nds-single-stencil--small').remove();
+			jQuery('.nds-single-stencil--large').remove();
+		});
+	</script>
+</apex:page>

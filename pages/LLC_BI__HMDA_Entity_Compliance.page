@@ -1,0 +1,157 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController,LLC_BI.EntityComplianceController">
+
+	<apex:include pageName="nFORCE__Error_Message_Handler" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__ko_grouped_lists_css)}" />
+
+	<apex:composition template="nFORCE__Template_Knockout_Screen">
+
+		<apex:define name="knockout-content">
+		<span data-bind="visible: screenResource().isHierarchy">
+
+				<div class="spacer">
+					<apex:composition template="nFORCE__Template_Heading">
+						<apex:define name="left">
+							<p>{!$Label.HMDA_Co_Applicant_Notice}</p>
+								<div class="slds-form-element">
+									<label class="slds-checkbox--toggle slds-grid slds-grid--vertical-align-center">
+										{!$Label.HMDA_Co_Applicant_Question} &nbsp; &nbsp;
+										<apex:outputPanel rendered="{!hmdaCoApplicant}">
+											<input
+												checked="checked"
+												type="checkbox"
+												id="isHmdaApplicantCheckbox"
+												onchange="onCoApplicantClick(this.checked)"
+											/>
+											<span class="slds-checkbox--faux hover-blue" data-check-on="Yes" data-check-off="No"/>
+										</apex:outputPanel>
+										<apex:outputPanel rendered="{!!hmdaCoApplicant}">
+											<input
+												type="checkbox"
+												id="isHmdaApplicantCheckbox"
+												onchange="onCoApplicantClick(this.checked)"
+											/>
+											<span class="slds-checkbox--faux hover-blue" data-check-on="Yes" data-check-off="No"/>
+										</apex:outputPanel>
+									</label>
+								</div>
+						</apex:define>
+					</apex:composition>
+				</div>
+
+			<span data-bind="if: screenResource().hasChildren() && screenResource().children()[0].isList()">
+
+				<span data-bind="foreach: screenResource().children()">
+					<span data-bind="foreach: children()">
+						<span data-bind="if: !getViewModel().isPreviewing() && !getViewModel().isEditing()">
+						<apex:composition template="nFORCE__Template_View_1_Column">
+							<apex:define name="column-content">
+								<apex:composition template="nFORCE__Template_View_Container">
+									<apex:define name="content">
+										<span data-bind="event: { mouseover: $parent.selectedChild }">
+											<span class="container-fluid" data-bind="foreach: propertyList">
+												<span data-bind="text: value, if: $index() < 3"/>
+											</span>
+											<span data-bind="template: {
+												name: 'button-add-template',
+												ifnot: getViewModel().isPreviewing() || getViewModel().isEditing(),
+												data: children()[0] }" ></span>
+											<span data-bind="template: {
+													name: 'table-children-template',
+													if: !getViewModel().isPreviewing() && !getViewModel().isEditing() && children()[0].hasChildren(),
+													data: children()[0] }" />
+											<span data-bind="if: children()[0].isAccessible && !getViewModel().isPreviewing() && !getViewModel().isEditing() && !children()[0].hasChildren()">
+												<span data-bind="template: { name: 'empty-list-template', data: children()[0].getViewModel().sectionName }" />
+											</span>
+										</span>
+									</apex:define>
+								</apex:composition>
+							</apex:define>
+						</apex:composition>
+						</span>
+					</span>
+				</span>
+
+				<span data-bind="with: screenResource().children()[0].selectedChild">
+					<span data-bind="if:(getViewModel().isPreviewing() || getViewModel().isEditing()) ">
+						<apex:composition template="nFORCE__Template_View_1_Column">
+							<apex:define name="column-content">
+								<apex:composition template="nFORCE__Template_View_Container">
+									<apex:define name="content">
+										<span class="container-fluid" data-bind="foreach: propertyList">
+											<span data-bind="text: value, if: $index() < 3"/>
+										</span>
+										<div data-bind="css: { hidden: !getViewModel().isEditing() }" class="alert alert-info hidden" role="alert">{!$Label.HMDA_Demographic_Disclaimer}</div>
+										<span class="row" data-bind="if: children()[0].selectedChild">
+											<span data-bind="template: {
+													name: 'vf-grid-template-' + getViewModel().guid() + '-'
+															+ children()[0].selectedChild().guid(),
+													if: (getViewModel().isPreviewing() || getViewModel().isEditing()),
+													data: children()[0].selectedChild }"/>
+										</span>
+										<span data-bind="template: {
+												name: 'button-save-template',
+												if: getViewModel().isEditing(),
+												data: children()[0] }" />
+										<span data-bind="template: {
+												name: 'button-back-template',
+												if: getViewModel().isPreviewing(),
+												data: children()[0] }" />
+									</apex:define>
+								</apex:composition>
+							</apex:define>
+						</apex:composition>
+					</span>
+				</span>
+
+			</span>
+
+		</span>
+
+		</apex:define>
+
+		<apex:define name="dynamic-templates">
+			<nFORCE:KoVf4thGenChildGridsTemplate appguid="{!APP_GUID}"
+			                                     contextObjectParam="{!contextObject}"
+			                                     screenSectionParam="{!section}" />
+			<nFORCE:KoButtonAddTemplate secondary="true"/>
+		</apex:define>
+
+		<apex:define name="static-templates">
+			<nFORCE:KoHeadingTemplate />
+			<nFORCE:KoEmptyListTemplate />
+			<nFORCE:KoSectionFieldSetWarningTemplate />
+			<nFORCE:KoFieldLabelTemplate />
+			<nFORCE:KoFieldOutputTemplate />
+			<nFORCE:KoFieldInputTemplate />
+			<nFORCE:KoTableHeadCellTemplate />
+			<nFORCE:KoTableBodyCellTemplate />
+			<nFORCE:KoTableHeadRowActionTemplate />
+			<nFORCE:KoTableBodyRowActionTemplate />
+			<nFORCE:KoTableTemplate />
+			<nFORCE:KoTableChildrenTemplate />
+			<nFORCE:KoButtonAddTemplate />
+			<nFORCE:KoButtonSaveTemplate />
+			<nFORCE:KoButtonBackTemplate />
+			<nFORCE:KoButtonEditFieldSetTemplate />
+		</apex:define>
+	</apex:composition>
+
+	<script type="text/javascript">
+		function onCoApplicantClick(value){
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.EntityComplianceController.setHmdaCoApplicant}',
+				'{!loan.Id}',
+				value,
+				function(result, event){
+					if(event.status){
+						return true;
+					} else{
+						return false;
+					}
+				}
+			);
+		}
+	</script>
+
+
+</apex:page>

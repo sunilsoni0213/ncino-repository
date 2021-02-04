@@ -1,0 +1,39 @@
+<apex:page standardController="Lead" extensions="LLC_BI.VF_ProductController">
+ <apex:outputPanel id="refresh" rendered="{!refreshPage}">
+  <script>
+   window.top.location='/{!LeadId}';
+  </script>
+ </apex:outputPanel>
+ <div style="margin-left: -18px;">
+ <apex:messages />
+	<apex:form >
+	<apex:pageBlock mode="maindetail">
+		<apex:pageBlockSection columns="1">
+				<apex:pageBlockSectionItem >
+					<apex:outputText value="Product Line"/>
+			        <apex:selectList value="{!ProductLineId}" multiselect="false" size="1" id="ProductLinesList">
+			            <apex:selectOptions value="{!ProductLinesList}"/>
+			            <apex:actionSupport event="onchange" rerender="ProductLinesList,ProductTypeList,ProductList" action="{!AutoSaveProduct}" />
+			        </apex:selectList>
+		        </apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputText value="Product Type" />
+			        <apex:selectList value="{!ProductTypeId}" multiselect="false" size="1"  id="ProductTypeList">
+			            <apex:selectOptions value="{!ProductTypeList}"/>
+			            <apex:actionSupport event="onchange" rerender="ProductLinesList,ProductTypeList,ProductList" action="{!AutoSaveProduct}" />
+			        </apex:selectList>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputText value="Product" />
+			        <apex:selectList value="{!ProductId}" multiselect="false" size="1" id="ProductList">
+			            <apex:selectOptions value="{!ProductList}"/>
+			            <apex:actionSupport event="onchange" rerender="ProductLinesList,ProductTypeList,ProductList" action="{!AutoSaveProduct}"/>
+			        </apex:selectList>
+		        </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+	</apex:form>
+	</div>
+</apex:page>

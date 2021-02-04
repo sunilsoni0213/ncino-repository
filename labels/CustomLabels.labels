@@ -1,0 +1,3468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Acceptable_Maintenance_Duration_Time</fullName>
+        <categories>Maintenance Task</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acceptable Maintenance Duration Time</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Acceptance_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Acceptance</shortDescription>
+        <value>Acceptance</value>
+    </labels>
+    <labels>
+        <fullName>Approval_Loan_Committee_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Loan Committee Label</shortDescription>
+        <value>Approval / Loan Committee</value>
+    </labels>
+    <labels>
+        <fullName>Back</fullName>
+        <categories>General</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Back</shortDescription>
+        <value>back</value>
+    </labels>
+    <labels>
+        <fullName>Back_to_loan</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back_to_loan</shortDescription>
+        <value>back to loan</value>
+    </labels>
+    <labels>
+        <fullName>Balance_Sheet</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Balance Sheet</shortDescription>
+        <value>Balance Sheet</value>
+    </labels>
+    <labels>
+        <fullName>Booked_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Booked Label</shortDescription>
+        <value>Booked</value>
+    </labels>
+    <labels>
+        <fullName>Budget</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Budget</shortDescription>
+        <value>Budget</value>
+    </labels>
+    <labels>
+        <fullName>Button_Cancel</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Button_Continue_With_Conversion</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button Continue With Conversion</shortDescription>
+        <value>Continue with Conversion</value>
+    </labels>
+    <labels>
+        <fullName>Button_Continue_with_Copy</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button Continue with Copy</shortDescription>
+        <value>Continue with Copy</value>
+    </labels>
+    <labels>
+        <fullName>Button_Create_New_Loan</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button Create New Loan</shortDescription>
+        <value>Create New Loan</value>
+    </labels>
+    <labels>
+        <fullName>Button_Merge_Into_Business</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button Merge Into Business</shortDescription>
+        <value>Merge into Relationship</value>
+    </labels>
+    <labels>
+        <fullName>Button_Seperator</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button Seperator</shortDescription>
+        <value>&amp;nbsp;-&amp;nbsp;</value>
+    </labels>
+    <labels>
+        <fullName>CD_GoTo</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CD_GoTo</shortDescription>
+        <value>Navigate To Record</value>
+    </labels>
+    <labels>
+        <fullName>CSA_Heading</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CSA Heading</shortDescription>
+        <value>Customer Success Administration</value>
+    </labels>
+    <labels>
+        <fullName>CSA_Sub_Heading</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CSA Sub Heading</shortDescription>
+        <value>Choose One of the above tabs to a Configuration Tool</value>
+    </labels>
+    <labels>
+        <fullName>CSI_DepAct_DocPrep_Completion_Log_Id_Missing</fullName>
+        <categories>Integrations Plugin - Doc Prep - Deposit Product</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning message in Review Documents if an external log id is not found.</shortDescription>
+        <value>Please try generating documents again. If you continue to receive this error, contact your nCino administrator.</value>
+    </labels>
+    <labels>
+        <fullName>CSI_DepAct_DocPrep_Storing_Documents</fullName>
+        <categories>Integrations Plugin - Doc Prep - Deposit Product</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Displays in the page header when Docman storage occurs</shortDescription>
+        <value>Just a moment, we&apos;re saving your documents to DocMan.</value>
+    </labels>
+    <labels>
+        <fullName>CS_Back_To_List_View</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Back_To_List_View</shortDescription>
+        <value>Back to List View</value>
+    </labels>
+    <labels>
+        <fullName>CS_Cancel</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>CS_Choose_Redirect</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Choose_Redirect</shortDescription>
+        <value>Choose Where to be Redirected To Below</value>
+    </labels>
+    <labels>
+        <fullName>CS_Claim</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Claim</shortDescription>
+        <value>Claim</value>
+    </labels>
+    <labels>
+        <fullName>CS_Close_Modal</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Close_Modal</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>CS_Install_Success</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Install_Success</shortDescription>
+        <value>Claiming System Installed Successfully</value>
+    </labels>
+    <labels>
+        <fullName>CS_Installer_Button_Install_Title</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Installer_Button_Install_Title</shortDescription>
+        <value>Install</value>
+    </labels>
+    <labels>
+        <fullName>CS_Installer_Button_Uninstall_Title</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Installer_Button_Uninstall_Title</shortDescription>
+        <value>Uninstall</value>
+    </labels>
+    <labels>
+        <fullName>CS_Installer_Description</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Installer_Description</shortDescription>
+        <value>Click Install or Uninstall to Load/Unload System Properties (nFORCE)</value>
+    </labels>
+    <labels>
+        <fullName>CS_Installer_Title</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Installer_Title</shortDescription>
+        <value>nCino Claiming System Installer</value>
+    </labels>
+    <labels>
+        <fullName>CS_Link_Header</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Link_Header</shortDescription>
+        <value>Link</value>
+    </labels>
+    <labels>
+        <fullName>CS_Loan_Name_Header</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Loan_Name_Header</shortDescription>
+        <value>Loan Name</value>
+    </labels>
+    <labels>
+        <fullName>CS_Product_Package_Name_Header</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Product_Package_Name_Header</shortDescription>
+        <value>Product Package Name</value>
+    </labels>
+    <labels>
+        <fullName>CS_Select_Role</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Select_Role</shortDescription>
+        <value>Select Role</value>
+    </labels>
+    <labels>
+        <fullName>CS_Select_User</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Select_User</shortDescription>
+        <value>Select User</value>
+    </labels>
+    <labels>
+        <fullName>CS_Select_User_Role</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Select_User_Role</shortDescription>
+        <value>Select User &amp; Role</value>
+    </labels>
+    <labels>
+        <fullName>CS_Select_a_Role</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Select_a_Role</shortDescription>
+        <value>Select a Role....</value>
+    </labels>
+    <labels>
+        <fullName>CS_Select_a_User</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Select_a_User</shortDescription>
+        <value>Select a User....</value>
+    </labels>
+    <labels>
+        <fullName>CS_Uninstall_Success</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CS_Uninstall_Success</shortDescription>
+        <value>Claiming System Uninstalled Successfully</value>
+    </labels>
+    <labels>
+        <fullName>Cannot_Add_Entity</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cannot Add Entity</shortDescription>
+        <value>Cannot add an entity since there is no primary relationship associated with the loan</value>
+    </labels>
+    <labels>
+        <fullName>Cash_Flow_Statement</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cash Flow Statement</shortDescription>
+        <value>Cash Flow Statement</value>
+    </labels>
+    <labels>
+        <fullName>ChangeMemo_Name</fullName>
+        <categories>Change Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The name that gets forced on change memo names</shortDescription>
+        <value>Change Memo</value>
+    </labels>
+    <labels>
+        <fullName>Closed_Funded_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Closed Funded Label</shortDescription>
+        <value>Closed</value>
+    </labels>
+    <labels>
+        <fullName>Closing_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Closing Label</shortDescription>
+        <value>Closing</value>
+    </labels>
+    <labels>
+        <fullName>Commentary</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Commentary</shortDescription>
+        <value>Commentary</value>
+    </labels>
+    <labels>
+        <fullName>Comments</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Comments</shortDescription>
+        <value>Comments</value>
+    </labels>
+    <labels>
+        <fullName>Commercial_Credit_Presentation</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Commercial Credit Presentation</shortDescription>
+        <value>Commercial Credit Presentation</value>
+    </labels>
+    <labels>
+        <fullName>Community_End_Url</fullName>
+        <categories>Customer Portal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community End Url</shortDescription>
+        <value>/nPortal__PortalLogin</value>
+    </labels>
+    <labels>
+        <fullName>Community_Name</fullName>
+        <categories>Customer Portal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community Name</shortDescription>
+        <value>Customer Portal</value>
+    </labels>
+    <labels>
+        <fullName>Complete_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Complete Label</shortDescription>
+        <value>Complete</value>
+    </labels>
+    <labels>
+        <fullName>Compliance_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Compliance Label</shortDescription>
+        <value>Compliance</value>
+    </labels>
+    <labels>
+        <fullName>Computed_Risk_Grade</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Computed Risk Grade</shortDescription>
+        <value>Computed Risk Grade</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Config_Value_Configuration</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Config Value Configuration</shortDescription>
+        <value>Config Value Configuration</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Finish</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Finish</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Install</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Install</shortDescription>
+        <value>Install</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Intstructions</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Intstructions</shortDescription>
+        <value>Click Install to install all Config Values and Keys for the System if they Do Not Exist. Clicking Uninstall will only uninstall the System Property Record Created not the Config Values and Keys</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Success_Install</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Success Install</shortDescription>
+        <value>Install Successful!</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Success_Uninstall</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Success Uninstall</shortDescription>
+        <value>Uninstall Successful!</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Config_Uninstall</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Config Uninstall</shortDescription>
+        <value>Uninstall</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Actions</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Actions</shortDescription>
+        <value>Actions</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Add_New</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Add New</shortDescription>
+        <value>Add New</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Available_Config_Keys</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Available Config Keys</shortDescription>
+        <value>Available Config Keys</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Available_Title</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Available Title</shortDescription>
+        <value>Select one or multiple Records to be related to this Config Value. To select multiple hold the &apos;Shift&apos; or &apos;ctrl&apos; key.</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Back</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Clear_Selections</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Clear Selections</shortDescription>
+        <value>Clear Selections</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Config_Value_Summary</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Config Value Summary</shortDescription>
+        <value>Config Value Summary</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Confirm_Msg</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Confirm Msg</shortDescription>
+        <value>Are You Sure?</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Delete</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Edit</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Linked_Config_Keys</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Linked Config Keys</shortDescription>
+        <value>Linked Config Keys</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Linked_Title</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Linked Title</shortDescription>
+        <value>Select one or multiple Records to be un-related to this Config Value. To select multiple hold the &apos;Shift&apos; or &apos;ctrl&apos; key.</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Related_Msg_Part_1</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Related Msg Part 1</shortDescription>
+        <value>Please Select any option below to be joined or removed from relation to this config Value. Click</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Related_Msg_Part_2</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Related Msg Part 2</shortDescription>
+        <value>to Remove &quot;All&quot; selections</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Save</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Save_New</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Save &amp; New</shortDescription>
+        <value>Save &amp; New</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Success_Created</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Success Created</shortDescription>
+        <value>Config Value Created Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Success_Delete</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Success Delete</shortDescription>
+        <value>Config Value Deleted Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Success_Updated</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Success Updated</shortDescription>
+        <value>Config Value Updated Successful!</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Mgmt_Title</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Mgmt Title</shortDescription>
+        <value>Config Value Management</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Summary_Config_Key_PT</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Summary Config Key PT</shortDescription>
+        <value>Config Keys (PT)</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Summary_Config_Keys_KY</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Summary Config Keys KY</shortDescription>
+        <value>Config Keys (KY)</value>
+    </labels>
+    <labels>
+        <fullName>Config_Value_Summary_Config_Values</fullName>
+        <categories>Config Value Mgmt</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Config Value Summary Config Values</shortDescription>
+        <value>Config Values</value>
+    </labels>
+    <labels>
+        <fullName>Creating_Proposed_Debts</fullName>
+        <categories>Workflow Orchestration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Creating Proposed Debts</shortDescription>
+        <value>Creating Proposed Debts</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Label</shortDescription>
+        <value>Underwriting</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Template</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Template</shortDescription>
+        <value>This is a template and does not contain any content. Scroll to the bottom of this page to edit/add/remove sections from the template.</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Actions</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Actions</shortDescription>
+        <value>Actions</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Approval_Process_Option</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Approval Process Option</shortDescription>
+        <value>Approval Process</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Back</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Confirm_Msg</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Confirm Msg</shortDescription>
+        <value>Are You Sure?</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Debt_Schedule_Option</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Debt Schedule Option</shortDescription>
+        <value>Debt Schedule</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Delete</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Edit</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Global_Analysis_Option</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Global Analysis Option</shortDescription>
+        <value>Global Analysis</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Narrative_Option</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Narrative Option</shortDescription>
+        <value>Narrative</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_No_Rows</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard No Rows</shortDescription>
+        <value>No Screen Sections Built Yet Click Add To Begin</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_None_Optoin</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard None Optoin</shortDescription>
+        <value>-- None --</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Num_Section_Attachments</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Num Section Attachments</shortDescription>
+        <value># Section Attachments</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Num_Section_Config</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Num Section Config</shortDescription>
+        <value># Section Config</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_SS_Success_Create</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard SS Success Create</shortDescription>
+        <value>Screen Section Updated Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_SS_Success_Delete</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard SS Success Delete</shortDescription>
+        <value>Screen Section Deleted Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_SS_Success_Update</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard SS Success Update</shortDescription>
+        <value>Screen Section Updated Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Save</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Spreads_Appendix_Option</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Spreads Appendix Option</shortDescription>
+        <value>Spreads Appendix</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Sub_Header</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Sub Header</shortDescription>
+        <value>This Credit Memo Wizard will walk a user through building a Credit Memo from the ground up or simply editing an existing Credit Memo. To begin select an option below.</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Success_Create</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Success Create</shortDescription>
+        <value>Credit Memo &amp; Screen Created Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Success_Delete</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Success Delete</shortDescription>
+        <value>Credit Memo Deleted Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Success_Update</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Success Update</shortDescription>
+        <value>Credit Memo Updated Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Memo_Wizard_Title</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Title</shortDescription>
+        <value>Credit Memo Wizard</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Review_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Review Label</shortDescription>
+        <value>Credit</value>
+    </labels>
+    <labels>
+        <fullName>Credit_memo_Wizard_Add_New</fullName>
+        <categories>Credit Memo Wizard</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Credit Memo Wizard Add New</shortDescription>
+        <value>Add New</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Needs_Has</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer_Needs_Has</shortDescription>
+        <value>Has text here</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Needs_Needs</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer_Needs_Needs</shortDescription>
+        <value>Needs text here.</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Config_Title</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Config Title</shortDescription>
+        <value>Customer Success Admin Configuration</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Finish</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Finish</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Install</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Install</shortDescription>
+        <value>Install</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Instructions</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Instructions</shortDescription>
+        <value>Click Install to install All Routes and Route Groups for Admin Tools to the nCino Admin Page. Click uninstall to remove all Routes and Route Groups associated to the VF Pages referenced in this package</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Success_Install</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Success Install</shortDescription>
+        <value>Install Successful!</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Success_Uninstall</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Success Uninstall</shortDescription>
+        <value>Uninstall Successful!</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Success_Admin_Uninstall</fullName>
+        <categories>CSA Admin</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Customer Success Admin Uninstall</shortDescription>
+        <value>Uninstall</value>
+    </labels>
+    <labels>
+        <fullName>DNB_Rating</fullName>
+        <categories>D&amp;B Report</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DNB Rating</shortDescription>
+        <value>D&amp;B Rating</value>
+    </labels>
+    <labels>
+        <fullName>Default_App_Field</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Used in success and failure messages in UI Template Generator</shortDescription>
+        <value>Default App Field</value>
+    </labels>
+    <labels>
+        <fullName>Default_App_Field_Already_Exists</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Used in failure message in UI Template Generator</shortDescription>
+        <value>Default App Field already exists</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Add_User</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Add_User</shortDescription>
+        <value>Add User</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Back</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Choose_Logged_In</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Choose_Logged_In</shortDescription>
+        <value>Choose which user you would like to login as.</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Logged_In_As</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Personas Logged In As</shortDescription>
+        <value>Currently logged in as:</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Login</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Login</shortDescription>
+        <value>Login</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Remove_User</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Remove_User</shortDescription>
+        <value>Remove User</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Save</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Personas_Settings</fullName>
+        <categories>Demo Personas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Personas_Settings</shortDescription>
+        <value>Settings</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Attention</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Attention</shortDescription>
+        <value>Attention</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Auto</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Auto</shortDescription>
+        <value>Auto</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Complete</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Complete</shortDescription>
+        <value>Complete</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Description</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Description</shortDescription>
+        <value>Use this step by step process to configure your org for an optimal demo experience. Follow the directions provided for each to move on. Some steps you will need to manually verify you have completed it, whereas others will know they are complete once you have clicked the run button and it is marked as complete.</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Error_Message</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Error Message</shortDescription>
+        <value>Looks like something went wrong when trying to execute this step. Please try to re-run this step, skip the step, or contact your administrator for help.</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Heading</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Heading</shortDescription>
+        <value>Setup Your Demo Experience</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Manual</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Manual</shortDescription>
+        <value>Manual</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Mark_As_Complete</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Mark As Complete</shortDescription>
+        <value>Mark as Complete</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Modal</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Modal</shortDescription>
+        <value>Modal</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Modal_Body</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo_Setup_Modal_Body</shortDescription>
+        <value>A new tab should have been opened for you prompting you to allow access. Click &quot;Ok&quot; below if authorization was successful or &quot;Error&quot; if it was not.</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Run</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Run</shortDescription>
+        <value>Run</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Running</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Running</shortDescription>
+        <value>This step is running...</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Show_Error_Details</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Show Error Details</shortDescription>
+        <value>Show Error Details</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Skip</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Skip</shortDescription>
+        <value>Skip</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Skipped</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Skipped</shortDescription>
+        <value>Skipped</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Steps_Complete</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Steps Complete</shortDescription>
+        <value>steps complete</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Steps_Manual_Confirm</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Steps Manual Confirm</shortDescription>
+        <value>Please confirm that you have completed the steps manually before marking as complete.</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Setup_Steps_Manual_Confirm_Accept</fullName>
+        <categories>Demo Setup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Demo Setup Steps Manual Confirm Accept</shortDescription>
+        <value>Accept</value>
+    </labels>
+    <labels>
+        <fullName>DepositAdd</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DepositAdd</shortDescription>
+        <value>Personal &amp; Business Banking Product</value>
+    </labels>
+    <labels>
+        <fullName>Doc_Prep_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Doc Prep Label</shortDescription>
+        <value>Doc Prep</value>
+    </labels>
+    <labels>
+        <fullName>Doc_Review_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Doc Review Label</shortDescription>
+        <value>Doc Review</value>
+    </labels>
+    <labels>
+        <fullName>Edit_Commentary</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit Commentary</shortDescription>
+        <value>Edit Commentary</value>
+    </labels>
+    <labels>
+        <fullName>Email_Reply</fullName>
+        <categories>Customer Portal</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email_Reply</shortDescription>
+        <value>noreply@ncino.com</value>
+    </labels>
+    <labels>
+        <fullName>Error_Name_Required</fullName>
+        <categories>Error Messages</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Name Required</shortDescription>
+        <value>You must enter a name.</value>
+    </labels>
+    <labels>
+        <fullName>Final_Risk_Grade</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Final Risk Grade</shortDescription>
+        <value>Final Risk Grade</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_12Mo</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>12 Month financial request verbiage</shortDescription>
+        <value>YTD 12 Month Financial Statement (Profit &amp; Loss Statement and Quarter End Balance Sheet)</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_3Mo</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>3 Month Interim Verbiage</shortDescription>
+        <value>YTD 3 Month Financial Statement (Profit &amp; Loss Statement and Quarter End Balance Sheet)</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_6Mo</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>6 month interim request verbiage</shortDescription>
+        <value>YTD 6 Month Financial Statement (Profit &amp; Loss Statement and Quarter End Balance Sheet)</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_9Mo</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>9 month Financial Request Verbiage</shortDescription>
+        <value>YTD 9 Month Financial Statement (Profit &amp; Loss Statement and Quarter End Balance Sheet)</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_BTR</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Verbiage for BTR</shortDescription>
+        <value>Business Tax Return&lt;/strong&gt;&lt;br /&gt;If there is more than one company associated with your practice (real estate holding company and operating company) please submit the appropriate return for each entity.*</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_Current</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Verbiage to display if their fin info is currently up to date</shortDescription>
+        <value>We do not need you to send any financial information as your financial documentation is up to date.</value>
+    </labels>
+    <labels>
+        <fullName>FinancialRequest_Quickbooks</fullName>
+        <categories>Financial Request</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Verbiage for if they have inhouse accounting software</shortDescription>
+        <value>If you use QuickBooks or similar in-house software your statements do not have to be audited by your accountant or CPA before sending</value>
+    </labels>
+    <labels>
+        <fullName>GMI_BackTo</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back To used in Google Maps</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GenerateKey</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please generate a Google maps API key used in Google Maps</shortDescription>
+        <value>Please generate a Google maps API key</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GoogleLanguageCode</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps Language Code</shortDescription>
+        <value>en</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Location displayed using address used in Google Maps</shortDescription>
+        <value>Location displayed using address</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressNotFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address not found by Google used in Google Maps</shortDescription>
+        <value>Address not found by Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalShowMap</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show in Google used in Google Maps</shortDescription>
+        <value>Show in Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_UpdateComponent</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the GoogleMapsInternational component used in Google Maps</shortDescription>
+        <value>Please update the GoogleMapsInternational component with a new key which can be generated from</value>
+    </labels>
+    <labels>
+        <fullName>GMI_WebsiteNeeded</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The website URL needed is used in Google Maps</shortDescription>
+        <value>The website URL needed is</value>
+    </labels>
+    <labels>
+        <fullName>GMI_googleMapURL</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps URL</shortDescription>
+        <value>http://maps.google.com</value>
+    </labels>
+    <labels>
+        <fullName>Generate</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Button label in UI Template Generator</shortDescription>
+        <value>Generate</value>
+    </labels>
+    <labels>
+        <fullName>Generating_Proposed_Pricing_Options</fullName>
+        <categories>Workflow Orchestration</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Generating Proposed Pricing Options</shortDescription>
+        <value>Generating Proposed Pricing Options</value>
+    </labels>
+    <labels>
+        <fullName>Group_With_Name</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Used in success message in UI Template Generator</shortDescription>
+        <value>Group with name:</value>
+    </labels>
+    <labels>
+        <fullName>Hold_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Hold Label</shortDescription>
+        <value>Hold</value>
+    </labels>
+    <labels>
+        <fullName>Include_Secondary_Routes</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Checkbox label on UI Template Generator page</shortDescription>
+        <value>Include Left Navigation</value>
+    </labels>
+    <labels>
+        <fullName>Income_Statement</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Income Statement</shortDescription>
+        <value>Income Statement</value>
+    </labels>
+    <labels>
+        <fullName>LCS_Loading_Message</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_Loading_Message</shortDescription>
+        <value>Claiming Loans....</value>
+    </labels>
+    <labels>
+        <fullName>LCS_No_Loans_Error</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_No_Loans_Error</shortDescription>
+        <value>No Loans Selected to Be Claimed, Please navigate back to list view and select Loans to be claimed.</value>
+    </labels>
+    <labels>
+        <fullName>LCS_No_Rows_Found</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_No_Rows_Found</shortDescription>
+        <value>No Loans Selected to Claim!</value>
+    </labels>
+    <labels>
+        <fullName>LCS_Queue_Miss_Match</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_Queue_Miss_Match</shortDescription>
+        <value>One or more Loans are in different Queues. Please go back and select different Loans to Claim.</value>
+    </labels>
+    <labels>
+        <fullName>LCS_Redirect_Message</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_Redirect_Message</shortDescription>
+        <value>Redirecting to Loan List View....</value>
+    </labels>
+    <labels>
+        <fullName>LCS_Selected_Loans</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_Selected_Loans</shortDescription>
+        <value>Selected Loans</value>
+    </labels>
+    <labels>
+        <fullName>LCS_SubTitle</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_SubTitle</shortDescription>
+        <value>Select a User and Role for Loan Team and then claim your Loans!</value>
+    </labels>
+    <labels>
+        <fullName>LCS_Title</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LCS_Title</shortDescription>
+        <value>Claim Loans</value>
+    </labels>
+    <labels>
+        <fullName>Last_Modified_By</fullName>
+        <categories>General</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Last Modified By</shortDescription>
+        <value>Last Modified By</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Conversion_Title</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Conversion Title</shortDescription>
+        <value>Conversion Details</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Opportunity_Business_Found</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Opportunity Business Found</shortDescription>
+        <value>Similar Business(es) Found</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Opportunity_Example_Name</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Opportunity Example Name</shortDescription>
+        <value>Name for New Opportunity</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Opportunity_Merge_Instruction</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Opportunity Merge Instruction</shortDescription>
+        <value>Select the business you want to merge this Contact and Opportunity into.</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Opportunity_Name</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Opportunity Name</shortDescription>
+        <value>New Opportunity Name</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Opportunity_Name_Hint</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Opportunity Name Hint</shortDescription>
+        <value>&lt;i&gt;Eg: Name used to Reference the Opportunity</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Relationship_Borrower_Type</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Relationship Borrower Type</shortDescription>
+        <value>Borrower Type</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Relationship_Borrower_Type_Hint</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Relationship Borrower Type Hint</shortDescription>
+        <value>&lt;i&gt;Eg: Type of borrower or None&lt;/i&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Relationship_Name</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Relationship Name</shortDescription>
+        <value>Relationship Name</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Relationship_Name_Hint</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Relationship Name Hint</shortDescription>
+        <value>&lt;i&gt;Eg: Customer Identifier for the Legal Entity&lt;/i&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Relationship_Product</fullName>
+        <categories>Lead Conversion</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Lead Relationship Product</shortDescription>
+        <value>Product</value>
+    </labels>
+    <labels>
+        <fullName>Loan_Add_New_Loan</fullName>
+        <categories>Loan Create and Copy</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loan Add New Loan</shortDescription>
+        <value>Add New Loan</value>
+    </labels>
+    <labels>
+        <fullName>Loan_Add_New_Relationship_Loan</fullName>
+        <categories>Loan Create and Copy</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loan Add New Relationship Loan</shortDescription>
+        <value>Add New Loan For</value>
+    </labels>
+    <labels>
+        <fullName>Loan_Copy_Name_Postfix</fullName>
+        <categories>Loan Create and Copy</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loan Copy Name Postfix</shortDescription>
+        <value>Copy</value>
+    </labels>
+    <labels>
+        <fullName>Loan_Copy_Title_Base_Info</fullName>
+        <categories>Loan Create and Copy</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loan Copy Title Base Info</shortDescription>
+        <value>Select A New Product for the Loan Being Copied Below</value>
+    </labels>
+    <labels>
+        <fullName>Loan_Copy_Title_Related_Info</fullName>
+        <categories>Loan Create and Copy</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loan Copy Title Related Info</shortDescription>
+        <value>Check any of the boxes below to select the information you want copied from the original loan to the new loan</value>
+    </labels>
+    <labels>
+        <fullName>Loan_Select_Product</fullName>
+        <categories>Loan Create and Copy</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loan Select Product</shortDescription>
+        <value>Select Product for Customer</value>
+    </labels>
+    <labels>
+        <fullName>Misconfigured_Product</fullName>
+        <categories>Configuration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Misconfigured Product</shortDescription>
+        <value>The Product you selected is not a part of the product catalog in your system. Please contact your system administrator for additional assistance.</value>
+    </labels>
+    <labels>
+        <fullName>Misconfigured_Product_Line</fullName>
+        <categories>Configuration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Misconfigured Product Line</shortDescription>
+        <value>The Product Line you selected is not a part of the product catalog in your system. Please contact your system administrator for additional assistance.</value>
+    </labels>
+    <labels>
+        <fullName>Misconfigured_Product_Type</fullName>
+        <categories>Configuration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Misconfigured Product Type</shortDescription>
+        <value>The Product Type you selected is not a part of the product catalog in your system. Please contact your system administrator for additional assistance.</value>
+    </labels>
+    <labels>
+        <fullName>My_Next_Button_Text</fullName>
+        <categories>nPortal Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next Button</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>My_SaveForLater_Button_Text</fullName>
+        <categories>nPortal Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save and Later</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Needs_Assessment_Has_Icon</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Needs_Assessment_Has_Icon</shortDescription>
+        <value>assets/icons/utility/check.svg</value>
+    </labels>
+    <labels>
+        <fullName>Needs_Assessment_Needs_Icon</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Needs_Assessment_Needs_Icon</shortDescription>
+        <value>assets/icons/utility/priority.svg</value>
+    </labels>
+    <labels>
+        <fullName>No_Ratio_Stats</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Ratio Statistics</shortDescription>
+        <value>There are currently no ratios for this loan because this loan is not yet involved with any spreads in the system.</value>
+    </labels>
+    <labels>
+        <fullName>No_Relationship_Stats</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Relationship Statistics</shortDescription>
+        <value>There are currently no statistics for this relationship because this relationship is not yet involved with any activities in the system.</value>
+    </labels>
+    <labels>
+        <fullName>Not_Configured</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Not Configured</shortDescription>
+        <value>has not been started.</value>
+    </labels>
+    <labels>
+        <fullName>Object</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UI Template Generator Object picklist header</shortDescription>
+        <value>Object</value>
+    </labels>
+    <labels>
+        <fullName>Open_in_new_Page</fullName>
+        <categories>General</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Open in new Page</shortDescription>
+        <value>Open In New Page</value>
+    </labels>
+    <labels>
+        <fullName>Overridden_Risk_Grade</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overridden Risk Grade</shortDescription>
+        <value>Overridden Risk Grade</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Actions</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Actions</shortDescription>
+        <value>Actions</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Activate</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Activate</shortDescription>
+        <value>Activate</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Activated_Msg</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Activated Msg</shortDescription>
+        <value>Overview Activated!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Add_new</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Add new</shortDescription>
+        <value>Add New</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Apply_Filter</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Apply Filter</shortDescription>
+        <value>Apply Filter</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Back</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Branches</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Branches</shortDescription>
+        <value>Branches</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Configuration</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Configuration</shortDescription>
+        <value>Overview Configuration</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Confirm_Msg</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Confirm Msg</shortDescription>
+        <value>Are You Sure?</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Deactivate</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Deactivate</shortDescription>
+        <value>Deactivate</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Deactivated_Msg</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Deactivated Msg</shortDescription>
+        <value>Overview Deactivated!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Delete</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Edit</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Error_No_Config</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Error No Config</shortDescription>
+        <value>Please run the Data Installer to Install all data required for Overview to function &lt;a href=&quot;/apex/CSA_OverviewConfiguration&quot;&gt;Click Here&lt;/a&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Filter_Options</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Filter Options</shortDescription>
+        <value>Filter Options</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Finish</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Finish</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Install</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Install</shortDescription>
+        <value>Install</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Instructions</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Instructions</shortDescription>
+        <value>Install Generates all Product Lines, Stages and Statuses in the System already configured on the Loan Object. Also installs route and route groups for Overview Config Tool will add separate route if installed outside the Customer Success Admin Tool</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Loan_Team_Members</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Loan Team Members</shortDescription>
+        <value>Loan Team Members</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Report_Update_Title</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Report Update Title</shortDescription>
+        <value>Update Overview Settings</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Save</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Save_New</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Save &amp; New</shortDescription>
+        <value>Save &amp; New</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Success_Create</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Success Create</shortDescription>
+        <value>Overview Created Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Success_Delete</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Success Delete</shortDescription>
+        <value>Overview Deleted Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Success_Install</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Success Install</shortDescription>
+        <value>Installed Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Success_Report_Update</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Success Report Update</shortDescription>
+        <value>Report Ids Updated for Overview Records!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Success_Uninstall</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Success Uninstall</shortDescription>
+        <value>Uninstall Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Success_Update</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Success Update</shortDescription>
+        <value>Overview Updated Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Title_Admin</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Title Admin</shortDescription>
+        <value>Overview Config</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Uninstall</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Uninstall</shortDescription>
+        <value>Uninstall</value>
+    </labels>
+    <labels>
+        <fullName>Overview_Update_Report_Links</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview Update Report Links</shortDescription>
+        <value>Update Report Links</value>
+    </labels>
+    <labels>
+        <fullName>Overview_nCino_Overview</fullName>
+        <categories>Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Overview nCino Overview</shortDescription>
+        <value>nCino Overview</value>
+    </labels>
+    <labels>
+        <fullName>PL_Pricing_Price_PrecisionLender</fullName>
+        <categories>PrecisionLender</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Obtain Price in PrecisionLender</shortDescription>
+        <value>Price in PrecisionLender</value>
+    </labels>
+    <labels>
+        <fullName>PL_Pricing_Pricing_Desc</fullName>
+        <categories>PrecisionLender</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PrecisionLender pricing message shown in page header</shortDescription>
+        <value>Click Price in PrecisionLender to begin pricing. A new window opens to launch the experience.</value>
+    </labels>
+    <labels>
+        <fullName>PL_Pricing_Pricing_In_Progress</fullName>
+        <categories>PrecisionLender</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>In Progress Message</shortDescription>
+        <value>Pricing In Progress</value>
+    </labels>
+    <labels>
+        <fullName>PL_Pricing_Reprice_PrecisionLender</fullName>
+        <categories>PrecisionLender</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Reprice in PrecisionLender</shortDescription>
+        <value>Reprice in PrecisionLender</value>
+    </labels>
+    <labels>
+        <fullName>PL_Pricing_Repricing_Desc</fullName>
+        <categories>PrecisionLender</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PrecisionLender repricing message shown in page header</shortDescription>
+        <value>Click Reprice in PrecisionLender to begin repricing. A new window opens to launch the experience.</value>
+    </labels>
+    <labels>
+        <fullName>PL_Pricing_Repricing_In_Progress</fullName>
+        <categories>PrecisionLender</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>In Progress Message</shortDescription>
+        <value>Repricing In Progress</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_Loading_Message</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_Loading_Message</shortDescription>
+        <value>Claiming Product Packages....</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_No_Loans_Error</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_No_Loans_Error</shortDescription>
+        <value>No Product Packages Selected to Be Claimed, Please navigate back to list view and select Product Packages to be claimed.</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_No_Rows_Found</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_No_Rows_Found</shortDescription>
+        <value>No Product Packages Selected to Claim!</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_Queue_Miss_Match</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_Queue_Miss_Match</shortDescription>
+        <value>One or more Product Packages are in different Queues. Please go back and select different Product Packages to Claim.</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_Redirect_Message</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_Redirect_Message</shortDescription>
+        <value>Redirecting to Product Package List View....</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_Selected_Loans</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_Selected_Loans</shortDescription>
+        <value>Selected Product Packages</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_SubTitle</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_SubTitle</shortDescription>
+        <value>Select a User and Role for Product Package Team and then claim your Product Packages!</value>
+    </labels>
+    <labels>
+        <fullName>PPCS_Title</fullName>
+        <categories>Claiming System</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPCS_Title</shortDescription>
+        <value>Claim Product Packages</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Finish</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Finish</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Instructions</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Instructions</shortDescription>
+        <value>Clicking &apos;Remove All&apos; will delete all Product State Config in the Org to give a clean slate to build the Product State Config Setup.</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Product_State_Config_Managment</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Product State Config Managment</shortDescription>
+        <value>Product State Config Managment</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Remove_All</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Remove All</shortDescription>
+        <value>Remove All</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Success_Delete</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Success Delete</shortDescription>
+        <value>All Product State Configs Deleted Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Clear</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Error_External_Stage</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Error External Stage</shortDescription>
+        <value>Please Ensure if Using External Stage and External Stage Order that both are Completed before saving!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Error_Product_Types</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Error Product Types</shortDescription>
+        <value>Please Select 1 or More Product Types!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Error_Stages</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Error Stages</shortDescription>
+        <value>Please Select 1 or More Stages!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Error_Status</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Error Status</shortDescription>
+        <value>Please Select 1 or More Status!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Error_Usage</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Error Usage</shortDescription>
+        <value>Please Select 1 or More of the Options Under Select Usage!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_External_Stage_Name</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool External Stage Name</shortDescription>
+        <value>External Stage Name</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_External_Stage_Order</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool External Stage Order</shortDescription>
+        <value>External Stage Order</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Is_Booked</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Is Booked</shortDescription>
+        <value>Is Booked</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Is_Closed</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Is Closed</shortDescription>
+        <value>Is Closed</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Is_Excluded_from_Stage_Duration</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Is Excluded from Stage Duration</shortDescription>
+        <value>Is Excluded from Stage Duration</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Is_Ready_to_Transmit</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Is Ready to Transmit</shortDescription>
+        <value>Is Ready to Transmit</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_PSC_Configuration</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool PSC Configuration</shortDescription>
+        <value>PSC Configuration</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Product_State_Config_Summary</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Product State Config Summary</shortDescription>
+        <value>Product State Config Summary</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Product_Types_List</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Product Types List</shortDescription>
+        <value>Product Types List</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Save</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Select_Product_Types</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Select Product Types</shortDescription>
+        <value>Select Product Types</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Select_Stages</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Select Stages</shortDescription>
+        <value>Select Stages</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Select_Status</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Select Status</shortDescription>
+        <value>Select Status</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Select_Usage</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Select Usage</shortDescription>
+        <value>Select Usage</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Success_Created</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Success Created</shortDescription>
+        <value>Product State Config Records Created Successfully!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Config_Tool_Warning_No_Data</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Config Tool Warning No Data</shortDescription>
+        <value>No Product State Config Records Created as all Combos Selected already Exist in System!</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Overview_Product_State_Config_Booked</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Overview Product State Config (Booked)</shortDescription>
+        <value>Product State Config (Booked)</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Overview_Product_State_Config_Closed</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Overview Product State Config (Closed)</shortDescription>
+        <value>Product State Config (Closed)</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Overview_Product_State_Config_Excluded</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Overview Product State Config (Excluded)</shortDescription>
+        <value>Product State Config (Excluded)</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Overview_Product_State_Config_Transmit</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Overview Product State Config (Transmit)</shortDescription>
+        <value>Product State Config (Transmit)</value>
+    </labels>
+    <labels>
+        <fullName>PSC_Overview_Product_Types</fullName>
+        <categories>PSC Config Tool</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PSC Overview Product Types</shortDescription>
+        <value>Product Types</value>
+    </labels>
+    <labels>
+        <fullName>Personal_Financial_Statement</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Personal Financial Statement</shortDescription>
+        <value>Personal Financial Statement</value>
+    </labels>
+    <labels>
+        <fullName>Pick_List_None_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Pick List None Text</shortDescription>
+        <value>None</value>
+    </labels>
+    <labels>
+        <fullName>Picklist_Header_Namespace</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UI Template Generator Namespace picklist header</shortDescription>
+        <value>Namespace</value>
+    </labels>
+    <labels>
+        <fullName>Print_Credit_Memo</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Print Credit Memo</shortDescription>
+        <value>Export to PDF</value>
+    </labels>
+    <labels>
+        <fullName>Processing_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Processing Label</shortDescription>
+        <value>Processing</value>
+    </labels>
+    <labels>
+        <fullName>Product</fullName>
+        <categories>Products</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product</shortDescription>
+        <value>Product</value>
+    </labels>
+    <labels>
+        <fullName>Product_Line</fullName>
+        <categories>Products</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Line</shortDescription>
+        <value>Product Line</value>
+    </labels>
+    <labels>
+        <fullName>Product_Package_Participation_Table</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Package Participation Table</shortDescription>
+        <value>Participations</value>
+    </labels>
+    <labels>
+        <fullName>Product_Type</fullName>
+        <categories>Products</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product Type</shortDescription>
+        <value>Product Type</value>
+    </labels>
+    <labels>
+        <fullName>Proposal_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Proposal Label</shortDescription>
+        <value>Proposal</value>
+    </labels>
+    <labels>
+        <fullName>Qualification_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Qualification Label</shortDescription>
+        <value>Qualification / Application</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Account_Select</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Account Select</shortDescription>
+        <value>Select Account:</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Back_Button</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Back Button</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Cancel_Link_Label</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Cancel Link Label</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Error_InvalidIDSetLoan</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Error -InvalidIDSetLoan</shortDescription>
+        <value>An Invalid Id was entered for the Loan</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Error_InvalidIDSetRelationship</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Error -InvalidIDSetRelationship</shortDescription>
+        <value>An Invalid Id was entered for the Relationship</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Error_NoIDSet</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Error - NoIDSet</shortDescription>
+        <value>Please make sure an Id is set in the URL either the Relationship Id of the Loan Id</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Error_NoTypeSet</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Error - NoTypeSet</shortDescription>
+        <value>Please make sure type is set in the URL to Loan or Relationship</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Generate_Button_Label</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Generate Button Label</shortDescription>
+        <value>Generate Risk Rating Review</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Loan_Label</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Loan Label</shortDescription>
+        <value>Loan:</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Page_Header</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Page Header</shortDescription>
+        <value>Find Risk Grade Templates:</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Page_Sub_Header</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Page Sub Header</shortDescription>
+        <value>Please fill out the following:</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Relationship_Label</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Relationship Label</shortDescription>
+        <value>Relationship:</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Reset_Button_Label</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Reset Button Label</shortDescription>
+        <value>Reset</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Risk_Grade_Template_Label</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Risk Grade Template Label</shortDescription>
+        <value>Risk Grade Template:</value>
+    </labels>
+    <labels>
+        <fullName>RRR_Title</fullName>
+        <categories>Risk Rating Review</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RRR - Title</shortDescription>
+        <value>Risk Rating Review</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Category</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Category</shortDescription>
+        <value>Ratios</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Current_Ratio</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Current Ratio</shortDescription>
+        <value>Current Ratio</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Current_Ratio_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Current Ratio Field Name</shortDescription>
+        <value>Current_Ratio__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Debt_Service_Coverage</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Debt Service Coverage</shortDescription>
+        <value>Debt Service Coverage</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Debt_Service_Coverage_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Debt Service Coverage Field Name</shortDescription>
+        <value>Debt_Service_Coverage__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Debt_To_Worth</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Debt To Worth</shortDescription>
+        <value>Debt to Worth</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Debt_To_Worth_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Debt To Worth Field Name</shortDescription>
+        <value>Debt_To_Worth_Ratio__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Denominator</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Denominator</shortDescription>
+        <value>Denominator</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Global_Debt_Service_Coverage</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Global Debt Service Coverage</shortDescription>
+        <value>Global Debt Service Coverage</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Global_Debt_Service_Coverage_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Global Debt Service Coverage Field Name</shortDescription>
+        <value>Global_Debt_Service_Coverage__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Inventory_Days_In_Year</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Inventory Days In Year</shortDescription>
+        <value>Days</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Inventory_Days_On_Hand</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Inventory Days On Hand</shortDescription>
+        <value>Inventory Days On Hand</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Inventory_Days_On_Hand_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Inventory Days On Hand Field Name</shortDescription>
+        <value>Inventory_Days_On_Hand__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Numerator</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Numerator</shortDescription>
+        <value>Numerator</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Pre_Tax_Margin</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Pre Tax Margin</shortDescription>
+        <value>Pre-tax Margin</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Pre_Tax_Margin_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Pre Tax Margin Field Name</shortDescription>
+        <value>Pre_Tax_Margin__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Quick_Ratio</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Quick Ratio</shortDescription>
+        <value>Quick Ratio</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Quick_Ratio_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Quick Ratio Field Name</shortDescription>
+        <value>Quick_Ratio__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Sales_To_Total_Assets</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Sales To Total Assets</shortDescription>
+        <value>Sales to Total Assets</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Sales_To_Total_Assets_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Sales To Total Assets Field Name</shortDescription>
+        <value>Sales_To_Total_Assets__c</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Section_Title</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Section Title</shortDescription>
+        <value>Ratios</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Summary</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Summary</shortDescription>
+        <value>Ratio Summary</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Turnover_Ratio</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Turnover Ratio</shortDescription>
+        <value>Turnover Ratio</value>
+    </labels>
+    <labels>
+        <fullName>Ratio_Turnover_Ratio_Field_Name</fullName>
+        <categories>Ratios</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ratio Turnover Ratio Field Name</shortDescription>
+        <value>Inventory_Turnover_Ratio__c</value>
+    </labels>
+    <labels>
+        <fullName>Return_to_Loan</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Return to Loan</shortDescription>
+        <value>Return to Loan:</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Grade_Value</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Grade Value</shortDescription>
+        <value>Risk Grade Value</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Account_Error_Msg</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Account Error Msg</shortDescription>
+        <value>Please Ensure an Account is selected</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Account_Title</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Account Title</shortDescription>
+        <value>Account</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Back_To_Button</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Back To Button</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Config_Instructions</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Config Instructions</shortDescription>
+        <value>Click on the Install or uninstall button to install Routes for use in new UI for Risk Rating Selector</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Configuration</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Configuration</shortDescription>
+        <value>Risk Rating Selector Configuration</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Finish</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Finish</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Install</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Install</shortDescription>
+        <value>Install</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Loan_Title</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Loan Title</shortDescription>
+        <value>Loan</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Save_Button</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Save Button</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Save_URL_UI</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Risk Rating Selector Save URL UI</shortDescription>
+        <value>/apex/LLC_BI__Loan?app=loan1.risk-rating&amp;id=</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Success_Install</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Success Install</shortDescription>
+        <value>Successfully Installed!</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Success_Uninstall</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Success Uninstall</shortDescription>
+        <value>Successfully Uninstalled!</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Template_Error_Msg</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Template Error Msg</shortDescription>
+        <value>Please Ensure a Template is selected</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Title</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Title</shortDescription>
+        <value>Risk Rating Selector</value>
+    </labels>
+    <labels>
+        <fullName>Risk_Rating_Selector_Uninstall</fullName>
+        <categories>Risk Rating Selector</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Risk Rating Selector Uninstall</shortDescription>
+        <value>Uninstall</value>
+    </labels>
+    <labels>
+        <fullName>Route_Configuration</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Used in failure message in UI Template Generator</shortDescription>
+        <value>Route configuration</value>
+    </labels>
+    <labels>
+        <fullName>Route_With_Name</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Used in success message in UI Template Generator</shortDescription>
+        <value>Route with name:</value>
+    </labels>
+    <labels>
+        <fullName>Save_Commentary</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save Commentary</shortDescription>
+        <value>Save Commentary</value>
+    </labels>
+    <labels>
+        <fullName>Section_Being_Created</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Section Being Created</shortDescription>
+        <value>is being created</value>
+    </labels>
+    <labels>
+        <fullName>Section_Click_to_Navigate</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Section Click to Navigate</shortDescription>
+        <value>Click here to continue to</value>
+    </labels>
+    <labels>
+        <fullName>Section_Created</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Section Created</shortDescription>
+        <value>...has been created.</value>
+    </labels>
+    <labels>
+        <fullName>Select_Worksheet</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Worksheet</shortDescription>
+        <value>Select Worksheet</value>
+    </labels>
+    <labels>
+        <fullName>Spread_Select_Template</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Spread Select Template</shortDescription>
+        <value>Please select a statement that is configured as a template.</value>
+    </labels>
+    <labels>
+        <fullName>Stage_ApplicationComplete</fullName>
+        <categories>Loan Stage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Adverse Action - which stage determinese full application</shortDescription>
+        <value>Underwriting</value>
+    </labels>
+    <labels>
+        <fullName>Stage_Closed</fullName>
+        <categories>Loan Stage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The respective Closed Stage from Loan Picklist</shortDescription>
+        <value>Booked</value>
+    </labels>
+    <labels>
+        <fullName>Stage_Complete</fullName>
+        <categories>Loan Stage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name of the Complete Stage for Loans (should match Picklist)</shortDescription>
+        <value>Complete</value>
+    </labels>
+    <labels>
+        <fullName>Stage_Underwriting</fullName>
+        <categories>Loan Stage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name of the Underwriting Stage (should match Stage picklist)</shortDescription>
+        <value>Underwriting</value>
+    </labels>
+    <labels>
+        <fullName>Standard_Ncino_UI_Template_Example</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link text on UI Template Generator page</shortDescription>
+        <value>Left Navigation Included Example (Checked Box)</value>
+    </labels>
+    <labels>
+        <fullName>Start_Now</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Start Now</shortDescription>
+        <value>Click here to start one now.</value>
+    </labels>
+    <labels>
+        <fullName>Start_Underwriting_Now</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Start Underwriting Now</shortDescription>
+        <value>Start underwriting for this loan now.</value>
+    </labels>
+    <labels>
+        <fullName>Statistic_Category</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistic Category</shortDescription>
+        <value>Statistics</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Account_Lookup_Column_Label</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Account Lookup Column Label</shortDescription>
+        <value>Account</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Borrower_Type_Key</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Borrower Type Key</shortDescription>
+        <value>BorrowerType</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Committed_Direct_Exposure</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Committed Direct Exposure</shortDescription>
+        <value>Committed Direct Exposure</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Committed_Indirect_Exposure</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Committed Indirect Exposure</shortDescription>
+        <value>Committed Indirect Exposure</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Direct_Exposure</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Direct Exposure</shortDescription>
+        <value>Direct Exposure</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Enforce_Closed_Funded</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Enforce Closed Funded</shortDescription>
+        <value>EnforceClosedFunded</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Indirect_Exposure</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Indirect Exposure</shortDescription>
+        <value>Indirect Exposure</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Loan_Lookup_Column_Label</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Loan Lookup Column Label</shortDescription>
+        <value>Loan</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Positive_Case_Value</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Positive Case Value</shortDescription>
+        <value>true</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Proposed_Direct_Exposure</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Proposed Direct Exposure</shortDescription>
+        <value>Proposed Direct Exposure</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Proposed_Indirect_Exposure</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Proposed Indirect Exposure</shortDescription>
+        <value>Proposed Indirect Exposure</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Stage_Key</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Stage Key</shortDescription>
+        <value>Stage</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Status_Key</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Status Key</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Use_Ownership_In_Calculation</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Use Ownership In Calculation</shortDescription>
+        <value>UseOwnership</value>
+    </labels>
+    <labels>
+        <fullName>Statistics_Use_Principal_Balance_in_Calculation</fullName>
+        <categories>Statistics</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Statistics Use Principal Balance in Calculation</shortDescription>
+        <value>UsePrincipalBalance</value>
+    </labels>
+    <labels>
+        <fullName>Status_Declined</fullName>
+        <categories>Loan Status</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name of the Decline Status (should match Picklist)</shortDescription>
+        <value>Declined</value>
+    </labels>
+    <labels>
+        <fullName>Status_Open</fullName>
+        <categories>Status</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Status Open</shortDescription>
+        <value>Open</value>
+    </labels>
+    <labels>
+        <fullName>SubmitATicket</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubmitATicket</shortDescription>
+        <value>https://app.smartsheet.com/b/form/50eb988a864d4a0fb47dad20b3976c41</value>
+    </labels>
+    <labels>
+        <fullName>Tertiary_Only_Page_Template_Example</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link text on UI Template Generator page</shortDescription>
+        <value>Subnavigation Only Example (Unchecked Box)</value>
+    </labels>
+    <labels>
+        <fullName>Tier_1_Capital</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tier 1 Capital</shortDescription>
+        <value>10000</value>
+    </labels>
+    <labels>
+        <fullName>Title_Loan_Copy</fullName>
+        <categories>Title</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title Loan Copy</shortDescription>
+        <value>Loan: Select Information to Copy</value>
+    </labels>
+    <labels>
+        <fullName>Toggle_Sections</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toggle Sections</shortDescription>
+        <value>Show/Hide Sections</value>
+    </labels>
+    <labels>
+        <fullName>Total_Non_Current_Assets</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Total Non-Current Assets</shortDescription>
+        <value>Total Non-current Assets</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_Configuration_Description</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Configuration Description</shortDescription>
+        <value>This page installs or removes the configuration settings for the Treasury Tool system.</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_Configuration_Installation_Button</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Configuration Installation Button</shortDescription>
+        <value>Install</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_Configuration_Uninstallation_Button</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Configuration Uninstall Button</shortDescription>
+        <value>Uninstall</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_Finish_Installation_Button</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Finish Configuration Button</shortDescription>
+        <value>Finish</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_Help</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Help goes here</shortDescription>
+        <value>Treasury Tool Help Label</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_PostInstall_Page_Subtitle</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Post Installation</shortDescription>
+        <value>Post Installation</value>
+    </labels>
+    <labels>
+        <fullName>Treasury_Tool_PostInstall_Page_Title</fullName>
+        <categories>Treasury Config</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Treasury Tool Title</shortDescription>
+        <value>Treasury Tool</value>
+    </labels>
+    <labels>
+        <fullName>UI_Template_Generator_Error_Message</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success message shown in UI Template Generator</shortDescription>
+        <value>Oops! Unfortunately we were unable to generate the following components:</value>
+    </labels>
+    <labels>
+        <fullName>UI_Template_Generator_Error_Reason</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success message shown in UI Template Generator</shortDescription>
+        <value>This is the error that was thrown:</value>
+    </labels>
+    <labels>
+        <fullName>UI_Template_Generator_Header</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header shown in UI Template Generator</shortDescription>
+        <value>UI Generator</value>
+    </labels>
+    <labels>
+        <fullName>UI_Template_Generator_Help_Text</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Help text shown in UI Template Generator</shortDescription>
+        <value>To create a Visualforce page, select an object from the list below and click Generate. Once generated, the Visualforce page will be available to add to the object&apos;s page layout. To include left navigation, select the checkbox. Otherwise, only subnavigation displays.</value>
+    </labels>
+    <labels>
+        <fullName>UI_Template_Generator_Success_Message</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success message shown in UI Template Generator</shortDescription>
+        <value>Success! You&apos;ve successfully generated the following components:</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Cost_Of_Goods_Sold</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Cost Of Goods Sold</shortDescription>
+        <value>Cost of goods sold</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Current_Portion_Business_Debt</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Current Portion Business Debt</shortDescription>
+        <value>Current portion - business debt</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Gross_Profit</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Gross Profit</shortDescription>
+        <value>Gross Profit</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Inventory</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Inventory</shortDescription>
+        <value>Inventory</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Label</shortDescription>
+        <value>Underwriting</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Net_Income</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Net Income</shortDescription>
+        <value>Net Income</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Net_Worth</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Net Worth</shortDescription>
+        <value>Net Worth</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Not_Started</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Not Started</shortDescription>
+        <value>Underwriting for this loan has not yet started.</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Notes_Payable_This_Bank</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Notes Payable This Bank</shortDescription>
+        <value>Notes payable - this bank</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Other_Debt_1</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Other Debt 1</shortDescription>
+        <value>Other Debt 1</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Other_Debt_2</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Other Debt 2</shortDescription>
+        <value>Other Debt 2</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Other_Debt_3</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Other Debt 3</shortDescription>
+        <value>Other Debt 3</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Other_Debt_4</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Other Debt 4</shortDescription>
+        <value>Other Debt 4</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Other_Debt_5</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Other Debt 5</shortDescription>
+        <value>Other Debt 5</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Provision_For_Current_Taxes</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Provision For Current Taxes</shortDescription>
+        <value>Provision for current taxes</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Sales</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Sales</shortDescription>
+        <value>Sales</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Total_Current_Assets</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Total Current Assets</shortDescription>
+        <value>Total Current Assets</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Total_Current_Liabilities</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Total Current Liabilities</shortDescription>
+        <value>Total Current Liabilities</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Total_Non_Current_Assets</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Total Non-Current Assets</shortDescription>
+        <value>Total Non-current Assets</value>
+    </labels>
+    <labels>
+        <fullName>Underwriting_Total_Non_Current_Liabilities</fullName>
+        <categories>Underwriting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Underwriting Total Non-Current Liabilities</shortDescription>
+        <value>Total Non-current Liabilities</value>
+    </labels>
+    <labels>
+        <fullName>View_Credit_Memo_Section</fullName>
+        <categories>Credit Memo</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Credit Memo Section</shortDescription>
+        <value>view section</value>
+    </labels>
+    <labels>
+        <fullName>Visualforce_Page</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Used in success and failure messages in UI Template Generator</shortDescription>
+        <value>Visualforce Page</value>
+    </labels>
+    <labels>
+        <fullName>Visualforce_Page_Generator</fullName>
+        <categories>UI Template Generator</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UI Template Generator route name</shortDescription>
+        <value>UI Generator</value>
+    </labels>
+    <labels>
+        <fullName>Withdrawn_Label</fullName>
+        <categories>Process Overview</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Withdrawn Label</shortDescription>
+        <value>Withdrawn</value>
+    </labels>
+</CustomLabels>

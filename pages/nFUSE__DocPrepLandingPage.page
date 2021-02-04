@@ -1,0 +1,42 @@
+<apex:page controller="nFUSE.DocPrepLandingPageController"
+	showHeader="false"
+	sidebar="false"
+	docType="html-5.0">
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'util/continue-hack.js')}"/>
+	<nFORCE:Include_Navigator />
+	<c:RequireAuthorization isAuthorized="{!$Permission.nFUSE__Document_Preparation_Workflow}" errorMessage="{!$Label.nfuse__no_docprep_permission}">
+	<div class="force" >
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<apex:outputPanel rendered="{!NOT(ISNULL(providerName))}">
+					<h2>{!$Label.nfuse__docprep_manage_documents}</h2>
+				</apex:outputPanel>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div class="col-sm-12" style="padding-bottom:20px;">
+							<c:ProviderSelector ctrl="{!ProviderSelectorController}" />
+							<apex:outputPanel rendered="{!NOT(ISNULL(providerName))}">
+								<p>{!$Label.nfuse__docprep_welcome}</p>
+								<br/>
+								<apex:form >
+									<apex:commandButton action="{!goNext}"
+										styleClass="btn btn-primary"
+										disabled="{!existsPendingDocuments}"
+										value="{!$Label.nfuse__start_closing_documents}"
+										onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')" />
+								</apex:form>
+							</apex:outputPanel>
+						</div>
+						<c:DocPrepHistoryView rendered="{!NOT(ISNULL(providerName))}" />
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+	</c:RequireAuthorization>
+</apex:page>

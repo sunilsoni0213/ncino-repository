@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Update_Stock_Prices_on_Collateral_Holdings</name>
+        <label>Update Stock Prices on Collateral Holdings</label>
+        <locationX>180</locationX>
+        <locationY>68</locationY>
+        <actionName>CallYahooQuotes</actionName>
+        <actionType>apex</actionType>
+        <inputParameters>
+            <name>ids</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>Update Stock Prices on Collateral Holdings {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Stock Prices on Collateral Holdings</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <startElementReference>Update_Stock_Prices_on_Collateral_Holdings</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

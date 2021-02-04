@@ -1,0 +1,3 @@
+<apex:page standardStyleSheets="false" sidebar="false" showHeader="false">
+	<div class="slds-box slds-theme--error">{!$Label.llc_bi__page_does_not_exist}</div>
+</apex:page>

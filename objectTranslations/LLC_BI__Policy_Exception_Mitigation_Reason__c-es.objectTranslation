@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Policy Exception Mitigation Reason --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Policy Exception Mitigation Reason --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Policy Exception Mitigation Reason Numbe --></nameFieldLabel>
+</CustomObjectTranslation>

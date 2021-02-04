@@ -1,0 +1,47 @@
+<apex:page controller="nFORCE.TemplateController" extensions="LLC_BI.QuestionnaireController">
+	<c:Include_AngularJS_Route />
+	<nFORCE:ncPubsubIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'providers/RemotingProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'controllers/AppController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'filters/visible.js')}" />
+	<nFORCE:Include_Design_System components="true" />
+	<nFORCE:Include_Navigator />
+	<nFORCE:QuestionnaireIncludes />
+
+	<div id="ncQuestionnaire" class="slds-scope" ng-controller="AppController">
+		<nFORCE:QuestionnairePartials />
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div>
+							<div>
+								<questionnaire
+									group-id="{{config.groupId}}"
+									context-id="{{config.contextObjectId}}"
+									context-owner-id="{{config.contextOwnerId}}"
+									on-save-complete="saveCompleted()"
+									on-save-failure="saveFailed(error)"
+									on-form-valid="questionnaireValid()"
+									on-form-invalid="questionnaireInValid()"
+									on-error="questionnaireError(error)"
+									trigger-save="triggerSave">
+								</questionnaire>
+							</div>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<c:QuestionnaireConfiguration nextHref="{!nextHref.url}"
+		groupId="{!questionnaireGroupId}"
+		contextOwnerId="{!contextOwnerId}"
+		contextObjectId="{!contextObjectId}"
+	/>
+
+</apex:page>

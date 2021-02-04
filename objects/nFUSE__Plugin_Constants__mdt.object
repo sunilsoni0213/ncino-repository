@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This object houses additional nFUSE Integration plug-in configuration.</description>
+    <fields>
+        <fullName>nFUSE__App_Plugin__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Soft reference to the plugin associted to the constant</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Plugin Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Descriptions of the key and the ramification of the value</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Is_Deactivated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Deactivated</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Is_Global__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A flag indicating the record&apos;s value is static organization wide for all transactions verse needing to be set for each instance of a transaction</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Global</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Key serves as identifier and a short description of the value</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Key</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Translation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The translation(s) associated with the value(s); translations are separated by | (pipe)</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Translation</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The value(s) of the constant; values are separated by | (pipe)</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Plugin Constant</label>
+    <pluralLabel>Plugin Constants</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

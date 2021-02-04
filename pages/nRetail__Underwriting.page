@@ -1,0 +1,5 @@
+<apex:page showHeader="false" sidebar="false" controller="nFORCE.TemplateController">
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.nRetail__retail_slds_custom)}" />
+	<c:UnderwritingDetails />
+</apex:page>

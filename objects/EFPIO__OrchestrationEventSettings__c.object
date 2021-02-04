@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Provides ability to override concrete classes with custom implementations</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>EFPIO__CacheRepository_v1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified name of the cache repository to use during dependency injection which implements the globally visible ICacheRepository_v1 (Can have a custom implementation).</description>
+        <externalId>false</externalId>
+        <label>Injectable Cache Repository v1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__CacheTTL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The cache TTL in seconds (Minimum 300, Maximum 172,800).</description>
+        <externalId>false</externalId>
+        <label>Cache time-to-live</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__DataEncryptionProvider_v1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified class name of the data encryption provider to use.</description>
+        <externalId>false</externalId>
+        <label>Data Encryption Provider Class Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__EncryptStateData__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines if the state data is encrypted or stored in plain text. Encryption is recommended.</description>
+        <externalId>false</externalId>
+        <label>Encrypt State Data</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EFPIO__EventLogMaxRetryAttempts__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The maximum amount of times to attempt to retry a DML interaction before erroring.</description>
+        <externalId>false</externalId>
+        <label>Event Log Max Retry Attempts</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__EventRepository_v1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DEPRECATED The fully qualified name of the event repository to use during dependency injection which implements the globally visible IEventRepository_v1 (Can have a custom implementation).</description>
+        <externalId>false</externalId>
+        <label>-D Injectable Event Repository v1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__EventRepository_v2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified name of the event repository to use during dependency injection which implements the globally visible IEventRepository_v2 (Can have a custom implementation).</description>
+        <externalId>false</externalId>
+        <label>Injectable Event Repository v2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__PlatformCachePartitionName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If the concrete class for ICacheRepository_v1 in use is leveraging Platform Cache, enter the partition name here to use.</description>
+        <externalId>false</externalId>
+        <label>Platform Cache Partition Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__PlatformEventDefinitionNs__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If the concrete class for IEventRepository_v1 in use is leveraging Platform Events, enter the platform event definition namespace here to use (Can be a standard or high volume org partition.).</description>
+        <externalId>false</externalId>
+        <label>Platform Event Object Namespace</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EFPIO__PlatformEventDefinition__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If the concrete class for IEventRepository_v1 in use is leveraging Platform Events, enter the platform event definition name here to use (Can be a standard or high volume org partition.).</description>
+        <externalId>false</externalId>
+        <label>Platform Event Object Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>EFPIO - Orchestration Event Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

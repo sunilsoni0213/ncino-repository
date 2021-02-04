@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>nCino Overview Page (New UI)</description>
+    <displayType>link</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Pipeline Report</masterLabel>
+    <openType>noSidebar</openType>
+    <page>CSA_Overview</page>
+    <protected>false</protected>
+</CustomPageWebLink>

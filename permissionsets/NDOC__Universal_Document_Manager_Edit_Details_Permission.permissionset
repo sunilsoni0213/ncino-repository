@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users to edit details for any View of Document Manager.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Document Manager Edit Details</label>
+</PermissionSet>

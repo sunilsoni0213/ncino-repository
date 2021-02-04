@@ -1,0 +1,52 @@
+<apex:page standardController="Contact" extensions="nCBC.CBCCreditReportsController" docType="html-5.0">
+	<c:Includes />
+	<div id="credit-report">
+		<apex:outputPanel >
+			<apex:form >
+				<div class="force container-fluid">
+					<div class="row-fluid std-bottom-margin">
+						<div class="pull-left" >
+							<h4>{!$Label.Contact}: {!contact.Name}</h4>
+						</div>
+						<div class="pull-right">
+							<apex:commandButton action="{!newCreditPull}" styleClass="btn btn-mini btn-primary" value="{!$Label.ncbc__new_request}" id="NewCredit"/>
+							<a href="/{!contactId}" class="btn btn-mini btn-primary">{!$Label.Go_Back}</a>
+						</div>
+					</div>
+					<hr class="divider" />
+				</div>
+			</apex:form>
+		</apex:outputPanel>
+
+		<apex:outputPanel styleClass="force" rendered="{!hasCreditReports}">
+			<div class="row-fluid">
+				<apex:form >
+					<table class="table table-hover">
+						<thead>
+							<tr class="single-row">
+								<th>{!$Label.ncbc__action}</th>
+								<th>{!$Label.ncbc__credit_date_created}</th>
+								<th>{!$Label.ncbc__credit_report_name}</th>
+							</tr>
+						</thead>
+						<apex:repeat value="{!credRep}" var="cred" id="bl">
+							<tr>
+								<td>
+									<apex:outputLink value="{!$Page.nCBC__CBCCreditReport}?id={!cred.Id}&pt=single&brid={!cred.Id}&rt=contact&rtid={!contactId}&sfdc.override=1" styleClass="btn btn-mini btn-primary">
+										{!$Label.ncbc__view_credit_report}
+									</apex:outputLink>
+								</td>
+								<td><apex:outputText value="{!cred.CreatedDate}"/></td>
+								<td><apex:outputText value="{!cred.Name}"/></td>
+							</tr>
+						</apex:repeat>
+					</table>
+				</apex:form>
+			</div>
+		</apex:outputPanel>
+
+		<apex:outputPanel styleClass="force" rendered="{!!hasCreditReports}">
+			<div class="alert alert-info">{!$Label.ncbc__no_credit_reports_found}</div>
+		</apex:outputPanel>
+	</div>
+</apex:page>

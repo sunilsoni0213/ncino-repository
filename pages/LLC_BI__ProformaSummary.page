@@ -1,0 +1,41 @@
+<apex:page showHeader="false" sidebar="false">
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncPubsubIncludes />
+	<nFORCE:ncModal />
+	<nFORCE:ncFilterIncludes />
+	<nFORCE:Include_Navigator />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__message_handler_bundle)}" />
+	
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}" />
+
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProformaScenario, 'css/Style.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaScenario, 'application/App.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaScenario, 'components/ProformaScenario.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaScenario, 'filters/setNullValue.filter.js')}"/>
+	<c:ProformaScenarioConfiguration />
+	<c:ProformaScenarioModal />
+	<c:TreasuryConversionModalConfiguration />
+	<c:TreasuryConversionModal />
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProformaSummary, 'css/Style.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaSummary, 'application/App.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaSummary, 'components/ProformaSummary.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaSummary, 'services/ProformaSummaryRemoting.service.js')}"/>
+	<c:ProformaSummaryConfiguration />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaSummary, 'application/Bootstrap.js')}"/>
+
+	<div id="ncProformaSummary" class="slds">
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<proforma-summary />
+		<c:ProformaScenarioModalPartials />
+		<c:ProformaScenarioPartials />
+		<c:ProformaSummaryPartials />
+	</div>
+	<div id="ncTreasuryConversionModal" class="slds">
+		<treasury-conversion-modal />
+		<c:TreasuryConversionModalPartials />
+	</div>
+
+</apex:page>

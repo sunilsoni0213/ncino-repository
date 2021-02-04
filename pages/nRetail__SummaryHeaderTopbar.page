@@ -1,0 +1,4 @@
+<apex:page >
+	<c:Include_AngularJS />
+	<c:SummaryHeaderTopbar />
+</apex:page>

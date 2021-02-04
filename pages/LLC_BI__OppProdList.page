@@ -1,0 +1,50 @@
+<apex:page standardController="Opportunity" extensions="LLC_BI.TreasuryManagementConvertController">
+	<apex:outputpanel layout="none" id="conversionWindow">
+		<nFORCE:Includes enablefontawesome="true" enableBS3Namespace="true" />
+		<nFORCE:Include_Design_System flavor="vf"/>
+		<nFORCE:Include_Design_System flavor="bs3"/>
+
+		<c:Include_AngularJS />
+
+		<nFORCE:ncUIIncludes />
+		<nFORCE:ncDataProvidersIncludes />
+
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'application/App.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'application/Bootstrap.js')}"/>
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'components/ProformaProductSelection.js')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'css/Style.css')}"/>
+		<c:ProformaProductSelectionConfiguration />
+
+		<div class="force slds">
+			<apex:outputPanel id="selPanel">
+				<apex:outputPanel rendered="{!showProductSelection}" id="productSelections">
+					<div id="ncProformaProductSelection" >
+						<c:ProformaProductSelectionPartial />
+						<proforma-product-selection />
+					</div>
+				</apex:outputPanel>
+				<apex:outputPanel rendered="{!!showProductSelection}" id="selectedProducts">
+					<apex:form >
+						<div class="slds-grid slds-grid_align-center">
+							<apex:commandLink styleClass="slds-button slds-button--brand" action="{!toggleShowProductSelection}" value="{!$Label.llc_bi__edit_product_selection}">
+								<apex:actionSupport event="OnClick" reRender="selPanel"/>
+							</apex:commandLink>
+						</div>
+					</apex:form>
+					<apex:composition template="nFORCE__Template_View_1_Column">
+						<apex:define name="column-content">
+							<apex:composition template="nFORCE__Template_View_Container">
+								<apex:define name="content">
+									<apex:form >
+										<c:ProductWidget recordIdX="{!Opportunity.Id}"/>
+									</apex:form>
+								</apex:define>
+							</apex:composition>
+						</apex:define>
+					</apex:composition>
+				</apex:outputPanel>
+			</apex:outputPanel>
+		</div>
+
+	</apex:outputpanel>
+</apex:page>

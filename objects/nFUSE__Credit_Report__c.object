@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Credit_Report_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Credit report pull information</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fields>
+        <fullName>nFUSE__Account_Payment_Index__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Account payment index</description>
+        <externalId>false</externalId>
+        <label>Account Payment Index</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Relationship associated with the credit report.</description>
+        <externalId>false</externalId>
+        <label>Relationship</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Credit_Reports</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Address_Discrepency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field populates with alternate address information from the credit bureau if an address discrepancy is found.</description>
+        <externalId>false</externalId>
+        <label>Address Discrepancy</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Alert_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains an alert code assigned by the credit bureau; see credit bureau documentation for a description of the code.</description>
+        <externalId>false</externalId>
+        <label>Alert Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Alert_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains an alert message from the credit bureau.</description>
+        <externalId>false</externalId>
+        <label>Alert Message</label>
+        <length>15000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFUSE__AlertedMessage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED-- Alert_Message__c AlertedMessage</description>
+        <externalId>false</externalId>
+        <label>D-AlertedMessage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__App_Plugin__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the name of the application plugin used to generate the credit report.</description>
+        <externalId>false</externalId>
+        <label>App Plugin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Available_Credit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the usage amount of credit available to the entity.</description>
+        <externalId>false</externalId>
+        <label>Available Credit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Average_Open_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contains the average open dollar balance for this entity.</description>
+        <externalId>false</externalId>
+        <label>Average Open Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Bankruptcy_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the total dollar amount of bankruptcies related to the entity.</description>
+        <externalId>false</externalId>
+        <label>Dollar amount of Bankruptcy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Bankruptcy_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The presence of a positive value in this field indicates a known bankruptcy event related to the entity.</description>
+        <externalId>false</externalId>
+        <label>Bankruptcy Indicator</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Business_Delinquency_Financial_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Business delinquency financial score</description>
+        <externalId>false</externalId>
+        <label>Business Delinquency Financial Score</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Business_Delinquency_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Business delinquency score</description>
+        <externalId>false</externalId>
+        <label>Business Delinquency Score</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Business_Failure_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Business failure score</description>
+        <externalId>false</externalId>
+        <label>Business Failure Score</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Collection_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains information related to any known collection events related to the entity.</description>
+        <externalId>false</externalId>
+        <label>Collection Indicator</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Confidence_Level_Indicator__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Confidence level indicator</description>
+        <externalId>false</externalId>
+        <label>Confidence Level Indicator</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Contact associated with the credit report.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Credit_Reports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Credit_Active_Since__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date that the credit became active is optionally stored in thie field.</description>
+        <externalId>false</externalId>
+        <label>Credit Active Since</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Credit_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains the credit score reported by the credit bureau for this entity.</description>
+        <externalId>false</externalId>
+        <label>Credit Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__EFX_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains a unique identifier assigned by the credit bureau to the credit report.</description>
+        <externalId>false</externalId>
+        <label>EFX ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__FICO_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED-- Credit_Score__c The FICO Score</description>
+        <externalId>false</externalId>
+        <label>D-FICO Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Fraud_Alert__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains details regarding any identification or fraud issues found.</description>
+        <externalId>false</externalId>
+        <label>ID Verification/Fraud Alert</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Industry_Payment_Index__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Industry payment index</description>
+        <externalId>false</externalId>
+        <label>Industry Payment Index</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Judgements_Amount_Satisfied__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the total dollar amount  of judgements satisfied on account.</description>
+        <externalId>false</externalId>
+        <label>Dollar amount of judgements satisfied</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Judgements_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the total dollar amount of judgements related to the entity.</description>
+        <externalId>false</externalId>
+        <label>Dollar amount of Judgements</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Last_Run_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the most recent previous credit report run date.</description>
+        <externalId>false</externalId>
+        <label>Last Run Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Legal_Actions_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Legal actions indicator</description>
+        <externalId>false</externalId>
+        <label>Legal Actions</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Liens_Amount_Satisfied__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Dollar amount of liens satisfied on account.</description>
+        <externalId>false</externalId>
+        <label>Dollar amount of Liens Satisfied</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Liens_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the total dollar amount of all known liens attributable to the entity.</description>
+        <externalId>false</externalId>
+        <label>Dollar amount of Liens</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Match_Quality_Indicator__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Match quality indicator</description>
+        <externalId>false</externalId>
+        <label>Match Quality Indicator</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Median_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contains the median dollar balance across all balances for this entity.</description>
+        <externalId>false</externalId>
+        <label>Median Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Most_Severe_Status_24Months__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The most severe credit status in the past 24 months for this entity.</description>
+        <externalId>false</externalId>
+        <label>MostSevereStatus24Months</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Accounts__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains the total number of known accounts for this entity.</description>
+        <externalId>false</externalId>
+        <label>Number of accounts</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Bankruptcies__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains the total number of bankruptcies for this entity.</description>
+        <externalId>false</externalId>
+        <label>Number of Bankruptcies</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Charge_Offs__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains the number of charge offs across all credit lines for this entity.</description>
+        <externalId>false</externalId>
+        <label>Number of Charge Offs</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Judgements_Satisfied__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains the total number of judgements satisfied on account.</description>
+        <externalId>false</externalId>
+        <label>Number of Judgements Satisfied</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Judgements__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If the number of judgements is known, this field will contain the number of judgements against the entity.</description>
+        <externalId>false</externalId>
+        <label>Number of Judgements</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Liens_Satisfied__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Number of liens satisfied on account.</description>
+        <externalId>false</externalId>
+        <label>Number of Liens Satisfied</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Number_Of_Liens__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field contains a count of all known liens attributable to the entity.</description>
+        <externalId>false</externalId>
+        <label>Number of Liens</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__OFAC_Alert_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A positive value in this field indicates the known presence of an OFAC match for the provided Relationship</description>
+        <externalId>false</externalId>
+        <label>OFAC Alert</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Recent_Bankruptcy_Filing_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If a recent bankruptcy filing is known, this field will contain the date of the filing.</description>
+        <externalId>false</externalId>
+        <label>Bankruptcy Filing Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Recent_Judgements_Filing_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the filing date of the most recent judgement filing, if applicable.</description>
+        <externalId>false</externalId>
+        <label>Judgements Filing Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Recent_Liens_Filing_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the filing date of the most recent liens filing, if applicable.</description>
+        <externalId>false</externalId>
+        <label>Liens Filing Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Report_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field identifies the credit report category of the credit report.</description>
+        <externalId>false</externalId>
+        <label>Report Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Consumer</fullName>
+                    <default>false</default>
+                    <label>Consumer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Report_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the credit report pull type for the credit pull.</description>
+        <externalId>false</externalId>
+        <label>Report Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CreditHardPull</fullName>
+                    <default>false</default>
+                    <label>CreditHardPull</label>
+                </value>
+                <value>
+                    <fullName>CreditSoftPull</fullName>
+                    <default>false</default>
+                    <label>CreditSoftPull</label>
+                </value>
+                <value>
+                    <fullName>Business</fullName>
+                    <default>false</default>
+                    <label>Business</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the status of the credit report request.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Tax_Lien_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A positive value in this field indicates the known presence of a tax lien against the entity.</description>
+        <externalId>false</externalId>
+        <label>Tax Lien Indicator</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Total_Credit_Limit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the total credit limit across all current credit lines owned by this entity.</description>
+        <externalId>false</externalId>
+        <label>Total Credit Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Total_Exposure__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the dollar aount of the total current credit exposure attributed to this entity.</description>
+        <externalId>false</externalId>
+        <label>Total Exposure</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Total_Past_Due__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total past due across all reported credit lines for this entity.</description>
+        <externalId>false</externalId>
+        <label>Total Past Due</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Transaction_Log__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Transaction log record associated with credit report.</description>
+        <externalId>false</externalId>
+        <label>Transaction Log</label>
+        <referenceTo>nFUSE__Transaction_Log__c</referenceTo>
+        <relationshipLabel>Credit Reports</relationshipLabel>
+        <relationshipName>Credit_Reports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Credit Report</label>
+    <nameField>
+        <label>Credit Report Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Credit Reports</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

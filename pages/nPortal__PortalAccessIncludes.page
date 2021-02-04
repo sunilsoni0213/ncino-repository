@@ -1,0 +1,37 @@
+<apex:page controller="nPortal.PortalCustomURLController">
+	<custom-css></custom-css>
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_Custom />
+	<c:Include_jQuery_FormatCurrency />
+
+	<nFORCE:Internationalize />
+	<nFORCE:Include_Design_System flavor="vf" components="true" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nPortal__Global_Resources, 'Global_Resources_Bundle.js')}" />
+
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Animate />
+	<c:Include_AngularJS_Sanitize />
+
+	<apex:includeScript value="{!URLFOR($Resource.nPortal__Global_Resources, 'providers/svg4everybody.js')}" />
+
+	<!-- Add customer portal parent angular module -->
+	<c:CustomerPortalAppIncludes />
+	<c:PortalAccessIncludes />
+
+	<!-- Add ncDataProviders -->
+	<nFORCE:ncDataProvidersIncludes />
+
+	<!-- New Relic Analytics -->
+	<nFORCE:Include_Analytics />
+
+	<script type="text/javascript">
+		// Initialize SVG4Everybody
+		svg4everybody();
+
+		// Set global remoting timeout
+		Visualforce.remoting.timeout = 120000;
+	</script>
+
+</apex:page>

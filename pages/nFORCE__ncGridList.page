@@ -1,0 +1,7 @@
+<apex:page showHeader="false"
+	sideBar="false"
+	standardStylesheets="false">
+	<apex:slds />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncScreenSectionFormBuilder_bundle)}" />
+	<c:ncGridList />
+</apex:page>

@@ -1,0 +1,80 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" sidebar="false" standardStylesheets="false">
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_MomentJS />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/utils-bundle.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/knockout-bundle.js')}" />
+	<c:Include_Messenger />
+
+	<c:Include_Bootstrap3 flavor="force"/>
+	<c:Include_Design_System flavor="bs3" />
+	<c:Include_Font_Awesome />
+	<c:Include_Navigator />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'lifecycle.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__lifecycle_app)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+
+	<div class="force slds">
+		<div class="container-fluid ui-container">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 top-bar">
+						<apex:include pageName="{!$Page.Topbar}" />
+					</div>
+				</div>
+			</div>
+			<div class="clearfix visible-xs"></div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 col-lg-2">
+						<apex:include pageName="{!$Page.Navigation}" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="col-xs-12 col-md-9 col-lg-10 body">
+						<div class="row">
+							<div class="col-xs-12 sub-navigation-content">
+								<apex:include pageName="{!$Page.Sub_Navigation}" />
+							</div>
+						</div>
+						<c:LockedRecordMessage rendered="{!isLocked}" />
+						<iframe
+							id="ncino-ui-body-frame"
+							scrolling="yes"
+							width="100%"
+							frameborder="no"
+							src="{!$Page.BodyContainer}?app={!$CurrentPage.parameters.app}&id={!$CurrentPage.parameters.id}&frame=true" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<c:Run_LifeCycleApp />
+	<script type="application/javascript">
+		(function(){
+			window.onload = function(){
+				setInterval(function(){
+					var bodyFrame = jQuery('#ncino-ui-body-frame');
+					var bodyElement = bodyFrame.contents().find('body')[0];
+					if(bodyElement){
+						bodyFrame.css({height: bodyElement.offsetHeight});
+					}
+				}, 250);
+			}
+			Messenger.subscribe('navigateToRoute', function(data){
+				var bodyFrame = document.getElementById('ncino-ui-body-frame');
+				updateFrameAppParam(bodyFrame, data.detail);
+			});
+
+			function updateFrameAppParam(frame, newApp){
+				var currentUrl = frame.src;
+				var appIndex = currentUrl.indexOf('app=') + 4;
+				frame.src = frame.src.replace(frame.src.substring(appIndex, currentUrl.indexOf('&', appIndex)), newApp);
+				Messenger.publish(LifeCycle.Topics.REFRESH_SECONDARY_NAVIGATION, newApp);
+				Messenger.publish(LifeCycle.Topics.REFRESH_TERTIARY_NAVIGATION, newApp);
+			}
+		})();
+	</script>
+</apex:page>

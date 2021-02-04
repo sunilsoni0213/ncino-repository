@@ -1,0 +1,248 @@
+<apex:page standardController="Account" extensions="DNBController">
+    <c:Includes_DNB />
+    <div class="force">
+        <div id="business-credit-report" class="container-fluid">
+            <div class="row-fluid">
+                <h4>Business Credit Report</h4>
+                <a href="/{!relationshipId}" class="btn btn-mini pull-right ucWords">Go Back</a>
+            </div>
+            <div class="row-fluid">
+                <div class="span12 heading">
+                    <div class="span6 pull-left business-name">{!relationshipName}</div>
+                    <div class="span2 pull-right">
+                        <a href="#" onclick="window.print();" class="pull-right">
+                            <i class="icon-print icon-white"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span4">
+                    <table class="table table-hover table-bordered">
+                        <thead class="thead-green">
+                            <tr>
+                                <th class="center-align" colspan="2">DNB Address</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="span1 td-label">Address:</td>
+                            <td class="span3">
+                                {!relationshipStreet}<br/>
+                                {!relationshipCity}, {!relationshipState} {!relationshipPostalCode}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="span1 td-label">Phone:</td>
+                            <td class="span3">910-555-1312</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="span4">
+                    <table class="table table-hover table-bordered">
+                        <thead class="thead-orange">
+                            <tr>
+                                <th class="center-align" colspan="2">Account Address</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="span1 td-label">Address:</td>
+                            <td class="span3">
+                                {!relationshipStreet}<br/>
+                                {!relationshipCity}, {!relationshipState} {!relationshipPostalCode}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="span1 td-label">Phone:</td>
+                            <td class="span3">910-555-1312</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="span4">
+                    <table class="table table-hover table-bordered">
+                        <thead class="thead-red">
+                            <tr>
+                                <th class="center-align" colspan="2">Account Summary</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="span1 td-label">
+                                DUNS #:
+                            </td>
+                            <td class="span3">
+                                836421633<br/>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="span1 td-label">Created:</td>
+                            <td class="span3">
+                            <apex:outputText value="{0, date, MM/dd/yyyy}">
+                                <apex:param value="{!TODAY()}"/>
+                            </apex:outputText>
+                        </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Score Summary</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td class="span5">PAYDEX</td>
+                            <td class="span1 center-align"><span class="badge">80</span></td>
+                            <td class="span6"></td>
+                        </tr>
+                        <tr>
+                            <td class="span5">Commercial Credit Score</td>
+                            <td class="span1 center-align"><span class="badge">525</span></td>
+                            <td class="span6"></td>
+                        </tr>
+                        <tr>
+                            <td class="span5">Financial Stress Score</td>
+                            <td class="span1 center-align"><span class="badge">1542</span></td>
+                            <td class="span6"></td>
+                        </tr>
+                        <tr>
+                            <td class="span5">Commercial Credit Score Percentile</td>
+                            <td class="span1 center-align"><span class="badge">68</span></td>
+                            <td class="span6"></td>
+                        </tr>
+                        <tr>
+                            <td class="span5">{!$Label.DNB_Rating}</td>
+                            <td class="span1 center-align"><span class="badge">2R2</span></td>
+                            <td class="span6"></td>
+                        </tr>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <table class="table table-hover table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Public Filings</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <th class="span3">Record Type</th>
+                            <th class="span3">Records Found</th>
+                        </tr>
+                        <tr>
+                            <td class="span3">Bankruptcy</td>
+                            <td class="span3">No</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Judgements</td>
+                            <td class="span3">No</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Liens</td>
+                            <td class="span3">No</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">UCCs</td>
+                            <td class="span3">0</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Suit Present</td>
+                            <td class="span3">No</td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="span6">
+                    <table class="table table-hover table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Current Credit Terms</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="span3">Credit Limit</td>
+                            <td class="span3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Payment Terms</td>
+                            <td class="span3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Early Payment Discount</td>
+                            <td class="span3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Term Status</td>
+                            <td class="span3">-</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Average High Credit</td>
+                            <td class="span3">$1633</td>
+                        </tr>
+                        <tr>
+                            <td class="span3">Highest Credit</td>
+                            <td class="span3">$5000</td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Company Overview</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td class="span4">Year Started</td>
+                        <td class="span8">1993</td>
+                    </tr>
+                    <tr>
+                        <td class="span4">Incorporation Date</td>
+                        <td class="span8">-</td>
+                    </tr>
+                    <tr>
+                        <td class="span4">Number of Employees</td>
+                        <td class="span8">-</td>
+                    </tr>
+                    <tr>
+                        <td class="span4">SIC</td>
+                        <td class="span8">-</td>
+                    </tr>
+                    <tr>
+                        <td class="span4">Average Days Beyond Terms</td>
+                        <td class="span8">-</td>
+                    </tr>
+                    <tr>
+                        <td class="span4">Average Sales</td>
+                        <td class="span8">-</td>
+                    </tr>
+                    <tr>
+                        <td class="span4">Trade Experiences in File</td>
+                        <td class="span8">8</td>
+                    </tr>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</apex:page>

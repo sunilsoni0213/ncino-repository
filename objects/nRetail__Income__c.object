@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Income_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>DEPRECATED- The income object stores details about an applicant&apos;s income.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>nRetail__Add_Income</fullName>
+        <availableFields>
+            <field>nRetail__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nRetail__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set is used in the nRetail package for the consumer loans UI.</description>
+        <displayedFields>
+            <field>nRetail__Monthly_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRetail__Yearly_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRetail__Income_Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRetail__Income_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Add Income</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nRetail__Income_Schedule</fullName>
+        <availableFields>
+            <field>nRetail__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nRetail__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used to define the fields that are visible in the Income Schedule found on the Underwriting route.</description>
+        <displayedFields>
+            <field>nRetail__Income_Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRetail__Income_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRetail__Monthly_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRetail__Yearly_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Income Schedule</label>
+    </fieldSets>
+    <fields>
+        <fullName>nRetail__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the account to which this income belongs.</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Incomes</relationshipLabel>
+        <relationshipName>Incomes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRetail__Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the contact who has this income.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Incomes</relationshipLabel>
+        <relationshipName>Incomes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRetail__Income_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the source of the applicant&apos;s income.</description>
+        <externalId>false</externalId>
+        <label>Income Source</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pay Stubs</fullName>
+                    <default>false</default>
+                    <label>Pay Stubs</label>
+                </value>
+                <value>
+                    <fullName>Tax Return</fullName>
+                    <default>false</default>
+                    <label>Tax Return</label>
+                </value>
+                <value>
+                    <fullName>W2</fullName>
+                    <default>false</default>
+                    <label>W2</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRetail__Income_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and represents the type of income.</description>
+        <externalId>false</externalId>
+        <label>Income Type</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alimony Support</fullName>
+                    <default>false</default>
+                    <label>Alimony Support</label>
+                </value>
+                <value>
+                    <fullName>Annual Bonus/Commission</fullName>
+                    <default>false</default>
+                    <label>Annual Bonus/Commission</label>
+                </value>
+                <value>
+                    <fullName>Gross Annual Income</fullName>
+                    <default>false</default>
+                    <label>Gross Annual Income</label>
+                </value>
+                <value>
+                    <fullName>Investment/Trust Income</fullName>
+                    <default>false</default>
+                    <label>Investment/Trust Income</label>
+                </value>
+                <value>
+                    <fullName>Military Income</fullName>
+                    <default>false</default>
+                    <label>Military Income</label>
+                </value>
+                <value>
+                    <fullName>Other Income</fullName>
+                    <default>false</default>
+                    <label>Other Income</label>
+                </value>
+                <value>
+                    <fullName>Part Time Income</fullName>
+                    <default>false</default>
+                    <label>Part Time Income</label>
+                </value>
+                <value>
+                    <fullName>Rental Income</fullName>
+                    <default>false</default>
+                    <label>Rental Income</label>
+                </value>
+                <value>
+                    <fullName>Self Employment Income</fullName>
+                    <default>false</default>
+                    <label>Self Employment Income</label>
+                </value>
+                <value>
+                    <fullName>Taxable Income</fullName>
+                    <default>false</default>
+                    <label>Taxable Income</label>
+                </value>
+                <value>
+                    <fullName>Total Before Tax Income</fullName>
+                    <default>false</default>
+                    <label>Total Before Tax Income</label>
+                </value>
+                <value>
+                    <fullName>Unemployment Benefits</fullName>
+                    <default>false</default>
+                    <label>Unemployment Benefits</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRetail__Loan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and represents the loan this income is related to.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Incomes</relationshipLabel>
+        <relationshipName>Incomes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRetail__Monthly_Income__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and represents the amount of an applicant&apos;s monthly income.</description>
+        <externalId>false</externalId>
+        <label>Monthly Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nRetail__Yearly_Income__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the amount of an applicant&apos;s yearly income.</description>
+        <externalId>false</externalId>
+        <label>Yearly Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>-D Income</label>
+    <nameField>
+        <label>Income Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Incomes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>nRetail__Monthly_Yearly_Income</fullName>
+        <active>true</active>
+        <description>Monthly income must be 1/12 of yearly income.</description>
+        <errorConditionFormula>nRetail__Monthly_Income__c != ROUND(nRetail__Yearly_Income__c/12,2)</errorConditionFormula>
+        <errorMessage>Monthly income must be 1/12 of yearly income.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

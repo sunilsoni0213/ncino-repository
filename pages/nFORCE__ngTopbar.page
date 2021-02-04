@@ -1,0 +1,17 @@
+<apex:page controller="nFORCE.TemplateController" showHeader="false" standardStylesheets="false">
+	<apex:styleSheet value="{!URLFOR($Resource.nFORCE__ngShared, 'Styles/ngTopbar.css')}" />
+
+	<div class="row">
+		<div class="col-xs-4 col-md-6 top-bar-heading">
+			<anchor></anchor>
+		</div>
+		<div class="col-xs-8 col-md-6 top-bar-controls text-right">
+			<div class="top-bar-controls-items">
+				<span class="secondary-button-margin">
+					<secondary-button></secondary-button>
+				</span>
+				<continue-button></continue-button>
+			</div>
+		</div>
+	</div>
+</apex:page>

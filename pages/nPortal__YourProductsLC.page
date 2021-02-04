@@ -1,0 +1,21 @@
+<apex:page sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+
+	<html class="portal-html" lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="portal-body slds has-nstyle" ng-app="dashboardApp">
+			<portal-loader slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-loader>
+			<portal-message slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-message>
+
+			<your-products></your-products>
+			<c:PortalFileUploader />
+			<apex:include pageName="nPortal__DashboardIncludes" />
+		</body>
+	</html>
+</apex:page>

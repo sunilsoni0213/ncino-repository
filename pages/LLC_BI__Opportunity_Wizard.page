@@ -1,0 +1,8 @@
+<apex:page standardController="Opportunity" extensions="LLC_BI.OpportunityOrderEntryController" docType="html-5.0" sidebar="false" action="{!redirect}">
+	<nFORCE:Includes enableBS3Namespace="true" />
+	<div class="force">
+		<apex:outputPanel styleClass="force messages" id="messages">
+			<apex:messages styleClass="alert alert-danger" />
+		</apex:outputPanel>
+	</div>
+</apex:page>

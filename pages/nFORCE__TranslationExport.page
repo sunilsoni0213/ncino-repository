@@ -1,0 +1,8 @@
+<apex:page id="TranslationExport" controller="nFORCE.TranslationExportController" cache="true" readOnly="true" showHeader="false" standardStylesheets="false" sidebar="false" contentType="text/csv#{!fileName}.csv">
+	<apex:repeat value="{!fields}" var="fieldName">{!fieldName},</apex:repeat>{!newLine}
+	<apex:repeat value="{!translations}" var="subset">
+		<apex:repeat value="{!subset}" var="record">
+			<apex:repeat value="{!fields}" var="fieldName">{!record[fieldName]},</apex:repeat>{!newLine}
+		</apex:repeat>
+	</apex:repeat>
+</apex:page>

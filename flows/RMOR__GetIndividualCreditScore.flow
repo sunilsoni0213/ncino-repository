@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Set output for missing credit score</description>
+        <name>Credit_Score_Required</name>
+        <label>Credit Score Required</label>
+        <locationX>555</locationX>
+        <locationY>147</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Information Required</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResultDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Credit Score</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Set Credit Score output</description>
+        <name>Set_Credit_Score</name>
+        <label>Set Credit Score</label>
+        <locationX>379</locationX>
+        <locationY>435</locationY>
+        <assignmentItems>
+            <assignToReference>CreditScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LastestCreditReport.nFUSE__Credit_Score__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <description>&quot;IN FILE&quot; status for a credit report pull.</description>
+        <name>CreditReportStatusInFile</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>IN FILE</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>&quot;NEEDS REVIEW&quot; status for a credit report pull.</description>
+        <name>CreditReportStatusNeedsReview</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>NEEDS REVIEW</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>&quot;PASS&quot; status for a credit report pull.</description>
+        <name>CreditReportStatusPass</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PASS</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Determines if credit score is valid.</description>
+        <name>Credit_Score_Valid</name>
+        <label>Credit Score Valid</label>
+        <locationX>371</locationX>
+        <locationY>251</locationY>
+        <defaultConnector>
+            <targetReference>Credit_Score_Required</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Credit_Score_Valid_Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>LastestCreditReport.nFUSE__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CreditReportStatusPass</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LastestCreditReport.nFUSE__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CreditReportStatusNeedsReview</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LastestCreditReport.nFUSE__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CreditReportStatusInFile</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Credit_Score</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks if account has a credit score available.</description>
+        <name>Has_Credit_Score</name>
+        <label>Has Credit Score</label>
+        <locationX>371</locationX>
+        <locationY>52</locationY>
+        <defaultConnector>
+            <targetReference>Credit_Score_Required</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Has_Credit_Score_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LastestCreditReport.nFUSE__Credit_Score__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LastestCreditReport.nFUSE__Credit_Score__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Credit_Score_Valid</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Retrieves credit score for a specified account.</description>
+    <interviewLabel>CreditScoreIndividualAccount {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>GetIndividualCreditScore</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieve the most recent credit report for an account.</description>
+        <name>Get_Credit_Report</name>
+        <label>Get Credit Report</label>
+        <locationX>194</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_Credit_Score</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>nFUSE__Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Account.Id</elementReference>
+            </value>
+        </filters>
+        <object>nFUSE__Credit_Report__c</object>
+        <outputReference>LastestCreditReport</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>nFUSE__Status__c</queriedFields>
+        <queriedFields>nFUSE__Credit_Score__c</queriedFields>
+        <sortField>nFUSE__Last_Run_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <startElementReference>Get_Credit_Report</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Specified account for a credit pull.</description>
+        <name>Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>Stores the account&apos;s credit score.</description>
+        <name>CreditScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The most recent credit report for a specified account.</description>
+        <name>LastestCreditReport</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>nFUSE__Credit_Report__c</objectType>
+    </variables>
+    <variables>
+        <description>Stores result of credit score check.</description>
+        <name>Result</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Stores description of the credit score result.</description>
+        <name>ResultDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

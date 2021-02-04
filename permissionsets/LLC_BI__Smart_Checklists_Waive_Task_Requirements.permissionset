@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set allows the user to waive task requirements for Smart Checklists.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Waive Task Requirements for Smart Checklists</label>
+</PermissionSet>

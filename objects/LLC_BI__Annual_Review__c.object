@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Risk_Rating_Review</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>LLC_BI__Commercial_Credit_Memo</fullName>
+        <description>Credit Memo</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Computed_Risk_Grade_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Overridden_Risk_Grade_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Final_Risk_Grade__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Display_In_Credit_Memo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Commercial Credit Memo</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Risk_Rating</fullName>
+        <description>Used in the default Risk Rating route of the UI.</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Computed_Risk_Grade_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Overridden_Risk_Grade_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Final_Risk_Grade__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Display_In_Credit_Memo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Risk Rating</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>UI_Risk_Rating</fullName>
+        <description>Risk rating section of new UI</description>
+        <displayedFields>
+            <field>LLC_BI__Final_Risk_Grade__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Overridden_Risk_Grade_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Date_Decisioned__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Risk Rating</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__AP_Stress_Index_RG__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>AP Stress Index (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__AP_Stress_Index__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.14 * LLC_BI__AP_Stress_Index_RG__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AP Stress Index - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__AP_Stress_Index_actual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>AP Stress Index</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__AR_Management_Experience__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.09 *  LLC_BI__Management_Experience_RG__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Management Experience - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated automatically when creating a risk rating review from the relationship and manually when creating from the loan. This field specifies the relationship associated with the annual review (risk rating review).</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Risk Rating Review</relationshipLabel>
+        <relationshipName>Annual_Review</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cash_Bal_Year_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Cash Bal Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cash_Bal_Year_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Cash Bal Year 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cash_Bal_Year_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Cash Bal Year 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cash_Flow_Coverage_RG__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Cash Flow Coverage (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cash_Flow_Coverage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.24 *  LLC_BI__Cash_Flow_Coverage_RG__c</formula>
+        <label>Cash Flow Coverage - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cash_Flow_Coverage_actual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Cash Flow Coverage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is only required if an overriden risk grade value is entered. Otherwise, it is not required. This field is used to specify the reason a different risk grade should be used than what is automatically calculated via the risk grade worksheet.</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Computed_Risk_Grade_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically by using the risk rating worksheet. This field should not be edited directly. This field stores the value initially calculated by the risk rating worksheet. If no overriden risk grade is set, this value is used to calculate the final risk grade.</description>
+        <externalId>false</externalId>
+        <label>Computed Risk Grade Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Score_RG__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Credit Score (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Score_Year_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Credit Score Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Score_Year_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Credit Score Year 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Score_Year_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Credit Score Year 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Score__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.13 *  LLC_BI__Credit_Score_RG__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credit Score - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Credit_Score_actual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Credit Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__DSC_Post_OC_Year_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>DSC Post OC Year 1</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__DSC_Post_OC_Year_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>DSC Post OC Year 2</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__DSC_Post_OC_Year_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>DSC Post OC Year 3</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Date_Decisioned__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically populated by trigger when the risk rating review is approved or declined.</description>
+        <externalId>false</externalId>
+        <label>Date Decisioned</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Display_In_Credit_Memo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It populated manually by the user. When enabled, the risk grade worksheet is displayed in the credit memo for this loan. When disabled, the risk grade worksheet is not displayed in the credit memo. Only one risk grade review may have this enabled per loan. A trigger automatically deselects this field on any other risk rating review for the loan whenever it is enabled.</description>
+        <externalId>false</externalId>
+        <label>Display In Credit Memo</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Final_Risk_Grade__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically by using the risk rating worksheet. This field should not be edited directly. This field stores the final risk grade value, which is the value that should be used as the relationship&apos;s risk grade. It is set by the overidden risk grade if one exists, and the calculated risk grade if it does not. It will be rounded if that field is enabled.</description>
+        <externalId>false</externalId>
+        <formula>IF( LLC_BI__Risk_Grade_Template__r.LLC_BI__Round_Final_Risk_Grade__c,
+  ROUND(IF(ISNULL(LLC_BI__Overridden_Risk_Grade_Value__c) , LLC_BI__Computed_Risk_Grade_Value__c, LLC_BI__Overridden_Risk_Grade_Value__c),0),
+  IF(ISNULL(LLC_BI__Overridden_Risk_Grade_Value__c) , LLC_BI__Computed_Risk_Grade_Value__c, LLC_BI__Overridden_Risk_Grade_Value__c)
+)</formula>
+        <label>Final Risk Grade</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Global_Cash_Flow_G2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Global Cash Flow (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Global_Cash_Flow_Wght__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.19 *  LLC_BI__Global_Cash_Flow_G2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Global Cash Flow - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Global_Cash_Flow__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Global Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated automatically when creating a risk rating review from the loan and blank when creating from the relationship. This field specifies the loan associated with the risk rating review.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Risk Rating Review</relationshipLabel>
+        <relationshipName>Risk_Rating_Review</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Management_Experience_RG__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Management Experience (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Management_Experience_actual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Management Experience</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Overridden_Risk_Grade_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated manually within the risk rating worksheet. This field should not be edited directly. This field stores the manually populated override risk grade if one is set int he risk rating worksheet. If this value is populated, this value will be used to calculate the final risk grade instead of the calculated risk grade. If a user sets a overriden risk grade within the risk rating worksheet. they are required to add a comment.</description>
+        <externalId>false</externalId>
+        <label>Overridden Risk Grade Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Override__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Override</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Pers_Bus_Liquidity_RG__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Pers. &amp; Bus. Liquidity (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Pers_Bus_Liquidity_actual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Pers. &amp; Bus. Liquidity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Personal_Liquidity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.13 *  LLC_BI__Pers_Bus_Liquidity_RG__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pers. &amp; Bus Liquidity - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__RG_Version__c</fullName>
+        <defaultValue>2</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is optional. It is used to denotes the feature version of the risk grade worksheet. The default value is 2, which indicates the current version. If an existing record&apos;s value is different, it indicates a previous version.</description>
+        <externalId>false</externalId>
+        <label>RG Version</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rev_Year_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Rev Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rev_Year_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Rev Year 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rev_Year_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Rev Year 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Revenue_Growth_RG__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Revenue Growth (G)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Revenue_Growth__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <formula>0.09 *  LLC_BI__Revenue_Growth_RG__c</formula>
+        <label>Revenue Growth - Wght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Revenue_Growth_actual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used</description>
+        <externalId>false</externalId>
+        <label>Revenue Growth (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Risk_Grade_Template__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated automatically whenever creatings a risk rating review from the relationship or loan. This field specifies the Risk Grade Template associated with the Annual Review (Risk Rating Review)</description>
+        <externalId>false</externalId>
+        <label>Risk Grade Template</label>
+        <referenceTo>LLC_BI__Risk_Grade_Template__c</referenceTo>
+        <relationshipLabel>Risk Rating Review</relationshipLabel>
+        <relationshipName>Risk_Rating_Review</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. Depending on the environment, it can be manually populated or automatically populated via an approval process. This field is used to determine whether the risk grade worksheet (and thus the risk grade) is approved for use. The default values are: Not Approved, Approved, Declined, and In Review.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Approved</fullName>
+                    <default>true</default>
+                    <label>Not Approved</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+                <value>
+                    <fullName>In Review</fullName>
+                    <default>false</default>
+                    <label>In Review</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Year_1st__c</fullName>
+        <defaultValue>YEAR(Today()) - 3</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is no longer used.</description>
+        <externalId>false</externalId>
+        <label>Year 1</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Year_2nd__c</fullName>
+        <defaultValue>YEAR(Today()) - 2</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is no longer used.</description>
+        <externalId>false</externalId>
+        <label>Year 2</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Year_3rd__c</fullName>
+        <defaultValue>YEAR(Today()) - 1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is no longer used.</description>
+        <externalId>false</externalId>
+        <label>Year 3</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Review_Date__c</fullName>
+        <description>The date of the risk rating review</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the official review date here.  This is different than approval date.</inlineHelpText>
+        <label>Review Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Test_URL_Field__c</fullName>
+        <externalId>false</externalId>
+        <label>Test URL Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>Risk Rating Review</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Account__c</columns>
+        <columns>LLC_BI__Computed_Risk_Grade_Value__c</columns>
+        <columns>LLC_BI__Final_Risk_Grade__c</columns>
+        <columns>LLC_BI__Risk_Grade_Template__c</columns>
+        <columns>LLC_BI__Date_Decisioned__c</columns>
+        <columns>Review_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RG-{0000000}</displayFormat>
+        <label>Risk Rating Review Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Risk Rating Review</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>LLC_BI__Mandatory_comment</fullName>
+        <active>true</active>
+        <description>the comment is mandatory if the risk grade value has been overridden</description>
+        <errorConditionFormula>LEN(LLC_BI__Comments__c) == 0 &amp;&amp; LLC_BI__Overridden_Risk_Grade_Value__c &gt; 0</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Overridden_Risk_Grade_Value__c</errorDisplayField>
+        <errorMessage>Please add a comment before overriding the computed risk grade value.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Create_New_Risk_Rating_Loan</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create New Risk Rating</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/CSA_LoanAccountRiskRating?id={!LLC_BI__Loan__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Risk_Rating_Account</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Risk Rating</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/CSA_AccountRiskRating?id={!Account.Id}</url>
+    </webLinks>
+</CustomObject>

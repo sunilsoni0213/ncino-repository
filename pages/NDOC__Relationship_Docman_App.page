@@ -1,0 +1,17 @@
+<apex:page showHeader="false"
+	sidebar="false" >
+
+	<c:RelationshipDocmanConfiguration />
+	<c:UniversalDocManIncludes isRelationshipDocman="true"/>
+	<c:UniversalDocManDataService />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngAnchorDirective)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared,
+		'directives/continueButton.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared,
+		'application/ConfigProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared,
+		'application/LabelProvider.js')}" />
+	<c:UniversalDocMan />
+
+</apex:page>

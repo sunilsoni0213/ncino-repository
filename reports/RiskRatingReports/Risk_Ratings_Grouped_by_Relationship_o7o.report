@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c.Review_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Computed_Risk_Grade_Value__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Final_Risk_Grade__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Comments__c</field>
+    </columns>
+    <columns>
+        <field>INDUSTRY</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Risk_Grade_Template__c</field>
+    </columns>
+    <description>Risk ratings grouped by Relationship</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Risk Ratings Grouped by Relationship</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$LLC_BI__Annual_Review__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

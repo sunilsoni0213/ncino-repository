@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Share_Translation_Records_With_Customer_Portal_2_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Translation Records With Customer Portal 2 Guest User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal_2</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>nFORCE__Language__c</field>
+            <operation>equals</operation>
+            <value>en_AU,en_CA,en_GB,en_US</value>
+        </criteriaItems>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Share_Translation_Records_With_Customer_Portal_Site_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Translation Records With Customer Portal Site User</label>
+        <sharedTo>
+            <guestUser>Customer_Portal</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>nFORCE__Language__c</field>
+            <operation>equals</operation>
+            <value>en_AU,en_CA,en_GB,en_US</value>
+        </criteriaItems>
+    </sharingGuestRules>
+</SharingRules>

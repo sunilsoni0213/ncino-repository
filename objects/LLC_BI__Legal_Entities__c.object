@@ -1,0 +1,4393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Entity_Inv_Lightning</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Entity_Involvement_Lightning_Header</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Entity_Involvement_Lightning_Header</fullName>
+        <fields>Name</fields>
+        <fields>Associated_Relationship__c</fields>
+        <fields>LLC_BI__Borrower_Type__c</fields>
+        <fields>LLC_BI__Contingent_Type__c</fields>
+        <fields>LLC_BI__Loan__c</fields>
+        <label>Entity Involvement Lightning Header</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Entity Involvement object contains information about the associations between relationships and loans.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CM_Authorized_Signer_L</fullName>
+        <description>Credit Memo: Standard Loan Credit Memo 
+                    Screen Section: Authorized Signer 
+                    Object: Entity Involvement</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Borrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Authorized Signer - L</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CM_Borrower_Structure_L</fullName>
+        <description>Credit Memo: Standard Loan Credit Memo 
+                    Screen Section: Product Summary 
+                    Object: Entity Involvement</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Tax_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Borrower Structure - L</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSIDDP__CSI_DepAct_DocPrep</fullName>
+        <description>CSI DepAct DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Limited_Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Debt_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Realestate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Tax_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI DepAct DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSI_DepAct_DocPrep</fullName>
+        <description>CSI DepAct DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Limited_Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Debt_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Realestate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Tax_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI DepAct DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Comm DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CSiDP__Is_Credit_Score_Used__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Limited_Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Borrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_CoBorrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Guarantor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Grantor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Debt_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Realestate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Tax_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CSiDP__Non_Individual_Signer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI Comm DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Credit_Memo_Standard_Review_Product_Pack</fullName>
+        <description>&quot;Credit Memo: Standard Review Credit Memo (Product Package)
+Screen Section: Loan Summary 
+Object: Entity Involvement&quot;</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Review Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Deal_Memo_Appendix_A</fullName>
+        <description>Deal Credit Memo - Appendix A</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deal Memo Appendix A</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Deal_Memo_Financial_Statements</fullName>
+        <description>Deal Credit Memo - Financial Statements Section</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.CIF_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Last_Review_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deal Memo Financial Statements</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Deal_Memo_RR</fullName>
+        <description>Deal Credit Memo Borrower Risk Rating section</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Most_Recent_Risk_Grade__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Risk_Rating_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Last_Review_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deal Memo RR</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Deposit_UI</fullName>
+        <description>used in deposit UI</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deposit UI</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>EI_Snapshot</fullName>
+        <description>EI Snapshot</description>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>EI Snapshot</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Entity_ID</fullName>
+        <description>credit memo test</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Entity_ID</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Account_Affiliated_Exposure</fullName>
+        <description>Affiliated Exposure</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Net_New_Funds__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Is_Excluded__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Account Affiliated Exposure</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Account_Direct_Exposure</fullName>
+        <availableFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Exposure</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Net_New_Funds__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Is_Excluded__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Account Direct Exposure</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Account_Indirect_Exposure</fullName>
+        <availableFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Exposure</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Net_New_Funds__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Is_Excluded__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Account Indirect Exposure</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Deposit_Products</fullName>
+        <description>New UI - Products &amp; Services</description>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Open_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deposit Products</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Entity_ID</fullName>
+        <description>Credit Memo</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Entity_ID</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Global_Entity_Fields</fullName>
+        <description>Global Analysis Screen Section</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Global Entity Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__HMDA_Demographic_Questions</fullName>
+        <description>Used in the HMDA Demographic Questions section of the HMDA Screen 1</description>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>HMDA Demographic Questions</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__HMDA_Entity_Relationship_Name</fullName>
+        <description>Used in HMDA Entity Compliance Screen</description>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>HMDA Entity Relationship Name</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Loan_Products</fullName>
+        <description>New UI - Products &amp; Services</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Closed_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Loan Products</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Ownership_Structure_Table</fullName>
+        <description>Deposit account opening ownership structure table</description>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Ownership Structure Table</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Product_Package_Entity</fullName>
+        <description>Administrators use this field set to display entities from the product package broken down by account.</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Product Package Entity</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__ReviewDisplay</fullName>
+        <description>Account Review Page</description>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Direct_Exposure__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Indirect_Exposure__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>ReviewDisplay</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Standard_Product_Package_Credit_Memo</fullName>
+        <description>Credit Memo: Standard Product Package Credit Memo
+Screen Section: Product requests
+Object: Entity Involvement</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__TE_Expand_Loan_Product_Package</fullName>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Net_New_Funds__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This fieldset displays additional loan information on the Total Exposure Product Package page.</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__InterestRate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Total Exposure Expand Loan Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__TE_Expand_Loan_Relationship</fullName>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Net_New_Funds__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This fieldset displays additional loan information on the Total Exposure Relationship page.</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__InterestRate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Total Exposure Expand Loan Relationship</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Deposit_Products</fullName>
+        <description>UI - Products &amp; Services</description>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Open_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__r.Interest_Rate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Deposit Products</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Entity_Involvement_Fieldset</fullName>
+        <availableFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used in the new ui</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Entity Involvement Fieldset</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_HMDA_Demographic_Questions</fullName>
+        <description>Used in the HMDA Demographic Questions section of the HMDA Screen 1</description>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI HMDA Demographic Questions</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Loan_Products</fullName>
+        <availableFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>UI - Products &amp; Services</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.c_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Payment_Details__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.c_Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Closed_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Loan Products</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Lookup_Fields</fullName>
+        <description>Generic field set for UI integration</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Lookup Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Treasury_Products</fullName>
+        <description>UI - Products &amp; Services</description>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__r.LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__r.LLC_BI__Product_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__r.LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__r.LLC_BI__Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Treasury Products</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>New_UI_Borrowing_Structure</fullName>
+        <description>Used in the loan UI for &quot;Borrowing Structure&quot;</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Borrowing Structure</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Opportunity_Fields</fullName>
+        <description>Opportunity section new products and services</description>
+        <label>Opportunity Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PP_CM_Risk_Rating</fullName>
+        <description>PP CM - New Deal Credit Memo</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Highest_Risk_Grade__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Risk_Rating_Template__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Risk_Rating_Review_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Risk_Rating_Review_Date_Decisioned__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Next_Review_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PP_CM_Risk Rating</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PrecisionLender_Pricing</fullName>
+        <description>PrecisionLender Pricing Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PrecisionLender Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>RMOR__Applicants</fullName>
+        <description>Used to define which fields show up in the Applicants schedule located on the Borrower Information page.</description>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.BillingStreet</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Phone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Applicants</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Snapshot_Entity_Involvement</fullName>
+        <description>Snapshot on Loan</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Snapshot Entity Involvement</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Standard_Product_Package_Credit_Memo</fullName>
+        <description>&quot;Credit Memo: Standard Product Package Credit Memo 
+Screen Section: Product Requests
+Object: Entity Involvement &quot;</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKDDP__WK_DepAct_DocPrep</fullName>
+        <description>WK DepAct DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Exclude_From_Account_Exposure__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Exclude_From_Product_Package_Exposure__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Limited_Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Borrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_CoBorrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Grantor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Guarantor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Included_In_Global_Analysis__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Related_Entity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan_Collateral__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Debt_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Realestate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Tax_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKDDP__Suppress_Signature__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>WK DepAct DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deposit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Limited_Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Ethnicity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guaranty_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Guarantor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Grantor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Applicant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Not_Provided__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Guarantee_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Debt_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Race__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Realestate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__HMDA_Sex__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Tax_ID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Treasury_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nPortal__Portal_Product_List</fullName>
+        <description>Portal Product List</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Loan__r.LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Portal_Product_List</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nRetail__Applicant_Schedule</fullName>
+        <description>Used to define which fields show up in the Applicants schedule located on the Application Details page.</description>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.BillingStreet</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Phone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Applicant Schedule</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nSBA__SBA_7a_Loan_Authorization</fullName>
+        <description>All fields that are mapped in 7a Loan Authorization for Borrowing Structure</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Guarantor_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Balance_Reduction_Limitation_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Principal_Reduction_Limitation_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Maximum_Liability_Limitation_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Percentage_Limitation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Time_Limitation_Years__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Collateral_Recourse_Limitation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Community_Property_Spouse_Interest_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Control_Interest_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Borrowing Structure</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nSBA__SBA_Boarding_Sheet_Entity_Involvements</fullName>
+        <description>Entity Involvement fields for SBA E-Tran boarding sheet</description>
+        <displayedFields>
+            <field>LLC_BI__Borrower_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Guarantor_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Tax_Identification_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.LLC_BI__Tax_Identification_Number_PE__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Control_Interest_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__Duns_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.Phone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.BillingStreet</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.BillingCity</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.BillingState</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.BillingPostalCode</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.ShippingStreet</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.ShippingCity</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.ShippingState</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.ShippingPostalCode</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__Exporter__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__Prior_SBA_Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__Prior_Government_Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__Applicant_Is_Presently_Suspended__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__Revenues_From_Gambling_Or_Sexual_Nature__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__No_SBA_Employee_Owns_10_Percent_Or_More__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__No_Former_SBA_Employee_Is_Owner_Partner__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__No_Member_of_Congress_Owns_10_Percent__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__No_GS13_Government_Employee_Owns_10_Pct__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__r.nSBA__No_SBAC_Or_SCORE_Member_Owns_10_Percent__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Balance_Reduction_Limitation_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Principal_Reduction_Limitation_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Maximum_Liability_Limitation_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Percentage_Limitation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Time_Limitation_Years__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Collateral_Recourse_Limitation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nSBA__Community_Property_Spouse_Interest_Limit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>SBA Boarding Sheet Entity Involvements</label>
+    </fieldSets>
+    <fields>
+        <fullName>Associated_Relationship__c</fullName>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Associated Relationship</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Authorization_To_Pull_Credit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Authorization To Pull Credit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Related Exposure Comments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_s_Financial_Analysis__c</fullName>
+        <description>Rich text field for Credit Memo</description>
+        <externalId>false</externalId>
+        <label>Borrower(s) Financial Analysis</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CSIDDP__nCino_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional text field houses the middleware code that designates which schema roles are added to the entity. It is visible to administrators.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field with the corresponding role code.</inlineHelpText>
+        <label>nCino Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSiDP__Is_Credit_Score_Used__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is used for document preparation. This field is used to set whether credit scoring used to evaluate the applicant of the loan.</description>
+        <externalId>false</externalId>
+        <label>Is Credit Score Used</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CSiDP__Non_Individual_Signer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This is a lookup key for document preparation to allow a business to be a signer for a business on a loan.</description>
+        <externalId>false</externalId>
+        <label>Non Individual Signer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Legal Entities</relationshipLabel>
+        <relationshipName>Legal_Entities</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Guarantor_Financial_Analysis__c</fullName>
+        <description>Rich text field for Credit Memo</description>
+        <externalId>false</externalId>
+        <label>Guarantor Financial Analysis</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Individual_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS( Relationship_Type_Push__c, &quot;Individual&quot;), &quot;Individual&quot;,
+IF(CONTAINS( Relationship_Type_Push__c , &quot;Sole Proprietorship&quot;), &quot;Individual&quot;, &quot;Business&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Relationship Type Formula</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Associates the Entity with a Relationship or Account by lookup</description>
+        <externalId>false</externalId>
+        <label>Relationship Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Legal_Entities</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Address__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Address for this Entity</description>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Borrower_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Typical borrower types will include borrower, co-borrower, guarantor, limited guarantor.  Value provided must match one of the values in the Type pick list established for this organization.</description>
+        <externalId>false</externalId>
+        <label>Borrower Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Borrower</fullName>
+                    <default>false</default>
+                    <label>Borrower</label>
+                </value>
+                <value>
+                    <fullName>Guarantor</fullName>
+                    <default>false</default>
+                    <label>Guarantor</label>
+                </value>
+                <value>
+                    <fullName>Limited Guarantor</fullName>
+                    <default>false</default>
+                    <label>Limited Guarantor</label>
+                </value>
+                <value>
+                    <fullName>Co-Borrower</fullName>
+                    <default>false</default>
+                    <label>Co-Borrower</label>
+                </value>
+                <value>
+                    <fullName>Related Entity</fullName>
+                    <default>false</default>
+                    <label>Related Entity</label>
+                </value>
+                <value>
+                    <fullName>Grantor</fullName>
+                    <default>false</default>
+                    <label>Grantor</label>
+                </value>
+                <value>
+                    <fullName>Guarantor Household</fullName>
+                    <default>false</default>
+                    <label>Guarantor Household</label>
+                </value>
+                <value>
+                    <fullName>Borrower Household</fullName>
+                    <default>false</default>
+                    <label>Borrower Household</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contingent_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of Contingent Liability.</description>
+        <externalId>false</externalId>
+        <label>Contingent Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contingent_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated when creating an entity involvement. It describes the type guarantee: Joint &amp; Several - the financial institution could be awarded damages and collect from any one, several, or all of the liable parties; Pro Rata - responsibility for payment of facility is proportional among all the guarantors; Assign Specific - payment of a facility is a set specific dollar amount or percentage amount.</description>
+        <externalId>false</externalId>
+        <label>Contingent Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Joint &amp; Several</fullName>
+                    <default>true</default>
+                    <label>Joint &amp; Several</label>
+                </value>
+                <value>
+                    <fullName>Pro Rata</fullName>
+                    <default>false</default>
+                    <label>Pro Rata</label>
+                </value>
+                <value>
+                    <fullName>Assign Specific</fullName>
+                    <default>false</default>
+                    <label>Assign Specific</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Deposit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This field is populated as part of the new deposit workflow. This field specifies the deposit associated with the entity involvement. By also associating the entity involvement to a relationship, it allows a user to associate a deposit and relationship together.</description>
+        <externalId>false</externalId>
+        <label>Deposit</label>
+        <referenceTo>LLC_BI__Deposit__c</referenceTo>
+        <relationshipLabel>Entity Involvements</relationshipLabel>
+        <relationshipName>Legal_Entities</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Entity_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Typical Entity  types will  include Operating Company, Sole Proprietorship, EPC, Individual.  Value provided must match one of the values in the Entity Type pick list established for this organization.</description>
+        <externalId>false</externalId>
+        <label>Entity Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Operating Company</fullName>
+                    <default>false</default>
+                    <label>Operating Company</label>
+                </value>
+                <value>
+                    <fullName>Sole Proprietorship</fullName>
+                    <default>false</default>
+                    <label>Sole Proprietorship</label>
+                </value>
+                <value>
+                    <fullName>EPC</fullName>
+                    <default>false</default>
+                    <label>EPC</label>
+                </value>
+                <value>
+                    <fullName>Individual</fullName>
+                    <default>false</default>
+                    <label>Individual</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Exclude_From_Account_Exposure__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED-- The user manually selects this optional field. When true, it excludes loan exposure from the relationship. When false, it does not.</description>
+        <externalId>false</externalId>
+        <label>-D Exclude From Account Exposure</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Exclude_From_Product_Package_Exposure__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED-- The user manually selects this optional field. When true, it excludes loan exposure from the product package. When false, it does not.</description>
+        <externalId>false</externalId>
+        <label>-D Exclude From Product Package Exposure</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Guarantee_Effective_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field. The date which a guarantee becomes effective. Typically, it is the date the facility funds.</description>
+        <externalId>false</externalId>
+        <label>Guarantee Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Guarantee_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field. It is the date which a guarantee ends. By default, this should be when repayment of a facility is satisfied.</description>
+        <externalId>false</externalId>
+        <label>Guarantee End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Guarantee_Limit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field. It is the fixed dollar amount of a limited guarantee.</description>
+        <externalId>false</externalId>
+        <label>Limited Guarantee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Guaranty_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field. This value specifices a type of guarantee in less specific terms than Contingent Type.</description>
+        <externalId>false</externalId>
+        <label>Guarantee Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unlimited</fullName>
+                    <default>false</default>
+                    <label>Unlimited</label>
+                </value>
+                <value>
+                    <fullName>Amount of Note</fullName>
+                    <default>false</default>
+                    <label>Amount of Note</label>
+                </value>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__HMDA_Applicant_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The HMDA applicant type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The HMDA applicant type.</inlineHelpText>
+        <label>HMDA Applicant</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Applicant</fullName>
+                    <default>false</default>
+                    <label>Applicant</label>
+                </value>
+                <value>
+                    <fullName>Co-Applicant</fullName>
+                    <default>false</default>
+                    <label>Co-Applicant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__HMDA_Ethnicity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field on the HMDA page. This field stores the ethnicty of the applicant.</description>
+        <externalId>false</externalId>
+        <label>Ethnicity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Code 1—Hispanic or Latino</fullName>
+                    <default>false</default>
+                    <label>Code 1—Hispanic or Latino</label>
+                </value>
+                <value>
+                    <fullName>Code 2—Not Hispanic or Latino</fullName>
+                    <default>false</default>
+                    <label>Code 2—Not Hispanic or Latino</label>
+                </value>
+                <value>
+                    <fullName>Code 3—Information not provided by applicant in mail, internet, or telephone application</fullName>
+                    <default>false</default>
+                    <label>Code 3—Information not provided by applicant in mail, internet, or telephone application</label>
+                </value>
+                <value>
+                    <fullName>Code 4—Not applicable</fullName>
+                    <default>false</default>
+                    <label>Code 4—Not applicable</label>
+                </value>
+                <value>
+                    <fullName>Code 5—No co-applicant</fullName>
+                    <default>false</default>
+                    <label>Code 5—No co-applicant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__HMDA_Income__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field on the HMDA page. This field stores the income of the applicant.</description>
+        <externalId>false</externalId>
+        <label>Income of Applicant (In Thousands)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__HMDA_Not_Provided__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field on the HMDA page. If enabled, the applicant does not have to enter other HMDA information. When disabled, other HMDA information is requested, but not required, of the applicant. This field is disabled by default.</description>
+        <externalId>false</externalId>
+        <label>I do not wish to supply this information</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__HMDA_Race__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field on the HMDA page. This field stores the race of the applicant.</description>
+        <externalId>false</externalId>
+        <label>Race - May select up to five</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Code 1—American Indian or Alaska Native</fullName>
+                    <default>false</default>
+                    <label>Code 1—American Indian or Alaska Native</label>
+                </value>
+                <value>
+                    <fullName>Code 2—Asian</fullName>
+                    <default>false</default>
+                    <label>Code 2—Asian</label>
+                </value>
+                <value>
+                    <fullName>Code 3—Black or African American</fullName>
+                    <default>false</default>
+                    <label>Code 3—Black or African American</label>
+                </value>
+                <value>
+                    <fullName>Code 4—Native Hawaiian/Pacific Islander</fullName>
+                    <default>false</default>
+                    <label>Code 4—Native Hawaiian/Pacific Islander</label>
+                </value>
+                <value>
+                    <fullName>Code 5—White</fullName>
+                    <default>false</default>
+                    <label>Code 5—White</label>
+                </value>
+                <value>
+                    <fullName>Code 6—Info not pro­vided by applicant</fullName>
+                    <default>false</default>
+                    <label>Code 6—Info not pro­vided by applicant</label>
+                </value>
+                <value>
+                    <fullName>Code 7—Not applicable</fullName>
+                    <default>false</default>
+                    <label>Code 7—Not applicable</label>
+                </value>
+                <value>
+                    <fullName>Code 8—No co-applicant</fullName>
+                    <default>false</default>
+                    <label>Code 8—No co-applicant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__HMDA_Sex__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The user manually populates this field on the HMDA page. This field stores the sex of the applicant.</description>
+        <externalId>false</externalId>
+        <label>Sex of the Applicant</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Code 1—Male</fullName>
+                    <default>false</default>
+                    <label>Code 1—Male</label>
+                </value>
+                <value>
+                    <fullName>Code 2—Female</fullName>
+                    <default>false</default>
+                    <label>Code 2—Female</label>
+                </value>
+                <value>
+                    <fullName>Code 3—Information not provided by applicant in mail, internet, or telephone application</fullName>
+                    <default>false</default>
+                    <label>Code 3—Information not provided by applicant in mail, internet, or telephone application</label>
+                </value>
+                <value>
+                    <fullName>Code 4—Not applicable</fullName>
+                    <default>false</default>
+                    <label>Code 4—Not applicable</label>
+                </value>
+                <value>
+                    <fullName>Code 5—No co-applicant or co-borrower</fullName>
+                    <default>false</default>
+                    <label>Code 5—No co-applicant or co-borrower</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Borrower__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates based on the selection in the LLC_BI__Borrower_Type__c field. It indicates if the record denotes a borrower.</description>
+        <externalId>false</externalId>
+        <formula>IF((ISPICKVAL(LLC_BI__Borrower_Type__c, &apos;Borrower&apos;)) , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Borrower</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_CoBorrower__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates based on the selection in the LLC_BI__Borrower_Type__c field. It indicates if the record denotes a co-borrower.</description>
+        <externalId>false</externalId>
+        <formula>IF((ISPICKVAL(LLC_BI__Borrower_Type__c, &apos;Co-Borrower&apos;)) , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is CoBorrower</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Grantor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates based on the selection in the LLC_BI__Borrower_Type__c field. It indicates if the record denotes a grantor</description>
+        <externalId>false</externalId>
+        <formula>IF((ISPICKVAL(LLC_BI__Borrower_Type__c, &apos;Grantor&apos;)) , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Grantor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Guarantor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates based on the selection in the LLC_BI__Borrower_Type__c field. It indicates if the record denotes a guarantor.</description>
+        <externalId>false</externalId>
+        <formula>IF(OR(ISPICKVAL(LLC_BI__Borrower_Type__c, &apos;Guarantor&apos;),ISPICKVAL(LLC_BI__Borrower_Type__c, &apos;Limited Guarantor&apos;)) , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Guarantor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Included_In_Global_Analysis__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field sets whether an entity is displayed in global analysis within spreads.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field sets whether an entity is displayed in global analysis within spreads.</inlineHelpText>
+        <label>Is Included in Global Analysis</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Related_Entity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates based on the selection in the LLC_BI__Borrower_Type__c field. It indicates if the record denotes a related entity</description>
+        <externalId>false</externalId>
+        <formula>IF((ISPICKVAL(LLC_BI__Borrower_Type__c, &apos;Related Entity&apos;)) , 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Related Entity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Limited_Guaranty_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field has been deprecated.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+ISPICKVAL(LLC_BI__Guaranty_Amount__c, &quot;Limited&quot;),
+LLC_BI__Ownership__c * LLC_BI__Loan__r.LLC_BI__Amount__c,
+0.00
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>-D Limited Guaranty Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan_Collateral__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It can be manually populated from a Collateral record. This field specifies the collateral associated with the entity involvement. It is not typically used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The collateral that the legal entity is associated with.</inlineHelpText>
+        <label>Loan Collateral</label>
+        <referenceTo>LLC_BI__Loan_Collateral__c</referenceTo>
+        <relationshipName>Legal_Entities</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Associates Entity with a specific loan by lookup</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipName>Legal_Entities</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Monthly_Debt_Service__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates by the debt schedule in the spreading application. It stores monthly debt service, which is used within the spreading application to determine the annual debt service.</description>
+        <externalId>false</externalId>
+        <label>Monthly Debt Service</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text area used to enter notes about the Entity</description>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Ownership__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percentage of Contingent Liability</description>
+        <externalId>false</externalId>
+        <label>Contingent Percentage</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Package__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates when creating entity involvement from the product package. This field specifies the product package associated with the entity involvement. By also associating the entity involvement to a relationship, it allows a user to associate a product package and relationship together.</description>
+        <externalId>false</externalId>
+        <label>Product Package</label>
+        <referenceTo>LLC_BI__Product_Package__c</referenceTo>
+        <relationshipLabel>Entity Involvements</relationshipLabel>
+        <relationshipName>Entity_Involvements</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Realestate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checkbox used to show if the legal Entity has real estate.  If the Legal Entity Type is an EPC, check Legal Entity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check box if the legal entity has realestate. Check this box if the Legal Entity Type is EPC</inlineHelpText>
+        <label>Realestate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Relationship_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes relationship ownership for Deposit account types.</description>
+        <externalId>false</externalId>
+        <label>Ownership Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Primary Owner</fullName>
+                    <default>false</default>
+                    <label>Primary Owner</label>
+                </value>
+                <value>
+                    <fullName>Secondary Owner</fullName>
+                    <default>false</default>
+                    <label>Secondary Owner</label>
+                </value>
+                <value>
+                    <fullName>Joint Owner</fullName>
+                    <default>false</default>
+                    <label>Joint Owner</label>
+                </value>
+                <value>
+                    <fullName>Household</fullName>
+                    <default>false</default>
+                    <label>Household</label>
+                </value>
+                <value>
+                    <fullName>Authorized Signer</fullName>
+                    <default>false</default>
+                    <label>Authorized Signer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Route_Agreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this optional lookup field with the route agreement id associated with the legal entity.</description>
+        <externalId>false</externalId>
+        <label>Route Agreement</label>
+        <referenceTo>nFORCE__Route_Agreement__c</referenceTo>
+        <relationshipLabel>Entity Involvements</relationshipLabel>
+        <relationshipName>Legal_Entities</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Tax_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Tax ID or SSN for this Entity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Tax ID. It does not have to include dashes.</inlineHelpText>
+        <label>Tax ID or SSN -D</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Treasury_Service__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It automatically populates when a user creates an entity involvement from a treasury service. It is also populated when a user creates a new treasury service from a relationship. This field specifies the treasury service associated with the entity involvement. By also associating the entity involvement to a relationship, it allows a user to associate a treasury service and relationship together.</description>
+        <externalId>false</externalId>
+        <label>Treasury Service</label>
+        <referenceTo>LLC_BI__Treasury_Service__c</referenceTo>
+        <relationshipLabel>Entity Involvements</relationshipLabel>
+        <relationshipName>Entity_Involvements</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Relationship_Type_Push__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(LLC_BI__Account__r.Type)</formula>
+        <label>Relationship Type (Push)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Relationship_Type_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Relationship Type Text</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Ben_Rel_Type_Other_Desc__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Users populate this optional text field with the &apos;other&apos; type description of relationship between the responsible individual&apos;s and the CESA&apos;s designated beneficiary.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the &apos;other&apos; type description of the relationship between the responsible individual&apos;s and the CESA&apos;s designated beneficiary.</inlineHelpText>
+        <label>Beneficiary Relationship Type Other Desc</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Beneficiary_Relationship_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Users select from this optional picklist the responsible individual&apos;s relationship to the CESA&apos;s designated beneficiary.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the responsible individual&apos;s relationship to the CESA&apos;s designated beneficiary.</inlineHelpText>
+        <label>Beneficiary Relationship Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Parent</fullName>
+                    <default>false</default>
+                    <label>Parent</label>
+                </value>
+                <value>
+                    <fullName>Guardian</fullName>
+                    <default>false</default>
+                    <label>Guardian</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Relationship_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Users populate this optional text field that provides a description of the relationship between the account holder and the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a description of the relationship between the account holder and the account.</inlineHelpText>
+        <label>Relationship Description</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Suppress_Signature__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field when the account holder should not print in the signature block of the signature card. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox when the account holder should not print in the signature block of the signature card.</inlineHelpText>
+        <label>Suppress Signature</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Telephone_Consumer_Protection_Form__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional checkbox to indicate the financial institution wants to generate a Telephone Consumer Protection Act Consent Account form for the agent of the Power of Attorney. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to indicate that the financial institution wants to generate a Telephone Consumer Protection Act Consent Account form for the agent of the Power of Attorney.</inlineHelpText>
+        <label>Telephone Consumer Protection Form</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WKDDP__nCino_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional text field houses the middleware code that designates which schema roles are added to the entity. It is visible to administrators.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field with the corresponding role code.</inlineHelpText>
+        <label>nCino Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nCino_Code__c</fullName>
+        <description>This optional text field houses the middleware code that designates which schema roles are added to the entity. It is visible to administrators.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field with the corresponding role code.</inlineHelpText>
+        <label>nCino Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nSBA__Balance_Reduction_Limitation_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of Balance Reduction Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of Balance Reduction Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Balance Reduction Limitation Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Collateral_Recourse_Limitation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Guarantee is limited to the amount Lender obtains from the collateral listed here. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Guarantee is limited to the amount Lender obtains from the collateral listed here. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Collateral Recourse Limitation</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nSBA__Community_Property_Spouse_Interest_Limit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if a community property spouse interest limit exists. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if a community property spouse interest limit exists. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Community Property Spouse Interest Limit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Control_Interest_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the way the entity holds control over Primary Borrower.</description>
+        <externalId>false</externalId>
+        <label>Control Type Over Primary Borrower</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>President</fullName>
+                    <default>false</default>
+                    <label>President</label>
+                </value>
+                <value>
+                    <fullName>Chairman of the Board</fullName>
+                    <default>false</default>
+                    <label>Chairman of the Board</label>
+                </value>
+                <value>
+                    <fullName>Chief Executive Officer (CEO)</fullName>
+                    <default>false</default>
+                    <label>Chief Executive Officer (CEO)</label>
+                </value>
+                <value>
+                    <fullName>Other Officers of the Concern</fullName>
+                    <default>false</default>
+                    <label>Other Officers of the Concern</label>
+                </value>
+                <value>
+                    <fullName>Other Partners of the Concern</fullName>
+                    <default>false</default>
+                    <label>Other Partners of the Concern</label>
+                </value>
+                <value>
+                    <fullName>Directors of the Concern</fullName>
+                    <default>false</default>
+                    <label>Directors of the Concern</label>
+                </value>
+                <value>
+                    <fullName>Owner of the Concern</fullName>
+                    <default>false</default>
+                    <label>Owner of the Concern</label>
+                </value>
+                <value>
+                    <fullName>Not Applicable</fullName>
+                    <default>false</default>
+                    <label>Not Applicable</label>
+                </value>
+                <value>
+                    <fullName>Primary Borrower</fullName>
+                    <default>false</default>
+                    <label>Primary Borrower</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nSBA__Guarantor_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the way the guarantor is guaranteeing the loan.</description>
+        <externalId>false</externalId>
+        <label>Guarantor Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nSBA__Maximum_Liability_Limitation_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of Maximum Liability Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of Maximum Liability Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Maximum Liability Limitation Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Percentage_Limitation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percentage Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percentage Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Percentage Limitation</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Principal_Reduction_Limitation_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of Principal Reduction Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of Principal Reduction Limitation. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Principal Reduction Limitation Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nSBA__Time_Limitation_Years__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time Limitation in Years. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Time Limitation in Years. Use this field only if Guarantor type is Limited Unsecured Guarantee or Limited Secured Guarantee. This field is used in SBA Loan Authorization only.</inlineHelpText>
+        <label>Time Limitation Years</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Entity Involvement</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Loan__c</columns>
+        <columns>LLC_BI__Account__c</columns>
+        <columns>LLC_BI__Deposit__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__Deposit__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>All2</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Entity Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Entity Involvements</pluralLabel>
+    <recordTypes>
+        <fullName>Deposit_Involvement2</fullName>
+        <active>true</active>
+        <label>Deposit Involvement</label>
+        <picklistValues>
+            <picklist>LLC_BI__Borrower_Type__c</picklist>
+            <values>
+                <fullName>Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Guarantor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Contingent_Type__c</picklist>
+            <values>
+                <fullName>Assign Specific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint %26 Several</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pro Rata</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Entity_Type__c</picklist>
+            <values>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operating Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Proprietorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Relationship_Type__c</picklist>
+            <values>
+                <fullName>Authorized Signer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Owner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WKDDP__Beneficiary_Relationship_Type__c</picklist>
+            <values>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LLC_BI__Deposit_Involvement</fullName>
+        <active>false</active>
+        <label>Deposit Involvement</label>
+        <picklistValues>
+            <picklist>LLC_BI__Borrower_Type__c</picklist>
+            <values>
+                <fullName>Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Guarantor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Contingent_Type__c</picklist>
+            <values>
+                <fullName>Assign Specific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint %26 Several</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pro Rata</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Entity_Type__c</picklist>
+            <values>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operating Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Proprietorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Ethnicity__c</picklist>
+            <values>
+                <fullName>Code 4%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Relationship_Type__c</picklist>
+            <values>
+                <fullName>Authorized Signer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Owner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WKDDP__Beneficiary_Relationship_Type__c</picklist>
+            <values>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LLC_BI__Loan_Involvement</fullName>
+        <active>false</active>
+        <label>Loan Involvement</label>
+        <picklistValues>
+            <picklist>LLC_BI__Borrower_Type__c</picklist>
+            <values>
+                <fullName>Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Related Entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Contingent_Type__c</picklist>
+            <values>
+                <fullName>Assign Specific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint %26 Several</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pro Rata</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Entity_Type__c</picklist>
+            <values>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operating Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Proprietorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Guaranty_Amount__c</picklist>
+            <values>
+                <fullName>Amount of Note</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Applicant_Type__c</picklist>
+            <values>
+                <fullName>Applicant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Applicant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Ethnicity__c</picklist>
+            <values>
+                <fullName>Code 1%E2%80%94Hispanic or Latino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 2%E2%80%94Not Hispanic or Latino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 3%E2%80%94Information not provided by applicant in mail%2C internet%2C or telephone application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 4%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 5%E2%80%94No co-applicant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Race__c</picklist>
+            <values>
+                <fullName>Code 1%E2%80%94American Indian or Alaska Native</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 2%E2%80%94Asian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 3%E2%80%94Black or African American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 4%E2%80%94Native Hawaiian%2FPacific Islander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 5%E2%80%94White</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 6%E2%80%94Info not pro%C2%ADvided by applicant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 7%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 8%E2%80%94No co-applicant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Sex__c</picklist>
+            <values>
+                <fullName>Code 1%E2%80%94Male</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 2%E2%80%94Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 3%E2%80%94Information not provided by applicant in mail%2C internet%2C or telephone application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 4%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 5%E2%80%94No co-applicant or co-borrower</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Relationship_Type__c</picklist>
+            <values>
+                <fullName>Joint Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Owner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WKDDP__Beneficiary_Relationship_Type__c</picklist>
+            <values>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nSBA__Guarantor_Type__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Loan_Involvement2</fullName>
+        <active>true</active>
+        <label>Loan Involvement</label>
+        <picklistValues>
+            <picklist>LLC_BI__Borrower_Type__c</picklist>
+            <values>
+                <fullName>Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Borrower Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Related Entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Contingent_Type__c</picklist>
+            <values>
+                <fullName>Assign Specific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint %26 Several</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pro Rata</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Entity_Type__c</picklist>
+            <values>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operating Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Proprietorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Guaranty_Amount__c</picklist>
+            <values>
+                <fullName>Amount of Note</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Applicant_Type__c</picklist>
+            <values>
+                <fullName>Applicant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Applicant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Ethnicity__c</picklist>
+            <values>
+                <fullName>Code 1%E2%80%94Hispanic or Latino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 2%E2%80%94Not Hispanic or Latino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 3%E2%80%94Information not provided by applicant in mail%2C internet%2C or telephone application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 4%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 5%E2%80%94No co-applicant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Race__c</picklist>
+            <values>
+                <fullName>Code 1%E2%80%94American Indian or Alaska Native</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 2%E2%80%94Asian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 3%E2%80%94Black or African American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 4%E2%80%94Native Hawaiian%2FPacific Islander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 5%E2%80%94White</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 6%E2%80%94Info not pro%C2%ADvided by applicant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 7%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 8%E2%80%94No co-applicant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__HMDA_Sex__c</picklist>
+            <values>
+                <fullName>Code 1%E2%80%94Male</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 2%E2%80%94Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 3%E2%80%94Information not provided by applicant in mail%2C internet%2C or telephone application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 4%E2%80%94Not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code 5%E2%80%94No co-applicant or co-borrower</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Relationship_Type__c</picklist>
+            <values>
+                <fullName>Joint Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Owner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WKDDP__Beneficiary_Relationship_Type__c</picklist>
+            <values>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nSBA__Guarantor_Type__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Treasury_Involvement</fullName>
+        <active>true</active>
+        <label>Treasury Involvement</label>
+        <picklistValues>
+            <picklist>LLC_BI__Borrower_Type__c</picklist>
+            <values>
+                <fullName>Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Guarantor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Related Entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Contingent_Type__c</picklist>
+            <values>
+                <fullName>Assign Specific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint %26 Several</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pro Rata</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Entity_Type__c</picklist>
+            <values>
+                <fullName>EPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operating Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Proprietorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LLC_BI__Relationship_Type__c</picklist>
+            <values>
+                <fullName>Household</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joint Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary Owner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>WKDDP__Beneficiary_Relationship_Type__c</picklist>
+            <values>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>LLC_BI__Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__Entity_Type__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>LLC_BI__Account__c</searchFilterFields>
+        <searchFilterFields>LLC_BI__Entity_Type__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Force_Contingent_Type_on_Guarantor</fullName>
+        <active>false</active>
+        <description>Because &quot;Contingent&quot; and Guarantor or basically the same thing</description>
+        <errorConditionFormula>IF(AND(ISPICKVAL( LLC_BI__Borrower_Type__c, &quot;Guarantor&quot;), ISPICKVAL( Contingent_Type__c, &apos;&apos;)),True,False)</errorConditionFormula>
+        <errorMessage>You must specify a type of contingency for this Guarantor.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Contingent_Amount_Exceeds_Loan_Amount</fullName>
+        <active>true</active>
+        <description>Ensures the contingent amount does not exceed the loan amount.</description>
+        <errorConditionFormula>LLC_BI__Contingent_Amount__c &gt; LLC_BI__Loan__r.LLC_BI__Amount__c</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Contingent_Amount__c</errorDisplayField>
+        <errorMessage>Contingent amount cannot exceed the loan amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Contingent_Amount_Less_Than_0</fullName>
+        <active>true</active>
+        <description>Contingent Amount a negative value.</description>
+        <errorConditionFormula>LLC_BI__Contingent_Amount__c &lt; 0</errorConditionFormula>
+        <errorMessage>Contingent Amount must be greater than 0.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Contingent_Amount_and_Contingent_Percent</fullName>
+        <active>true</active>
+        <description>Only one field can be used to calculate contingent guarantee. Please specify either amount or percentage before saving.</description>
+        <errorConditionFormula>( LLC_BI__Contingent_Amount__c &gt; 0 &amp;&amp;  LLC_BI__Ownership__c &gt; 0) &amp;&amp;
+(!CONTAINS(TEXT(LLC_BI__Borrower_Type__c) , &apos;Household&apos;))</errorConditionFormula>
+        <errorMessage>Only one field can be used to calculate contingent guarantee. Please specify either amount or percentage before saving.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__HMDA_Demographic</fullName>
+        <active>true</active>
+        <description>--DEPRECATED--</description>
+        <errorConditionFormula>FALSE</errorConditionFormula>
+        <errorMessage>--DEPRECATED--</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Ownership_Less_Than_0</fullName>
+        <active>true</active>
+        <description>Contingent Percentage must be greater than 0.</description>
+        <errorConditionFormula>LLC_BI__Ownership__c &lt; 0</errorConditionFormula>
+        <errorMessage>Contingent Percentage must be greater than 0.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>LLC_BI__New_on_Account</fullName>
+        <availability>online</availability>
+        <description>New entity involvement off accounts</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>New Entity Involvement</masterLabel>
+        <openType>sidebar</openType>
+        <page>LLC_BI__Search_Entity_Account</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>LLC_BI__New_on_Loan</fullName>
+        <availability>online</availability>
+        <description>New entity involvement off loans</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>New Entity Involvement</masterLabel>
+        <openType>sidebar</openType>
+        <page>LLC_BI__Search_Entity</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>LLC_BI__New_on_Package</fullName>
+        <availability>online</availability>
+        <description>New entity involvement from a package</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>New Entity Involvement</masterLabel>
+        <openType>sidebar</openType>
+        <page>LLC_BI__Search_Entity_Package</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

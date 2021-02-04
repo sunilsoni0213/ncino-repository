@@ -1,0 +1,36 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController">
+
+<apex:form >
+	<apex:repeat value="{!screenSections}" var="section">
+	<apex:outputPanel layout="none" rendered="{!ISBLANK(section.Widget__r)}">
+
+		<apex:variable var="APP_GUID" value="{!section.Id}{!guid}" />
+
+		<span data-bind="with: $root.{!APP_GUID}">
+			<div data-bind="ifnot: screenResources">
+				<apex:composition template="nFORCE__Template_UI_Loading" />
+			</div>
+			<div data-bind="if: screenResources">
+				<apex:insert name="knockout-content" />
+			</div>
+		</span>
+
+		<c:RegisterLayoutDesignerApp sObjectJSON="{!contextObjectJSON}"
+				guid="{!APP_GUID}"
+				sectionId="{!section.id}"
+				appName="{!APP_GUID}"
+				isLocked="{!isLocked}" />
+
+		<div data-bind="stopBinding: true" class="hidden">
+			<apex:insert name="dynamic-templates" />
+		</div>
+
+	</apex:outputPanel>
+	</apex:repeat>
+</apex:form>
+
+<div data-bind="stopBinding: true" class="hidden">
+	<apex:insert name="static-templates" />
+</div>
+
+</apex:page>

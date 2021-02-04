@@ -1,0 +1,27 @@
+<apex:page controller="nFORCE.SectionFormGeneratorController" docType="html-5.0" standardStylesheets="false" readOnly="true" applyBodyTag="false" showHeader="false" applyHtmlTag="false" sidebar="false">
+	<apex:form id="mkupsvc">
+		<apex:repeat rendered="{!ISBLANK(fieldSetKey) && ISBLANK(sObjectType)}"
+			value="{!order}"
+			var="field">
+			<apex:outputPanel rendered="{!(field.isVisible && (field.fieldType == 'PICKLIST' || field.fieldType == 'MULTIPICKLIST' || field.fieldType == 'BOOLEAN'))}">
+				<field-template name="{!field.guid}" type="{!field.fieldType}">
+					<apex:inputField html-ng-required="{!field.isRequired}"
+						required="{!field.isRequired}"
+						value="{!contextObjects[field.contextIdentifier][field.fieldName]}"
+						styleClass="form-control" />
+				</field-template>
+			</apex:outputPanel>
+		</apex:repeat>
+
+		<apex:repeat rendered="{!fieldSetKey != null && sObjectType != null}"
+			value="{!picklistConfiguration}"
+			var="plc">
+			<field-template name="{!plc.sObjectReferenceName}_{!plc.relativeFieldPath}" type="{!plc.originalFieldSetMember.type}">
+				<apex:inputField html-ng-required="{!plc.originalFieldSetMember.dbRequired}"
+					required="{!plc.originalFieldSetMember.dbRequired}"
+					value="{!plc.mockObject[plc.relativeFieldPath]}"
+					styleClass="form-control" />
+			</field-template>
+		</apex:repeat>
+	</apex:form>
+</apex:page>

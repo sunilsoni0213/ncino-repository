@@ -1,0 +1,7 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="LLC_BI.ManageBudgetAppController,nFORCE.ScreenController">
+	<c:ncManageBudget contextId="{!contextObjectId}"
+		nextHref="{!nextHref.url}"
+		summarySectionId="{!summarySectionId}"
+	/>
+</apex:page>

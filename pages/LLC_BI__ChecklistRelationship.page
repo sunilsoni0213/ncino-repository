@@ -1,0 +1,8 @@
+<apex:page docType="html-5.0"
+		   showHeader="false"
+		   sidebar="false"
+		   applyHtmlTag="false"
+		   standardStylesheets="false"
+		   standardController="Account">
+	<c:Checklist context="{!id}" />
+</apex:page>

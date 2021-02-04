@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Settings for the change memo triggers (movemod) so it uses proper doc manager IDs.</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__DocManId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The ID of the doc manager to move the file to (IE: Loan).</description>
+        <externalId>false</externalId>
+        <label>DocMan ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__DocTabId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The ID of the doc tab to move the file to (IE: Loan).</description>
+        <externalId>false</externalId>
+        <label>DocTab ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__DocTypeId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field and custom setting is currently not being used.</description>
+        <externalId>false</externalId>
+        <label>DocType ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enabled__c</fullName>
+        <deprecated>false</deprecated>
+        <description>We can enable or disable this feature.
+Yes | No</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Yes | No</inlineHelpText>
+        <label>Enabled</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Memo_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field indicates the Change Memo&apos;s forced name value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The name value that the change memo&apos;s names will be forced to. IE: &quot;Change Memo&quot;</inlineHelpText>
+        <label>Memo Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Bankr - Change Memo Profile</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,40 @@
+<apex:page >
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.Overview_Report_Update_Title}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_OverviewReportUpdate />
+                        <br/>
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+        
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.Overview_Title_Admin}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_OverviewConfigAdmin />
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

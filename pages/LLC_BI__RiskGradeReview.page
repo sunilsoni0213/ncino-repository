@@ -1,0 +1,55 @@
+<apex:page standardController="LLC_BI__Annual_Review__c" extensions="LLC_BI.RiskGradeAnalysisController" showHeader="true" sidebar="false">
+<c:RiskGradeAnalysisGrid riskGradeTemplate="{!LLC_BI__Annual_Review__c.LLC_BI__Risk_Grade_Template__c}" 
+	riskGradeReview="{!LLC_BI__Annual_Review__c.Id}" 
+	saveFunction="saveRiskGradeFactorValues" />
+	
+<script type="text/javascript">
+	var aaData = [];
+</script>
+
+<apex:form >
+<apex:outputPanel id="finalRiskGradeDiv">
+	<apex:pageBlock title="{!$Label.llc_bi__risk_grade_value}" mode="detail" rendered="true">
+		<apex:pageBlockSection > 
+			<apex:pageBlockSectionItem >
+					<apex:outputLabel id="computedRiskGradeLabel" value="{!$Label.llc_bi__computed_risk_grade}" for="riskGradeValueField"/> 
+					<apex:outputField id="riskGradeValueField" value="{!LLC_BI__Annual_Review__c.LLC_BI__Computed_Risk_Grade_Value__c}" label="computedRiskGradeLabel"/>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection >
+			<apex:pageBlockSectionItem >	
+				<apex:outputLabel id="overriddenRiskGradeLabel" value="{!$Label.llc_bi__overridden_risk_grade}" for="overriddenRiskGradeValueField"/> 
+				<apex:outputField id="overriddenRiskGradeValueField" styleClass="riskgrade_override" value="{!LLC_BI__Annual_Review__c.LLC_BI__Overridden_Risk_Grade_Value__c}" label="overriddenRiskGradeLabel">
+					<apex:inlineEditSupport event="onmouseover" /> 
+				</apex:outputField>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection >
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel id="finalRiskGradeLabel" value="{!$Label.llc_bi__final_risk_grade}" for="finalRiskGradeValueField"/> 
+				<apex:outputField id="finalRiskGradeValueField" value="{!LLC_BI__Annual_Review__c.LLC_BI__Final_Risk_Grade__c}" label="finalRiskGradeLabel"/>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection >
+			<apex:pageBlockSectionItem >	
+				<apex:outputLabel id="commentsLabel" value="{!$Label.llc_bi__comments}" for="commentField"/> 
+				<apex:outputField id="commentField" styleClass="riskgrade_commentfield" value="{!LLC_BI__Annual_Review__c.LLC_BI__Comments__c}">
+					<apex:inlineEditSupport event="ondblclick" /> 
+				</apex:outputField>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+
+		<apex:pageBlockButtons >
+			<apex:commandButton action="{!quicksave}" oncomplete="reload();" immediate="false" id="saveButton" value="Save" rerender="dummy"/>
+		</apex:pageBlockButtons>
+	</apex:pageBlock>
+</apex:outputPanel>
+<apex:actionFunction action="{!saveRiskGradeFactorValues}" name="saveRiskGradeFactorValues" rerender="finalRiskGradeDiv">
+	<apex:param name="firstParam" assignTo="{!jSonRiskGradeFactorValues}" value="" />
+</apex:actionFunction>
+<apex:actionFunction action="{!reload}" name="reload" rerender="finalRiskGradeDiv">
+</apex:actionFunction>	
+<apex:outputPanel id="dummy"></apex:outputPanel>
+</apex:form>
+
+</apex:page>

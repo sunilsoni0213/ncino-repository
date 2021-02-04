@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Chief_Credit_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Chief_Executive_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Team_Leader</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Senior_Credit_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>LLC_BI__Account__c</field>
+        <field>LLC_BI__Amount__c</field>
+        <field>LLC_BI__Product_Line__c</field>
+        <field>LLC_BI__Product_Type__c</field>
+        <field>LLC_BI__Product__c</field>
+        <field>LLC_BI__InterestRate__c</field>
+        <field>LLC_BI__isRenewal__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is Secured 
+(2) Loan Amount is Within a Loan Officer&apos;s ILA 
+(3) Total Exposure &lt;= Secured Individual Lending Authority</description>
+        <entryCriteria>
+            <formula>LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Secured_Individual_Lending_Authority__c</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Secured ILA Approval Process</label>
+        <name>Secured_ILA_Approval_Process</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is Secured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s Secured ILA 
+(3) Loan Amount IS Within Manager&apos;s Secured ILA 
+(4) Total Exposure &lt;= Manager&apos;s Secured Individual Lending Authority</description>
+        <entryCriteria>
+            <formula>AND ( 
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Secured_Individual_Lending_Authority__c, 
+LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Manager.Secured_Individual_Lending_Authority__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Secured Manager ILA Approval Process</label>
+        <name>Secured_Manager_ILA_Approval_Process</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is Secured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s Secured ILA 
+(3) Loan Amount is NOT Within the Manger&apos;s Secured ILA 
+(4) Loan Amount IS Within the Manager&apos;s Manager Secured ILA
+(5) Total Exposure &lt;= Manager&apos;s Manager Secured Individual Lending Authority</description>
+        <entryCriteria>
+            <formula>AND ( 
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Secured_Individual_Lending_Authority__c, 
+LLC_BI__Account__r.Total_Exposure__c &gt; LLC_BI__Loan_Officer__r.Manager.Secured_Individual_Lending_Authority__c, 
+LLC_BI__Account__r.Total_Exposure__c &lt;= LLC_BI__Loan_Officer__r.Manager.Manager.Secured_Individual_Lending_Authority__c)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Secured Manager&apos;s Manager ILA</label>
+        <name>Secured_Manager_s_Manager_ILA</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Approval process when a loan meets the following conditions: 
+(1) Loan is Secured 
+(2) Loan Amount is NOT Within a Loan Officer&apos;s Secured ILA 
+(3) Lending Authority is NOT Suspended 
+(4) Loan Amount is Within the SCO + CCO Combined ILA 
+(5) Total Exposure &lt; $3,000,000</description>
+        <entryCriteria>
+            <formula>AND ( 
+LLC_BI__Amount__c &gt; 1000000, 
+LLC_BI__Amount__c &lt; 2000001)</formula>
+        </entryCriteria>
+        <label>Secured SCO + CCO ILA</label>
+        <name>Secured_SCO_CCO_ILA</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Approval process when a loan meets the following conditions: 
+(1) Total Exposure &lt; $3,000,000 
+(2) Loan Amount &lt; $2,000,000 
+(3) Loan is SECURED 
+(4) Risk Grade is &lt; 6  
+(5) Employee Loan = FALSE
+(6) Reg O = FALSE</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND (
+LLC_BI__Product_Reference__r.Unsecured_Product__c = FALSE,
+LLC_BI__Account__r.Total_Exposure__c &lt; 3000000,
+ISPICKVAL(LLC_BI__Stage__c , &apos;Underwriting&apos;),
+ISPICKVAL(LLC_BI__Status__c , &apos;Open&apos;),
+LLC_BI__Employee_Loan__c = FALSE,
+LLC_BI__Reg_O_Loan__c = FALSE)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Loan_Approval_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Credit_Approval_Date_Today</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_has_been_approved_Please_verify_client_acceptance</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Loan_Last_Approval_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Proposal</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_is_Review_Ready_upon_approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Loan_Last_Approval_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Rejection_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Loan_Stage_Approval_Loan_Committee</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Secured Loan Approval Processes</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>4</processOrder>
+    <recallActions>
+        <action>
+            <name>Loan_Last_Approval_Status_Removed</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

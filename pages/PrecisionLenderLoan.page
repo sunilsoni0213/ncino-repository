@@ -1,0 +1,87 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="PrecisionLenderRepricingController">
+
+	<nFORCE:Include_Design_System flavor="vf" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'jquery/js/jquery.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncPubsubIncludes />
+	<nFUSE:PushTopicRegistration topic="TransactionLogUpdate" callback="processLogUpdate" />
+	<script type="text/javascript">
+
+		function openRequestedPopup(url, pageTitle) {
+			window.open(
+				url,
+				pageTitle,
+				"resizable,scrollbars,status"
+			);
+		}
+
+		function initReprice() {
+			document.getElementById("InProgress").style.display = 'block';
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.PrecisionLenderRepricingController.remoteRepriceLoan}',
+				'{!JSENCODE(objectId)}',
+				function(result, event){
+				},
+				{escape: true, buffer: true}
+			);
+		}
+
+		function processLogUpdate(message) {
+			var vendorStatus = message.data.sobject.nFUSE__Vendor_Status__c;
+			var tranStatus = message.data.sobject.nFUSE__Transaction_Status__c;
+			var objId = message.data.sobject.nFUSE__Primary_Object_Id__c;
+			var logId = message.data.sobject.Id;
+
+			if (objId === '{!JSENCODE(objectId)}' && (tranStatus === 'Complete' || tranStatus === 'Submitted')) {
+				if (vendorStatus === 'Repricing Complete') {
+					window.top.location = '/' + objId;
+				}
+				Visualforce.remoting.Manager.invokeAction(
+					'{!$RemoteAction.PrecisionLenderRepricingController.getLogDetails}',
+					logId,
+					function(result, event){
+						if (result != null) {
+							if (vendorStatus === 'Repricing') {
+								var detailsMap = result;
+								openRequestedPopup(detailsMap['OpportunityURL'], 'PrecisionLender Repricing');
+							}
+						}
+					},
+					{escape: true, buffer: true}
+				);
+			}
+		}
+	</script>
+	<div class="slds force" id="ncPrecisionLender_Repricing">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div style="position: relative;" class="slds-align--absolute-center">
+							<div style="display:none" id="InProgress" class="slds-spinner_container" align="center">
+								<div role="status" class="slds-spinner">
+									<img width="70" height="70" src="{!URLFOR($Resource.nFORCE__SLDS0122, '/assets/images/spinners/slds_spinner_brand.gif')}" alt="" />
+								</div>
+								<div style="padding-top: 90px; font-style:italic; color:#1589ee; font-size:16px;">{!$Label.PL_Pricing_Repricing_In_Progress}</div>
+							</div>
+							<message></message>
+							<apex:form >
+								<p class="narrative-header">{!$Label.PL_Pricing_Repricing_Desc}</p>
+								<br/>
+								<div align="center">
+									<input id="saveAndCont" type="button" value="{!$Label.PL_Pricing_Reprice_PrecisionLender}"
+										onclick="initReprice();" class="slds-button slds-button--brand" />
+								</div>
+								<br/>
+								<br/>
+							</apex:form>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

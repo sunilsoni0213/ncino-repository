@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants the user the ability to upload to classic document manager. They will still have the ability to upload to staging.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Classic Document Manager Upload Permissions</label>
+</PermissionSet>

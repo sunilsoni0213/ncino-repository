@@ -1,0 +1,28 @@
+<apex:page standardController="Account"
+	extensions="LLC_BI.TreasuryMaintenanceController"
+	sidebar="false">
+
+	<apex:outputPanel rendered="{!version == 1}">
+		<c:ncTreasuryServiceMaintenance addAnalyzedAccountSectionId="{!addAnalyzedAccountSectionId}"
+			addAuthorizedUserSectionId="{!addAuthorizedUserSectionId}"
+			authorizedUserSearchSectionId="{!authorizedUserSearchSectionId}"
+			analyzedAccountsSearchSectionId="{!analyzedAccountSearchSectionId}"
+			orderModalSectionId="{!orderModalSectionId}"
+			relationshipId="{!relationshipId}"
+			guid="{!guid}"
+			ns="{!namespace}"
+		/>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!version == 2 || version == 3}">
+		<c:ncTreasuryServiceMaintenance_v2 addAnalyzedAccountSectionId="{!addAnalyzedAccountSectionId}"
+			addAuthorizedUserSectionId="{!addAuthorizedUserSectionId}"
+			authorizedUserSearchSectionId="{!authorizedUserSearchSectionId}"
+			analyzedAccountsSearchSectionId="{!analyzedAccountSearchSectionId}"
+			orderModalSectionId="{!orderModalSectionId}"
+			relationshipId="{!relationshipId}"
+			guid="{!guid}"
+			ns="{!namespace}"
+		/>
+	</apex:outputPanel>
+</apex:page>

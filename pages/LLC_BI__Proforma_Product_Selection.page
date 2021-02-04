@@ -1,0 +1,21 @@
+<apex:page showHeader="false" sidebar="false">
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncPubsubIncludes />
+
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'application/App.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'application/Bootstrap.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'components/ProformaProductSelection.js')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProformaProductSelection, 'css/Style.css')}"/>
+	<c:ProformaProductSelectionConfiguration />
+
+	<div id="ncProformaProductSelection">
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<c:ProformaProductSelectionPartial />
+		<proforma-product-selection />
+	</div>
+
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access for Document Preparation Workflow</description>
+    <isLicensed>false</isLicensed>
+    <label>Document Preparation Workflow</label>
+</CustomPermission>

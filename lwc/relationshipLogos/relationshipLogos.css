@@ -1,0 +1,7 @@
+.component{
+    background-color: #fafaf9;
+}
+.centerWrapper{
+    display: flex;
+    justify-content: center;
+}

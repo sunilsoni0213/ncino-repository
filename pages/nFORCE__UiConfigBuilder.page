@@ -1,0 +1,13 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	controller="nFORCE.TemplateController">
+	<c:Include_Design_System flavor="vf" />
+	<apex:composition template="nFORCE__Template_Landing">
+		<apex:define name="topbar">
+			<apex:include pageName="{!IF(isNull(route.Topbar__c),'InvalidRouteConfiguration',route.Topbar__c)}" />
+		</apex:define>
+		<apex:define name="body">
+			<apex:include pageName="{!IF(isNull(route.Body__c),'InvalidRouteConfiguration',route.Body__c)}" />
+		</apex:define>
+	</apex:composition>
+</apex:page>

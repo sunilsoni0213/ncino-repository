@@ -1,0 +1,40 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="LLC_BI.DrawHistoryAppController,nFORCE.ScreenController">
+
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Route />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system,'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncManageBudget, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncManageBudget, 'directives/sync.directive.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncManageBudget, 'filters/budgetFilters.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncManageBudget, 'providers/RemotingProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncManageBudget, 'services/budget.service.js')}" />
+
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'css/Style.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'providers/RemotingProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'controllers/DrawHistoryController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'controllers/DrawRequestController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncDrawHistory, 'directives/Popover.js')}" />
+
+	<nFORCE:Include_Design_System components="true"/>
+	<apex:slds />
+
+	<div id="ncDrawHistory" class="slds ng-cloak">
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<div class="nds-section">
+			<ng-view></ng-view>
+		</div>
+	</div>
+
+	<c:DrawHistoryRoutes />
+	<c:DrawHistoryConfiguration contextId="{!contextObjectId}"
+		summarySectionId="{!summarySectionId}"
+	/>
+</apex:page>

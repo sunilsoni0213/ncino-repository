@@ -1,0 +1,6 @@
+<apex:page showHeader="false" standardStylesheets="false">
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularReset.js')}" />
+	<c:Include_AngularJS />
+	<c:Include_Design_System flavor="vf" />
+	<c:ncTopbar />
+</apex:page>

@@ -1,0 +1,155 @@
+<template>
+    <div style="background-color: #fff;">
+        <template if:true={showLoginState}>
+            <div class="slds-p-around_small thick-border-bottom">
+                <div class="flex-space-between">
+                    <!-- Settings -->
+                    <div class="logged-in-as slds-text-body_small" tabindex="0">{labels.loggedInAs}</div>
+                    <lightning-button-icon 
+                        icon-name="utility:settings"
+                        variant="container" 
+                        alternative-text={labels.settings}
+                        onclick={handleSettingsClick}
+                        title={labels.settings}>
+                    </lightning-button-icon>
+                </div>
+
+                <div class="slds-m-top_xx-small">
+                    <template if:true={loggedInUser}>
+                        <c-demo-persona-individual
+                            user={loggedInUser}
+                            user-index={loggedInUserIndex}>
+                        </c-demo-persona-individual>  
+                    </template>           
+                </div>
+            </div>
+
+            <!-- List of available users to login as -->
+            <div class="slds-is-relative">
+                <template if:true={demoUsersLoaded}>
+                    <ul>
+                        <template if:true={demoUsers}>
+                            <template for:each={demoUsers} for:item="demoUser" for:index="index">
+                                <li key={demoUser.id} class="slds-p-around_small slds-border_bottom flex-space-between">
+                                    <c-demo-persona-individual 
+                                        user={demoUser}
+                                        user-index={index}>
+                                    </c-demo-persona-individual>
+                                    <div 
+                                        class="slds-is-relative" 
+                                        onclick={handleLoginClick} 
+                                        data-id={demoUser.id}
+                                    >   
+                                        <!-- Login button -->
+                                        <div class="vertical-center">
+                                            <lightning-button 
+                                                label={labels.login} 
+                                                title={labels.login}>
+                                            </lightning-button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                        </template>
+                    </ul>
+                </template>
+                <template if:false={demoUsersLoaded}>
+                    <div class="spinner-container">
+                        <lightning-spinner 
+                            alternative-text="Loading"
+                            size="medium">
+                        </lightning-spinner>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- Settings section -->
+        <template if:false={showLoginState}>
+            <div class="">
+                <div class="slds-p-around_small slds-border_bottom">
+                    <div class="flex-space-between">
+                        <!-- Back/Save button group -->
+                        <div style="display: flex;">
+                            <lightning-button
+                                label={labels.back}
+                                title={labels.back}
+                                onclick={handleBackClick}>
+                            </lightning-button>
+                            <lightning-button
+                                class="slds-m-left_xx-small"
+                                label={labels.save}
+                                title={labels.save}
+                                variant="brand"
+                                disabled={isSaveDisabled}
+                                onclick={handleSaveClick}>
+                            </lightning-button>
+                        </div>
+                        <div class="italicize slds-text-body_small slds-m-left_x-large slds-text-align-center">{labels.choose}</div>
+                    </div>
+                </div>
+
+                <template if:true={activeUsersLoaded}>
+                    <div class="slds-text-body_small slds-p-around_small">{selectedUsers}</div>
+                </template>
+            </div>
+
+            <!-- List of active users -->
+            <div class="slds-is-relative">
+                <template if:true={activeUsersLoaded}>
+                    <ul>
+                        <template if:true={activeUsers}>
+                            <template for:each={activeUsers} for:item="activeUser" for:index="index">
+                                <li key={activeUser.id} class="slds-p-around_small slds-border_bottom flex-space-between">
+                                    <c-demo-persona-individual 
+                                        user={activeUser}
+                                        user-index={index}>
+                                    </c-demo-persona-individual>
+                                    <div class="slds-is-relative">
+                                        <template if:true={activeUser.demoUser}>
+                                            <!-- Check mark button -->
+                                            <button 
+                                                class="slds-button slds-button_success add-remove-button vertical-center"
+                                                data-id={activeUser.id}
+                                                onclick={handleRemoveUserClick}
+                                            >
+                                                <lightning-icon 
+                                                    icon-name="utility:check" 
+                                                    variant="inverse"
+                                                    title={labels.removeUser} 
+                                                    size="x-small">
+                                                </lightning-icon>
+                                            </button>
+                                        </template>
+                                        <template if:false={activeUser.demoUser}>
+                                            <!-- Plus button --> 
+                                            <button 
+                                                class="slds-button slds-button_neutral add-remove-button vertical-center"
+                                                data-id={activeUser.id}
+                                                onclick={handleAddUserClick}
+                                            >
+                                                <lightning-icon 
+                                                    icon-name="utility:add"
+                                                    title={labels.addUser} 
+                                                    size="x-small">
+                                                </lightning-icon>
+                                            </button>
+                                        </template>
+                                    </div>
+                                </li>
+                            </template>
+                        </template>
+                    </ul>
+                </template>
+                <template if:false={activeUsersLoaded}>
+                    <div class="spinner-container">
+                        <lightning-spinner 
+                            alternative-text="Loading"
+                            size="medium">
+                        </lightning-spinner>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

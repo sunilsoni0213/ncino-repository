@@ -1,0 +1,19 @@
+<apex:page standardStylesheets="false" docType="html-5.0" controller="nCRED.StatementLauncherController" action="{!importSpreadIfNeeded}">
+	<apex:outputPanel rendered="{!nextUrlString != NULL}">
+		<c:StatementLauncher nextUrl="{!nextUrlString}" />
+	</apex:outputPanel>
+	<apex:outputPanel rendered="{!nextUrlString == NULL && !hasEdit}">
+		<h1 style="font-size:1.5em;">{!$Label.ncred__missing_permissions}</h1>
+	</apex:outputPanel>
+	<apex:outputPanel rendered="{!nextUrlString == NULL && hasEdit}">
+		<nFORCE:Loading_Modal enableBootstrap3="false" />
+		<style>
+			html{  font-family: Arial;  }
+			td { font-size: 12px; }
+		</style>
+		<c:BundleStart contextId="{!bundleContext.contextId}"
+			junctionId="{!bundleContext.junctionId}"
+			groupingObjectId="{!bundleContext.groupingObjectId}"
+		/>
+	</apex:outputPanel>
+</apex:page>

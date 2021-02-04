@@ -1,0 +1,25 @@
+<apex:page >
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0122,'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__loanAutoDecisionCSS)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__navigator, 'factories/ncNavigator.factory.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__loanAutoDecisionApp)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'messages/MessageDirective.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'messages/MessageController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'messages/MessageService.js')}" />
+	<c:LoanAutoDecisionDataService />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__loanAutoDecisionRunController)}"/>
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left" />
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:LoanAutoDecisionRun />
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

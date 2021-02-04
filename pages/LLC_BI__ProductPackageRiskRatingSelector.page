@@ -1,0 +1,18 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false" standardController="LLC_BI__Product_Package__c">
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			{!$Label.llc_bi__rrs_selector_title}
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:RiskRatingSelector objectType="ProductPackage" />
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

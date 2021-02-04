@@ -1,0 +1,27 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardController="LLC_BI__Credit_Memo_Modifcation__c"
+	extensions="LLC_BI.DefaultAppController,nFORCE.TemplateController">
+
+	<c:Include_AngularJS />
+
+	<apex:composition template="nFORCE__Template_Landing">
+
+		<apex:define name="topbar">
+			<apex:include pageName="{!IF(isNull(route.nFORCE__Topbar__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Topbar__c)}" />
+		</apex:define>
+
+		<apex:define name="navigation">
+			<apex:include pageName="{!IF(isNull(route.nFORCE__Navigation__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Navigation__c)}"/>
+		</apex:define>
+
+		<apex:define name="subNavigation">
+			<apex:include pageName="{!IF(isNull(route.nFORCE__Sub_Navigation__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Sub_Navigation__c)}" />
+		</apex:define>
+
+		<apex:define name="body">
+			<apex:include pageName="{!IF(isNull(route.nFORCE__Body__c),'nFORCE__InvalidRouteConfiguration',route.nFORCE__Body__c)}" />
+		</apex:define>
+	</apex:composition>
+</apex:page>

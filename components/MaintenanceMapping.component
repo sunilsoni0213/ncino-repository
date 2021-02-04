@@ -1,0 +1,75 @@
+<apex:component >
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.4.6/angular.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+        <apex:includeScript value="{!URLFOR($Resource.maintenanceMappingController)}"/>
+        <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncino_ui_module)}"/>
+        <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncino_ui_message_handler)}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS100,
+            'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+        <span ng-app="maintenanceMappingApp" ng-controller="MaintenanceMappingController">
+            <div class="force slds" ng-init="init()">
+                <div class="slds-col" ng-cloak="ng-cloak">
+                    <div class="slds-grid">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" >Select a Maintenance Task to Configure</label>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container">
+                                        <select class="slds-select"
+                                            ng-model="selectedType"
+                                            ng-options="mType for mType in types"
+                                            ng-change="getCurrentChecklist()">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    <div class="slds-picklist--draggable slds-grid">
+                        <div class="slds-form-element">
+                            <span class="slds-form-element__label" aria-label="select-1">Available Actions</span>
+                             <div class="slds-picklist">
+                                <ul class="slds-picklist__options slds-picklist__options--multi shown">
+                                    <li id="{{action.actionItem}}" class="slds-picklist__item" aria-selected="false" tabindex="0" ng-repeat="action in availableActions | orderBy: 'actionItem' track by $index">
+                                        <span class="slds-truncate" >
+                                            <span ng-click="selectItem(action)">{{action.actionItem}}</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-grid--vertical">
+                            <button class="slds-button slds-button--icon-container" ng-click="addChecklistItem()">
+                                <svg aria-hidden="true" class="slds-button__icon">
+                                    <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#right')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Arrow right</span>
+                            </button>
+                            <button class="slds-button slds-button--icon-container" ng-click="removeSelectedItem()">
+                                <svg aria-hidden="true" class="slds-button__icon">
+                                    <use xlink:href="{!URLFOR($Resource.SLDS100, '/assets/icons/utility-sprite/svg/symbols.svg#left')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Arrow left</span>
+                            </button>
+                        </div>
+                        <div class="slds-form-element">
+                            <span class="slds-form-element__label" aria-label="select-2">Selected Actions</span>
+                             <div class="slds-picklist slds-picklist--multi">
+                                <ul class="slds-picklist__options slds-picklist__options--multi shown">
+                                    <li draggable="false" id="{{action.actionItem}}" class="slds-picklist__item" aria-selected="false" tabindex="0" ng-repeat="action in selectedActions track by $index">
+                                        <span class="slds-truncate" >
+                                            <span ng-click="deselectItem(action)">{{action.actionItem}}</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slds-container--right slds-container--small">
+                                <button class="slds-button slds-button--brand" ng-click="saveMappings()">Save Checklist</button><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </html>
+</apex:component>

@@ -1,0 +1,4 @@
+<apex:page >
+	<c:Checks />
+	<c:ChecksConfiguration />
+</apex:page>

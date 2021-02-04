@@ -1,0 +1,42 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.Topbar,nFORCE.ToolNavigation,nFORCE.ActionNavigation,nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+	<apex:styleSheet value="{!URLFOR($Resource.nFORCE__ncTopbar, 'css/Style.css')}" />
+	<c:Include_AngularJS />
+	<c:ncUIIncludes />
+	<c:Include_Design_System flavor="vf" />
+	<c:ncDataProvidersIncludes />
+	<div class="row">
+		<div class="col-xs-4 col-md-8 top-bar-heading" id="ncUI">
+			<div class="stencils nds-double-stencil topbar-navigation-item-stencil"/>
+			<div class="stencils nds-double-stencil topbar-navigation-item-stencil"/>
+			<div class="stencils nds-double-stencil topbar-navigation-item-stencil"/>
+			<div class="stencils nds-double-stencil topbar-navigation-item-stencil"/>
+			<breadcrumb-view
+				elements="{!breadcrumbs}"
+				chevron-icon-path="{!URLFOR($Resource.design_system, 'assets/icons/utility/chevronright_60.png')}"
+				is-lightning="{!$User.UIThemeDisplayed == 'Theme4d' || $User.UIThemeDisplayed == 'Theme4t'}"/>
+		</div>
+		<div class="col-xs-8 col-md-4 top-bar-controls text-right">
+			<div class="top-bar-controls-items">
+				<c:Template_Tools_And_Actions toolMenu="{!toolMenu}" actionMenu="{!actionMenu}" />
+				<c:BulkFieldUpdater />
+				<c:GlobalActionButtonHandler nextHref="{!nextHref.url}"
+					 isLocked="{!isLocked}"
+					 appResolved="{!appResolved}"
+					 contextId="{!contextObjectId}"
+				/>
+				<apex:include pageName="nFORCE__Success_Message_Handler"/>
+			</div>
+		</div>
+	</div>
+	<div id="ncScreenSectionFormBuilderTopbar">
+		<apex:repeat value="{!groupScreenSections}" var="section">
+			<nc-topbar-screen-section
+					  section-id="{!section.id}"
+					  guid="{!section.id}{!guid}"
+					  context-id="{!contextObjectId}">
+			</nc-topbar-screen-section>
+		</apex:repeat>
+	</div>
+
+	<c:ncScreenSectionFormBuilderIncludes />
+</apex:page>

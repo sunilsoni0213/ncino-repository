@@ -1,0 +1,19 @@
+<apex:page controller="nFORCE.TemplateController" extensions="LLC_BI.QuestionnaireAppController">
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngAnchorDirective)}" />
+
+	<c:Include_AngularJS />
+
+	<div id="app" ng-controller="AppController">
+
+		<apex:include pageName="LLC_BI__Questionnaire_App" />
+
+		<c:QuestionnaireLoanConfiguration nextHref="{!nextHref.url}"
+			groupId="{!questionnaireGroupId}"
+			contextOwnerId="{!contextOwnerId}"
+			contextObjectId="{!contextObjectId}"
+			nccAnchorText="{!nCCAnchorText}"/>
+
+	</div>
+
+</apex:page>

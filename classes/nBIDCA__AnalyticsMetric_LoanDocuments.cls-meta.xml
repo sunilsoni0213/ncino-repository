@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>35.0</apiVersion>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>0</minorNumber>
+        <namespace>LLC_BI</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>4</minorNumber>
+        <namespace>nBIDC</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>14</minorNumber>
+        <namespace>nBIDCA</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>165</minorNumber>
+        <namespace>nFORCE</namespace>
+    </packageVersions>
+    <status>Active</status>
+</ApexClass>

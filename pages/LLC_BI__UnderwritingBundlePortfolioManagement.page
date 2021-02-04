@@ -1,0 +1,5 @@
+<apex:page standardController="LLC_BI__Underwriting_Bundle__c" showHeader="false" sidebar="false">
+	<apex:outputPanel layout="inline">
+		{!$Label.llc_bi__underwriting_bundle_date_warning}
+	</apex:outputPanel>
+</apex:page>

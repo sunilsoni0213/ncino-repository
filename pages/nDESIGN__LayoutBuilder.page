@@ -1,0 +1,13 @@
+<apex:page standardController="nDESIGN__Screen_Section__c" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		</head>
+		<body>
+			<c:Includes enableLifeCycleApp="true" />
+			<c:LayoutBuilder_Functions />
+			<c:Navigation currentAppName="nCino_Layout" />
+			<c:LayoutBuilder sectionParam="{!nDESIGN__Screen_Section__c}" sectionId="{!nDESIGN__Screen_Section__c.Id}"/>
+		</body>
+	</html>
+</apex:page>

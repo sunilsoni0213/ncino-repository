@@ -1,0 +1,155 @@
+<apex:page controller="nFUSE.PluginConfigurationController" showHeader="true" sidebar="true">
+	<nFORCE:Includes enableBS3Namespace="true"/>
+	<nFORCE:Include_Design_System />
+	<c:Include_AngularJS />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'apps/dashboard/controllers.js')}"/>
+
+	<script type="text/javascript">
+		(function(){
+			'use strict';
+			angular.module('dashboard').constant('remoting', {
+				'fetchPluginListData': '{!$RemoteAction.PluginConfigurationController.fetchPluginListData}',
+				'toggleActivation': '{!$RemoteAction.PluginConfigurationController.toggleActivation}',
+				'fetchPluginData': '{!$RemoteAction.PluginConfigurationController.fetchPluginData}',
+				'storePluginData': '{!$RemoteAction.PluginConfigurationController.storePluginData}'
+			});
+		})();
+	</script>
+
+	<apex:composition template="nFORCE__Template_Landing">
+		<apex:define name="body">
+			<div class="slds">
+				<apex:sectionHeader title="{!$Label.nfuse__plugin_configuration_title}" subtitle="{!$Label.nfuse__plugin_configuration}"/>
+				<div ng-app="dashboard" ng-controller="dashboardController" class="force">
+					<div ng-if="error" class="alert alert-danger">
+						{{error}}
+					</div>
+					<table ng-if="pluginListData !== undefined && pluginListData.misconfigurations.length > 0" class="alert alert-warning">
+						<caption>
+							{!$Label.Plugin_Misconfiguration_Warning_Header}
+							<br/><br/>
+						</caption>
+						<thead>
+						<td class="slds-text-heading--label">{!$Label.Plugin_Misconfiguration_Name}</td>
+						<td class="slds-text-heading--label">{!$Label.Plugin_Misconfiguration_Config}</td>
+						<td class="slds-text-heading--label">{!$Label.Plugin_Misconfiguration_Object_Type}</td>
+						<td class="slds-text-heading--label">{!$Label.Plugin_Misconfiguration_sType_Context}</td>
+						</thead>
+						<tbody ng-repeat="misconfig in pluginListData.misconfigurations">
+						<tr>
+							<td class="col-xs-4"><a ng-href="/{{misconfig.recordId}}">{{misconfig.pluginName}}</a></td>
+							<td class="col-xs-4" ng-bind="misconfig.configName"></td>
+							<td class="col-xs-4" ng-bind="misconfig.sType"></td>
+							<td class="col-xs-4" ng-bind="misconfig.context"></td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table ng-if="pluginListData !== undefined" class="slds-table slds-table--bordered slds-table--cell-buffer">
+						<thead>
+						<td class="slds-text-heading--label"><label>{!$Label.Plugin_Configuration_Name}</label></td>
+						<td class="slds-text-heading--label"><label>{!$Label.Plugin_Configuration_Type}</label></td>
+						<td class="slds-text-heading--label"><label>{!$Label.Plugin_Configuration_Version}</label></td>
+						<td class="slds-text-heading--label"><label>{!$Label.Plugin_Configuration_Active}</label></td>
+						<td class="slds-text-heading--label"><label>{!$Label.Plugin_Configuration_Properties}</label></td>
+						</thead>
+						<tbody ng-repeat="plugin in pluginListData.plugins">
+						<tr>
+							<td><a ng-href="/{{plugin.recordId}}" target="top">{{plugin.label}}</a></td>
+							<td>{{plugin.pluginTypeName}}</td>
+							<td>{{plugin.majorVersion}}.{{plugin.minorVersion}}</td>
+							<td><input type="checkbox" ng-model="plugin.activation.isActive" ng-click="toggleActivation(plugin)"/></td>
+							<td>
+								<button type="button" class="btn btn-xs btn-primary" ng-click="retrieveSystemProperties(plugin, $index)">
+									<span class="glyphicon glyphicon-collapse-down"></span>&nbsp;
+								</button>
+							</td>
+						</tr>
+						<tr ng-if="activePosition == $index && pluginData !== undefined">
+							<form id="{{'credentialform' + $index}}">
+								<td colspan="5">
+									<div style="padding-top:1em">
+										<label class="slds-form-element__label">
+											Plugin Properties
+										</label>
+										<label class="slds-form-element__label">
+											<a href="javascript:void(0);" role="menuitem" ng-click="toggleShowPluginProperties()">
+												{{showPluginProperties ? 'Hide' : 'Show' }}
+											</a>
+										</label>
+										<div ng-repeat="prop in pluginData.configs" class="row" ng-if="showPluginProperties">
+											<br ng-if="$index > 0"/>
+											<div class="col-xs-4">
+												<label>{{prop.displayLabel}}</label>
+											</div>
+											<div class="col-md-8" ng-if="!prop.isEncrypted">
+												<input
+													class="col-md-8"
+													type="text"
+													id="{{'input' + $index}}"
+													name="prop.key"
+													value="prop.value"
+													ng-model="prop.value"
+													width="100%"
+												/>
+											</div>
+											<div class="col-md-8" ng-if="prop.isEncrypted" ng-form="encryptForm">
+												<input
+													class="col-md-8"
+													id="{{'input' + $index}}"
+													type="{{encryptForm.$pristine || toggleMask[$index] ? 'text' : 'password'}}"
+													name="prop.key"
+													value="prop.value"
+													ng-model="prop.value"
+													width="100%"
+													onclick="this.select()"
+												/>
+												<span class="col-md-4" ng-if="encryptForm.$dirty">
+													<label><input type="checkbox" id="{{'checkbox' + $index}}" ng-model="toggleMask[$index]" ng-click="toggle"/>
+														Show Text
+													</label>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div style="padding-top:1em">
+										<label class="slds-form-element__label slds-p-top_medium">
+											Field Descriptors
+										</label>
+										<label class="slds-form-element__label slds-p-top_medium">
+											<a href="javascript:void(0);" role="menuitem" ng-click="toggleShowFieldDescriptors()">
+												{{showFieldDescriptors ? 'Hide' : 'Show' }}
+											</a>
+										</label>
+
+										<div ng-if="showFieldDescriptors">
+											<ul style="list-style-type: none">
+												<li ng-repeat="desc in pluginListData.availableDescriptors">
+													<label>
+														<input type="checkbox" id="{{'descriptorCheckBox' + desc}}" ng-model="selectedDescriptors[desc]" ng-click="toggle"/>
+														{{desc}}<br/>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div style="padding-top:1em">
+										<input type="button" value="{!$Label.Plugin_Configuration_Save}" ng-click="saveSystemProperties(plugin, $index)" class="btn btn-primary"/>
+										<input type="button" value="{!$Label.Plugin_Configuration_Cancel}" ng-click="cancelCredentials($index)" class="btn btn-secondary"/>
+									</div>
+								</td>
+							</form>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div style="padding-top:1em">
+					<apex:form >
+						<apex:commandButton value="{!$Label.nfuse__go_back}" styleClass="btn btn-primary" action="{!goBack}"/>
+					</apex:form>
+				</div>
+			</div>
+		</apex:define>
+	</apex:composition>
+</apex:page>

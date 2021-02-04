@@ -1,0 +1,65 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLCLP.ChecklistController">
+	<c:Includes />
+	
+	<div class="nFlow force">
+		<div class="row-fluid">
+				<h4>
+					<img class="logo" src="{!$Resource.ncino_logo}" /> {!$Label.LaserPro_Checklist} {!loan.Name}
+					<a href="/{!loanId}" class="pull-right btn btn-mini">{!$Label.Go_Back}</a>
+				</h4>
+		</div>
+		<hr class="divider" />
+		<apex:outputPanel layout="none" styleClass="messages">
+			<div class="{!messageClass}"><apex:messages /></div>
+		</apex:outputPanel>
+		
+		<apex:outputPanel layout="none" rendered="{!isValidConfiguration}">
+			<apex:repeat value="{!objectDisplayOrder}" var="objectName">
+				<apex:repeat value="{!dataMap[objectName]}" var="object">
+					<apex:outputPanel rendered="{!object.Name != null}">
+						<div class="{!statusClass[matching[objectName][object.Id] = 0]}">
+							<table>
+								<tr>
+									<td class="span1"><span class="{!statusIcon[matching[objectName][object.Id] = 0]}" /></td>
+									<td class="span1">{!objectLabels[objectName]}:</td>
+									<td class="span2">
+										<a href="/{!object.Id}">
+											<apex:outputPanel layout="none"
+												 rendered="{!objectName != borrowerObject}">
+												{!object.Name}
+											</apex:outputPanel>
+											<apex:outputPanel layout="none"
+												 rendered="{!objectName = borrowerObject}">
+												{!borrowerNameMap[object.Id]}
+											</apex:outputPanel>
+										</a>
+									</td>
+									<td class="span2">{!$Label.llclp__total_incomplete}</td>
+									<td class="span1">
+										<span class="badge">{!matching[objectName][object.Id]}</span>
+									</td>
+								</tr>
+							</table>
+							<apex:outputPanel layout="none" rendered="{!matching[objectName][object.Id] > 0}">
+								<div class="alert nested">
+									{!$Label.Incomplete_Field_List}&nbsp;
+									<apex:repeat value="{!matchingFields[objectName][object.Id]}" var="fieldLabel">
+										<span class="label">{!fieldLabel}</span>
+									</apex:repeat>
+								</div>
+							</apex:outputPanel>
+						</div>
+					</apex:outputPanel>
+				</apex:repeat>
+			</apex:repeat>
+			<apex:outputPanel layout="none" rendered="{!hasAgreed}">
+				<a href="#" class="btn btn-primary" 
+					onclick="window.location.replace('/servlet/servlet.FileDownload?file={!exportId}');">{!$Label.Download_LaserPro_Export}</a>
+			</apex:outputPanel>
+			<apex:form rendered="{!!hasAgreed}">
+				<apex:commandLink action="{!saveAttachment}" id="messages"
+				 value="{!$Label.llclp__accept_and_generate_export}" styleClass="btn btn-primary" />
+			</apex:form>
+		</apex:outputPanel>
+	</div>
+</apex:page>

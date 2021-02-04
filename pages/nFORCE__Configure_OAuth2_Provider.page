@@ -1,0 +1,11 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<html>
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+			<c:Includes enableLifeCycleApp="true" runLifeCycleApp="false" />
+		</head>
+		<body>
+			<apex:include pageName="nFORCE__Configure_OAuth2_Comms_Provider"/>
+		</body>
+	</html>
+</apex:page>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to Online Applicants when Low Touch loan is approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>nCino_Standard_Email_Letterhead</letterhead>
+    <name>Online Application Approved</name>
+    <style>freeForm</style>
+    <subject>Your Application has been Approved!</subject>
+    <textOnly>Dear {!LLC_BI__Loan__c.OwnerFullName},
+
+We&apos;re happy to inform you that your credit application has been approved! The loan terms to be extended are as follows:
+
+Loan Amount: {!LLC_BI__Loan__c.LLC_BI__Amount__c}
+Interest Rate: 11%
+Loan Term: 60 Months
+
+A representative from Your Financial Institution will be in touch soon with additional information.
+
+
+Best Regards,
+Your Financial Institution</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

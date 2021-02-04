@@ -1,0 +1,120 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+
+	<apex:include pageName="nFORCE__Error_Message_Handler" />
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__ko_grouped_lists_css)}" />
+
+	<apex:composition template="nFORCE__Template_Knockout_Screen">
+
+		<apex:define name="knockout-content">
+			<span data-bind="if: screenResource().isHierarchy">
+
+				<div class="spacer">
+					<apex:composition template="nFORCE__Template_Heading">
+						<apex:define name="left">
+							<span class="row" data-bind="template: { name: 'heading-template', data: sectionName }" />
+						</apex:define>
+						<apex:define name="right">
+							<span data-bind="template: {
+								name: 'button-edit-field-set-template',
+								if: screenResource().hasChildren(),
+								data: [ screenResource().children()[0].children()[0].children()[0].children()[0].configuration.sObjectType,
+										screenResource().children()[0].children()[0].children()[0].children()[0].configuration.fieldSetKey ] }" />
+						</apex:define>
+					</apex:composition>
+				</div>
+
+				<span data-bind="if: screenResource().hasChildren() && screenResource().children()[0].isList()">
+
+					<span data-bind="foreach: screenResource().children()">
+						<span data-bind="foreach: children()">
+							<span data-bind="if: !getViewModel().isPreviewing() && !getViewModel().isEditing()">
+							<apex:composition template="nFORCE__Template_View_1_Column">
+								<apex:define name="column-content">
+									<apex:composition template="nFORCE__Template_View_Container">
+										<apex:define name="content">
+											<span data-bind="event: { mouseover: $parent.selectedChild }">
+												<span class="container-fluid" data-bind="foreach: propertyList">
+													<span data-bind="text: value, if: $index() < 3"/>
+												</span>
+												<span data-bind="template: {
+													name: 'button-add-template',
+													ifnot: getViewModel().isPreviewing() || getViewModel().isEditing(),
+													data: children()[0] }" ></span>
+												<span data-bind="template: {
+														name: 'table-children-template',
+														ifnot: getViewModel().isPreviewing() || getViewModel().isEditing(),
+														data: children()[0] }" />
+											</span>
+										</apex:define>
+									</apex:composition>
+								</apex:define>
+							</apex:composition>
+							</span>
+						</span>
+					</span>
+
+					<span data-bind="with: screenResource().children()[0].selectedChild">
+						<span data-bind="if:(getViewModel().isPreviewing() || getViewModel().isEditing()) ">
+							<apex:composition template="nFORCE__Template_View_1_Column">
+								<apex:define name="column-content">
+									<apex:composition template="nFORCE__Template_View_Container">
+										<apex:define name="content">
+											<span class="container-fluid" data-bind="foreach: propertyList">
+												<span data-bind="text: value, if: $index() < 3"/>
+											</span>
+											<span class="row" data-bind="if: children()[0].selectedChild">
+												<span data-bind="template: {
+														name: 'vf-grid-template-' + getViewModel().guid() + '-'
+																+ children()[0].selectedChild().guid(),
+														if: (getViewModel().isPreviewing() || getViewModel().isEditing()),
+														data: children()[0].selectedChild }"/>
+											</span>
+											<span data-bind="template: {
+													name: 'button-save-template',
+													if: getViewModel().isEditing(),
+													data: children()[0] }" />
+											<span data-bind="template: {
+													name: 'button-back-template',
+													if: getViewModel().isPreviewing(),
+													data: children()[0] }" />
+										</apex:define>
+									</apex:composition>
+								</apex:define>
+							</apex:composition>
+						</span>
+					</span>
+
+				</span>
+
+			</span>
+
+		</apex:define>
+
+		<apex:define name="dynamic-templates">
+			<c:KoVf4thGenChildGridsTemplate appguid="{!APP_GUID}"
+				contextObjectParam="{!contextObject}"
+				screenSectionParam="{!section}" />
+			<c:KoButtonAddTemplate secondary="true"/>
+		</apex:define>
+
+		<apex:define name="static-templates">
+			<c:KoHeadingTemplate />
+			<c:KoEmptyListTemplate />
+			<c:KoSectionFieldSetWarningTemplate />
+			<c:KoFieldLabelTemplate />
+			<c:KoFieldOutputTemplate />
+			<c:KoFieldInputTemplate />
+			<c:KoTableHeadCellTemplate />
+			<c:KoTableBodyCellTemplate />
+			<c:KoTableHeadRowActionTemplate />
+			<c:KoTableBodyRowActionTemplate />
+			<c:KoTableTemplate />
+			<c:KoTableChildrenTemplate />
+			<c:KoButtonAddTemplate />
+			<c:KoButtonSaveTemplate />
+			<c:KoButtonBackTemplate />
+			<c:KoButtonEditFieldSetTemplate />
+		</apex:define>
+	</apex:composition>
+
+</apex:page>

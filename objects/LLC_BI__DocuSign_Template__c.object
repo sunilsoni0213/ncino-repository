@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>LLC_BI__Data_Mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field contains the definition of how content from SalesForce will be mapped to the DocuSign document form fields.</description>
+        <externalId>false</externalId>
+        <label>Data Mapping</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Doc_Man_Class__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It identifies the Document Manager Class associated with DocuSign Template.</description>
+        <externalId>false</externalId>
+        <label>Document Manager Class</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>LLC_BI__DocClass__c.LLC_BI__DocType__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.LLC_BI__Doc_Man_Type__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LLC_BI__DocClass__c</referenceTo>
+        <relationshipLabel>DocuSign Templates</relationshipLabel>
+        <relationshipName>DocuSign_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Doc_Man_Tab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It identifies the Document Manager Tab associated with DocuSign Template.</description>
+        <externalId>false</externalId>
+        <label>Document Manager Tab</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>LLC_BI__DocTab__c.LLC_BI__docManager__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.LLC_BI__Doc_Man__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LLC_BI__DocTab__c</referenceTo>
+        <relationshipLabel>DocuSign Templates</relationshipLabel>
+        <relationshipName>DocuSign_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Doc_Man_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It identifies the Document Manager Type associated with DocuSign Template.</description>
+        <externalId>false</externalId>
+        <label>Document Manager Type</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>LLC_BI__DocType__c.LLC_BI__docTab__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.LLC_BI__Doc_Man_Tab__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LLC_BI__DocType__c</referenceTo>
+        <relationshipLabel>DocuSign Templates</relationshipLabel>
+        <relationshipName>DocuSign_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Doc_Man__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It identifies the Document Manager associated with DocuSign Template.</description>
+        <externalId>false</externalId>
+        <label>Document Manager</label>
+        <referenceTo>LLC_BI__DocManager__c</referenceTo>
+        <relationshipLabel>DocuSign Templates</relationshipLabel>
+        <relationshipName>DocuSign_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enforce_Masking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is a required field that enables administrators to mask sensitive data. By default, the value is false.</description>
+        <externalId>false</externalId>
+        <label>Enforce Masking</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Filter__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>-D Filter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Object_Filter__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified report name that will determine if the template will be displayed for a specific object.  The report is used define the criteria that must be met for the report to be displayed.  If the field is not specified the template will be displayed for all objects of the specified type.</description>
+        <externalId>false</externalId>
+        <label>Filter</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Object_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified name of the object associated with the template (For example &apos;LLC_BI_Loan__c&apos; or &apos;Account&apos;)</description>
+        <externalId>false</externalId>
+        <label>Object Type</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Relationship__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define the relationship that should be used when the document is focused on a related entity.
+
+For example if the template is associated with the Account object and the document content focus on a specific Contact that is associated with the Account the field should be set to &apos;Contacts&apos;. This will result in the user being presented with an option to select the Contact when generating the document from the template.
+
+Examples on the Account object:
+- Contacts
+- Contacts.Owner
+
+Examples on the Loan object:
+- LLC_BI__Legal_Entities__r.LLC_BI__Account__r</description>
+        <externalId>false</externalId>
+        <label>Relationship</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Template_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The template ID assigned by DocuSign.
+
+For example: 40DD7F3F-8662-4EF9-AE97-AE75959408A8</description>
+        <externalId>false</externalId>
+        <label>Template Id</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>DocuSign Template</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Object_Type__c</columns>
+        <columns>LLC_BI__Relationship__c</columns>
+        <columns>LLC_BI__Doc_Man__c</columns>
+        <columns>LLC_BI__Doc_Man_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>DocuSign Template Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>DocuSign Templates</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

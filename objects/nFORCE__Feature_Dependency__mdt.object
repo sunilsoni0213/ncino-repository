@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The object defines dependencies that exists between features.</description>
+    <fields>
+        <fullName>nFORCE__Controlling_Feature_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is conditionally required. Either the controlling feature name or the controlling feature lookup field must be specified. The field contains the name of the controlling feature. It is recommend that this field is used instead of the controlling feature field.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Controlling Feature Name</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Controlling_Feature__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field indicates the controlling feature on which there is a dependency. It is recommended to use the Controlling Feature Name field instead of this field as it allows for cross package dependencies to be specified.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Controlling Feature</label>
+        <referenceTo>nFORCE__Feature__mdt</referenceTo>
+        <relationshipLabel>Controlling Feature Dependencies</relationshipLabel>
+        <relationshipName>Controlling_Feature_Dependencies</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Dependency_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies the type of dependency that exists between the two features.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Dependency Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Required</fullName>
+                    <default>true</default>
+                    <label>Required</label>
+                </value>
+                <value>
+                    <fullName>Not Allowed</fullName>
+                    <default>false</default>
+                    <label>Not Allowed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Dependent_Feature__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies the feature that has a dependency on the controlling feature.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Dependent Feature</label>
+        <referenceTo>nFORCE__Feature__mdt</referenceTo>
+        <relationshipLabel>Dependent Feature Dependencies</relationshipLabel>
+        <relationshipName>Dependent_Feature_Dependencies</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <label>Feature Dependency</label>
+    <pluralLabel>Feature Dependencies</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

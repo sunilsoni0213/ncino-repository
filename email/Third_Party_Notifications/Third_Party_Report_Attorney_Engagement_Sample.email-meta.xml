@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to notify a third party partner.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>nCino_Standard_Email_Letterhead</letterhead>
+    <name>Third Party Report - Attorney Engagement Sample</name>
+    <style>freeForm</style>
+    <subject>*** New Engagement Request ***</subject>
+    <textOnly>{!Today}
+
+Dear {!Contact.FirstName},
+
+I can use templates like this one to merge multiple fields into things like a third party engagement notification. Merging fields helps me reduce errors by reducing the number of times I have to retype data. I can store these types of correspondence with related date/time stamping at the loan level to measure response times and understand how I am interacting with my third parties.
+
+File Number: {!LLC_BI__Loan__c.LLC_BI__File_Number__c}
+Anticipated Close Date: {!LLC_BI__Loan__c.LLC_BI__CloseDate__c}
+Anticipated Loan Amount: {!LLC_BI__Loan__c.LLC_BI__Amount__c}
+
+Having a standardized email template will help me make my messaging consistent and improve my ease of use which ultimately helps drive efficiency and gets my customer&apos;s their money faster.
+
+Thanks,
+
+nCino Admin</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

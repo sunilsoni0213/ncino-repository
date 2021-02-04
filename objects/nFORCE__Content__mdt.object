@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>nFORCE__Feature_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Temporary field used to associate the content with the feature</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>-D Feature Name</label>
+        <length>1</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Feature__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Lookup to the feature related to this content</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Feature</label>
+        <referenceTo>nFORCE__Feature__mdt</referenceTo>
+        <relationshipLabel>Contents</relationshipLabel>
+        <relationshipName>Contents</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Has_Resource__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Used to determine if this content record has resources. The additional resource should be a static resource that is named to match the pattern MetdataType_DeveloperName</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Has_Resource</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Used to determine if this content record is currently active</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is_Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Content</label>
+    <pluralLabel>Contents</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

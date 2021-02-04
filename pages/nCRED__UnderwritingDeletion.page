@@ -1,0 +1,3 @@
+<!-- @deprecated -->
+<apex:page standardController="LLC_BI__Underwriting_Summary__c">
+</apex:page>

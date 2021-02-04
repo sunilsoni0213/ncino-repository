@@ -1,0 +1,5 @@
+<apex:page controller="nFORMS.ParserService"
+contentType="application/json"
+readOnly="true"
+cache="false"
+>{!pageResponse}</apex:page>

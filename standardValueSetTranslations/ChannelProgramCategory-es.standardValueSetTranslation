@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Distributor</masterLabel>
+        <translation>Distribuidor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OEM</masterLabel>
+        <translation><!-- OEM --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Reseller</masterLabel>
+        <translation>Revendedores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SI</masterLabel>
+        <translation>Y</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VAR</masterLabel>
+        <translation>DONDE</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

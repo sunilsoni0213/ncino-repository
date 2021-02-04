@@ -1,0 +1,19 @@
+<apex:page controller="nFORCE.TemplateController"
+	showHeader="false"
+	sidebar="false"
+	docType="html-5.0">
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<c:RequireAuthorization isAuthorized="{!$Permission.nFUSE__Document_Preparation_Workflow}" errorMessage="{!$Label.nfuse__no_docprep_permission}">
+		<div id="nfDepActDocPrepLanding" ng-controller="AppController">
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<c:DepActDocPrepLanding />
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+	</c:RequireAuthorization>
+</apex:page>

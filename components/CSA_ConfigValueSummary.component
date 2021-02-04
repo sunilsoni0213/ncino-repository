@@ -1,0 +1,48 @@
+<apex:component layout="none" controller="CSA_ConfigValueSummaryController">
+    <apex:outputpanel layout="block" styleclass="force slds" id="overview">
+        <div class="row">
+            <div class="form-horizontal col-md-4">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.Config_Value_Summary_Config_Values}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!numConfigValues}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal col-md-4">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.Config_Value_Summary_Config_Keys_KY}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!KYConfigKeys}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal col-md-4">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.Config_Value_Summary_Config_Key_PT}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!PTConfigKeys}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:outputpanel>
+</apex:component>

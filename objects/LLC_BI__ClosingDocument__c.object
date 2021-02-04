@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Closing_Document_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Closing Document Object is used to track details around documents required for closing that are stored in Document Manager.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>LLC_BI__Customer_Portal_Doc__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Customer Portal Doc</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>Closing_Documents</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Owner__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>ownerGroup</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Closer</fullName>
+                    <default>false</default>
+                    <label>Closer</label>
+                </value>
+                <value>
+                    <fullName>Compliance</fullName>
+                    <default>false</default>
+                    <label>Compliance</label>
+                </value>
+                <value>
+                    <fullName>Attorney</fullName>
+                    <default>false</default>
+                    <label>Attorney</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Loan Ops</fullName>
+                    <default>false</default>
+                    <label>Loan Ops</label>
+                </value>
+                <value>
+                    <fullName>Special Assets</fullName>
+                    <default>false</default>
+                    <label>Special Assets</label>
+                </value>
+                <value>
+                    <fullName>Servicing</fullName>
+                    <default>false</default>
+                    <label>Servicing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Portal_Doc_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Portal Doc Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Portal_Doc_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Portal Doc Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>X</fullName>
+                    <default>false</default>
+                    <label>X</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Portal_Upload_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Portal Upload Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__approvalDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__approvedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Approved By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Closing_Documents1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__attachmentId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Current Attachment Id</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__closingChecklist__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Closing Checklist</label>
+        <referenceTo>LLC_BI__ClosingChecklist__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>Closing_Documents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>comments</label>
+        <length>12000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docClass__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>DocClass</label>
+        <referenceTo>LLC_BI__DocClass__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>Closing_Documents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docManager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>DocManager</label>
+        <referenceTo>LLC_BI__DocManager__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>Closing_Documents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docTab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>DocTab</label>
+        <referenceTo>LLC_BI__DocTab__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>Closing_Documents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docType__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>DocType</label>
+        <referenceTo>LLC_BI__DocType__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>Closing_Documents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__dueDaysPrior__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Due Days Prior</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__exceptionDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Exception Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__fileSize__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>File Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__firstReview__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>First Review</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__helpText__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field provides help text for the user and is optional.</description>
+        <externalId>false</externalId>
+        <label>Help Text</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__isDirectory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Directory</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__mimeType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Mime Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__ownerObjectId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>ownerObjectId</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Parent</label>
+        <referenceTo>LLC_BI__ClosingDocument__c</referenceTo>
+        <relationshipLabel>Closing Documents</relationshipLabel>
+        <relationshipName>children</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Critical</fullName>
+                    <default>false</default>
+                    <label>Critical</label>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__reviewDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Review Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__reviewStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Review Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Reviewed</fullName>
+                    <default>false</default>
+                    <label>Reviewed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Exception</fullName>
+                    <default>false</default>
+                    <label>Exception</label>
+                </value>
+                <value>
+                    <fullName>In-File</fullName>
+                    <default>false</default>
+                    <label>In-File</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__reviewedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Reviewed By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Closing_Documents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__sortOrder__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Sort</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>version</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Closing Document</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Closing Documents</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

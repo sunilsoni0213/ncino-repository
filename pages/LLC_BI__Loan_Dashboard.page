@@ -1,0 +1,40 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.LoanDashboardController">
+    <nFORCE:ncTreeGridIncludes />
+
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <span>{!$Label.llc_bi__loan_dashboard_stage_history}</span>
+        </apex:define>
+        <apex:define name="right"></apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <c:LoanStageHorizontal />
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+
+    <apex:include rendered="{!displayHierarchy}" pageName="LLC_BI__Facility_Hierarchy_Loan_Dashboard"/>
+
+    <nFORCE:ncGridList />
+
+    <c:LoanApprovalHistory loanId="{!LLC_BI__Loan__c.Id}"/>
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <span>{!$Label.llc_bi__loan_dashboard_loan_renewal_and_modification_history}</span>
+        </apex:define>
+        <apex:define name="right"></apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <apex:include pageName="LLC_BI__VF_LoanRenewalHistory" />
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>Calculate Original Amount Workflow Step {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>Calculate Original Amount Workflow Step</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Workflow_Step</name>
+        <label>Get Workflow Step</label>
+        <locationX>179</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Calculate_Original_Amount</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>StepObjId</elementReference>
+            </value>
+        </filters>
+        <object>nFORCE__Workflow_Orchestration__c</object>
+        <outputReference>OrchestrationRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>nFORCE__Context_Id__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Next_Step</name>
+        <label>Next Step</label>
+        <locationX>487</locationX>
+        <locationY>50</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>StepObjId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>nFORCE__Orchestration_Step__c</field>
+            <value>
+                <stringValue>Generate Proposed Pricing Option</stringValue>
+            </value>
+        </inputAssignments>
+        <object>nFORCE__Workflow_Orchestration__c</object>
+    </recordUpdates>
+    <startElementReference>Get_Workflow_Step</startElementReference>
+    <status>Active</status>
+    <subflows>
+        <name>Calculate_Original_Amount</name>
+        <label>Calculate Original Amount</label>
+        <locationX>341</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Next_Step</targetReference>
+        </connector>
+        <flowName>RMOR__CalculateOriginalLoanAmount</flowName>
+        <inputAssignments>
+            <name>loanId</name>
+            <value>
+                <elementReference>OrchestrationRecord.nFORCE__Context_Id__c</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>OrchestrationRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>nFORCE__Workflow_Orchestration__c</objectType>
+    </variables>
+    <variables>
+        <name>StepObjId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

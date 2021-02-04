@@ -1,0 +1,377 @@
+<!--
+LoginAs.page
+
+Quickly login as a different user, without navigating through the setup, by passing the alias or username as a PageParameter (/apex/LoginAs?<USER_NAME>||<USER_ALIAS>. Control target URL (after login) and return URL (after logout)
+
+Copyright (c) 2012 Sebastian Wagner <sebastian[at]tquila.com>
+All rights reserved.
+
+Redistribution and use in source and binary forms are permitted
+provided that the above copyright notice and this paragraph are
+duplicated in all such forms and that any documentation,
+advertising materials, and other materials related to such
+distribution and use acknowledge that the software was developed
+by the <organization>.  The name of the
+University may not be used to endorse or promote products derived
+from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<apex:page standardController="User" title="Login As - TqTK" id="page">
+<head>
+<script language="javascript" src="/soap/ajax/26.0/connection.js" type="text/javascript"></script>
+<style type="text/css">
+
+    div.hidden {
+        display:none;
+    }
+
+    .desc {
+        font-size: 91%;
+        font-style: italic;
+        display: block;
+    }
+
+    .la_panel input[type=text]{
+        font-size:120%;
+        font-weight:bolder;
+        width:300px;
+    }
+
+    .la_panel input[type=button]{
+        font-size: 120%;
+        font-weight: bold;
+        display: inline;
+    }
+</style>
+</head>
+<body>
+<apex:form id="frm">
+<apex:sectionHeader title="Tquila Toolkit" subtitle="Login As"/>
+
+<div id="la_block">
+<apex:pageBlock title="Login" mode="edit">
+    <apex:pageBlockButtons >
+        <apex:commandButton value="Login" onclick="logMeIn();return false;"/>
+        <apex:commandButton value="Save Options" onclick="saveOptions(false);return false;"/>
+    </apex:pageBlockButtons>
+
+    <apex:pageBlockSection >
+
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="User Name or Alias"/>
+            <div class="la_panel">
+                <input type="text" value="" size="20" id="la_usrValue"/>
+            </div>
+        </apex:pageBlockSectionItem>
+
+
+    </apex:pageBlockSection>
+    <apex:pageBlockSection columns="1" title="Options">
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Auto Login"/>
+            <div>
+                <input type="checkbox" id="la_autologin" checked="false" /><br/>
+                <span class="desc">
+                    Check to automatically login, when Alias or Username is passed via URL. For example /apex/LoginAs?{!$User.Alias}
+                </span>
+            </div>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Target URL"/>
+            <div>
+                <input type="text" size="60" id="la_targetURL"/>
+                <span class="desc">
+                    URL or path to which the User is redirected after login in, leave blank for Home tab (/home/home.jsp)
+                </span>
+            </div>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Return URL"/>
+            <div>
+                <input type="text" size="20" id="la_returnURL"/>
+                <span class="desc">
+                    URL or path to which the User is redirected after logout, leave blank for User Profile
+                </span>
+            </div>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+
+
+<apex:pageBlock title="Setup Instructions" mode="edit">
+
+
+    <apex:pageBlockSection title="1) Profile Requirements" columns="1">
+        The only users who can login as other users, are <b>System Administrators</b> or users with <b>'View All Data'</b> and <b>'Manage Users'</b> permissions. Make sure the LoginAs visualforce page is enabled for their profile as well.<br/>
+
+        <apex:pageMessage severity="Info" strength="1" title="Info">
+        For Test scenarios it might be useful to create a 'Permission Set'. Click <a href="/0PS?setupid=PermSets&retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DUsers">here</a> to get to the permissions sets setup page.
+        </apex:pageMessage>
+
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection title="2) Grant Login Access"  columns="1">
+
+        Your users have to grant you login access via Setup:
+
+        <ol>
+            <li>Choose <b>Your Name | Setup | My Personal Information | Grant Login Access.</b></li>
+            <li>Set the access expiration date by choosing a value from the picklist.</li>
+            <li>Click Save</li>
+        </ol>
+
+    </apex:pageBlockSection>
+
+
+</apex:pageBlock>
+</div>
+
+<script type="text/javascript">
+
+    // login to sf
+    sforce.connection.sessionId = '{!$Api.Session_ID}';
+
+    var URL_BASE = null;
+    var URL_HOST = null;
+    // path to the login servlet
+    var URL_PATH = '/servlet/servlet.su?oid={!$Organization.Id}';
+
+    var LA_OPTIONS = {
+          autoLogin: true
+        , returnURL: null
+        , targetURL: null
+    }
+
+    // users profile permission required
+    var permViewAllData;
+    var permManageUsers;
+
+    window.onload = onPageLoad;
+
+
+    /**
+     * handles page load event
+     */
+    function onPageLoad(){
+
+        var canLogin = hasPermission();
+        console.log( 'can login:' + canLogin);
+
+        loadOptions();
+
+        if (canLogin){
+
+            if (document.URL.split('?').length == 2){
+
+                if (document.URL.split('?')[1].split('&').length == 1)
+                {
+                    var usrValue = document.URL.split('?')[1].split('&')[0];    
+                    loadUser(usrValue,LA_OPTIONS.autoLogin);
+                }
+                
+            }
+        }
+    }
+
+
+    /**
+     * saveOptions
+     */
+    function saveOptions(mapOnly){
+
+        LA_OPTIONS.autoLogin = document.getElementById('la_autologin').checked        
+        LA_OPTIONS.returnURL = document.getElementById('la_returnURL').value;
+        LA_OPTIONS.targetURL = document.getElementById('la_targetURL').value;
+
+        if (mapOnly == false)
+        {
+            setCookie('la_autologin',document.getElementById('la_autologin').checked);
+            setCookie('la_returnURL',document.getElementById('la_returnURL').value);
+            setCookie('la_targetURL',document.getElementById('la_targetURL').value);
+        }
+    }
+
+
+    /**
+     * loadOptions
+     */
+    function loadOptions(){
+
+        LA_OPTIONS.autoLogin = getCookie('la_autologin');
+        LA_OPTIONS.autoLogin = LA_OPTIONS.autoLogin == 'true';
+        LA_OPTIONS.returnURL = getCookie('la_returnURL');
+        LA_OPTIONS.targetURL = getCookie('la_targetURL');
+        
+        console.log('autologin:' + LA_OPTIONS.autoLogin);
+        console.log(LA_OPTIONS.returnURL);
+        console.log(LA_OPTIONS.targetURL);
+
+        // write DOM values
+        document.getElementById('la_autologin').checked = LA_OPTIONS.autoLogin;
+        document.getElementById('la_returnURL').value = LA_OPTIONS.returnURL != undefined ? LA_OPTIONS.returnURL : '';
+        document.getElementById('la_targetURL').value = LA_OPTIONS.targetURL  != undefined ? LA_OPTIONS.targetURL : '';
+
+    }
+
+
+    /**
+     *
+     */
+    function logMeIn(){
+
+        var usrValue = document.getElementById('la_usrValue').value;
+        saveOptions(true);
+        console.log(usrValue);
+        loadUser(usrValue,true);
+    }
+
+
+    /**
+     * query user and login or populate username
+     */
+    function loadUser(usrValue,doLogin){
+
+        //var usrValue = document.URL.split('?')[1].split('&')[0];
+
+        var qry = 'select Id, Alias, UserName from User where ';
+
+        //  a user ID?
+        if (usrValue.indexOf('005') == 0){
+            qry += 'Id = \''+ usrValue + '\'';
+        }
+        // query user by alias
+        else{
+            qry += 'Alias = \''+ usrValue +'\' or Username = \''+ usrValue + '\'';
+        }
+
+        var usrResult = sforce.connection.query(qry);
+
+        if (usrResult.getArray("records").length == 1){
+            console.log( 'found matching user record');
+
+            if (doLogin)
+            {
+                loginAs(usrResult.getArray("records")[0].Id);    
+            }
+            else
+            {
+                document.getElementById('la_usrValue').value = usrValue;
+            }
+        }
+        else {
+            alert('No user found matching \''+ usrValue + '\'');
+        }
+    }
+
+
+    /** 
+     * call login or
+     */
+    function loginAs(usrId){
+
+        var URL_NEW = getBaseURL();
+        URL_NEW += '&suorgadminid=' + usrId;
+
+        URL_NEW += '&retURL=' + (LA_OPTIONS.returnURL.length > 0 ? encodeURIComponent(LA_OPTIONS.returnURL) : encodeURIComponent('/' + usrId));
+
+        URL_NEW += '&targetURL=' + (LA_OPTIONS.targetURL.length > 0 ? encodeURIComponent(LA_OPTIONS.targetURL) : encodeURIComponent('/home/home.jsp'));
+
+        //console.log('URL_NEW=' + URL_NEW);
+        //URL_NEW += '&retURL=%2F' + usrId;
+
+        console.log('URL_NEW=' + URL_NEW);
+        window.location = URL_NEW;
+
+    }
+
+
+    //--------------------------------------------------------------
+    // UTILS
+    //--------------------------------------------------------------
+    /**
+     * returns true if the current user has the required permissions to login as another user
+     */
+    function hasPermission(){
+
+        // eval profile
+        var profileResult = sforce.connection.query('select PermissionsManageUsers, PermissionsViewAllData from Profile where Id = \'{!$Profile.Id}\'');
+
+        var record = profileResult.getArray("records")[0];
+        permViewAllData = record.PermissionsManageUsers;
+        permManageUsers = record.PermissionsViewAllData;
+
+        return permViewAllData && permManageUsers;
+    }
+
+    /**
+     * write cookie
+     */
+    function setCookie(c_name,value){
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 9999);
+        var c_value=encodeURIComponent(value) + "; expires="+exdate.toUTCString();
+        document.cookie=c_name + "=" + c_value;
+    }
+
+
+    /**
+     * getCookie
+     */
+    function getCookie(c_name){
+        var i,x,y,ARRcookies=document.cookie.split(";");
+        for (i=0;i<ARRcookies.length;i++){
+
+            x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+            y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+            x=x.replace(/^\s+|\s+$/g,"");
+            if (x==c_name){
+                return unescape(y);
+            }
+        }
+    }
+
+    /**
+     * check if cookie is not null or has a value
+     */
+    function checkCookie(c_name){
+
+        var c_value = getCookie(c_name);
+        return c_value != null || c_value.length > 0;
+    }
+
+
+    /**
+     * construct base url for the logion process
+     */
+function getBaseURL(){
+        if (URL_BASE == null)
+        {
+            URL_BASE = 'https://';
+            var hostElems = location.host.replace('https://').split('.');
+            // 'My Domain' enabled?
+            var isMyDomain = hostElems[0].indexOf('--') != -1;
+            // extract 'My Domain' element
+            if (isMyDomain)
+            {
+                URL_BASE += hostElems[0].replace('--c') + '.';
+            }
+            // Sandbox instance or 'My Domain' not enabled
+            if (hostElems[1].indexOf('cs') != -1 || isMyDomain == false)
+            {
+                URL_BASE += hostElems[1] + '.';
+            }
+            //URL_HOST = (isMyDomain ? 'my.' : '') + 'salesforce.com';
+            //URL_BASE += (isMyDomain ? 'my.' : '') + 'cloudforce.com' + URL_PATH;
+            URL_BASE = 'https://bankr-8772.cloudforce.com'
+            URL_BASE += URL_PATH;
+        }
+        return URL_BASE;
+    }
+
+</script>
+</apex:form>
+</body>
+
+</apex:page>

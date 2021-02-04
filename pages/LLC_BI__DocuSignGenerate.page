@@ -1,0 +1,90 @@
+<apex:page controller="LLC_BI.DocuSignController">
+	<apex:outputPanel rendered="{!isNull($CurrentPage.parameters.app)}">
+		{!isNull($CurrentPage.parameters.app)}
+		<nFORCE:Includes enableBS3Namespace="true" />
+	</apex:outputPanel>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__nCino_preloaders, 'css/loading_spinner_3.css')}" />
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+	<apex:pageMessages id="errormessages"></apex:pageMessages>
+	<div class="force">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<span>{!$Label.llc_bi__docusign_heading_select_documents_to_generate}</span>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<apex:form id="theform" styleClass="form-horizontal">
+							<table id="thetable"  class="table table-hover table-striped" >
+								<thead>
+									<tr>
+										<th class="text-left">
+											<apex:outputText value=""></apex:outputText>
+										</th>
+										<th class="text-left">
+											<apex:outputText value="{!$Label.llc_bi__docusign_template}"></apex:outputText>
+										</th>
+										<th class="text-left">
+											<apex:outputText value="{!$Label.llc_bi__docusign_heading_document_focus}"></apex:outputText>
+										</th>
+										<th class="text-left">
+											<apex:outputText value=""></apex:outputText>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<apex:repeat rendered="true" value="{!generateDocumentList}" var="document">
+										<apex:outputPanel layout="none"  >
+											<tr class="text-left">
+												<td style="vertical-align:middle;">
+													<apex:inputCheckbox styleClass="checkBox"
+														value="{!document.selected}"
+														disabled="{!!validConfiguration||(!document.selected && document.template.selectionRequired && document.selectOptions.size == 1)}">
+															<apex:actionSupport event="onchange"
+																	action="{!actionUpdateSelection}"
+																	rerender="theform"
+																	rendered="{!document.selectOptions.size > 0}"/>
+													</apex:inputCheckbox>
+												</td>
+												<td style="vertical-align:middle;">
+													<apex:outputText value="{!document.template.template.Name}" styleClass="form-control-static"/>
+												</td>
+												<td style="vertical-align:middle;" styleClass="form-control-static">
+													<apex:outputText value="{!document.template.selectOptionsType}" styleClass="form-control-static"/>
+												</td>
+												<td style="vertical-align:middle;" styleClass="form-control-static">
+													<apex:selectList size="1"
+														multiselect="false"
+														value="{!document.selectedOption}"
+														styleClass="form-control"
+														rendered="{!document.template.selectionRequired}"
+														disabled="{!!document.selected}"
+														required="true">
+															<apex:selectOptions value="{!document.selectOptions}"/>
+															<apex:actionSupport event="onchange" action="{!actionUpdateSelection}" rerender="thetable" rendered="{!document.selectOptions.size > 0}"/>
+													</apex:selectList>
+												</td>
+											</tr>
+										</apex:outputPanel>
+									</apex:repeat>
+								</tbody>
+							</table>
+							<span class="col-md-offset-9">
+								<apex:commandButton value="{!$Label.llc_bi__docusign_button_generate_documents}"
+									styleClass="btn btn-primary	"
+									rerender="theform,errormessages"
+									action="{!generateDocuments}"
+									status="ajaxPleaseWait"
+									disabled="{!!validConfiguration}">
+								</apex:commandButton>
+							</span>
+						</apex:form>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

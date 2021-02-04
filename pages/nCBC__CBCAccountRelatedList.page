@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="nCBC.VF_CBCAccountRelatedList">
+	<apex:form styleClass="height: 100%;">
+		<apex:pageMessages escape="false" />		 
+		 
+		<apex:pageBlock title="Credit Report(s)">
+			<apex:pageBlockTable value="{!creditReports}" var="cr">
+				<apex:column headerValue="{!$Label.ncbc__credit_report_name}">				
+	    			<a href='/{!cr.Id}' target='_parent'>{!cr.Name}</a>
+				</apex:column>
+				<apex:column headerValue="{!$Label.ncbc__credit_fico}" value="{!cr.nCBC__FICO_Score__c}" />
+				<apex:column headerValue="{!$Label.ncbc__credit_success}" value="{!cr.nCBC__Is_Success__c}" />
+				<apex:column headerValue="{!$Label.ncbc__credit_ofac}" value="{!cr.nCBC__OFAC__c}" />
+				<apex:column headerValue="{!$Label.ncbc__credit_date_created}" value="{!cr.CreatedDate}" />
+			</apex:pageBlockTable>
+		</apex:pageBlock>		
+	</apex:form>
+</apex:page>

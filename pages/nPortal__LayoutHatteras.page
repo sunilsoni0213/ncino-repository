@@ -1,0 +1,45 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<div class="portal-wrapper-full" n-style="pso-wrapper">
+		<div class="slds-grid slds-wrap">
+			<div class="portal-wrapper slds-size--1-of-1">
+				<c:PortalHeader />
+			</div>
+			<div class="slds-size--1-of-1 slds-medium-size--2-of-6 slds-large-size--1-of-6
+				portal-nav-section">
+				<application-navigation display="vertical"></application-navigation>
+			</div>
+			<div class="slds-size--1-of-1 slds-medium-size--4-of-6 slds-large-size--5-of-6
+				portal-content-section">
+				<div class="slds-grid slds-wrap slds-medium-show">
+					<div class="slds-size--1-of-1 slds-p-left--x-large" n-style="pso-application-hero">
+						<page-include bind-to="topbar"></page-include>
+					</div>
+				</div>
+				<div class="slds-grid"
+					resizer="true"
+					ng-class="{'slds-wrap': !isLarge,
+						'slds-grid--align-center': isLarge}">
+					<div class="slds-size--1-of-1 slds-large-size--4-of-6 slds-shrink-none
+						slds-p-horizontal--large">
+						<page-include bind-to="body"></page-include>
+						<security-badges ng-if="isLarge"></security-badges>
+					</div>
+					<div resizer="true"
+						ng-class="{'slds-size--1-of-1': !isLarge,
+							'slds-col slds-no-space slds-p-top--medium': isLarge}">
+						<tile-component display="vertical"></tile-component>
+					</div>
+				</div>
+				<security-badges resizer="true" ng-if="!isLarge"></security-badges>
+			</div>
+		</div>
+		<div class="push"></div>
+	</div>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page controller="nCRED.SpreadsProjectionsAdminService"
+  contentType="application/json"
+  readOnly="true"
+  cache="false"
+>{!pageResponse}</apex:page>

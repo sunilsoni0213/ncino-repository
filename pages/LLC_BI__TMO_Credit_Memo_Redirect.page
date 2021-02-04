@@ -1,0 +1,15 @@
+<apex:page showHeader="true" sidebar="true" standardController="LLC_BI__Treasury_Service__c">
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left" />
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:Inline_Blank_Redirect destination="/apex/Credit_Memo_Container?Id={!LLC_BI__Treasury_Service__c.Id}" />
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

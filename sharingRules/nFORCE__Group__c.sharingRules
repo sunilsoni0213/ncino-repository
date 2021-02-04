@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Portal_Enabled_Group</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This rule shares Portal-Enabled groups with Customer Portal Users.</description>
+        <label>Share Portal Enabled Group</label>
+        <sharedTo>
+            <allCustomerPortalUsers></allCustomerPortalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>nPortal__Is_Portal_Enabled__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Shelton_Test</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Shelton Test</label>
+        <sharedTo>
+            <portalRole>ChristaSheltonCustomerUser</portalRole>
+        </sharedTo>
+        <criteriaItems>
+            <field>nPortal__Is_Portal_Enabled__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_Partners</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share with Partners</label>
+        <sharedTo>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

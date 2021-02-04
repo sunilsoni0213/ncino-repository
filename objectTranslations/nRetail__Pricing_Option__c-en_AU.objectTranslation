@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Y -Pricing Option</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Y -Pricing Options</value>
+    </caseValues>
+    <nameFieldLabel>Y -Pricing Options Name</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

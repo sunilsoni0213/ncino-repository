@@ -1,0 +1,7 @@
+<apex:page standardController="LLC_BI__Product_Package__c"
+	showHeader="false" sidebar="false">
+	<c:UniversalDocManDataService includeProductPackageDocMan="true"/>
+	<c:UniversalDocManIncludes />
+	<c:UniversalDocManRoutes />
+	<c:UniversalDocMan />
+</apex:page>

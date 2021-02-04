@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to notify the user that a New Project Issue has been created and assigned</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>nCino_Standard_Email_Letterhead</letterhead>
+    <name>Issue - New Project Issue</name>
+    <style>freeForm</style>
+    <subject>*** A New Project Issue Has Been Assigned to You ***</subject>
+    <textOnly>{!Today}
+
+Hello {!Organization.Name} Team Member,
+
+A new Project Issue has been created and assigned to you. Please login at your earliest convenience to review and take the appropriate next steps.
+
+Issue Category: {!Issue__c.Category__c}
+Issue Description: {!Issue__c.Description__c}
+
+Click the link below for full Issue details:
+{!Issue__c.Link}
+
+Thanks,
+
+nCino Admin</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

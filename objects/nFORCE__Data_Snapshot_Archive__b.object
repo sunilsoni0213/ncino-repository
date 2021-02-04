@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This big object stores historical field values and metadata related to the sObjects in a snapshot.</description>
+    <fields>
+        <fullName>nFORCE__Context_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this required field with the 18 character Salesforce ID of the record storing the snapshot.</description>
+        <externalId>false</externalId>
+        <label>Context Id</label>
+        <length>18</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Data_Snapshot__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this required field with the lookup to the snapshot record.</description>
+        <externalId>false</externalId>
+        <label>Snapshot</label>
+        <referenceTo>nFORCE__Data_Snapshot__c</referenceTo>
+        <relationshipName>Data_Snapshot</relationshipName>
+        <required>true</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_API_Name_Hash__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is an MD5 hash of the field API name.</description>
+        <externalId>false</externalId>
+        <label>Field API Name Hash</label>
+        <length>32</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_API_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this field with the field API name captured in the snapshot.</description>
+        <externalId>false</externalId>
+        <label>Field API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Details__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this field with the field details of the field captured in the snapshot.</description>
+        <externalId>false</externalId>
+        <label>Field Details</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this required field with the field order based on the respective context of the snapshot objects field set.</description>
+        <externalId>false</externalId>
+        <label>Field Order</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this field with the field type of the field captured in the snapshot.</description>
+        <externalId>false</externalId>
+        <label>Field Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Field_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this field with the value of the field captured in the snapshot.</description>
+        <externalId>false</externalId>
+        <label>Field Value</label>
+        <length>131072</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Encrypted__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this required number field with 0 or 1 based on the field types the system snapshots. By default, the field value is 0. If the system snapshots an encrypted field, the system populates the field with 1.</description>
+        <externalId>false</externalId>
+        <label>Is Encrypted</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Related__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this required number field with 0 or 1 based on the field types the system snapshots. By default, the field value is 0. If the system snapshots a related field, the system populates the field with 1.</description>
+        <externalId>false</externalId>
+        <label>Is Related</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Numeric_Index__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is used as a numeric index placeholder.</description>
+        <externalId>false</externalId>
+        <label>Numeric Index</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Object_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this field with the context object type.</description>
+        <externalId>false</externalId>
+        <label>Object Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <indexes>
+        <fullName>nFORCE__DataSnapshotArchiveIndex</fullName>
+        <fields>
+            <name>nFORCE__Data_Snapshot__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+        <fields>
+            <name>nFORCE__Context_Id__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+        <fields>
+            <name>nFORCE__Field_Order__c</name>
+            <sortDirection>ASC</sortDirection>
+        </fields>
+        <fields>
+            <name>nFORCE__Field_API_Name_Hash__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+        <fields>
+            <name>nFORCE__Numeric_Index__c</name>
+            <sortDirection>ASC</sortDirection>
+        </fields>
+        <label>Snapshot Archive Index</label>
+    </indexes>
+    <label>Snapshot Archive</label>
+    <pluralLabel>Snapshot Archive</pluralLabel>
+</CustomObject>

@@ -1,0 +1,515 @@
+<apex:page showHeader="false" sidebar="false" controller="nFORCE.TestAngularSetupController" >
+	<c:Include_Messenger />
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_MomentJS />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/utils-bundle.js')}" />
+	<c:Include_AngularJS />
+	<c:Internationalize />
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
+
+	<!-- This page includes a variety of example angular elements to aid developers in leveraging
+	existing features and developing new ones! -->
+	<c:Include_Navigator />
+	<c:ncPubsubIncludes />
+	<c:ncUIIncludes />
+	<c:ncDataProvidersIncludes />
+	<c:ncFormBuilderIncludes />
+	<c:ncScreenSectionFormBuilderIncludes />
+
+	<c:TestAngularConfiguration />
+
+	<c:ncModal />
+
+<div class="slds" id="nc-testangular" ng-controller="AppController">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<!-- This section demonstrates the markup used in angular form generation.
+						Remember to include a section Id, contextId and is Editable flag which can all be set from inside the angular controller! -->
+						<form-builder section-id="{{sectionId}}" context-id="{{contextId}}" is-editable="{{isEdit}}"></form-builder>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<!--
+						This section demonstrates the markup used for alert dialogs.
+						The conf attribute can be an object or a list of objects that map to the same properties.
+						 -->
+						<a ng-click="confirmDelete()">Click to delete</a>
+						<alert-dialog
+							conf="alert"
+							cancel="alert.confirm(false)"
+							confirm="alert.confirm(true)">
+						</alert-dialog>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<nc-read-only-field
+							field="{!testField}"
+							context-id="0015w000029Ho27AAE"
+							new-window="true">
+						</nc-read-only-field>
+
+						<nc-read-only-field
+							field="{!testField}"
+							context-id="0015w000029Ho27AAE">
+						</nc-read-only-field>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<!--
+						This section demonstrates the markup used for the picklist table. When a row
+						in the table is selected, the object in the row is published based on the topic
+						that was included as an attribute.
+
+						Attributes:
+							publish-topic: topic selection will be published to
+							select-text: text that is displayed inside the picklist field
+							elements: list of objects that are to be displayed in table
+							headers: headers for table
+							multi-select-enabled: optional parameter to enable multiselect of rows
+						 -->
+						<picklist-table
+							publish-topic="{{picklistTableTopic}}"
+							select-text="{{selectText}}"
+							elements="servicesListHierarchy"
+							display-columns="columnsToDisplay"
+							headers="headers"
+							guid="abc"
+							hierarchy-attributes="hierarchy"
+							disabled="disabled">
+						</picklist-table>
+
+						<picklist-table
+							publish-topic="{{multiSelectPicklistTableTopic}}"
+							select-text="{{multiSelectText}}"
+							elements="servicesListHierarchy"
+							display-columns="columnsToDisplay"
+							headers="headers"
+							multi-select-enabled="true"
+							guid="def"
+							hierarchy-attributes="hierarchy"
+							is-field-driven="false">
+						</picklist-table>
+
+						<picklist-table
+							publish-topic="{{multiSelectPicklistTableTopic2}}"
+							select-text="{{multiSelectText2}}"
+							elements="servicesListHierarchyWithFields"
+							display-columns="columnsToDisplay"
+							headers="headers"
+							multi-select-enabled="true"
+							guid="ghi"
+							hierarchy-attributes="hierarchy"
+							is-field-driven="true">
+						</picklist-table>
+
+						 <div style="height: 250px;">
+							<spinner size="small" message="{{message}}"></spinner>
+						</div>
+
+						
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<message></message>
+						<a ng-click="showErrorMessage()">Click to show error message</a>
+						<br></br>
+						<a ng-click="showWarningMessage()">Click to show warning message</a>
+						<br></br>
+						<a ng-click="showSuccessMessage()">Click to show success message</a>
+						<br></br>
+						<a ng-click="showDefaultMessage()">Click to show default message</a>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<dueling-picklists
+							instance-name="dpProducts"
+							label-available-items="Available Products"
+							label-selected-items="Selected Products"
+							available-items="dpItemsAvailable"
+					 		selected-items="dpItemsSelected"
+						/>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<button class="slds-button" ng-show="!showModal" ng-click="showModal = !showModal">Show Modal</button>
+						<nc-modal
+							show="showModal"
+							header="Modal Header"
+							primary-label="Toggle modal size"
+							primary-action="toggleModalType()"
+							secondary-label="Toggle loading icon"
+							secondary-action="toggleModalLoadingIcon()"
+							is-large="isLargeModal"
+							show-loading-icon="showModalLoadingIcon">
+							{{modalContent}}
+						</nc-modal>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+	</div>
+
+	<script>
+		(function(){
+			'use strict';
+			angular.module('nc-testangular').controller('AppController', AppController);
+			AppController.$inject = ['$scope', 'pubsub','forms','messageService','label','ui'];
+
+			function AppController($scope, pubsub,forms,messageService,label,ui) {
+				$scope.label = label.getLabels();
+				$scope.formResources = [];
+				$scope.isEdit = true;
+				$scope.message = "Testing the things";
+				//$scope.contextId = '';
+				//$scope.sectionId = '';
+
+				$scope.disabled = false;
+				$scope.primary = {
+					rendered: true,
+					disabled: false,
+					text: 'Save',
+					styleClass: 'item btn btn-secondary',
+					onClick: function(){
+						forms.saveAll($scope.formResources).then(function(result, event){
+						},function(error){
+							messageService.setMessage({ type: messageService.messageTypes.error, text: error }, true);
+					});
+					}
+				};
+				pubsub.publish(pubsub.topics.PRIMARY_BUTTON_SET, $scope.primary);
+
+				$scope.secondary = {
+					rendered: true,
+					disabled: false,
+					text: 'Edit',
+					styleClass: 'item btn btn-secondary',
+					onClick: function(){
+						$scope.$apply(function(){
+							$scope.isEdit = !$scope.isEdit;
+						});
+					}
+				};
+				pubsub.publish(pubsub.topics.SECONDARY_BUTTON_SET, $scope.secondary);
+
+				var testSession = new Object();
+				testSession.Id = 'a0O5w00000EbCwn';
+				testSession.Name = 'Parent Session';
+				testSession.Url = 'https://force-tmjuan-dev-ed.my.salesforce.com/a0O5w00000EbCwn';
+
+				pubsub.publish(pubsub.topics.ANCHOR_SET, {
+					link: testSession.Url,
+					text: testSession.Name,
+					background: 'slds-icon-standard-account',
+					breadcrumbs: [{'recordName':'testSession ', 'href':'/a0O5w00000EbCwo', 'objectType':'S'},
+										{'recordName':'Number 2', 'href':'/a0O5w00000EbCwn', 'objectType':'S'},
+										{'recordName':'Parent Session', 'href':'/a0O5w00000EbCwn', 'objectType':'S'}],
+				});
+
+				// Alert example
+				$scope.alert = {
+					isRendered: false,
+					theme: 'warning',
+					label: {
+						heading: 'Alert Box Example',
+						message: 'Are you sure you want to delete everything?',
+						cancel: 'No, Cancel.',
+						confirm: 'Yes, Delete.'
+					},
+					confirm: function(isConfirmed){
+						$scope.alert.isRendered = false;
+						if (!isConfirmed){
+							console.log('cancel');
+							return;
+						}
+						console.log('delete');
+					}
+				};
+
+				$scope.confirmDelete = function(){
+					$scope.alert.isRendered = true;
+				};
+
+				$scope.picklistTableTopic = 'rowSelected';
+				$scope.multiSelectPicklistTableTopic = 'rowsSelected';
+				$scope.multiSelectPicklistTableTopic2 = 'rowsSelected2';
+				$scope.selectText = 'Select a player';
+				$scope.multiSelectText = 'Select player(s)';
+				$scope.multiSelectText2 = 'Select player(s)';
+
+
+				pubsub.subscribe($scope.picklistTableTopic, function(selectedRow){
+					$scope.selectText = selectedRow.name + ' - ' + selectedRow.number + ' - ' + selectedRow.position;
+				});
+
+				pubsub.subscribe($scope.multiSelectPicklistTableTopic, function(selectedRowsObject) {
+					var outputText = '';
+					if (selectedRowsObject.rows.length) {
+						selectedRowsObject.rows.forEach(function(value) {
+							outputText += value.name + ' - ' + value.number + ' - ' + value.position + ', ';
+						});
+					} else {
+						outputText = 'Select player(s)';
+					}
+					$scope.multiSelectText = outputText;
+				});
+
+				pubsub.subscribe($scope.multiSelectPicklistTableTopic2, function(selectedRowsObject) {
+					var outputText = '';
+					if (selectedRowsObject.rows.length) {
+						selectedRowsObject.rows.forEach(function(value) {
+							outputText += value.name + ' - ' + value.number + ' - ' + value.position + ', ';
+						});
+					} else {
+						outputText = 'Select player(s)';
+					}
+					$scope.multiSelectText2 = outputText;
+				});
+
+				$scope.servicesListHierarchy = [
+					{name:'David Ortiz', number: '34', position:'Designated Hitter', id:'1', parent:'0'},
+					{name:'Derek Jeter', number: '2', position: 'Shortstop', id:'5'},
+					{name:'Dustin Pedroia', number: '15', position:'Second Base', id:'2', parent:'1'},
+					{name:'Xander Bogaerts', number: '2', position:'Shortstop', id:'3', parent:'1'},
+					{name:'Mookie Betts', number: '50', position:'Right Field', id:'4', parent:'3'}
+				];
+
+				$scope.servicesListHierarchyWithFields = [
+					{name:'David Ortiz', number: '34', position:'Designated Hitter', id:'1', parent:'0',fields:
+						[
+							{
+								"fieldType":"REFERENCE",
+								"value":"David Ortiz"
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":34
+							},
+							{
+								"fieldType":"TEXTAREA",
+								"value":"Designated Hitter"
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":1
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":0
+							}
+						]
+					},
+					{name:'Derek Jeter', number: '2', position: 'Shortstop', id:'5',fields:
+						[
+							{
+								"fieldType":"REFERENCE",
+								"value":"Derek Jeter"
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":2
+							},
+							{
+								"fieldType":"TEXTAREA",
+								"value":"Shortstop"
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":5
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":10
+							}
+						]},
+					{name:'Dustin Pedroia', number: '15', position:'Second Base', id:'2', parent:'1',fields:
+						[
+							{
+								"fieldType":"REFERENCE",
+								"value":"Dustin Pedroia"
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":15
+							},
+							{
+								"fieldType":"TEXTAREA",
+								"value":"Second Base"
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":2
+							},
+							{
+								"fieldType":"INTEGER",
+								"value":1
+							}
+						]}
+				];
+
+				$scope.servicesList = [
+					{name:'David Ortiz', number: '34', position:'Designated Hitter'},
+					{name:'Dustin Pedroia', number: '15', position:'Second Base'},
+					{name:'Xander Bogaerts', number: '2', position:'Shortstop'},
+					{name:'Mookie Betts', number: '50', position:'Right Field'}
+				];
+
+				$scope.columnsToDisplay = [
+					'name',
+					'number',
+					'position',
+					'id',
+					'parent'
+				];
+
+				$scope.headers = [
+					'Name',
+					'Number',
+					'Position',
+					'Id',
+					'Parent'
+				];
+
+				$scope.hierarchy = {
+					idKey: 'id',
+					parentIdKey: 'parent',
+					name: 'name',
+					buildHierarchy: true,
+					delinConfig: '-- '
+				};
+
+				$scope.showErrorMessage = function(){
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.error,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida mi enim, ut pretium mi tincidunt eget.'
+						},
+						true
+					);
+				};
+
+				$scope.showWarningMessage = function(){
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.warning,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida mi enim, ut pretium mi tincidunt eget.'
+						},
+						true
+					);
+				};
+
+				$scope.showSuccessMessage = function(){
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.success,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida mi enim, ut pretium mi tincidunt eget.'
+						},
+						true
+					);
+				};
+
+				$scope.showDefaultMessage = function(){
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.default,
+							text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida mi enim, ut pretium mi tincidunt eget.'
+						},
+						true
+					);
+				};
+
+				//==============[ Dueling Picklists related config ]===========================
+
+				// Test data set for 'Avaialble Proucts' of the Dueling Picklist implementation.
+				$scope.dpItemsAvailable =  [{
+					"id": "a2Y5w00000222OxEA0",
+					"name": "ACH Bundle",
+					"productTypeId": "a2X5w000001Zcn4EAS"
+				}, {
+					"id": "a2Y5w00000222OyEA0",
+					"name": "Test Global Product",
+					"productTypeId": "a2X5w000001Zcn5EAS"
+				}, {
+					"id": "a2Y5w00000222OzEA0",
+					"name": "Test Product 1",
+					"productTypeId": "a2X5w000001Zcn4EAS"
+				}];
+
+				// Test dataset for 'Selected Products' of the Dueling Picklist implementation.
+				$scope.dpItemsSelected =  [];
+
+				// Match items based on the 'id' property.
+				$scope.removeItem = function(items, item) {
+					for (var i = 0; i < items.length; i++) {
+						if (items[i].id === item.id) {
+							items.splice(i, 1);
+						}
+					}
+				};
+
+				$scope.addItem = function(items, item) {
+					items.push(item);
+				};
+
+				$scope.showModal = false;
+				$scope.isLargeModal = false;
+				$scope.showModalLoadingIcon = false;
+				$scope.modalContent = 'Modal content';
+
+				$scope.toggleModalType = function(){
+					$scope.isLargeModal = !$scope.isLargeModal;
+					if($scope.isLargeModal) {
+						$scope.modalContent = 'Laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaarge modal content';
+					} else {
+						$scope.modalContent = 'Modal content';
+					}
+				};
+
+				$scope.toggleModalLoadingIcon = function(){
+					$scope.showModalLoadingIcon = !$scope.showModalLoadingIcon;
+				};
+			}
+		})();
+	</script>
+</apex:page>

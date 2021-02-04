@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Add the current pricing option to the pricing matrix collection.</description>
+        <name>Add_Option</name>
+        <label>Add Option</label>
+        <locationX>129</locationX>
+        <locationY>227</locationY>
+        <assignmentItems>
+            <assignToReference>CurrentIncomingPricingMatrixRecord.LLC_BI__Term_Months__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentPricingMatrixRecord.LLC_BI__Term_Months__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>CurrentIncomingPricingMatrixRecord.LLC_BI__Interest_Rate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentPricingMatrixRecord.LLC_BI__Interest_Rate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PricingMatrixDetails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>CurrentIncomingPricingMatrixRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Details</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Update the best pricing option with the newest value.</description>
+        <name>Set_Best_Pricing_Option</name>
+        <label>Set Best Pricing Option</label>
+        <locationX>746</locationX>
+        <locationY>430</locationY>
+        <assignmentItems>
+            <assignToReference>LowestRate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentPricingMatrixRecord.LLC_BI__Interest_Rate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>BestPricingOption</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentPricingMatrixRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Best_Pricing_Option</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Update the longest term with the new highest value.</description>
+        <name>Set_Longest_Term</name>
+        <label>Set Longest Term</label>
+        <locationX>31</locationX>
+        <locationY>446</locationY>
+        <assignmentItems>
+            <assignToReference>LongestTerm</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentPricingMatrixRecord.LLC_BI__Term_Months__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Option</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Determine if the current Pricing Matrix option has the longest term and the lowest interest rate.</description>
+        <name>Is_Best_Pricing_Option</name>
+        <label>Is Best Pricing Option</label>
+        <locationX>869</locationX>
+        <locationY>228</locationY>
+        <defaultConnector>
+            <targetReference>Get_Best_Pricing_Option</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Is_Best_Offer_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CurrentPricingMatrixRecord.LLC_BI__Term_Months__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>LongestTerm</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CurrentPricingMatrixRecord.LLC_BI__Interest_Rate__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>LowestRate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Best_Pricing_Option</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determine if the current Pricing Matrix option has the longest term of the input collection.</description>
+        <name>Is_Longest_Term</name>
+        <label>Is Longest Term</label>
+        <locationX>223</locationX>
+        <locationY>451</locationY>
+        <defaultConnector>
+            <targetReference>Add_Option</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Is_Longest_Term_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CurrentPricingMatrixRecord.LLC_BI__Term_Months__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>LongestTerm</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Longest_Term</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Retrieve the pricing option from the pricing matrix with the longest term and the lowest rate.</description>
+    <interviewLabel>RetrieveBestPricingOption {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>RetrieveBestPricingOption</label>
+    <loops>
+        <description>Loop through the pricing matrix details and determine the option with the longest term and lowest interest rate (best offer).</description>
+        <name>Get_Best_Pricing_Option</name>
+        <label>Get Best Pricing Option</label>
+        <locationX>633</locationX>
+        <locationY>222</locationY>
+        <assignNextValueToReference>CurrentPricingMatrixRecord</assignNextValueToReference>
+        <collectionReference>PricingMatrixDetails</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Is_Best_Pricing_Option</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <description>Loop through the provided pricing matrix record ID and retrieve details on interest rate and term.</description>
+        <name>Get_Details</name>
+        <label>Get Details</label>
+        <locationX>377</locationX>
+        <locationY>219</locationY>
+        <assignNextValueToReference>CurrentIncomingPricingMatrixRecord</assignNextValueToReference>
+        <collectionReference>IncomingPricingMatrix</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Get_Option</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_Best_Pricing_Option</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Look up the Pricing Matrix option based on the ID input.</description>
+        <name>Get_Option</name>
+        <label>Get Option</label>
+        <locationX>377</locationX>
+        <locationY>449</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Longest_Term</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CurrentIncomingPricingMatrixRecord.Id</elementReference>
+            </value>
+        </filters>
+        <object>LLC_BI__Pricing_Matrix__c</object>
+        <outputReference>CurrentPricingMatrixRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>LLC_BI__Term_Months__c</queriedFields>
+        <queriedFields>LLC_BI__Interest_Rate__c</queriedFields>
+    </recordLookups>
+    <startElementReference>Get_Details</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>The pricing matrix option with the longest term and lowest interest rate (best offer).</description>
+        <name>BestPricingOption</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>LLC_BI__Pricing_Matrix__c</objectType>
+    </variables>
+    <variables>
+        <description>The current pricing matrix record being evaluated from the input collection.</description>
+        <name>CurrentIncomingPricingMatrixRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Pricing_Matrix__c</objectType>
+    </variables>
+    <variables>
+        <description>The current pricing option being evaluated from the pricing matrix</description>
+        <name>CurrentPricingMatrixRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Pricing_Matrix__c</objectType>
+    </variables>
+    <variables>
+        <description>A collection of pricing matrix records sent from another flow to be evaluated.</description>
+        <name>IncomingPricingMatrix</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Pricing_Matrix__c</objectType>
+    </variables>
+    <variables>
+        <description>A placeholder for the longest term of the options in the input collection.</description>
+        <name>LongestTerm</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>A placeholder for the lowest rate of the options in the input collection.</description>
+        <name>LowestRate</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>3</scale>
+        <value>
+            <numberValue>100.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>A collection of pricing matrix records with details on interest rate and term.</description>
+        <name>PricingMatrixDetails</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Pricing_Matrix__c</objectType>
+    </variables>
+</Flow>

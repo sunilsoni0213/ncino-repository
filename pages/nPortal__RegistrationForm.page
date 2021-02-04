@@ -1,0 +1,212 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds">
+			<div id="selfRegisterApp"
+				ng-app="selfRegisterApp"
+				ng-controller="SelfRegisterController as vm">
+				<div class="portal-form-container slds-p-top--x-large slds-p-bottom--x-large slds-m-top--xx-large
+					slds-m-bottom--large portal-media-icon-parent slds-theme--shade"
+					n-style="pso-section" resizer="true"
+					ng-class="{'slds-p-horizontal--x-large': isMediumOrBigger,
+						'slds-p-horizontal--large': !isMediumOrBigger}"
+					ng-show="!vm.showEmailConfirmation">
+					<span class="slds-icon_container slds-icon_container--circle"
+						n-style="pso-section-icon" resizer="true"
+						ng-class="{'portal-media-small-icon-child': !(isMediumOrBigger),
+							'portal-media-icon-child': isMediumOrBigger}">
+						<svg aria-hidden="true" class="slds-icon" n-style="pso-section-icon" resizer="true"
+							 ng-class="{'slds-icon--small': !(isMediumOrBigger)}">
+							<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+								'/assets/icons/standard-sprite/svg/symbols.svg#avatar')}">
+							</use>
+						</svg>
+					</span>
+
+					<h3 class="portal-center-text"
+						resizer="true" ng-bind="vm.selectedProduct.header || '{!$Label.Prelim_Header}'"
+						ng-class="{'slds-text-heading--medium slds-m-top--large': isMediumOrBigger,
+							'slds-text-heading--small slds-m-top-small': !(isMediumOrBigger)}"
+						n-style="pso-application-body-header">
+					</h3>
+					<p class="portal-center-text slds-m-top--small"
+						n-style="pso-application-body-subheader"
+						resizer="true" ng-show="isMediumOrBigger"
+						ng-bind="vm.selectedProduct.subHeader || '{!$Label.Prelim_Sub_Header}'">
+					</p>
+
+					<form name="prelimForm" novalidate="true">
+						<div class="slds-form-element slds-m-top--small"
+							 ng-class="{'slds-has-error' : !vm.selectedProduct.sid && vm.prelimSubmitted == true}"
+							 ng-show="vm.onlineAppsEnabled && !vm.productLinked">
+							<label class="slds-form-element__label" n-style="pso-form-label">
+								{!$Label.Prelim_Product_Label}
+							</label>
+							<div class="slds-form-element__control">
+								<div class="slds-select_container">
+									<select class="slds-select" name="selected_product"
+										ng-model="vm.selectedProduct"
+										ng-options="product.name for product in vm.productOptions"
+										n-style="pso-select" required="true">
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="slds-form-element slds-m-top--small"
+							 ng-class="{'slds-has-error' : prelimForm.firstName.$invalid && vm.prelimSubmitted == true}">
+							<label class="slds-form-element__label" n-style="pso-form-label">
+								{!$Label.Prelim_First_Name_Label}
+							</label>
+							<div class="slds-form-element__control">
+								<input class="slds-input" type="text" name="firstName" ng-model="vm.portalUser.firstName"
+									required="true" n-style="pso-input" />
+							</div>
+						</div>
+						<div class="slds-form-element slds-m-top--small"
+							 ng-class="{'slds-has-error' : prelimForm.lastName.$invalid && vm.prelimSubmitted == true}">
+							<label class="slds-form-element__label" n-style="pso-form-label">
+								{!$Label.Prelim_Last_Name_Label}
+							</label>
+							<div class="slds-form-element__control">
+								<input class="slds-input" type="text" name="lastName"
+									ng-model="vm.portalUser.lastName" required="true"
+									n-style="pso-input"/>
+							</div>
+						</div>
+						<div class="slds-form-element slds-m-top--small"
+							 ng-class="{'slds-has-error' : prelimForm.email.$invalid && vm.prelimSubmitted == true}">
+							<label class="slds-form-element__label" n-style="pso-form-label">
+								{!$Label.Prelim_Email_Label}
+							</label>
+							<div class="slds-form-element__control">
+								<input class="slds-input" type="text" name="email" ng-model="vm.portalUser.email"
+									required="true" n-style="pso-input" />
+							</div>
+						</div>
+						<div class="slds-form-element slds-m-top--small"
+							 ng-class="{'slds-has-error' : prelimForm.mobile.$invalid && vm.prelimSubmitted == true}">
+							<label class="slds-form-element__label" n-style="pso-form-label">
+								{!$Label.Prelim_Mobile_Label}
+							</label>
+							<div class="slds-form-element__control">
+								<input class="slds-input" type="text" name="mobile" ng-model="vm.portalUser.mobile"
+									required="true" n-style="pso-input" />
+							</div>
+						</div>
+						<!-- Prelim Registration Fieldset -->
+						<div class="slds-form-element slds-m-top--small"
+							 ng-cloak="true"
+							 ng-repeat="fld in ::vm.portalUser.regFields"
+							 ng-class="{'slds-has-error' : prelimForm.{{fld.fieldPath}}.$invalid && vm.prelimSubmitted == true}">
+							<label class="slds-form-element__label" n-style="pso-form-label" ng-bind="::fld.label">
+							</label>
+							<div class="slds-form-element__control">
+								<input class="slds-input" type="text" name="{{::fld.fieldPath}}" ng-model="fld.value"
+									ng-required="fld.required" n-style="pso-input" />
+							</div>
+						</div>
+						<div ng-if="::vm.requirePassword" class="slds-m-top--x-small">
+							<change-password
+								delegate-action="true"
+								password="vm.password"
+								password-valid="vm.passwordValid">
+							</change-password>
+						</div>
+					</form>
+					<div class="slds-grid slds-grid--align-center portal-no-margin">
+						<div class="slds-col slds-size--1-of-1">
+							<recaptcha
+								is-recaptcha-enabled="vm.isRecaptchaEnabled"
+								recaptcha-response="vm.recaptchaResponse">
+							</recaptcha>
+							<div class="slds-grid slds-grid--align-center portal-no-margin">
+								<button id="registerUser"
+									class="slds-button slds-button--brand slds-m-top--large slds-size--1-of-1"
+									n-style="pso-button-primary"
+									ng-click="vm.registerUser()"
+									ng-disabled="(vm.isRecaptchaEnabled && !vm.recaptchaResponse) ||
+										(vm.requirePassword && !vm.passwordValid)">
+									{!$Label.Prelim_Begin_Application}
+								</button>
+							</div>
+							<div class="slds-grid slds-grid--align-center slds-grid--vertical-align-center">
+								<div class="slds-size--1-of-2">
+									<hr n-style="pso-hr" />
+								</div>
+								<div class="slds-col slds-no-flex slds-text-align--center
+									slds-p-horizontal--medium portal-orbar-text" n-style="pso-orbar-text">
+									{!$Label.Or_Bar_Text}
+								</div>
+								<div class="slds-size--1-of-2">
+									<hr n-style="pso-hr" />
+								</div>
+							</div>
+							<div class="slds-grid slds-grid--align-center portal-no-margin">
+								<button class="slds-button slds-button--neutral slds-size--1-of-1"
+									n-style="pso-button-secondary"
+									ng-click="vm.redirect('{!URLFOR($Page.PortalLogin)}')">
+									{!$Label.Prelim_Log_In}
+								</button>
+							</div>
+							<div ng-if="vm.modalVisible">
+								<div class="slds-modal slds-fade-in-open" aria-hidden="false" role="dialog">
+									<div class="slds-modal__container">
+										<div class="slds-modal__header">
+											<h2 class="slds-text-heading--medium" n-style="pso-header">{!$Label.An_Email_Exists}</h2>
+											<p class="slds-m-top--x-small">
+												{!$Label.Login_Existing}
+												<a ng-click="vm.redirect('{!URLFOR($Page.PortalLogin)}')">{!$Label.Login}</a>
+											</p>
+										</div>
+										<div class="slds-modal__footer">
+											<button class="slds-button slds-button--neutral"
+												n-style="pso-button-secondary"
+												ng-click="vm.modalVisible = false">
+												{!$Label.Cancel_Button}
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="slds-backdrop slds-backdrop--open"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slds-form--stacked slds-p-horizontal--xx-large
+					slds-p-vertical--x-large slds-m-top--xx-large
+					portal-media-icon-parent slds-theme--shade"
+					ng-if="vm.showEmailConfirmation"
+					n-style="pso-section">
+					<span class="slds-icon_container slds-icon-action-email
+						slds-icon_container--circle portal-media-icon-child"
+						n-style="pso-section-icon">
+						<img height="60" class="slds-icon"
+							 src="{!URLFOR($Resource.nFORCE__SLDS0102, '/assets/icons/action/email_120.png')}" />
+					</span>
+					<h2 class="slds-text-heading--medium portal-center-text slds-m-top--medium" n-style="pso-smallheader">
+						{!$Label.Prelim_Check_Email_Header}
+					</h2>
+					<p class="slds-m-top--medium portal-center-text" n-style="pso-smallheader">
+						{!$Label.Prelim_Check_Email_Text_1_1}
+						<strong>{{vm.portalUser.email}}</strong>{!$Label.Prelim_Check_Email_Text_1_2} {!$Label.Prelim_Contact_Email}
+						{!$Label.Prelim_Check_Email_Text_1_3}
+					</p>
+					<p class="slds-m-top--medium portal-center-text" n-style="pso-smallheader">
+						{!$Label.Prelim_Check_Email_Text_2} {!$Label.Prelim_Contact_Phone}.
+					</p>
+				</div>
+			</div>
+		</body>
+	</html>
+</apex:page>

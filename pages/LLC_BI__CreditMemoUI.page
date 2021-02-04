@@ -1,0 +1,15 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.CreditMemoController">
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left" />
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:Inline_Blank_Redirect destination="{!redirectLocation}" shouldNotReload="true" />
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

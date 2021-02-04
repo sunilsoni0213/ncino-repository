@@ -1,0 +1,13 @@
+<apex:page controller="nBRIDGER.WatchlistReportController" sidebar="false" >
+	<nDESIGN:Includes enableLifeCycleApp="true" enableBS3Namespace="true"/>
+	<c:WatchlistHistory objectId="{!objectId}"
+		returnUrl="{!returnUrl}"
+		requestId="{!baseUrl}&rt=request"
+		rendered="{!route=='history'}"
+		accountId="{!accountId}"/>
+	<c:WatchlistReport objectId="{!objectId}"
+		returnUrl="{!baseUrl}&rt=history"
+		requestId="{!requestId}"
+		rendered="{!route=='request'}"
+		accountId="{!accountId}"/>
+</apex:page>

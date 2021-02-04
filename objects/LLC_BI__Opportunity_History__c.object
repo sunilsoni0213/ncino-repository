@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Opportunity History object tracks details of opportunities in nCino</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>LLC_BI__Opp_History_For_Dashboard</fullName>
+        <description>New UI dashboards which want to show opportunity history</description>
+        <displayedFields>
+            <field>LLC_BI__StageName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__StatusName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Change_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__End_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Opp History For Dashboard</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>UI_Opportunity_History</fullName>
+        <description>Stage history section of new UI</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Stage_Duration__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__StageName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Change_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__End_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Opportunity History</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Amount_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is enabled if the current record was created due to an amount change; otherwise, it is disabled.</description>
+        <externalId>false</externalId>
+        <label>Amount Change</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is used to specify the amount of the opportunity.</description>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Change_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is used to specify the Date/Time an opportunity record is created due to a change.</description>
+        <externalId>false</externalId>
+        <label>Start Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Deposit__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This is a look-up field used to specify the deposit record the opportunity history is associated with.</description>
+        <externalId>false</externalId>
+        <label>Deposit</label>
+        <referenceTo>LLC_BI__Deposit__c</referenceTo>
+        <relationshipLabel>Opportunity History</relationshipLabel>
+        <relationshipName>Opportunity_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__End_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is used to specify the Date/Time an opportunity record becomes outdated due to a change occurring which creates a new opportunity record.</description>
+        <externalId>false</externalId>
+        <label>End Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Final_Stage_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This indicates the final entry for a single stage for a particular loan as a result of the stage changing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set in Code - indicates the final entry for a single stage for a particular loan.</inlineHelpText>
+        <label>Final Stage Change</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Booked__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field is automatically checked when the opportunity is in a &quot;booked&quot; status.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Loan__c != null,CONTAINS(LLC_BI__Loan__r.LLC_BI__Product_Reference__r.LLC_BI__Product_Type__r.LLC_BI__Booked__r.LLC_BI__All_Values__c, LLC_BI__Stage_And_Status__c),false)</formula>
+        <label>Is Booked</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Closed__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It  automatically sets the value to true or false based on the stage and status of the loan. The value is set to true once a loan reaches the equivalent of a closing stage for a financial institution.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Loan__c != null,CONTAINS(LLC_BI__Loan__r.LLC_BI__Product_Reference__r.LLC_BI__Product_Type__r.LLC_BI__Closed__r.LLC_BI__All_Values__c, LLC_BI__Stage_And_Status__c),false)</formula>
+        <label>Is Closed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Excluded_From_Stage_Duration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It automatically sets the value to true or false based on the stage and status of the loan. The value is set to true once a loan reaches the equivalent of a stage that is excluded from the stage duration history for a financial institution.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Loan__c != null,CONTAINS(LLC_BI__Loan__r.LLC_BI__Product_Reference__r.LLC_BI__Product_Type__r.LLC_BI__Excluded__r.LLC_BI__All_Values__c, LLC_BI__Stage_And_Status__c),false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Excluded From Stage Duration</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is a lookup field and is used to specify the loan record that the opportunity history is associated with.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Opportunity History</relationshipLabel>
+        <relationshipName>Opportunity_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__OpportunityId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. Opportunity ID is the Id of the product opportunity each stage record is associated with. There is no master-detail relationship to enable supporting an unlimited number of opportunities.</description>
+        <externalId>false</externalId>
+        <label>Opportunity Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Previous_Stage_Duration_Excluded_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger on insert. This field holds the sum of the Stage Duration Minutes for its stage of a single loan.</description>
+        <externalId>false</externalId>
+        <label>Previous Stage Duration Excluded Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Previous_Stage_Duration_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger on insert. This field holds the previous sum of the Stage Duration Minutes for its stage of a single loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set in Code - holds the previous Stage Duration Minutes for its stage of a single loan.</inlineHelpText>
+        <label>Previous Stage Duration Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Previous_Stage_Duration_Non_Business_Min__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field holds the previous sum of the Stage Duration Minutes for its stage of a single loan (non-business hours only).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set in Code - holds the previous Stage Duration Minutes for its stage of a single loan (Non-business hours only).</inlineHelpText>
+        <label>Prev Stage Duration Non-Business Mins</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Package__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated. It identifies the Product Package record associated with the Opportunity History.</description>
+        <externalId>false</externalId>
+        <label>Product Package</label>
+        <referenceTo>LLC_BI__Product_Package__c</referenceTo>
+        <relationshipLabel>Opportunity History</relationshipLabel>
+        <relationshipName>Opportunity_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Record_Duration_Excluded_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the number of minutes that have been excluded from the total amount of time spent in a specificed stage due to product state config settings.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__End_Time__c),null,IF(LLC_BI__Is_Excluded_From_Stage_Duration__c, LLC_BI__Stage_Duration_Minutes__c - LLC_BI__Stage_Duration_Non_Business_Minutes__c, 0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Duration Excluded Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__StageName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is a used to specify the stage of the loan at the creation of this record.</description>
+        <externalId>false</externalId>
+        <label>Stage Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage_And_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field is used to specify the stage and status of the opportunity.</description>
+        <externalId>false</externalId>
+        <formula>&quot;#&quot; &amp; LLC_BI__StageName__c &amp; &quot;|&quot; &amp; LLC_BI__StatusName__c &amp; &quot;#&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage And Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage_Change__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is checked and set if the current record indicates a stage change.</description>
+        <externalId>false</externalId>
+        <label>Stage Change</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage_Duration_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field holds the Stage Duration Hours for each stage entry, for a single loan.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__End_Time__c), null, 24 * LLC_BI__Stage_Duration__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Set in Code - Holds the Stage Duration Hours for each Stage entry, for a single loan.</inlineHelpText>
+        <label>Record Duration Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage_Duration_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field holds the Stage Duration Minutes for each Stage entry, for a single loan.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__End_Time__c), null, 60 * 24 * LLC_BI__Stage_Duration__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Set in Code - Holds the Stage Duration Minutes for each Stage entry, for a single loan.</inlineHelpText>
+        <label>Record Duration Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage_Duration_Non_Business_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the number of Non-Business minutes that have been excluded from the total amount of time spent in a specificed stage.</description>
+        <externalId>false</externalId>
+        <label>Record Duration Non Business Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage_Duration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This formula field specifies the stage duration in days.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__End_Time__c), NOW() - LLC_BI__Change_Time__c, LLC_BI__End_Time__c - LLC_BI__Change_Time__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Duration Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__StatusName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is used to specify the status of the loan at the creation of this record.</description>
+        <externalId>false</externalId>
+        <label>Status Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Status_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is enabled if the current record was created due to a stage change, otherwise it is disabled.</description>
+        <externalId>false</externalId>
+        <label>Status Change</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field holds the sum of the Stage Duration Days for each Final Stage Change, for a single loan.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Minutes__c / 60 / 24, null)</formula>
+        <inlineHelpText>Set in Code - Holds the sum of the Stage Duration Days for each Final Stage Change, for a single loan.</inlineHelpText>
+        <label>Sum Stage Duration Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Excluded_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of days that have been excluded from the Opportunity History.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Excluded_Minutes__c / 60 / 24, null)</formula>
+        <label>Sum Stage Duration Excluded Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Excluded_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of hours that have been excluded from the Opportunity History.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Excluded_Minutes__c / 60, null)</formula>
+        <label>Sum Stage Duration Excluded Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Excluded_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of minutes that have been excluded from the Opportunity History.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Excluded_Minutes__c, null)</formula>
+        <label>Sum Stage Duration Excluded Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field holds the sum of the Stage Duration Hours for each Final Stage Change, for a single loan.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Minutes__c / 60, null)</formula>
+        <inlineHelpText>Set in Code - Holds the sum of the Stage Duration Hours for each Final Stage Change, for a single loan.</inlineHelpText>
+        <label>Sum Stage Duration Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. This field holds the sum of the Stage Duration Minutes for each Final Stage Change, for a single loan.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Minutes__c, null)</formula>
+        <inlineHelpText>Set in Code - Holds the sum of the Stage Duration Minutes for each Final Stage Change, for a single loan.</inlineHelpText>
+        <label>Sum Stage Duration Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Non_Business_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of non-business days that have been excluded from the Opportunity History.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Non_Business_Min__c / 60 / 24, null)</formula>
+        <label>Sum Stage Duration Non-Business Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Non_Business_Hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of non-business hours that have been excluded from the Opportunity History.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Non_Business_Min__c / 60, null)</formula>
+        <label>Sum Stage Duration Non-Business Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sum_Stage_Duration_Non_Business_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of non-business minutes that have been excluded from the Opportunity History.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(LLC_BI__Final_Stage_Change__c, NOT(ISNULL(LLC_BI__Loan__c)), OR(LLC_BI__Loan__r.LLC_BI__Is_Booked__c, LLC_BI__Loan__r.LLC_BI__Is_Closed__c)), LLC_BI__Total_Stage_Duration_Non_Business_Min__c, null)</formula>
+        <label>Sum Stage Duration Non-Business Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Stage_Duration_Excluded_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via formula. It identifies the total (sum) number of minutes that have been excluded from the Opportunity History of a particular stage.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Previous_Stage_Duration_Excluded_Minutes__c), LLC_BI__Record_Duration_Excluded_Minutes__c , LLC_BI__Record_Duration_Excluded_Minutes__c + LLC_BI__Previous_Stage_Duration_Excluded_Minutes__c)</formula>
+        <label>Total Stage Duration Excluded Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Stage_Duration_Minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. It contains the total stage duration in minutes.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Previous_Stage_Duration_Minutes__c), LLC_BI__Stage_Duration_Minutes__c, LLC_BI__Stage_Duration_Minutes__c + LLC_BI__Previous_Stage_Duration_Minutes__c )</formula>
+        <label>Total Stage Duration Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Stage_Duration_Non_Business_Min__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a formula. It contains the total non-business hours stage duration in minutes.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Previous_Stage_Duration_Non_Business_Min__c), LLC_BI__Stage_Duration_Non_Business_Minutes__c, LLC_BI__Stage_Duration_Non_Business_Minutes__c + LLC_BI__Previous_Stage_Duration_Non_Business_Min__c)</formula>
+        <label>Total Stage Duration Non-Business Mins</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Treasury_Service__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatiaclly populated. It identifies the Treasury Managment record associated with the Opportunity History.</description>
+        <externalId>false</externalId>
+        <label>Treasury Service</label>
+        <referenceTo>LLC_BI__Treasury_Service__c</referenceTo>
+        <relationshipLabel>Opportunity History</relationshipLabel>
+        <relationshipName>Opportunity_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated with a trigger. This field is used to specify the person who made the modification to the opportunity stage/status.</description>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Stage_Histories</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Opportunity History</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Loan__c</columns>
+        <columns>LLC_BI__Deposit__c</columns>
+        <columns>LLC_BI__Stage_Change__c</columns>
+        <columns>LLC_BI__StageName__c</columns>
+        <columns>LLC_BI__Change_Time__c</columns>
+        <columns>LLC_BI__End_Time__c</columns>
+        <columns>LLC_BI__Stage_Duration__c</columns>
+        <columns>LLC_BI__StatusName__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__Loan__c</field>
+            <operation>contains</operation>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>OH-{00000000}</displayFormat>
+        <label>Opportunity Record</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Opportunity History</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>LLC_BI__Loan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LLC_BI__Deposit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LLC_BI__Stage_Change__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LLC_BI__Change_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LLC_BI__End_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LLC_BI__Stage_Duration__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LLC_BI__StageName__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

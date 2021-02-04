@@ -1,0 +1,10 @@
+<apex:page >
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 message-container">
+				<c:MessageHandler messageConfig="LifeCycle.MessageHandler.Configurations.ErrorMessage"
+					isError="true"/>
+			</div>
+		</div>
+	</div>
+</apex:page>

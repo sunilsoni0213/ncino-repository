@@ -1,0 +1,26 @@
+<apex:page >
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12 content-heading">
+							<div class="visible-md visible-lg pull-left content-heading-left">
+								<apex:insert name="left"/>
+							</div>
+							<div class="visible-md visible-lg pull-right content-heading-right">
+								<apex:insert name="right"/>
+							</div>
+							<div class="visible-xs visible-sm pull-left content-heading-left">
+								<apex:insert name="left"/>
+							</div>
+							<div class="visible-xs visible-sm pull-right content-heading-right">
+								<apex:insert name="right"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</apex:page>

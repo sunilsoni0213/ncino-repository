@@ -1,0 +1,26 @@
+<apex:page standardController="Account"
+	extensions="nFORCE.TemplateController"
+	id="RelationshipProductPackages">
+
+	<nFORCE:Includes enableFontAwesome="true"
+		enableBS3Namespace="true"
+		enableLifeCycleApp="true"
+		runLifeCycleApp="false"
+		includeIEHacks="false"/>
+	<nFORCE:Include_Design_System flavor="bs3"/>
+	<c:Include_AngularJS />
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+	<nFORCE:ncTreeGridIncludes />
+
+	<c:RelationshipProdPkgConfiguration />
+	<c:ProductPackageLoanFacilityConfiguration />
+
+	<div id="ncRelationshipProductPackage" class="slds">
+		<nFORCE:ncScreenSectionFormBuilderPartials />
+		<nFORCE:ExpandingDynamicTablePartials />
+		<c:ProductPackageLoanFacilityPartials />
+		<c:RelationshipPPFacilitiesTablePartial />
+		<c:RelationshipProductPackagePartial />
+		<relationship-product-package></relationship-product-package>
+	</div>
+</apex:page>

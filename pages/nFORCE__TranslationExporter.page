@@ -1,0 +1,18 @@
+<apex:page showHeader="false" sidebar="false">
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Route />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTranslationExporter, 'application/App.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTranslationExporter, 'application/Bootstrap.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTranslationExporter, 'components/ncTranslationExporter.component.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTranslationExporter, 'services/translationExporter.service.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTranslationExporter, 'providers/translationExporterRemoting.provider.js')}"/>
+
+	<div class="force slds" id="ncTranslationExporter">
+		<ng-view></ng-view>
+		<c:ncTranslationExporterLabels />
+		<c:ncTranslationExporterConfiguration />
+		<c:ncTranslationExporterPartials />
+		<c:ncTranslationExporterRoutes />
+	</div>
+</apex:page>

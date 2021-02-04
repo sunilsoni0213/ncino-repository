@@ -1,0 +1,11 @@
+<apex:page controller="NDOC.UniversalDocManController" extensions="NDOC.PlaceholderDataController">
+	<c:InputForm renderedFieldSet="{!loanFieldSet}"
+		contextObjectType="Loan"
+		html-ng-if="controller.isLoanDocMan"/>
+	<c:InputForm renderedFieldSet="{!accountFieldSet}"
+		contextObjectType="Account"
+		html-ng-if="controller.isAccountDocMan"/>
+	<c:InputForm renderedFieldSet="{!universalFieldSet}"
+		contextObjectType="Universal"
+		html-ng-if="controller.isUniversalDocMan"/>
+</apex:page>

@@ -1,0 +1,161 @@
+<apex:page standardcontroller="Customer_Portal_Branding__c" extensions="CustomerPortalBrandingController">
+    <apex:includeScript value="{!URLFOR($Resource.JsColor, 'jscolor.js')}" />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
+<div class="slds">    
+<apex:form id="customerPortalBranding">
+    <div class="slds-page-header">
+        <header>
+            Match the color listed in the field label with the colored square in the adjacent image
+        </header>
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size--2-of-3">
+            <dl>
+                <dt>
+                    <apex:image url="{!URLFOR ($Resource.CPBImages, 'Images/DashboardTopbar.png')}" width="900" height="400"/>
+                </dt>
+            </dl>
+            <br/>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:image url="{!URLFOR ($Resource.CPBImages, 'Images/OnlineApplication.png')}" width="900" height="400"/>
+                </dt>
+            </dl>
+            <br/>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:image url="{!URLFOR ($Resource.CPBImages, 'Images/CardTile.png')}" width="900" height="400"/>
+                </dt>
+            </dl>
+        </div>
+        <div class="slds-col slds-size--1-of-3">
+            <br/>
+            <br/>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Upload Logo" for="file1"/>&nbsp;&nbsp;
+                    <apex:inputFile value="{!document.body}" filename="{!document.name}" id="file1" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Dashboard Topbar Header (Green)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Dashboard Topbar Header (Green)" value="{!Customer_Portal_Branding__c.Dashboard_Topbar_Header__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Dashboard Link Text (Yellow)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Dashboard Link Text (Yellow)" value="{!Customer_Portal_Branding__c.Dashboard_Link_Text__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Upload Custom Portal Hero (Red)" for="file"/>&nbsp;&nbsp;
+                    <apex:inputFile value="{!document1.body}" filename="{!document1.name}" id="file" />
+                </dt>
+            </dl>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Primary Button Color (Purple)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Primary Button Color (Purple)" value="{!Customer_Portal_Branding__c.Button_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Secondary Button Color (Blue)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Secondary Button Color (Blue)" value="{!Customer_Portal_Branding__c.Secondary_Button_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Icon Color (Red)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Icon Color (Red)" value="{!Customer_Portal_Branding__c.Icon_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Navigation Bar Color (Green)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Navigation Bar Color (Green)" value="{!Customer_Portal_Branding__c.Navigation_Bar_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Navigation Text Color (Green)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Navigation Text Color (Green)" value="{!Customer_Portal_Branding__c.Navigation_Text_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Online Application Topbar Text (Yellow)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Online Application Topbar Text (Yellow)" value="{!Customer_Portal_Branding__c.Online_Application_Topbar_Header_Text__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Application Body Header (Light Blue)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Application Body Header (Light Blue)" value="{!Customer_Portal_Branding__c.Application_Body_Header__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Upload Online Application Hero (Orange)" for="file2"/>&nbsp;&nbsp;
+                    <apex:inputFile value="{!document2.body}" filename="{!document2.name}" id="file2" />
+                </dt>
+            </dl>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Card Header Text Color (Red)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Card Header Text Color (Red)" value="{!Customer_Portal_Branding__c.Card_Header_Text_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Card Header Background Color (Orange)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Card Header Background Color (Orange)" value="{!Customer_Portal_Branding__c.Card_Header_Background_Color__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <dl>
+                <dt>
+                    <apex:outputLabel value="Tile Header Text (Green)"/>&nbsp;&nbsp;
+                    <apex:inputField styleClass="jscolor" label="Tile Header Text (Green)" value="{!Customer_Portal_Branding__c.Tile_Header_Text__c}" />
+                </dt>
+            </dl>
+            <br/>
+            <br/>
+            <apex:commandButton value="Save" action="{!getUpload}" />&nbsp;&nbsp;
+            <apex:commandButton value="Cancel" action="{!cancel}" />
+        </div>
+    </div>
+</apex:form>
+</div>
+</html>
+</apex:page>

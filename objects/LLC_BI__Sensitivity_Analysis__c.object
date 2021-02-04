@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Sensitivity Analysis object stores details that are used for the calculation of commercial real estate related financial indicators. The fields on this object enable users to perform sensitivity analysis on specific variables within the context of the CRE Analysis application.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>LLC_BI__Bundle__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to the underwriting bundle.</description>
+        <externalId>false</externalId>
+        <label>Bundle</label>
+        <referenceTo>LLC_BI__Underwriting_Bundle__c</referenceTo>
+        <relationshipLabel>Sensitivity Analysis</relationshipLabel>
+        <relationshipName>Sensitivity_Analysis</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Collapsed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When selected, the Single Variate or Multi-Variate table will collapse. If not selected, then the table will not be collapsed.</description>
+        <externalId>false</externalId>
+        <label>Is Collapsed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Template__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>It must be manually populated. When enabled, the Sensitivity Analysis is treated as a template and can be used to clone additional Sensitivity Analysis. When disabled, it cannot be used to clone additional Sensitivity Analysis. If its parent &quot;LLC_BI_Underwriting_Bundle_c&quot; is marked as a template, then the Sensitivity Analysis is also a template. By default, this is disabled.</description>
+        <externalId>false</externalId>
+        <label>Is Template</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_1_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the 1st output in sensitivity analysis. This is the bottom value in multi-variate cells, and the third column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 1 Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_1_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the values in the cells for either Single Variate or Multi-Variate. This is the bottom value in multi-variate cells, and the third column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 1 Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_1_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Column Headers in Single Variate Table or ratio key names in Multi-Variate Tables. This is the bottom label in the multi-variate legend, and the third column header in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 1 Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_2_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the 2nd output in sensitivity analysis. This is the second-to-last value in multi-variate cells, and the fourth column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 2 Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_2_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the values in the cells for either Single Variate or Multi-Variate. This is the second-to-last value in multi-variate cells, and the fourth column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 2 Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_2_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Column Headers in Single Variate Table or ratio key names in Multi-Variate Tables. This is the second-to-last label in the multi-variate legend, and the fourth column header in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 2 Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_3_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the 3rd output in sensitivity analysis. This is the third-to-last value in multi-variate cells, and the fifth column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 3 Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_3_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the values in the cells for either Single Variate or Multi-Variate. This is the third-to-last value in multi-variate cells, and the fifth column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 3 Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_3_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Column Headers in Single Variate Table or ratio key names in Multi-Variate Tables. This is the third-to-last label in the multi-variate legend, and the fifth column header in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 3 Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_4_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the 4th output in sensitivity analysis. This is the fourth-to-last value in multi-variate cells, and the sixth column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 4 Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_4_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the values in the cells for either Single Variate or Multi-Variate. This is the fourth-to-last value in multi-variate cells, and the sixth column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 4 Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_4_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Column Headers in Single Variate Table or ratio key names in Multi-Variate Tables. This is the fourth-to-last label in the multi-variate legend, and the sixth column header in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 4 Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_5_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the 5th output in sensitivity analysis. This is the fifth-to-last value in multi-variate cells, and the seventh column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 5 Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_5_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the values in the cells for either Single Variate or Multi-Variate. This is the fifth-to-last value in multi-variate cells, and the seventh column in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 5 Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_5_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Column Headers in Single Variate Table or ratio key names in Multi-Variate Tables. This is the fifth-to-last label in the multi-variate legend, and the seventh column header in single-variate tables.</description>
+        <externalId>false</externalId>
+        <label>Output 5 Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_A_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the adjusted variable A. Likely always Percent.</description>
+        <externalId>false</externalId>
+        <label>Output A Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_A_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the value of the Variable A adjusted by the user input.</description>
+        <externalId>false</externalId>
+        <label>Output A Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_A_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Column header for the adjusted variable value in single-variate only.</description>
+        <externalId>false</externalId>
+        <label>Output A Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_B_Display_Type__c</fullName>
+        <defaultValue>&quot;String&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Controls the formatting of the adjusted variable B. Probably always percent</description>
+        <externalId>false</externalId>
+        <label>Output B Display Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Sensitivity_Analysis_Display_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Output_B_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula that determines the value of the Variable B adjusted by the user input.</description>
+        <externalId>false</externalId>
+        <label>Output B Formula</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Variable_A_Direction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Notates that Variable A is displayed on the Y-Axis</description>
+        <externalId>false</externalId>
+        <label>Variable A Direction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Variable_A_Increments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Will be used for Single Variate and Multi-Variate. Used in calculations for analysis.</description>
+        <externalId>false</externalId>
+        <label>Variable A Increments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Variable_A_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Variable can be the only variable or it can be 1 of the 2 variables used in Multi-Variate Analysis.</description>
+        <externalId>false</externalId>
+        <label>Variable A Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Variable_B_Direction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Notates that Variable B is displayed on the X-Axis</description>
+        <externalId>false</externalId>
+        <label>Variable B Direction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Variable_B_Increments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Will only be used in Multi Variate. Used in calculations for analysis</description>
+        <externalId>false</externalId>
+        <label>Variable B Increments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Variable_B_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>One of the two variables used in Multi-Variate Analysis.</description>
+        <externalId>false</externalId>
+        <label>Variable B Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique key for this object.</description>
+        <externalId>true</externalId>
+        <label>Lookup Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Sensitivity Analysis</label>
+    <nameField>
+        <displayFormat>SA-{0000}</displayFormat>
+        <label>Sensitivity Analysis Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sensitivity Analysis</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

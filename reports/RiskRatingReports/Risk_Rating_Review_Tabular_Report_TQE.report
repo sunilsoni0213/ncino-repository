@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LLC_BI__Annual_Review__c$LLC_BI__Account__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c$Name</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Risk_Grade_Factor_Values__r$Risk_Grade_Factor_Group_Name__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Risk_Grade_Factor_Values__r$LLC_BI__Risk_Grade_Factor_Name__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Risk_Grade_Factor_Values__r$LLC_BI__Qualitative_Value__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>LLC_BI__Annual_Review__c.LLC_BI__Risk_Grade_Factor_Values__r$LLC_BI__Quantitative_Value__c</field>
+    </columns>
+    <description>Tabular report for Risk Rating Reviews</description>
+    <format>Tabular</format>
+    <name>Risk Rating Review Tabular Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Reviews_with_Risk_Grade_Factors__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LLC_BI__Annual_Review__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

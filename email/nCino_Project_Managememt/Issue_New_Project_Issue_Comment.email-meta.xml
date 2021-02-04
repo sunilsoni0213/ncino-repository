@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to notify the Issue Owner that a new comment has been added</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>nCino_Standard_Email_Letterhead</letterhead>
+    <name>Issue - New Project Issue Comment</name>
+    <style>freeForm</style>
+    <subject>*** A New Comment Has Been Added to Issue {!Issue__c.Name} ***</subject>
+    <textOnly>Hello {!Organization.Name} Team Member,
+
+A new comment has been added to Project Issue {!Issue__c.Name}, which is currently assigned to you. Please login at your earliest convenience to review and take the appropriate next steps.  Click here for full Issue details: {!Issue__c.Link}
+
+Issue Name: {!Issue__c.Name}
+Issue Category: {!Issue__c.Category__c}
+Issue Description: {!Issue__c.Description__c}
+
+New Comments: {!Issue_Comment__c.Comment__c}
+
+Thanks,
+
+nCino Admin</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

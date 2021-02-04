@@ -1,0 +1,21 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" applyHtmlTag="false" standardStylesheets="false" controller="nFORCE.TemplateController">
+
+	<head>
+		<apex:slds />
+		<nFORCE:Internationalize />
+		<nFORCE:Include_Design_System components="true" />
+	</head>
+
+	<body>
+		<div class="slds slds-scope terms-conditions">
+			<terms-conditions username="{!$User.FirstName} {!$User.LastName}" context-id="{!$CurrentPage.parameters.id}" route-id="{!route.Id}"></terms-conditions>
+		</div>
+
+		<script src="{!URLFOR($Resource.terms_conditions, 'main.js')}"></script>
+		<script src="{!URLFOR($Resource.terms_conditions, 'polyfills.js')}"></script>
+		<script src="{!URLFOR($Resource.terms_conditions, 'runtime.js')}"></script>
+		<script src="{!URLFOR($Resource.terms_conditions, 'styles.js')}"></script>
+		<script src="{!URLFOR($Resource.terms_conditions, 'vendor.js')}"></script>
+	</body>
+
+</apex:page>

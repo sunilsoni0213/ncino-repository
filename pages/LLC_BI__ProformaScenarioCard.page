@@ -1,0 +1,5 @@
+<apex:page id="ProformaScenarioCard">
+	<div class="slds-p-horizontal--large slds-p-vertical--x-large">
+		<c:ProformaScenarioCard />
+	</div>
+</apex:page>

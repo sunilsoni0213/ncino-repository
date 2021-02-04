@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to notify a contact that the bank is requesting their financial statements.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>nCino_Standard_Email_Letterhead</letterhead>
+    <name>Relationship - Financial Statement Request</name>
+    <style>freeForm</style>
+    <subject>*** Financial Statement Request ***</subject>
+    <textOnly>{!Today}
+
+Dear {!Contact.FirstName},
+
+I will use email templates like this one to make you aware of the need to provide to us things like financial statements or updated insurance policies.
+
+Personal Financial Statement
+
+This statement does not need to be audited by a CPA.
+
+Annual Tax Returns
+
+Please send your most recently filed returns for all entities with which you are associated.
+
+
+
+Having a compliant, consistent message will help me measure and manage response rates to covenants and send out friendly reminders to my customers and clients.
+
+Thanks,
+
+{!Contact.OwnerFirstName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,192 @@
+<apex:component layout="none" allowdml="true" controller="CSA_ConfigValueMgmtController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Javascript.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Stylesheet.css')}" />
+
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <div class="force messages success" id="successMessage" />
+            <div class="force messages error" id="errorMessage" />
+            <apex:outputpanel layout="none" rendered="{!showHome}">
+                <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Config_Value_Mgmt_Add_New}" action="{!configValueNew}" 
+                                    rerender="theform" status="loading" />
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <apex:repeat value="{!configValueListViewFieldSet}" var="f">
+                                    <th>
+                                        <apex:outputtext value="{!f.Label}" />
+                                    </th>
+                                </apex:repeat>
+                                <th>
+                                    <apex:outputtext value="{!$Label.Config_Value_Mgmt_Actions}" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!configValues}" var="cv">
+                                <tr>
+                                    <apex:repeat value="{!configValueListViewFieldSet}" var="f">
+                                        <td>
+                                            <apex:outputpanel layout="none" rendered="{!f.fieldPath != 'LLC_BI__fieldValue__c'}">
+                                                <apex:outputfield value="{!cv[f.fieldPath]}" />
+                                            </apex:outputpanel>
+                                            <apex:outputpanel layout="block" styleclass="slds-truncate" rendered="{!f.fieldPath == 'LLC_BI__fieldValue__c'}">
+                                                <apex:outputfield value="{!cv[f.fieldPath]}" />
+                                            </apex:outputpanel>
+                                        </td>
+                                    </apex:repeat>
+                                    <td>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Config_Value_Mgmt_Delete}" action="{!configValueDelete}"
+                                                            rerender="theform, overview" status="loading" 
+                                                            onclick="if(!confirm('{!$Label.Config_Value_Mgmt_Confirm_Msg}')){return false;}">
+                                            <apex:param name="configValueId" value="{!cv.Id}" assignto="{!configValueId}" />
+                                        </apex:commandbutton>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Config_Value_Mgmt_Edit}" action="{!configValueEdit}"
+                                                            rerender="theform" status="loading">
+                                            <apex:param name="configValueId" value="{!cv.Id}" assignto="{!configValueId}" />
+                                        </apex:commandbutton>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </apex:outputpanel>
+            <apex:outputpanel layout="none" rendered="{!showNew || showEdit}">
+                <div class="row">
+                    <apex:repeat value="{!configValueNewEditFieldSet}" var="f">
+                        <div class="form-horizontal col-md-6">
+                            <div class="form-group">
+                                <div class="col-xs-4 content-label">
+                                    <div class="content-label">
+                                        <label class="form-static-control input-sm">
+                                            <apex:outputtext value="{!f.Label}" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 content-body">
+                                    <apex:outputpanel layout="none" rendered="{!f.fieldPath == 'LLC_BI__fieldValue__c' && showEdit}">
+                                        <apex:selectlist size="10" multiselect="true" value="{!selectedFieldValues}" styleclass="form-control" rendered="{!category == 'Stage'}">
+                                            <apex:selectoptions value="{!stagePicklist}" />
+                                        </apex:selectlist>
+                                        <apex:selectlist size="10" multiselect="true" value="{!selectedFieldValues}" styleclass="form-control" rendered="{!category == 'Status'}">
+                                            <apex:selectoptions value="{!statusPicklist}" />
+                                        </apex:selectlist>
+                                        <apex:selectlist size="10" multiselect="true" value="{!selectedFieldValues}" styleclass="form-control" rendered="{!category == 'Role'}">
+                                            <apex:selectoptions value="{!rolesPicklist}" />
+                                        </apex:selectlist>
+                                        <apex:selectlist size="10" multiselect="true" value="{!selectedFieldValues}" styleclass="form-control" rendered="{!category == 'Field'}">
+                                            <apex:selectoptions value="{!fieldAPIPickList}" />
+                                        </apex:selectlist>
+                                        <apex:inputfield value="{!configValue[f.fieldPath]}" styleclass="form-control" rendered="{!ISNULL(category)}"/>
+                                    </apex:outputpanel>
+                                    <apex:outputpanel layout="none" rendered="{!f.type == 'string' && f.fieldPath == 'Name'}">
+                                        <apex:outputtext value="{!configValue[f.fieldPath]}"  styleclass="form-static-control input-sm" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel layout="none" rendered="{!f.type == 'string' && f.fieldpath != 'Name'}">
+                                        <apex:inputfield value="{!configValue[f.fieldPath]}" styleclass="input-sm form-control" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel layout="none" rendered="{!f.type == 'textarea' && showNew}">
+                                        <apex:inputfield value="{!configValue[f.fieldPath]}" styleclass="form-control" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel layout="none" rendered="{!f.type == 'picklist'}">
+                                        <apex:inputfield value="{!configValue[f.fieldPath]}" styleclass="input-sm form-control" />
+                                    </apex:outputpanel>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:repeat>
+                </div>
+                <hr/>
+                <div class="col-md-12">
+                    <div class="col-xs-12">
+                        <apex:outputtext value="{!$Label.Config_Value_Mgmt_Related_Msg_Part_1}" />
+                        <button class="btn btn-link btn-xs" style="padding-left:5px;padding-right:5px;" type="button" onclick="clearSelections();">
+                            <apex:outputtext value="{!$Label.Config_Value_Mgmt_Clear_Selections}" />
+                        </button> 
+                        <apex:outputtext value="{!$Label.Config_Value_Mgmt_Related_Msg_Part_2}" /> 
+                    </div>
+                    <div class="form-horizontal col-md-6">
+                        <div class="form-group">
+                            <div class="col-xs-4">
+                                <div class="content-label">
+                                    <i class="fa fa-info-circle" data-toggle="tooltip" title="{!$Label.Config_Value_Mgmt_Available_Title}"></i>
+                                    <label class="form-static-control input-sm" style="padding-left:2px !important">
+                                        <apex:outputtext value="{!$Label.Config_Value_Mgmt_Available_Config_Keys}" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 content-body">
+                                <apex:selectlist size="10" multiselect="true" styleclass="form-control configKeys" value="{!selectedAvailableKeys}">
+                                    <apex:selectoptions value="{!availableConfigKeys}" />
+                                </apex:selectlist>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal col-md-6">
+                        <div class="form-group">
+                            <div class="col-xs-4">
+                                <div class="content-label">
+                                    <i class="fa fa-info-circle" data-toggle="tooltip" title="{!$Label.Config_Value_Mgmt_Linked_Title}"></i>
+                                    <label class="form-static-control input-sm" style="padding-left:2px !important">
+                                        <apex:outputtext value="{!$Label.Config_Value_Mgmt_Linked_Config_Keys}" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 content-body">
+                                <apex:selectlist size="10" multiselect="true" styleclass="form-control configKeys" value="{!selectedUsedKeys}">
+                                    <apex:selectoptions value="{!usedConfigKeys}" />
+                                </apex:selectlist>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Config_Value_Mgmt_Save}" action="{!configValueSaveNew}"
+                                            rerender="theform, overview" status="loading" rendered="{!showNew}">
+                            <apex:param name="isSaveNew" value="false" assignto="{!isSaveNew}" />
+                        </apex:commandbutton>
+                        <apex:commandbutton styleclass="btn btn-secondary" value="{!$Label.Config_Value_Mgmt_Save_New}" action="{!configValueSaveNew}"
+                                            rerender="theform, overview" status="loading" rendered="{!showNew}">
+                            <apex:param name="isSaveNew" value="true" assignto="{!isSaveNew}" />
+                        </apex:commandbutton>
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Config_Value_Mgmt_Save}" action="{!configValueSaveEdit}"
+                                            rerender="theform" status="loading" rendered="{!showEdit}">
+                        </apex:commandbutton>
+                        <apex:commandbutton styleclass="btn btn-link" value="{!$Label.Config_Value_Mgmt_Back}" action="{!back}"
+                                            rerender="theform" status="loading" />
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    jQuery(function () {
+                        jQuery('[data-toggle="tooltip"]').tooltip({
+                            container: '.ui-container'
+                        });
+                    });
+                </script>
+            </apex:outputpanel>
+
+            <script type="text/javascript">
+                jQuery(function() {
+                    if('{!successMessage}' != '') {
+                        jQuery('#successMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-success">{!successMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-success").remove();
+			            },5000);
+                    }
+
+                    if('{!errorMessage}' != '') {
+                        jQuery('#errorMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-danger">{!errorMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-danger").remove();
+			            },10000);
+                    }
+                });
+            </script>
+        </apex:form>
+    </div>
+</apex:component>

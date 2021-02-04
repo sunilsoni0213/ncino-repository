@@ -1,0 +1,3 @@
+<apex:page controller="LLC_BI.ManageFacilityContainer">
+	<c:Inline_Parent_Redirect destination="{!containerRedirectLocation}" />
+</apex:page>

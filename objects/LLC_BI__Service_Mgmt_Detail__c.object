@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This object captures more information about a service and has the ability to tie it back to higher level details in Service Mgmt.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>Service_Mgmt_Detail_Loan</fullName>
+        <description>Used on Loan UI</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Policy_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Sub_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Coverage_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Deductible__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Effective_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Expiration_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Service Mgmt Detail Loan</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Coverage_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional currency field to state the total amount the service covers. By default, this field is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total amount the service covers.</inlineHelpText>
+        <label>Coverage Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Deductible__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional currency field to state the policy’s service deductible. By default, this field is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total service deductible.</inlineHelpText>
+        <label>Deductible</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Effective_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional Date field to show when the service goes into effect. By default, this field is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to determine when the service goes into effect.</inlineHelpText>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Expiration_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional Date field to determine when the service is no longer in effect. By default, this field is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to determine when the service is no longer in effect.</inlineHelpText>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Occurrence_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional currency field to determine how much money is given to the borrower per occurrence. By default, this field is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total amount per occurrence.</inlineHelpText>
+        <label>Occurrence Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Policy_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system auto populates this optional text field to display the policy number associated with the service.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Displays the policy number associated with the service.</inlineHelpText>
+        <label>Policy Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Service_Mgmt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system uses this required lookup field to locate the Service Management record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The lookup for the Service Management record.</inlineHelpText>
+        <label>Service Mgmt</label>
+        <referenceTo>LLC_BI__Service_Mgmt__c</referenceTo>
+        <relationshipLabel>Service Mgmt Details</relationshipLabel>
+        <relationshipName>Service_Mgmt_Details</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional picklist field to display the status of the service being detailed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the appropriate status of the service.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional picklist field to determine the sub type of service details being added. By default, this field appears after a service type is selected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select a service sub type.</inlineHelpText>
+        <label>Sub Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Builder Risk</fullName>
+                    <default>false</default>
+                    <label>Builder Risk</label>
+                </value>
+                <value>
+                    <fullName>Business Interruption</fullName>
+                    <default>false</default>
+                    <label>Business Interruption</label>
+                </value>
+                <value>
+                    <fullName>Business Personal Property</fullName>
+                    <default>false</default>
+                    <label>Business Personal Property</label>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+                <value>
+                    <fullName>Collision &amp; Comprehensive</fullName>
+                    <default>false</default>
+                    <label>Collision &amp; Comprehensive</label>
+                </value>
+                <value>
+                    <fullName>Disability</fullName>
+                    <default>false</default>
+                    <label>Disability</label>
+                </value>
+                <value>
+                    <fullName>Earthquake</fullName>
+                    <default>false</default>
+                    <label>Earthquake</label>
+                </value>
+                <value>
+                    <fullName>Flood Building</fullName>
+                    <default>false</default>
+                    <label>Flood Building</label>
+                </value>
+                <value>
+                    <fullName>Flood Contents</fullName>
+                    <default>false</default>
+                    <label>Flood Contents</label>
+                </value>
+                <value>
+                    <fullName>Hazard</fullName>
+                    <default>false</default>
+                    <label>Hazard</label>
+                </value>
+                <value>
+                    <fullName>Liability</fullName>
+                    <default>false</default>
+                    <label>Liability</label>
+                </value>
+                <value>
+                    <fullName>Life</fullName>
+                    <default>false</default>
+                    <label>Life</label>
+                </value>
+                <value>
+                    <fullName>Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous</label>
+                </value>
+                <value>
+                    <fullName>Multi Peril - Excluding Flood</fullName>
+                    <default>false</default>
+                    <label>Multi Peril - Excluding Flood</label>
+                </value>
+                <value>
+                    <fullName>Multi Peril - Including Flood</fullName>
+                    <default>false</default>
+                    <label>Multi Peril - Including Flood</label>
+                </value>
+                <value>
+                    <fullName>Real and Personal Property</fullName>
+                    <default>false</default>
+                    <label>Real and Personal Property</label>
+                </value>
+                <value>
+                    <fullName>Re-Insurance</fullName>
+                    <default>false</default>
+                    <label>Re-Insurance</label>
+                </value>
+                <value>
+                    <fullName>Sinkhole</fullName>
+                    <default>false</default>
+                    <label>Sinkhole</label>
+                </value>
+                <value>
+                    <fullName>Terrorism</fullName>
+                    <default>false</default>
+                    <label>Terrorism</label>
+                </value>
+                <value>
+                    <fullName>Title</fullName>
+                    <default>false</default>
+                    <label>Title</label>
+                </value>
+                <value>
+                    <fullName>Windstorm and Hail</fullName>
+                    <default>false</default>
+                    <label>Windstorm and Hail</label>
+                </value>
+                <value>
+                    <fullName>Workers Compensation</fullName>
+                    <default>false</default>
+                    <label>Workers Compensation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The user populates this optional picklist field to determine the type of service being detailed. By default, this field is set to Insurance.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select a service type.</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Insurance Policy</fullName>
+                    <default>false</default>
+                    <label>Insurance Policy</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Service Mgmt Detail</label>
+    <nameField>
+        <label>Service Mgmt Detail Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Service Mgmt Details</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

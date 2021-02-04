@@ -1,0 +1,159 @@
+<apex:page docType="html-5.0"
+    sidebar="false"
+    controller="nFORCE.TemplateController"
+    showHeader="false"
+    standardStylesheets="false"
+    applyHtmlTag="false"
+    applyBodyTag="false">
+    <html class="portal-html" lang="en"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body class="slds" ng-app="selfRegisterApp" ng-cloak="true">
+    <div class="slds-grid slds-wrap" ng-controller="OnlineFormController as vm"
+        ng-init="vm.iconBasePath = '{!URLFOR($Resource.nFORCE__SLDS0102, '/assets/icons/')}'"
+        ng-cloak="true">
+        <div class="slds-size--1-of-1 slds-large-size--1-of-1 slds-large-size--6-of-6">
+            <form name="onlineFormForm" novalidate="true">
+                <div class="portal-form-container slds-p-top--x-large slds-p-bottom--x-large slds-m-top--xx-large      
+                            slds-m-bottom--large portal-media-icon-parent slds-theme--shade slds-p-horizontal--x-large"
+                    n-style="pso-section" resizer="true"
+                    ng-class="{'slds-p-left--x-large slds-p-right--x-large
+                                slds-m-left--x-large slds-m-right--x-large': isMediumOrBigger}">
+                            <span ng-if="vm.route.portalIconPath"
+                                class="slds-icon_container slds-icon_container--circle"
+                                n-style="pso-section-icon" resizer="true"
+                                ng-class="{'portal-media-small-icon-child': !(isMediumOrBigger),
+                                    'portal-media-icon-child': isMediumOrBigger}">
+                                <svg aria-hidden="true" class="slds-icon" n-style="pso-section-icon">
+                                    <use xlink:href="{{vm.iconBasePath + vm.route.portalIconPath}}"></use>
+                                </svg>
+                            </span>
+                    <h3 class="portal-center-text"
+                        resizer="true" ng-bind="(isMediumOrBigger ? vm.route.portalHeaderText : vm.route.name)"
+                        ng-class="{'slds-text-heading--medium slds-m-top--large': isMediumOrBigger,
+                                    'slds-text-heading--small slds-m-top-small': !(isMediumOrBigger)}"
+                        n-style="pso-application-body-header">
+                    </h3>
+                    <p class="portal-center-text slds-m-top--small"
+                        n-style="pso-application-body-subheader"
+                        resizer="true" ng-show="isMediumOrBigger"
+                        ng-bind="vm.route.portalSubheaderText">
+                    </p>
+                    <div class="portal-form-section"
+                        n-style="pso-section-inner">
+                        <!-- EID Questions -->
+                        <div id="eid" class="slds-grid slds-wrap">
+                            <label class="portal-center-text slds-col--padded slds-size--1-of-1"></label>
+                            <div class="slds-m-top--medium slds-form-element slds-grow-none slds-col--padded
+                                        slds-size--1-of-1">
+                                <label class="slds-form-element__label" n-style="pso-form-label">
+                                    Your credit file indicates that you may have an auto loan/lease, opened in or around April 2012.  Who is the credit provider for this account?
+                                </label>
+                                <select class="slds-select" name="selected_response1"
+                                    n-style="pso-select" required="true">
+                                    <option value="1">Please Select One</option>
+                                    <option value="2">BANK OF AMERICA</option>
+                                    <option value="3">CHASE</option>
+                                    <option value="4">NCINO FINANCIAL</option>
+                                    <option value="5">NISSAN FINANCIAL</option>
+                                    <option value="6">NONE OF THE ABOVE</option>
+                                </select>
+                            </div>
+                            <div class="slds-m-top--medium slds-form-element slds-grow-none slds-col--padded
+                                        slds-size--1-of-1">
+                                <label class="slds-form-element__label" n-style="pso-form-label">
+                                    What is the total monthly payment for the above-referenced account?
+                                </label>
+                                <select class="slds-select" name="selected_response2"
+                                    n-style="pso-select" required="true">
+                                    <option value="1">Please Select One</option>
+                                    <option value="2">$50-$74</option>
+                                    <option value="3">$75-$99</option>
+                                    <option value="4">$100-$124</option>
+                                    <option value="5">$125-$149</option>
+                                    <option value="6">NONE OF THE ABOVE</option>
+                                </select>
+                            </div>
+                            <div class="slds-m-top--medium slds-form-element slds-grow-none slds-col--padded
+                                        slds-size--1-of-1">
+                                <label class="slds-form-element__label" n-style="pso-form-label">
+                                    Your credit file indicates that you may have a student loan, opened in or around November 2008.  Who is the credit provider for this account?
+                                </label>
+                                <select class="slds-select" name="selected_response3"
+                                    n-style="pso-select" required="true">
+                                    <option value="1">Please Select One</option>
+                                    <option value="2">CITI STUDENT LOANS</option>
+                                    <option value="3">SALLIE MAE</option>
+                                    <option value="4">GREAT LAKES</option>
+                                    <option value="5">FEDLOAN SERVICING</option>
+                                    <option value="6">NONE OF THE ABOVE</option>
+                                </select>
+                            </div>
+                            <div class="slds-m-top--medium slds-form-element slds-grow-none slds-col--padded
+                                        slds-size--1-of-1">
+                                <label class="slds-form-element__label" n-style="pso-form-label">
+                                    What is the total monthly payment for the above-referenced account?
+                                </label>
+                                <select class="slds-select" name="selected_response2"
+                                    n-style="pso-select" required="true">
+                                    <option value="1">Please Select One</option>
+                                    <option value="2">$50-$74</option>
+                                    <option value="3">$75-$99</option>
+                                    <option value="4">$100-$124</option>
+                                    <option value="5">$125-$149</option>
+                                    <option value="6">NONE OF THE ABOVE</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-box slds-theme--default slds-m-top--medium slds-m-left--small slds-m-right--small"
+                        ng-repeat="terms in vm.terms">
+                        <div class="slds-grid">
+                            <div class="slds-form-element__control slds-col slds-no-flex"
+                                ng-class="{'slds-has-error' : onlineFormForm.{{terms.termsId}}.$invalid && vm.onlineFormSubmitted == true}">
+                                <label class="slds-checkbox">
+                                    <input type="checkbox"
+                                        ng-model="terms.agreed"
+                                        ng-model-options="{allowInvalid: true}"
+                                        name="{{terms.termsId}}"
+                                        ng-required="true"
+                                        ng-change="vm.updateAgreement($index)"
+                                    />
+                                    <span class="slds-checkbox--faux" n-style="pso-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="slds-col slds-p-left--medium slds-p-right--medium">
+                                <p ng-bind-html="vm.toTrusted(vm.formatAgreementText(terms))"
+                                    n-style="pso-action-link">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                            <button id="submitOnlineForm"
+                                ng-disabled="!onlineFormForm.$valid"
+                                class="slds-button slds-button--brand slds-size--1-of-1"
+                                n-style="pso-button-primary"
+                                ng-click="vm.submitOnlineForm(vm.label.EID_Loader_Message);">
+                            Next
+                                <svg aria-hidden="true" class="slds-icon portal-right-arrow" resizer="true"
+                                    ng-class="{'slds-icon--small': !isMediumOrBigger}">
+                                    <use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+                                              '/assets/icons/utility-sprite/svg/symbols.svg#arrowup')}"></use>
+                                </svg>
+                            </button>
+                        </div>
+   						<nPortal:NextButton buttonText="{!$Label.My_Next_Button_Text}" showArrow="false" />
+                    </div>
+                </div>
+                <nPortal:SecurityBadgeDisplay />
+            </form>
+        </div>
+    </div>
+    </body>
+    </html>
+</apex:page>

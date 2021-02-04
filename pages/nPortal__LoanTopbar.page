@@ -1,0 +1,36 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<div class="slds-p-top--large"
+		ng-controller="ApplicationTopbarController as vm"
+		n-style="pso-oa-topbar">
+		<h2 ng-class="{'slds-text-heading--large': (isMediumOrBigger),
+			'slds-text-heading--medium slds-m-bottom--large': (!isMediumOrBigger)}"
+			resizer="true"
+			n-style="pso-oa-topbar-header"
+			ng-bind="::vm.pageHeader">
+		</h2>
+		<div class="slds-grid slds-wrap slds-m-top--medium slds-p-bottom--large"
+			ng-show="(isMediumOrBigger)"
+			resizer="true">
+			<div class="slds-size--1-of-2 slds-medium-size--1-of-4
+				slds-large-size--1-of-4"
+				ng-repeat="fld in vm.fields"
+				ng-cloak="true">
+				<p class="slds-text-heading--label slds-m-top--x-small"
+					n-style="pso-oa-topbar-fieldset-label"
+					ng-bind="::fld.label">
+				</p>
+				<p class="portal-primary-color-text slds-text-heading--small slds-m-top--small portal-break-word"
+					n-style="pso-oa-topbar-fieldset-value">
+					<output-field field="fld"></output-field>
+				</p>
+			</div>
+		</div>
+	</div>
+</apex:page>

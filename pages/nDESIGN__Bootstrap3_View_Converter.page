@@ -1,0 +1,5 @@
+<apex:page standardController="nDESIGN__View__c" extensions="nDESIGN.Bootstrap3ViewsConverterController" action="{!save}">
+	<apex:form >
+		<apex:outputText value="{!nDESIGN__View__c.Id} {!nDESIGN__View__c.nDESIGN__Edit__c} {!nDESIGN__View__c.nDESIGN__Read_Only__c} {!nDESIGN__View__c.nDESIGN__Preview__c}" rendered="false"/>
+	</apex:form>
+</apex:page>

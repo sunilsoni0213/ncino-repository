@@ -1,0 +1,3 @@
+<!-- @Deprecated -->
+<apex:page standardController="LLC_BI__Spread_Statement_Type__c">
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page controller="CBCFLD.FloodController">
+	<c:Includes />
+	<div class="nFlow">
+		<c:FloodRequest setAppController="{!appController}" rendered="{!render['cbc-flood-certificate-request']}"/>
+		<c:FloodCertificates setAppController="{!appController}" rendered="{!render['cbc-flood-certificates']}"/>
+		<c:FloodCertificate setAppController="{!appController}" rendered="{!render['cbc-flood-certificate']}"/>
+	</div>
+</apex:page>

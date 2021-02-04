@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This object houses Document Manager template configuration.</description>
+    <fields>
+        <fullName>nFUSE__Add_Date_To_Placeholder_Name__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Specifies creating new placeholder each time with date added to name for uniqueness</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Add Date To Placeholder</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Content_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Document Content Type</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Content Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Doc_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Document Class</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Placeholder Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Doc_Man__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Document Manager Name</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Document Manager Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Doc_Tab__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Document Tab</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Document Tab</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Doc_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Document Type</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Category Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__File_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Document File Name</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>DocMan Template</label>
+    <pluralLabel>DocMan Templates</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

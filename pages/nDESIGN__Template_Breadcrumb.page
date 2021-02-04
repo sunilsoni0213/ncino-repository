@@ -1,0 +1,12 @@
+<apex:page >
+	<div class="breadcrumb">
+		<apex:composition template="nDESIGN__Template_Heading">
+			<apex:define name="left">
+				<apex:insert name="left"/>
+			</apex:define>
+			<apex:define name="right">
+				<apex:insert name="right"/>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

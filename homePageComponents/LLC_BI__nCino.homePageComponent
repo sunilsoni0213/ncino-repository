@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;div&gt;&lt;img src=&quot;/resource/1371235442000/llc_web_ui/images/nCino_Transparent_Logo_smaller.png&quot; width=&quot;190px&quot;&gt;&lt;/img&gt;&lt;/div&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

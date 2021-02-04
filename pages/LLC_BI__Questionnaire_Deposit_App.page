@@ -1,0 +1,13 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="LLC_BI.QuestionnaireAppController">
+
+	<apex:styleSheet value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'css/DepositStyle.css')}" />
+
+	<apex:include pageName="LLC_BI__Questionnaire_App" />
+
+	<c:QuestionnaireDepositConfiguration nextHref="{!nextHref.url}"
+		groupId="{!questionnaireGroupId}"
+		contextOwnerId="{!contextOwnerId}"
+		contextObjectId="{!contextObjectId}"
+	/>
+</apex:page>

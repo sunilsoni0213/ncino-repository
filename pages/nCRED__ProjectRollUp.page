@@ -1,0 +1,37 @@
+<apex:page showHeader="false"
+ sidebar="false"
+ standardStylesheets="false"
+ docType="html-5.0"
+ controller="nFORCE.RemoteActionController"
+>
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+      <script>
+        window.__designSystemPath = '{!URLFOR($Asset.SLDS, '')}';
+        window.LifeCycle = window.LifeCycle || {};
+        window.LifeCycle.Service = window.LifeCycle.Service || {};
+      </script>
+      <nFORCE:LiteForce_Functions />
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    </head>
+    <body>
+      <div class="slds slds-scope">
+        <cre-project-roll-up contextId="{!$CurrentPage.parameters.id}">Loading Project Roll-Up App...</cre-project-roll-up>
+      </div>
+      
+      <script>
+        (function () {
+          var steez = document.createElement('link');
+          steez.setAttribute('rel', 'stylesheet');
+          steez.setAttribute('href', "{!URLFOR($Resource.project_roll_up, 'project-roll-up.css')}");
+          document.body.appendChild(steez);
+        })();
+      </script>
+      <script src="{!URLFOR($Resource.project_roll_up, 'polyfills.js')}"></script>
+      <script src="{!URLFOR($Resource.project_roll_up, 'vendor.js')}"></script>
+      <nFORCE:Internationalize defer="true" />
+      <script src="{!URLFOR($Resource.project_roll_up, 'project-roll-up.js')}"></script>
+      <nFORCE:Include_Design_System components="true" />
+    </body>
+  </html>
+</apex:page>

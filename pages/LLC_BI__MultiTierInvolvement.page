@@ -1,0 +1,40 @@
+<apex:page docType="html-5.0"
+  showHeader="false"
+  sidebar="false"
+  applyHtmlTag="false"
+  standardStylesheets="false"
+  controller="nFORCE.TemplateController"
+  extensions="nFORCE.RemoteActionController,LLC_BI.MultiTierInvolvementController,LLC_BI.ProductCreationBaseController">
+
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      <base href="/" />
+      <apex:slds />
+      <apex:stylesheet value="{!URLFOR($Resource.LLC_BI__multi_tier_involvement, 'styles.css')}" />
+    </head>
+
+    <body>
+      <div class="slds slds-scope">
+        <multi-tier-involvement
+          contextId="{!$CurrentPage.parameters.id}"
+          fieldSetApis="{!fieldSetApis}"
+          permissions="{!permissions}"
+          nextHref="{!nextHref}"
+          anchorText="{!anchorText}"
+          anchorSrc="{!URLFOR($Resource.nFORCE__SLDS0102, depositIconPath)}">
+        </multi-tier-involvement>
+      </div>
+
+      <nFORCE:Internationalize />
+      <nFORCE:Include_Design_System components="true" />
+
+      <script src="{!URLFOR($Resource.multi_tier_involvement, 'runtime.js')}"></script>
+      <script src="{!URLFOR($Resource.multi_tier_involvement, 'polyfills.js')}"></script>
+      <!-- <script src="{!URLFOR($Resource.multi_tier_involvement, 'styles.js')}"></script> -->
+      <script src="{!URLFOR($Resource.multi_tier_involvement, 'main.js')}"></script>
+    </body>
+
+  </html>
+</apex:page>

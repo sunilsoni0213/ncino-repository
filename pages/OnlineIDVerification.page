@@ -1,0 +1,6 @@
+<apex:page >
+ <span style="padding-left: 15px;">
+ 	<apex:image id="OnlineIDVerification" value="{!$Resource.OnlineIDVerification}"/>
+ </span>
+ <c:SkipButton />
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set allows the user to have an editable view of the loans listed in pending loan section of the product package.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Product Package Pending Loan Edit Permission</label>
+</PermissionSet>

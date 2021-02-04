@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Provides ability to specify custom implementations for use with Factory classes.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>IDLGY__ProviderEndpointNamedCred__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The named credential to use to communicate with to the provider endpoint.</description>
+        <externalId>false</externalId>
+        <label>Provider Named Credential</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IDLGY__Provider__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fully qualified name of the class implementing the IVendorProvider_v1 interface.</description>
+        <externalId>false</externalId>
+        <label>IdScan Provider</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>IdScan Factory Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

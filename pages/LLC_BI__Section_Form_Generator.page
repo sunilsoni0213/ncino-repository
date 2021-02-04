@@ -1,0 +1,5 @@
+<apex:page readOnly="true" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false"
+	sidebar="false" showHeader="false" contentType="text/xhtml" docType="html-5.0">
+
+	<apex:include pageName="{!$Page.nFORCE__Section_Form_Generator}" />
+</apex:page>

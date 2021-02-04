@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>nFORCE__Average__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use this field if the underlying analytic data reports on average.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Average is an Arithmetic mean of values. Use this field if the underlying analytic reports on average.</inlineHelpText>
+        <label>Average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use this field if the underlying analytic data reports on count.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field if the underlying analytic data reports on count. Count is a count of data fields</inlineHelpText>
+        <label>Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_10__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_8__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Currency_9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Currency 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Data_Source_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>data source ID property</description>
+        <externalId>true</externalId>
+        <inlineHelpText>data source ID property</inlineHelpText>
+        <label>Data Source Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Data_Source_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Data Source Name is the name of the child org as specified in Setup-&gt;Company Profile-&gt;Company Information-&gt;Organization Name.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>A string that has an associated data structure used to describe a connection to a data source.</inlineHelpText>
+        <label>Data Source Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Data_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Data Source will be &quot;Salesforce Org&quot; for analytics as all data comes from child orgs.  The Data Store object, however, is generic enough to hold data from additional sources such as the FDIC.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Data Source will be &quot;Salesforce Org&quot; for analytics as all data comes from child orgs.  The Data Store object, however, is generic enough to hold data from additional sources such as the FDIC.</inlineHelpText>
+        <label>Data Source</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Salesforce Org</fullName>
+                    <default>true</default>
+                    <label>Salesforce Org</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_10__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 10</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 4</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 5</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 6</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 7</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_8__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 8</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__DateTime_9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A DateTime field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A DateTime field used for grouping.</inlineHelpText>
+        <label>DateTime 9</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_10__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_8__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Decimal_9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Decimal 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>End of the timeframe for the captured data.  If the aggregate data is captured daily, the start and end dates will be the same date.  If the aggregate data is for one week, the start and end date would be a week apart.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End of the timeframe for the captured data.  If the aggregate data is captured daily, the start and end dates will be the same date.  If the aggregate data is for one week, the start and end date would be a week apart.</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Grouping_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The primary grouping of aggregate data.  If the aggregate data related to logins by role, grouping 1 might be &quot;CEO&quot;.  Note: this will be null if the aggregate is a grant total...such as total loan count.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fields may be grouped into measures and dimensions.</inlineHelpText>
+        <label>Grouping 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Grouping_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The secondary grouping of the aggregate data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fields may be grouped into measures and dimensions.</inlineHelpText>
+        <label>Grouping 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Grouping_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The third grouping of the aggregate data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fields may be grouped into measures and dimensions.</inlineHelpText>
+        <label>Grouping 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Grouping_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fourth grouping of the aggregate data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fields may be grouped into measures and dimensions.</inlineHelpText>
+        <label>Grouping 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Grouping_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The fifth grouping of the aggregate data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fields may be grouped into measures and dimensions.</inlineHelpText>
+        <label>Grouping 5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Dirty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Dirty?</description>
+        <externalId>false</externalId>
+        <formula>OR(ISNULL(nFORCE__Send_Date_Time__c),LastModifiedDate &gt; nFORCE__Send_Date_Time__c)</formula>
+        <inlineHelpText>Formula to determine if dirty</inlineHelpText>
+        <label>Is Dirty</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Max__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use this field if the underlying analytic data reports on max.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Max is the Largest Value. Use this field if the underlying analytic data reports on max.</inlineHelpText>
+        <label>Max</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Min__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use this field if the underlying analytic data reports on min.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Min is the Smallest Value. Use this field if the underlying analytic data reports on min.</inlineHelpText>
+        <label>Min</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_10__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_11__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 11</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_12__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 12</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_13__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 13</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_14__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 14</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_15__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 15</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_16__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 16</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_17__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 17</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_18__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 18</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_19__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 19</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_20__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 20</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_21__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 21</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_22__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 22</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_23__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 23</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_24__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 24</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_25__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 25</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_8__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A number field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A number field used for grouping.</inlineHelpText>
+        <label>Number 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_10__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_8__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Percent_9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not user facing. This field is used for data storage for the CUSO and Business Intelligence features.</description>
+        <externalId>false</externalId>
+        <label>Percent 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Send_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Send date and time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send date and time</inlineHelpText>
+        <label>Send Date Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The beginning of the timeframe for the captured data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The beginning of the timeframe for the captured data.</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Sum__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use this field if the underlying analytic data reports on sum.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field if the underlying analytic data reports on sum. Sum is an additive function.</inlineHelpText>
+        <label>Sum</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Tags__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A predefined list to assist in filtering on reports.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A predefined list to assist in filtering on reports.</inlineHelpText>
+        <label>Tags</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>User Analytics</fullName>
+                    <default>false</default>
+                    <label>User Analytics</label>
+                </value>
+                <value>
+                    <fullName>Login Count</fullName>
+                    <default>false</default>
+                    <label>Login Count</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_10__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 10</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_11__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 11</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_12__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 12</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_13__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 13</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_14__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 14</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_15__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 15</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_16__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 16</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_17__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 17</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_18__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 18</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_19__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 19</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_20__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 20</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_21__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 21</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_22__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 22</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_23__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 23</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_24__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 24</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_25__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 25</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 6</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 7</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_8__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 8</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Text_9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used for grouping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A text field used for grouping.</inlineHelpText>
+        <label>Text 9</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Timestamp__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Timestamp is the time the analytic snapshot ran on the child org.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Timestamp is the time the analytic snapshot ran on the child org.</inlineHelpText>
+        <label>Timestamp</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Unique_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the analytic snapshot that captured the original data.  Examples may be something like &quot;Daily Login Count&quot;, &quot;Total Loan Count&quot;, etc...  You will use this unique name to filter down the data when reporting.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique name for the data store that is a name of the analytic snapshot that captured the original data.  Examples may be something like &quot;Daily Login Count&quot;, &quot;Total Loan Count&quot;, etc...  You will use this unique name to filter down the data when reporting.</inlineHelpText>
+        <label>Unique Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A generic value.  This will likely not be used in user analytics, but could be used if capturing data from the FDIC or another source.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Data store value is a generic value.  This will likely not be used in user analytics, but could be used if capturing data from the FDIC or another source.</inlineHelpText>
+        <label>Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm).</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Key for query joining the base table and lookup table.</inlineHelpText>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Data Store</label>
+    <listViews>
+        <fullName>nFORCE__All</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Unique_Name__c</columns>
+        <columns>nFORCE__Count__c</columns>
+        <columns>nFORCE__Max__c</columns>
+        <columns>nFORCE__Min__c</columns>
+        <columns>nFORCE__Average__c</columns>
+        <columns>nFORCE__Sum__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Grouping_1__c</columns>
+        <columns>nFORCE__Grouping_2__c</columns>
+        <columns>nFORCE__Timestamp__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>nFORCE__All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DS-{0000000000}</displayFormat>
+        <label>Data Store Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Data Stores</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>nFORCE__Push_Data</listViewButtons>
+        <lookupDialogsAdditionalFields>nFORCE__Unique_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Data_Source_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Average__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Count__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Max__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Min__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Tags__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nFORCE__Value__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>nFORCE__Push_Data</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Push Data</masterLabel>
+        <openType>sidebar</openType>
+        <page>nFORCE__Org2Org_Push_Data</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>LLC_BI__TM_Proforma_Quantity_Pricing</fullName>
+        <availableFields>
+            <field>LLC_BI__Competitor_Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Current_Volume__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Discount_Currency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Discount_Percent__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Exception_Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fixed_Cost_Total__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Minimum_Required_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Semi_Variable_Cost__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set is used to display the configurable columns on the Proforma Quantity and Pricing screen</description>
+        <displayedFields>
+            <field>LLC_BI__Gross_Fee__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Including_Discounts__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Cost__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>TM Proforma Quantity Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__TM_Proforma_Total_Quantity_Pricing</fullName>
+        <availableFields>
+            <field>LLC_BI__Competitor_Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Cost__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Current_Volume__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Discount_Currency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Discount_Percent__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Exception_Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fixed_Cost_Total__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Gross_Fee__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Minimum_Required_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Semi_Variable_Cost__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field-set is used to display the configurable columns in the summary row on the Proforma Quantity and Pricing screen</description>
+        <displayedFields>
+            <field>LLC_BI__Fee_Including_Discounts__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>TM Proforma Total Quantity Pricing</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Balance_Required_Difference__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically calculated via formula. It stores the difference between your minimum required balance and the competitor&apos;s for this bill point.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Competitor_Balance_Required__c - LLC_BI__Balance_Required__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Balance Required Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Balance_Required__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically calculated via formula. This field stores the annual dollar amount of the minimum required balance.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Fee_Including_Discounts__c / (LLC_BI__Scenario__r.LLC_BI__Earnings_Credit_Allowance__c / 12)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Balance Required</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Bill_Point__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated whenever a proforma is created. It specifies the bill point associated with the scenario item.</description>
+        <externalId>false</externalId>
+        <label>Bill Point</label>
+        <referenceTo>LLC_BI__Bill_Point__c</referenceTo>
+        <relationshipLabel>Scenario Items</relationshipLabel>
+        <relationshipName>Scenario_Items</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Charge_Difference__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. It stores the difference between the competitor&apos;s fee and your own for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>(LLC_BI__Competitor_Price__c * LLC_BI__Volumes__c) -  LLC_BI__Fee_Including_Discounts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Charge Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Competitor_Balance_Required__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. It stores the value of the competitor&apos;s minimum required balance for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>(LLC_BI__Competitor_Price__c *  LLC_BI__Volumes__c) / ( LLC_BI__Scenario__r.LLC_BI__Competitor_Earnings_Credit_Allowance__c / 12)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Competitor Balance Required</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Competitor_Difference__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. It stores the difference between your fee cost and a competitor&apos;s for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Competitor_Fee__c -  LLC_BI__Fee_Including_Discounts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Competitor Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Competitor_Fee__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. It stores the competitor&apos;s fee for the number of volumes in the proforma for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Competitor_Price__c *  LLC_BI__Volumes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Competitor Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Competitor_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated manually in the proforma. It stores the value of a competitor&apos;s price for a bill point.</description>
+        <externalId>false</externalId>
+        <label>Competitor Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically calculated via formula. It stores the total unit cost value by volume number for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Volumes__c &gt;0, LLC_BI__Volumes__c * LLC_BI__Bill_Point__r.LLC_BI__Unit_Cost__c, 0)</formula>
+        <label>Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Current_Volume__c</fullName>
+        <defaultValue>NULL</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Financial institutions automatically populate this Number field with information using their own system to track current bill point volumes on any given treasury service. By default, the value is null.</description>
+        <externalId>false</externalId>
+        <label>Current Volume</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Discount_Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. It stores the total discount value for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Gross_Fee__c - LLC_BI__Fee_Including_Discounts__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount ($)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Discount_Percent__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. It stores the total discount percentage for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Standard_Price__c != 0, 1 - (BLANKVALUE(LLC_BI__Exception_Price__c, LLC_BI__Standard_Price__c) / LLC_BI__Standard_Price__c), 0)</formula>
+        <label>Discount (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Exception_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated manually in the proforma. It stores the value of an exception price for a bill point.</description>
+        <externalId>false</externalId>
+        <label>Exception Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Including_Discounts__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. This field contains the total fee amount for a single bill point including discounts.</description>
+        <externalId>false</externalId>
+        <formula>IF((LLC_BI__Exception_Price__c &gt;= 0),
+
+IF((LLC_BI__Scenario__r.LLC_BI__Total_Discount__c &gt; 0),
+(LLC_BI__Volumes__c * (LLC_BI__Exception_Price__c - (LLC_BI__Exception_Price__c *LLC_BI__Scenario__r.LLC_BI__Total_Discount__c))),
+(LLC_BI__Volumes__c * LLC_BI__Exception_Price__c)),
+
+IF((LLC_BI__Scenario__r.LLC_BI__Total_Discount__c &gt; 0),
+(LLC_BI__Volumes__c * (LLC_BI__Standard_Price__c - (LLC_BI__Standard_Price__c * LLC_BI__Scenario__r.LLC_BI__Total_Discount__c))),
+(LLC_BI__Volumes__c * LLC_BI__Standard_Price__c )))</formula>
+        <label>Fee Including Discounts</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fixed_Cost_Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically calculated via formula. It stores the total fixed unit cost value by volume number for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Volumes__c &gt;0, LLC_BI__Volumes__c * LLC_BI__Bill_Point__r.LLC_BI__Fixed_Unit_Cost__c, 0)</formula>
+        <label>Fixed Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Gross_Fee__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. This field contains the value of the gross fees associated with this single product bill point.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Standard_Price__c *  LLC_BI__Volumes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gross Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Bundle_Exception__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checked when this scenario item is created to overwrite an existing bill point and it&apos;s standard price.</description>
+        <externalId>false</externalId>
+        <label>Is Bundle Exception</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Monthly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not required. It is manually populated. Currently, this field is a data point which stores whether the scenario item is for a monthly recurring fee.</description>
+        <externalId>false</externalId>
+        <label>Is Monthly</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Perm_Waive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not required. It is manually populated. Currently, this field is a data point which indicates whether the scenario item is for a permanently waived fee.</description>
+        <externalId>false</externalId>
+        <label>Is Perm Waive</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Product_Type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is set automatically via a trigger when the proforma is created. It checks if the associated bill point is associated to a product type.</description>
+        <externalId>false</externalId>
+        <label>Is Product Type</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Margin_After_Discount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically calculated via formula. It stores the margin of cost after discounts.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Fee_Including_Discounts__c -  LLC_BI__Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Margin After Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Margin_Before_Discount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically calculated via formula. It stores the margin of cost before discounts.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Gross_Fee__c - LLC_BI__Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Margin Before Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Minimum_Required_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via formula. This field stores the minimum dollar amount that a customer must have in an account for this service based on the earnings credit allowance.</description>
+        <externalId>false</externalId>
+        <formula>IF((LLC_BI__Scenario__r.LLC_BI__Earnings_Credit_Allowance__c &gt; 0),(LLC_BI__Fee_Including_Discounts__c/LLC_BI__Scenario__r.LLC_BI__Earnings_Credit_Allowance__c),0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Minimum Required Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Type_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The product type parent for the scenario item bill point.</description>
+        <externalId>false</externalId>
+        <label>Product Type Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a required text field that is automatically populated via a trigger when the proforma is created. It looks up to the bill point associated with this record and populates the value with either the LLC_BI__Product__c or LLC_BI__Product_Type__c, depending on which one is populated.</description>
+        <externalId>false</externalId>
+        <label>Product / Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Scenario__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contains bill point for the product, volume, pricing and calculations.</description>
+        <externalId>false</externalId>
+        <label>Scenario</label>
+        <referenceTo>LLC_BI__Scenario__c</referenceTo>
+        <relationshipLabel>Scenario Items</relationshipLabel>
+        <relationshipName>Scenario_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Semi_Variable_Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically calculated via formula. It stores the total semi-variable unit cost value by volume number for a bill point.</description>
+        <externalId>false</externalId>
+        <formula>IF(LLC_BI__Volumes__c &gt;0, LLC_BI__Volumes__c * LLC_BI__Bill_Point__r.LLC_BI__Semi_Variable_Unit_Cost__c, 0)</formula>
+        <label>Semi Variable Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Standard_Price__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via a trigger when the proforma is created. It looks up to the bill point and pulls the standard price.</description>
+        <externalId>false</externalId>
+        <label>Standard Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Unit_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is populated automatically via a trigger when the proforma is created. It looks up to the bill point and pulls the unit price.</description>
+        <externalId>false</externalId>
+        <label>Unit Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Volumes__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated manually in the proforma. It stores the number of units requested for this bill point.</description>
+        <externalId>false</externalId>
+        <label>Volumes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Scenario Item</label>
+    <nameField>
+        <label>Services</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Scenario Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

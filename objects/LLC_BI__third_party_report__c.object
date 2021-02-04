@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Form to enable Pods to order Third Party Reports</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CM_Third_Party_Reports_L</fullName>
+        <description>Credit Memo: Standard Loan Credit Memo
+                    Screen Section: Third Party Reports
+                    Object: Third Party Reports</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Property_Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Rcvd__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Third Party Reports - L</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Credit_Memo_Standard_Review_Product_Pack</fullName>
+        <description>&quot;Credit Memo: Standard Review Credit Memo (Product Package)
+Screen Section: Loan Summary
+Object: Third Party Reports&quot;</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Property_Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Rcvd__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Review Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Standard_Product_Package_Credit_Memo</fullName>
+        <description>Credit Memo: Standard Product Package Credit Memo
+Screen Section: Product Request
+Object: Third Party Reports</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Property_Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Rcvd__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Standard_Product_Package_Credit_Memo</fullName>
+        <description>&quot;Credit Memo: Standard Product Package Credit Memo 
+Screen Section: Product Request
+Object: Third Party Reports&quot;</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Property_Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Report_Rcvd__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Product Package</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Building_Size_Sq_Ft__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the subject facility&apos;s building size. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Building Size (Sq Ft)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Current_Property_Use__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and describes the subject property/building&apos;s current usage. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Current Property Use / Occupants</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__EPA_Assessment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and manually selected when entering third party report detail about an EPA Assessment. The picklist options available are DEPENDENT on Order Type being set as EPA Assessment. If selected, allows for the dropdown values as shown in this picklist [ RSRA, Phase 1, Phase 2 ]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Dependent on &quot;Order Type&quot; being set as EPA. Values are RSRA, Phase 1, and Phase 2</inlineHelpText>
+        <label>EPA Assessment Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>LLC_BI__Order_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RSRA</fullName>
+                    <default>false</default>
+                    <label>RSRA</label>
+                </value>
+                <value>
+                    <fullName>Phase 1</fullName>
+                    <default>false</default>
+                    <label>Phase 1</label>
+                </value>
+                <value>
+                    <fullName>Phase 2</fullName>
+                    <default>false</default>
+                    <label>Phase 2</label>
+                </value>
+                <value>
+                    <fullName>Transaction Screen</fullName>
+                    <default>false</default>
+                    <label>Transaction Screen</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>EPA Assessment</controllingFieldValue>
+                <valueName>RSRA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EPA Assessment</controllingFieldValue>
+                <valueName>Phase 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EPA Assessment</controllingFieldValue>
+                <valueName>Phase 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EPA Assessment</controllingFieldValue>
+                <valueName>Transaction Screen</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__EPA_Vendor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This picklist is optional and manually selected when entering third party report detail about an EPA Assessment. It is a list of vendors to have 3rd part reports ordered for when EPA Assessment Type is selected (helps run 3rd party reports ordering)</description>
+        <externalId>false</externalId>
+        <label>EPA Vendor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>LLC_BI__EPA_Assessment__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AEI</fullName>
+                    <default>false</default>
+                    <label>AEI</label>
+                </value>
+                <value>
+                    <fullName>PES</fullName>
+                    <default>false</default>
+                    <label>PES</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>RSRA</controllingFieldValue>
+                <controllingFieldValue>Phase 1</controllingFieldValue>
+                <controllingFieldValue>Phase 2</controllingFieldValue>
+                <controllingFieldValue>Transaction Screen</controllingFieldValue>
+                <valueName>AEI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RSRA</controllingFieldValue>
+                <controllingFieldValue>Phase 1</controllingFieldValue>
+                <controllingFieldValue>Phase 2</controllingFieldValue>
+                <controllingFieldValue>Transaction Screen</controllingFieldValue>
+                <valueName>PES</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field specifies the ordered Third Party Report&apos;s associated Loan.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Third Party Reports</relationshipLabel>
+        <relationshipName>Third_Party_Reports</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Order_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field specifies the Type of Third Party Report. Field values can be used to trigger workflow which updates the Record Type and corresponding Page Layout.</description>
+        <externalId>false</externalId>
+        <label>Order Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>As Is</fullName>
+                    <default>false</default>
+                    <label>As Is</label>
+                </value>
+                <value>
+                    <fullName>As Built</fullName>
+                    <default>false</default>
+                    <label>As Built</label>
+                </value>
+                <value>
+                    <fullName>As Constructed</fullName>
+                    <default>false</default>
+                    <label>As Constructed</label>
+                </value>
+                <value>
+                    <fullName>EPA Assessment</fullName>
+                    <default>false</default>
+                    <label>EPA Assessment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Previous_Property_Use_s__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field specifies the text value used to document previous use(s) of subject property. Value can have impact on report findings (e.g. Subject property was previously a Gas Station, thus ground water contamination is likely).</description>
+        <externalId>false</externalId>
+        <label>Previous Property Use(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Property_Address__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the subject property&apos;s address. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Property Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Property_County__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the  subject property&apos;s county. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Property County</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Property_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and describes the subject property. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Property Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Property_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the subject property&apos;s status (Land Only, Improved, Under Construction, etc.). It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Property Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Land Only</fullName>
+                    <default>false</default>
+                    <label>Land Only</label>
+                </value>
+                <value>
+                    <fullName>Improved</fullName>
+                    <default>false</default>
+                    <label>Improved</label>
+                </value>
+                <value>
+                    <fullName>Under Construction</fullName>
+                    <default>false</default>
+                    <label>Under Construction</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Property_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the subject property&apos;s Type (Raw Land, Land and Building, etc.) It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Property Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Raw Land</fullName>
+                    <default>false</default>
+                    <label>Raw Land</label>
+                </value>
+                <value>
+                    <fullName>Land and Building</fullName>
+                    <default>false</default>
+                    <label>Land and Building</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Report_Detail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the text value used to provide comments regarding the subject assets and/or the request itself.  It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Report Request Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Report_Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the Date that the Third Party Report is expected to be completed by the vendor. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Report Due Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Report_Ordered__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the date of the vendor&apos;s order of the Third Party Report. It can be different than the date that the Third Party Report was created in nCino.  It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Report Ordered</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Report_Rcvd__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the Date that the Third Party Report was received from the vendor. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Report Rcvd</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Report_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the type of Third Party Report (Tax Verification, CRE Appraisal, EPA Assessment, Business Valuation, Residential Property Appraisal, Investment Property Appraisal, Equipment Appraisal, etc.). It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Report Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tax Verification</fullName>
+                    <default>false</default>
+                    <label>Tax Verification</label>
+                </value>
+                <value>
+                    <fullName>CRE Appraisal</fullName>
+                    <default>false</default>
+                    <label>CRE Appraisal</label>
+                </value>
+                <value>
+                    <fullName>EPA Assessment</fullName>
+                    <default>false</default>
+                    <label>EPA Assessment</label>
+                </value>
+                <value>
+                    <fullName>Business Valuation</fullName>
+                    <default>false</default>
+                    <label>Business Valuation</label>
+                </value>
+                <value>
+                    <fullName>Residential Property Appraisal</fullName>
+                    <default>false</default>
+                    <label>Residential Property Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Investment Property Appraisal</fullName>
+                    <default>false</default>
+                    <label>Investment Property Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Equipment Appraisal</fullName>
+                    <default>false</default>
+                    <label>Equipment Appraisal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Site_Contact_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the subject property contact&apos;s phone number. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Site Contact Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Site_Contact_Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Site Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Site_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the subject property&apos;s lot size. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Site Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Year_Built__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the year in which the subject property was built. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Year Built</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Zoning__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the of subject property&apos;s zoning type (Residential, Commercial, Industrial, Agriculture, etc.). It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Zoning</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Residential</fullName>
+                    <default>false</default>
+                    <label>Residential</label>
+                </value>
+                <value>
+                    <fullName>Commerical</fullName>
+                    <default>false</default>
+                    <label>Commerical</label>
+                </value>
+                <value>
+                    <fullName>Industrial</fullName>
+                    <default>false</default>
+                    <label>Industrial</label>
+                </value>
+                <value>
+                    <fullName>Agriculture</fullName>
+                    <default>false</default>
+                    <label>Agriculture</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Third Party Report</label>
+    <nameField>
+        <displayFormat>{MM}-{YY}-{0}</displayFormat>
+        <label>Third Party Report</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Third Party Reports</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>LLC_BI__Report_Ordered__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Report_Due_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Report_Rcvd__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Report_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Report_Detail__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

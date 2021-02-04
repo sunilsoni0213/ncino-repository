@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Something pledged as security for repayment of a loan, to be forfeited in the event of a default.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CSIDDP__Document_Transfer</fullName>
+        <description>Document Transfer</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Document Transfer</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSI_Comm_DocPrep</fullName>
+        <description>CSI_Comm_DocPrep</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collateral__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collateral_Type_SubType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Valuation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Primary__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Expere_DocPrep</fullName>
+        <description>Expere_DocPrep</description>
+        <displayedFields>
+            <field>LLC_BI__Valuation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Primary__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collateral_Type_SubType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collateral__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKDDP__Document_Transfer</fullName>
+        <description>Document Transfer</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Document Transfer</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Comments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collateral__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collateral_Type_SubType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Primary__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Valuation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A boolean field used to indicated which valuation(s) are active (true) or inactive (false). This would be entered by the user when a new valuation is entered. Default value is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if a valuation is active or inactive</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Collateral_Type_SubType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A text field used to indicate the Type and Sub Type</description>
+        <externalId>false</externalId>
+        <label>Collateral Type-SubType</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Collateral__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This reference field is optional and specifies the collateral valuation. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Collateral</label>
+        <referenceTo>LLC_BI__Collateral__c</referenceTo>
+        <relationshipLabel>Collateral Valuations</relationshipLabel>
+        <relationshipName>Collateral_Valuation</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comments specific to collateral valuation. This would be entered by the user when a new valuation is entered.</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A boolean field used to indicated which valuation is considered the primary valuation (true). This would be entered by the user when a new valuation is entered. No default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the primary valuation for the collateral</inlineHelpText>
+        <label>Primary</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A picklist field used to capture the source of the collateral valuation. This would be entered by the user when a new valuation is entered. No default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The source of the collateral valuation</inlineHelpText>
+        <label>Valuation Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Balance / Statement</fullName>
+                    <default>false</default>
+                    <label>Account Balance / Statement</label>
+                </value>
+                <value>
+                    <fullName>Appraisal</fullName>
+                    <default>false</default>
+                    <label>Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Credit Officer</fullName>
+                    <default>false</default>
+                    <label>Credit Officer</label>
+                </value>
+                <value>
+                    <fullName>Financial Statement</fullName>
+                    <default>false</default>
+                    <label>Financial Statement</label>
+                </value>
+                <value>
+                    <fullName>Insurance Agent</fullName>
+                    <default>false</default>
+                    <label>Insurance Agent</label>
+                </value>
+                <value>
+                    <fullName>Internal Valuation</fullName>
+                    <default>false</default>
+                    <label>Internal Valuation</label>
+                </value>
+                <value>
+                    <fullName>Inventory Report</fullName>
+                    <default>false</default>
+                    <label>Inventory Report</label>
+                </value>
+                <value>
+                    <fullName>Invoice / Bill of Sale</fullName>
+                    <default>false</default>
+                    <label>Invoice / Bill of Sale</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Abundance of Caution</fullName>
+                    <default>false</default>
+                    <label>Real Estate Abundance of Caution</label>
+                </value>
+                <value>
+                    <fullName>Receivables Aging</fullName>
+                    <default>false</default>
+                    <label>Receivables Aging</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Evaluation</fullName>
+                    <default>false</default>
+                    <label>Real Estate Evaluation</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Restricted Appraisal</fullName>
+                    <default>false</default>
+                    <label>Real Estate Restricted Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Third Party Source</fullName>
+                    <default>false</default>
+                    <label>Third Party Source</label>
+                </value>
+                <value>
+                    <fullName>Valuation Service Vendor</fullName>
+                    <default>false</default>
+                    <label>Valuation Service Vendor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A picklist field used to capture the type of the collateral valuation. This would be entered by the user when a new valuation is entered. No default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of the collateral valuation</inlineHelpText>
+        <label>Valuation Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Actual Cash Value</fullName>
+                    <default>false</default>
+                    <label>Actual Cash Value</label>
+                </value>
+                <value>
+                    <fullName>As Complete Value</fullName>
+                    <default>false</default>
+                    <label>As Complete Value</label>
+                </value>
+                <value>
+                    <fullName>As Is Value</fullName>
+                    <default>false</default>
+                    <label>As Is Value</label>
+                </value>
+                <value>
+                    <fullName>As Stabilized Value</fullName>
+                    <default>false</default>
+                    <label>As Stabilized Value</label>
+                </value>
+                <value>
+                    <fullName>Balance Sheet</fullName>
+                    <default>false</default>
+                    <label>Balance Sheet</label>
+                </value>
+                <value>
+                    <fullName>Book Value</fullName>
+                    <default>false</default>
+                    <label>Book Value</label>
+                </value>
+                <value>
+                    <fullName>Cash Balance</fullName>
+                    <default>false</default>
+                    <label>Cash Balance</label>
+                </value>
+                <value>
+                    <fullName>Contents Value</fullName>
+                    <default>false</default>
+                    <label>Contents Value</label>
+                </value>
+                <value>
+                    <fullName>Fair Market Value - Real Estate</fullName>
+                    <default>false</default>
+                    <label>Fair Market Value - Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Fair Market Value - Equipment / Transportation</fullName>
+                    <default>false</default>
+                    <label>Fair Market Value - Equipment / Transportation</label>
+                </value>
+                <value>
+                    <fullName>Net Orderly Liquidation Value</fullName>
+                    <default>false</default>
+                    <label>Net Orderly Liquidation Value</label>
+                </value>
+                <value>
+                    <fullName>Orderly Liquidation Value</fullName>
+                    <default>false</default>
+                    <label>Orderly Liquidation Value</label>
+                </value>
+                <value>
+                    <fullName>Preliminary Value</fullName>
+                    <default>false</default>
+                    <label>Preliminary Value</label>
+                </value>
+                <value>
+                    <fullName>Purchase Price</fullName>
+                    <default>false</default>
+                    <label>Purchase Price</label>
+                </value>
+                <value>
+                    <fullName>Replacement Cost Value</fullName>
+                    <default>false</default>
+                    <label>Replacement Cost Value</label>
+                </value>
+                <value>
+                    <fullName>Waived Value</fullName>
+                    <default>false</default>
+                    <label>Waived Value</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Valuation_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A date field used to capture the date of a collateral valuation. This would be entered by the user when a new valuation is entered. No default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date of the collateral valuation</inlineHelpText>
+        <label>Valuation Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Valuation_Details__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this mandatory field with the vehicle detail IDs received from the relevant vehicle valuations integration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This system-populated field automatically populates with vehicle detail IDs received from the relevant vehicle valuations integration.</inlineHelpText>
+        <label>Valuation Details</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A currency field used to capture the value of the collateral. This would be entered by the user when a new valuation is entered.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to capture the value of the collateral</inlineHelpText>
+        <label>Collateral Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Collateral Valuation</label>
+    <nameField>
+        <displayFormat>CV-{0000000000}</displayFormat>
+        <label>Collateral Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Collateral Valuations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

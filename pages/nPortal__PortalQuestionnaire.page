@@ -1,0 +1,12 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+		<route>
+			<div class="slds-m-top--small" ng-app="onlineAppApp">
+				<portal-questionnaire></portal-questionnaire>
+			</div>
+		</route>
+</apex:page>

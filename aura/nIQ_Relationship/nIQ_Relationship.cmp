@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<iframe src="{! 'https://bankr-4104--c.visualforce.com/apex/AccountRecommendation' }" width="100%" height="500px;" frameBorder="0"/>
+</aura:component>

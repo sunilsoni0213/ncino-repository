@@ -1,0 +1,140 @@
+<apex:page controller="nFORCE.RuleEngineOAuth2Controller"
+    id="RuleEngineCommunicationProviderPage"
+    action="{!updateCommunicationProvider}">
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102,'assets/styles/salesforce-lightning-design-system-vf.css')}"/>
+
+    <apex:outputPanel id="ErrorPanel">
+        <apex:outputPanel styleClass="nds-notify_container slds-m-bottom--medium slds-size--1-of-1" rendered="{!hasErrors}">
+            <div class="slds-notify slds-notify--toast slds-theme--error slds-size--1-of-1" role="alert">
+                <span class="slds-assistive-text">{!$Label.nforce__error}</span>
+                <div class="slds-notify__content">
+                    <div class="slds-text-heading--small">{!$Label.nforce__error}</div>
+                    <apex:messages />
+                </div>
+            </div>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+    <div class="nds-section">
+        <div class="nds-section__header">
+            <div class="slds-text-heading--small">{!$Label.nforce__rule_engine_admin_user_context_title}</div>
+        </div>
+        <div class="nds-section__body">
+            <apex:outputPanel id="SummaryPanel">
+                <apex:form >
+                    <div class="slds-grid slds-grid--align-spread">
+                        <div class="slds-col--padded slds-size--9-of-12">
+                            <div class="slds-text-body--regular">{!$Label.nforce__rule_engine_admin_user_context_detail}</div>
+                        </div>
+                        <div class="slds-col--padded slds-size--3-of-12">
+                            <div class="pull-right">
+                                <apex:commandButton rendered="{!!isOAuthEnabled}"
+                                    disabled="{!!canEnable||dirty}"
+                                    styleClass="slds-button slds-button--brand"
+                                    value="{!$Label.nforce__rule_engine_admin_user_context_enable}"
+                                    action="{!enableOAuth2}"
+                                    rerender="SummaryPanel"/>
+                                <apex:commandButton rendered="{!isOAuthEnabled}"
+                                    disabled="{!dirty}"
+                                    styleClass="slds-button slds-button--destructive"
+                                    value="{!$Label.nforce__rule_engine_admin_user_context_disable}"
+                                    action="{!disableOAuth2}"
+                                    rerender="SummaryPanel"/>
+                            </div>
+                        </div>
+                    </div>
+                </apex:form>
+            </apex:outputPanel>
+        </div>
+        <div class="nds-section__footer"/>
+    </div>
+    <div class="nds-section">
+        <apex:form id="DetailsForm">
+            <div class="nds-section__header">
+                <div class="slds-text-heading--small">{!$Label.nforce__rule_engine_admin_user_context_authorization_detail_title}</div>
+            </div>
+            <div class="nds-section__body">
+                <div class="slds-form--stacked slds-grid slds-wrap">
+                    <div class="slds-col--padded slds-size--1-of-1">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">{!$Label.nforce__rule_engine_admin_user_context_authorization_detail_consumer_key}</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input slds-scrollable--x"
+                                    value="{!consumerKey.nFORCE__Value__c}">
+                                    <apex:actionsupport event="onchange"
+                                        action="{!enableSave}"
+                                        rerender="PageActions,SummaryPanel"/>
+                                    <apex:actionsupport event="onkeyup"
+                                        action="{!enableSave}"
+                                        rerender="PageActions,SummaryPanel"/>
+                                </apex:inputField>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col--padded slds-size--1-of-1">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">{!$Label.nforce__rule_engine_admin_user_context_authorization_detail_consumer_secret}</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input slds-scrollable--x"
+                                    value="{!consumerSecret.nFORCE__Value__c}">
+                                    <apex:actionsupport event="onchange"
+                                        action="{!enableSave}"
+                                        rerender="PageActions,SummaryPanel"/>
+                                    <apex:actionsupport event="onkeyup"
+                                        action="{!enableSave}"
+                                        rerender="PageActions,SummaryPanel"/>
+                                </apex:inputField>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col--padded slds-size--1-of-1">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">{!$Label.nforce__rule_engine_admin_user_context_authorization_detail_redirect_url}</label>
+                            <div class="slds-form-element__control">
+                                <apex:outputField styleClass="slds-textarea"
+                                    value="{!redirectURL.nFORCE__Value__c}"></apex:outputField>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col--padded slds-size--1-of-1">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">{!$Label.nforce__rule_engine_admin_user_context_authorization_detail_status}</label>
+                            <div class="slds-form-element__control">
+                                <apex:outputText styleClass="slds-text-body--regular"
+                                    value="{!$Label.nforce__rule_engine_admin_user_context_authorization_status_authorized}"
+                                    rendered="{!isAuthorized}"></apex:outputText>
+                                <apex:outputText styleClass="slds-text-body--regular"
+                                    value="{!$Label.nforce__rule_engine_admin_user_context_authorization_status_not_authorized}"
+                                    rendered="{!!isAuthorized}"></apex:outputText>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col--padded slds-size--1-of-1 slds-p-vertical--small">
+                        <apex:outputPanel id="PageActions">
+                            <div class="pull-right">
+                                <apex:commandButton styleClass="slds-button slds-button--neutral slds-m-right--small"
+                                    value="{!$Label.nforce__cancel}"
+                                    disabled="{!!dirty}"
+                                    rendered="{!dirty}"
+                                    rerender="PageActions,DetailsForm,ErrorPanel"
+                                    action="{!cancelSave}"/>
+                                <apex:commandButton styleClass="slds-button slds-button--brand slds-m-right--small"
+                                    value="{!$Label.nforce__save}"
+                                    disabled="{!!dirty}"
+                                    rendered="{!dirty}"
+                                    rerender="PageActions,SummaryPanel,ErrorPanel"
+                                    action="{!saveDetails}"/>
+                                <apex:commandButton styleClass="slds-button slds-button--brand"
+                                    value="{!$Label.nforce__oauth2_retrieve_code}"
+                                    rendered="{!!dirty}"
+                                    disabled="{!!canAuthorize||dirty}"
+                                    rerender="PageActions,SummaryPanel,ErrorPanel"
+                                    action="{!retrieveAuthCode}"/>
+                            </div>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+            </div>
+        </apex:form>
+    </div>
+</apex:page>

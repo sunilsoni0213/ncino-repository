@@ -1,0 +1,91 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LoanPathGetGuide" docType="html-5.0">
+
+<!-- HTML Tag with xmlns attribute Important to Render SLDS Icons scoping cloass: nCinoProtoRob is the scoping class-->
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+    <head>
+        <title>Loan Path Guide</title>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+        
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"</script>
+    <script>src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"</script>
+    <script>
+       var CurrentStg = '{!LLC_BI__Loan__c.LLC_BI__Stage__c}';
+       var RecType = '{!LLC_BI__Loan__c.RecordType}';
+       var RecTypeName = '{!LLC_BI__Loan__c.RecordType.Name}';
+    </script>
+
+
+    </head>
+    <body>
+        <div class="nCinoProtoRob">
+                
+<div class="slds-page-header" role="banner" style="background:#E0E5EE">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-media--center slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-user">
+            <use xlink:href="{!$Resource.SLDS102}/assets/icons/standard-sprite/svg/symbols.svg#user"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Record Title">Current Stage:&nbsp;&nbsp; <apex:outputField value="{!lp.Loan_Stage__c}"/></h1>
+            <p class="slds-text-heading--label"><apex:outputField value="{!lp.Objectives__c}"/></p>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+     
+      
+    </div>
+  </div>
+  			
+  
+</div>    
+
+<div class="slds-grid slds-grid--pull-padded" style="padding-top:10px;padding-left:45px;padding-right:45px;padding-bottom:20px">
+      <div class="slds-col--padded" >
+    
+     
+        <p class="slds-text-heading--label slds-truncate slds-m-bottom--xx-small" style="text-decoration:underline;" title="Field 1">Relationship Manager</p>
+         
+        <p class="slds-text-body--regular slds-truncate" title="Description that demonstrates truncation with a long text field"><apex:outputField value="{!lp.Relationship_Manager__c}"/></p>
+         
+      </div>
+      <div class="slds-col--padded" style="background-color:white;" >
+   
+      <p class="slds-text-heading--label slds-truncate slds-m-bottom--xx-small" style="text-decoration:underline;" title="Field2 (3)">Credit Officer
+        
+      </p>
+        <p class="slds-text-body--regular"><apex:outputField value="{!lp.Underwriter__c}"/></p>
+    
+      </div>
+      <div class="slds-col--padded" style="background-color:white;">
+          
+      <p class="slds-text-heading--label slds-truncate slds-m-bottom--xx-small" style="text-decoration:underline;" title="Field2 (3)">Closer
+        
+      </p>
+        <p class="slds-text-body--regular"><apex:outputField value="{!lp.Closer__c}"/></p>
+   
+      </div>
+      <div class="slds-col--padded" style="background-color:white;">
+          
+      <p class="slds-text-heading--label slds-truncate slds-m-bottom--xx-small" style="text-decoration:underline;" title="Field2 (3)">Important Fields
+        
+      </p>
+        <p class="slds-text-body--regular"><apex:outputField value="{!lp.Important_Fields__c}"/></p>
+   
+      </div>
+              </div>
+                    
+       
+        </div>
+                  
+         
+                            
+    </body>
+</html>  
+	
+</apex:page>

@@ -1,0 +1,34 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+	<html class="portal-html" lang="en" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds" ng-app="onlineAppApp" ng-cloak="true">
+			<route>
+				<div class="portal-center-text">
+					<h3 n-style="pso-application-body-header" resizer="true"
+						ng-class="{'slds-text-heading--medium slds-m-top--large': isMediumOrBigger,
+						'slds-text-heading--small slds-m-top-small': !(isMediumOrBigger)}">
+						{!$Label.Application_Submitted_Header}
+					</h3>
+				</div>
+				<next-steps></next-steps>
+				<div class="slds-grid slds-wrap">
+					<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+						<a class="slds-button slds-button--neutral slds-size--1-of-1"
+							n-style="pso-button-secondary"
+							href="{!URLFOR($Page.Portal)}">
+							{!$Label.Go_To_Dashboard}
+						</a>
+					</div>
+				</div>
+			</route>
+		</body>
+	</html>
+</apex:page>

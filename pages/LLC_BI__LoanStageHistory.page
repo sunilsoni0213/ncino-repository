@@ -1,0 +1,37 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.VF_OppHistoryController" sidebar="false" showHeader="false" >
+<apex:Messages />
+
+	<apex:pageBlock >
+		<apex:pageBlockSection columns="1">
+			<apex:outputPanel rendered="{!IF(ResultsFlag,true,false)}">
+			
+		        <apex:pageBlockTable value="{!results}" var="h">
+		
+		            <apex:column headerValue="{!$ObjectType.LLC_BI__Loan__c.fields.LLC_BI__Stage__c.label}" >
+		            	<apex:outputField value="{!h.LLC_BI__StageName__c}"/>
+		            </apex:column>
+		            <apex:column headerValue="{!$ObjectType.LLC_BI__Loan__c.fields.LLC_BI__Status__c.label}" >
+		            	<apex:outputField value="{!h.LLC_BI__StatusName__c}"/>
+		            </apex:column>
+		            <apex:column headerValue="{!$ObjectType.LLC_BI__Loan__c.fields.LLC_BI__Amount__c.label}" >
+		            	<apex:outputField value="{!h.LLC_BI__Amount__c}"/>
+		            </apex:column>
+		            <apex:column headerValue="{!$ObjectType.LLC_BI__Opportunity_History__c.fields.LLC_BI__Stage_Duration__c.label}">
+		            	<apex:outputField id="duration" value="{!h.LLC_BI__Stage_Duration__c}"/>
+		            </apex:column> 
+		            <apex:column headerValue="{!$Label.llc_bi__last_modified_by}">
+		            	<a href="/{!h.LLC_BI__User__c}" target="_blank">{!h.User__r.Name}</a>
+		            	<apex:outputText value=", "/>
+		            	<apex:outputField id="created_date" value="{!h.CreatedDate}"/>
+		            </apex:column>	
+		        </apex:pageBlockTable>
+		    
+			</apex:outputPanel>
+			
+			<apex:outputPanel rendered="{!IF(ResultsFlag==false,true,false)}">
+				There is currently no stage or status history for {!LLC_BI__Loan__c.Name}.
+			</apex:outputPanel>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+
+</apex:page>

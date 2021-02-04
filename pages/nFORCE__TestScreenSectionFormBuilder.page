@@ -1,0 +1,33 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" sidebar="false">
+	<c:Include_AngularJS />
+
+	<c:ncUIIncludes />
+	<c:ncDataProvidersIncludes />
+
+	<div class="slds" id="ncScreenSectionFormBuilder">
+		<apex:repeat value="{!screenSections}" var="section">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">Form Builder Component</apex:define>
+				<apex:define name="right"></apex:define>
+			</apex:composition>
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+
+							<nc-screen-section-form-builder
+								section-id="{!section.id}"
+								guid="{!section.id}{!guid}"
+								context-id="{!contextObjectId}">
+								<apex:composition template="nFORCE__Template_UI_Loading" />
+							</nc-screen-section-form-builder>
+
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</apex:repeat>
+
+	</div>
+	<c:ncScreenSectionFormBuilderIncludes />
+</apex:page>

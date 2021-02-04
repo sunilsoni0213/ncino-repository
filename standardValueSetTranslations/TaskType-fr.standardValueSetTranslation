@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Call</masterLabel>
+        <translation>Appel</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Loan Task</masterLabel>
+        <translation>prêt Tâche</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maintenance Task Template</masterLabel>
+        <translation>Tâche de maintenance Modèle</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting</masterLabel>
+        <translation>Réunion</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Autre</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

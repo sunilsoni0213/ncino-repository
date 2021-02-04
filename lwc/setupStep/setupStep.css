@@ -1,0 +1,197 @@
+.slds-progress__item .slds-progress__marker {
+    margin-right: 2rem;
+}
+
+.slds-progress__item .slds-progress__marker .slds-icon_container .slds-icon {
+    fill: #dddbda !important;
+}
+
+.slds-progress__item .slds-progress__marker{
+    box-shadow: 0 0 0 0px #fff, 0 0 4px 0px #dddbda !important;
+}
+
+.slds-progress__item.active .slds-progress__marker .slds-icon_container .slds-icon {
+    fill: #0070d2 !important;
+}
+
+.slds-progress__item.active .slds-progress__marker{
+    box-shadow: 0 0 0 0px #fff, 0 0 4px 0px #0070d2 !important;
+}
+
+.slds-progress__item.success .slds-progress__marker .slds-icon_container .slds-icon {
+    fill: #4bca81 !important;
+}
+
+.slds-progress__item.success .slds-progress__marker{
+    box-shadow: 0 0 0 0px #fff, 0 0 4px 0px #4bca81 !important;
+}
+
+.slds-progress__item.warning .slds-progress__marker .slds-icon_container .slds-icon {
+    fill: #ffb75d !important;
+}
+
+.slds-progress__item.warning .slds-progress__marker{
+    box-shadow: 0 0 0 0px #fff, 0 0 4px 0px #ffb75d !important;
+}
+
+.slds-progress__item.error .slds-progress__marker .slds-icon_container .slds-icon {
+    fill: #c23934 !important;
+}
+
+.slds-progress__item.error .slds-progress__marker{
+    box-shadow: 0 0 0 0px #fff, 0 0 4px 0px #c23934 !important;
+}
+
+.slds-progress__item .slds-progress__marker {
+    box-shadow: rgb(255, 255, 255) 0 0 0 1px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+}
+
+.step-wrapper {
+    position: relative;
+}
+
+.step-wrapper:after, .step-wrapper:before {
+    content: "";
+    position: absolute;
+    left: calc(0.5rem - 1px);
+    width: 2px;
+    background-color: rgb(208, 215, 230);
+}
+
+.step-wrapper:before {
+    top: 0;
+    bottom: 50%
+}
+
+.step-wrapper:after {
+    top: 50%;
+    bottom: 0
+}
+
+.step-wrapper.first-step:before, .step-wrapper.last-step:after {
+    display: none
+}
+
+.slds-card {
+    width: 100%;
+}
+
+.step-icon {
+    border-radius: 50%;
+    background: #d1d0d0;
+}
+
+.step-icon.disabled {
+    background: rgb(216, 221, 230);
+}
+
+.step-icon.auto {
+    background: #0dc2d9;
+}
+
+.step-icon.manual {
+    background: rgb(252, 143, 102);
+}
+
+.step-icon.modal {
+    background: #907F9F;
+}
+
+.slds-media__body {
+    border-left: 1px solid rgb(221, 219, 218);
+}
+
+.step-description {
+    white-space: pre-line;
+    line-height: 1.7;
+}
+
+.slds-media__figure {
+    margin-right: 1.5rem;
+}
+
+.icon-sub-heading {
+    color: #d1d0d0;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.card-body-padding {
+    padding-top: .25rem;
+    padding-left: .75rem;
+    padding-right: 0;
+}
+
+.step-button {
+    margin-top: auto;
+}
+
+.step-body {
+    color: #706e6b;
+}
+
+.step-body.disabled {
+    color: #d1d0d0;
+}
+
+.step-title {
+    font-weight: 600;
+}
+
+.step-description {
+    font-size: 0.75rem;
+    line-height: 2;
+}
+
+.step-error {
+    border-radius: 4px;
+    font-size: .7rem;
+    white-space: pre-line;
+}
+
+.slds-button.slds-button_neutral {
+    color: #0070D2;
+}
+
+.step-spinner {
+    border-radius: .25rem;
+    background-color: rgba(255, 255, 255, 0.97);
+}
+
+.slds-spinner {
+    top: 40%;
+}
+
+.step-spinner-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 9051;
+    transform: translate(-50%);
+    font-style: italic;
+    color: #706e6b;
+}
+
+.step-button {
+    margin-top: auto;
+}
+
+.step-button-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}

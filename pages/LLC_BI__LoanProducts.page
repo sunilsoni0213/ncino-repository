@@ -1,0 +1,208 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.VF_ProductController" action="{!Init}">
+	<apex:variable var="hasRelationship" value="{!RelationshipName!=null}"/>
+	<apex:variable var="isChangeProduct" value="{!LoanId!=null}"/>
+	<apex:variable var="isCreateChild" value="{!parentId!=null}"/>
+	<nFORCE:Includes enableBS3Namespace="true" rendered="{!$CurrentPage.parameters.app == null}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'lifecycle.js')}" />
+	<nFORCE:Include_Navigator />
+
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+	<apex:outputPanel layout="none" rendered="{!$CurrentPage.parameters.app == null}">
+		<apex:outputPanel layout="none" rendered="{!hasRelationship&&NOT(copyLoan)}">
+			<apex:sectionHeader title="{!$Label.llc_bi__loan_select_product}"
+				subtitle="{!$Label.llc_bi__loan_add_new_relationship_loan} {!RelationshipName}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel layout="none" rendered="{!NOT(hasRelationship)&&copyLoan}">
+			<apex:sectionHeader title="{!$Label.llc_bi__title_loan_copy}"
+				subtitle="{!LLC_BI__Loan__c.Name}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel layout="none" rendered="{!isChangeProduct && $CurrentPage.parameters.app == null}">
+			<apex:sectionHeader title="{!$Label.llc_bi__change_loan_product_title}"
+				subtitle="{!loan.Name}"/>
+		</apex:outputPanel>
+
+		<apex:outputPanel layout="none" rendered="{!NOT(hasRelationship)&&NOT(copyLoan)&&NOT(isChangeProduct)}">
+			<apex:sectionHeader title="{!$Label.llc_bi__loan_select_product}"
+				subtitle="{!$Label.llc_bi__loan_add_new_loan}"/>
+		</apex:outputPanel>
+
+	</apex:outputPanel>
+	<div class="force">
+	<apex:outputPanel layout="none" rendered="{!$CurrentPage.parameters.app != null}">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<span>
+					<apex:outputPanel layout="none" rendered="{!hasRelationship&&NOT(copyLoan)}">
+						{!$Label.llc_bi__loan_select_product}
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="none" rendered="{!NOT(hasRelationship)&&copyLoan}">
+					   {!$Label.llc_bi__copy_loan}
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="none" rendered="{!isChangeProduct}">
+					   {!$Label.llc_bi__change_product}
+					</apex:outputPanel>
+				</span>
+			</apex:define>
+			<apex:define name="right" />
+		</apex:composition>
+	</apex:outputPanel>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+					<div class="row">
+						<div class="col-md-12">
+							<apex:outputPanel id="pageMessage">
+								<c:ErrorMessage rendered="{!hasMessages}" useCustomMessage="false" />
+							</apex:outputPanel>
+						</div>
+					</div>
+				<apex:form styleClass="form-horizontal">
+					<apex:outputPanel layout="none"
+						id="formPanel"
+						rendered="{!(NOT(isChangeProduct) && NOT(isCreateChild))
+						 || (isChangeProduct && canChangeProduct) || (isCreateChild && canCreateChild)}">
+						<apex:outputPanel layout="none" rendered="{!copyLoan}">
+								<apex:define name="left">
+									<span class="h5">{!$Label.llc_bi__loan_copy_title_base_info}</span>
+								</apex:define>
+							<div class="row"><br/></div>
+						</apex:outputPanel>
+						<br/>
+						<apex:outputPanel layout="none" rendered="{!isChangeProduct}">
+							<apex:define name="left">
+									<span class="h4">{!$Label.llc_bi__change_loan_product_subtitle} {!loan.Name}</span>
+							</apex:define>
+						<div class="row"><br/></div>
+						</apex:outputPanel>
+						<div class="form-horizontal">
+							<c:ProductCreator pageController="{!pageController}"
+								ProductNameLabel="{!$Label.llc_bi__lead_opportunity_name}" />
+						</div>
+						<apex:outputPanel layout="none" rendered="{!isChangeProduct}" style="display:block;width:420px">
+							<apex:pageMessage summary="{!$Label.llc_bi__change_loan_product_warning}"
+								severity="warning"
+								rendered="{!classicDocManProperty}"/>
+							 <apex:pageMessage summary="{!$Label.llc_bi__change_loan_product_warning_universal_docman}"
+								severity="warning"
+								rendered="{!!classicDocManProperty}"/>
+								<br/>
+						</apex:outputPanel>
+						<apex:commandButton action="{!createProductWrapper}"
+							styleClass="btn btn-primary btn-form-submit"
+							value="{!$Label.llc_bi__button_create_new_loan}"
+							rendered="{!NOT(copyLoan)&&NOT(isChangeProduct)}"
+							rerender="pageMessage, formPanel"
+							status="ajaxPleaseWait"
+							onClick="this.onclick=function(){this.disabled = true;return false;}"
+							oncomplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)"/>
+
+						<apex:commandButton action="{!changeProductWrapper}"
+							styleClass="btn btn-primary btn-form-submit"
+							value="{!IF($CurrentPage.parameters.app == null, $Label.llc_bi__change_loan_product_button_save, $Label.llc_bi__save)}"
+							rendered="{!isChangeProduct}"
+							rerender="pageMessage, formPanel"
+							status="ajaxPleaseWait"
+							oncomplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)"/>
+
+						<apex:outputText escape="false" value="{!IF($CurrentPage.parameters.app == null, $Label.llc_bi__button_seperator, '')}" rendered="{!NOT(copyLoan)}"/>
+						<a onClick="LifeCycle.Navigator.navigateToSObject('{!returnContextId}')">
+							{!$Label.llc_bi__button_cancel}
+						</a>
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="none" rendered="{!(isChangeProduct && NOT(canChangeProduct))
+						 || (isCreateChild && NOT(canCreateChild))}">
+						<apex:outputPanel layout="none">
+							<apex:outputPanel layout="none">
+							<br/><br/>
+								<apex:outputPanel layout="none" rendered="{!isChangeProduct && NOT(canChangeProduct)}">
+									<apex:outputText styleClass="alert alert-warning" value="{!$Label.llc_bi__change_loan_product_unavailable}"/>
+								</apex:outputPanel>
+								<apex:outputPanel layout="none" rendered="{!NOT(isChangeProduct) && NOT(canCreateChild)}">
+									<apex:outputText value="{!$Label.llc_bi__parent_structure_not_multi}"/>
+								</apex:outputPanel>
+								<br/><br/><br/><br/><br/>
+							</apex:outputPanel>
+							<a onClick="LifeCycle.Navigator.navigateToSObject('{!returnContextId}')">
+								{!$Label.llc_bi__back_capital}
+							</a>
+						</apex:outputPanel>
+					</apex:outputPanel>
+
+					<apex:outputPanel layout="none" rendered="{!copyLoan}">
+						<div class="col-sm-5">
+							<apex:outputPanel layout="none" >
+								<apex:outputPanel layout="none" rendered="{!copyLoan}">
+										<apex:define name="left">
+											<span>{!$Label.llc_bi__loan_copy_title_related_info}</span>
+										</apex:define>
+								</apex:outputPanel>
+								<apex:outputPanel layout="none" >
+									<apex:outputPanel layout="none" rendered="{!loan.LLC_BI__Budget__c != null}">
+										<div class="checkbox">
+											<label>
+												<apex:inputCheckBox value="{!cloneBudget}"/>
+												<div class="checkbox-label">
+													{!$Label.llc_bi__budget}
+												</div>
+											</label>
+										</div>
+									</apex:outputPanel>
+									<apex:repeat value="{!relativesList}" var="rel">
+										<div class="checkbox">
+											<label>
+												<apex:inputCheckBox value="{!rel.selected}"/>
+												<div class="checkbox-label">
+													{!rel.label}
+												</div>
+											</label>
+										</div>
+									</apex:repeat>
+									<apex:outputPanel layout="none" rendered="{!hasRateAndPayments}">
+										<div class="checkbox">
+											<label>
+												<apex:inputCheckbox value="{!cloneRateAndPayments}"/>
+												<div class="checkbox-label">
+													{!$Label.llc_bi__loan_copy_rate_and_payment_structures}
+												</div>
+											</label>
+										</div>
+									</apex:outputPanel>
+									<br/>
+									<apex:commandButton styleClass="btn btn-primary btn-form-submit"
+										action="{!cloneRecordWrapper}"
+										value="{!IF($CurrentPage.parameters.app == null, $Label.llc_bi__button_continue_with_copy, $Label.llc_bi__button_continue)}"
+										onComplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)"/>
+									<apex:outputText escape="false"
+										value="{!IF($CurrentPage.parameters.app == null, $Label.llc_bi__button_seperator, '')}"/>
+									<a onClick="LifeCycle.Navigator.navigateToSObject('{!returnContextId}')">
+										{!$Label.llc_bi__button_cancel}
+									</a>
+								</apex:outputPanel>
+							</apex:outputPanel>
+						</div>
+					</apex:outputPanel>
+				</apex:form>
+
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+	<script>
+		function handleRedirect(retObj, retUrl) {
+			if (retObj !== null && retObj !== '') {
+				LifeCycle.Navigator.navigateToSObject(retObj);
+			} else if (retUrl !== null && retUrl !== '' ) {
+				LifeCycle.Navigator.navigateToURL(retUrl);
+			}
+		}
+	</script>
+</apex:page>

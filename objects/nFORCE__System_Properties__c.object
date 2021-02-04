@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>A set of key-value pairs that can be used to set organization-wide parameters</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>nFORCE__Category_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. It indicates the category to which the system property belongs.</description>
+        <externalId>false</externalId>
+        <label>Category Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It describes the system property in more depth.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the custom setting implemented in order to describe the Category and System Property.</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Institution_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field contains the Institution ID for custom settings that apply to a specific institution. If the custom setting does not relate to institution configuration, leave this field blank. Manually populate this field with the institution ID to associate the custom setting with that institution. The custom setting cloning script documented in Customer Engagement Solution configuration documentation autopopulates Institution ID when appropriate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Leave blank if custom setting does not apply to a specific institution. If custom setting applies to a specific institution, manually populate with Institution ID If not already autopopulated.</inlineHelpText>
+        <label>Institution ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The field is required. It indicates if the system property is active. If the system property is not active it will not be used.</description>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. The combination of the category and the key is used to uniquely identify the system property.</description>
+        <externalId>false</externalId>
+        <label>Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. It indicates the value of the system property. The field controls the behaviour of the application.</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Is_Encrypted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A required field that indicates if the system property value is encrypted; its default is false.</description>
+        <externalId>false</externalId>
+        <label>Is Encrypted</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Value_Data_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A required field that indicates the system property value&apos;s data type; its default is String.</description>
+        <externalId>false</externalId>
+        <label>Value Data Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>System Properties</label>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Analytics</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>Analytics</value>
+        </filters>
+        <label>Analytics</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Bridger</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>Bridger</value>
+        </filters>
+        <label>Bridger</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>CBC_Flood</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>cbc_flood</value>
+        </filters>
+        <label>CBC Flood</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Complex_Deal</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>complex_deal</value>
+        </filters>
+        <label>Complex Deal</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Connected_Involvements</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>involvement</value>
+        </filters>
+        <label>Connected Involvements</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Customer_Portal</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>Customer_Portal</value>
+        </filters>
+        <label>Customer Portal</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Document_Manager</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>contains</operation>
+            <value>Document</value>
+        </filters>
+        <label>Document Manager</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>E_tran1</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>startsWith</operation>
+            <value>E-tran Config</value>
+        </filters>
+        <label>E - tran</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Portfolio_Map</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Category_Name__c</columns>
+        <columns>nFORCE__Key__c</columns>
+        <columns>nFORCE__Value__c</columns>
+        <columns>nFORCE__Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Category_Name__c</field>
+            <operation>equals</operation>
+            <value>Portfolio Map</value>
+        </filters>
+        <label>Portfolio Map</label>
+        <language>en_US</language>
+    </listViews>
+    <visibility>Public</visibility>
+</CustomObject>

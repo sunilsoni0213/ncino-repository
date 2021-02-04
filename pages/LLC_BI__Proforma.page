@@ -1,0 +1,46 @@
+<apex:page docType="html-5.0"
+	controller="LLC_BI.ProformaController"
+	sidebar="false" showHeader="true">
+	<apex:stylesheet value="{!styleResource}"/>
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_AngularJS />
+
+	<nFORCE:Includes enableFontAwesome="true"
+		enableBS3Namespace="true"
+		enableLifeCycleApp="true"
+		runLifeCycleApp="true"
+		includeIEHacks="true"/>
+	<nFORCE:Internationalize />
+	<nFORCE:ncUIIncludes />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+	<nFORCE:Include_Navigator />
+	<nFORCE:Include_Design_System flavor="bs3"/>
+
+	<apex:pageBlock html-style="display:none"/>
+
+	<apex:composition template="LLC_BI__Template_Base_TM_Proforma">
+
+		<apex:define name="topbar">
+			<div class="container-fluid">
+				<apex:include rendered="{!!isNull(route.nFORCE__Topbar__c)}" pageName="{!route.nFORCE__Topbar__c}" />
+			</div>
+		</apex:define>
+		<apex:define name="body">
+			<apex:include rendered="{!!isNull(route.nFORCE__Body__c)}" pageName="{!route.nFORCE__Body__c}" />
+		</apex:define>
+
+		<apex:define name="right-column">
+			<apex:include rendered="{!isScenarioIdSet}" pageName="LLC_BI__ProformaScenarioCard" />
+		</apex:define>
+
+	</apex:composition>
+	<nFORCE:Internationalize />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProforma, 'application/ProformaApp.js')}"/>
+	<c:ProformaConfiguration />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProforma, 'controllers/ProformaController.js')}"/>
+	<div id="ProformaBootstrap" ng-controller="ProformaController as controller"></div>
+
+</apex:page>

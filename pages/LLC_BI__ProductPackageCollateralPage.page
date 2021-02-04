@@ -1,0 +1,43 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="nFORCE.RelatedListController,LLC_BI.Utility" sidebar="false" tabStyle="LLC_BI__Product_Package__c">
+	<apex:Messages />
+
+	<apex:form >
+		<apex:actionFunction name="initialize" action="{!initializeData}" reRender="mainPageBlock">
+			<apex:param name="operatingType" assignTo="{!opType}" value="{!nameSpace}.ProductPackageCollateralDataProvider"/>
+		</apex:actionFunction>
+	</apex:form>
+	
+	<script>initialize();</script>
+	
+	<apex:form >
+			<nFORCE:RelatedListComponent objId="{!objId}"
+				objectList="{!objectList}"
+				fieldSetMembers="{!fieldSetMembers}"
+				editAction="{!editRecord}"
+				deleteAction="{!deleteRecord}"
+				navigateToRecordAction="{!navigateToRecord}"
+				renderItemLink="{!renderItemLink}"
+				renderEditLink="{!renderEditLink}"
+				renderDeleteLink="{!renderDeleteLink}"
+				selectedRecordId="{!recordId}"
+				shouldRedirect="{!shouldRedirect}"
+				redirectUrl="{!redirectUrl}"
+				previousGroupAction="{!previousGroupAction}"
+				showListAction="{!showListAction}"
+				showListReturnAction="{!showListReturnAction}"
+				displayFullPage="{!displayFullPage}"
+				nextGroupAction="{!nextGroupAction}"
+				totalObjectCount="{!totalObjectCount}"
+				pagingSize="{!pagingSize}"
+				startRecordNumber="{!startRecordNumber}"
+				endRecordNumber="{!endRecordNumber}"
+				showPrevious="{!showPrevious}"
+				showNext="{!showNext}"
+				tableTitle="{!tableTitleLabelName}"
+				hasInitialized="{!hasInitialized}"
+				sortColumnName="{!sortColumnName}"
+				sortAction="{!sortAction}"
+			/>
+	</apex:form>
+	
+</apex:page>

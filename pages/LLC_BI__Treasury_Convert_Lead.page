@@ -1,0 +1,29 @@
+<apex:page standardController="Lead">
+	<apex:outputpanel layout="none">
+		<nFORCE:Includes enablefontawesome="true" enableBS3Namespace="true" />
+		<nFORCE:Include_Design_System flavor="vf"/>
+		<nFORCE:Include_Design_System flavor="bs3"/>
+
+		<c:Include_AngularJS />
+
+		<nFORCE:ncUIIncludes />
+		<nFORCE:ncDataProvidersIncludes />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__treasuryConversionApp)}"/>
+		<c:TreasuryConversionConfiguration />
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__treasuryConversionController)}"/>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div class="col-md-12">
+							<c:TreasuryConversion contextObjectName="{!Lead.Name}" accountId="{!Lead.LLC_BI__Account__c}"/>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</apex:outputpanel>
+</apex:page>

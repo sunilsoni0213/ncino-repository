@@ -1,0 +1,23 @@
+<apex:page controller="LLC_BI.ProductBillPointController"
+	extensions="nFORCE.ScreenController"
+	showHeader="false"
+	sidebar="false">
+	<div class="nds-section" id="ncRelatedList">
+		<apex:repeat value="{!screenSections}" var="section">
+			<nc-related-list
+				section-id="{!section.id}"
+				guid="{!section.id}{!guid}"
+				context-id="{!contextObjectId}"
+				add-edit-modal-content="ProductBillPointModalWrapper.partial.html"
+				title="{!title}"
+				description="{!$Label.Product_Bill_Point_Description}">
+				<apex:composition template="nFORCE__Template_UI_Loading" />
+			</nc-related-list>
+		</apex:repeat>
+		<c:ProductBillPointPartials />
+		<nFORCE:ncRelatedListPartials />
+		<nFORCE:ncRelatedListIncludes />
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductBillPoint, 'components/ProductBillPoint.component.js')}"/>
+		<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProductBillPoint, 'css/Style.css')}" />
+	</div>
+</apex:page>

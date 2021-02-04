@@ -1,0 +1,59 @@
+<apex:page controller="nCBC.CBCHTMLReportController"
+	sidebar="false"
+	showHeader="false">
+	<c:Includes />
+	<nFORCE:Include_Navigator />
+	<head>
+		<style type="text/css">
+			.button {
+				position: fixed;
+				top: 2px;
+				right: 2px;
+			}
+
+			@media print {
+				a[href]:after {
+					content: none;
+				}
+
+				.no-print {
+					display: none;
+					height: 0;
+				}
+			}
+		</style>
+		<script type="text/javascript">
+			function getReportHtml() {
+				Visualforce.remoting.Manager.invokeAction(
+					'{!$RemoteAction.CBCHTMLReportController.reportHtml}',
+					'{!reportId}',
+					function(result, event){
+						if (event.status) {
+							document.getElementById('report_markup').innerHTML = result
+						} else if (event.type === 'exception') {
+							document.getElementById("responseErrors").innerHTML =
+								event.message + "<br/>\n<pre>" + event.where + "</pre>";
+						} else {
+							document.getElementById("responseErrors").innerHTML = event.message;
+						}
+					},
+					{escape: false}
+				);
+			}
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+					getReportHtml();
+				}
+		</script>
+	</head>
+	<body style="background-color: #fff">
+	<apex:PageMessages escape="false"/>
+	<apex:form >
+		<apex:commandButton rendered="{!BEGINS($User.UIThemeDisplayed, 'Theme4')}" onclick="LifeCycle.Navigator.back();" value="{!$Label.ncbc__go_back}"  styleClass="button no-print"/>
+		<apex:commandButton rendered="{!NOT(BEGINS($User.UIThemeDisplayed, 'Theme4'))}" onclick="window.close();" value="Close"  styleClass="button no-print"/>
+	</apex:form>
+	<div id="responseErrors"></div>
+	<div id="report_markup"></div>
+	</body>
+</apex:page>

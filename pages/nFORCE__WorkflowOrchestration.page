@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:slds />
+    <c:WorkflowOrchestrationConfig />
+    <c:WorkflowOrchestration />
+    <div id="ncWorkflowOrchestration" ng-cloak="cloak">
+        <message></message>
+        <workflow-orchestration></workflow-orchestration>
+    </div>
+</apex:page>

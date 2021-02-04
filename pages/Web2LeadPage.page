@@ -1,0 +1,242 @@
+<apex:page standardController="Lead" extensions="Web2LeadController" title="Contact Us" showHeader="false" standardStylesheets="false">
+  <head>
+  <link type="text/css" rel="stylesheet" href="https://fast.fonts.com/cssapi/8df02d1f-3da5-423f-8254-18629289c5f5.css"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <base href="https://www.ncino.com/" />
+  <style type="text/css">@import url("/assets/styles/style.css");</style> 
+  <link rel="shortcut icon" type="image/x-icon" href="ncino.ico" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-1.7.min.js"></script>
+    <script>
+    $(document).ready(function (){
+        onResize();
+          //randomPhrase();
+
+      $("#whitepaper-options label").click(function () {
+        if ( $(this).find('input').is(':checked') ) {
+          $(this).parent().css('background-color', '#efefef');
+        } else {
+          $(this).parent().css('background-color', 'transparent');
+        }
+      });
+
+      var numSelected = $("#whitepaper-options input[type='checkbox']:checked").length;
+      $("input[name='whitepaper']").val(numSelected > 0 ? numSelected : "" );
+      $("#whitepaper-options label input:checked").parent().parent().css('background-color', '#efefef');
+      }); 
+      
+      $(window).resize(function() {
+    onResize();
+  });
+  
+  function onResize() {
+    /*var mainheight = ( $(document).height() <= $(window).height() ) ? $(window).height() : $(document).height();
+    //$('#content').height(mainheight - ($('#menu').height + $('#footer').height) );
+    var newheight = mainheight - ($('#navigation').height() + $('#footer').height() );   
+    $('#content').height(newheight );
+    */
+    
+    if ($(document).height() <= $(window).height() ) 
+    {
+      $('#footer').css('top', $(window).height() - $('#footer').height() ) ;  
+      //alert($('#footer').height());
+    }
+  }
+
+    </script>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33601441-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- begin Pardot Website Tracking code -->
+<script type="text/javascript">
+piAId = '26922';
+piCId = '1328';
+
+(function() {
+  function async_load(){
+    var s = document.createElement('script'); s.type = 'text/javascript';
+    s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  }
+  if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+<!-- end Pardot Website Tracking code -->
+<title>nCino Contact Information</title>
+<!-- Add Scripts below Here -->
+
+ <script src="assets/scripts/ajax.js" type="text/javascript"></script>
+ <script src="assets/scripts/contact.js" type="text/javascript"></script> 
+ 
+<script type="text/javascript">
+ //message = '<div id="contact-response">Thank you for your request. You will recieve an email with your requested documents.</div>';
+
+ function onSubmitted()
+ {
+  if ( validateForm('mainForm') )
+    _gaq.push(['_trackEvent', 'Contact', 'Contact Form Submitted',, 1, false]);
+ }
+ </script>
+ <style>
+    .submit {
+      width: 90px;
+      height: 34px;
+      display: block;
+      overflow: hidden;
+      margin-top: 1px;
+      margin-left: -180px;
+    }
+ </style>
+</head>
+  <body class="index contact">
+  <apex:form >
+<div id="header">
+  <div id="header_background">
+  <div id="navigation">
+    <div id="menu"><a href="https://bankr.cloudforce.com/" onClick="window.open(this.href);return false;"><img src="assets/images/login.jpg" class="off" alt="login" title="login" /><img src="assets/images/login_OVER.jpg" class="over" alt="login" title="login" /></a><a href="http://support.ncino.com" onClick="window.open(this.href);return false;"><img src="assets/images/support.jpg" class="off" alt="support" title="support" /><img src="assets/images/support_OVER.jpg" class="over" alt="support" title="support" /></a></div>
+    <div class="clear"></div>
+    <a id="logo" href="/"><img src="assets/images/logo.png" alt="nCino" title="nCino" width="192" height="82" /></a>
+    <a id="home" href="/">Home</a>  
+    <a id="about" href="/about/">About</a> 
+    <a id="solutions" href="/solution/">nCino Solution</a> 
+    <a id="success" href="/success-stories/">Success Stories</a> 
+    <a id="news" href="/news/">News</a> 
+    <a id="contact" class="selected"  href="/contact/">Contact</a>
+  </div>
+  </div>
+</div>
+<div id="container">
+  <div id="content">
+    <div id="cinema">     <div id="feature">
+      <img src="assets/images/contact/banner.jpg" alt="" title="" />
+      </div>
+    </div>
+    
+    <div id="copy">
+      <div>
+        <h1>Contact nCino</h1>
+        <h2>Fill out the contact form below or contact nCino directly.</h2>
+      </div>
+      <div class="left doubleCol">
+        <div class="padding">
+        <apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, '/bootstrap3/css/bootstrap.min.css')}"/>
+        <form class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label for="first_name" class="col-sm-3 control-label">First Name</label>
+                  <div class="col-sm-9">
+                    <apex:inputField styleClass="form-control" value="{!Lead.FirstName}"/>
+                    <br></br>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="last_name" class="col-sm-3 control-label">Last Name</label>
+                  <div class="col-sm-9">
+                    <apex:inputField styleClass="form-control" value="{!Lead.LastName}"/>
+                    <br></br>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-sm-3 control-label">Email</label>
+                  <div class="col-sm-9">
+                    <apex:inputField styleClass="form-control" value="{!Lead.Email}"/>
+                    <br></br>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="company" class="col-sm-3 control-label">Company</label>
+                  <div class="col-sm-9">
+                    <apex:inputField styleClass="form-control" value="{!Lead.Company}"/>
+                    <br></br>
+                  </div>
+                </div><div class="form-group">
+                  <label for="city" class="col-sm-3 control-label">City</label>
+                  <div class="col-sm-9">
+                    <apex:inputField styleClass="form-control" value="{!Lead.City}"/>
+                    <br></br>
+                  </div>
+                </div><div class="form-group">
+                  <label for="state" class="col-sm-3 control-label">State/Province</label>
+                  <div class="col-sm-9">
+                    <apex:inputField styleClass="form-control" value="{!Lead.State}"/>
+                    <br></br>
+                  </div>
+                </div><div class="form-group">
+                  <label for="exampleInputFile" class="col-sm-3 control-label">Attach File</label>
+                  <div class="col-sm-9">
+                    <apex:inputFile id="myFile" value="{!myDoc.Body}" fileName="{!myDoc.Name}"/>
+                    <br></br>    
+                  </div>
+                </div>
+              <center>
+                  <apex:commandLink id="submitBtn" action="{!saveLead}" target="_top" type="image/png">
+                    <apex:image styleClass="submit" value="https://www.ncino.com/assets/images/contact/submit.jpg"/>
+                  </apex:commandLink>
+              </center>
+            </form>
+        </div>
+      </div>
+      <div class="singleCol">
+                <div class="padding">
+                <br />
+                <strong>nCino, Inc.</strong><br />
+        2605 Iron Gate Drive<br />      
+        Wilmington, NC 28412<br />      
+        Phone: 888.676.2466<br />
+                <a href="https://maps.google.com/maps?q=2605+Iron+Gate+Drive,+Suite+100&amp;ll=34.192139,-77.911187&amp;spn=0.004522,0.008256&amp;hnear=2605+Iron+Gate+Dr,+Wilmington,+North+Carolina+28412&amp;gl=us&amp;t=m&amp;z=18" target="_blank">Map</a><br /><br />      
+        
+    
+                <strong>Visiting nCino</strong><br />
+        <a href="/visit">Click here for hotels, restaurants, and other travel related details.</a>
+                  <br /> <br />
+                
+                <strong>General Inquiries Contact</strong><br />    
+        Brittany Atkins<br />
+<a href="mailto:brittany.atkins@ncino.com?subject=General%20Inquiry">brittany.atkins@ncino.com</a><br />
+910.777.5424<br /><br />
+                <img src="assets/images/contact/office.jpg" width="200" height="118" />
+                
+        </div>
+      </div>
+    </div>
+  <div class="clear">&nbsp;</div>
+</div>
+<div id="footer">
+    <div id="footer_content">
+      
+      <div id="footer_links"> 
+      
+      <div id="sub_footer"> &copy;2015 nCino, Inc. All rights reserved &nbsp;&nbsp; |  &nbsp;&nbsp; 888.676.2466  &nbsp;&nbsp; | &nbsp;&nbsp;  
+              <a href="contact">Contact</a>   &nbsp;&nbsp; | &nbsp;&nbsp;  
+              <a href="terms_and_conditions">Terms &amp; Conditions</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="privacy">Privacy Policy</a>
+               &nbsp;&nbsp; | &nbsp;&nbsp; 
+              <a href="http://www.linkedin.com/company/ncino-inc-" onclick="window.open(this.href);return false;"><img src="assets/images/social/linkedin.png" title="Linkedin" alt="Linkedin" style="float: none;top: 5px;position: relative;" /></a>
+              <a href="https://twitter.com/ncino" onclick="window.open(this.href);return false;"><img src="assets/images/social/twitter.png" title="Twitter" alt="Twitter" style="float: none;top: 5px;position: relative;" /></a>
+              <a href="http://ncino.com/news/feed/rss" onclick="window.open(this.href);return false;"><img src="assets/images/social/rss.png" title="RSS" alt="RSS" style="float: none;top: 5px;position: relative;" /></a>
+               <a href="https://www.youtube.com/channel/UCLyVctz20sO0ImUOWwUbFxw" onclick="window.open(this.href);return false;" ><img src="assets/images/social/youtube.png" alt="Youtube" style="float: none;top: 5px;position: relative;" /></a>
+            <!--<a href="https://plus.google.com/109415598874582895105" onclick="window.open(this.href);return false;" rel="publisher"><img src="assets/images/social/google-plus.png" title="Google+" alt="Google+" style="float: none;top: 5px;position: relative;" /></a>-->
+              <!--<g:follow href="https://plus.google.com/109415598874582895105" rel="publisher" height="20" annotation="none"></g:follow>-->
+              <br/><br/>
+              <!--<g:plusone size="standard" annotation="none" rel="publisher"></g:plusone>-->
+              
+              
+              
+</div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  </apex:form>
+  </body>
+</apex:page>

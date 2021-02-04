@@ -1,0 +1,128 @@
+<apex:page showHeader="false" sidebar="false">
+	<c:Include_Messenger />
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_AngularJS />
+	<c:Internationalize />
+
+	<!-- This page includes a variety of example angular elements to aid developers in leveraging
+	existing features and developing new ones! -->
+
+	<c:Include_Navigator />
+	<c:ncDataProvidersIncludes />
+	<c:TestQuestionnaireConfiguration />
+
+	<div class="slds" id="nc-testquestionnaire" ng-controller="AppController">
+
+		<div class="slds">
+				<div style="margin: 15px; border-radius: 0 0 4px 4px; padding: 10px; background: #fff; border: 1px solid #a8b3c6; border-radius: 5px; text-align: right">
+					<input
+						type="button"
+						value="Save Questionnaire"
+						class="slds-button slds-button--brand"
+						ng-disabled="disableSaveQuestionnaire"
+						ng-click="saveQuestionnaire()"/>
+				</div>
+				<c:QuestionnaireIncludes />
+				<div style="margin: 15px; border-radius: 0 0 4px 4px; padding: 10px; background: #fff; border: 1px solid #a8b3c6; border-radius: 5px;">
+					<c:QuestionnairePartials />
+					<questionnaire
+						group-id="{{groupId}}"
+						context-id="{{contextId}}"
+						context-owner-id="{{contextOwnerId}}"
+						on-save-complete="saveCompleted()"
+						on-save-failure="saveFailed(error)"
+						on-form-valid="questionnaireValid()"
+						on-form-invalid="questionnaireInValid()"
+						on-error="showErrorMessage(error)"
+						trigger-save="triggerSave">
+					</questionnaire>
+				</div>
+		</div>
+	</div>
+
+	<script>
+		(function() {
+			'use strict';
+			angular.module('nc-testquestionnaire').controller('AppController', AppController);
+			AppController.$inject = ['$scope', 'pubsub', 'forms', 'messageService', 'label', 'ui', 'config', '$timeout'];
+			
+			function AppController($scope, pubsub,forms,messageService,label,ui, config, $timeout) {
+				$scope.label = label.getLabels();
+				$scope.configs = config.get();
+
+				//Questionnaire
+				var vm = this;
+
+				$scope.groupId = $scope.configs.groupId;
+				$scope.contextId = $scope.configs.contextId;
+				$scope.contextOwnerId = $scope.configs.contextOwnerId;
+
+				$scope.disableSaveQuestionnaire = true;
+
+				$scope.saveQuestionnaire = function() {
+					$scope.triggerSave = true;
+				};
+
+				$scope.questionnaireValid = function() {
+					$timeout(function() {
+						$scope.disableSaveQuestionnaire = false;
+					});
+				};
+
+				$scope.questionnaireInValid = function() {
+					$timeout(function() {
+						$scope.disableSaveQuestionnaire = true;
+					});
+				};
+
+				$scope.saveFailed = function(error) {
+					$scope.triggerSave = false;					
+					$scope.showErrorMessage(error);					
+				};
+
+				$scope.showErrorMessage = function(error) {
+					$scope.triggerSave = false;
+					messageService.setMessage(
+					{
+						type: messageService.messageTypes.error,
+						text: 'Error occurred.' + error
+					}, true);
+				};
+
+				$scope.showWarningMessage = function(){
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.warning,
+							text: 'Warning.'
+						},
+						true
+					);
+				};
+
+				$scope.saveCompleted = function() {
+					$scope.triggerSave = false;
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.success,
+							text: 'Answers saved successfully.'
+						},
+						true
+					);
+				};
+
+				$scope.showDefaultMessage = function(){
+					messageService.setMessage(
+						{
+							type: messageService.messageTypes.default,
+							text: 'Message Here.'
+						},
+						true
+					);
+				};
+			}
+		})();
+	</script>
+
+</apex:page>

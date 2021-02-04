@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Statistics Configuration Settings</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is manually populated. This field indicates whether or not the statistic should be calculated. A value of TRUE indicates that the statistic must be calculated. If the field is not specified, the field will be set to FALSE, which indicates that the statistic is not active and should not be calculated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Boolean that controls if the configuration is active or not.</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Additional_Parameters_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and manually populated by administrators. This field allows for overflow of the Additional Parameters field and concatenates to form one long parameter if needed. This field is used to specify additional parameters that influence the performance of statistic calculations. The specified parameters are dependent on the business logic class.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field allows for overflow of the Additional Parameters field and concatenates to form one long parameter if needed.</inlineHelpText>
+        <label>Additional Parameters 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Additional_Parameters_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and manually populated by administrators. This field allows for overflow of the Additional Parameters 2 field and concatenates to form one long parameter if needed. This field is used to specify additional parameters that influence the performance of statistic calculations. The specified parameters are dependent on the business logic class.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field allows for overflow of the Additional Parameters 2 field and concatenates to form one long parameter if needed.</inlineHelpText>
+        <label>Additional Parameters 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Additional_Parameters_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and manually populated by administrators. This field allows for overflow of the Additional Parameters 3 field and concatenates to form one long parameter if needed. This field is used to specify additional parameters that influence the performance of statistic calculations. The specified parameters are dependent on the business logic class.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field allows for overflow of the Additional Parameters 3 field and concatenates to form one long parameter if needed.</inlineHelpText>
+        <label>Additional Parameters 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Additional_Parameters__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is manually populated. This field allows additional parameters to be specified that influence how the statistic calculation is performed. The format and the possible parameters that can be specified are dependent on the business logic class. Refer to the documentation of the business logic class for more details on this field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Free form field to allow additional parameters to be configured for an entry</inlineHelpText>
+        <label>Additional Parameters</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Business_Logic_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. This field contains the name of the Business Logic Apex Class that will be performing the calculation of the statistic. For example, LLC_BI.StatisticsExposureCalculator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the class that contains the business logic to execute for this configuration item.</inlineHelpText>
+        <label>Business Logic Class</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Calculate_Involvements_With_Connections__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional field. When enabled, the statistic calculation includes loans associated with an account and loans associated to an account’s connections in the calculation. When disabled, either loans associated via entity involvement are used in the calculation if “Depth” is null or loans associated to connected accounts are used in the calculation if “Depth” has a value. By default, it is disabled.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Calculate Involvements with Connections</inlineHelpText>
+        <label>Calculate Involvements with Connections</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Calculated_Field_Path__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional field. If Original Amount or Principal Balance are not in use for the statistic calculation, this field is used to specify the API path of the field being used. The path is written in the following format when the object is a parent of entity involvement: Object_API_Name_r.Field_API_Namec&quot;. If the field is on entity involvement, it is written in the following format: &quot;Field_API_Name_c.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Calculated Field Path</inlineHelpText>
+        <label>Calculated Field Path</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Calculation_Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Priority value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>priority</inlineHelpText>
+        <label>Calculation Priority</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It indicates the category to which the statistic belongs, which is used to logically group statistics. The category is used by other components to determine which statistics to use or to display.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Category for grouping related statistic configuration definitions</inlineHelpText>
+        <label>Category</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Connection_Ownership_Percentage_Max__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional number field. This specifies the top range of the Connection Ownership Percentage that should be used to determine whether or not an account&apos;s loans should be used in exposure. This field should be used when Connection Role is also being used. Default is null.</description>
+        <externalId>false</externalId>
+        <label>Connection Ownership Percentage Max</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Connection_Ownership_Percentage_Min__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional number field. This field specifies the bottom range of the Connection Ownership Percentage that should be used to determine whether or not an account&apos;s loans should be used in exposure. This field should be used when Connection Role is also being used. Default is null.</description>
+        <externalId>false</externalId>
+        <label>Connection Ownership Percentage Min</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Connection_Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this field. This field specifies which connection roles to use when calculating exposure and should be used when using the Depth field. If a connection has a role not specified in this list, then the connected account&apos;s loans are not used in  the calculation.  This field is a comma-delineated list with no spaces. Default is null.</description>
+        <externalId>false</externalId>
+        <label>Connection Role</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Depth__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is admin only. It allows an admin to specify the number of self-referential records (ex: accounts connections) that can be used in the statistic. It is manually populated. It is optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows an admin to specify the number of self-referential records (ex: accounts connections) that can be used in the statistic.</inlineHelpText>
+        <label>Depth</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Automatic_Calculation__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional field is manually selected. It is used to determine if the statistic is automatically updated. An automatically updated statistic updates based on user interactions with nCino, such as creating entity involvement records. When enabled, the statistic is updated automatically; when disabled the statistic does not update automatically. It is enabled by default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables automatic calculation of the statistic. An automatically updated statistic updates based on user interactions with nCino, such as creating entity involvement records.</inlineHelpText>
+        <label>Enable Automatic Calculation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Debt_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators manually toggle this optional field. When true, manually added debt is used in the calculation for Product Package. When false, it is not. By default, this is not set to true.</description>
+        <externalId>false</externalId>
+        <label>Enable Debt 2</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Debt__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators manually toggle this optional field. When true, manually added debt is used in the calculation for Account. When false, it is not. By default, this is not set to true.</description>
+        <externalId>false</externalId>
+        <label>Enable Debt</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Exclusion_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When used in tandem with &quot;Is Default Filter&quot;, it also controls whether the Exclude toggles displays for the Product Package table. This field should have the same configuration across all statistic configurations that share an Exposure Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Administrators manually select this optional checkbox field. It controls whether excluded loans and debts should be removed from the exposure calculation.</inlineHelpText>
+        <label>Enable Exclusion 2</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Exclusion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When used in tandem with &quot;Is Default Filter&quot;, it also controls whether the Exclude toggles displays for the Relationship table. This field should have the same configuration across all statistic configurations that share an Exposure Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Administrators manually select this optional checkbox field. It controls whether excluded loans and debts should be removed from the exposure calculation.</inlineHelpText>
+        <label>Enable Exclusion</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Manual_Calculation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional field is manually selected. It is used to determine if the statistic is manually updated via a batch job. A manually updated statistic allows a user to initiate the recalculation. When enabled, the statistic is updated manually; when disabled the statistic does not update manually. It is disabled by default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables manual calculation of the statistic. A manually updated statistic allows a user to initiate the recalculation.</inlineHelpText>
+        <label>Enable Manual Calculation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Field_Name_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is conditionally required and is manually populated. It uniquely identifies the statistic within the specified category. If the LLC_BI__Post_to_Parent_Object__c field indicates TRUE, the value is also used to find and update the field with the same name on the parent object with the calculated value. The parent object is defined by the LLC_BI__Object_Name__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name used to identify the specific statistic configuration on object 2.</inlineHelpText>
+        <label>Field Name 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It uniquely identifies the statistic within the specified category. The value is placed in the LLC_BI.Statistic__c.LLC_BI_Field_Name__c field for every statistic that is created as a result of this Statistic Configuration Record. If the LLC_BI__Post_to_Parent_Object__c field indicates TRUE, the value is also used to find and update the field with the same name on the parent object with the calculated value. The parent object is defined by the LLC_BI__Object_Name__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name used to identify the specific statistic configuration</inlineHelpText>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Admins use this text field to control the field set that displays in the columns on that statistic’s table. The field defaults to that exposure type’s default field set, but admins can change it to the API name of the field set that they wish to use instead.</description>
+        <externalId>false</externalId>
+        <label>Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Filter_Display_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional field. This field controls and respects the display order of the filters on the Total Exposure page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Filter order used in the display of exposure stages.</inlineHelpText>
+        <label>Filter Display Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Filter_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field specifies the name of the exposure stage used to filter tables displayed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Key used to look up the name value.</inlineHelpText>
+        <label>Filter Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Default_Filter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This boolean checkbox field is used by admins. When true, it indicates if the selected exposure type should be the first to display within the type filter on that exposure’s table within Total Exposure.</description>
+        <externalId>false</externalId>
+        <label>Is Default Filter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Table__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators use this checkbox field on the Statistic Configuration records to specify if it creates a table on Total Exposure. By default it is inactive; when it is active, a table is created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to specify if this statistic is a table on Total Exposure.</inlineHelpText>
+        <label>Is Table</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Label_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. It contains the name of the custom label that will be used to describe the statistic when displayed to a user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Key used to look up the label value</inlineHelpText>
+        <label>Label Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Object_Name_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is conditionally required and must be specified if the LLC_BI__Post_to_Parent_Object_2__c field is set to TRUE. It is manually populated. The field indicates the object type that contains the field (specified by LLC_BI__Field_Name_2__c) that will be updated with the value of the calculated statistic when the LLC_BI__Post_to_Parent_Object_2__c field is set to TRUE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the object proceeding where additional output will be placed.</inlineHelpText>
+        <label>Object Name 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Object_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is conditionally required and must be specified if the LLC_BI__Post_to_Parent_Object__c field is set to TRUE. It is manually populated. The field indicates the object type that contains the field (specified by LLC_BI__Field_Name__c) that will be updated with the value of the calculated statistic when the LLC_BI__Post_to_Parent_Object__c field is set to TRUE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the underlying object where the output will be placed.</inlineHelpText>
+        <label>Object Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Post_to_Parent_Object_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is manually populated. This field indicates if the statistic should also be stored on the parent object. If the field is not specified, it defaults to FALSE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if the value should be posted to the owning object.</inlineHelpText>
+        <label>Post to Parent Object 2</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Post_to_Parent_Object__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is manually populated. This field indicates if the statistic should also be stored on the parent object in addition to being stored in the LLC_BI__Statistic__c object. If the field is not specified, it defaults to FALSE.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if the value should be posted to the owning object or just posted to the statistics table.</inlineHelpText>
+        <label>Post to Parent Object</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Feature_Filter__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional text field. When this field is populated, then the only loans that should be used in the exposure calculation are loans whose product’s Product Feature have a matching value in the Exposure Filter field. For example, if “Tier 1” is the value of the Product Feature Filter field on the Statistic Configuration object, then the only loans that will be used to calculate exposure are those whose product’s Product Feature have a value of “Tier 1&quot; in the Exposure Filter field.</description>
+        <externalId>false</externalId>
+        <label>Product Feature Filter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Relative_Display_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is manually populated. It indicates the relative order in which to display the statistic when all the statistics in the group is displayed to the user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relative order used in the automated display layout component</inlineHelpText>
+        <label>Relative Display Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators manually populate this optional text box. It allows administrators to group together a set of statistic records. (Example: Group statistic records together for the Exposure Management table on relationship.)</description>
+        <externalId>false</externalId>
+        <label>Exposure Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Use_Calc_Field_Path_For_Renewals__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is an optional boolean field used by administrators. When true, which is the default state, it controls if in progress renewals and modifications are included in the calculations for Total Exposure.</description>
+        <externalId>false</externalId>
+        <label>Use Calc Field Path for Renewals</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Statistics Configuration</label>
+    <visibility>Public</visibility>
+</CustomObject>

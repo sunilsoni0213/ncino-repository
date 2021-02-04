@@ -1,0 +1,10 @@
+<apex:page >
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.SLDS0102,
+		'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ruleEngineApp)}"/>
+	<c:RuleEngineDataService />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ruleEngineAdminController)}"/>
+	<c:RuleEngineAdmin />
+</apex:page>

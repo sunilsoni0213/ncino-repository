@@ -1,0 +1,23 @@
+<apex:page showHeader="false"
+	sidebar="false"
+	controller="ncinoocr.OcrController"
+	extensions="nFORCE.RemoteActionController">
+
+
+        <nFORCE:Includes enableLifeCycleApp="true" isAnalyticsDisabled="true" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__layout_designer_models_bundle)}" />
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+
+	<nFORCE:LifeCycle_Functions />
+
+	<ocr-app></ocr-app>
+
+	<c:OCRGlobals sessionId="{!GETSESSIONID()}" userId="{!userid}" />
+
+	<script src="{!URLFOR($Resource.vf_includes, 'polyfills.js')}" />
+	<script src="{!URLFOR($Resource.vf_includes, 'vendor.js')}" />
+        <script src="{!URLFOR($Resource.vf_includes, 'ocr.js')}" />
+        <nFORCE:LiteForce_Functions />
+	<apex:stylesheet value="{!URLFOR($Resource.ncinoocr__vf_includes, 'ocr.css')}" />
+</apex:page>

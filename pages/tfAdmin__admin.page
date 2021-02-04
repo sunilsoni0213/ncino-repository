@@ -1,0 +1,38 @@
+<apex:page sidebar="false" controller="tfAdmin.Admin">
+	<apex:composition template="tFlow__tStandard">
+		<apex:define name="logo">
+			<img class="logo" src="{!$Resource.tFlow__nCino}" />
+		</apex:define>
+		
+		<apex:define name="banner"></apex:define>
+		
+		<apex:define name="tabs">
+			<a href="#" class="active">{!$Label.Workspace}</a>
+		</apex:define>
+		
+		<apex:define name="menu">
+			<apex:repeat value="{!menuMapLists['main']}" var="routeId" >
+				<apex:outputLink value="{!menuMaps['main'][routeId]['href']}" styleClass="{!menuMaps['main'][routeId]['status']}">
+					{!menuMaps['main'][routeId]['name']}
+					<i class="icon-white {!menuMaps['main'][routeId]['isChevron']} 
+					{!menuMaps['main'][routeId]['chevron']}" />
+				</apex:outputLink>
+				
+				<apex:repeat value="{!menuMapLists['sub']}" var="routeId2" >
+					<apex:outputPanel layout="none" rendered="{!routeId = menuMaps['sub'][routeId2]['parentId'] 
+						&& menuMaps['main'][routeId]['status'] = 'active'}">
+						
+						<apex:outputLink value="{!menuMaps['sub'][routeId2]['href']}"
+							 styleClass="sub {!menuMaps['sub'][routeId2]['status']}">
+							{!menuMaps['sub'][routeId2]['name']}
+						</apex:outputLink>
+					</apex:outputPanel>
+				</apex:repeat>
+			</apex:repeat>
+		</apex:define>
+		
+		<apex:define name="body">
+			<c:MenuBuilder rendered="{!render[app]}" setAppController="{!appController}" />
+		</apex:define>
+	</apex:composition>
+</apex:page>

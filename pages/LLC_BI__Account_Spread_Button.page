@@ -1,0 +1,9 @@
+<apex:page standardController="Account" 
+	extensions="LLC_BI.AccountButtonController"
+	action="{!accessSpreads}" >
+    <apex:form >
+        <apex:pageBlock id="msgs">
+            <apex:pageMessages />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,65 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<title>{!$Label.Failure_Title}</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:include pageName="nPortal__PortalIncludes" />
+			<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102,
+				'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+			<c:PortalConfiguration />
+		</head>
+
+		<body class="portal-body slds has-nstyle" ng-app="customerPortalApp">
+			<div class="portal-wrapper-full" n-style="pso-failure-background">
+				<div class="slds-grid slds-wrap">
+					<div class="portal-wrapper slds-size--1-of-1">
+						<c:PortalHeader />
+						<c:LanguageDataService />
+					</div>
+				</div>
+				<div>
+					<div class="portal-center-column slds-col--padded slds-size--1-of-1
+						slds-medium-size--3-of-4 slds-large-size--2-of-4">
+						<div class="slds-form--stacked slds-p-left--x-large slds-p-right--x-large
+							slds-p-top--x-large slds-p-bottom--x-large slds-m-top--xx-large
+							portal-media-icon-parent slds-theme--shade" n-style="pso-section">
+							<span class="slds-icon_container slds-icon-action-email
+								slds-icon_container--circle portal-media-icon-child" n-style="pso-section-icon">
+								<svg aria-hidden="true" class="slds-icon">
+									<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+										'/assets/icons/utility-sprite/svg/symbols.svg#lock')}"></use>
+								</svg>
+							</span>
+							<h2 class="slds-text-heading--medium portal-center-text slds-m-top--medium" n-style="pso-smallheader">
+								{!$Label.ID_Verification_Failure_Header}
+							</h2>
+							<p class="slds-text-heading--small slds-m-top--medium portal-center-text slds-medium-show">
+								{!$Label.ID_Verification_Failure_Subheader_1}
+								<a href="{!$Label.Contact_Us_Link}">
+									{!$Label.ID_Verification_Failure_Contact_Us_Link_Message}
+								</a>
+							</p>
+							<div class="slds-grid slds-grid--align-center portal-no-margin">
+								<a class="slds-button slds-button--brand slds-m-top--large slds-size--3-of-4"
+									href="{!$Page.Portal}" n-style="pso-button-primary">
+									{!$Label.Go_To_Dashboard}
+								</a>
+							</div>
+							<logout></logout>
+						</div>
+					</div>
+				</div>
+			</div>
+			<c:PortalFooter />
+			<c:PasswordDataService />
+			<c:PortalUserService />
+		</body>
+	</html>
+</apex:page>

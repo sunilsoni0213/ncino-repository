@@ -1,0 +1,8 @@
+<apex:page controller="ncinoocr.SpreadsRecordServiceController"
+		   contentType="application/json"
+		   readOnly="true"
+		   applyHtmlTag="false"
+		   standardStylesheets="false"
+		   showHeader="false"
+		   cache="false"
+		   sidebar="false">{!response}</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When assigned with the corresponding Edit Details permission, allows users to edit all fields on an approved placeholder, including its status. It also allows the user to upload a document to an approved placeholder.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Document Manager Edit After Approval</label>
+</PermissionSet>

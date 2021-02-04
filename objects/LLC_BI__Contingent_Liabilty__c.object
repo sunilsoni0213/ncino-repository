@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Authorized Signer Object is used to capture information about the contact that is assigned as an authorized signer for a relationship.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>Authorized_Signer_for_CM</fullName>
+        <description>for credit memo</description>
+        <displayedFields>
+            <field>Signer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Signing_on_Behalf_of__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity__r.LLC_BI__Ownership__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Authorized Signer for CM</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Authorized_Signers</fullName>
+        <description>Deal Facilities Credit Memo</description>
+        <displayedFields>
+            <field>Signer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Authorized Signers</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSIDDP__CSI_DepAct_DocPrep</fullName>
+        <description>CSI DepAct DocPrep</description>
+        <displayedFields>
+            <field>LLC_BI__Account_Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Authority__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__LookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Percentage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership_Structure_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CSIDDP__nCino_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_DepAct_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSI_DepAct_DocPrep</fullName>
+        <description>CSI DepAct DocPrep</description>
+        <displayedFields>
+            <field>LLC_BI__Account_Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Authority__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__LookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Percentage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership_Structure_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nCino_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_DepAct_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>LLC_BI__Authority__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Percentage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Ownership_Structure_Table</fullName>
+        <description>Deposit account opening ownership structure table</description>
+        <displayedFields>
+            <field>LLC_BI__Contact__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contact__r.Title</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership_Structure_Role__r.LLC_BI__Relationship_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Ownership Structure Table</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Authorized_Signer_Fieldset</fullName>
+        <description>Used in the new UI</description>
+        <displayedFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity__r.LLC_BI__Account__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Authorized Signer Fieldset</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>OneSpan_ESignature</fullName>
+        <description>OneSpan-ESignature Integration</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OneSpan ESignature</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PrecisionLender_Pricing</fullName>
+        <description>PrecisionLender Pricing Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PrecisionLender Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKDDP__WK_DepAct_DocPrep</fullName>
+        <description>WK DepAct DocPrep</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account_Entity_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Authority__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingency_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__LookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Percentage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership_Structure_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKDDP__nCino_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKDDP__Suppress_Signature__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKDDP__TCPA_Consent_Account_Form__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>WK_DepAct_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>LLC_BI__Authority__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Contingent_Percentage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKEDP__Selected_Signer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKEDP__Authorization_Signer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKEDP__Business_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>WKEDP__Shares_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fields>
+        <fullName>CSIDDP__nCino_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional text field houses the middleware code that designates which schema roles are added to the entity. It is visible to administrators.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field with the corresponding role code.</inlineHelpText>
+        <label>nCino Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account_Entity_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a formula field which specifies the entity involvement and account type of the contact associated to the entity involvement record on the loan, as an authorized signer.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(LLC_BI__Entity__r.LLC_BI__Account__r.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Entity Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Attesting_Witness__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field to indicate the authorized signer is only acting as an attesting witness rather than the authorizing signer. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to indicate that the authorized signer is only acting as an attesting witness rather than the authorizing signer.</inlineHelpText>
+        <label>Attesting Witness</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Authority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This pick-list is used to specify whether the contact listed is &quot;Authorized&quot; or &quot;Not Authorized&quot; as a signer on the loan</description>
+        <externalId>false</externalId>
+        <label>Authority</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Authorized</fullName>
+                    <default>false</default>
+                    <label>Authorized</label>
+                </value>
+                <value>
+                    <fullName>Not Authorized</fullName>
+                    <default>false</default>
+                    <label>Not Authorized</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Authorized_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this optional lookup field to capture the authorized business for which the current authorized signer is acting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system-populated field associates the authorized signer to an authorized business.</inlineHelpText>
+        <label>Authorized Account</label>
+        <referenceTo>LLC_BI__Authorized_Account__c</referenceTo>
+        <relationshipLabel>Authorized Signers</relationshipLabel>
+        <relationshipName>Authorized_Signers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Authorized_Signer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this optional lookup field to capture the authorized signer for which the current authorized signer is acting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system-populated field associates the authorized signer to another authorized signer.</inlineHelpText>
+        <label>Authorized Signer</label>
+        <referenceTo>LLC_BI__Contingent_Liabilty__c</referenceTo>
+        <relationshipLabel>Authorized Signers</relationshipLabel>
+        <relationshipName>Authorized_Signers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contact__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a look up (Master-Detail) to the Contact records within nCino. Used to specify the contact who will be the authorized signer.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Contingent_Liabilties</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contingency_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field has been deprecated and replaced by Contingent Type on the Entity Involvement record</description>
+        <externalId>false</externalId>
+        <label>-D Contingency Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Joint &amp; Several</fullName>
+                    <default>true</default>
+                    <label>Joint &amp; Several</label>
+                </value>
+                <value>
+                    <fullName>Pro Rata</fullName>
+                    <default>false</default>
+                    <label>Pro Rata</label>
+                </value>
+                <value>
+                    <fullName>Assign Specific</fullName>
+                    <default>false</default>
+                    <label>Assign Specific</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contingent_Percentage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field specifies the percentage of the loan that is represented by this contingency. A percentage can only be specified if the contingency type is &apos;Assign Specific&apos; or &apos;Pro Rata&apos;</description>
+        <externalId>false</externalId>
+        <label>Ownership Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Entity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a look up ( Master- Detail) to the entity involvement record of the contact that is to be an authorized signer.</description>
+        <externalId>false</externalId>
+        <label>Entity</label>
+        <referenceTo>LLC_BI__Legal_Entities__c</referenceTo>
+        <relationshipName>Contingent_Liabilties</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__LookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The lookupKey is an external ID field, used for importing any authorized signer data the customer has into nCino.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Ownership_Structure_Role__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set during the Deposit Account Opening workflow to associate an Authorized Signer to a specific Ownership Structure Role.</description>
+        <externalId>false</externalId>
+        <label>Ownership Structure Role</label>
+        <referenceTo>LLC_BI__Ownership_Structure_Role__c</referenceTo>
+        <relationshipLabel>Authorized Signers</relationshipLabel>
+        <relationshipName>Signers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field, a dependent pick list, gives the ability to specify what capacity a contact can act in for a specific relationship.</description>
+        <externalId>false</externalId>
+        <label>Capacity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Individual</fullName>
+                    <default>false</default>
+                    <label>Individual</label>
+                </value>
+                <value>
+                    <fullName>Member</fullName>
+                    <default>false</default>
+                    <label>Member</label>
+                </value>
+                <value>
+                    <fullName>Officer</fullName>
+                    <default>false</default>
+                    <label>Officer</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Trustee</fullName>
+                    <default>false</default>
+                    <label>Trustee</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__TIN_Certifier__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field to indicate that the signer is qualified to sign TIN certifications or other tax-related documents for the business or entity account holder. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Click this checkbox if the signer is qualified to sign TIN certifications or other tax-related documents for the business or entity account holder.</inlineHelpText>
+        <label>TIN Certifier</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signer__c</fullName>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Contact__r.FirstName   &amp; &apos; &apos; &amp;  LLC_BI__Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Signer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signing_on_Behalf_of__c</fullName>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Entity__r.LLC_BI__Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Signing on Behalf of</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Alternate_Signature_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Users populate this optional text field with a description of the alternate text to print under a signature line for this power of attorney. This text is the power of attorney&apos;s name and description.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the power of attorney&apos;s name and description to display under the signature line for the power of attorney.</inlineHelpText>
+        <label>Alternate Signature Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Relationship_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Administrators enter a description of the relationship between the signer and the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a description of the relationship between the signer and the account.</inlineHelpText>
+        <label>Relationship Description</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WKDDP__Suppress_Signature__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field when the system should not print in the signature block of the signature card. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox if the system should not print in the signature block of the signature card.</inlineHelpText>
+        <label>Suppress Signature</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WKDDP__TCPA_Consent_Account_Form__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field when the financial institution wants to generate a Telephone Consumer Protection Act Consent Account form for the signer. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to generate a Telephone Consumer Protection Act Consent Account form for the signer.</inlineHelpText>
+        <label>TCPA Consent Account Form</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WKDDP__nCino_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional text field houses the middleware code that designates which schema roles are added to the entity. It is visible to administrators.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field with the corresponding role code.</inlineHelpText>
+        <label>nCino Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKEDP__Authorization_Signer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is used for document preparation. This field is used to specify that the signer is an Authorization Signer. An authorization signer may or may not also be authorized to sign.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to specify that the contact is an Authorization Signer. An authorization signer may or may not also be authorized to sign.</inlineHelpText>
+        <label>Authorization Signer</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WKEDP__Business_Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is used for document preparation. This field is used to specify the role the authorized signer has in a company.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to specify the role the authorized signer has in a company.</inlineHelpText>
+        <label>Business Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Shareholder</fullName>
+                    <default>false</default>
+                    <label>Shareholder</label>
+                </value>
+                <value>
+                    <fullName>Director</fullName>
+                    <default>false</default>
+                    <label>Director</label>
+                </value>
+                <value>
+                    <fullName>OfficeHolder</fullName>
+                    <default>false</default>
+                    <label>OfficeHolder</label>
+                </value>
+                <value>
+                    <fullName>Secretary</fullName>
+                    <default>false</default>
+                    <label>Secretary</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WKEDP__Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>------DEPRECATED-------- USE Business_Role__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to specify the role the authorized signer has in a company.</inlineHelpText>
+        <label>-D Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Shareholder</fullName>
+                    <default>false</default>
+                    <label>Shareholder</label>
+                </value>
+                <value>
+                    <fullName>Director</fullName>
+                    <default>false</default>
+                    <label>Director</label>
+                </value>
+                <value>
+                    <fullName>OfficeHolder</fullName>
+                    <default>false</default>
+                    <label>OfficeHolder</label>
+                </value>
+                <value>
+                    <fullName>Secretary</fullName>
+                    <default>false</default>
+                    <label>Secretary</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WKEDP__Selected_Signer__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is used for document preparation. This field is used to specify which authorized signer is going to sign for a specific loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to specify which authorized signer is going to sign for a specific loan.</inlineHelpText>
+        <label>Selected Signer</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WKEDP__Shares_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not required. This field is manually populated. This field captures the number of shares an authorized signer has in the entity they are signing for.</description>
+        <externalId>false</externalId>
+        <label>Shares Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nCino_Code__c</fullName>
+        <description>This optional text field houses the middleware code that designates which schema roles are added to the entity. It is visible to administrators.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field with the corresponding role code.</inlineHelpText>
+        <label>nCino Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Authorized Signer</label>
+    <nameField>
+        <displayFormat>{000000000}</displayFormat>
+        <label>Authorized Signer</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Authorized Signers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Association</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Association&apos;, text(LLC_BI__Role__c) != &apos;Officer&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Association&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Association) are &quot;Officer&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Corporation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Corporation&apos;, text(LLC_BI__Role__c) != &apos;Officer&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Corporation&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Corporation&apos;,NOT(IsBlank(text(LLC_BI__Role__c)))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Corporation) are &quot;Officer&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Government</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Government&apos;, text(LLC_BI__Role__c) != &apos;Official&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Government&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Government) are &quot;Official&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Limited_Liability_Company</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Limited Liability Company&apos;, text(LLC_BI__Role__c) != &apos;Member&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Limited Liability Company&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Limited Liability Company) are &quot;Member&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Partnership</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Partnership&apos;, text(LLC_BI__Role__c) != &apos;Partner&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Partnership&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Partnership) are &quot;Partner&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Soleprietorship</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Sole Proprietorship&apos;, text(LLC_BI__Role__c) != &apos;Sole Proprietorship&apos;), NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The only valid capacity option for this entity&apos;s account type (Sole Proprietorship) are &quot;Sole Proprietorship&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Trust</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Trust&apos;, text(LLC_BI__Role__c) != &apos;Trustee&apos;),
+AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Trust&apos;, text(LLC_BI__Role__c) != &apos;Beneficiary&apos;),
+AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Trust&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),
+NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Trust) are &quot;Trustee&quot;,&quot;Beneficiary&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__percentage_only_if_assign_specific</fullName>
+        <active>true</active>
+        <description>--DEPRECATED-- Only populate percentage is contingency type is &apos;Assign Specific&apos; or &apos;Pro Rata&apos;</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Contingent_Percentage__c</errorDisplayField>
+        <errorMessage>--DEPRECATED-- A percentage can only be specified if the contingency type is &apos;Assign Specific&apos; or  &apos;Pro Rata&apos;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

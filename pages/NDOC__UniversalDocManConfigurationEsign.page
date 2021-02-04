@@ -1,0 +1,6 @@
+<apex:page >
+	<c:UniversalDocManConfigBaseIncludes />
+	<c:UniversalDocManConfigEsignIncludes />
+	<c:UniversalDocManConfigEsign />
+	<c:UniversalDocManEsignConfigDataService />
+</apex:page>

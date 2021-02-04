@@ -1,0 +1,3937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Referral_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>nCino Referral Management System</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>UI_Relationship_Referrals</fullName>
+        <description>Relationship UI</description>
+        <displayedFields>
+            <field>nRE__Branch__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Existing_Relationship__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Phone_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Preferred_Contact_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Preferred_Contact_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referring_Line_of_Business__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Receiving_Line_of_Business__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referred_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referred_To__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Sent_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Received_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Source_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referred_To_Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Quality__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Product_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Quality_Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Referred_To_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Close_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nRE__Referral_Details__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI-Relationship-Referrals</label>
+    </fieldSets>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referred Product Type</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>LLC_BI__Product_Type__c.LLC_BI__Usage_Type__c</field>
+                <operation>notContain</operation>
+                <value>Global</value>
+            </filterItems>
+            <filterItems>
+                <field>LLC_BI__Product_Type__c.LLC_BI__Product_Count__c</field>
+                <operation>greaterThan</operation>
+                <value>0</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.nRE__Referred_To_Product_Line__c</field>
+                <operation>equals</operation>
+                <valueField>LLC_BI__Product_Type__c.LLC_BI__Product_Line__r.Id</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LLC_BI__Product_Type__c</referenceTo>
+        <relationshipLabel>Referrals</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Referred_To_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referred Product</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.Product_Type__c</field>
+                <operation>equals</operation>
+                <valueField>LLC_BI__Product__c.LLC_BI__Product_Type__r.Id</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Source.nRE__Referred_To_Product_Line__c</field>
+                <operation>equals</operation>
+                <valueField>LLC_BI__Product__c.LLC_BI__Product_Type__r.LLC_BI__Product_Line__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LLC_BI__Product__c</referenceTo>
+        <relationshipLabel>Referrals</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE_Product_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Line</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Card</fullName>
+                    <default>false</default>
+                    <label>Card</label>
+                </value>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Consumer</fullName>
+                    <default>false</default>
+                    <label>Consumer</label>
+                </value>
+                <value>
+                    <fullName>SBA</fullName>
+                    <default>false</default>
+                    <label>SBA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE_Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>nRE_Product_Line__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>504</fullName>
+                    <default>false</default>
+                    <label>504</label>
+                </value>
+                <value>
+                    <fullName>7(a)</fullName>
+                    <default>false</default>
+                    <label>7(a)</label>
+                </value>
+                <value>
+                    <fullName>Business Card</fullName>
+                    <default>false</default>
+                    <label>Business Card</label>
+                </value>
+                <value>
+                    <fullName>Consumer - Non-Real Estate</fullName>
+                    <default>false</default>
+                    <label>Consumer - Non-Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Consumer - Real Estate</fullName>
+                    <default>false</default>
+                    <label>Consumer - Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Consumer - Unsecured</fullName>
+                    <default>false</default>
+                    <label>Consumer - Unsecured</label>
+                </value>
+                <value>
+                    <fullName>Mortgage System</fullName>
+                    <default>false</default>
+                    <label>Mortgage System</label>
+                </value>
+                <value>
+                    <fullName>Non-Real Estate</fullName>
+                    <default>false</default>
+                    <label>Non-Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Personal Card</fullName>
+                    <default>false</default>
+                    <label>Personal Card</label>
+                </value>
+                <value>
+                    <fullName>Real Estate</fullName>
+                    <default>false</default>
+                    <label>Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Unsecured</fullName>
+                    <default>false</default>
+                    <label>Unsecured</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Card</controllingFieldValue>
+                <valueName>Business Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Card</controllingFieldValue>
+                <valueName>Personal Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Non-Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Unsecured</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer</controllingFieldValue>
+                <valueName>Consumer - Non-Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer</controllingFieldValue>
+                <valueName>Consumer - Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer</controllingFieldValue>
+                <valueName>Consumer - Unsecured</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SBA</controllingFieldValue>
+                <valueName>504</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SBA</controllingFieldValue>
+                <valueName>7(a)</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>nRE_Product_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Purchase</fullName>
+                    <default>false</default>
+                    <label>Purchase</label>
+                </value>
+                <value>
+                    <fullName>Refinance</fullName>
+                    <default>false</default>
+                    <label>Refinance</label>
+                </value>
+                <value>
+                    <fullName>Land Development</fullName>
+                    <default>false</default>
+                    <label>Land Development</label>
+                </value>
+                <value>
+                    <fullName>Unimproved - Purchase</fullName>
+                    <default>false</default>
+                    <label>Unimproved - Purchase</label>
+                </value>
+                <value>
+                    <fullName>Unimproved - Refinance</fullName>
+                    <default>false</default>
+                    <label>Unimproved - Refinance</label>
+                </value>
+                <value>
+                    <fullName>RLOC</fullName>
+                    <default>false</default>
+                    <label>RLOC</label>
+                </value>
+                <value>
+                    <fullName>Agriculture</fullName>
+                    <default>false</default>
+                    <label>Agriculture</label>
+                </value>
+                <value>
+                    <fullName>Boat/Motor/Trailer</fullName>
+                    <default>false</default>
+                    <label>Boat/Motor/Trailer</label>
+                </value>
+                <value>
+                    <fullName>Equipment</fullName>
+                    <default>false</default>
+                    <label>Equipment</label>
+                </value>
+                <value>
+                    <fullName>Crops</fullName>
+                    <default>false</default>
+                    <label>Crops</label>
+                </value>
+                <value>
+                    <fullName>Accounts Receivables</fullName>
+                    <default>false</default>
+                    <label>Accounts Receivables</label>
+                </value>
+                <value>
+                    <fullName>Inventory</fullName>
+                    <default>false</default>
+                    <label>Inventory</label>
+                </value>
+                <value>
+                    <fullName>Savings Secured</fullName>
+                    <default>false</default>
+                    <label>Savings Secured</label>
+                </value>
+                <value>
+                    <fullName>Line of Credit</fullName>
+                    <default>false</default>
+                    <label>Line of Credit</label>
+                </value>
+                <value>
+                    <fullName>Working Capital - Term Loan</fullName>
+                    <default>false</default>
+                    <label>Working Capital - Term Loan</label>
+                </value>
+                <value>
+                    <fullName>Purchase Primary/Vacation Residence</fullName>
+                    <default>false</default>
+                    <label>Purchase Primary/Vacation Residence</label>
+                </value>
+                <value>
+                    <fullName>Refinance Primary/Vacation Residence</fullName>
+                    <default>false</default>
+                    <label>Refinance Primary/Vacation Residence</label>
+                </value>
+                <value>
+                    <fullName>Purchase Investment Property</fullName>
+                    <default>false</default>
+                    <label>Purchase Investment Property</label>
+                </value>
+                <value>
+                    <fullName>Refinance Investment Property</fullName>
+                    <default>false</default>
+                    <label>Refinance Investment Property</label>
+                </value>
+                <value>
+                    <fullName>Home Improvements</fullName>
+                    <default>false</default>
+                    <label>Home Improvements</label>
+                </value>
+                <value>
+                    <fullName>Purchase Lot</fullName>
+                    <default>false</default>
+                    <label>Purchase Lot</label>
+                </value>
+                <value>
+                    <fullName>Refinance Lot</fullName>
+                    <default>false</default>
+                    <label>Refinance Lot</label>
+                </value>
+                <value>
+                    <fullName>Vehicle Loan</fullName>
+                    <default>false</default>
+                    <label>Vehicle Loan</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Credit Card</fullName>
+                    <default>false</default>
+                    <label>Credit Card</label>
+                </value>
+                <value>
+                    <fullName>Unsecured - Term Loan</fullName>
+                    <default>false</default>
+                    <label>Unsecured - Term Loan</label>
+                </value>
+                <value>
+                    <fullName>HELOC</fullName>
+                    <default>false</default>
+                    <label>HELOC</label>
+                </value>
+                <value>
+                    <fullName>Advantage+</fullName>
+                    <default>false</default>
+                    <label>Advantage+</label>
+                </value>
+                <value>
+                    <fullName>Rewards Card</fullName>
+                    <default>false</default>
+                    <label>Rewards Card</label>
+                </value>
+                <value>
+                    <fullName>Skypoints</fullName>
+                    <default>false</default>
+                    <label>Skypoints</label>
+                </value>
+                <value>
+                    <fullName>General</fullName>
+                    <default>false</default>
+                    <label>General</label>
+                </value>
+                <value>
+                    <fullName>Acquisition</fullName>
+                    <default>false</default>
+                    <label>Acquisition</label>
+                </value>
+                <value>
+                    <fullName>Startup</fullName>
+                    <default>false</default>
+                    <label>Startup</label>
+                </value>
+                <value>
+                    <fullName>Asset Secured</fullName>
+                    <default>false</default>
+                    <label>Asset Secured</label>
+                </value>
+                <value>
+                    <fullName>Unsecured LOC</fullName>
+                    <default>false</default>
+                    <label>Unsecured LOC</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Unsecured</controllingFieldValue>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Line of Credit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Unsecured</controllingFieldValue>
+                <valueName>Working Capital - Term Loan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>504</controllingFieldValue>
+                <controllingFieldValue>7(a)</controllingFieldValue>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Construction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>504</controllingFieldValue>
+                <controllingFieldValue>7(a)</controllingFieldValue>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Refinance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>504</controllingFieldValue>
+                <controllingFieldValue>7(a)</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>504</controllingFieldValue>
+                <controllingFieldValue>7(a)</controllingFieldValue>
+                <valueName>Acquisition</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>504</controllingFieldValue>
+                <controllingFieldValue>7(a)</controllingFieldValue>
+                <valueName>Startup</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>7(a)</controllingFieldValue>
+                <valueName>General</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Card</controllingFieldValue>
+                <controllingFieldValue>Personal Card</controllingFieldValue>
+                <valueName>Advantage+</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Card</controllingFieldValue>
+                <controllingFieldValue>Personal Card</controllingFieldValue>
+                <valueName>Rewards Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Card</controllingFieldValue>
+                <controllingFieldValue>Personal Card</controllingFieldValue>
+                <valueName>Skypoints</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Non-Real Estate</controllingFieldValue>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Boat/Motor/Trailer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Non-Real Estate</controllingFieldValue>
+                <valueName>Vehicle Loan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Non-Real Estate</controllingFieldValue>
+                <valueName>Asset Secured</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Purchase Primary/Vacation Residence</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Refinance Primary/Vacation Residence</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Purchase Investment Property</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Refinance Investment Property</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Home Improvements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Purchase Lot</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>Refinance Lot</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Real Estate</controllingFieldValue>
+                <valueName>HELOC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Unsecured</controllingFieldValue>
+                <valueName>Credit Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consumer - Unsecured</controllingFieldValue>
+                <valueName>Unsecured - Term Loan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Agriculture</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Crops</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Accounts Receivables</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Inventory</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-Real Estate</controllingFieldValue>
+                <valueName>Savings Secured</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Purchase</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Land Development</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Unimproved - Purchase</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Unimproved - Refinance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>RLOC</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Branch__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Branch</label>
+        <referenceTo>LLC_BI__Branch__c</referenceTo>
+        <relationshipLabel>Branches</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Closed_Lost__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Closed Lost</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Closed_Won__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Closed Won</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Company__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nRE__Email_Address__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Address</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nRE__Existing_Relationship__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Existing Relationship</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Referrals</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE__First_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nRE__Home_Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Home Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Last_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nRE__Mobile_Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Phone_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>nRE__Existing_Relationship__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is a formula field that pulls in the Phone Number from the Existing Relationship page layout</inlineHelpText>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nRE__Preferred_Contact_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Preferred Contact Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Work Phone</fullName>
+                    <default>false</default>
+                    <label>Work Phone</label>
+                </value>
+                <value>
+                    <fullName>Mobile Phone</fullName>
+                    <default>false</default>
+                    <label>Mobile Phone</label>
+                </value>
+                <value>
+                    <fullName>Home Phone</fullName>
+                    <default>false</default>
+                    <label>Home Phone</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Preferred_Contact_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Preferred Contact Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Morning</fullName>
+                    <default>false</default>
+                    <label>Morning</label>
+                </value>
+                <value>
+                    <fullName>Afternoon</fullName>
+                    <default>false</default>
+                    <label>Afternoon</label>
+                </value>
+                <value>
+                    <fullName>Evening</fullName>
+                    <default>false</default>
+                    <label>Evening</label>
+                </value>
+                <value>
+                    <fullName>Anytime</fullName>
+                    <default>false</default>
+                    <label>Anytime</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Receiving_Line_of_Business__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Receiving Line of Business</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Mortgage</fullName>
+                    <default>false</default>
+                    <label>Mortgage</label>
+                </value>
+                <value>
+                    <fullName>Retail Banking</fullName>
+                    <default>false</default>
+                    <label>Retail Banking</label>
+                </value>
+                <value>
+                    <fullName>Trust / Wealth Management</fullName>
+                    <default>false</default>
+                    <label>Trust / Wealth Management</label>
+                </value>
+                <value>
+                    <fullName>Treasury Management</fullName>
+                    <default>false</default>
+                    <label>Treasury Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Close_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Details__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Details</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Quality_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Quality Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Quality__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Quality</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Qualified</fullName>
+                    <default>false</default>
+                    <label>Qualified</label>
+                </value>
+                <value>
+                    <fullName>Unqualified</fullName>
+                    <default>false</default>
+                    <label>Unqualified</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Received_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Received Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Sent_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Sent Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Source_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Source Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.LLC_BI__Type__c</field>
+                <operation>equals</operation>
+                <value>Referral Source</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Referral Source Contacts</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Association</fullName>
+                    <default>false</default>
+                    <label>Association</label>
+                </value>
+                <value>
+                    <fullName>Broker</fullName>
+                    <default>false</default>
+                    <label>Broker</label>
+                </value>
+                <value>
+                    <fullName>Current Customer</fullName>
+                    <default>false</default>
+                    <label>Current Customer</label>
+                </value>
+                <value>
+                    <fullName>Direct Call</fullName>
+                    <default>false</default>
+                    <label>Direct Call</label>
+                </value>
+                <value>
+                    <fullName>Email Campaign</fullName>
+                    <default>false</default>
+                    <label>Email Campaign</label>
+                </value>
+                <value>
+                    <fullName>Employee Referral</fullName>
+                    <default>false</default>
+                    <label>Employee Referral</label>
+                </value>
+                <value>
+                    <fullName>Industry Professional</fullName>
+                    <default>false</default>
+                    <label>Industry Professional</label>
+                </value>
+                <value>
+                    <fullName>Magazine</fullName>
+                    <default>false</default>
+                    <label>Magazine</label>
+                </value>
+                <value>
+                    <fullName>Prior Origination</fullName>
+                    <default>false</default>
+                    <label>Prior Origination</label>
+                </value>
+                <value>
+                    <fullName>Trade Show</fullName>
+                    <default>false</default>
+                    <label>Trade Show</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Referral_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referral Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Sent</fullName>
+                    <default>false</default>
+                    <label>Sent</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Closed Won</fullName>
+                    <default>false</default>
+                    <label>Closed Won</label>
+                </value>
+                <value>
+                    <fullName>Closed Lost</fullName>
+                    <default>false</default>
+                    <label>Closed Lost</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Referred_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referred By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referred_To_Product_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referred To Product Line</label>
+        <referenceTo>LLC_BI__Product_Line__c</referenceTo>
+        <relationshipLabel>Product Lines Referred</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referred_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referred To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Referrals1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nRE__Referring_Line_of_Business__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Referring Line of Business</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Mortgage</fullName>
+                    <default>false</default>
+                    <label>Mortgage</label>
+                </value>
+                <value>
+                    <fullName>Retail Banking</fullName>
+                    <default>false</default>
+                    <label>Retail Banking</label>
+                </value>
+                <value>
+                    <fullName>Trust / Wealth Management</fullName>
+                    <default>false</default>
+                    <label>Trust / Wealth Management</label>
+                </value>
+                <value>
+                    <fullName>Treasury Management</fullName>
+                    <default>false</default>
+                    <label>Treasury Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nRE__Work_Phone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Work Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>nRE__isReceived__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>isReceived</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nRE__isSent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>isSent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Referral</label>
+    <listViews>
+        <fullName>nRE__All</fullName>
+        <columns>NAME</columns>
+        <columns>nRE__Existing_Relationship__c</columns>
+        <columns>nRE_Product_Line__c</columns>
+        <columns>nRE_Product_Type__c</columns>
+        <columns>nRE_Product__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Ref-{0000000}</displayFormat>
+        <label>Referral Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Referrals</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>nRE__Referral_Existing_Relationship</fullName>
+        <active>true</active>
+        <description>This Record Type is used for Referrals of EXISTING Relationships</description>
+        <label>Referral - Existing Relationship</label>
+        <picklistValues>
+            <picklist>nRE_Product_Line__c</picklist>
+            <values>
+                <fullName>Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product_Type__c</picklist>
+            <values>
+                <fullName>504</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%28a%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product__c</picklist>
+            <values>
+                <fullName>Accounts Receivables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advantage%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boat%2FMotor%2FTrailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RLOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rewards Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savings Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skypoints</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured - Term Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working Capital - Term Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Time__c</picklist>
+            <values>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anytime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Receiving_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Quality__c</picklist>
+            <values>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Source__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior Origination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referring_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>nRE__Referral_Existing_Relationship_Accepted</fullName>
+        <active>true</active>
+        <description>This Record Type will not show the &apos;Send Referral&apos; or &apos; Accept Referral&apos; buttons</description>
+        <label>Referral - Existing Relationship Accepted</label>
+        <picklistValues>
+            <picklist>nRE_Product_Line__c</picklist>
+            <values>
+                <fullName>Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product_Type__c</picklist>
+            <values>
+                <fullName>504</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%28a%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product__c</picklist>
+            <values>
+                <fullName>Accounts Receivables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advantage%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boat%2FMotor%2FTrailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RLOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rewards Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savings Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skypoints</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured - Term Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working Capital - Term Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Time__c</picklist>
+            <values>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anytime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Receiving_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Quality__c</picklist>
+            <values>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Source__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior Origination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referring_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>nRE__Referral_Existing_Relationship_Sent</fullName>
+        <active>true</active>
+        <description>This Record Type will show the &apos;Accept Referral&apos; button</description>
+        <label>Referral - Existing Relationship Sent</label>
+        <picklistValues>
+            <picklist>nRE_Product_Line__c</picklist>
+            <values>
+                <fullName>Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product_Type__c</picklist>
+            <values>
+                <fullName>504</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%28a%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product__c</picklist>
+            <values>
+                <fullName>Accounts Receivables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advantage%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boat%2FMotor%2FTrailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RLOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rewards Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savings Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skypoints</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured - Term Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working Capital - Term Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Time__c</picklist>
+            <values>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anytime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Receiving_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Quality__c</picklist>
+            <values>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Source__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior Origination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referring_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>nRE__Referral_New_Relationship</fullName>
+        <active>true</active>
+        <description>This Record Type is used for Referrals of NEW Relationships</description>
+        <label>Referral - New Relationship</label>
+        <picklistValues>
+            <picklist>nRE_Product_Line__c</picklist>
+            <values>
+                <fullName>Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product_Type__c</picklist>
+            <values>
+                <fullName>504</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%28a%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product__c</picklist>
+            <values>
+                <fullName>Accounts Receivables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advantage%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boat%2FMotor%2FTrailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RLOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rewards Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savings Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skypoints</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured - Term Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working Capital - Term Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Time__c</picklist>
+            <values>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anytime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Receiving_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Quality__c</picklist>
+            <values>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Source__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior Origination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referring_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>nRE__Referral_New_Relationship_Accepted</fullName>
+        <active>true</active>
+        <description>This Record Type will not show the &apos;Send Referral&apos; or &apos; Accept Referral&apos; buttons</description>
+        <label>Referral - New Relationship Accepted</label>
+        <picklistValues>
+            <picklist>nRE_Product_Line__c</picklist>
+            <values>
+                <fullName>Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product_Type__c</picklist>
+            <values>
+                <fullName>504</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%28a%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product__c</picklist>
+            <values>
+                <fullName>Accounts Receivables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advantage%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boat%2FMotor%2FTrailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RLOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rewards Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savings Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skypoints</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured - Term Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working Capital - Term Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Time__c</picklist>
+            <values>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anytime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Receiving_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Quality__c</picklist>
+            <values>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Source__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior Origination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referring_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>nRE__Referral_New_Relationship_Sent</fullName>
+        <active>true</active>
+        <description>This Record Type will show the &apos;Accept Referral&apos; button</description>
+        <label>Referral - New Relationship Sent</label>
+        <picklistValues>
+            <picklist>nRE_Product_Line__c</picklist>
+            <values>
+                <fullName>Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product_Type__c</picklist>
+            <values>
+                <fullName>504</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%28a%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer - Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE_Product__c</picklist>
+            <values>
+                <fullName>Accounts Receivables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advantage%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boat%2FMotor%2FTrailer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchase Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RLOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Lot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Primary%2FVacation Residence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rewards Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savings Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skypoints</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Startup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unimproved - Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured - Term Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working Capital - Term Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Preferred_Contact_Time__c</picklist>
+            <values>
+                <fullName>Afternoon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anytime</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evening</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Morning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Receiving_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Quality__c</picklist>
+            <values>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Source__c</picklist>
+            <values>
+                <fullName>Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior Origination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referral_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>nRE__Referring_Line_of_Business__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust %2F Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>nRE__Existing_Relationship__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Referral_Sent_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Referral_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Company__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__First_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Preferred_Contact_Method__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Preferred_Contact_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>nRE__Receiving_Line_of_Business__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Existing_Relationship__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Referral_Sent_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Referral_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Company__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__First_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Last_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Preferred_Contact_Method__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Preferred_Contact_Time__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>nRE__Receiving_Line_of_Business__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>nRE__Existing_Relationship__c</lookupFilterFields>
+        <lookupFilterFields>nRE__Company__c</lookupFilterFields>
+        <lookupFilterFields>nRE__First_Name__c</lookupFilterFields>
+        <lookupFilterFields>nRE__Last_Name__c</lookupFilterFields>
+        <lookupFilterFields>nRE__Email_Address__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Existing_Relationship__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Referral_Sent_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Referral_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Company__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__First_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Last_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Preferred_Contact_Method__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Preferred_Contact_Time__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>nRE__Receiving_Line_of_Business__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>nRE__Existing_Relationship__c</searchFilterFields>
+        <searchFilterFields>nRE__Referral_Sent_Date__c</searchFilterFields>
+        <searchFilterFields>nRE__Referral_Status__c</searchFilterFields>
+        <searchFilterFields>nRE__Company__c</searchFilterFields>
+        <searchFilterFields>nRE__First_Name__c</searchFilterFields>
+        <searchFilterFields>nRE__Last_Name__c</searchFilterFields>
+        <searchFilterFields>nRE__Preferred_Contact_Method__c</searchFilterFields>
+        <searchFilterFields>nRE__Preferred_Contact_Time__c</searchFilterFields>
+        <searchFilterFields>nRE__Receiving_Line_of_Business__c</searchFilterFields>
+        <searchResultsAdditionalFields>nRE__Existing_Relationship__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Referral_Sent_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Referral_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Company__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__First_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Preferred_Contact_Method__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Preferred_Contact_Time__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>nRE__Receiving_Line_of_Business__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>nRE__Lock_Closed_Referrals</fullName>
+        <active>true</active>
+        <description>You cannot edit a referral once it has been Closed Won or Closed Lost</description>
+        <errorConditionFormula>OR(
+ISPICKVAL(nRE__Referral_Status__c , &apos;Closed Won&apos;),
+ISPICKVAL(nRE__Referral_Status__c , &apos;Closed Lost&apos;))</errorConditionFormula>
+        <errorMessage>You cannot edit a referral once it has been Closed Won or Closed Lost</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>nRE__Referral_Must_Be_Won_or_Lost</fullName>
+        <active>true</active>
+        <description>A Referral must be Closed Won or Closed Lost. Both Checkboxes cannot = True. Please check only one appropriate outcome.</description>
+        <errorConditionFormula>AND(
+nRE__Closed_Won__c = True,
+nRE__Closed_Lost__c = True)</errorConditionFormula>
+        <errorMessage>A Referral must be Closed Won or Closed Lost. Both Checkboxes cannot = True. Please check only one appropriate outcome.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>nRE__Referral_Quality_is_Required</fullName>
+        <active>true</active>
+        <description>A Referral must be marked as Qualified or Unqualified before it can be Closed.</description>
+        <errorConditionFormula>AND(
+OR(
+nRE__Closed_Won__c = True,
+nRE__Closed_Lost__c = True),
+ISPICKVAL(nRE__Referral_Quality__c , &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>nRE__Referral_Quality__c</errorDisplayField>
+        <errorMessage>A Referral must be marked as Qualified or Unqualified before it can be Closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>nRE__Referral_Status_Cannot_Be_Blank</fullName>
+        <active>true</active>
+        <description>The referral status cannot be blank.  &apos;New&apos; should be the default value.</description>
+        <errorConditionFormula>IF(ISBLANK(TEXT(nRE__Referral_Status__c)), True, False)</errorConditionFormula>
+        <errorDisplayField>nRE__Referral_Status__c</errorDisplayField>
+        <errorMessage>The referral status cannot be blank.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Referral_to_Loan</fullName>
+        <availability>online</availability>
+        <description>Converts a Referral to a Loan</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Referral to Loan</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/LLC_BI__LifeCycleConverter?id={!nRE__Referral__c.Id}
+
+&amp;RelationshipAPIName=nRE__Company__c
+
+&amp;productApiName=nRE_Product__c
+
+&amp;productTypeApiName=nRE_Product_Type__c
+
+&amp;productLineApiName=nRE_Product_Line__c
+
+&amp;accountName={!nRE__Referral__c.nRE__First_Name__c + &apos; &apos; + nRE__Referral__c.nRE__Last_Name__c}
+
+&amp;accountName={!nRE__Referral__c.nRE__Company__c}
+
+&amp;accountApiName=nRE__Existing_Relationship__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>nRE__Accept_Referral</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Accept Referral</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/connection.js&quot;)} 
+
+var referralObj= new sforce.SObject(&apos;nRE__Referral__c&apos;); 
+var currentStatus = &apos;{!nRE__Referral__c.nRE__Referral_Status__c}&apos;; 
+var currentUser = &apos;{!User.Id}&apos;;
+
+if(currentStatus == &apos;Sent&apos;) { 
+
+var YNsend= confirm(&quot;Are you sure you want to accept this referral?&quot;); 
+
+if(YNsend) { 
+referralObj.Id = &apos;{!nRE__Referral__c.Id}&apos;; 
+referralObj.nRE__isReceived__c= &apos;True&apos;;
+referralObj.nRE__Referred_To__c = currentUser;
+result = sforce.connection.update([referralObj]); 
+location.reload(true); } 
+
+} else { 
+alert(&quot;You have already accepted this referral.&quot;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>nRE__Send_Referral</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Referral</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/connection.js&quot;)} 
+
+var referralObj= new sforce.SObject(&apos;nRE__Referral__c&apos;); 
+var currentStatus = &apos;{!nRE__Referral__c.nRE__Referral_Status__c}&apos;;
+var currentUser = &apos;{!User.Id}&apos;;
+
+if(currentStatus == &apos;New&apos;) { 
+
+var YNsend= confirm(&quot;Are you sure you want to send this referral?&quot;); 
+
+if(YNsend) { 
+referralObj.Id = &apos;{!nRE__Referral__c.Id}&apos;; 
+referralObj.nRE__isSent__c= &apos;True&apos;; 
+referralObj.nRE__Referred_By__c = currentUser;
+result = sforce.connection.update([referralObj]); 
+location.reload(true); } 
+
+} else { 
+alert(&quot;You have already sent this referral.&quot;); 
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,33 @@
+<apex:page standardController="LLC_BI__Review__c" extensions="LLC_BI.ReviewDisplayController">
+	<apex:form >
+		<apex:pageBlock mode="maindetail">
+			<apex:outputPanel id="reviewRedirectPanel" >
+				<apex:outputText rendered="{!shouldRedirect}">
+					<script type="text/javascript">
+					window.top.location.href = '{!redirectUrl}';
+					</script>
+				</apex:outputText>
+			</apex:outputPanel>
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="{!$Label.llc_bi__review_risk_rating_review}"
+					action="{!redirectRiskRating}" reRender="reviewRedirectPanel"/>
+				<apex:commandButton value="{!$Label.llc_bi__review_underwriting}"
+					action="{!redirectUnderwriting}" reRender="reviewRedirectPanel"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection columns="2">
+				<apex:repeat value="{!accountDetailFieldSet}" var="fld">
+					<apex:pageBlockSectionItem rendered="{!IF(fld.fieldPath=='Name',false,true)}">
+						<apex:outputLabel value="{!fld.label}"/>
+						<apex:outputField value="{!accountInReview[fld.fieldPath]}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem rendered="{!IF(fld.fieldPath=='Name',true,false)}">
+						<apex:outputLabel value="{!fld.label}"/>
+						<apex:outputLink value="/{!accountInReview.id}" target="_parent" rendered="{!IF(fld.fieldPath=='Name',true,false)}">
+							{!accountInReview.Name}
+						</apex:outputLink>
+					</apex:pageBlockSectionItem>
+				</apex:repeat>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

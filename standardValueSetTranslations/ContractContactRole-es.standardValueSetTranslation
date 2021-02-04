@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Business User</masterLabel>
+        <translation>usuarios de negocio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Decision Maker</masterLabel>
+        <translation>Tomador de decisiones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Economic Buyer</masterLabel>
+        <translation>Si compras económica</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Economic Decision Maker</masterLabel>
+        <translation>Decisión económica Fabricante</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Evaluator</masterLabel>
+        <translation>evaluador</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Executive Sponsor</masterLabel>
+        <translation>Patrocinador ejecutivo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Influencer</masterLabel>
+        <translation>influencia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technical Buyer</masterLabel>
+        <translation>Si compras técnica</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

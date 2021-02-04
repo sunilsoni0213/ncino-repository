@@ -1,0 +1,101 @@
+<apex:page standardController="LLC_BI__Loan__c"
+	extensions="LLC_BI.CovenantRelatedListController"
+	showHeader="false"
+	sidebar="false">
+
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+	<nFORCE:Includes rendered="{!isNull($CurrentPage.parameters.app)}" />
+
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			{!$Label.llc_bi__route_covenants}
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+
+			<apex:form >
+				<div class="force">
+					<apex:pageBlock id="covenants-table" mode="{!IF(isNull($CurrentPage.parameters.app),'detail','maindetail')}">
+						<apex:pageBlockButtons location="top">
+							<apex:outputLink rendered="{!isNull($CurrentPage.parameters.app)}" value="{!URLFOR($Page.LLC_BI__LoanCovenantManagement, null, [id=loanId])}"
+								target="_top"
+								styleClass="btn btn-sm">
+								{!$Label.llc_bi__manage_covenants}
+							</apex:outputLink>
+
+							<apex:outputPanel rendered="{!covenants.size > 0 || isFiltered}">
+								<div class="pull-right">
+									<apex:commandButton value="{!$Label.llc_bi__show_all_covenants}"
+										action="{!isActiveFilterSet}"
+										status="ajaxPleaseWait"
+										rendered="{!isFiltered}"
+										style="{!IF(isNull($CurrentPage.parameters.app),'text-decoration: underline','')}"
+										styleClass="{!IF(isNull($CurrentPage.parameters.app),'','btn btn-link')}"
+										rerender="covenants-table"/>
+									<apex:outputText value="{!$Label.llc_bi__show_all_covenants}"
+										rendered="{!NOT(isFiltered)}"/>
+
+									<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+
+									<apex:commandButton value="{!$Label.llc_bi__show_active_covenants}"
+										action="{!isActiveFilterSet}"
+										rendered="{!NOT(isFiltered)}"
+										status="ajaxPleaseWait"
+										style="{!IF(isNull($CurrentPage.parameters.app),'text-decoration: underline','')}"
+										styleClass="{!IF(isNull($CurrentPage.parameters.app),'','btn btn-link')}"
+										rerender="covenants-table" >
+										</apex:commandButton>
+									<apex:outputText value="{!$Label.llc_bi__show_active_covenants}"
+										rendered="{!isFiltered}"/>
+								</div>
+							</apex:outputPanel>
+						</apex:pageBlockButtons>
+						<div class="col-md-12 table-responsive">
+							<apex:pageBlockTable styleClass="table table-hover"
+								value="{!covenants}"
+								var="covenant"
+								rendered="{!covenants.size>0}"
+								id="covenantTable">
+								<apex:column headerValue="{!$ObjectType.LLC_BI__Covenant2__c.fields.LLC_BI__Covenant_Type__c.Label}">
+									<a href="/{!covenant}"
+										target="_top">
+									{!covenant.Covenant_Type__r.Name}
+									</a>
+								</apex:column>
+
+
+								<apex:column headerValue="{!$ObjectType.Account.fields.Name.Label}">
+									<a href="/{!covenant.Account_Covenants__r[0].Account__c}"
+										target="_top">
+									{!covenant.Account_Covenants__r[0].Account__r.Name}
+									</a>
+								</apex:column>
+
+								<apex:column value="{!covenant.LLC_BI__Frequency__c}" rendered="{!fields == null}"/>
+								<apex:column value="{!covenant.LLC_BI__Next_Evaluation_Date__c}" rendered="{!fields == null}"/>
+								<apex:column value="{!covenant.LLC_BI__Financial_Indicator_Value__c}" rendered="{!fields == null}"/>
+								<apex:column value="{!covenant.LLC_BI__Active__c}" rendered="{!fields == null}"/>
+
+								<apex:repeat value="{!fields}" var="f" rendered="{!fields != null}">
+									<apex:column headerValue="{!f.label}">
+										<apex:outputField value="{!covenant[f.fieldPath]}"/>
+									</apex:column>
+								</apex:repeat>
+							</apex:pageBlockTable>
+						</div>
+						<apex:outputPanel rendered="{!covenants.size == 0}">
+							<div>{!$Label.llc_bi__no_records}</div>
+						</apex:outputPanel>
+					</apex:pageBlock>
+				</div>
+			</apex:form>
+
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

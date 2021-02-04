@@ -1,0 +1,50 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" readOnly="true" controller="nFORCE.RemoteActionController" applyBodyTag="false" applyHtmlTag="false">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+		<head data-slds-path="{!URLFOR($Asset.SLDS, '')}">
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+			<script>
+				self['__designSystemPath'] = "{!URLFOR($Asset.SLDS, '')}";
+				window.LifeCycle = window.LifeCycle || {};
+				window.LifeCycle.Service = window.LifeCycle.Service || {};
+			</script>
+			<title>{!$Label.HTML_Form_Generation_Title}</title>
+			<style type="text/css">
+				@page {
+					margin: .4in;
+				}
+				@media print {
+					a[href]:after {
+						content: none !important;
+					}
+			}
+			div.without-tiny-container div p {
+				margin: 0;
+			}
+			</style>
+			<nFORCE:LiteForce_Functions />
+			<nFORCE:Include_Navigator />
+			<apex:slds />
+		</head>
+		<body class="slds">
+      <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'forcetk.js')}" />
+      <script>
+        window.sfSessionId = '{!$Api.Session_ID}';
+      </script>
+			<script>
+				window.lazyLoadedPlugins = {
+					powerpaste: "{!URLFOR($Resource.html_form_generation, 'app/html-generation-field-editor/tinymce/plugins/powerpaste/plugin.js')}",
+					toc: "{!URLFOR($Resource.html_form_generation, 'app/html-generation-field-editor/tinymce/plugins/toc/plugin.js')}",
+					formatpainter: "{!URLFOR($Resource.html_form_generation, 'app/html-generation-field-editor/tinymce/plugins/formatpainter/plugin.js')}",
+					lists: "{!URLFOR($Resource.html_form_generation, 'app/html-generation-field-editor/tinymce/plugins/lists/plugin.js')}",
+					advlist: "{!URLFOR($Resource.html_form_generation, 'app/html-generation-field-editor/tinymce/plugins/advlist/plugin.js')}"
+				};
+			</script>
+			<html-generation contextId="{!$CurrentPage.parameters.contextId}" parentId="{!$CurrentPage.parameters.parentId}"></html-generation>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_form_generation, 'main.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_form_generation, 'polyfills.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_form_generation, 'runtime.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_form_generation, 'styles.js')}"></script>
+			<script type="application/javascript" src="{!URLFOR($Resource.html_form_generation, 'vendor.js')}"></script>
+		</body>
+	</html>
+</apex:page>

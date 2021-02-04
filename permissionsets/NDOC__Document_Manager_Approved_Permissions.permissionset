@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants any user the ability to edit approved documents in Classic Document Manager.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Classic Document Manager Approved Permissions</label>
+</PermissionSet>

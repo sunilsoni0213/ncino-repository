@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users to free-form type a placeholder name. Without this permission, the user can only select the placeholder name from the pre-defined list, specified in the required placeholder configuration.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Document Manager Create Placeholder Name</label>
+</PermissionSet>

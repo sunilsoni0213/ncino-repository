@@ -1,0 +1,4 @@
+<apex:page standardController="LLC_BI__Loan__c" showHeader="false" sidebar="false">
+	<nFORCE:Includes enableLifeCycleApp="true"/>
+    <c:Covenant_Manager contextObjectId="{!LLC_BI__Loan__c.Id}" />
+</apex:page>

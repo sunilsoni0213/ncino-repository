@@ -1,0 +1,75 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds" ng-app="onlineAppApp" ng-cloak="true">
+			<route>
+				<div ng-controller="portalEidVerificationController as eidvm">
+					<form name="onlineFormForm" novalidate="true">
+						<div class="portal-form-section"
+							 n-style="pso-section-inner">
+							<!-- EID Questions -->
+							<div id="eid" class="slds-grid slds-wrap">
+								<transaction-log-monitor externalid="eidvm.transactionLogId"></transaction-log-monitor>
+								<div class="slds-size--1-of-1 slds-col--padded slds-grow-none portal-error-box
+									portal-center-text slds-m-top--medium slds-m-left--small slds-m-right--small"
+									ng-show="eidvm.isCommunicationFailure">
+									<h2 class="slds-text-heading--small slds-m-top--large"
+										n-style="pso-smallheader">
+										{!$Label.Communication_Error_Header}
+									</h2>
+									<p class="slds-m-top--small">
+										{!$Label.Communication_Error_Subheader_1} {!$Label.Company_Phone} {!$Label.Communication_Error_Subheader_2}
+									</p>
+									<div class="slds-grid slds-grid--align-center slds-m-top--medium slds-m-bottom--large">
+										<button id="retry"
+											class="slds-button slds-button--brand"
+											n-style="pso-button-primary"
+											ng-click="eidvm.retry();">
+											{!$Label.Retry}
+										</button>
+									</div>
+								</div>
+								<label class="portal-center-text slds-col--padded slds-size--1-of-1" ng-bind="eidvm.responseMsg"></label>
+								<div class="slds-m-top--medium slds-form-element slds-grow-none slds-col--padded
+									slds-size--1-of-1" ng-repeat="question in eidvm.questions"
+									ng-show="eidvm.hasQuestions">
+									<label class="slds-form-element__label"
+										n-style="pso-form-label"
+										ng-bind="::question.prompt">
+									</label>
+									<select class="slds-select" name="selected_response$index"
+										ng-model="question.answer"
+										ng-options="choice.id as choice.text for choice in question.choices"
+										n-style="pso-select" required="true">
+									</select>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+										<button id="submitAnswers"
+											ng-disabled="!onlineFormForm.$valid || eidvm.isCommunicationFailure"
+											class="slds-button slds-button--brand slds-size--1-of-1"
+											n-style="pso-button-primary"
+											ng-click="eidvm.submission();">
+											{!$Label.Next_Button}
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<terms-and-agreements form-submitted="vm.onlineFormSubmitted"></terms-and-agreements>
+					</form>
+				</div>
+			</route>
+		</body>
+	</html>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page showHeader="true" sidebar="true">
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.4.6/angular.min.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.SLDS0102,
+		'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<c:MaintenanceTypeDataService />
+	<apex:includeScript value="{!URLFOR($Resource.maintenanceTypeApp)}"/>
+	<c:MaintenanceType />
+</apex:page>

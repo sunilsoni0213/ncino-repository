@@ -1,0 +1,18 @@
+<apex:page standardController="Account">
+	<script type="text/javascript">
+		var __sfdcSessionId = '{!GETSESSIONID()}';
+	</script>
+
+	<c:DocManager3 />
+
+	<script>
+		$(document).ready(function() {
+				MyDocuments.init({
+					mode: 'personnel',
+					associatedObjectId: MyDocuments.getAssociatedObjectId(),
+					page: 'Account',
+					sessionId: __sfdcSessionId
+				});
+		});
+	</script>
+</apex:page>

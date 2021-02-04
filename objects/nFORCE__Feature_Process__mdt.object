@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The object defines the Apex processes that are associated with a feature.</description>
+    <fields>
+        <fullName>nFORCE__Class_Handler__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The class handler indicates how to execute the process. It must be specified if the Class does not implement nFORCE.ALifeCycleDataProvider or Database.Batchable.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Class Handler</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies the fully qualified Apex class name of the process associated with the feature.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Class</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field contains a short paragraph describing the function of the feature process.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Execution_Sequence__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies the order in which processes associated with the feature will be executed.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Execution Sequence</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>1</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Execution_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is mandatory. It indicates when the process should be executed.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Execution Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Always</fullName>
+                    <default>true</default>
+                    <label>Always</label>
+                </value>
+                <value>
+                    <fullName>Once</fullName>
+                    <default>false</default>
+                    <label>Once</label>
+                </value>
+                <value>
+                    <fullName>Once Per Version</fullName>
+                    <default>false</default>
+                    <label>Once Per Feature Process Version</label>
+                </value>
+                <value>
+                    <fullName>Manual Only</fullName>
+                    <default>false</default>
+                    <label>Manual Only</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Feature__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies feature to which this process belongs.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Feature</label>
+        <referenceTo>nFORCE__Feature__mdt</referenceTo>
+        <relationshipLabel>Feature Processes</relationshipLabel>
+        <relationshipName>Feature_Processes</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the process is required and must be executed when the associated feature action is performed. The execution type of a required process cannot be changed to &apos;Manual Only&apos;.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Required Process</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies the process type. The type is used to determine during which actions the process will be executed.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enable</fullName>
+                    <default>true</default>
+                    <label>Enable</label>
+                </value>
+                <value>
+                    <fullName>Disable</fullName>
+                    <default>false</default>
+                    <label>Disable</label>
+                </value>
+                <value>
+                    <fullName>Batch</fullName>
+                    <default>false</default>
+                    <label>Batch</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It specifies the version number of the process. A change in version number implies a change in the process behavior.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Version</label>
+        <precision>8</precision>
+        <required>true</required>
+        <scale>4</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Feature Process</label>
+    <pluralLabel>Feature Processes</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

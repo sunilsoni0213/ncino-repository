@@ -1,0 +1,30 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds" ng-app="onlineAppApp" ng-cloak="true">
+			<route>
+				<div ng-controller="OwnersController as oc"
+					ng-init="oc.retrieveOwners(false)">
+					<deposit-account co-owners="oc.owners"></deposit-account>
+				</div>
+				<div class="slds-grid slds-grid--align-center slds-m-top--medium" resizer="true"
+					 ng-class="{'slds-p-left--small slds-p-right--small': !isMediumOrBigger}">
+					<a class="slds-button slds-button--neutral slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--2-of-3"
+						n-style="pso-button-secondary"
+						href="{!URLFOR($Page.Portal)}">
+						{!$Label.Go_To_Dashboard}
+					</a>
+				</div>
+			</route>
+		</body>
+	</html>
+</apex:page>

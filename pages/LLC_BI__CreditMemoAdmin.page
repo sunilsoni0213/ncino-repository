@@ -1,0 +1,24 @@
+<apex:page id="CreditMemoAdmin" controller="nFORCE.TemplateController" extensions="LLC_BI.CreditMemoAdminController">
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<apex:outputPanel layout="inline">
+				{!$Label.llc_bi__credit_memo_admin_heading}
+			</apex:outputPanel>
+		</apex:define>
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<c:CreditMemoAdminConfiguration />
+					<div id="ncCreditMemoAdmin" class="force slds">
+						<c:CreditMemoAdminPartials />
+						<credit-memo-admin></credit-memo-admin>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+</apex:page>

@@ -1,0 +1,49 @@
+<apex:page showHeader="false"
+	sidebar="false"
+	controller="nFORCE.TemplateController"
+	extensions="LLC_BI.RelationshipTypeConnectionAppController">
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+		<apex:composition template="nFORCE__Template_View_Container">
+			<apex:define name="content">
+				<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngRelationshipTypeSelectionController)}" />
+				<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngAnchorDirective)}" />
+				<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ngLabelProvider)}" />
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row" id="targetForm">
+										<p>{!$Label.Would_You_Like_To_Add_Connected}</p>
+										<form class="form-vertical">
+											<div class="form-group">
+												<div class="content-body">
+													<p>
+														<a onclick="navigateToUrl('{!nextHref}', event)" class="slds-button slds-button--neutral slds-m-right--small">{!$Label.Yes_Add_Connected}</a>
+														<apex:outputPanel >
+															<a onclick="navigateToUrl('{!nextRoute}', event)" class="slds-button slds-button--neutral">{!$Label.Not_Right_Now}</a>
+														</apex:outputPanel>
+													</p>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+
+	<script>
+		function navigateToUrl(url){
+			window.location.href = url;
+		}
+		angular.module('app').config(function(labelProvider){
+			labelProvider.setLabel('anchorText','{!anchorText}');
+			labelProvider.setLabel('anchorSrc','{!accountIconURL}');
+			labelProvider.setLabel('anchorBackground','{!accountIconBackground}');
+		});
+	</script>
+</apex:page>

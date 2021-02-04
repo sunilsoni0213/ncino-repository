@@ -1,0 +1,15 @@
+<apex:page docType="html-5.0" standardController="LLC_BI__Loan__c" extensions="LLC_BI.RateStructureController">
+	<c:RateStructure context="{!context}"
+		objectId="{!id}"
+		showAddPerformanceRule="{!showAddPerformanceRule}"
+		canAddRateStream="{!canAddRateStream}"
+		canEditStream="{!canEditStream}"
+		canDeleteStream="{!canDeleteStream}"
+		canAddPerformanceRule="{!canAddPerformanceRule}"
+		canDeletePerformanceRule="{!canDeletePerformanceRule}"
+		variableRateExtendedSectionId="{!variableRateExtensionSectionId}"
+		fixedRateExtendedSectionId="{!fixedRateExtensionSectionId}"
+		canAddZeroAmountStream="{!canAddZeroAmountStream}"
+	/>
+	<c:LoanSummary rendered="{!showLoanSummary}"/>
+</apex:page>

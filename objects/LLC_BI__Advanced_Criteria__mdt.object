@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>An Advanced Criteria is configurable logic that can be used for conditional functionality.</description>
+    <fields>
+        <fullName>LLC_BI__Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The criteria.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This criteria.</inlineHelpText>
+        <label>Criteria</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Advanced Criteria</label>
+    <pluralLabel>Advanced Criterias</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

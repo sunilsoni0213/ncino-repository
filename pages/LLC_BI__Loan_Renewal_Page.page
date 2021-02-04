@@ -1,0 +1,182 @@
+<apex:page standardController="LLC_BI__Loan__c"  extensions="LLC_BI.VF_LoanRenewalController">
+	<nFORCE:Includes enableBS3Namespace="true" rendered="{!$CurrentPage.parameters.app == null}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+
+	<apex:actionStatus onstart="LifeCycle.blockUI();" onstop="LifeCycle.unblockUI();" id="ajaxPleaseWait" />
+	<apex:outputPanel id="redirectPanel" >
+		<apex:outputText rendered="{!shouldRedirect}">
+			<script type="text/javascript">
+				window.top.location.href = '{!JSENCODE(redirectUrl)}';
+			</script>
+		</apex:outputText>
+	</apex:outputPanel>
+
+
+	<apex:outputPanel rendered="{!ISNULL($CurrentPage.parameters.app)}">
+		<apex:sectionHeader title="{!$Label.llc_bi__renew_loan_header}" subtitle="{!loanData.name}" rendered="{!IF(isDeleteFunction,false,IF(isActionable,true,false))}"/>
+		<apex:sectionHeader title="{!$Label.llc_bi__loan_can_not_be_renewed_header}" subtitle="{!loanData.name}" rendered="{!IF(isFunctionEnabled,IF(isDeleteFunction,false,IF(isActionable,false,true)),false)},"/>
+		<apex:sectionHeader title="{!$Label.llc_bi__delete_loan_header}" subtitle="{!loanData.name}" rendered="{!IF(isDeleteFunction,IF(isActionable,true,false),false)}"/>
+		<apex:sectionHeader title="{!$Label.llc_bi__loan_can_not_be_deleted_header}" subtitle="{!loanData.name}" rendered="{!IF(isFunctionEnabled,IF(isDeleteFunction,IF(isActionable,false,true),false),false)}"/>
+		<apex:sectionHeader title="{!$Label.llc_bi__this_functionality_is_not_available_header}" subtitle="{!loanData.name}"  rendered="{!IF(isFunctionEnabled,false,true)}"/>
+	</apex:outputPanel>
+
+	<div class="force">
+		<apex:outputPanel rendered="{!!ISNULL($CurrentPage.parameters.app)}">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+					<apex:outputPanel rendered="{!IF(isDeleteFunction,false,IF(isActionable,true,false))}"
+						layout="inline">
+						{!$Label.llc_bi__renew_loan_header}
+					</apex:outputPanel>
+
+					<apex:outputPanel rendered="{!IF(isFunctionEnabled,IF(isDeleteFunction,false,IF(isActionable,false,true)),false)},"
+						layout="inline">
+						{!$Label.llc_bi__loan_can_not_be_renewed_header}
+					</apex:outputPanel>
+
+					<apex:outputPanel rendered="{!IF(isDeleteFunction,IF(isActionable,true,false),false)}"
+						layout="inline">
+						{!$Label.llc_bi__delete_loan_header}
+					</apex:outputPanel>
+
+					<apex:outputPanel rendered="{!IF(isFunctionEnabled,IF(isDeleteFunction,IF(isActionable,false,true),false),false)}"
+						layout="inline">
+						{!$Label.llc_bi__loan_can_not_be_deleted_header}
+					</apex:outputPanel>
+
+					<apex:outputPanel rendered="{!IF(isFunctionEnabled,false,true)}"
+						layout="inline">
+						{!$Label.llc_bi__this_functionality_is_not_available_header}
+					</apex:outputPanel>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+		</apex:outputPanel>
+
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+
+				<apex:outputPanel layout="none" rendered="{!IF(isFunctionEnabled,true,false)}">
+					<!-- This block handles deleteFunction false, isActionable true -->
+					<!-- This is the case for renewing a loan                       -->
+					<apex:outputPanel layout="none" rendered="{!IF(isDeleteFunction,false,IF(isActionable,true,false))}">
+						<p>
+							<apex:outputText value="{!$Label.llc_bi__route_loan_information}" />
+						</p>
+								<div class="form-group">
+									<apex:include pageName="LLC_BI__Loan_Renewal_Data"/>
+								</div>
+								<apex:form styleClass="form">
+									<div class="form-group">
+										<apex:outputText value="{!$Label.llc_bi__select_renew_or_modify}" styleClass="renewalFont"/>
+									</div>
+
+									<div class="col-xs-12">
+										<div class="form-group">
+											<div class="radio radioLabel">
+												<apex:selectRadio value="{!selectedLoanAction}" layout="pageDirection" >
+													<apex:actionSupport event="onchange" rerender="continuePanel" />
+													<apex:selectOptions value="{!loanActions}"/>
+												</apex:selectRadio>
+											</div>
+										</div>
+									</div>
+								</apex:form>
+					</apex:outputPanel>
+				</apex:outputPanel>
+				<apex:form styleClass="form-horizontal">
+
+				<apex:outputPanel styleClass="force messages" id="messages"
+					rendered="{!IF(isDeleteFunction,false,IF(isActionable,true,false))}">
+						<apex:pageMessages rendered="{!$CurrentPage.parameters.app == null}"/>
+						<apex:Messages styleClass="alert alert-info" rendered="{!$CurrentPage.parameters.app != null}"/>
+				</apex:outputPanel>
+
+					<apex:outputPanel id="outerContinuePanel" layout="none" rendered="{!IF(isFunctionEnabled,true,false)}">
+						<!-- This block handles deleteFunction false, isActionable true -->
+						<!-- This is the case for renewing a loan                       -->
+						<apex:outputPanel layout="none" rendered="{!IF(isDeleteFunction,false,IF(isActionable,true,false))}">
+							<apex:Messages />
+								<br/>
+								<apex:outputPanel id="continuePanel"
+									rendered="{!shouldRedirect == false &&
+										 IF(selectedLoanAction == null,false,true)}">
+									<apex:commandButton styleClass="btn btn-primary btn-form-submit"
+										action="{!continueAction}"
+										value="{!$Label.llc_bi__button_continue}"
+										rerender="redirectPanel,messages,outerContinuePanel"
+										status="ajaxPleaseWait"/>
+									<a href="/{!loanId}"
+										target="_top"
+										style="btn-link">
+											{!$Label.Button_Cancel}
+									</a>
+								</apex:outputPanel>
+						</apex:outputPanel>
+						<!-- This block handles deleteFunction false, isActionable false -->
+						<!-- This is the case for not renewing a loan for some reason    -->
+						<apex:outputPanel layout="none" rendered="{!IF(isDeleteFunction,false,IF(isActionable,false,true))}">
+							<div class="col-sm-12">
+								<h4><apex:pageMessages /></h4>
+							</div>
+							<br/>
+							<br/>
+							<a href="/{!loanId}"
+								target="_top"
+								style="btn-link">
+									{!$Label.Back_Capital}
+							</a>
+						</apex:outputPanel>
+						<!-- This block handles deteletFunction true, isActionable true -->
+						<!-- This is the case for deleting a loan renewal or version    -->
+						<apex:outputPanel layout="none" rendered="{!IF(isDeleteFunction,IF(isActionable,true,false),false)}">
+							<div class="col-sm-12">
+								<h4><apex:pageMessages /></h4>
+							</div>
+							<br/>
+							<apex:include pageName="LLC_BI__Loan_Renewal_Data"/>
+							<apex:commandButton value="{!$Label.llc_bi__delete_loan}" action="{!deleteAction}" styleClass="btn-primary"/>
+							<a href="/{!loanId}"
+								target="_top"
+								style="btn-link">
+									{!$Label.Button_Cancel}
+							</a>
+						</apex:outputPanel>
+						<!-- This block handles deteletFunction true, isActionable false -->
+						<!-- This is the case for not deleting a loan for some reason    -->
+						<apex:outputPanel layout="none" rendered="{!IF(isDeleteFunction,IF(isActionable,false,true),false)}">
+							<div class="col-sm-12">
+								<h4><apex:pageMessages /></h4>
+							</div>
+							<br/>
+							<br/>
+							<a href="/{!loanId}"
+								target="_top"
+								style="btn-link">
+									{!$Label.Back_Capital}
+							</a>
+						</apex:outputPanel>
+					</apex:outputPanel>
+					<!-- This block handles deteletFunction true, isActionable false -->
+					<!-- This is the case where the feature is not available         -->
+					<apex:outputPanel layout="none" rendered="{!IF(isFunctionEnabled,false,true)}">
+						<div class="col-sm-12">
+							<h4><apex:pageMessages /></h4>
+						</div>
+						<br/>
+						<br/>
+						<a href="/{!loanId}"
+							target="_top"
+							style="btn-link">
+								{!$Label.Back_Capital}
+						</a>
+					</apex:outputPanel>
+				</apex:form>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

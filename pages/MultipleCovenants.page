@@ -1,0 +1,48 @@
+<apex:page controller="MultiCovenantController">
+
+    <apex:sectionHeader title="Covenants" subtitle="Multi-covenant Creation" />
+
+    <apex:pageMessages />
+
+    <apex:form >
+        <apex:pageBlock id="covenantDetailBlock" title="Covenant Details" rendered="true">
+            <apex:pageBlockSection columns="1" title="Covenants">
+            
+                <apex:pageBlockTable value="{!covenantList}" var="covenant">
+                    <apex:column headerValue="Loan" id="loan" >
+                        <apex:outputField value="{!covenant.LLC_BI__Loan__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Relationship" id="relationship" >
+                        <apex:inputField value="{!covenant.LLC_BI__Account__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Contact" id="contact" >
+                        <apex:inputField value="{!covenant.LLC_BI__Contact__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Active" id="active" >
+                        <apex:inputField value="{!covenant.LLC_BI__Active__c}" required="False"/>
+                    </apex:column>
+                    <apex:column headerValue="Covenant Type" id="covenantType">
+                        <apex:inputField value="{!covenant.LLC_BI__Covenant_Type__c}" required="True"/>
+                    </apex:column>
+                    <apex:column headerValue="Covenant Subtype" id="covenantSubtype" >
+                        <apex:inputField value="{!covenant.LLC_BI__Covenant_Sub_Type__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Financial Indicator Value" id="financialIndicatorValue">
+                        <apex:inputField value="{!covenant.LLC_BI__Financial_Indicator_Value__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Frequency" id="frequency" >
+                        <apex:inputField value="{!covenant.LLC_BI__Frequency__c}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+                
+                <apex:panelGrid columns="2" id="addRemoveGrid"> 
+                    <apex:commandButton value="Add Row" action="{!addRow}" reRender="covenantDetailBlock"/> 
+                    <apex:commandButton value="Remove Row" action="{!removeLastRow}" reRender="covenantDetailBlock" rendered="{!IF(covenantList.size>1, TRUE, FALSE)}"/>
+                </apex:panelGrid> 
+                
+            </apex:pageBlockSection> 
+            <apex:commandButton action="{!save}" value="Save" />
+            <apex:commandButton action="{!cancel}" value="Cancel" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

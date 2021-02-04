@@ -1,0 +1,192 @@
+<apex:page controller="WKDDP.WKDepActDocPrepCompletionController"
+	extensions="nFORCE.RemoteActionController"
+	showHeader="false"
+	sidebar="false"
+	docType="html-5.0" >
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'util/continue-hack.js')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
+	<nFUSE:PushTopicRegistration topic="TransactionLogUpdate" callback="processLogUpdate"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/sldsSpinner.css')}"/>
+
+	<script type="text/javascript">
+
+		var isSaveAndContinue = false;
+		var isNavAlertRequired = {!!errorsPresent};
+		window.addEventListener('beforeunload', function (e) {
+			if ((isNavAlertRequired == null || isNavAlertRequired)
+				&& !isSaveAndContinue
+				&& document.getElementById('DocViewer').src.indexOf('DocPrepFiling') == -1) {
+				(e || window.event).returnValue = '{!$Label.nFUSE__DocPrep_Navigate_Away_Message}';
+				return '{!$Label.nFUSE__DocPrep_Navigate_Away_Message}';
+			}
+			isNavAlertRequired = true;
+		});
+
+		var previousOnload = window.onload;
+		window.onload = function() {
+			if (previousOnload) { previousOnload(); }
+
+			if({!errorsPresent}){
+				document.getElementById("Error").style.display = "block";
+			}
+
+			if('{!docprepurl}') {
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function() {
+					if (this.readyState == 4) {
+						document.getElementById('DocViewer').src = '{!docprepurl}';
+					}
+				};
+				xhr.withCredentials = true;
+				xhr.open('POST', '{!wkPostEndpoint}');
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xhr.send('{!wkToken}');
+			}
+		}
+
+		function saveOnlyRemote(){
+			LifeCycle.blockUI();
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.RemoteActionController.invoke}',
+				'WKDDP.RemoteActionController.saveAndContinue',
+				{
+					'sessionId' : '{!JSENCODE(sessionId)}',
+					'transactionId' : '{!JSENCODE(transactionExternalId)}',
+					'depositId' : '{!JSENCODE(entityId)}',
+					'appGroup' : '{!JSENCODE(appGroup)}'
+				},
+				function(result, event){
+					if (event.status) {
+						isSaveAndContinue = true;
+						window.location = result;
+					}
+				},
+				{ escape: false }
+			);
+		}
+
+		function processLogUpdate(message) {
+			var messageProviderStatus = message.data.sobject.nFUSE__Vendor_Status__c;
+			var messageTranStatus = message.data.sobject.nFUSE__Transaction_Status__c;
+			var logId = message.data.sobject.Id;
+
+			if(logId == '{!transactionLogId}'){
+
+				if(messageProviderStatus=='Filing'){
+
+					isNavAlertRequired = false;
+					document.getElementById('InProgress').style.display = 'none';
+					document.getElementById(messageProviderStatus).style.display = 'block';
+
+				} else if(messageProviderStatus=='Complete'){
+					window.location = '{!generateDocumentsPageReference}';
+
+				} else if(messageTranStatus.toLowerCase().indexOf('error') > -1 ||
+					messageTranStatus.toLowerCase().indexOf('fail') > -1){
+
+					isNavAlertRequired = false;
+					document.getElementById('InProgress').style.display = 'none';
+					document.getElementById('Error').style.display = 'block';
+				}
+			}
+		}
+
+	</script>
+
+	<!-- Error -->
+	<div id="Error" style="display:none">
+		<apex:form >
+			<div class="col-sm-6">
+				<br/>
+				<div class="slds-notify slds-notify--toast slds-theme--error " role="alert">
+					<span class="slds-assistive-text">{!$Label.nFUSE__DocPrep_Error_Badge}</span>
+					<div class="slds-grid slds-wrap slds-grid--pull-padded">
+						<div class="slds-p-horizontal--small slds-size--1-of-12">
+							<img src="{!URLFOR($Resource.nFORCE__design_system, "assets/icons/standard/unmatched_60.png")}"/>
+						</div>
+						<div class="slds-p-horizontal--small slds-size--11-of-12 font-lg slds-align-middle">
+							<p>{!$Label.nFUSE__DocPrep_Error_Heading}</p>
+						</div>
+						<div class="slds-p-horizontal--small slds-size--1-of-12" />
+						<apex:outputPanel rendered="{!errorsPresent}"
+										  styleClass="slds-p-horizontal--small slds-size--11-of-12 font-md">
+							<apex:messages />
+						</apex:outputPanel>
+						<apex:outputPanel rendered="{!!errorsPresent}"
+										  styleClass="slds-p-horizontal--small slds-size--11-of-12 font-md">
+							<p>{!$Label.nfuse__docprep_redirect_url_missing}</p>
+						</apex:outputPanel>
+					</div>
+				</div>
+			</div>
+		</apex:form>
+	</div>
+
+	<!-- DocViewer -->
+	<div id="InProgress">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<div>{!$Label.nfuse__docprep_edit_your_documents}</div>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div>
+							<apex:outputPanel rendered="{!docprepurl != null}">
+								<apex:iframe id="DocViewer" scrolling="true"
+									src="" rendered="{!docprepurl != null}"/>
+							</apex:outputPanel>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<div id="Filing" style="display:none">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<span>{!$Label.nfuse__docprep_complete_your_documents}</span>
+			</apex:define>
+			<apex:define name="right" />
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div class="col-sm-12">
+							<div class="row dark-box container-fluid">
+								<div class="col-md-2" style="padding-bottom:150px;">
+									<div class="slds-spinner_container" style="background-color:transparent; padding: 100px 10px 55px 45px;">
+										<div role="status" class="slds-spinner slds-spinner--large">
+											<span class="slds-assistive-text">Loading</span>
+											<div class="slds-spinner__dot-a"></div>
+											<div class="slds-spinner__dot-b"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9" style="padding: 0px 0px 10px 0px">
+									<div id="InfoHeader" style="text-transform: uppercase;">
+										<h4>{!$Label.nFUSE__DocPrep_Status_Info_Header}</h4>
+										{!$Label.nFUSE__DocPrep_Status_Info_Header}
+									</div>
+									<br/>
+									<div class="font-md">
+										{!$Label.WKDepAct_DocPrep_Completion_Info}
+									</div>
+									<br/>
+								</div>
+							</div>
+							<br/>
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

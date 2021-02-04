@@ -1,0 +1,45 @@
+<apex:page docType="html-5.0"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false">
+
+	<html class="portal-html" lang="en">
+		<head>
+			<title>{!$Label.User_Profile_Title}</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:include pageName="nPortal__PortalIncludes" />
+			<c:PortalConfiguration />
+			<c:SelfRegistrationIncludes />
+			<c:PasswordDataService />
+			<c:PortalUserService />
+			<c:UserProfileIncludes />
+		</head>
+		<body class="portal-body slds has-nstyle" ng-app="customerPortalApp" ng-cloak="true">
+			<portal-loader slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-loader>
+			<portal-message slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-message>
+			<div class="portal-wrapper-full" n-style="pso-login-background">
+				<div class="slds-grid slds-wrap">
+					<div class="portal-wrapper slds-size--1-of-1">
+						<c:PortalHeader />
+					</div>
+				</div>
+				<div class="portal-center-column slds-col--padded slds-size--1-of-1
+					slds-medium-size--3-of-4 slds-large-size--2-of-4">
+					<h2 class="slds-text-heading--large slds-m-bottom--medium portal-center-text
+						slds-m-top--large"
+						n-style="pso-login-header">
+						{!$Label.Update_Profile_Title}
+					</h2>
+					<user-profile></user-profile>
+				</div>
+				<security-badges></security-badges>
+				<div class="push"></div>
+			</div>
+			<c:PortalFooter />
+			<c:SecurityBadgeDataService />
+			<c:LanguageDataService />
+			<c:UserProfileDataService />
+		</body>
+	</html>
+</apex:page>

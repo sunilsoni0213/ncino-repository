@@ -1,0 +1,12 @@
+<apex:page id="TreasuryMaintenancePrint"
+	showHeader="false"
+	sidebar="false"
+	controller="LLC_BI.TreasuryMaintenancePrintController">
+
+	<apex:outputPanel rendered="{!version == 1}">
+		<c:ncTreasuryMaintenancePrint />
+	</apex:outputPanel>
+	<apex:outputPanel rendered="{!version == 2}">
+		<c:ncTreasuryMaintenancePrint_v2 />
+	</apex:outputPanel>
+</apex:page>

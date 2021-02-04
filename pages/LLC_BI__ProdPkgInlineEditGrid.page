@@ -1,0 +1,100 @@
+<apex:page id="ProdPkgInlineEditGrid" readOnly="false" applyBodyTag="false" applyHtmlTag="false"
+			  standardStylesheets="false"
+			  sidebar="false" showHeader="false" contentType="text/html" docType="html-5.0"
+			  apiVersion="36.0" cache="true"
+			  expires="100" showChat="false" showQuickActionVfHeader="false">
+	<div class="slds-scrollable--x slds-form-element">
+		<div class="slds-form--stacked slds-grid slds-wrap slds-m-top--small "
+			  ng-repeat="field in $parent.$parent.$parent.vm.modalObject.fields track by field.fieldName">
+			<div class="slds-form-element__control"
+				ng-if="field.fieldType == '{!$Label.Field_Type_Boolean}'">
+				<label class="slds-checkbox">
+					<input type="checkbox" name="options"
+							 ng-model="field.value"/>
+					<span class="slds-checkbox--faux"></span>
+					<span class="slds-form-element__label">{{field.fieldLabel}}</span>
+				</label>
+			</div>
+			<div class="slds-form-element__control"
+				ng-if="field.fieldType == '{!$Label.Field_Type_Picklist}'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<div class="slds-select_container">
+					<select class="slds-select" name="{{::field.fieldPath}}" ng-model="field.value"
+							  ng-options="entry.value as entry.label for entry in field.options">
+					</select>
+				</div>
+			</div>
+			<div class="slds-form-element__control"
+				style="min-width: 100%"
+				ng-if="field.fieldName == 'Comments'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<textarea
+					class="slds-input"
+					name="{{::field.fieldLabel}}"
+					ng-model="field.value"
+					ng-init="field.value =''"
+					ng-required="field.required"
+				></textarea>
+			</div>
+
+			<div class="slds-form-element__control"
+				ng-if="::field.fieldType == '{!$Label.Field_Type_String}' && field.fieldName != 'Comments'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<input
+					class="slds-input"
+					type="text"
+					name="{{::field.fieldLabel}}"
+					placeholder="{{::field.value}}"
+					ng-model="field.value"
+				/>
+			</div>
+			<div class="slds-form-element__control"
+				ng-if="::field.fieldType == '{!$Label.Field_Type_Date}'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<input
+					class="slds-input"
+					name="{{::field.fieldLabel}}"
+					ng-model="field.value" ng-required="field.required"
+					intlinputdate="true" type="text"
+				/>
+			</div>
+			<div class="slds-form-element__control"
+				ng-if="field.fieldType == '{!$Label.Field_Type_Datetime}'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<input
+					class="slds-input" n-style="pso-placeholder pso-input"
+					name="{{field.fieldLabel}}"
+					ng-model="field.value" ng-required="field.required"
+					intlinputdate="true" type="text"
+				/>
+			</div>
+			<div class="slds-form-element__control"
+				ng-if="field.fieldType == '{!$Label.Field_Type_Number}'
+					|| field.fieldType == '{!$Label.Field_Type_Double}'
+					|| field.fieldType == '{!$Label.Field_Type_Percent}'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<input class="slds-input"
+						type="text" name="{{::field.fieldLabel}}"
+						ng-model="field.value" ng-required="field.required"
+						inputnumber="true" scale="field.fieldScale"
+				/>
+			</div>
+			<div class="slds-form-element__control"
+				ng-if="field.fieldType == '{!$Label.Field_Type_Currency}'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<input class="slds-input"
+						type="text" name="{{::field.fieldLabel}}"
+						ng-model="field.value" ng-required="field.required"
+						inputcurrency="true" scale="field.fieldScale"
+				/>
+			</div>
+			<div class="slds-form-element__control"
+				ng-if="field.fieldType == 'TEXTAREA'">
+				<label class="slds-form-element__label">{{field.fieldLabel}}</label>
+				<textarea class="slds-input" name="{{::field.fieldLabel}}"
+				ng-model="field.value" ng-required="field.required"
+				></textarea>
+			</div>
+		</div>
+	</div>
+</apex:page>

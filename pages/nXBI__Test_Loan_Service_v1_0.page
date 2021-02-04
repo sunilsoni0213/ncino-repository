@@ -1,0 +1,44 @@
+<apex:page standardController="LLC_BI__Loan__c" docType="html-5.0" showChat="false" sidebar="false">
+	<c:Includes enableLifeCycleApp="true" runLifeCycleApp="true" />
+	
+	<apex:includeScript value="{!URLFOR($Resource.nXBI__xml_exporter_app)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nXBI__xml_exporter_viewModel)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nXBI__closing_loan_review_view)}" />
+	
+	<c:Loan_Service_v1_0 buffer="false" escape="false" />
+	
+	<apex:variable var="APP_NAME" value="LoanServiceTest" />
+	
+	<div class="force" data-bind="with: {!APP_NAME}">
+		<c:Closing_Loan_Review />
+	</div>
+	
+	<script type="text/javascript">
+		jQuery.noConflict();
+		
+		(function(app){
+			app.register(
+				'{!APP_NAME}',
+				function(event, app){
+					app.setMapping({
+						'data': {
+							create: function(options){
+								return new Object();
+							},
+							update: function(options){
+								return app.mapFromJS({ loan: options.data }, app.getMapping(), options.target);
+							}
+						}
+					});
+				}, {
+					metadata: {
+						appName: '{!APP_NAME}',
+					},
+					service: {
+						action: LifeCycle.DataServices.v1_0.Loan.retrieve,
+						arguments: ['{!Id}']
+					}
+				});
+		})(new LifeCycle.DataServices.Exporter.Xml.App());
+	</script>
+</apex:page>

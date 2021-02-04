@@ -1,0 +1,32 @@
+<apex:page showHeader="false" sidebar="false" controller="nFORCE.TemplateController">
+
+	<nFORCE:Includes rendered="{!$CurrentPage.parameters.app == null}" enableLifeCycleApp="true" runLifeCycleApp="true" />
+
+	<c:Include_AngularJS />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+
+	<nFORCE:ncTreeGridIncludes />
+	<c:PackageLoanRenewalConfiguration />
+	<nFORCE:Include_Navigator />
+	<nFORCE:ncScreenSectionFormBuilderIncludes />
+
+	<div class="slds">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div id="ncProductPackageCreditAction" class="slds slds-scrollable">
+							<nFORCE:ncScreenSectionFormBuilderPartials />
+							<c:PackageLoanRenewalPartials />
+							<c:ncAssociationCardPartial />
+
+							<credit-action-controller></credit-action-controller>
+
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

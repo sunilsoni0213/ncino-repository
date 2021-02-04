@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Collateral History --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Collateral History --></value>
+    </caseValues>
+    <nameFieldLabel><!-- Collateral History Number --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

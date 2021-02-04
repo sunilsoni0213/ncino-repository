@@ -1,0 +1,45 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" enableBS3Namespace="true" enableLifeCycleApp="true" runLifeCycleApp="false" includeIEHacks="false"/>
+	<c:Include_Design_System flavor="bs3" />
+	<c:Include_Navigator />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+
+	<c:Define_UI_Framework_Labels />
+
+	<apex:outputPanel layout="none" rendered="{!screenId != null}">
+		<c:Layout_Functions />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__layout_designer_bundle)}" />
+	</apex:outputPanel>
+
+	<div class="force slds">
+		<div class="container-fluid ui-container">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 top-bar">
+						<apex:insert name="topbar"/>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix visible-xs"></div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 body">
+						<div class="row">
+							<div class="col-xs-12 sub-navigation-content">
+								<apex:insert name="subNavigation"/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 body-content">
+								<c:LockedRecordMessage rendered="{!isLocked}" />
+								<apex:insert name="body"/>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix visible-xs"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<c:Run_LifeCycleApp disabled="{!screenId == null}"/>
+</apex:page>

@@ -1,0 +1,44 @@
+<apex:page showHeader="false"
+ sidebar="false"
+ standardStylesheets="false"
+ docType="html-5.0"
+ controller="nFORCE.RemoteActionController"
+>
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+      <script>
+        window.LifeCycle = window.LifeCycle || {};
+        LifeCycle.msgs = LifeCycle.msgs || {};
+        LifeCycle.msgs.msg_vf_includes_url = '{!URLFOR($Resource.vf_includes)}';
+      </script>
+      <nFORCE:LiteForce_Functions />
+      <nFORCE:LifeCycle_Functions />
+      <link rel="stylesheet" href="{!URLFOR($Resource.nds, 'nds.bundle.css')}" />
+      <script src="{!URLFOR($Resource.nds, 'nds.js')}" data-resources-url="{!URLFOR($Resource.nds, 'nds/')}" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      <style>
+        .slds-scope ::placeholder{
+          color: #767676 !important;
+        }
+      </style>
+    </head>
+    <body>
+      <apex:slds />
+      <div class="slds slds-scope">
+        <spreads-admin-projections contextId="{!$CurrentPage.parameters.id}">Loading Spread Projections Admin...</spreads-admin-projections>
+      </div>
+      <script>
+        (function () {
+          var steez = document.createElement('link');
+          steez.setAttribute('rel', 'stylesheet');
+          steez.setAttribute('href', "{!URLFOR($Resource.vf_includes, 'spreads-projections-admin.css')}");
+          document.body.appendChild(steez);
+        })();
+      </script>
+      <script src="{!URLFOR($Resource.vf_includes, 'polyfills.js')}"></script>
+      <script src="{!URLFOR($Resource.vf_includes, 'vendor.js')}"></script>
+      <nFORCE:Internationalize defer="true" />
+      <script src="{!URLFOR($Resource.vf_includes, 'spreads-projections-admin.js')}"></script>
+    </body>
+  </html>
+</apex:page>

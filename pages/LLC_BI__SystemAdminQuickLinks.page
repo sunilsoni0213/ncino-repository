@@ -1,0 +1,80 @@
+<apex:page showHeader="true" sidebar="true">
+
+	<apex:outputPanel layout="block" styleClass="container-fluid">
+		<apex:outputPanel layout="block" styleClass="row">
+			<apex:outputPanel layout="block" styleClass="col-xs-12">&nbsp;</apex:outputPanel>
+		</apex:outputPanel>
+		<apex:outputPanel layout="block" styleClass="row">
+			<apex:outputPanel layout="block" styleClass="col-xs-12">
+				<apex:outputPanel layout="block" styleClass="panel panel-info">
+					<apex:outputPanel layout="block" styleClass="panel-body">
+						<table class="table table-striped table-hover">
+							<tr>
+								<td><apex:outputText value="{!$ObjectType.LLC_BI__Connection_Role__c.labelPlural}" /></td>
+								<td>
+									<apex:outputLink value="{!URLFOR($Action.LLC_BI__Connection_Role__c.List,$ObjectType.LLC_BI__Connection_Role__c)}" target="_blank">
+										{!$Label.llc_bi__show}
+									</apex:outputLink>
+								</td>
+							</tr>
+							<tr>
+								<td><apex:outputText value="{!$ObjectType.LLC_BI__Credit_Memo__c.labelPlural}" /></td>
+								<td>
+									<apex:outputLink value="{!URLFOR($Action.LLC_BI__Credit_Memo__c.List,$ObjectType.LLC_BI__Credit_Memo__c)}" target="_blank">
+										{!$Label.llc_bi__show}
+									</apex:outputLink>
+								</td>
+							</tr>
+							<tr>
+								<td><apex:outputText value="{!$Label.llc_bi__permission_set_manager_header}" /></td>
+								<td>
+									<a href="{!$Page.LLC_BI__PermissionSetManager}" target="_blank">{!$Label.llc_bi__show}</a>
+								</td>
+							</tr>
+							<tr>
+								<td><apex:outputText value="{!$ObjectType.LLC_BI__Product_Feature__c.labelPlural}" /></td>
+								<td>
+									<apex:outputLink value="{!URLFOR($Action.LLC_BI__Product_Feature__c.List,$ObjectType.LLC_BI__Product_Feature__c)}" target="_blank">
+										{!$Label.llc_bi__show}
+									</apex:outputLink>
+								</td>
+							</tr>
+							<tr>
+								<td><apex:outputText value="{!$Label.llc_bi__product_selector}" /></td>
+								<td>
+									<apex:outputLink value="{!$Page.LLC_BI__TestProductSelection}" target="_blank">
+										{!$Label.llc_bi__show}
+									</apex:outputLink>
+								</td>
+							</tr>
+							<tr>
+								<td><apex:outputText value="{!$Label.llc_bi__screen_section_migration}" /></td>
+								<td>
+									<a href="{!$Page.LLC_BI__ScreenSectionMigrator}" target="_blank">{!$Label.llc_bi__show}</a>
+								</td>
+							</tr>
+							<tr>
+								<td><apex:outputText value="{!$ObjectType.LLC_BI__Underwriting_Bundle__c.labelPlural}" /></td>
+								<td>
+									<apex:outputLink value="{!URLFOR($Action.LLC_BI__Underwriting_Bundle__c.List,$ObjectType.LLC_BI__Underwriting_Bundle__c)}" target="_blank">
+										{!$Label.llc_bi__show}
+									</apex:outputLink>
+								</td>
+							</tr>
+                            <tr>
+                                <td><apex:outputText value="{!$ObjectType.LLC_BI__Policy_Exception_Template__c.labelPlural}" /></td>
+                                <td>
+                                    <apex:outputLink value="{!URLFOR($Action.LLC_BI__Policy_Exception_Template__c.List, $ObjectType.LLC_BI__Policy_Exception_Template__c)}" target="_blank">
+											{!$Label.llc_bi__show}
+                                    </apex:outputLink>
+                                </td>
+                            </tr>
+						</table>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:outputPanel>
+		</apex:outputPanel>
+	</apex:outputPanel>
+	<div class="clearfix" />
+	<apex:include pageName="nFORCE__System_Configuration"/>
+</apex:page>

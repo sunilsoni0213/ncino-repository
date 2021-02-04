@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LLC_BI__Opportunity_History__c$Name</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Opportunity_History__c$LLC_BI__StatusName__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Opportunity_History__c$LLC_BI__StageName__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Opportunity_History__c$LLC_BI__Stage_Change__c</field>
+    </columns>
+    <columns>
+        <field>LLC_BI__Opportunity_History__c$LLC_BI__End_Time__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Opportunity Stage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LLC_BI__Opportunity_Stage_Duration__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LLC_BI__Opportunity_History__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,38 @@
+<apex:page sidebar="false"
+		showHeader="{!$User.UITheme != 'Theme4t'}"
+		controller="nFORCE.TemplateController"
+		extensions="nRetail.LoanController"
+		title="{!$Label.nretail__new_retail_loan_page_title}">
+
+
+
+
+	<apex:composition template="nFORCE__Template_Base">
+
+		<apex:define name="topbar">
+			<apex:include rendered="{!!isNull(route.nFORCE__Topbar__c)}" pageName="{!route.nFORCE__Topbar__c}" />
+		</apex:define>
+
+		<apex:define name="navigation">
+			<apex:include rendered="{!!isNull(route.nFORCE__Navigation__c)}" pageName="{!route.nFORCE__Navigation__c}" />
+		</apex:define>
+
+		<apex:define name="subNavigation">
+			<apex:include rendered="{!!isNull(route.nFORCE__Sub_Navigation__c)}" pageName="{!route.nFORCE__Sub_Navigation__c}" />
+		</apex:define>
+
+		<apex:define name="body">
+			<apex:include rendered="{!!isNull(route.nFORCE__Body__c)}" pageName="{!route.nFORCE__Body__c}" />
+		</apex:define>
+
+	</apex:composition>
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<c:Include_Bootstrap />
+	<nFORCE:Include_Design_System flavor="vf" />
+	<apex:stylesheet value="{!URLFOR($Resource.nRetail__retail_slds_custom)}" />
+	<c:Include_AngularJS />
+	<LLC_BI:SessionHandler />
+</apex:page>

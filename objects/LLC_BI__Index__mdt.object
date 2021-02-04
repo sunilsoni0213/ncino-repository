@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Financial indices used to better price loans with current market rates. Certain indices are available per product.</description>
+    <fields>
+        <fullName>LLC_BI__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates this Index is in use.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Indicates this Index is in use.</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Category</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Category</inlineHelpText>
+        <label>Category</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Description</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__External_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default Source URL</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Default Source URL</inlineHelpText>
+        <label>Default Source URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Modification_Schedule__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Update Frequency</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Update Frequency</inlineHelpText>
+        <label>Modification Schedule</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Index Name</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Index Name</inlineHelpText>
+        <label>Name</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Index</label>
+    <pluralLabel>Indices</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

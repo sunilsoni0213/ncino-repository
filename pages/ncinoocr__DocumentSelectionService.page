@@ -1,0 +1,8 @@
+<apex:page controller="ncinoocr.DocumentSelectionController"
+	contentType="application/json"
+	readOnly="true"
+	applyHtmlTag="false"
+	standardStylesheets="false"
+	showHeader="false"
+	cache="false"
+	sidebar="false">{ "documents": {!response} }</apex:page>

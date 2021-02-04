@@ -1,0 +1,5 @@
+<apex:page standardController="Account"
+	extensions="nRetail.NewLoanRedirectController"
+	title="{!$Label.nretail__new_loan_redirect_page_title}">
+	<c:Inline_Parent_Redirect destination="{!newLoanLink}" />
+</apex:page>

@@ -1,0 +1,96 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="LLC_BI.VF_ProductController" action="{!Init}">
+	<apex:variable var="hasRelationship" value="{!RelationshipName!=null}"/>
+	<apex:variable var="isChangeProduct" value="{!LoanId!=null}"/>
+	<apex:variable var="isCreateChild" value="{!parentId!=null}"/>
+	<nFORCE:Includes enableBS3Namespace="true" rendered="{!$CurrentPage.parameters.app == null}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__template_base_theme_css)}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'lifecycle.js')}" />
+	<nFORCE:Include_Navigator />
+
+	<div class="force">
+		<apex:outputPanel layout="none">
+			<apex:composition template="nFORCE__Template_Heading">
+				<apex:define name="left">
+				<span>
+						{!$Label.llc_bi__loan_add_new_loan}
+				</span>
+				</apex:define>
+				<apex:define name="right" />
+			</apex:composition>
+		</apex:outputPanel>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<apex:outputPanel id="newFacilityMsgs" layout="none">
+							<div class="slds">
+								<apex:outputPanel styleClass="force messages" id="messages">
+									<apex:messages styleClass="alert alert-danger" />
+								</apex:outputPanel>
+							</div>
+						</apex:outputPanel>
+						<apex:form styleClass="form-horizontal" rendered="{!hasRelationship}">
+							<apex:outputPanel layout="none"
+								id="formPanel"
+								rendered="{!(NOT(isChangeProduct) && NOT(isCreateChild)) ||
+									(isChangeProduct && canChangeProduct) || (isCreateChild && canCreateChild)}">
+								<apex:outputPanel layout="none" rendered="{!copyLoan}">
+									<apex:define name="left">
+										<span class="h5">{!$Label.llc_bi__loan_copy_title_base_info}</span>
+									</apex:define>
+									<div class="row"><br/></div>
+								</apex:outputPanel>
+								<br/>
+								<div class="form-horizontal">
+									<c:ProductCreator pageController="{!pageController}"
+															ProductNameLabel="{!$Label.llc_bi__lead_opportunity_name}" />
+								</div>
+								<apex:commandButton action="{!createProductWrapper}"
+									styleClass="btn btn-primary btn-form-submit"
+									value="{!$Label.llc_bi__button_create_new_loan}"
+									rendered="{!NOT(copyLoan)&&NOT(isChangeProduct)}"
+									reRender="messages, formPanel"
+									onClick="this.onclick=function(){this.disabled = true;return false;}"
+									oncomplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)"/>
+
+								<apex:outputPanel rendered="{!NOT(copyLoan)}">
+									<a onClick="LifeCycle.Navigator.navigateToSObject('{!productPackageId}')">
+										{!$Label.llc_bi__button_cancel}
+									</a>
+								</apex:outputPanel>
+							</apex:outputPanel>
+
+							<apex:outputPanel layout="none"
+								rendered="{!(isChangeProduct && NOT(canChangeProduct)) ||
+									(isCreateChild && NOT(canCreateChild))}">
+								<apex:outputPanel layout="none">
+									<apex:outputPanel layout="none">
+										<br/><br/>
+										<apex:outputPanel layout="none" rendered="{!NOT(isChangeProduct) && NOT(canCreateChild)}">
+											<apex:outputText value="{!$Label.llc_bi__parent_structure_not_multi}"/>
+										</apex:outputPanel>
+										<br/><br/><br/><br/><br/>
+									</apex:outputPanel>
+									<a onClick="LifeCycle.Navigator.navigateToSObject('{!productPackageId}')">
+										{!$Label.llc_bi__back_capital}
+									</a>
+								</apex:outputPanel>
+							</apex:outputPanel>
+						</apex:form>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<script>
+		function handleRedirect(ret, retUrl) {
+			if (ret !== null && ret !== '') {
+				LifeCycle.Navigator.navigateToSObject(ret);
+			} else if (retUrl !== null && retUrl !== '' ) {
+				LifeCycle.Navigator.navigateToURL(retUrl);
+			}
+		}
+	</script>
+</apex:page>

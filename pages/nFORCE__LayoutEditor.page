@@ -1,0 +1,7 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" standardStylesheets="false">
+	<div class="" id="ncLayoutEditor">
+		<nc-layout-editor></nc-layout-editor>
+		<c:LayoutEditor />
+		<c:ncLayoutEditorIncludes />
+	</div>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="LLC_BI.CreditMemoController" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'bootstrap3/css/bootstrap.min.css')}" />
+	<c:Credit_Memo contextObject="{!contextObject}"
+		screenId="{!screenId}"
+		disablePrint="{!disablePrint}"
+		customStylesheet="{!customStylesheet}"
+		webPackResource="{!nCredWebpack}"
+		saveBodyAsAttachment="{!creditMemoExportEnabled}"
+		creditMemoViewer="{!creditMemoViewer}"
+		creditMemoObject="{!creditMemoObject}"
+		showCreditMemo="{!showCreditMemo}"
+		showStartPage="{!showStartPage}"/>
+</apex:page>

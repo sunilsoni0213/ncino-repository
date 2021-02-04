@@ -1,0 +1,3 @@
+<apex:page standardController="LLC_BI__Deposit__c">
+	<apex:include pageName="NDOC__UniversalDocMan" />
+</apex:page>

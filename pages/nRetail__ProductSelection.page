@@ -1,0 +1,22 @@
+<apex:page controller="nRetail.ProductSelectionController" extensions="nFORCE.RemoteActionController">
+	<c:ProductSelectionConfig />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+	<div id="nrProductSelection" ng-cloak="cloak">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<span class="new-loan-title">{!$Label.nretail__loan_add_new_loan} {!$Label.nretail__for} {!relationship.Name}</span>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<message></message>
+						<product-selection></product-selection>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

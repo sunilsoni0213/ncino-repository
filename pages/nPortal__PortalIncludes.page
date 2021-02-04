@@ -1,0 +1,51 @@
+<apex:page controller="nPortal.PortalCustomURLController"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false">
+	<custom-css></custom-css>
+
+	<!-- Add custom javascript if custom setting enabled -->
+	<apex:include rendered="{!!isNull(javascriptUrl)}"
+		pageName="{!IF(isNull(javascriptUrl),
+		  'nFORCE__Blank', javascriptUrl)}" />
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_Custom />
+	<c:Include_jQuery_FormatCurrency />
+
+	<nFORCE:Internationalize />
+	<nFORCE:Include_Design_System flavor="vf" components="true" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__animate)}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nPortal__Global_Resources, 'Global_Resources_Bundle.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'forcetk.js')}" />
+
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Animate />
+	<c:Include_AngularJS_Sanitize />
+	
+	<apex:includeScript value="{!URLFOR($Resource.nPortal__Global_Resources, 'providers/svg4everybody.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__lottie)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__compressjs)}" />
+
+	<!-- Add customer portal parent angular module -->
+	<c:CustomerPortalAppIncludes />
+
+	<!-- ncDataProvider includes -->
+	<nFORCE:ncDataProvidersIncludes />
+
+	<!-- New Relic Analytics -->
+	<nFORCE:Include_Analytics />
+
+	<script type="text/javascript">
+		// Initialize SVG4Everybody
+		svg4everybody();
+
+		// Set global remoting timeout
+		Visualforce.remoting.timeout = 120000;
+	</script>
+
+</apex:page>

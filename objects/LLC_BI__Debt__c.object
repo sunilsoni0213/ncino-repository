@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Debt_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The debt object stores information about an applicant&apos;s debts.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>LLC_BI__Add_Debt</fullName>
+        <availableFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set is used in the nRetail package for the consumer loans UI.</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Original_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Available_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Debt_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Exclude__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Excluded_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Add Debt</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Add_Debt_Account</fullName>
+        <availableFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set is used in the Add Debt modal for the Total Exposure UI.</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Exposure_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Original_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Available_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Add Debt Account</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Add_Debt_Product_Package</fullName>
+        <availableFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>This field set is used in the Product Package Add Debt modal for the Total Exposure UI.</description>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Exposure_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Package__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Original_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Available_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Add Debt Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Debt_Schedule</fullName>
+        <availableFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Available_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Debt_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Contact__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used to define the fields that are visible in the Debt Schedule found on the Underwriting route.</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Principal_Balance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Exclude__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Excluded_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Debt Schedule</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__TE_Expand_Debt_Product_Package</fullName>
+        <description>This fieldset displays additional debt information on the Total Exposure Product Package page.</description>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Total Exposure Expand Debt Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__TE_Expand_Debt_Relationship</fullName>
+        <description>This fieldset displays additional debt information on the Total Exposure Relationship page.</description>
+        <displayedFields>
+            <field>LLC_BI__Monthly_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Maturity_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Total Exposure Expand Debt Relationship</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Account_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional field to associate the account number with the creditor.</description>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account_Type_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the account type code, which indicates the type of loan made by the creditor to the borrower.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the account type code, which indicates the type of loan made by the creditor to the borrower.</inlineHelpText>
+        <label>Account Type Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the account to which this debt belongs.</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Debts</relationshipLabel>
+        <relationshipName>Debts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Available_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the amount available to borrow on the debt.</description>
+        <externalId>false</externalId>
+        <label>Available Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is the contact who has this debt.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Debts</relationshipLabel>
+        <relationshipName>Debts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Count_30_Days_Past_Due__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the number of times the borrower&apos;s payment was 30-59 days past due.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the number of times the borrower&apos;s payment was 30-59 days past due.</inlineHelpText>
+        <label>Count 30 Days Past Due</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Count_60_Days_Past_Due__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the number of times the borrower&apos;s payment was 60-89 days past due.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the number of times the borrower&apos;s payment was 60-89 days past due.</inlineHelpText>
+        <label>Count 60 Days Past Due</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Count_90_Days_Past_Due__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the number of times the borrower&apos;s payment was 90 or more days past due.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the number of times the borrower&apos;s payment was 90 or more days past due.</inlineHelpText>
+        <label>Count 90 Days Past Due</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Creditor_Industry_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the creditor industry code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the creditor industry code.</inlineHelpText>
+        <label>Creditor Industry Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Creditor_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the credit subscriber&apos;s member code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the credit subscriber&apos;s member code.</inlineHelpText>
+        <label>Creditor Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Current_Status_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the current status code, which indicates the current status of the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the current status code, which indicates the current status of the account.</inlineHelpText>
+        <label>Current Status Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Date_Of_Last_Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional date field with the date the borrower made their most recent monthly payment.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional date field with the date the borrower made their most recent monthly payment.</inlineHelpText>
+        <label>Date Of Last Payment</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Date_Opened__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional date field with the date the account was opened.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional date field with the date the account was opened.</inlineHelpText>
+        <label>Date Opened</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Debt_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and denotes the type of debt.</description>
+        <externalId>false</externalId>
+        <label>Debt Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly Auto/Lease Payments</fullName>
+                    <default>false</default>
+                    <label>Monthly Auto/Lease Payments</label>
+                </value>
+                <value>
+                    <fullName>Monthly Child Support Payments</fullName>
+                    <default>false</default>
+                    <label>Monthly Child Support Payments</label>
+                </value>
+                <value>
+                    <fullName>Monthly Credit Card Payments</fullName>
+                    <default>false</default>
+                    <label>Monthly Credit Card Payments</label>
+                </value>
+                <value>
+                    <fullName>Monthly Student Loan Payments</fullName>
+                    <default>false</default>
+                    <label>Monthly Student Loan Payments</label>
+                </value>
+                <value>
+                    <fullName>Other Monthly Installment</fullName>
+                    <default>false</default>
+                    <label>Other Monthly Installment</label>
+                </value>
+                <value>
+                    <fullName>Proposed Loan</fullName>
+                    <default>false</default>
+                    <label>Proposed Loan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Exclude__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field determines if this debt is excluded from total debt calculations.</description>
+        <externalId>false</externalId>
+        <label>Exclude</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Excluded_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is a short description of the reason why the debt was excluded from total calculations.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a short description of the reason why the debt was excluded from total calculations.</inlineHelpText>
+        <label>Excluded Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Exposure_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Users manually populate this optional text box. This field enables users to specify the exposure type when calculating exposure for a debt.</description>
+        <externalId>false</externalId>
+        <label>Exposure Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__High_Credit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional currency field with the highest amount ever owed on the account or the original balance.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional currency field with the highest amount ever owed on the account or the original balance.</inlineHelpText>
+        <label>High Credit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and represents the loan this debt is tied to.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Debts</relationshipLabel>
+        <relationshipName>Debts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maturity_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the date on which the debt matures.</description>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Monthly_Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and represents the amount paid on the debt every month.</description>
+        <externalId>false</externalId>
+        <label>Monthly Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Months_Reviewed__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional field with the number of months the borrower&apos;s payment history was reviewed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional field with the number of months the borrower&apos;s payment history was reviewed.</inlineHelpText>
+        <label>Months Reviewed</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__New_Debt__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional, admin-facing field auto-populates when a debt is created from a selected pricing option. It is used primarily for auditing purposes.</description>
+        <externalId>false</externalId>
+        <label>New Debt</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__New_Loan__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is true if the debt is for an Offer or if it came from a Credit Report</description>
+        <externalId>false</externalId>
+        <label>New Loan</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Original_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and specifies the full original amount of the loan. (If the loan is pending approval, this is the intended amount for the loan.)</description>
+        <externalId>false</externalId>
+        <label>Original Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Past_Due_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional currency field with the amount the borrower has past due on the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional currency field with the amount the borrower has past due on the account.</inlineHelpText>
+        <label>Past Due Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Payment_Pattern__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the borrower&apos;s payment pattern.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the borrower&apos;s payment pattern.</inlineHelpText>
+        <label>Payment Pattern</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Principal_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and represents the amount of principal remaining on the debt.</description>
+        <externalId>false</externalId>
+        <label>Principal Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Package__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This optional field automatically populates via the system once a new debt is created from a product package. This field associates which product package the debt belongs to.</description>
+        <externalId>false</externalId>
+        <label>Product Package</label>
+        <referenceTo>LLC_BI__Product_Package__c</referenceTo>
+        <relationshipLabel>Debts</relationshipLabel>
+        <relationshipName>Debts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Reported_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional field to indicate the date the creditor last reported the debt to the credit bureau.</description>
+        <externalId>false</externalId>
+        <label>Reported Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Terms_Duration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The system populates this optional text field with the term duration of the financial obligation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system populates this optional text field with the term duration of the financial obligation.</inlineHelpText>
+        <label>Terms Duration</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Debt</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__Account__c</columns>
+        <columns>LLC_BI__Contact__c</columns>
+        <columns>LLC_BI__Loan__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Debt Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Debts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

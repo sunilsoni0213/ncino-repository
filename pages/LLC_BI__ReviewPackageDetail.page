@@ -1,0 +1,18 @@
+<apex:page standardController="LLC_BI__Review__c" extensions="LLC_BI.ReviewDisplayController">
+	<apex:pageBlock mode="maindetail">
+		<apex:pageBlockSection columns="2">
+			<apex:repeat value="{!productPackageFieldSet}" var="fld">
+				<apex:pageBlockSectionItem rendered="{!IF(fld.fieldPath=='Name',false,true)}">
+					<apex:outputLabel value="{!fld.label}"/>
+					<apex:outputField value="{!productPackage[fld.fieldPath]}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem rendered="{!IF(fld.fieldPath=='Name',true,false)}">
+					<apex:outputLabel value="{!fld.label}"/>
+					<apex:outputLink value="/{!productPackage.id}" target="_parent" rendered="{!IF(fld.fieldPath=='Name',true,false)}">
+						{!productPackage.Name}
+					</apex:outputLink>
+				</apex:pageBlockSectionItem>
+			</apex:repeat>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:page>

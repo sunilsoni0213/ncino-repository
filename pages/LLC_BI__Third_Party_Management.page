@@ -1,0 +1,20 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+	<c:ThirdPartyManagementIncludes />
+	<c:ThirdPartyManagementConfiguration />
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<div id="ncThirdPartyManagement">
+						<nFORCE:DynamicTablePartials />
+						<c:ThirdPartyManagementPartials />
+						<nFORCE:ncScreenSectionFormBuilderPartials />
+						<nFORCE:ncDataTablePartials />
+						<c:ncAssociationCardPartial />
+						<third-party-management></third-party-management>
+					</div>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+</apex:page>

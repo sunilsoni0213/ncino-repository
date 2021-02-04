@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>A Checklist Template serves as a model used to create a Checklist for a particular record.</description>
+    <fields>
+        <fullName>LLC_BI__Context_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This required field contains the fully qualified name of the sObject type to which this Checklist Template pertains.  It should be copied to the Context Type field on Checklist records created from this template.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This required field contains the fully qualified name of the sObject type to which this Checklist Template pertains.  It should be copied to the Context Type field on Checklist records created from this template.</inlineHelpText>
+        <label>Context Type</label>
+        <length>60</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Context__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This required field contains the Context relationship.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This required field contains the Context relationship.</inlineHelpText>
+        <label>Context</label>
+        <referenceTo>LLC_BI__Context__mdt</referenceTo>
+        <relationshipLabel>Checklist Templates</relationshipLabel>
+        <relationshipName>Checklist_Template</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Expected_Duration_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional field contains the number of days expected to complete Checklists based on this model. It should be copied to the Expected Durations Days field on Checklist records created from this template.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This optional field contains the number of days expected to complete Checklists based on this model. It should be copied to the Expected Durations Days field on Checklist records created from this template.</inlineHelpText>
+        <label>Expected Duration Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Title__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This required field contains the user facing name of Checklists based on this model.  It should be copied to the Name field on Checklist records created from this template.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This required field contains the user facing name of Checklists based on this model.  It should be copied to the Name field on Checklist records created from this template.</inlineHelpText>
+        <label>Title</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Checklist Template</label>
+    <pluralLabel>Checklist Templates</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

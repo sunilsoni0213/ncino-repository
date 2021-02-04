@@ -1,0 +1,55 @@
+<apex:page standardController="nFORCE__Screen_Section__c" showHeader="false" sidebar="false"
+			  standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Animate />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders_bundle)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncPubsub, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncPubsub, 'services/PubsubService.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ngShared, 'services/EscapeService.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'application/app.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'controllers/sectionBuilderController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'services/screenResourceService.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'services/fieldSetButtonService.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/configurationComponent/configuration.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/hierarchyComponent/hierarchy.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/headerInputComponent/headerInput.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/filterInputComponent/filterInput.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/sortInputComponent/sortInput.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/uniqueInputComponent/uniqueInput.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/layoutSelectionComponent/layoutSelection.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/tabComponents/layoutTabComponent/layoutTab.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/tabComponents/headerTabComponent/headerTab.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/tabComponents/filterTabComponent/filterTab.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/tabComponents/uniqueTabComponent/uniqueTab.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/tabComponents/sortTabComponent/sortTab.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/fieldSetSelectionComponent/fieldSetSelection.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.ncSectionBuilder,
+		'components/fieldSetButtonsComponent/fieldSetButtons.component.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.ncSectionBuilder,
+		'animations/slide.animation.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.ncSectionBuilder,
+		'animations/buttonHover.animation.css')}" />
+
+	<c:SectionBuilderConfig />
+</apex:page>

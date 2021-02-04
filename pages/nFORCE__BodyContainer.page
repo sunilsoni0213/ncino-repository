@@ -1,0 +1,29 @@
+<apex:page controller="nFORCE.RouteController" standardStylesheets="false" showHeader="false" sideBar="false">
+	<c:Include_Messenger />
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" enableBS3Namespace="true" enableLifeCycleApp="true" runLifeCycleApp="false" includeIEHacks="false"/>
+	<c:Include_Design_System flavor="bs3" />
+	<c:Include_Design_System flavor="vf" />
+	<c:Include_Navigator />
+	<c:Define_UI_Framework_Labels />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+	<c:Include_AngularJS />
+
+	<c:Layout_Functions />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__layout_designer_bundle)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__message_handler_bundle)}" />
+
+	<div class="force slds">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="body-content">
+						<apex:include id="route-body" pageName="{!route.Body__c}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<c:Run_LifeCycleApp />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__bodyContainerScript)}" loadOnReady="true" />
+</apex:page>

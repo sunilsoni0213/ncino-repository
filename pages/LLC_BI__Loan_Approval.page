@@ -1,0 +1,216 @@
+<apex:page standardController="LLC_BI__Loan__c"
+	extensions="LLC_BI.LoanApprovalController"
+	action="{!continueToApprovalProcess}">
+
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'bootstrap.custom.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'lifecycle.js')}" />
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+	<nFORCE:Include_Navigator />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__navigator,
+		'services/ncNavigator.service.js')}" />
+
+	<script type="text/javascript">
+
+		var j$ = jQuery.noConflict();
+				j$(document).ready(function(){
+					j$('[id$=submit]').attr('class','btn btn-primary cmdButton btnDisabled');
+					j$('[id$=submitbutton]').attr('disabled','disabled');
+
+					function updateFormEnabled() {
+						j$('[id$=submit]').attr('class','btn btn-primary cmdButton');
+						j$('[id$=submitbutton]').removeAttr('disabled','');
+					}
+
+				j$("[id$=item]").change(updateFormEnabled);
+		});
+	</script>
+
+
+	<apex:outputPanel rendered="{!ISNULL($CurrentPage.parameters.app)}">
+
+	<apex:outputPanel layout="inline">
+		<h6>{!$Label.llc_bi__loan_approval_process}</h6>
+	</apex:outputPanel>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+
+				<apex:outputPanel rendered="{!approvalPage!='continue'}" >
+				<div class="alert alert-info" role="alert">{!$Label.llc_bi__approval_step_message}</div>
+				</apex:outputPanel>
+				<apex:pageMessages />
+				<br />
+				<apex:form rendered="{!approvalPage!='continue'}">
+
+
+					<apex:outputPanel rendered="{!approvalPage!='continue'}">
+					<div class="row form-group" style="margin-bottom: 20px">
+
+						<div class="col-xs-6">
+							<p rendered="{!approvalPage!='continue'}" for="item">{!$Label.Next_Approver}</p>
+						</div>
+					</div>
+					</apex:outputPanel>
+
+
+					<div class="row form-group" style="margin-bottom: 20px"
+						rendered="{!approvalPage!='continue'}">
+						<div class="col-xs-3" rendered="{!approvalPage!='continue'}">
+							<apex:actionRegion >
+								<apex:selectList styleClass="form-control" value="{!itemName}"
+									size="1" id="item">
+									<apex:selectOptions value="{!items}" />
+									<apex:actionSupport event="onchange" reRender="unames" />
+								</apex:selectList>
+							</apex:actionRegion>
+						</div>
+
+						<br/>
+						<div class="col-xs-3">
+							<apex:outputPanel id="unames"
+								rendered="{!approvalPage!='continue'}">
+								<apex:inputField value="{!dummySObject[dummyUserField]}"
+									required="true"
+									label="userSelector"
+									rendered="{!itemName=='User'}"
+									styleClass="form-control"
+									style="display:inline" />
+								<apex:selectList styleClass="form-control" value="{!queueName}"
+									size="1" id="queue" rendered="{!itemName=='Queue'}">
+									<apex:selectOptions value="{!queues}" />
+								</apex:selectList>
+							</apex:outputPanel>
+						</div>
+					</div>
+
+					<apex:commandButton styleClass="btn btn-primary cmdButton"
+						id="submit"
+						action="{!continueToApprovalWithManualUserIdWrapper}"
+						value="{!$Label.llc_bi__send_to_next_approver}"
+						rendered="{!approvalPage!='continue'}"
+						onComplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)" />
+
+				</apex:form>
+				<apex:outputPanel rendered="{!approvalPage=='continue'}">
+					<a class="btn btn-primary"
+						onclick="LifeCycle.Navigator.navigateToSObject('{!Loan__c.Id}')">
+						{!$Label.Back_to_loan}
+					</a>
+				</apex:outputPanel>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!!ISNULL($CurrentPage.parameters.app)}">
+		<apex:composition template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<apex:outputPanel layout="inline">
+					  {!$Label.llc_bi__loan_approval_process}
+				 </apex:outputPanel>
+			</apex:define>
+			<apex:define name="right" />
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+
+				<apex:outputPanel rendered="{!approvalPage!='continue'}" >
+				<div class="alert alert-info" role="alert">{!$Label.llc_bi__approval_step_message}</div>
+				</apex:outputPanel>
+				<apex:pageMessages />
+				<br />
+				<apex:form rendered="{!approvalPage!='continue'}">
+
+					<apex:outputPanel rendered="{!approvalPage!='continue'}">
+					<div class="row form-group" style="margin-bottom: 20px">
+
+						<div class="col-xs-6">
+							<p rendered="{!approvalPage!='continue'}" for="item">{!$Label.Next_Approver}</p>
+						</div>
+					</div>
+					</apex:outputPanel>
+
+
+					<div class="row form-group" style="margin-bottom: 20px"
+						rendered="{!approvalPage!='continue'}">
+						<div class="col-xs-3" rendered="{!approvalPage!='continue'}">
+							<apex:actionRegion >
+								<apex:selectList styleClass="form-control" value="{!itemName}"
+									size="1" id="item">
+									<apex:selectOptions value="{!items}" />
+									<apex:actionSupport event="onchange" reRender="unames" />
+								</apex:selectList>
+							</apex:actionRegion>
+						</div>
+
+						<div class="col-xs-3">
+							<apex:outputPanel id="unames"
+								rendered="{!approvalPage!='continue'}">
+								<apex:inputField value="{!dummySObject[dummyUserField]}"
+									required="true"
+									label="userSelector"
+									rendered="{!itemName=='User'}"
+									styleClass="form-control"
+									style="display:inline" />
+								<apex:selectList styleClass="form-control"
+									value="{!queueName}"
+									size="1"
+									id="queue"
+									rendered="{!itemName=='Queue'}">
+									<apex:selectOptions value="{!queues}" />
+								</apex:selectList>
+							</apex:outputPanel>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-xs-3"></div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-3">
+							<div class="row">
+								<apex:outputPanel id="out" rendered="{!approvalPage!='continue'}">
+									<div class="col-xs-6" id="submitbuttondiv">
+										<apex:commandButton id="submitbutton"
+											styleClass="btn btn-primary cmdButton"
+											action="{!continueToApprovalWithManualUserIdWrapper}"
+											value="{!$Label.llc_bi__send_to_next_approver}"
+											onComplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)"
+											/>
+									</div>
+								</apex:outputPanel>
+							</div>
+						</div>
+					</div>
+
+				</apex:form>
+				<apex:outputPanel rendered="{!approvalPage=='continue'}">
+					<a class="btn btn-primary"
+						onclick="LifeCycle.Navigator.navigateToSObject('{!Loan__c.Id}')">
+						{!$Label.Back_to_loan}
+					</a>
+				</apex:outputPanel>
+
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</apex:outputPanel>
+	<script>
+		function handleRedirect(retObj, retUrl) {
+			if (retObj !== null && retObj !== '') {
+				LifeCycle.Navigator.navigateToSObject(retObj);
+			} else if (retUrl !== null && retUrl !== '' ) {
+				LifeCycle.Navigator.navigateToURL(retUrl);
+			}
+		}
+	</script>
+</apex:page>

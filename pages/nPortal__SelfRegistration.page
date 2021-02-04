@@ -1,0 +1,75 @@
+<apex:page docType="html-5.0"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	controller="nPortal.SelfRegistrationController"
+	extensions="nPortal.LayoutController"
+	action="{!init}">
+
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<title>{!$Label.Self_Registration_Title}</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<apex:include pageName="nPortal__PortalIncludes" />
+			<c:OnlineApplicationIncludes />
+			<c:SelfRegistrationIncludes />
+			<c:SelfRegistrationDataService />
+			<c:LanguageDataService />
+			<c:PortalConfiguration />
+			<c:RecaptchaPartials />
+			<c:RecaptchaConfig />
+		</head>
+		<body class="portal-body slds has-nstyle portal-wrapper-full"
+			ng-app="onlineAppApp"
+			ng-controller="SelfRegisterController as vm"
+			n-style="pso-login-background">
+			<portal-loader slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-loader>
+			<portal-message slds-path="{!URLFOR($Resource.nFORCE__SLDS0102)}"></portal-message>
+
+			<apex:outputPanel layout="none" rendered="{!productId != null && isProductIdValid}">
+				<apex:include pageName="{!IF(isNull(layoutPage), 'LayoutHatteras', layoutPage)}" />
+			</apex:outputPanel>
+			<apex:outputPanel layout="none" rendered="{!productId == null || !isProductIdValid}">
+				<div class="portal-wrapper-full">
+					<div class="slds-grid slds-wrap">
+						<div class="portal-wrapper slds-size--1-of-1">
+							<c:PortalHeader />
+						</div>
+					</div>
+					<div class="portal-center-column slds-size--1-of-1
+						slds-medium-size--3-of-4 slds-large-size--2-of-4 slds-p-top--large">
+						<apex:include pageName="{!$Page.RegistrationForm}" />
+					</div>
+					<security-badges></security-badges>
+					<div class="push"></div>
+				</div>
+			</apex:outputPanel>
+
+			<c:PortalFooter />
+
+			<!-- Script Dependencies -->
+			<c:ApplicationTopbarService />
+			<c:ApplicationNavDataService />
+			<c:OnlineFormsDataService />
+			<c:SecurityBadgeDataService />
+			<c:TileDataService />
+			<c:SearchDataService />
+			<c:OwnersDataService />
+			<c:LoanTeamPanel />
+			<c:EidVerificationService />
+			<c:FundingDataService />
+			<c:DocumentDataService />
+			<c:TransactionLogDataService />
+			<c:CollateralDataService />
+			<c:AncillaryServicesDataService />
+			<c:PollingDataService />
+			<c:PasswordDataService />
+			<c:PortalUserService />
+			<!-- /Script Dependencies -->
+		</body>
+	</html>
+</apex:page>

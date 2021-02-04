@@ -1,0 +1,60 @@
+<apex:component layout="none" controller="csaProductPackageClaimSystemController">
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'jquery/js/jquery.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__lifecycle_app)}" />
+
+    <nFORCE:ncDataProvidersIncludes />
+    <nFORCE:ncUIIncludes />
+    <nFORCE:Include_Chosen />
+    <nFORCE:Include_Design_System flavor="vf"/>
+    <c:csaClaimUtilityIncludes />
+    <nFORCE:Include_Font_Awesome />
+    <nFORCE:ncModal />
+
+    <apex:stylesheet value="{!URLFOR($Resource.csaProductPackageClaimSystem, 'assets/css/Styles.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaProductPackageClaimSystem, 'application/App.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaProductPackageClaimSystem, 'application/Bootstrap.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaProductPackageClaimSystem, 'controllers/ProductPackageClaimSystem.controller.js')}"/>
+
+    <script type="text/javascript">
+    (function () {
+        'use strict';
+        angular.module('csaProductPackageClaimSystem').config(function (configProvider, labelProvider) {
+            configProvider.set({
+                images: {
+                    deskImage: '{!URLFOR($Resource.nFORCE__design_system, "assets/icons/custom/custom33_60.png")}'
+                },
+                actions: {
+                    getUsers: '{!$RemoteAction.csaProductPackageClaimSystemController.getUsers}',
+                    getRoles: '{!$RemoteAction.csaProductPackageClaimSystemController.getRoles}',
+                    getProductPackages: '{!$RemoteAction.csaProductPackageClaimSystemController.getProductPackages}',
+                    claimProductPackages: '{!$RemoteAction.csaProductPackageClaimSystemController.claimProductPackages}',
+                    getHeaders: '{!$RemoteAction.csaProductPackageClaimSystemController.getHeaders}',
+                    getFieldValueName: '{!$RemoteAction.csaProductPackageClaimSystemController.getFieldValueName}'
+                },
+                parameters: {
+                    currentUser: '{!$User.Id}',
+                    returnURL: '{!$CurrentPage.parameters.retURL}'
+                }
+            });
+            labelProvider.setLabels({
+                claim_pp_title: '{!$Label.PPCS_Title}',
+                claim_pp_subtitle: '{!$Label.PPCS_SubTitle}',
+                select_user_role: '{!$Label.CS_Select_User_Role}',
+                select_user: '{!$Label.CS_Select_User}',
+                select_role: '{!$Label.CS_Select_Role}',
+                selected_PPs: '{!$Label.PPCS_Selected_Loans}',
+                cancel: '{!$Label.CS_Cancel}',
+                claim: '{!$Label.CS_Claim}',
+                select_a_role: '{!$Label.CS_Select_a_Role}',
+                select_a_user: '{!$Label.CS_Select_a_User}',
+                loading_message: '{!$Label.PPCS_Loading_Message}',
+                redirectMessage: '{!$Label.PPCS_Redirect_Message}',
+                queueMissMatchMessage: '{!$Label.PPCS_Queue_Miss_Match}',
+                noRowsFound: '{!$Label.PPCS_No_Rows_Found}',
+                noPPsError: '{!$Label.PPCS_No_Loans_Error}'
+            });
+        });
+    })();
+    </script>
+</apex:component>

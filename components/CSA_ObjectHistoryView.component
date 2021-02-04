@@ -1,0 +1,128 @@
+<apex:component layout="none" controller="CSA_ObjectHistoryController"> 
+
+    <style type="text/css">
+        .table-wrapper {
+            max-height: 500px;
+            min-height: 400px;
+            overflow: auto;
+        }
+
+        .chosen-container {
+            margin-bottom: 25px;
+        }
+
+        .slds-select_container:after {
+            bottom: 35px !important;
+        }
+    </style> 
+    <div class="table-wrapper">
+        
+        <apex:form id="myForm">
+               <apex:actionstatus id="paging" onstart="paging(true)" onstop="paging(false)" />
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+            <thead>
+            <tr class="slds-text-title--caps">
+                <th scope="col">
+                    <div class="slds-truncate">Date</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate">User</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate">Action</div>
+                </th> 
+            </tr>
+            </thead>
+            <tbody>
+                
+                <apex:repeat value="{!recordList}" id="recordView" var="currRecord">
+                    <tr class="record">
+                        <td data-label="CreatedDate">
+                            <div class="slds-truncate"><apex:outputField value=" {!currRecord['CreatedDate']}"/></div>
+                        </td>
+                        <td data-label="CreatedById">
+                            <div class="slds-truncate">{!currRecord['CreatedBy.Name']}</div>
+                        </td> 
+                        
+  
+                            <td data-label="Action">
+                                <div class="slds-cell-wrap">
+                                
+                                <apex:outputText value="Record {!currRecord['Field']}." rendered="{!(currRecord['NewValue']=='')}" />
+                                <apex:outputText value="Changed <b>{!fieldLabels[currRecord['Field']]}</b>" escape="false" rendered="{!(currRecord['NewValue']!='')}" />
+                                
+                                <apex:outputText value=" from" rendered="{!currRecord['OldValue'] != ''}" />
+
+                                 <b>
+                                    <apex:outputField value=" {!currRecord['OldValue']}" rendered="{!(currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] != 'date' && fieldTypes[currRecord['Field']] != 'currency' && fieldTypes[currRecord['Field']] != 'decimal' && fieldTypes[currRecord['Field']] != 'percent')}"/>
+                                 
+                                    <apex:outputText value="{0,number,000,000}" rendered="{!(currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] == 'decimal' && fieldScales[currRecord['Field']] == 0)}">
+                                        <apex:param value="{!recordOldValues[currRecord['Id']]}" />
+                                    </apex:outputText>
+                                    <apex:outputText value="{0,number,000,000.000}" rendered="{!(currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] == 'decimal' && fieldScales[currRecord['Field']] > 0)}">
+                                        <apex:param value="{!recordOldValues[currRecord['Id']]}" />
+                                    </apex:outputText>
+                                    <apex:outputText value="{0,number,0}%" rendered="{!(currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] == 'percent' && fieldScales[currRecord['Field']] == 0)}">
+                                        <apex:param value="{!recordOldValues[currRecord['Id']]}" />
+                                    </apex:outputText>
+                                    <apex:outputText value="{0,number,0.000}%" rendered="{!(currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] == 'percent' && fieldScales[currRecord['Field']] >= 0)}">
+                                        <apex:param value="{!recordOldValues[currRecord['Id']]}" />
+                                    </apex:outputText>
+                                    <apex:outputText value="{0,number,$###,###.00}" rendered="{!((currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] == 'currency'))}">
+                                        <apex:param value="{!recordOldValues[currRecord['Id']]}" />
+                                    </apex:outputText>
+                                    <apex:outputText value="{0,date,dd/MM/yyyy}" rendered="{!((currRecord['OldValue'] != '') && (fieldTypes[currRecord['Field']] == 'date'))}">
+                                        <apex:param value="{!recordOldValues[currRecord['Id']]}" />
+                                    </apex:outputText>
+                                 </b> <apex:outputText value="to" rendered="{!(currRecord['NewValue']!='')}" /> <b>
+                                    <apex:outputField value=" {!currRecord['NewValue']}" 
+                                                      rendered="{!(currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] != 'date' && fieldTypes[currRecord['Field']] != 'currency' && fieldTypes[currRecord['Field']] != 'decimal' && fieldTypes[currRecord['Field']] != 'percent')}"
+                                                      /><apex:outputText value="{0,number,000,000}" rendered="{!(currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] == 'decimal' && fieldScales[currRecord['Field']] == 0)}">
+                                        <apex:param value="{!recordNewValues[currRecord['Id']]}" />
+                                    </apex:outputText><apex:outputText value="{0,number,000,000.00}" rendered="{!(currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] == 'decimal' && fieldScales[currRecord['Field']] > 0)}">
+                                        <apex:param value="{!recordNewValues[currRecord['Id']]}" />
+                                    </apex:outputText><apex:outputText value="{0,number,0}%" rendered="{!(currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] == 'percent' && fieldScales[currRecord['Field']] == 0)}">
+                                        <apex:param value="{!recordNewValues[currRecord['Id']]}" />
+                                    </apex:outputText><apex:outputText value="{0,number,0.000}%" rendered="{!(currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] == 'percent' && fieldScales[currRecord['Field']] >= 0)}">
+                                        <apex:param value="{!recordNewValues[currRecord['Id']]}" />
+                                    </apex:outputText><apex:outputText value="{0,number,$###,###.00}" rendered="{!((currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] == 'currency'))}">
+                                        <apex:param value="{!recordNewValues[currRecord['Id']]}" />
+                                    </apex:outputText><apex:outputText value=" {!recordNewValues[currRecord['Id']]}" rendered="{!((currRecord['NewValue'] != '') && (fieldTypes[currRecord['Field']] == 'date'))}" /></b><apex:outputText value="." rendered="{!(currRecord['NewValue']!='')}" /></div>
+                            </td>  
+                            
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table> 
+             <div align="right" style="padding:25px;"> 
+            <apex:commandButton styleClass="btn btn-primary" action="{!PreviousPage}" title="Previous" value="<< Previous" rendered="{!displayPrevious}" reRender="myForm" status="paging" /> 
+            <apex:commandButton styleClass="btn btn-primary" action="{!NextPage}" title="Next" value="Next >>" rendered="{!displayNext}" reRender="myForm" status="paging"  />
+            </div> 
+             
+        </apex:form>
+
+
+    </div>
+
+    <script type="text/javascript">
+         jQuery(function() {
+                if('{!errorMessage}' != '') {
+                    jQuery('#errorMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-danger">{!errorMessage}</label>');
+                    setTimeout(function() {
+                        jQuery(".alert-danger").remove();
+                    },10000);
+                }
+            });
+
+         function paging(val) {
+                if(val) {
+                    window.LifeCycle.blockUI();
+                } else {
+                    window.LifeCycle.unblockUI();
+                }
+            }
+
+
+
+    </script> 
+</apex:component>

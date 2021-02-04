@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+	<nFORCE:Include_Navigator />
+	<script>
+		var url = '/apex/llc_bi__product_creation?app=dep-pc.pc-product-selection&id={!Account.Id}';
+		LifeCycle.Navigator.navigateToRoute(url);
+	</script>
+</apex:page>

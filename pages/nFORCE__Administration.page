@@ -1,0 +1,17 @@
+<apex:page docType="html-5.0" sidebar="false" controller="nFORCE.AdministrationController">
+	<apex:composition template="nFORCE__Template_Base">
+	<apex:define name="topbar">
+		<apex:include pageName="{!IF(isNull(route.Topbar__c),'nFORCE__InvalidRouteConfiguration',route.Topbar__c)}" />
+	</apex:define>
+	<apex:define name="navigation">
+		<apex:include pageName="{!IF(isNull(route.Navigation__c),'nFORCE__InvalidRouteConfiguration',route.Navigation__c)}" />
+	</apex:define>
+	<apex:define name="subNavigation">
+		<apex:include pageName="{!IF(isNull(route.Sub_Navigation__c),'nFORCE__InvalidRouteConfiguration',route.Sub_Navigation__c)}" />
+	</apex:define>
+	<apex:define name="body">
+		<apex:include pageName="{!IF(isNull(route.Body__c),'nFORCE__InvalidRouteConfiguration',route.Body__c)}" />
+	</apex:define>
+	</apex:composition>
+
+</apex:page>

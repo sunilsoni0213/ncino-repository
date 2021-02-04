@@ -1,0 +1,7 @@
+<apex:page >
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:include pageName="LLC_BI__Search_Entity" />
+		</apex:define>
+	</apex:composition>
+</apex:page>

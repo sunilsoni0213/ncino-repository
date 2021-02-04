@@ -1,0 +1,21 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+
+    <nFORCE:Internationalize />
+    <nFORCE:Include_Design_System components="true" />
+    <apex:slds />
+
+    <c:OffersConfiguration />
+
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div id="ncOffers" class="slds-scope">
+                        <offers></offers>
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+
+</apex:page>

@@ -1,0 +1,4 @@
+<apex:page standardController="LLC_BI__Loan__c" 
+    extensions="LLC_BI.LoanButtonController"
+    action="{!renewLoanButton}">
+</apex:page>

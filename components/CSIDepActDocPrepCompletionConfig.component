@@ -1,0 +1,23 @@
+<apex:component id="CSIDepActDocPrepCompletionConfig"
+                controller="CSIDepActDocPrepCompletionController">
+
+    <script>
+        (function(){
+            'use strict';
+            angular.module('ncDataProviders')
+            .config(function(configProvider){
+                configProvider.set({
+                    anchorText: "{!JSINHTMLENCODE(anchorText)}",
+                    anchorSrc: "{!URLFOR($Resource.nFORCE__design_system,$Label.nfuse__docprep_deposit_icon_path)}"
+                });
+            })
+            .config(function(labelProvider){
+               labelProvider.setLabels({
+                   Anchor_Src: "{!URLFOR($Resource.nFORCE__SLDS0102, $Label.nfuse__docprep_deposit_icon_path)}",
+                   Anchor_Background: '{!$Label.nfuse__docprep_deposit_icon_background}'
+               });
+            });
+        })();
+    </script>
+
+</apex:component>

@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Covenant Object contains information about loan covenants that can be related to a relationship or a contact</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CM_Covenants_L</fullName>
+        <description>Credit Memo: Standard Loan Credit Memo
+                    Screen Section: Covenants
+                    Object: Covenants</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Next_Evaluation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Covenants - L</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CM_Covenants_PP</fullName>
+        <description>Credit Memo: Standard Product Package Credit Memo
+                    Screen Section: Covenants
+                    Object: Covenants</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Next_Evaluation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Covenants - PP</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CM_Covenants_PPRV</fullName>
+        <description>Credit Memo: Standard Product Package Review Credit Memo
+                    Screen Section: Covenants
+                    Object: Covenants</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Next_Evaluation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Covenants - PPRV</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CM_Covenants_RRV</fullName>
+        <description>Credit Memo: Standard Relationship Review Credit Memo
+                    Screen Section: Covenants
+                    Object: Covenants</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Next_Evaluation_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CM - Covenants - RRV</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSiDP__CSI_Comm_DocPrep</fullName>
+        <description>CSI Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSI_Comm_DocPrep</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Covenant_Credit_Memo_Field_Set</fullName>
+        <description>for credit memos.</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Sub_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Relationship_text2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Covenant Credit Memo Field Set</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Covenants</fullName>
+        <description>Deal Facility Credit Memo</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Relationship_text2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Sub_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Covenants</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Lookup_Fields</fullName>
+        <description>Generic field set for UI integration</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Lookup Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PrecisionLender_Pricing</fullName>
+        <description>PrecisionLender Pricing Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PrecisionLender Pricing</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Snapshot_Covenant</fullName>
+        <description>Snapshot on Loan</description>
+        <displayedFields>
+            <field>LLC_BI__Covenant_Type_Reference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Frequency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Snapshot Covenant</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WKEDP__Expere_Comm_DocPrep</fullName>
+        <description>Expere Commercial Document Preparation Fields</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Expere_Comm_DocPrep</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated when a covenant is created through the loan, otherwise it is automatically populated. It identifies the relationship associated with the covenant record and is automatically populated when creating a new covenant record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account that the Covenant applies to.</inlineHelpText>
+        <label>Relationship</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Covenants</relationshipLabel>
+        <relationshipName>Covenants</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This defaults to false. Active indicator for the covenant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the Covenant active?</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The (optional) contact that this Covenant relates to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact to which this Covenant applies.</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Covenants</relationshipLabel>
+        <relationshipName>Covenants</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Covenant_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It allows users to enter a Name (description) for the Covenant record. This field is no longer recommended for use.</description>
+        <externalId>false</externalId>
+        <label>Covenant Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Covenant_Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated; use Covenant_Type_Reference__c</description>
+        <externalId>false</externalId>
+        <label>-D Covenant Sub Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>LLC_BI__Covenant_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Personal Tax Return</fullName>
+                    <default>false</default>
+                    <label>Personal Tax Return</label>
+                </value>
+                <value>
+                    <fullName>Personal Financial Statement</fullName>
+                    <default>false</default>
+                    <label>Personal Financial Statement</label>
+                </value>
+                <value>
+                    <fullName>Business Financial Statement</fullName>
+                    <default>false</default>
+                    <label>Business Financial Statement</label>
+                </value>
+                <value>
+                    <fullName>Lease Information</fullName>
+                    <default>false</default>
+                    <label>Lease Information</label>
+                </value>
+                <value>
+                    <fullName>Debt Service Coverage of Borrower</fullName>
+                    <default>false</default>
+                    <label>Debt Service Coverage of Borrower</label>
+                </value>
+                <value>
+                    <fullName>Debt Service Coverage with and without Distributions</fullName>
+                    <default>false</default>
+                    <label>Debt Service Coverage with and without Distributions</label>
+                </value>
+                <value>
+                    <fullName>Global Debt Service Coverage</fullName>
+                    <default>false</default>
+                    <label>Global Debt Service Coverage</label>
+                </value>
+                <value>
+                    <fullName>Minimum Working Capital Ratio</fullName>
+                    <default>false</default>
+                    <label>Minimum Working Capital Ratio</label>
+                </value>
+                <value>
+                    <fullName>Maximum Debt to Worth</fullName>
+                    <default>false</default>
+                    <label>Maximum Debt to Worth</label>
+                </value>
+                <value>
+                    <fullName>Accounts Payable</fullName>
+                    <default>false</default>
+                    <label>Accounts Payable</label>
+                </value>
+                <value>
+                    <fullName>Key Man Life Insurance</fullName>
+                    <default>false</default>
+                    <label>Key Man Life Insurance</label>
+                </value>
+                <value>
+                    <fullName>Maintain Accounts</fullName>
+                    <default>false</default>
+                    <label>Maintain Accounts</label>
+                </value>
+                <value>
+                    <fullName>Minimum Liquidity</fullName>
+                    <default>false</default>
+                    <label>Minimum Liquidity</label>
+                </value>
+                <value>
+                    <fullName>Limiting Compensation</fullName>
+                    <default>false</default>
+                    <label>Limiting Compensation</label>
+                </value>
+                <value>
+                    <fullName>Minimum Working Capital</fullName>
+                    <default>false</default>
+                    <label>Minimum Working Capital</label>
+                </value>
+                <value>
+                    <fullName>Minimum Current Ratio</fullName>
+                    <default>false</default>
+                    <label>Minimum Current Ratio</label>
+                </value>
+                <value>
+                    <fullName>Minimum Times Interest Earned</fullName>
+                    <default>false</default>
+                    <label>Minimum Times Interest Earned</label>
+                </value>
+                <value>
+                    <fullName>Fixed Asset Purchases</fullName>
+                    <default>false</default>
+                    <label>Fixed Asset Purchases</label>
+                </value>
+                <value>
+                    <fullName>Collateral Insurance</fullName>
+                    <default>false</default>
+                    <label>Collateral Insurance</label>
+                </value>
+                <value>
+                    <fullName>Business Tax Return</fullName>
+                    <default>false</default>
+                    <label>Business Tax Return</label>
+                </value>
+                <value>
+                    <fullName>Flood Insurance</fullName>
+                    <default>false</default>
+                    <label>Flood Insurance</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Financial Statement Requirements</controllingFieldValue>
+                <valueName>Personal Tax Return</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Statement Requirements</controllingFieldValue>
+                <valueName>Personal Financial Statement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Statement Requirements</controllingFieldValue>
+                <valueName>Business Financial Statement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Statement Requirements</controllingFieldValue>
+                <valueName>Lease Information</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Statement Requirements</controllingFieldValue>
+                <valueName>Business Tax Return</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Debt Service Coverage of Borrower</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Debt Service Coverage with and without Distributions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Global Debt Service Coverage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Minimum Working Capital Ratio</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Maximum Debt to Worth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Accounts Payable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Minimum Liquidity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Limiting Compensation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Minimum Working Capital</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Minimum Current Ratio</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Minimum Times Interest Earned</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Indicators</controllingFieldValue>
+                <valueName>Fixed Asset Purchases</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Default Covenants</controllingFieldValue>
+                <valueName>Key Man Life Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Default Covenants</controllingFieldValue>
+                <valueName>Maintain Accounts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Default Covenants</controllingFieldValue>
+                <valueName>Collateral Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Default Covenants</controllingFieldValue>
+                <valueName>Flood Insurance</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Covenant_Type_Reference__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. It identifies the Covenant Type associated with the Covenant Record and is populated automatically when creating a new Covenant record.</description>
+        <externalId>false</externalId>
+        <label>Covenant Type</label>
+        <referenceTo>LLC_BI__Covenant_Type__c</referenceTo>
+        <relationshipLabel>Covenants</relationshipLabel>
+        <relationshipName>Covenants</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Covenant_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated; use Covenant_Type_Reference__c</description>
+        <externalId>false</externalId>
+        <label>-D Covenant Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Financial Statement Requirements</fullName>
+                    <default>false</default>
+                    <label>Financial Statement Requirements</label>
+                </value>
+                <value>
+                    <fullName>Financial Indicators</fullName>
+                    <default>false</default>
+                    <label>Financial Indicators</label>
+                </value>
+                <value>
+                    <fullName>Default Covenants</fullName>
+                    <default>false</default>
+                    <label>Default Covenants</label>
+                </value>
+                <value>
+                    <fullName>Term Covenants</fullName>
+                    <default>false</default>
+                    <label>Term Covenants</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Days_Past_Next_Evaluation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is automatically calculated. Number of days past the Next Evaluation Date. If Today is not past the evaluation date, then this returns 0.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Next_Evaluation_Date__c) || (Today() - LLC_BI__Next_Evaluation_Date__c &lt;= 0), Null , (Today() - LLC_BI__Next_Evaluation_Date__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of days past the Next Evaluation Date</inlineHelpText>
+        <label>Days Past Next Evaluation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Days_Until_Next_Evaluation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is automatically calculated. Number of days until the Next Evaluation Date. If Today is not before the next evaluation date, then this returns 0.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(LLC_BI__Next_Evaluation_Date__c)||(LLC_BI__Next_Evaluation_Date__c - Today() &lt; 0),Null,(LLC_BI__Next_Evaluation_Date__c-Today()))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of days until the Next Evaluation Date</inlineHelpText>
+        <label>Days Until Next Evaluation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Financial_Indicator_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The value that&apos;s being confirmed with the financial indicator covenant. IE: DSC of  at least 1.25</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The value that&apos;s being confirmed with the financial indicator covenant. IE: DSC of  at least 1.25</inlineHelpText>
+        <label>Financial Indicator Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Frequency_Months__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated via a formula. It automatically translates the Covenant Frequency into a numeric number (e.g., Annually = 12).</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(LLC_BI__Frequency__c, &apos;Annually&apos;), 12,
+IF(ISPICKVAL(LLC_BI__Frequency__c, &apos;Quarterly&apos;), 3,
+IF(ISPICKVAL(LLC_BI__Frequency__c, &apos;Semi-Annually&apos;), 6,
+IF(ISPICKVAL(LLC_BI__Frequency__c, &apos;Every 2 Months&apos;),2,
+IF(ISPICKVAL(LLC_BI__Frequency__c, &apos;Monthly&apos;),1,0)))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Frequency Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. Frequency that a covenant is to be tested.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Frequency</inlineHelpText>
+        <label>Frequency</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Semi-Annually</fullName>
+                    <default>false</default>
+                    <label>Semi-Annually</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Every 2 Months</fullName>
+                    <default>false</default>
+                    <label>Every 2 Months</label>
+                </value>
+                <value>
+                    <fullName>Every 2 Years</fullName>
+                    <default>false</default>
+                    <label>Every 2 Years</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Last_Evaluation_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically populated whenever covenant compliance records are updated to Approved. It identifies the last date that a Covenant record was reviewed.</description>
+        <externalId>false</externalId>
+        <label>Last Evaluation Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Last_Evaluation_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated. Last Evaluation Status populated from the Covenant Compliance record</description>
+        <externalId>false</externalId>
+        <label>Last Evaluation Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan that &apos;owns&apos; the Covenants</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Loan that the Covenant is related to.</inlineHelpText>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Covenants</relationshipLabel>
+        <relationshipName>Covenants</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Next_Evaluation_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is initially manually populated, but afterward, it is automatically populated whenever covenant compliance records are updated to Approved. It identifies the next date that a Covenant record should be reviewed.</description>
+        <externalId>false</externalId>
+        <label>Next Evaluation Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It is a text field which allows users to enter additional notes or information related to the covenant record.</description>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Relationship_text2__c</fullName>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Account__r.Name</formula>
+        <label>Associated Relationship</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Covenant</label>
+    <nameField>
+        <displayFormat>COV-{00000000}</displayFormat>
+        <label>Covenant Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Covenants</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Financial_Indicator_Enforcement</fullName>
+        <active>true</active>
+        <description>If the financial requirement / indicator type is selected, force a value in financial indicator field.</description>
+        <errorConditionFormula>IF(AND(ISPICKVAL( LLC_BI__Covenant_Type__c , &quot;Financial Indicators&quot;), ISNULL(LLC_BI__Financial_Indicator_Value__c)), True, False)</errorConditionFormula>
+        <errorMessage>If the covenant type is a financial indicator, you must specify the financial indicator value.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Multiple_Covenants</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Multiple Covenants</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/MultipleCovenants?loanId={!LLC_BI__Loan__c.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,261 @@
+<apex:page controller="LLC_BI.ApprovalRequestController">
+
+	<nFORCE:Includes enableBS3Namespace="true" />
+	<nFORCE:Include_Design_System flavor="vf" />
+	<nFORCE:Include_Design_System flavor="bs3" />
+
+	<div class="force slds"><div class="container-fluid ui-container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 top-bar">
+					<div class="col-xs-4 col-md-6 top-bar-heading" role="banner">
+					{!contextObject.Name} {!$Label.Approval_Request}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="col-xs-4 col-md-6 slds-m-bottom--medium slds-m-top--medium" style="text-transform: uppercase;font-size:12px" role="banner">
+						<nav role="navigation" aria-label="Breadcrumbs">
+							<ol class="slds-breadcrumb slds-list--horizontal">
+								<li class="slds-breadcrumb__item slds-text-title--caps"><a href="/{!contextObject.Id}">{!contextObject.Name}</a></li>
+								<li class="slds-breadcrumb__item slds-text-title--caps"><a href="javascript:void(0);">{!$Label.Approval_Request}</a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="body-content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 col-single">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xs-12 content-heading">
+									<div class="visible-md visible-lg pull-left content-heading-left">
+										<apex:outputPanel rendered="{!!showReassign}">
+											<span>{!$Label.llc_bi__approve_reject} {!$Label.llc_bi__approval_request}</span>
+										</apex:outputPanel>
+										<apex:outputPanel rendered="{!showReassign}">
+											<span>Reassign {!$Label.llc_bi__approval_request}</span>
+										</apex:outputPanel>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<apex:outputPanel layout="none" id="reassignPanel" rendered="{!showReassign}">
+				<apex:form >
+					<apex:pageMessages />
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 col-single">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-sm-12 col-wrapper">
+											<div class="row view-container">
+												<div class="col-md-12">
+													<div class="row form-group">
+														<div class="col-md-6">
+															<div class="row">
+																<div class="col-sm-4 content-label">{!$ObjectType.LLC_BI__Product_Package__c.fields.Name.Label}</div>
+																<div class="col-sm-6 content-body">{!contextObject.Name}</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="row">
+																<div class="col-sm-4 content-label">{!$ObjectType.LLC_BI__Product_Package__c.fields.OwnerId.Label}</div>
+																<div class="col-sm-6 content-body">{!contextObject.Owner.Name}</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-4 content-label">Assigned Approver</div>
+																<div class="col-sm-6 content-body">{!assignedUSer.Name}</div>
+															</div>
+														</div>
+													</div>
+													<div class="row form-group">
+															<div class="col-md-6">
+																<div class="row slds-m-top--medium">
+																	<div class="col-md-2">Next Approver</div>
+																	<div class="col-md-3">
+																		<apex:actionRegion >
+																			<apex:selectList styleClass="form-control" value="{!itemName}" size="1" id="item">
+																				<apex:selectOption itemValue="" itemLabel="{!$Label.llc_bi__select_one}"/>
+																				<apex:selectOption itemValue="{!$Label.llc_bi__queue}" itemLabel="{!$Label.llc_bi__queue}"/>
+																				<apex:selectOption itemValue="{!$Label.llc_bi__user}" itemLabel="{!$Label.llc_bi__user}"/>
+																				<apex:actionSupport event="onchange" reRender="unames,reassignApproverSubmit" />
+																			</apex:selectList>
+																		</apex:actionRegion>
+																	</div>
+																	<div class="col-md-7">
+																		<apex:outputPanel id="unames">
+																			<apex:inputField value="{!dummySObject[dummyUserField]}"
+																				required="true"
+																				label="userSelector"
+																				rendered="{!itemName=='User'}"
+																				styleClass="form-control" />
+																			<apex:actionSupport event="onchange" reRender="reassignApproverSubmit" />
+																			<apex:selectList styleClass="form-control"
+																				value="{!nextApproverId}"
+																				size="1"
+																				id="queue"
+																				rendered="{!itemName=='Queue'}">
+																				<apex:selectOptions value="{!queues}" />
+																				<apex:actionSupport event="onchange" reRender="reassignApproverSubmit" />
+																			</apex:selectList>
+																		</apex:outputPanel>
+																	</div>
+																</div>
+															</div>
+														</div>
+													<div class="row form-group">
+														<div class="col-md-6">
+															<apex:commandButton Id="reassignApproverSubmit"
+																reRender="reassignPanel"
+																styleClass="btn btn-sm btn-primary"
+																action="{!reassignApprover}"
+																value="Reassign"
+																disabled="{!If(AND(ISBLANK(nextApproverId),ISBLANK(dummySObject[dummyUserField])), true, false)}"/>
+															<a href="/{!contextObject.Id}">
+																{!$Label.llc_bi__button_cancel}
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</apex:form>
+
+			</apex:outputPanel>
+			<apex:outputPanel layout="none" id="mainPanel" rendered="{!!showReassign}">
+			<apex:form >
+				<apex:outputPanel layout="none" rendered="{!!manualStep}">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 col-single">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-12 col-wrapper">
+										<div class="row view-container">
+											<div class="col-md-12">
+												<apex:pageMessages />
+												<div class="row form-group">
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-sm-4 content-label">{!$ObjectType.LLC_BI__Product_Package__c.fields.Name.Label}</div>
+															<div class="col-sm-6 content-body">{!contextObject.Name}</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-sm-4 content-label">{!$ObjectType.LLC_BI__Product_Package__c.fields.OwnerId.Label}</div>
+															<div class="col-sm-6 content-body">{!contextObject.Owner.Name}</div>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-sm-4 content-label">{!$Label.llc_bi__comments}</div>
+															<div class="col-sm-6 content-body"><apex:inputTextarea value="{!comments}" styleClass="slds-textarea"/></div>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-6">
+														<apex:commandButton reRender="mainPanel" styleClass="btn btn-sm btn-primary" action="{!approveRequest}"
+																				  value="{!$Label.llc_bi__approve}"/>
+														<apex:commandButton styleClass="btn btn-sm btn-danger" action="{!rejectRequest}" value="{!$Label.llc_bi__reject}"/>
+														<a href="/{!contextObject.Id}">{!$Label.llc_bi__button_cancel}</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</apex:outputPanel>
+				<apex:outputPanel layout="none" rendered="{!manualStep}">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 col-single">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-sm-12 col-wrapper">
+											<div class="row view-container">
+												<div class="col-md-12">
+													<apex:pageMessages />
+													<div class="row form-group">
+														<div class="col-md-6">
+															<div class="alert alert-info" role="alert">{!$Label.llc_bi__approval_step_message}</div>
+															<div class="row slds-m-top--medium">
+																<div class="col-md-2">Next Approver</div>
+																<div class="col-md-3">
+																	<apex:actionRegion >
+																		<apex:selectList styleClass="form-control" value="{!itemName}" size="1" id="item">
+																			<apex:selectOption itemValue="" itemLabel="{!$Label.llc_bi__select_one}"/>
+																			<apex:selectOption itemValue="{!$Label.llc_bi__queue}" itemLabel="{!$Label.llc_bi__queue}"/>
+																			<apex:selectOption itemValue="{!$Label.llc_bi__user}" itemLabel="{!$Label.llc_bi__user}"/>
+																			<apex:actionSupport event="onchange" reRender="unames,nextApproverSubmit" />
+																		</apex:selectList>
+																	</apex:actionRegion>
+																</div>
+																<div class="col-md-7">
+																	<apex:outputPanel id="unames">
+																		<apex:inputField value="{!dummySObject[dummyUserField]}"
+																			required="true"
+																			label="userSelector"
+																			rendered="{!itemName=='User'}"
+																			styleClass="form-control" />
+																		<apex:actionSupport event="onchange" reRender="nextApproverSubmit" />
+																		<apex:selectList styleClass="form-control"
+																			value="{!nextApproverId}"
+																			size="1"
+																			id="queue"
+																			rendered="{!itemName=='Queue'}">
+																			<apex:selectOptions value="{!queues}" />
+																			<apex:actionSupport event="onchange" reRender="nextApproverSubmit" />
+																		</apex:selectList>
+																	</apex:outputPanel>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row form-group">
+														<div class="col-md-6">
+															<apex:commandButton id="nextApproverSubmit"
+																styleClass="btn btn-sm btn-primary"
+																action="{!approveRequestSetNextApprover}"
+																value="{!$Label.llc_bi__send_to_next_approver}"
+																disabled="{!If(AND(ISBLANK(nextApproverId),ISBLANK(dummySObject[dummyUserField])), true, false)}" />
+															<a href="/{!contextObject.Id}">Cancel</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</apex:outputPanel>
+			</apex:form>
+			</apex:outputPanel>
+		</div>
+	</div></div>
+</apex:page>

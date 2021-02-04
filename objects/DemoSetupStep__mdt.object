@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Step supporting the Demo Setup screen.  Adding steps here is all that&apos;s required for manual steps.  For automatic steps, an additional class must be added as well.</description>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Checked for active steps.  This field can be used to temporarily deactivate a step.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Checked for active steps.  This field can be used to temporarily deactivate a step.</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AutomationClass__c</fullName>
+        <description>The name of the apex class used to automate this step.  The automation class is only used for automatic steps and for automation steps it is required.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The name of the apex class used to automate this step.  The automation class is only used for automatic steps and for automation steps it is required.</inlineHelpText>
+        <label>Automation Class</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ModalPath__c</fullName>
+        <description>The unique parameter used to determine which modal to display.  This value is used in the setupStep.js handleErrorStateStepButtonClick event handler.  Please note that this must match exactly with the code.  This field is optional unless Modal is selected as the step type.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The unique parameter used to determine which modal to display.  This value is used in the setupStep.js event handler.  Please note that this must match exactly with the code.  This field is optional unless Modal is selected as the step type.</inlineHelpText>
+        <label>Modal Path</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StepDependsOn__c</fullName>
+        <description>If this field is not blank, then the step number indicated MUST be completed before this step will be enabled.  Be sure you&apos;ve indicated a step that exists and is active.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>If this field is not blank, then the step number indicated MUST be completed before this step will be enabled.  Be sure you&apos;ve indicated a step that exists and is active.</inlineHelpText>
+        <label>Step Depends On</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StepDescription__c</fullName>
+        <description>For manual steps, this field should be the step by step instructions the user needs to take to complete the step.  For automated steps this text is optional, but it is often helpful to include the manual steps anyway.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>For manual steps, this field should be the step by step instructions the user needs to take to complete the step.  For automated steps this text is optional, but it is often helpful to include the manual steps anyway.</inlineHelpText>
+        <label>Step Description</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StepHyperlink__c</fullName>
+        <description>If included, a hyperlink icon will appear for the step and open a new tab to the location indicated. This field is optional, but recommended for any manual steps.  Valid URLs can be full URLs or relative URLs.  Partial URLs are assumed to be within Salesforce.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>If included, a hyperlink icon will appear for the step and open a new tab to the location indicated. This field is optional, but recommended for any manual steps.  Valid URLs can be full URLs or relative URLs.  Partial URLs are assumed to be within SFDC.</inlineHelpText>
+        <label>Step Hyperlink</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StepNumber__c</fullName>
+        <description>This field is used for sorting on the screen.  Lower numbers appear before higher numbers.  This is also used for enforcing step dependencies.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>This field is used for sorting on the screen.  Lower numbers appear before higher numbers.  This is also used for enforcing step dependencies.</inlineHelpText>
+        <label>Step Number</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>StepTitle__c</fullName>
+        <description>The title of the step, shown on the Demo Setup screen.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The title of the step, shown on the Demo Setup screen.</inlineHelpText>
+        <label>Step Title</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StepType__c</fullName>
+        <description>Automatic indicates a fully automated step, requiring an Automation Class.  Manual is a manual step without a confirmation.  Manual-Confirmation is a fully manual step that will ask the user to confirm the step.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Automatic indicates a fully automated step, requiring an Automation Class.  Manual is a manual step without a confirmation.  Manual-Confirmation is a fully manual step that will ask the user to confirm the step.</inlineHelpText>
+        <label>Step Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Automatic</fullName>
+                    <default>true</default>
+                    <label>Automatic</label>
+                </value>
+                <value>
+                    <fullName>Manual</fullName>
+                    <default>false</default>
+                    <label>Manual</label>
+                </value>
+                <value>
+                    <fullName>Manual-Confirm</fullName>
+                    <default>false</default>
+                    <label>Manual-Confirm</label>
+                </value>
+                <value>
+                    <fullName>Modal</fullName>
+                    <default>false</default>
+                    <label>Modal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Demo Setup Step</label>
+    <pluralLabel>Demo Setup Steps</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

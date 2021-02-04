@@ -1,0 +1,23 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="nFORCE.ScreenController,nFORCE.ActionOverrideController"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false">
+	<div class="nds-section" id="ncRelatedList">
+		<apex:repeat value="{!screenSections}" var="section">
+			<nc-related-list
+				section-id="{!section.id}"
+				are-columns-sortable="{!section.Are_Columns_Sortable__c}"
+				guid="{!section.id}{!guid}"
+				context-id="{!contextObjectId}"
+				column-size="{!section.Number_of_Columns__c}"
+				add-new-action-override="{!AddNewOverrideRouteHref}"
+				add-new-action-label="{!$CurrentPage.parameters.action_new_label}"
+				show-edit-field-set-button="{!userHasFrameworkAdministratorPermission}">
+				<apex:composition template="nFORCE__Template_UI_Loading" />
+			</nc-related-list>
+		</apex:repeat>
+		<c:ncRelatedListIncludes />
+	</div>
+	<c:ncRelatedListIncludes />
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="nFORCE.ScreenController"
+	showHeader="false"
+	sidebar="false">
+
+	<c:ncUiConfigBuilder groupSectionId="{!screenSections[0].Id}"
+		addRouteSectionId="{!screenSections[1].Id}"
+		addRouteGroupSectionId="{!screenSections[2].Id}"
+		routeMenuSectionId="{!screenSections[3].Id}"
+		screenId="{!screenSections[4].Id}"
+		screenSectionId="{!screenSections[5].Id}"
+		sectionListSectionId="{!screenSections[6].Id}"
+		fieldConfigurationSectionId="{!screenSections[7].Id}"
+		conditionalScreenSectionId="{!screenSections[8].Id}"
+		guid="{!guid}" />
+</apex:page>

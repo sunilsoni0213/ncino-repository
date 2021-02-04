@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>46.0</apiVersion>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>23</minorNumber>
+        <namespace>EFPIO</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>14</minorNumber>
+        <namespace>IDLGY</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>2</majorNumber>
+        <minorNumber>555</minorNumber>
+        <namespace>nFORCE</namespace>
+    </packageVersions>
+    <status>Active</status>
+</ApexClass>

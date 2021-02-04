@@ -1,0 +1,19 @@
+<apex:page standardController="LLC_BI__Loan__c">
+	<script type="text/javascript">
+		var __sfdcSessionId = '{!GETSESSIONID()}';
+	</script>
+
+	<c:DocManager3 />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+				MyDocuments.init({
+					mode: 'personnel',
+					associatedObjectId: MyDocuments.getAssociatedObjectId(),
+					page: 'Opportunity',
+					sessionId: __sfdcSessionId
+				});
+		});
+	</script>
+
+</apex:page>

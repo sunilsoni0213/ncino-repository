@@ -1,0 +1,59 @@
+<apex:page controller="nFUSE.DocPrepReviewController"
+	showHeader="true"
+    sidebar="true"
+    docType="html-5.0">
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'util/continue-hack.js')}"/>
+	<nFORCE:Include_Navigator />
+	<c:RequireAuthorization isAuthorized="{!$Permission.nFUSE__Document_Preparation_Workflow}" errorMessage="{!$Label.nfuse__no_docprep_permission}">
+		<apex:outputPanel rendered="true">
+			<div class="force">
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<h2>{!$Label.nfuse__review_page_header}</h2>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<div class="col-sm-12" style="padding-bottom:0px;">
+									<apex:messages id="errorMessages"/>
+									<p class="narrative">{!$Label.nfuse__review_page_header2}</p>
+									<br/>
+									<label>Description:</label>
+									<apex:form >
+										<apex:inputTextarea id="comments"
+											value="{!comments}"
+											style="height: 80px"
+											styleClass="form-control narrative"
+											html-placeholder="{!$Label.nfuse__review_comments}"
+											html-maxlength="255"/>
+										<br/><br/>
+										<apex:commandButton id="goBack"
+											action="{!goBack}"
+											styleClass="btn btn-secondary space-sm"
+											value="{!$Label.nfuse__go_back}"
+											onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')"/>
+										<apex:commandButton id="goNext"
+											action="{!goNext}"
+											styleClass="btn btn-primary"
+											value="{!$Label.nfuse__docprep_status_new_session}"
+											onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')"/>
+										<apex:commandButton id="goNextReload"
+											action="{!goNextReload}"
+											rendered="{!showLoadPrevious}"
+											styleClass="btn btn-primary"
+											value="{!$Label.nfuse__docprep_load_previous_data}"
+											onComplete="LifeCycle.Navigator.navigateToPage('{!navigationButtonUrl}')"/>
+									</apex:form>
+									<br/>
+								</div>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+			</div>
+		</apex:outputPanel>
+	</c:RequireAuthorization>
+</apex:page>

@@ -1,0 +1,84 @@
+<apex:page showHeader="false"
+        sidebar="false"
+        standardStylesheets="false"
+        docType="html-5.0"
+		controller="nFORCE.RemoteActionController"
+>
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<!--<apex:slds />-->
+			<nFORCE:LifeCycle_Functions />
+			<nFORCE:LiteForce_Functions />
+
+			<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'polyfills.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'vendor.js')}" />
+			<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'spreads-admin-includes.js')}" />
+			<apex:includeScript loadOnReady="true" value="{!URLFOR($Resource.nCRED__vf_includes, 'spreads-admin.js')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.nCRED__vf_includes, 'spreads-admin.css')}"/>
+
+			<script>
+				var Utils = LifeCycle;
+
+				window.__designSystemPath = '{!URLFOR($Asset.SLDS, '')}';
+
+				if (_.isEmpty(LifeCycle.msgs)) {
+					LifeCycle.msgs = {};
+				}
+
+				LifeCycle.msgs.exisiting_record_config_header = '{!JSENCODE($Label.Existing_Record_Configuration_Header)}';
+				LifeCycle.msgs.exisiting_record_config_header_subtext = '{!JSENCODE($Label.Existing_Record_Configuration_Header_Subtext)}';
+				LifeCycle.msgs.existing_record_config_textbox_label = '{!JSENCODE($Label.Search_Records_Textbox_Label)}';
+				LifeCycle.msgs.search_records_textbox_placeholder = '{!JSENCODE($Label.Search_Records_Textbox_Placeholder)}';
+				LifeCycle.msgs.search_records_button_text = '{!JSENCODE($Label.Search_Records_Button_Text)}';
+				LifeCycle.msgs.search_records_results_text = '{!JSENCODE($Label.Search_Records_Results_Text)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_name_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Name_Header)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_type_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Type_Header)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_global_analysis_type_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Global_Analysis_Type_Header)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_associated_total_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Associated_Total_Header)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_classification_tags_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Classification_Tags_Header)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_last_modified_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Last_Modified_Header)}';
+				LifeCycle.msgs.existing_record_configuration_dataTable_results_in_row_count_header = '{!JSENCODE($Label.Existing_Record_Configuration_DataTable_Results_In_Row_Count_Header)}'
+				LifeCycle.msgs.existing_record_configuration_edit_button_label = '{!JSENCODE($Label.Existing_Record_Configuration_Edit_Button_Label)}';
+				LifeCycle.msgs.existing_record_mixed_values = '{!JSENCODE($Label.Existing_Record_Mixed_Values)}';
+				LifeCycle.msgs.existing_record_changed_label = '{!JSENCODE($Label.Existing_Record_Changed_Label)}';
+				LifeCycle.msgs.existing_record_not_applicable = '{!JSENCODE($Label.Existing_Record_Not_Applicable)}';
+				LifeCycle.msgs.existing_record_record_type_name = '{!JSENCODE($Label.Existing_Record_Record_Type_Name)}';
+				LifeCycle.msgs.existing_record_record_total_type_name = '{!JSENCODE($Label.Existing_Record_Record_Total_Type_Name)}';
+				LifeCycle.msgs.existing_record_record_total_type_short_name = '{!JSENCODE($Label.Existing_Record_Record_Total_Type_Short_Name)}';
+				LifeCycle.msgs.existing_record_linked_record_type_name = '{!JSENCODE($Label.Existing_Record_Linked_Record_Type_Name)}';
+				LifeCycle.msgs.existing_record_classification_editor_label = '{!JSENCODE($Label.Existing_Record_Classification_Editor_Label)}';
+				LifeCycle.msgs.existing_record_classification_editor_placeholder = '{!JSENCODE($Label.Existing_Record_Classification_Editor_Placeholder)}';
+				LifeCycle.msgs.existing_record_global_analysis_type_editor_label = '{!JSENCODE($Label.Existing_Record_Global_Analysis_Type_Editor_Label)}';
+				LifeCycle.msgs.existing_record_global_analysis_type_editor_placeholder = '{!JSENCODE($Label.Existing_Record_Global_Analysis_Type_Editor_Placeholder)}';
+				LifeCycle.msgs.existing_record_generic_editor_label_prefix = '{!JSENCODE($Label.Existing_Record_Generic_Editor_Label_Prefix)}';
+				LifeCycle.msgs.existing_record_generic_editor_placeholder_prefix = '{!JSENCODE($Label.Existing_Record_Generic_Editor_Placeholder_Prefix)}';
+				LifeCycle.msgs.existing_record_classification_mixed_or_linked_hint = '{!JSENCODE($Label.Existing_Record_Classification_Mixed_Or_Linked_Hint)}';
+				LifeCycle.msgs.existing_record_save_error_title = '{!JSENCODE($Label.Existing_Record_Save_Error_Title)}';
+				LifeCycle.msgs.existing_record_save_error_message = '{!JSENCODE($Label.Existing_Record_Save_Error_Message)}';
+				LifeCycle.msgs.existing_record_classification_edit_common_button = '{!JSENCODE($Label.Existing_Record_Classification_Edit_Common_Button)}';
+				LifeCycle.msgs.existing_record_classification_edit_common_tooltip = '{!JSENCODE($Label.Existing_Record_Classification_Edit_Common_Tooltip)}';
+				LifeCycle.msgs.existing_record_classification_reset_all_button = '{!JSENCODE($Label.Existing_Record_Classification_Reset_All_Button)}';
+				LifeCycle.msgs.existing_record_classification_reset_all_tooltip = '{!JSENCODE($Label.Existing_Record_Classification_Reset_All_Tooltip)}';
+				LifeCycle.msgs.existing_record_search_error_prefix = '{!JSENCODE($Label.Existing_Record_Search_Error_Prefix)}';
+				LifeCycle.msgs.existing_record_search_error_suffix = '{!JSENCODE($Label.Existing_Record_Search_Error_Suffix)}';
+				LifeCycle.msgs.existing_record_global_analysis_type_mixed_hint = '{!JSENCODE($Label.Existing_Record_Global_Analysis_Type_Mixed_Hint)}';
+				LifeCycle.msgs.existing_record_result_location_hint = '{!JSENCODE($Label.Existing_Record_Result_Location_Hint)}';
+				LifeCycle.msgs.existing_record_no_results_found_prefix = '{!JSENCODE($Label.Existing_Record_No_Results_Found_Prefix)}';
+				LifeCycle.msgs.existing_record_no_results_found_suffix = '{!JSENCODE($Label.Existing_Record_No_Results_Found_Suffix)}';
+				LifeCycle.msgs.existing_record_classification_editor_in_common_only = '{!JSENCODE($Label.Existing_Record_Classification_Editor_In_Common_Only)}';
+				LifeCycle.msgs.existing_record_classification_editor_linked_records_ignored = '{!JSENCODE($Label.Existing_Record_Classification_Editor_Linked_Records_Ignored)}';
+				LifeCycle.msgs.existing_record_save_error_prefix = '{!JSENCODE($Label.Existing_Record_Save_Error_Prefix)}';
+				LifeCycle.msgs.existing_record_save_error_suffix = '{!JSENCODE($Label.Existing_Record_Save_Error_Suffix)}';
+				LifeCycle.msgs.existing_record_save_button_label = '{!JSENCODE($Label.Existing_Record_Save_Button_Label)}';
+				LifeCycle.msgs.existing_record_save_button_in_progress_label = '{!JSENCODE($Label.Existing_Record_Save_Button_In_Progress_Label)}';
+				LifeCycle.msgs.existing_record_cancel_button_label = '{!JSENCODE($Label.Existing_Record_Cancel_Button_Label)}';
+			</script>
+			<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		</head>
+		<body>
+			<div class="force slds slds-scope">
+				<spreads-config-app>Loading Spreads Configuration App...</spreads-config-app>
+			</div>
+		</body>
+	</html>
+</apex:page>

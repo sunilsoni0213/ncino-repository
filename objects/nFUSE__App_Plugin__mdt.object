@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This object houses nFUSE Integration plug-in definitions.</description>
+    <fields>
+        <fullName>nFUSE__Activator__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Activator class for the plugin.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Activator Class</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Bean_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Soft reference to Bean_Registry__c.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Unique Bean Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Filter__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Enables filtering plugins based on criteria.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Filter</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Major_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The major API version.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Major Version</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Middleware_Certificate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The certificate for an App Plugin specific middleware.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Middleware Certificate</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Middleware_Endpoint__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An optional Endpoint URL for an App Plugin specific middleware.  If a value is not provided the Integration Platform Middleware is used.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Middleware Endpoint</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Middleware_Password__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The password for an App Plugin specific middleware.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Middleware Password</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Middleware_Username__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The username for an App Plugin specific middleware.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Middleware Username</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Minor_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The minor API version.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Minor Version</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Provider_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The provider name used for messaging.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Provider Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Timeout__c</fullName>
+        <defaultValue>3000</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The HTTP request timeout duration in milliseconds</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Timeout</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The plugin type name.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>App Plugin</label>
+    <pluralLabel>App Plugins</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,628 @@
+<apex:page >
+  <html><head><link class="component" href="/faces/a4j/s/3_3_3.Finalcss/table.xcss/DATB/eAEz2rRkV-jyGdIAEoQD8g__" rel="stylesheet" type="text/css" /><script src="/jslibrary/1329331264000/sfdc/JiffyStubs.js" type="text/javascript"></script><script src="/static/111811/js/functions.js" type="text/javascript"></script><script src="/jslibrary/1331837151000/sfdc/main.js" type="text/javascript"></script><script src="/jslibrary/labels/1337789741000/en_US.js" type="text/javascript"></script><script src="/static/111811/desktop/desktopAjax.js" type="text/javascript"></script><script src="/static/111811/js/picklist.js" type="text/javascript"></script><link class="user" href="/sCSS/24.0/sprites/1331837151000/Theme3/default/elements.css" rel="stylesheet" type="text/css" /><link class="user" href="/sCSS/24.0/sprites/1331837151000/Theme3/default/common.css" rel="stylesheet" type="text/css" /><link class="user" href="/sCSS/24.0/sprites/1331837151000/Theme3/default/zenTabsOnly.css" rel="stylesheet" type="text/css" /><link class="user" href="/sCSS/24.0/sprites/1335396211000/Theme3/dStandard.css" rel="stylesheet" type="text/css" /><link class="user" href="/sCSS/24.0/sprites/1338400432000/Theme3/00D5w000003sgc1/0055w00000BkiU0/dCustom0.css" rel="stylesheet" type="text/css" /><link class="user" href="/sCSS/24.0/sprites/1331837151000/Theme3/default/extended.css" rel="stylesheet" type="text/css" /><link class="user" href="/sCSS/24.0/sprites/1331837151000/Theme3/default/setup.css" rel="stylesheet" type="text/css" /></head><style>
+     hr.pageBreak  { page-break-after: always; border: 0; color: white; background-color: white; height: 1px; } 
+     hr  { border: 0; color: black; height: 1px; background-color:black; }
+     
+     head {font-family: Arial Unicode MS;}
+     .title {
+     font-weight:bold;
+     font-size:30px;
+     text-align:center; }
+     
+     body {font-family: Arial Unicode MS; font-size: 12px;}
+     
+     .width_98_table {
+        width: 100%;
+        border-width: 1px;
+     }
+     
+     .width_98_table table {
+        border-width: 1px;
+     }
+     
+     .table_full_width {
+        width: 100%;
+        border-width: 1px;
+     }
+      
+     .collateral_detail {
+        width: 100%;
+        border-width: 1px;
+     }
+     .basic_table {
+        width: 100%;
+        border-width: 1px;
+     }
+     .basic_table th.column_head {
+        color: black;
+        text-align: left;
+        border-bottom: 1px solid #6678b1;
+        width: 25%;
+     }
+     .basic_table th.section_division {
+        color: black;
+        text-align: left;
+        border-top: 1px solid #6678b1;
+     }
+     .basic_table td.section_division {
+        color: black;
+        text-align: left;
+        border-top: 1px solid #6678b1;
+        font-weight:bold;
+     }
+     .covenant_detail{
+        width: 100%;
+     } 
+     .covenant_detail1{
+        width: 100%;
+     } 
+     .covenant_detail th {
+        color: black;
+        text-align: left;
+        border-bottom: 1px solid #6678b1;
+     }    
+     .covenant_detail1 th {
+        color: black;
+        text-align: left;
+        border-bottom: 1px solid #6678b1;
+     }    
+     .covenant_detail1 td.under {
+        color: black;
+        text-align: left;
+        border-bottom: 1px solid #6678b1;
+     }    
+     .covenant_detail1 td {
+        color: black;
+        text-align: left;
+     }    
+     .covenant_detail td.under {
+        color: black;
+        text-align: left;
+        border-bottom: 1px solid #6678b1;
+        border-left: 1px solid #6678b1;
+        border-right: 1px solid #6678b1;
+     }    
+     .covenant_detail td {
+        color: black;
+        text-align: center;
+        valign: top;
+        border-bottom: 1px solid #6678b1;
+        border-left: 1px solid #6678b1;
+     }    
+     .borrower_detail {
+        width: 100%;
+     }
+     
+     .borrower_detail th {
+        color: black;
+        text-align: left;
+        border-bottom: 1px solid #6678b1;
+     }
+     
+     .borrower_detail th.section_head {
+        text-align: center;
+        color: black;
+        border-top: 3px solid #6678b1;
+        border-bottom: 1px solid #6678b1;
+        font-size:16px;
+     }
+      
+     .borrower_detail th.principals_head {
+        text-align: center;
+        color: black;
+        border-bottom: 1px solid #6678b1;
+        border-top: 2px solid #6678b1;
+        font-size:14px;
+     }
+      
+     .heading_cell {
+     font-size:16px;
+     font-weight:bold;
+     text-align:right;}
+    
+    .section_not_found {
+    font-size:12px;
+    color: red;
+        border-width: 1px;
+    }  
+    
+  </style><span id="j_id0:j_id4"><script  type="text/javascript"> if(!window.sfdcPage){window.sfdcPage = new ApexDetailPage();}
+UserContext.initialize({"labelLastModified":"1337789741000","locale":"en_US","timeFormat":"h:mm a","today":"6/4/2012 5:43 PM","orgPreferences":[{"index":257,"name":"TabOrganizer","value":true}],"userPreferences":[{"index":112,"name":"HideInlineEditSplash","value":false},{"index":114,"name":"OverrideTaskSendNotification","value":false},{"index":115,"name":"DefaultTaskSendNotification","value":false},{"index":119,"name":"HideUserLayoutStdFieldInfo","value":false},{"index":116,"name":"HideRPPWarning","value":false},{"index":87,"name":"HideInlineSchedulingSplash","value":false},{"index":88,"name":"HideCRUCNotification","value":false},{"index":89,"name":"HideNewPLESplash","value":true},{"index":90,"name":"HideNewPLEWarnIE6","value":false},{"index":122,"name":"HideOverrideSharingMessage","value":false},{"index":91,"name":"HideProfileILEWarn","value":false},{"index":93,"name":"HideProfileElvVideo","value":false},{"index":97,"name":"ShowPicklistEditSplash","value":false},{"index":92,"name":"HideDataCategorySplash","value":false},{"index":128,"name":"ShowDealView","value":false},{"index":129,"name":"HideDealViewGuidedTour","value":false},{"index":132,"name":"HideKnowledgeFirstTimeSetupMsg","value":false},{"index":104,"name":"DefaultOffEntityPermsMsg","value":false},{"index":135,"name":"HideNewCsnSplash","value":true},{"index":101,"name":"HideBrowserWarning","value":false},{"index":139,"name":"HideDashboardBuilderGuidedTour","value":true},{"index":140,"name":"HideSchedulingGuidedTour","value":false},{"index":180,"name":"HideReportBuilderGuidedTour","value":true},{"index":183,"name":"HideAssociationQueueCallout","value":false},{"index":194,"name":"HideQTEBanner","value":false},{"index":193,"name":"HideChatterOnboardingSplash","value":false},{"index":195,"name":"HideSecondChatterOnboardingSplash","value":false},{"index":196,"name":"HideCSIGuidedTour","value":true},{"index":205,"name":"HideApexTestGuidedTour","value":false},{"index":206,"name":"HideSetupProfileHeaderTour","value":false},{"index":207,"name":"HideSetupProfileObjectsAndTabsTour","value":false},{"index":210,"name":"ShowContentUpdateAlert","value":false},{"index":213,"name":"DefaultOffArticleTypeEntityPermMsg","value":false},{"index":214,"name":"HideSelfInfluenceGetStarted","value":false},{"index":215,"name":"HideOtherInfluenceGetStarted","value":false},{"index":216,"name":"HideFeedToggleGuidedTour","value":true},{"index":268,"name":"HideChatterTab176GuidedTour","value":false},{"index":222,"name":"TouchExternalLinkReminderSuppression","value":false},{"index":224,"name":"HideUnifiedSearchGuidedTour","value":false},{"index":226,"name":"ShowDevContextMenu","value":true},{"index":227,"name":"HideWhatRecommenderForActivityQueues","value":false},{"index":228,"name":"HideLiveAgentFirstTimeSetupMsg","value":false},{"index":232,"name":"HideGroupAllowsGuestsMsgOnMemberWidget","value":false},{"index":233,"name":"HideGroupAllowsGuestsMsg","value":false},{"index":234,"name":"HideWhatAreGuestsMsg","value":false},{"index":235,"name":"HideNowAllowGuestsMsg","value":false},{"index":236,"name":"HideSocialAccountsAndContactsGuidedTour","value":true},{"index":237,"name":"HideAnalyticsHomeGuidedTour","value":true},{"index":238,"name":"ShowQuickCreateGuidedTour","value":false},{"index":245,"name":"HideFilePageGuidedTour","value":false},{"index":250,"name":"HideForecastingGuidedTour","value":false},{"index":242,"name":"TouchHideOptoutHover","value":false},{"index":251,"name":"HideBucketFieldGuide","value":false},{"index":263,"name":"HideSmartSearchCallOut","value":true},{"index":265,"name":"HideSocialProfilesKloutSplashScreen","value":false},{"index":269,"name":"HideGlobalHeaderSearchOptions","value":false}],"startOfWeek":"1","isAccessibleMode":false,"ampm":["AM","PM"],"renderMode":"RETRO","userId":"0055w00000BkiU0","dateTimeFormat":"M/d/yyyy h:mm a","dateFormat":"M/d/yyyy","uiSkin":"Theme3","language":"en_US","siteUrlPrefix":""});
+</script><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id4:j_id5:j_id6" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbBody">
+</div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id20"><span id="j_id0:j_id20:j_id21:j_id22"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id20:j_id21:j_id22:j_id23:j_id24" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Approval Information for <i>Russell V. Vazquez *</i></h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody">
+        <table class="basic_table">
+            <thead>
+                <tr>
+                    <th class="column_head">Officer</th>
+                    <th class="column_head">Lenders Loan Committee</th>
+                    <th class="column_head">Directors Loan Committee</th>
+                    <th class="column_head">Board</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date:&nbsp;</td>
+                    <td>
+                        Date:&nbsp;
+                    </td>
+                    <td>
+                        Date:&nbsp;
+                    </td>
+                    <td>
+                        Date:&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approved:</td>
+                    <td>Approved:</td>
+                    <td>Approved:</td>
+                    <td>Approved:</td>
+                </tr>
+                <tr>
+                    <td>Declined:</td>
+                    <td>Declined:</td>
+                    <td>Declined:</td>
+                    <td>Declined:</td>
+                </tr>
+                <tr>
+                    <td class="section_division" colspan="4">Additional Committee Comments</td>
+                </tr>
+                <tr>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="section_division" colspan="4">Conditions:</td>
+                </tr><span id="j_id0:j_id20:j_id21:j_id22:j_id23:j_id24:j_id35">
+        <tr>
+            <td colspan="4"><ol><li>Maximum LTV of 75% for the value of the subject property. The property must appraise for $1,060,000 &quot;as is&quot; and $1,310,000 &quot;as improved&quot;.</li><li>The Borrower will bring in $337,500 at closing to be held by the Bank.  After initial settlement, the remaining funds in the amount of $260,000 will be held and disbursed towards improvements as shown on Exhibit A, subject to inspections and appropriate documentation.</li><li>The Bank will require the subject operating account to be established and maintained at nCino Bank.</li></ol><br/><br/>
+            </td>
+        </tr></span>
+                
+                <tr>
+                    <td class="section_division" colspan="4">Covenants:</td>
+                </tr>
+                <tr>
+                    <td colspan="4">This loan has covenants. Please see the Covenant Section for details.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+                <tr>
+                    <th class="section_division" colspan="4">Policy Exceptions:</th>
+                </tr><span id="j_id0:j_id20:j_id21:j_id22:j_id23:j_id24:j_id56">
+        <tr>
+            <td colspan="4">None<br/><br/>
+            </td>
+        </tr></span>
+            </tbody>
+        </table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id20:j_id21:j_id71"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Borrower Information</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody">
+            <table class="borrower_detail">
+                <tbody>
+                    <tr>
+                        <th class="section_head" colspan="5">Legal Entity</th>
+                    </tr>
+                    <tr>
+                        <th>Borrower Type</th>
+                        <th>Entity Type</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>EIN/SSN<br/>CIF</th>
+                    </tr>
+                    <tr>
+                        <td>Borrower
+                        </td>
+                        <td><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id78">Limited Liability Company (LLC)</span>
+                        </td>
+                        <td><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id80">Cuppy's Coffee</span>
+                        </td>
+                        <td><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id82">P.O. Box 518, 9039 Duis Avenue<br/>San Jose, IL 9039</span><br/><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id84">Cleveland</span>,&nbsp;<span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id86">Ohio</span><br/><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id88">44125</span><br/><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id90">(216) 520-1250</span>         
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>Net Worth</th>
+                        <th>Net Income Last Financial Year</th>
+                        <th>Debt to Equity Ratio</th>
+                        <th>Debt Coverage</th>
+                        <th>Global Debt Service Coverage Ratio</th>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>$ 172,580.00
+                        </td>                       
+                        <td> 0.00
+                        </td>                   
+                        <td> 2.19
+                        </td>
+                        <td> 2.57
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">&nbsp;</td>
+                    </tr>
+            </tbody>
+            </table>
+            
+            <table class="borrower_detail">
+                <tbody>
+                    <tr>
+                        <th>Gross Revenue</th>
+                        <th>Total Exposure</th>
+                        <th>Current Risk Rating</th>
+                        <th>Recommended Risk Rating</th>
+                        <th>Type of Business</th>
+                    </tr>
+                    <tr>
+                        <td> 286,396.00
+                        </td>
+                        <td>$ 982,500.00
+                        </td>                       
+                        <td>2.35
+                        </td>                   
+                        <td>
+                        </td>
+                        <td>Real Estate Investment
+                        </td>
+                    </tr>                   
+                    <tr>
+                        <td colspan="5">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">&nbsp;</td>
+                    </tr>   
+            </tbody>
+            </table>            
+            <table class="borrower_detail">
+                <tbody><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id132:0:j_id133">
+
+    <tr>
+        <th class="principals_head" colspan="5">Principals</th>
+    </tr>
+    <tr>
+        <th>Borrowing Role</th>
+        <th>Principal Type</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>EIN/SSN<br/>CIF<br/>Credit Score</th>
+    </tr>
+        <tr>
+            <td>Co-Borrower
+            </td>
+            <td>Partner
+            </td><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id132:0:j_id133:j_id134:j_id136:0:j_id142">
+        <td>Demo - Malisse Sinito
+        </td>
+        <td>8111 Rockside Road
+Suite 200<br/>Cleveland,&nbsp;Ohio<br/>44125<br/>(216) 520-1250         
+        </td>
+        
+        <td>EIN/SSN not available<br/>CIF not available<br/> 734
+        </td></span>
+        </tr>
+        <tr>
+            <td>Co-Borrower
+            </td>
+            <td>Partner
+            </td><span id="j_id0:j_id20:j_id21:j_id71:j_id72:j_id73:j_id74:0:j_id132:0:j_id133:j_id134:j_id136:1:j_id142">
+        <td>Demo - Frank Sinito
+        </td>
+        <td>8111 Rockside Road
+Suite 200<br/>Cleveland,&nbsp;Ohio<br/>44125<br/>(216) 520-1250         
+        </td>
+        
+        <td>EIN/SSN not available<br/>CIF not available<br/> 723
+        </td></span>
+        </tr></span>            
+                </tbody>
+            </table>
+        
+            <br/></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id20:j_id21:j_id171">
+
+    
+    <div class="apexp">
+    <div class="individualPalette">
+    <div class="Custom17Block">
+    <div class="bPageBlock apexDefaultPageBlock secondaryPalette">
+        <div class="pbHeader">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="pbTitle">
+                            <h2 class="mainTitle">Loan Information</h2>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pbBody">
+            <div class="pbSubsection">
+                <table class="detailList">
+                    <tbody>
+                        <tr>
+                            <td class="labelCol first"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:loan_officer">
+Loan Officer</label>
+                            </td>
+                            <td class="dataCol first"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:loan_officer">Edgar Vader</span>
+                            </td>
+                            <td class="labelCol first"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:credit_analyst">
+Credit Analyst:</label>
+                            </td>
+                            <td class="dataCol first">Steve Powell
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:application_date">
+Application Date:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:application_date">02/13/2012</span>
+                            </td>                           
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:naics_code">
+NAICS Code:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:naics_code">531110</span>
+                            </td>
+                        </tr>
+                        <tr>                    
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:loan_purpose">
+Loan Purpose:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:loan_purpose">Purchase of the multi-family property known as Andover Arms Apartments</span>
+                            </td>                           
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:naics_description">
+NAICS Description:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:naics_description">Lessors of Residential Buildings and Dwellings</span>
+                            </td>                           
+                        </tr>
+                        <tr>
+                            <td class="labelCol first">&nbsp;</td>
+                            <td class="labelCol first">Financing Terms</td>
+                            <td class="labelCol first" colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:loan_amount">
+Loan Amount:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:loan_amount"> $177,480.00</span>
+                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:amortized_term">
+Amortization Period:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:amortized_term"> 0 Months</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:interest_rate">
+Interest Rate:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:interest_rate"> 7.000%</span>
+                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:p_i_months">
+Term:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:p_i_months"> 239 Months</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:pricing_basis">
+Pricing Basis / Index:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:pricing_basis">TCM (Treasury Constant Maturity)</span>                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:interest_only">
+Interest Only:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:interest_only"> 6 Months</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:spread">
+Spread:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:spread"> 3.500%</span>
+                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:baloon">
+Balloon Loan:</label>
+                            </td>
+                            <td class="dataCol">Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:rate_floor">
+Rate Floor:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:rate_floor">%</span>
+                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:rate_adjustment">
+Rate Adjustment:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:rate_adjustment"> 60 Months</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:fee_type">
+Fee Type:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:fee_type">Origination</span>
+                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:payment_frequency">
+Payment Frequency:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:payment_frequency">Monthly</span>
+                            </td>
+                        </tr>                       
+                        <tr>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:fees">
+Fees:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:fees"> $4,950.00</span>
+                            </td>
+                            <td class="labelCol"><label for="j_id0:j_id20:j_id21:j_id171:j_id172:pre_payment_penalty">
+Pre-payment Penalty:</label>
+                            </td>
+                            <td class="dataCol"><span id="j_id0:j_id20:j_id21:j_id171:j_id172:pre_payment_penalty">5,4,3,2,1% for 5 years</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div></span><span id="j_id0:j_id20:j_id21:j_id312"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id20:j_id21:j_id312:j_id313:j_id319" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Interest Rate Pricing And / Or Fee Variance</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id20:j_id21:j_id312:j_id313:j_id319:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id20:j_id21:j_id312:j_id313:j_id319:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id20:j_id21:j_id312:j_id313:j_id319:table_prose:0:j_id320" colspan="1">None<br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id20:j_id21:j_id328" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Presentation Summary</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody">The Borrower is under contract to purchase a multi-family property in Garfield Heights, Ohio known as Andover Arms Apartments. The complex consists of 44 units in two identical three-story buildings. The mix of units is 17 one bedroom units, 26 two bedroom units, and one efficiency, with 77 surface parking spots and 9 additional carports. The property is currently 100% occupied. The Borrower plans to make improvements as listed on Exhibit A.</div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div><span id="j_id0:j_id20:j_id21:j_id330"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id20:j_id21:j_id330:j_id331:j_id337" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Sources and Uses of Loan Proceeds</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id20:j_id21:j_id330:j_id331:j_id337:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id20:j_id21:j_id330:j_id331:j_id337:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id20:j_id21:j_id330:j_id331:j_id337:table_prose:0:j_id338" colspan="1"><table border="0" width="800" style="width: 600pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="21" style="height: 15.95pt; "><td colspan="12" rowspan="1" class="xl97" height="21" width="800" style="height: 15.95pt; width: 600pt; ">SOURCES AND USES OF LOAN PROCEEDS:</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="6" rowspan="1" class="xl89" height="21" style="height: 15.75pt; ">Sources:</td><td colspan="6" rowspan="1" class="xl88" style="">Uses:</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="4" rowspan="1" class="xl84" height="21" style="height: 15.75pt; ">Proposed Loan</td><td colspan="2" rowspan="1" class="xl75" style=""> $                    982,500</td><td colspan="4" rowspan="1" class="xl98">Purchase Price</td><td colspan="2" rowspan="1" class="xl75" style=""> $            1,060,000</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="4" rowspan="1" class="xl85" height="21" style="height: 15.75pt; ">Borrower Injection</td><td colspan="2" rowspan="1" class="xl77" style=""> $                    337,500</td><td colspan="4" rowspan="1" class="xl74">Improvements</td><td colspan="2" rowspan="1" class="xl77" style=""> $               260,000</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="4" rowspan="1" class="xl86" height="21" style="height: 15.75pt; "> </td><td colspan="2" rowspan="1" class="xl79" style=""> </td><td colspan="4" rowspan="1" class="xl87" style=""> </td><td colspan="2" rowspan="1" class="xl79" style=""> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="4" rowspan="1" class="xl92" height="22" style="height: 16.5pt; ">Totals:</td><td colspan="2" rowspan="1" class="xl94" style=""> $                 1,320,000</td><td colspan="4" rowspan="1" class="xl96" style="">Totals:</td><td colspan="2" rowspan="1" class="xl81" style=""> $            1,320,000</td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id364"><span id="j_id0:j_id364:j_id365:j_id366"><hr class="pageBreak" /><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id366:j_id367:j_id373" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Cash Flow</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id366:j_id367:j_id373:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id366:j_id367:j_id373:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id366:j_id367:j_id373:table_prose:0:j_id374" colspan="1"><table border="0" width="800" style="width: 600pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="27" style="height: 20.25pt; "><td colspan="2" rowspan="1" class="xl87" height="27" width="128" style="height: 20.25pt; width: 96pt; ">CASH FLOW:</td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl81" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" class="xl82" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl82" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl81" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl82" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl83" width="64" style="width: 48pt; "> </td></tr><tr height="25" style="height: 18.75pt; "><td colspan="1" rowspan="1" class="xl84" height="25" style="height: 18.75pt; "> </td><td colspan="1" rowspan="1" class="xl85"> </td><td colspan="1" rowspan="1" class="xl85"> </td><td colspan="1" rowspan="1" class="xl85"> </td><td colspan="1" rowspan="1" class="xl85"> </td><td colspan="1" rowspan="1" class="xl85"> </td><td colspan="2" rowspan="1" class="xl134" style="">Borrower</td><td colspan="2" rowspan="1" class="xl134" style="">Borrower</td><td colspan="2" rowspan="1" class="xl134" style="">Borrower</td></tr><tr height="22" style="height: 16.5pt; "><td colspan="1" rowspan="1" class="xl77" height="22" style="height: 16.5pt; ">Name:</td><td colspan="5" rowspan="1" class="xl124">Andover Arms Apartments</td><td colspan="2" rowspan="1" class="xl126" style="">2011</td><td colspan="2" rowspan="1" class="xl126" style="">2010</td><td colspan="2" rowspan="1" class="xl126" style="">2009</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl128" style="">Gross Sales</td><td colspan="2" rowspan="1" class="xl131" style=""> $               286,396</td><td colspan="2" rowspan="1" class="xl131"> $             274,102</td><td colspan="2" rowspan="1" class="xl131" style=""> $               267,749</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style="">Net   Profit/(Loss)</td><td colspan="2" rowspan="1" class="xl121" style=""> $               172,580</td><td colspan="2" rowspan="1" class="xl121"> $             124,307</td><td colspan="2" rowspan="1" class="xl121" style=""> $               104,672</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl71" style=""> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td><td colspan="2" rowspan="1" class="xl121"> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; ">Add:</td><td colspan="5" rowspan="1" class="xl113" style="">Depreciation   Expense</td><td colspan="2" rowspan="1" class="xl121" style=""> $                           -</td><td colspan="2" rowspan="1" class="xl121"> $                 3,561</td><td colspan="2" rowspan="1" class="xl121" style=""> $                 2,566</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style="">Interest   Expense</td><td colspan="2" rowspan="1" class="xl88" style=""> </td><td colspan="2" rowspan="1" class="xl121" style=""> $               15,436</td><td colspan="2" rowspan="1" class="xl121" style=""> $               18,083</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style=""> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td><td colspan="2" rowspan="1" class="xl121"> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; ">Less:</td><td colspan="5" rowspan="1" class="xl113" style="">Distributions</td><td colspan="2" rowspan="1" class="xl121" style=""> </td><td colspan="2" rowspan="1" class="xl121"> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style=""> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td><td colspan="2" rowspan="1" class="xl121"> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style=""> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td><td colspan="2" rowspan="1" class="xl121"> </td><td colspan="2" rowspan="1" class="xl121" style=""> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="1" rowspan="1" class="xl72" height="22" style="height: 16.5pt; "> </td><td colspan="5" rowspan="1" class="xl74" style=""> </td><td colspan="2" rowspan="1" class="xl116" style=""> </td><td colspan="2" rowspan="1" class="xl116"> </td><td colspan="2" rowspan="1" class="xl116" style=""> </td></tr><tr height="24" style="height: 18.0pt; "><td colspan="1" rowspan="1" class="xl70" height="24" style="height: 18.0pt; "> </td><td colspan="3" rowspan="1" class="xl114">Total Cash to Service Debt</td><td colspan="1" rowspan="1" class="xl80" style=""> </td><td colspan="1" rowspan="1" class="xl80" style=""> </td><td colspan="2" rowspan="1" class="xl119"> $               172,580</td><td colspan="2" rowspan="1" class="xl119"> $             143,304</td><td colspan="2" rowspan="1" class="xl119" style=""> $               125,321</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl70" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style="">Existing Debt   Service</td><td colspan="2" rowspan="1" class="xl88" style=""> </td><td colspan="2" rowspan="1" class="xl88"> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl70" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style=""> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td><td colspan="2" rowspan="1" class="xl88"> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl70" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style=""> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td><td colspan="2" rowspan="1" class="xl88"> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl70" height="21" style="height: 15.75pt; "> </td><td colspan="5" rowspan="1" class="xl113" style=""> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td><td colspan="2" rowspan="1" class="xl88"> </td><td colspan="2" rowspan="1" class="xl88" style=""> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="1" rowspan="1" class="xl70" height="22" style="height: 16.5pt; "> </td><td colspan="3" rowspan="1" class="xl74">Proposed Debt Service</td><td colspan="1" rowspan="1" class="xl74"> </td><td colspan="1" rowspan="1" class="xl74"> </td><td colspan="2" rowspan="1" class="xl106"> $                 78,888</td><td colspan="2" rowspan="1" class="xl106"> $               78,888</td><td colspan="2" rowspan="1" class="xl106" style=""> $               78,888</td></tr><tr height="24" style="height: 18.0pt; "><td colspan="1" rowspan="1" class="xl70" height="24" style="height: 18.0pt; "> </td><td colspan="3" rowspan="1" class="xl114">Total Debt Service</td><td colspan="1" rowspan="1" class="xl78"> </td><td colspan="1" rowspan="1" class="xl78"> </td><td colspan="2" rowspan="1" class="xl109"> $                 78,888</td><td colspan="2" rowspan="1" class="xl109"> $               78,888</td><td colspan="2" rowspan="1" class="xl109" style=""> $               78,888</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl70" height="21" style="height: 15.75pt; "> </td><td colspan="3" rowspan="1" class="xl104">Excess/(Deficit) Cash Flow</td><td colspan="1" rowspan="1" class="xl78"> </td><td colspan="1" rowspan="1" class="xl78"> </td><td colspan="2" rowspan="1" class="xl98"> $                 93,692</td><td colspan="2" rowspan="1" class="xl98"> $               64,416</td><td colspan="2" rowspan="1" class="xl98" style=""> $               46,433</td></tr><tr height="22" style="height: 16.5pt; "><td colspan="1" rowspan="1" class="xl75" height="22" style="height: 16.5pt; "> </td><td colspan="3" rowspan="1" class="xl105">Debt Coverage Ratio</td><td colspan="1" rowspan="1" class="xl79"> </td><td colspan="1" rowspan="1" class="xl79"> </td><td align="right" colspan="2" rowspan="1" class="xl101">2.19</td><td align="right" colspan="2" rowspan="1" class="xl101">1.82</td><td align="right" colspan="2" rowspan="1" class="xl101" style="">1.59</td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl86" height="22" style="height: 16.5pt; ">Comments:</td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl76"> </td></tr><tr height="63" style="height: 47.25pt; "><td colspan="12" rowspan="1" class="xl94" height="63" width="800" style="height: 47.25pt; width: 600pt; ">Information for Andover Arms comes from seller   internally prepared P&amp;L statements. This information seems to indicate   that current operations is more than sufficient to manage the proposed debt   for the purchase and improvements for the property. However, it is not known   how much current operations will be impacted by the renovation of the   property.</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="12" rowspan="1" class="xl96" height="21" width="800" style="height: 15.75pt; width: 600pt; "> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="12" rowspan="1" class="xl90" height="22" width="800" style="height: 16.5pt; width: 600pt; "> </td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span>
+
+    
+    <hr class="pageBreak" /><span id="j_id0:j_id364:j_id365:j_id383"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385" class="bPageBlock apexDefaultPageBlock secondaryPalette"><script>function twistSection(twisty, sectionId) {
+   var parentDiv = twisty;
+   while (parentDiv.tagName != 'DIV') { parentDiv = parentDiv.parentNode; }
+   var div = parentDiv.nextSibling; 
+   var elemWasOn = false; 
+   if (div.style.display != 'none') { 
+       div.style.display = 'none'; 
+       twisty.className ='showListButton';
+       twisty.alt = twisty.title = 'Show Section - '+twisty.name;
+       elemWasOn = true; 
+   } else {
+       div.style.display = 'block'; 
+       twisty.className = 'hideListButton';
+       twisty.alt = twisty.title = 'Hide Section - '+twisty.name;
+   } 
+  return !elemWasOn;
+}
+var registeredSections = new Array();
+function registerTwistableSection(headerId, mainTableId) {
+   var obj = new Object();
+   obj.headerId = headerId;
+   obj.mainTableId = mainTableId;
+   registeredSections[registeredSections.length] = obj;
+}
+function twistAllSections(on) {
+   for (var i = 0; i < registeredSections.length; i++) {
+      var obj = registeredSections[i];
+      var img;
+      img = document.getElementById('img_' + obj.headerId);
+    if (on && 'showListButton' == img.className) {
+         twistSection(img, obj.headerId, obj.mainTableId);
+     } else if (!on && 'hideListButton' == img.className) {
+         twistSection(img, obj.headerId, obj.mainTableId);
+       }
+   }
+}
+function toggleSection(headerId, on){
+    var sectionHead = document.getElementById('head_'+headerId+'_j_id0_j_id364_j_id365_j_id383_j_id384_j_id385');
+    var body = sectionHead.nextSibling;
+    var disp = on ? 'block' : 'none';
+    sectionHead.style.display = disp;
+    body.style.display = disp;
+}
+function registerTwistableSections_j_id0_j_id364_j_id365_j_id383_j_id384_j_id385() {
+registerTwistableSection('j_id0_j_id364_j_id365_j_id383_j_id384_j_id385_j_id386', 'j_id0_j_id364_j_id365_j_id383_j_id384_j_id385');
+registerTwistableSection('j_id0_j_id364_j_id365_j_id383_j_id384_j_id385_j_id425', 'j_id0_j_id364_j_id365_j_id383_j_id384_j_id385');
+}
+registerTwistableSections_j_id0_j_id364_j_id365_j_id383_j_id384_j_id385();
+</script><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Collateral Section</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386"><div class="pbSubheader first tertiaryPalette"><img src="/s.gif" alt="Hide Section - Collateral"  class="hideListButton" id="img_j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386" name="Collateral" onclick="twistSection(this);" style="cursor:pointer;" title="Hide Section - Collateral"/><h3>Collateral</h3></div><div class="pbSubsection"><table class="detailList" border="0" cellpadding="0" cellspacing="0"><tr><td class="data2Col  first  last " colSpan="2"><table class="collateral_detail" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral" border="1" cellpadding="0" cellspacing="0"><colgroup span="8"></colgroup><thead class="rich-table-thead"><tr class=""><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id387header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id387header:sortDiv">Collateral Type</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id390header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id390header:sortDiv">Address</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id395header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id395header:sortDiv">Value</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id399header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id399header:sortDiv">Valuation Method</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id402header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id402header:sortDiv">Valuation Date</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id406header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id406header:sortDiv">Discount</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id412header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id412header:sortDiv">Superior Liens</div></th><th class=" " scope="col" colspan="1" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id416header"><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:j_id416header:sortDiv">Discounted Collateral</div></th></tr></thead><tbody id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:tb"><tr class="odd"><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id387" colspan="1">Residential Land Development</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id390" colspan="1">One Sampson Street
+                    <br/>Dublin, Ohio, 43235</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id395" colspan="1"> $1,250,000.00</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id399" colspan="1">Appraised</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id402" colspan="1">05-31-12</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id406" colspan="1">70 %</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id412" colspan="1"> $750,000.00</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:0:j_id416" colspan="1"> $125,000.00</td></tr><tr class="even"><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id387" colspan="1">Multi-Family Real Estate</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id390" colspan="1">12025 McCracken Road
+                    <br/>Garfield Heights, Ohio, 44125</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id395" colspan="1"> $1,310,000.00</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id399" colspan="1">Appraised</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id402" colspan="1">03-06-12</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id406" colspan="1">75 %</td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id412" colspan="1"></td><td class="" id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id386:table_collateral:1:j_id416" colspan="1"> $982,500.00</td></tr></tbody></table></td></tr></table></div></div><div id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425"><div class="pbSubheader tertiaryPalette"><img src="/s.gif" alt="Hide Section - Collateral Summary Computations"  class="hideListButton" id="img_j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425" name="Collateral Summary Computations" onclick="twistSection(this);" style="cursor:pointer;" title="Hide Section - Collateral Summary Computations"/><h3>Collateral Summary Computations</h3></div><div class="pbSubsection"><table class="detailList" border="0" cellpadding="0" cellspacing="0"><tr><td class="labelCol  first "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id426:total_gross_collateral_value">
+Total Gross Collateral Value</label></td><td class="dataCol  first "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id426:total_gross_collateral_value"> $2,560,000.00</span></td><td class="labelCol  first "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id429:proposed_loan_balance">
+Proposed Loan Balance</label></td><td class="dataCol  first "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id429:proposed_loan_balance"> $982,500.00</span></td></tr><tr><td class="labelCol "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id432:total_discounted_collateral_value">
+Total Discounted Collateral Value</label></td><td class="dataCol "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id432:total_discounted_collateral_value"> $1,107,500.00</span></td><td class="labelCol "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id435:total_lien_value">
+Total Lien Value</label></td><td class="dataCol "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id435:total_lien_value"> $750,000.00</span></td></tr><tr><td class="labelCol "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id438:total_discounted_collateral_value_with_overrides">
+Total Discounted Collateral Value with Overrides</label></td><td class="dataCol "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id438:total_discounted_collateral_value_with_overrides"> $1,107,500.00</span></td><td class="labelCol "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id441:coverage_ratio">
+Coverage Ratio</label></td><td class="dataCol "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id441:coverage_ratio"> 1.13</span></td></tr><tr><td class="labelCol  last "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id444:loan_to_value">
+Loan To Value</label></td><td class="dataCol  last "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id444:loan_to_value"> 54.28%</span></td><td class="labelCol  last "><label for="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id447:coverage_ratio_with_overrides">
+Coverage Ratio with Overrides</label></td><td class="dataCol  last "><span id="j_id0:j_id364:j_id365:j_id383:j_id384:j_id385:j_id425:j_id447:coverage_ratio_with_overrides"> 1.13</span></td></tr></table></div></div></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id450"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id450:j_id451:j_id457" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Collateral Analysis / Marketability</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id450:j_id451:j_id457:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id450:j_id451:j_id457:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id450:j_id451:j_id457:table_prose:0:j_id458" colspan="1"><ul><li>The subject property is a 44 unit apartment complex located directly across from Marymount Hospital in Garfield Heights, Ohio.  The property consists of 17 one-bedroom, 26 two-bedroom units, and 1 efficiency.  The Borrower plans to add two additional one-bedroom units as part of the renovation of the property.</li><li>The purchase price is $1,060,000 and an appraisal will be required.  Initial advance will be limited to 75% of the &quot;as is&quot; appraised value and the remainder held for improvements.  The total loan amount will be based on 75% of the &#39;as improved&quot; value.</li><li>According to rent roll analysis, using a 10% vacancy and the 4 year average of expenses, the Income-Capitalization method for appraisal should produce an &#39;as is&#39; value for the property of  $1.5mm using a 10% cap rate. Obviously in this economy, the Market approach will be significantly lower which is seen with the purchase price of $1,060,000.</li><li>The account for the deposited improvement funds (initial balance of $260,000) will also be held as collateral.</li></ul><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id466"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id466:j_id467:j_id473" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Cross Collateralization</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id466:j_id467:j_id473:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id466:j_id467:j_id473:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id466:j_id467:j_id473:table_prose:0:j_id474" colspan="1">None<br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id482"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id482:j_id483:j_id489" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Other Loan Information</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id482:j_id483:j_id489:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id482:j_id483:j_id489:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id482:j_id483:j_id489:table_prose:0:j_id490" colspan="1"><table border="0" width="866" style="width: 650pt; "><colgroup><col width="33" style="width: 25pt; "></col><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col><col width="33" style="width: 25pt; "></col></colgroup><tbody><tr height="21" style="height: 15.95pt; "><td colspan="14" rowspan="1" class="xl77" height="21" width="866" style="height: 15.95pt; width: 650pt; ">OTHER LOAN INFORMATION </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="3" rowspan="1" class="xl86" height="21" style="height: 15.75pt; ">Source of   Repayment:</td><td colspan="1" rowspan="1" class="xl90">Primary:</td><td colspan="10" rowspan="1" class="xl92" style="">Cash flow   from collateral property</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="3" rowspan="1" class="xl86" height="21" style="height: 15.75pt; "> </td><td colspan="1" rowspan="1" class="xl90">Secondary:</td><td colspan="10" rowspan="1" class="xl94" style="">Co-Borrower   support</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="3" rowspan="1" class="xl89" height="21" style="height: 15.75pt; "> </td><td colspan="1" rowspan="1" class="xl91">Tertiary:</td><td colspan="10" rowspan="1" class="xl73" style="">Liquidation   of collateral real estate</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="3" rowspan="1" class="xl83" height="21" style="height: 15.75pt; ">Current Financial   Info:</td><td colspan="2" rowspan="1" class="xl85">Last Statement Date:</td><td colspan="2" rowspan="1" class="xl88">Interim Statement Date:</td><td colspan="1" rowspan="1" class="xl69"> </td><td colspan="2" rowspan="1" class="xl88">Financial Year End:</td><td colspan="2" rowspan="1" class="xl85">Type of Statement:</td><td colspan="2" rowspan="1" class="xl97" style=""> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="1" rowspan="1" class="xl70" height="22" style="height: 16.5pt; "> </td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="2" rowspan="1" class="xl75">12/31/2010</td><td colspan="2" rowspan="1" class="xl75"> </td><td colspan="1" rowspan="1"> </td><td colspan="2" rowspan="1" class="xl76">12/31</td><td colspan="4" rowspan="1" class="xl99" style="">Tax Return   and PFS</td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id498"><hr class="pageBreak" /><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id498:j_id499:j_id505" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Deposit Account(s) Balance Summary</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id498:j_id499:j_id505:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id498:j_id499:j_id505:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id498:j_id499:j_id505:table_prose:0:j_id506" colspan="1"><table border="0" width="866" style="width: 650pt; "><colgroup><col width="33" style="width: 25pt; "></col><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col><col width="33" style="width: 25pt; "></col></colgroup><tbody><tr height="26" style="height: 19.5pt; "><td colspan="14" rowspan="1" class="xl75" height="26" width="866" style="height: 19.5pt; width: 650pt; ">DEPOSIT ACCOUNT(S) BALANCE SUMMARY:</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl78" height="21" style="height: 15.75pt; ">Direct:</td><td colspan="1" rowspan="1" class="xl70">DDA Avg.:</td><td colspan="2" rowspan="1" class="xl74"> $                         -</td><td colspan="1" rowspan="1" class="xl70">Trust Avg.:</td><td colspan="2" rowspan="1" class="xl74"> $                           -</td><td colspan="1" rowspan="1" class="xl70">Sav./CD:</td><td colspan="1" rowspan="1" class="xl74"> $         -</td><td colspan="1" rowspan="1" class="xl69">Total:</td><td colspan="3" rowspan="1" class="xl82" style=""> $                                 -</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl79" height="21" style="height: 15.75pt; ">Indirect:</td><td colspan="1" rowspan="1" class="xl71">DDA Avg.:</td><td colspan="2" rowspan="1" class="xl73"> $                         -</td><td colspan="1" rowspan="1" class="xl71">Trust Avg.:</td><td colspan="2" rowspan="1" class="xl73"> $                           -</td><td colspan="1" rowspan="1" class="xl71">Sav./CD:</td><td colspan="1" rowspan="1" class="xl73"> $         -</td><td colspan="1" rowspan="1" class="xl72">Total:</td><td colspan="3" rowspan="1" class="xl83" style=""> $                                 -</td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id514"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id514:j_id515:j_id521" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">LOC Activity</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id514:j_id515:j_id521:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id514:j_id515:j_id521:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id514:j_id515:j_id521:table_prose:0:j_id522" colspan="1"><table border="0" width="866" style="width: 650pt; "><colgroup><col width="33" style="width: 25pt; "></col><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col><col width="33" style="width: 25pt; "></col></colgroup><tbody><tr height="25" style="height: 18.75pt; "><td colspan="14" rowspan="1" class="xl76" height="25" width="866" style="height: 18.75pt; width: 650pt; ">LOC ACTIVITY: (previous 12 months): </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl73" height="22" style="height: 16.5pt; ">High:</td><td colspan="2" rowspan="1" class="xl75"> </td><td colspan="1" rowspan="1" class="xl69">Low:</td><td colspan="2" rowspan="1" class="xl75"> </td><td colspan="1" rowspan="1" class="xl69">Average:</td><td colspan="2" rowspan="1" class="xl75"> </td><td colspan="2" rowspan="1" class="xl69">Days at Zero:</td><td colspan="1" rowspan="1" class="xl71"> </td><td colspan="1" rowspan="1" class="xl72"> </td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id530"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id530:j_id531:j_id537" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Borrowing Base</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id530:j_id531:j_id537:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id530:j_id531:j_id537:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id530:j_id531:j_id537:table_prose:0:j_id538" colspan="1"><table border="0" width="866" style="width: 650pt; "><colgroup><col width="33" style="width: 25pt; "></col><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col><col width="33" style="width: 25pt; "></col></colgroup><tbody><tr height="26" style="height: 19.5pt; "><td colspan="14" rowspan="1" class="xl77" height="26" width="866" style="height: 19.5pt; width: 650pt; ">BORROWING BASE: (previous 12 months): </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl71" height="21" style="height: 15.75pt; ">Date   Last Reported:</td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="2" rowspan="1" class="xl82"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl73">Borrowing Base Surplus/(Deficit)</td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl74"> </td><td colspan="2" rowspan="1" class="xl84"> </td><td colspan="1" rowspan="1" class="xl69"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="3" rowspan="1" class="xl75" height="21" style="height: 15.75pt; ">Other   Comments:</td><td colspan="11" rowspan="1" class="xl80" width="705" style="width: 529pt; "> </td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id364:j_id365:j_id546"><hr class="pageBreak" /><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id364:j_id365:j_id546:j_id547:j_id553" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Credit Facilities List</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id364:j_id365:j_id546:j_id547:j_id553:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id364:j_id365:j_id546:j_id547:j_id553:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id364:j_id365:j_id546:j_id547:j_id553:table_prose:0:j_id554" colspan="1"><table border="0" width="866" style="font-family: Arial, Verdana, sans-serif; width: 650pt; "><colgroup><col width="33" style="width: 25pt; "></col><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col><col width="33" style="width: 25pt; "></col></colgroup><tbody><tr height="27" style="height: 20.25pt; "><td colspan="5" rowspan="1" class="xl71" height="27" width="289" style="height: 20.25pt; width: 217pt; ">CREDIT FACILITIES LIST: </td><td colspan="1" rowspan="1" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl92" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" width="33" style="width: 25pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl188" height="21" style="height: 15.75pt; ">Direct Debt </td><td colspan="2" rowspan="1" class="xl75">Original</td><td colspan="2" rowspan="1" class="xl75">Current</td><td colspan="1" rowspan="1" class="xl75"> </td><td colspan="2" rowspan="1" class="xl75">Unfunded</td><td colspan="2" rowspan="1" class="xl190">Proposed</td><td colspan="1" rowspan="1" class="xl85">Maturity</td><td colspan="1" rowspan="1" class="xl75"> </td><td colspan="1" rowspan="1" class="xl76"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="2" rowspan="1" class="xl176" height="20" style="height: 15pt; ">to Borrower</td><td colspan="2" rowspan="1" class="xl74">Loan Balance</td><td colspan="2" rowspan="1" class="xl74">Loan Balance</td><td colspan="1" rowspan="1" class="xl74">Rate</td><td colspan="2" rowspan="1" class="xl74">Commitments</td><td colspan="2" rowspan="1" class="xl130">Commitments</td><td colspan="1" rowspan="1" class="xl84">Date</td><td colspan="1" rowspan="1" class="xl74">Collateral</td><td colspan="1" rowspan="1" class="xl77">RR</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl186" height="21" style="height: 15.75pt; ">Proposed</td><td colspan="2" rowspan="1" class="xl137"> $             982,500</td><td colspan="2" rowspan="1" class="xl137"> $                               -</td><td align="right" colspan="1" rowspan="1" class="xl73">5.00%</td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl123"> $             982,500</td><td colspan="1" rowspan="1" class="xl90">10 Years</td><td colspan="1" rowspan="1" class="xl72">R/E</td><td colspan="1" rowspan="1" class="xl78"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl135" height="21" style="height: 15.75pt; "> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="1" rowspan="1" class="xl73"> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl123"> </td><td colspan="1" rowspan="1" class="xl90"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl78"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl159" height="21" style="height: 15.75pt; ">PAY OFF</td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="1" rowspan="1" class="xl97"> </td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="2" rowspan="1" class="xl139"> </td><td colspan="1" rowspan="1" class="xl98"> </td><td colspan="1" rowspan="1" class="xl99"> </td><td colspan="1" rowspan="1" class="xl100"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl164" height="22" style="height: 16.5pt; "> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="1" rowspan="1" class="xl86"> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="2" rowspan="1" class="xl141"> </td><td colspan="1" rowspan="1" class="xl91"> </td><td colspan="1" rowspan="1" class="xl87"> </td><td colspan="1" rowspan="1" class="xl88"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl183" height="21" style="height: 15.75pt; ">Sub-Totals</td><td colspan="2" rowspan="1" class="xl143"> $             982,500</td><td colspan="2" rowspan="1" class="xl143"> $                               -</td><td colspan="1" rowspan="1" class="xl101"> </td><td colspan="2" rowspan="1" class="xl143"> $                           -</td><td colspan="2" rowspan="1" class="xl146"> $             982,500</td><td colspan="1" rowspan="1" class="xl102"> </td><td colspan="1" rowspan="1" class="xl101"> </td><td colspan="1" rowspan="1" class="xl103"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="3" rowspan="1" class="xl132" height="22" style="height: 16.5pt; ">Current Borr. Commitment</td><td colspan="2" rowspan="1" class="xl134"> $                         -</td><td colspan="1" rowspan="1" class="xl104"> </td><td colspan="1" rowspan="1" class="xl105"> </td><td colspan="1" rowspan="1" class="xl106"> </td><td colspan="3" rowspan="1" class="xl121">Proposed Borr. Commitment</td><td colspan="2" rowspan="1" class="xl134"> $             982,500</td><td colspan="1" rowspan="1" class="xl107"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="2" rowspan="1" class="xl174" height="20" style="height: 15pt; ">Direct Debt to</td><td colspan="1" rowspan="1" class="xl70"> </td><td colspan="1" rowspan="1" class="xl82"> </td><td colspan="1" rowspan="1" class="xl70"> </td><td colspan="1" rowspan="1" class="xl82"> </td><td colspan="1" rowspan="1" class="xl83"> </td><td colspan="1" rowspan="1" class="xl70"> </td><td colspan="1" rowspan="1" class="xl89"> </td><td colspan="1" rowspan="1" class="xl95"> </td><td colspan="1" rowspan="1" class="xl96"> </td><td colspan="1" rowspan="1" class="xl82"> </td><td colspan="1" rowspan="1" class="xl83"> </td><td colspan="1" rowspan="1" class="xl69"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="2" rowspan="1" class="xl185" height="20" style="height: 15pt; ">Guarantors or</td><td colspan="2" rowspan="1" class="xl111">Original</td><td colspan="2" rowspan="1" class="xl111">Current</td><td colspan="1" rowspan="1" class="xl79"> </td><td colspan="2" rowspan="1" class="xl111">Unfunded</td><td colspan="2" rowspan="1" class="xl152">Proposed</td><td colspan="1" rowspan="1" class="xl94">Maturity</td><td colspan="1" rowspan="1" class="xl79"> </td><td colspan="1" rowspan="1" class="xl69"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="2" rowspan="1" class="xl176" height="20" style="height: 15pt; ">Co-Borrowers</td><td colspan="2" rowspan="1" class="xl74">Loan Balance</td><td colspan="2" rowspan="1" class="xl74">Loan Balance</td><td colspan="1" rowspan="1" class="xl80">Rate</td><td colspan="2" rowspan="1" class="xl74">Commitments</td><td colspan="2" rowspan="1" class="xl130">Commitments</td><td colspan="1" rowspan="1" class="xl93">Date</td><td colspan="1" rowspan="1" class="xl80">Collateral</td><td colspan="1" rowspan="1" class="xl81">RR</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl135" height="21" style="height: 15.75pt; "> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="1" rowspan="1" class="xl73"> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl123"> </td><td colspan="1" rowspan="1" class="xl90"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl78"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl159" height="21" style="height: 15.75pt; ">PAY OFF</td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="1" rowspan="1" class="xl97"> </td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="2" rowspan="1" class="xl139"> </td><td colspan="1" rowspan="1" class="xl98"> </td><td colspan="1" rowspan="1" class="xl99"> </td><td colspan="1" rowspan="1" class="xl100"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl164" height="22" style="height: 16.5pt; "> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="1" rowspan="1" class="xl86"> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="2" rowspan="1" class="xl141"> </td><td colspan="1" rowspan="1" class="xl91"> </td><td colspan="1" rowspan="1" class="xl87"> </td><td colspan="1" rowspan="1" class="xl88"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl168" height="22" style="height: 16.5pt; ">Sub-Totals</td><td colspan="2" rowspan="1" class="xl170"> $                         -</td><td colspan="2" rowspan="1" class="xl170"> $                               -</td><td colspan="1" rowspan="1" class="xl108"> </td><td colspan="2" rowspan="1" class="xl170"> $                           -</td><td colspan="2" rowspan="1" class="xl181"> $                         -</td><td colspan="1" rowspan="1" class="xl109"> </td><td colspan="1" rowspan="1" class="xl108"> </td><td colspan="1" rowspan="1" class="xl110"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="3" rowspan="1" class="xl125" height="22" style="height: 16.5pt; ">Current GTR/CB Commitment</td><td colspan="2" rowspan="1" class="xl127"> $                         -</td><td colspan="1" rowspan="1" class="xl104"> </td><td colspan="1" rowspan="1" class="xl105"> </td><td colspan="1" rowspan="1" class="xl106"> </td><td colspan="3" rowspan="1" class="xl121">Proposed GTR/CB Commitment</td><td colspan="2" rowspan="1" class="xl134"> $                         -</td><td colspan="1" rowspan="1" class="xl107"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="2" rowspan="1" class="xl174" height="20" style="height: 15pt; ">Direct Debt to</td><td colspan="2" rowspan="1" class="xl175">Original</td><td colspan="2" rowspan="1" class="xl178">Current</td><td colspan="1" rowspan="1" class="xl111"> </td><td colspan="2" rowspan="1" class="xl178">Unfunded</td><td colspan="2" rowspan="1" class="xl179">Proposed</td><td colspan="1" rowspan="1" class="xl112">Maturity</td><td colspan="1" rowspan="1" class="xl111"> </td><td colspan="1" rowspan="1" class="xl113"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="2" rowspan="1" class="xl176" height="20" style="height: 15pt; ">Related Entities</td><td colspan="2" rowspan="1" class="xl74">Loan Balance</td><td colspan="2" rowspan="1" class="xl74">Loan Balance</td><td colspan="1" rowspan="1" class="xl74">Rate</td><td colspan="2" rowspan="1" class="xl74">Commitments</td><td colspan="2" rowspan="1" class="xl130">Commitments</td><td colspan="1" rowspan="1" class="xl84">Date</td><td colspan="1" rowspan="1" class="xl74">Collateral</td><td colspan="1" rowspan="1" class="xl77">RR</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl135" height="21" style="height: 15.75pt; "> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="1" rowspan="1" class="xl73"> </td><td colspan="2" rowspan="1" class="xl137"> </td><td colspan="2" rowspan="1" class="xl123"> </td><td colspan="1" rowspan="1" class="xl90"> </td><td colspan="1" rowspan="1" class="xl72"> </td><td colspan="1" rowspan="1" class="xl78"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="2" rowspan="1" class="xl159" height="21" style="height: 15.75pt; ">PAY OFF</td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="1" rowspan="1" class="xl97"> </td><td colspan="2" rowspan="1" class="xl161"> </td><td colspan="2" rowspan="1" class="xl139"> </td><td colspan="1" rowspan="1" class="xl98"> </td><td colspan="1" rowspan="1" class="xl99"> </td><td colspan="1" rowspan="1" class="xl100"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl164" height="22" style="height: 16.5pt; "> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="1" rowspan="1" class="xl86"> </td><td colspan="2" rowspan="1" class="xl166"> </td><td colspan="2" rowspan="1" class="xl141"> </td><td colspan="1" rowspan="1" class="xl91"> </td><td colspan="1" rowspan="1" class="xl87"> </td><td colspan="1" rowspan="1" class="xl88"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="2" rowspan="1" class="xl168" height="22" style="height: 16.5pt; ">Sub-Totals</td><td colspan="2" rowspan="1" class="xl170"> $                         -</td><td colspan="2" rowspan="1" class="xl170"> $                               -</td><td colspan="1" rowspan="1" class="xl114"> </td><td colspan="2" rowspan="1" class="xl170"> $                           -</td><td colspan="2" rowspan="1" class="xl146"> $                         -</td><td colspan="1" rowspan="1" class="xl115"> </td><td colspan="1" rowspan="1" class="xl114"> </td><td colspan="1" rowspan="1" class="xl116"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="3" rowspan="1" class="xl125" height="22" style="height: 16.5pt; ">Current Rel. Ent. Commitment</td><td colspan="2" rowspan="1" class="xl127"> $                         -</td><td colspan="1" rowspan="1" class="xl104"> </td><td colspan="1" rowspan="1" class="xl105"> </td><td colspan="1" rowspan="1" class="xl106"> </td><td colspan="3" rowspan="1" class="xl195">Proposed Rel. Ent. Commitment</td><td colspan="2" rowspan="1" class="xl134"> $                         -</td><td colspan="1" rowspan="1" class="xl107"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="14" rowspan="1" class="xl198" height="21" style="height: 15.75pt; "> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="5" rowspan="1" height="22" style="height: 16.5pt; ">Current Outstanding Loan Balances</td><td colspan="2" rowspan="1" class="xl155"> $                                -</td><td colspan="2" rowspan="1"> </td><td colspan="2" rowspan="1" class="xl117">ACH Limits</td><td colspan="3" rowspan="1" class="xl156"> </td></tr><tr height="22" style="height: 16.5pt; "><td colspan="5" rowspan="1" class="xl192" height="22" style="height: 16.5pt; ">+ Current Unfunded Commitments</td><td colspan="2" rowspan="1" class="xl148"> $                                -</td><td colspan="2" rowspan="1"> </td><td colspan="1" rowspan="1" class="xl119">Merchant Capture</td><td colspan="1" rowspan="1" class="xl119"> </td><td colspan="3" rowspan="1" class="xl128"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="5" rowspan="1" class="xl197" height="21" style="height: 15.75pt; ">Current Total Loan Exposure</td><td colspan="2" rowspan="1" class="xl149"> $                               -</td><td colspan="7" rowspan="1"> </td></tr><tr height="20" style="height: 15pt; "><td colspan="5" rowspan="1" class="xl192" height="20" style="height: 15pt; ">+ Change in Exposure (New Loans -Payoffs)</td><td colspan="2" rowspan="1" class="xl148"> $                      982,500</td><td colspan="7" rowspan="1"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="4" rowspan="1" class="xl120" height="21" style="height: 15.75pt; ">Proposed Total Loan Exposure</td><td colspan="1" rowspan="1" class="xl120"> </td><td colspan="2" rowspan="1" class="xl150"> $                    982,500</td><td colspan="7" rowspan="1" class="xl201"> </td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id612"><span id="j_id0:j_id612:j_id613:j_id614"><hr class="pageBreak" /><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Background / Financial Analysis - Business Information</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose:0:j_id622" colspan="1">
+                    <h2>Product/Service</h2><br/><span class="subHeading"></span>Product / Service:<br/><div>This loan will be for the fee simple purchase of a multi-family property and will be held as a long term investment.  Mr. Sinito&#39;s companies specialize in the redevelopment of multi-family properties utilizing State tax credit programs.</div><br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose:1:j_id622" colspan="1">
+                    <h2>Company History</h2><br/><span class="subHeading"></span>Frank Sinito formed Millennia Housing Development, Ltd (MHD) in 1995, with a stated mission to acquire, preserve, and rehabilitate multi-family residential rental properties receiving rental or other subsidies under specific sections of the National Housing Act, Rural Development, and expiring tax credit properties utilizing low income housing tax credits.  Since 2004, MHD has redeveloped numerous apartment complexes, and with its affiliate, Millennia Housing Management, Ltd. and American Preservation Builders, has grown into an economically diverse organization with operations in seven states.<br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose:2:j_id622" colspan="1">
+                    <h2>Management Experience</h2><br/><span class="subHeading"></span>Millennia Housing Management, LTD. was established in 1995 to manage a newly acquired portfolio and to build an organization with the industry&#39;s most talented and experienced executives in both HUD subsidized and Low Income Housing Tax Credit (LIHTC) housing. Frank T. Sinito, its President and Founder, and his associates have positioned the company for growth opportunities in fee management and acquisitions in the affordable multi-family industry.<br/><br/>Collectively, Millennia Housing Management&#39;s executive team possesses over 100 years of experience in developing and managing Section 8 housing, LIHTC, Rural Development, and Market Rate properties. Millennia Housing Management currently operates 7,013 apartment units in the Ohio, Michigan, Indiana, Missouri, Iowa, Kentucky and West Virginia areas.<br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose:3:j_id622" colspan="1">
+                    <h2>Officers/Members/Partners/Trustees</h2><br/><span class="subHeading"></span><table border="0" width="672" style="width: 504pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl70" height="21" width="64" style="height: 15.75pt; width: 48pt; ">Name:</td><td colspan="3" rowspan="1" class="xl73" width="217" style="width: 163pt; ">Frank Sinito</td><td colspan="1" rowspan="1" class="xl70" width="71" style="width: 53pt; ">Title:</td><td colspan="2" rowspan="1" class="xl73" width="128" style="width: 96pt; ">President</td><td colspan="2" rowspan="1" class="xl70" width="128" style="width: 96pt; ">Ownership :</td><td align="right" colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; ">100.0%</td></tr></tbody></table><br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id614:j_id615:j_id621:table_prose:4:j_id622" colspan="1">
+                    <h2>Other Customer Information</h2><br/><span class="subHeading"></span>The subject property was built in 1964 and consists of 44 units over two buildings.  Each building consists of 3 stories.  There are 1.95 parking spaces per unit.<br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id612:j_id613:j_id630"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Background / Financial Analysis - Non-Financial Risks</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose:0:j_id638" colspan="1">
+                    <h2>Business Risks</h2><br/><span class="subHeading"></span>One of the great stengths of this loan is Mr. Sinito&#39;s expertise in developing and managing multi-family property.  The success of his companies, Millennia Management, Millennia Development, and American Preservation Builders, have grown the portfolio under management to over 10,000 units.<br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose:1:j_id638" colspan="1">
+                    <h2>Industry Risks</h2><br/><span class="subHeading"></span>The multi-family markets has become the strongest property type for Commercial Real Estate in Northeast Ohio.  There is considerable demand and many buyers for quality projects.  More importantly, the fundamentals of the projects including rental amounts, vacancies, and capitalization rates are at modest levels from a historical view.<br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose:2:j_id638" colspan="1">
+                    <h2>Management Risks</h2><br/><span class="subHeading"></span>The management and ownership of this project are significant strengths of this loan as stated above.<br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose:3:j_id638" colspan="1">
+                    <h2>Environmental Risk (If Applicable)</h2><br/><span class="subHeading"></span>None - Subject to Phase I Environmental Assessment.<br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id630:j_id631:j_id637:table_prose:4:j_id638" colspan="1">
+                    <h2>Real Estate Risk (Income Generating)</h2><br/><span class="subHeading"></span>The location of this project is excellent as it is located directly across from Marymount Hospital, which provides a feeder system of tenants.  The project is approximately 2 minutes from I-480.  The current occupancy is 100%.  Recent improvements include complete roof maintenance of both buildings in 2010, the balconies have been repaired and / or improved.  This project includes additional improvements to be completed as outlined in the attachment.<br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span><span id="j_id0:j_id612:j_id613:j_id646"><hr class="pageBreak" /><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Background/Financial Analysis - Financial Condition</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653:table_prose:0:j_id654" colspan="1">
+                    <h2>Balance Sheet</h2><br/><span class="subHeading"></span><table border="0" width="736" style="width: 552pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl73" height="21" width="64" style="height: 15.75pt; width: 48pt; ">A.</td><td colspan="2" rowspan="1" class="xl68" width="128" style="width: 96pt; ">Balance   Sheet</td><td colspan="1" rowspan="1" class="xl68" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" class="xl68" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl68" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" class="xl68" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl68" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl68" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl68" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl74" height="21" style="height: 15.75pt; ">1.</td><td colspan="1" rowspan="1" class="xl68">Equity:</td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="3" rowspan="1" class="xl68">Most Recent FYE Net   Worth:</td><td colspan="2" rowspan="1" class="xl79" width="128" style="width: 96pt; "> $                         -</td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl69"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; ">New Entity</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl70" width="672" style="width: 504pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl74" height="21" style="height: 15.75pt; ">2.</td><td colspan="1" rowspan="1" class="xl68">Liquidity:</td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl69"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; ">New Entity</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl70" width="672" style="width: 504pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl77" width="672" style="width: 504pt; ">a. Accounts Receivable:</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; ">N/A</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl77" width="672" style="width: 504pt; ">b. Accounts Payable:</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; ">N/A</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl77" width="672" style="width: 504pt; ">c. Inventory:</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; ">N/A</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl72" width="64" style="width: 48pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl74" height="21" style="height: 15.75pt; ">3.</td><td colspan="1" rowspan="1" class="xl68">Leverage:</td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="3" rowspan="1" class="xl68">Most Recent FYE D/E   Ratio:</td><td colspan="2" rowspan="1" class="xl80" width="128" style="width: 96pt; "> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl68"> </td><td colspan="1" rowspan="1" class="xl69"> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; ">New Entity</td></tr></tbody></table><br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653:table_prose:1:j_id654" colspan="1">
+                    <h2>Income Statement</h2><br/><span class="subHeading"></span><table border="0" width="736" style="width: 552pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl72" height="21" width="64" style="height: 15.75pt; width: 48pt; ">B.</td><td colspan="2" rowspan="1" class="xl69" width="128" style="width: 96pt; ">Income   Statement</td><td colspan="1" rowspan="1" class="xl69" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; ">1.</td><td colspan="10" rowspan="1" class="xl73" width="672" style="width: 504pt; ">Sales/Expense (or Commercial RE Lease/Expense Analysis):</td></tr><tr height="62" style="height: 46.5pt; "><td colspan="1" rowspan="1" class="xl71" height="62" style="height: 46.5pt; "> </td><td colspan="10" rowspan="1" class="xl77" width="672" style="width: 504pt; ">2010 Seller: Rents increased by 2.4% (roughly inflation) to   $274,101. Operating expenses, less depreciation, were $130,798 or 47.7%. NOI   was $143,304 or 52.3%. Depreciation was $3,561 and interest expense was   $15,436. 2010 Net Profit was $124,307.</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl73" width="672" style="width: 504pt; "> </td></tr><tr height="63" style="height: 47.25pt; "><td colspan="1" rowspan="1" class="xl71" height="63" style="height: 47.25pt; "> </td><td colspan="10" rowspan="1" class="xl73" width="672" style="width: 504pt; ">2009 Seller: Rents decreased by 2.1% to $267,749. Operating   expenses, less depreciation, were $142,428 or 53.2%. NOI was $125,321 or   46.8%. Depreciation was $2,566 and interest expense was $18,083. 2009 Net   Profit was $104,672.</td></tr><tr height="19" style="height: 14.25pt; "><td colspan="1" rowspan="1" class="xl71" height="19" style="height: 14.25pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl73" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl74" width="64" style="width: 48pt; "> </td></tr><tr height="63" style="height: 47.25pt; "><td colspan="1" rowspan="1" class="xl71" height="63" style="height: 47.25pt; "> </td><td colspan="10" rowspan="1" class="xl73" width="672" style="width: 504pt; ">2011 Seller: Rents increased by 4.1% to $285,396. Operating   expenses, less depreciation, were $112,816 or 39.5%. NOI was $172,580 or   60.5%. Depreciation was $0 and interest expense was $0. 2011 Net Profit was   $1172,580.</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl75" width="672" style="width: 504pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; ">2. </td><td colspan="10" rowspan="1" class="xl73" width="672" style="width: 504pt; ">Cash Flow (Traditional/UCA):</td></tr><tr height="67" style="height: 50.25pt; "><td colspan="1" rowspan="1" class="xl71" height="67" style="height: 50.25pt; "> </td><td colspan="10" rowspan="1" class="xl77" width="672" style="width: 504pt; ">2010 Net Profit, plus depreciation and interest, totaled   $143,304. Proposed debt payments were $78,888 producing a DSC of 1.82. Global   cashflow is incomplete at this time due to some unknown debt payments for   some debts found on PFS.</td></tr></tbody></table><br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653:table_prose:2:j_id654" colspan="1">
+                    <h2>Capital Expenditures</h2><br/><span class="subHeading"></span><table border="0" width="736" style="width: 552pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" width="64" style="height: 15.75pt; width: 48pt; ">C.</td><td colspan="3" rowspan="1" class="xl69" width="217" style="width: 163pt; ">Capital   Expenditures</td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="71" style="width: 53pt; "> </td><td colspan="2" rowspan="1" class="xl74" width="128" style="width: 96pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl72" width="672" style="width: 504pt; ">The project anticipates spending $260,000 for   renovations/improvements to the property.</td></tr></tbody></table><br/><br/></td></tr><tr class=""><td class="" id="j_id0:j_id612:j_id613:j_id646:j_id647:j_id653:table_prose:3:j_id654" colspan="1">
+                    <h2>Payment History</h2><br/><span class="subHeading"></span><table border="0" width="736" style="width: 552pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl71" height="21" width="64" style="height: 15.75pt; width: 48pt; ">D.</td><td colspan="2" rowspan="1" class="xl69" width="128" style="width: 96pt; ">Payment   History</td><td colspan="1" rowspan="1" class="xl69" width="89" style="width: 67pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="71" style="width: 53pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl69" width="64" style="width: 48pt; "> </td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; "> </td></tr><tr height="21" style="height: 15.75pt; "><td colspan="1" rowspan="1" class="xl69" height="21" style="height: 15.75pt; "> </td><td colspan="10" rowspan="1" class="xl72" width="672" style="width: 504pt; ">New borrower to bank. No payment history.</td></tr></tbody></table><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id662"><span id="j_id0:j_id662:j_id663:j_id664"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id662:j_id663:j_id664:j_id665:j_id671" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Key Risks of Credit and Mitigating Circumstances</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id662:j_id663:j_id664:j_id665:j_id671:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id662:j_id663:j_id664:j_id665:j_id671:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id662:j_id663:j_id664:j_id665:j_id671:table_prose:0:j_id672" colspan="1">Risk: On-Going stability of the tenancy<span class="Apple-tab-span" style=""><br/></span>Mitigant: Historical occupancy strong and fundamentals are reasonable<br/><br/>Risk:  Mis-management of project<br/>Mitigant:  Significant Sponsor experience and strength of loan<br/><br/>Risk: Contingent Liabilities of $22.5MM for Mr. and Mrs. Sinito<span class="Apple-tab-span" style="">                                            </span><br/>Mitigant:  Strong project cash flow of 2.19x, strong global cash flow of 3.39x, Personal liquidity of $2.3MM<br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id680"><span id="j_id0:j_id680:j_id681:j_id682"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id680:j_id681:j_id682:j_id683:j_id689" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Analysis of Co-borrowers / Guarantors</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id680:j_id681:j_id682:j_id683:j_id689:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id680:j_id681:j_id682:j_id683:j_id689:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id680:j_id681:j_id682:j_id683:j_id689:table_prose:0:j_id690" colspan="1"><div>
+<table border="0" width="800" style="width: 600pt; "><colgroup><col width="64" style="width: 48pt; "></col><col width="89" style="width: 67pt; "></col><col width="64" style="width: 48pt; "></col><col width="71" style="width: 53pt; "></col><col width="64" style="width: 48pt; "></col></colgroup><tbody><tr height="22" style="height: 16.5pt; "><td colspan="4" rowspan="1" class="xl86" height="22" width="256" style="height: 16.5pt; width: 192pt; ">Name:</td><td colspan="1" rowspan="1" class="xl69" width="89" style="width: 67pt; ">CB Score</td><td colspan="1" rowspan="1" class="xl70" width="64" style="width: 48pt; ">FS Date:</td><td colspan="2" rowspan="1" class="xl78" width="135" style="width: 101pt; ">Assets</td><td colspan="2" rowspan="1" class="xl80" width="128" style="width: 96pt; ">Liabilities</td><td colspan="2" rowspan="1" class="xl80" width="128" style="width: 96pt; ">Net Worth</td></tr><tr height="21" style="height: 15.75pt; "><td colspan="4" rowspan="1" class="xl73" height="21" width="256" style="height: 15.75pt; width: 192pt; ">Frank and Malisse Sinito</td><td colspan="1" rowspan="1" class="xl72" width="89" style="width: 67pt; ">723/734</td><td align="right" colspan="1" rowspan="1" class="xl71" width="64" style="width: 48pt; ">9/30/11</td><td colspan="2" rowspan="1" class="xl76" width="135" style="width: 101pt; "> $            71,011,800</td><td colspan="2" rowspan="1" class="xl76" width="128" style="width: 96pt; "> $          10,273,800</td><td colspan="2" rowspan="1" class="xl76" width="128" style="width: 96pt; "> $        60,738,000</td></tr></tbody></table>
+<br/>Cash was stated at $2,218,800. Securities at $85,300. Notes recievable and project advances total $6,769,800. Personal RE owned is $4,178,900. Investment in RE partnerships $34,022,300. Investment in closely held businesses $22,665,500. Personal property $1,022,100. Retirement accounts $41,600. CSVLI $7,500. Excluding all business interests his personal Assets would be adjusted to $7,554,200. Although personally borrowered $4.8mm of his liablities are for his businesses. If reduced from his liabilities they would be adjusted to $5,472,400. So Adjusted Personal NW would be $2,081,800.<span class="Apple-tab-span" style="">                                           </span></div>
+<div>In addition to what was exhibited above he has contingent liabilities totaling $22,520,300 as of 9/30/2011.<span class="Apple-tab-span" style="">                                          </span></div>
+<div>In the Borrower&#39;s schedule of projects, Creek Bridge Apartments shows a negative net worth of $5.5MM.  This project has a loan granted by the Kentucky Housing Corporation of $7.03MM.  This loan has no debt service and is forgiven over a 15 year period, so long as the property is managed and maintained to their specifications, which according to the Borrower, are substantially the same as the rules for their typical Tax Credit transactions.  Two other projects of the Borrower known as Aldersgate I &amp; II utilize a similar program with the State of Michigan.<span class="Apple-tab-span" style="">                                         </span></div>
+<div> </div><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id698"><span id="j_id0:j_id698:j_id699:j_id700"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id698:j_id699:j_id700:j_id701:j_id707" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Lenders Recommendation</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id698:j_id699:j_id700:j_id701:j_id707:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id698:j_id699:j_id700:j_id701:j_id707:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id698:j_id699:j_id700:j_id701:j_id707:table_prose:0:j_id708" colspan="1">The AO has known Mr. Sinito for over 10 years.  The AO has watched Mr. Sinito&#39;s businesses grow rapidly during this time and he has maintained excellent profitability.  Mr. Sinito has been aggressive with his growth but has always managed his accounts properly.  The subject project has strong cash flow and Mr. Sinito has sufficient financial strength to support this loan request.  The AO recommends approval of this request.<br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id716"><span id="j_id0:j_id716:j_id717:j_id718"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id716:j_id717:j_id718:j_id719:j_id725" class="bPageBlock apexDefaultPageBlock secondaryPalette"><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Credit Remarks</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><table class="width_98_table" id="j_id0:j_id716:j_id717:j_id718:j_id719:j_id725:table_prose" border="0" cellpadding="0" cellspacing="0"><colgroup span="1"></colgroup><tbody id="j_id0:j_id716:j_id717:j_id718:j_id719:j_id725:table_prose:tb"><tr class=""><td class="" id="j_id0:j_id716:j_id717:j_id718:j_id719:j_id725:table_prose:0:j_id726" colspan="1"><div>Borrower plans to inject $330k into project.  $70k will be used in the initial purchase of the property, so at that point we will be financing 93.4% of purchase price. The remainder of the funds, $260k, will be held in a deposit account at the bank. This will be used as additional collateral. Draws from this account will be controlled by the bank. This is an acceptable manner for handling this credit. At loan closing, we will have an LTV of 75% based on purchase price of the RE, plus the $260k improvement account.<span class="Apple-tab-span" style="">                                         </span></div>
+<div>Mr. Sinito&#39;s 2010 personal tax returns and K-1s indicates that he received $3,128,869 in gross distributions. After taxes and living expenses he would have $1,686,985 to service debt payments totaling $633,904 giving him an estimated DSC of 2.66 for 2010, and an approximate Global DSC of 2.57. Note that this does not include the capital injections made to his many business interests in the amount totaling $1,426,675. These were not included as the source of said injections was not known.<span class="Apple-tab-span" style="">                                         </span></div>
+<div> </div><br/><br/></td></tr></tbody></table></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span><span id="j_id0:j_id734">
+    
+    <hr class="pageBreak" /><span id="j_id0:j_id734:j_id735:j_id737"><div class="apexp"><div class="individualPalette"><div class="Custom17Block"><div id="j_id0:j_id734:j_id735:j_id737:j_id738:j_id739" class="bPageBlock apexDefaultPageBlock secondaryPalette"><script>function twistSection(twisty, sectionId) {
+   var parentDiv = twisty;
+   while (parentDiv.tagName != 'DIV') { parentDiv = parentDiv.parentNode; }
+   var div = parentDiv.nextSibling; 
+   var elemWasOn = false; 
+   if (div.style.display != 'none') { 
+       div.style.display = 'none'; 
+       twisty.className ='showListButton';
+       twisty.alt = twisty.title = 'Show Section - '+twisty.name;
+       elemWasOn = true; 
+   } else {
+       div.style.display = 'block'; 
+       twisty.className = 'hideListButton';
+       twisty.alt = twisty.title = 'Hide Section - '+twisty.name;
+   } 
+  return !elemWasOn;
+}
+var registeredSections = new Array();
+function registerTwistableSection(headerId, mainTableId) {
+   var obj = new Object();
+   obj.headerId = headerId;
+   obj.mainTableId = mainTableId;
+   registeredSections[registeredSections.length] = obj;
+}
+function twistAllSections(on) {
+   for (var i = 0; i < registeredSections.length; i++) {
+      var obj = registeredSections[i];
+      var img;
+      img = document.getElementById('img_' + obj.headerId);
+    if (on && 'showListButton' == img.className) {
+         twistSection(img, obj.headerId, obj.mainTableId);
+     } else if (!on && 'hideListButton' == img.className) {
+         twistSection(img, obj.headerId, obj.mainTableId);
+       }
+   }
+}
+function toggleSection(headerId, on){
+    var sectionHead = document.getElementById('head_'+headerId+'_j_id0_j_id734_j_id735_j_id737_j_id738_j_id739');
+    var body = sectionHead.nextSibling;
+    var disp = on ? 'block' : 'none';
+    sectionHead.style.display = disp;
+    body.style.display = disp;
+}
+function registerTwistableSections_j_id0_j_id734_j_id735_j_id737_j_id738_j_id739() {
+registerTwistableSection('j_id0_j_id734_j_id735_j_id737_j_id738_j_id739_covenant_table_id_j_id740', 'j_id0_j_id734_j_id735_j_id737_j_id738_j_id739');
+}
+registerTwistableSections_j_id0_j_id734_j_id735_j_id737_j_id738_j_id739();
+</script><div class="pbHeader"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="pbTitle"><h2 class="mainTitle">Covenants</h2></td><td>&nbsp;</td></tr></table></div><div class="pbBody"><div id="j_id0:j_id734:j_id735:j_id737:j_id738:j_id739:covenant_table_id:0:j_id740"><div class="pbSubsection"><table class="detailList" border="0" cellpadding="0" cellspacing="0"><tr><td class="labelCol  first "><label>
+Type:</label></td><td class="dataCol  first ">Financial Statement Requirements</td><td class="labelCol  first "><label>
+Applies to Entity:</label></td><td class="dataCol  first ">Demo - Andover Arms Investment, LLC</td></tr><tr><td class="labelCol  last "><label>
+Covenant:</label></td><td class="dataCol  last ">Individual Borrower Statement</td><td class="labelCol  last "><label>
+Frequency:</label></td><td class="dataCol  last ">Annually</td></tr></table></div></div>
+            <hr /><p><span> </span></p>
+<p class="MsoNormal">Individual Borrower Statement</p>
+<p class="MsoNormal" style="margin-left: 0.5in; "><b>FINANCIAL STATEMENTS. </b> I  will prepare and maintain my financial records using consistently applied  generally accepted accounting principles then in effect.  I will provide you  with financial information in a form that you accept and under the following  terms.</p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 0.75in; "><b>A.<span style="font-size: 7pt; font-weight: normal; ">   </span></b>  <b>Certification</b>.  I represent and warrant that any financial statements  that I provide you fairly represents my financial condition for the stated  periods, is current, complete, true and accurate in all material respects,  includes all of my direct or contingent liabilities and there has been no  material adverse change in my financial condition, operations or business since  the date the financial information was prepared.</p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 0.75in; "><b>B.<span style="font-size: 7pt; font-weight: normal; ">    </span></b> <b>Frequency.</b>   Annually, I will provide to you my financial statements, tax returns, annual  internal audit reports or those prepared by independent accountants, and  consolidated financial statements of subsidiaries and parent companies as soon  as available or at least within <u>120¹ days</u> after the close of  each of my fiscal years.  Any annual financial statements that I provide you  will be <u>audited</u>² statements.</p>
+<p class="MsoListParagraphCxSpLast" style="margin-left: 1in; ">(1)<span style="font-size: 7pt; ">  </span> Interim Financial Reports.  Each fiscal  quarter, I will provide to you my financial statements, internal audit reports  or those prepared by independent accountants, tax reports, statements of cash  flow, budgets and forecasts, certificates and schedules of Property as soon as  available or at least within <u>30¹ days</u> after the close of  this business period.  Any interim financial statements that I provide you will  be <u>audited²</u> statements.</p>
+<b><span style="font-size: 12pt; ">Requested Information</span></b><span style="font-size: 12pt; ">.   I will provide you with any other information about  my operations, financial affairs and condition within <u>30¹  days</u> after your request.</span>
+            <br/><br/>
+            <hr /><div id="j_id0:j_id734:j_id735:j_id737:j_id738:j_id739:covenant_table_id:1:j_id740"><div class="pbSubsection"><table class="detailList" border="0" cellpadding="0" cellspacing="0"><tr><td class="labelCol  first "><label>
+Type:</label></td><td class="dataCol  first ">Other Covenants</td><td class="labelCol  first "><label>
+Applies to Entity:</label></td><td class="dataCol  first ">Demo - Andover Arms Investment, LLC</td></tr><tr><td class="labelCol  last "><label>
+Covenant:</label></td><td class="dataCol  last ">Debt Service Coverage with and without Distributions</td><td class="labelCol  last "><label>
+Frequency:</label></td><td class="dataCol  last ">Annually</td></tr></table></div></div>
+            <hr /><ol><li>The annual DSC ratio is to be maintained at or <strong>above </strong>1.00x AFTER disributions or dividends.</li><li>The annual DSC ratio is to be maintained at or above 1.25x BEFORE distributions or dividends.</li></ol>
+            <br/><br/>
+            <hr /></div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div></div></div></span></span></html>
+            </apex:page>

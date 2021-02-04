@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lists the business components available for configuration and consumption.</description>
+    <fields>
+        <fullName>nFORCE__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Boolean which indicates whether a feature is available (true) or unavailable (false) to be installed and configured. (deprecated - use Is_Active)</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>-D Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Short paragraph delineating the business processes and capabilities provided in this feature.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Description</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Developer_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the feature should automatically enabled when the package is installed.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Developer Enabled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Developer_Permitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the feature can be enabled without additional authorization.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Developer Permitted</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Boolean which indicates whether a feature is available (true) or unavailable (false) to be installed and configured.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is_Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__LMO_Enabled__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is optional. The field specifies Subscriber to LMO Salesforce Feature Parameter that is associated with the feature. If specified the feature parameter will be updated to reflect the current state of the feature. The fully qualified name of the parameter should be used, for example NAMESPACE__FEATUREPARAMETER.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Enabled Feature Parameter</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__LMO_Permitted__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is optional. The field specifies the LMO to Subscriber Salesforce Feature Parameter that is associated with the feature. If specified the feature parameter will used to determine if the feature is permitted. The fully qualified name of the parameter should be used, for example NAMESPACE__FEATUREPARAMETER.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Permitted Feature Parameter</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parent_Feature_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is optional. It indicates the developer name of the parent feature. A parent feature must be enabled before a feature can be enabled.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Parent Feature Name</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Feature</label>
+    <pluralLabel>Features</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,85 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="nFORCE.RelatedListController,LLC_BI.FacilityDisplayController,LLC_BI.Utility" sidebar="false" tabStyle="LLC_BI__Product_Package__c">
+	<apex:Messages />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__facility_bundle)}" />
+
+	<style>
+		.active {
+			font-weight: bolder;
+		}
+	</style>
+
+	<script laguage="text/javascript">
+		$(function() {
+			$("a").click(function() {
+				$("a").removeClass("active");
+				$(this).addClass("active");
+			});
+		});
+	</script>
+
+	<apex:form >
+		<apex:actionFunction name="initialize" action="{!initializeData}" reRender="mainPageBlock">
+			<apex:param name="operatingType" assignTo="{!opType}" value="{!nameSpace}.FacilitiesDataProvider" />
+		</apex:actionFunction>
+
+		<div align="center">
+			<apex:commandButton action="{!redirectToManageLoans}" value="{!$Label.llc_bi__manage_loans}" rerender="facilityRedirectPanel" />
+		</div>
+
+		<div align="right" id="filterStatuses">
+			<apex:commandLink styleClass="active" value="{!$Label.llc_bi__active}" action="{!initializeData}" reRender="relatedList">
+				<apex:param name="statusFilter" assignTo="{!statusFilter}" value="{!$Label.llc_bi__active}" />
+			</apex:commandLink>
+			|&nbsp;
+			<apex:commandLink value="{!$Label.llc_bi__inactive}" action="{!initializeData}" reRender="relatedList">
+				<apex:param name="statusFilter" assignTo="{!statusFilter}" value="{!$Label.llc_bi__inactive}" />
+			</apex:commandLink>
+			|&nbsp;
+			<apex:commandLink value="{!$Label.llc_bi__all}" action="{!initializeData}" reRender="relatedList">
+				<apex:param name="statusFilter" assignTo="{!statusFilter}" value="{!$Label.llc_bi__all}" />
+			</apex:commandLink>
+		</div>
+
+		<apex:outputPanel id="facilityRedirectPanel" >
+			<apex:outputText rendered="{!shouldRedirectPage}">
+				<script type="text/javascript">
+					window.top.location.href = '{!JSENCODE(redirectPageUrl)}';
+				</script>
+			</apex:outputText>
+		</apex:outputPanel>
+	</apex:form>
+
+	<script>initialize();</script>
+
+	<apex:form id="relatedList">
+		<nFORCE:RelatedListComponent objId="{!objId}"
+			objectList="{!objectList}"
+			fieldSetMembers="{!fieldSetMembers}"
+			editAction="{!editRecord}"
+			deleteAction="{!deleteRecord}"
+			removeLookupAction="{!removeLookup}"
+			navigateToRecordAction="{!navigateToRecord}"
+			renderItemLink="{!renderItemLink}"
+			renderEditLink="false"
+			renderDeleteLink="false"
+			renderRemoveLookupLink="true"
+			selectedRecordId="{!recordId}"
+			shouldRedirect="{!shouldRedirect}"
+			redirectUrl="{!redirectUrl}"
+			previousGroupAction="{!previousGroupAction}"
+			showListAction="{!showListAction}"
+			showListReturnAction="{!showListReturnAction}"
+			displayFullPage="{!displayFullPage}"
+			nextGroupAction="{!nextGroupAction}"
+			totalObjectCount="{!totalObjectCount}"
+			pagingSize="{!pagingSize}"
+			startRecordNumber="{!startRecordNumber}"
+			endRecordNumber="{!endRecordNumber}"
+			showPrevious="{!showPrevious}"
+			showNext="{!showNext}"
+			tableTitle="{!tableTitleLabelName}"
+			hasInitialized="{!hasInitialized}"
+			sortColumnName="{!sortColumnName}"
+			sortAction="{!sortAction}" />
+	</apex:form>
+</apex:page>

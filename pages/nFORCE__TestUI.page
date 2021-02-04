@@ -1,0 +1,26 @@
+<apex:page docType="html-5.0" sidebar="false" standardController="Account" extensions="nFORCE.DefaultAppController,nFORCE.TemplateController">
+	<apex:outputPanel layout="none" rendered="{!ISBLANK($CurrentPage.parameters.frame) || $CurrentPage.parameters.frame == 'false'}">
+		<apex:composition template="nFORCE__Template_Base">
+			<apex:define name="topbar">
+				<apex:include pageName="{!IF(isNull(route.Topbar__c),'InvalidRouteConfiguration',route.Topbar__c)}" />
+			</apex:define>
+
+			<apex:define name="navigation">
+				<apex:include pageName="{!IF(isNull(route.Navigation__c),'InvalidRouteConfiguration',route.Navigation__c)}" />
+			</apex:define>
+
+			<apex:define name="subNavigation">
+				<apex:include pageName="{!IF(isNull(route.Sub_Navigation__c),'InvalidRouteConfiguration',route.Sub_Navigation__c)}" />
+			</apex:define>
+
+			<apex:define name="body">
+				<apex:include pageName="{!IF(isNull(route.Body__c),'InvalidRouteConfiguration',route.Body__c)}" />
+			</apex:define>
+
+		</apex:composition>
+	</apex:outputPanel>
+
+	<apex:outputPanel layout="none" rendered="{!$CurrentPage.parameters.frame == 'true'}">
+		<apex:include pageName="{!$Page.UIContainer}"/>
+	</apex:outputPanel>
+</apex:page>

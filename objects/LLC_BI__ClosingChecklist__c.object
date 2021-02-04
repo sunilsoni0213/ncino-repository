@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Closing_Checklist_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Closing Checklist Object is used to track details about the documents assigned to the closing checklist</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Approval_Roles__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This is a semicolon delimited list of roles that are allowed to approve the document. If left blank, all roles can approve the document. This field is limited to 255 characters in length. This field works in tandem with the newer Placeholder Approval Roles field, which can accept more characters.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Semicolon delimited list of roles that are allowed to approve the document. If left blank all roles can approve the document.</inlineHelpText>
+        <label>Approval Roles</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Attorney__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Attorney</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Auto_Esign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This checkbox, when set to true, can be used to tell a downstream process that this e-signature ready placeholder should automatically appear in Customer Portal once available, rather than requiring a Document Manager user to manually trigger this process.</description>
+        <externalId>false</externalId>
+        <label>Auto E-Sign</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This field allows the use of nFORMS syntax to specify when this particular Closing Checklist record should generate a placeholder on a Document Manager for any given object record.</description>
+        <externalId>false</externalId>
+        <label>Criteria</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Document_Id_Mapping__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional text field with a unique ID to map documentation generated by data services to existing placeholders. By default, it is blank.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Populate this field to map documentation generated by data services to existing placeholders.</inlineHelpText>
+        <label>Document ID Mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__E_Vault__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators select this optional boolean field to send a specific document manager closing checklist placeholder for e-vault. By default, it is false. This field only displays when the OneSpan or E-Signature plugin is active.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this field to flag the e-vault placeholder as to-send.</inlineHelpText>
+        <label>E-Vault Placeholder</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__ExpansionLh__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>ExpansionLh</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__ExpansionRe__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>ExpansionRe</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Placeholder_Viewer_Groups__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is an optional, semicolon-delimited list that limits the accessibility of a specific document to the public groups added. Access includes the ability to view, download, copy the URL, and track the version history of the document. When left blank, no viewer restrictions are applied based on public groups. This field works in tandem with Placeholder Viewer Roles and Placeholder Viewer Profiles to determine which users can access a document.</description>
+        <externalId>false</externalId>
+        <label>Placeholder Viewer Groups</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Placeholder_Viewer_Profiles__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is an optional, semicolon-delimited list that limits the accessibility of a specific document to the user profiles added. Access includes the ability to view, download, copy the URL, and track the version history of the document. When left blank, no viewer restrictions are applied based on profiles. This field works in tandem with Placeholder Viewer Roles and Placeholder Viewer Groups to determine which users can access a document.</description>
+        <externalId>false</externalId>
+        <label>Placeholder Viewer Profiles</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Portal_Doc_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This is the document description that will be displayed to Customer Portal users.</description>
+        <externalId>false</externalId>
+        <label>Portal Doc Description</label>
+        <length>4000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Portal_Doc_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This is the document name that will be displayed to Customer Portal users.</description>
+        <externalId>false</externalId>
+        <label>Portal Doc Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Portal_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. If true, this document will be displayed in Customer Portal.</description>
+        <externalId>false</externalId>
+        <label>Portal Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__RefinanceLh__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>RefinanceLh</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__RefinanceRe__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>RefinanceRe</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Requirement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this optional field. It is a lookup that links the Closing Checklist to a Requirement template.</description>
+        <externalId>false</externalId>
+        <label>Requirement</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>LLC_BI__Requirement__c.LLC_BI__Is_Template__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>LLC_BI__Requirement__c</referenceTo>
+        <relationshipLabel>Closing Checklists</relationshipLabel>
+        <relationshipName>Closing_Checklists</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Start_upLh__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Start-upLh</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Start_upRe__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Start-upRe</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Viewer_Roles__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This is a semicolon-delimited list of roles that are allowed to view the document preview and download the document. If left blank, all roles can view and download the document. This field is limited to 255 characters in length. This field is still respected, however, users should start using the newer Placeholder Viewer Roles field, which can accept more characters.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Semicolon delimited list of roles that are allowed to view the document. If blank all roles can view the document.</inlineHelpText>
+        <label>Viewer Roles</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__acquisitionLh__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Acquisition LH</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__acquisitionRe__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Acquisition RE</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__clientView__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Client View</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__comments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docClass__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and automatically populated. This field is a lookup to the Doc Class record.</description>
+        <externalId>false</externalId>
+        <label>DocClass</label>
+        <referenceTo>LLC_BI__DocClass__c</referenceTo>
+        <relationshipLabel>Closing Checklists</relationshipLabel>
+        <relationshipName>Closing_Checklists</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docManager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and automatically populated. This field is a lookup to the DocManager record.</description>
+        <externalId>false</externalId>
+        <label>DocManager</label>
+        <referenceTo>LLC_BI__DocManager__c</referenceTo>
+        <relationshipLabel>Closing Checklists</relationshipLabel>
+        <relationshipName>Closing_Checklists</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docTab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and automatically populated. This field is a lookup to the DocTab record.</description>
+        <externalId>false</externalId>
+        <label>DocTab</label>
+        <referenceTo>LLC_BI__DocTab__c</referenceTo>
+        <relationshipLabel>Closing Checklists</relationshipLabel>
+        <relationshipName>Closing_Checklists</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__docType__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and automatically populated. This field is a lookup to the DocType record.</description>
+        <externalId>false</externalId>
+        <label>DocType</label>
+        <referenceTo>LLC_BI__DocType__c</referenceTo>
+        <relationshipLabel>Closing Checklists</relationshipLabel>
+        <relationshipName>Closing_Checklists</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__dueDaysPrior__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Due Days Prior</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__firstReview__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>First Review</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and automatically populated. This field is used to house the unique external ID of this record.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__naOk__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>NA OK?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__onesToWatch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Ones to Watch</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__owner__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Closer</fullName>
+                    <default>false</default>
+                    <label>Closer</label>
+                </value>
+                <value>
+                    <fullName>Compliance</fullName>
+                    <default>false</default>
+                    <label>Compliance</label>
+                </value>
+                <value>
+                    <fullName>Attorney</fullName>
+                    <default>false</default>
+                    <label>Attorney</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Loan Ops</fullName>
+                    <default>false</default>
+                    <label>Loan Ops</label>
+                </value>
+                <value>
+                    <fullName>Special Assets</fullName>
+                    <default>false</default>
+                    <label>Special Assets</label>
+                </value>
+                <value>
+                    <fullName>Servicing</fullName>
+                    <default>false</default>
+                    <label>Servicing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__sortOrder__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not currently used.</description>
+        <externalId>false</externalId>
+        <label>Sort</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NDOC__Placeholder_Approval_Roles__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This is a semicolon-delimited list of roles that are allowed to approve the document. If left blank, all roles can approve the document. This field works in tandem with the older Approval Roles field, which is limited to fewer characters.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Semicolon delimited list of roles that are allowed to approve the document. If left blank all roles can approve the document.</inlineHelpText>
+        <label>Placeholder Approval Roles</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NDOC__Placeholder_Viewer_Roles__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This is a semicolon-delimited list of roles that are allowed to view and download a specific document, as well as copy its URL and view its version history. If left blank, all roles can view and download the document, as well as copy its URL and view its version history. This field works in tandem with the older Viewer Roles field, which is limited to fewer characters.</description>
+        <externalId>false</externalId>
+        <label>Placeholder Viewer Roles</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NDOC__description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and allows the user to provide a description of the placeholder.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>4000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NDOC__neededByStage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and describes the stage when a document is required.</description>
+        <externalId>false</externalId>
+        <label>Needed By Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Qualification / Application</fullName>
+                    <default>false</default>
+                    <label>Qualification / Application</label>
+                </value>
+                <value>
+                    <fullName>Underwriting</fullName>
+                    <default>false</default>
+                    <label>Underwriting</label>
+                </value>
+                <value>
+                    <fullName>Proposal</fullName>
+                    <default>false</default>
+                    <label>Proposal</label>
+                </value>
+                <value>
+                    <fullName>Approval / Loan Committee</fullName>
+                    <default>false</default>
+                    <label>Approval / Loan Committee</label>
+                </value>
+                <value>
+                    <fullName>Processing</fullName>
+                    <default>false</default>
+                    <label>Processing</label>
+                </value>
+                <value>
+                    <fullName>Doc Prep</fullName>
+                    <default>false</default>
+                    <label>Doc Prep</label>
+                </value>
+                <value>
+                    <fullName>Doc Review</fullName>
+                    <default>false</default>
+                    <label>Doc Review</label>
+                </value>
+                <value>
+                    <fullName>Closing</fullName>
+                    <default>false</default>
+                    <label>Closing</label>
+                </value>
+                <value>
+                    <fullName>Booked</fullName>
+                    <default>false</default>
+                    <label>Booked</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NDOC__priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. This picklist sets the priority of a closing checklist. It can have values such as Critical, High, Medium, Low, or None.</description>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Critical</fullName>
+                    <default>false</default>
+                    <label>Critical</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Closing Checklist</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Closing Checklists</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>LLC_BI__docManager__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__docTab__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__docType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__docClass__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__docManager__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__docTab__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__docType__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__docClass__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>LLC_BI__docManager__c</searchFilterFields>
+        <searchFilterFields>LLC_BI__docTab__c</searchFilterFields>
+        <searchFilterFields>LLC_BI__docType__c</searchFilterFields>
+        <searchFilterFields>LLC_BI__docClass__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

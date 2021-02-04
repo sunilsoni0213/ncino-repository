@@ -1,0 +1,255 @@
+<apex:page id="page" controller="LLC_BI.ComplexLifeCycleConvertController" extensions="LLC_BI.IForceController">
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__visualforce_tweaks_css, 'visualforce_tweaks.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__life_cycle_converter_bundle)}" />
+	<nFORCE:Include_Analytics />
+	<c:Include_Bootstrap />
+	<nFORCE:Loading_Modal />
+
+	<apex:sectionHeader title="{!$Label.llc_bi__convert_to_lifecycle}"/>
+
+	<apex:outputLink value="/{!returnObjectId}">{!$Label.llc_bi__click_to_go_back}</apex:outputLink>
+
+	<apex:form styleClass="formFont">
+		<apex:outputPanel id="errormessages">
+			<apex:pageMessages />
+			<apex:outputPanel rendered="{!IF(phase=='ERROR',true,false)}">
+				<apex:actionFunction name="unblockscreen" oncomplete="Utils.unblockUI();"/>
+				<script>unblockscreen();</script>
+			</apex:outputPanel>
+		</apex:outputPanel>
+
+		<br/>
+
+		<!--Package Section - Editable during the selection phase and displayed during both the selection and detail phase -->
+		<apex:actionRegion >
+			<apex:outputPanel id="package">
+				<apex:outputPanel rendered="{!IF(phase=='SELECT'||phase=='DETAIL'||phase=='ERROR',hasValidObjects,false)}">
+					<apex:pageBlock id="PackageDetails" title="{!$Label.llc_bi__convert_product_package}">
+						<table border="0" cellpadding="0" cellspacing="0" class="list">
+							<tr>
+								<td width="200" height="20">{!$Label.Convert_Product_Package_Name_Field}</td>
+								<td>
+									<apex:inputField id="packagename" value="{!productPackage.Name}" required="true" rendered="{!IF((selectedPackageId==null&&phase=='SELECT'),true,false)}">
+										<apex:actionSupport action="{!getSimilarPackages}" event="onkeyup" rerender="continuebutton,similar,errormessages"/>
+									</apex:inputField>
+									<apex:outputField value="{!productPackage.Name}" rendered="{!IF((selectedPackageId!=null||phase=='DETAIL'||phase=='ERROR'),true,false)}"/>
+								</td>
+							</tr>
+						</table>
+						<apex:pageBlock id="similar">
+							<apex:outputText rendered="{!IF(phase=='SELECT',hasSimilarPackages,false)}">
+								<table border="0" cellpadding="0" cellspacing="0" class="list">
+									<tr>
+										<td colspan="4" style="padding: 15px 15px 15px 15px">
+											<apex:outputLabel value="{!$Label.llc_bi__convert_similar_product_package_selection}" />
+											<apex:pageBlockTable id="mergeTablePackage" value="{!similarpackagelist}" var="mergePackage" styleClass="list">
+												<apex:column styleClass="{!IF((mergePackage.id==selectedPackageId),'cellSelected','')}">
+													<apex:outputPanel rendered="{!mergePackage.id==selectedPackageId}">
+														<input type="radio" checked="true"/>
+													</apex:outputPanel>
+													<apex:outputPanel rendered="{!mergePackage.id!=selectedPackageId}">
+														<input type="radio" />
+													</apex:outputPanel>
+												</apex:column>
+												<apex:repeat value="{!fieldSetDisplayList}" var="flds">
+													<apex:column styleClass="{!IF((mergePackage.id==selectedPackageId),'cellSelected','')}">
+														<apex:facet name="header">{!flds.label}</apex:facet>
+														<apex:outputField value="{!mergePackage[flds.fieldPath]}"/>
+													</apex:column>
+												</apex:repeat>
+												<apex:actionSupport event="onRowClick" rerender="mergeTablePackage,PackageDetails">
+													<apex:param name="entityMergeId" assignTo="{!selectedPackageId}" value="{!mergePackage.id}" />
+												</apex:actionSupport>
+											</apex:pageBlockTable>
+										</td>
+									</tr>
+								</table>
+							</apex:outputText>
+						</apex:pageBlock>
+					</apex:pageBlock>
+				</apex:outputPanel>
+			</apex:outputPanel>
+
+			<!--Selection Phase - Allows the user to select which object they want to continue with before proceeding to the details section for the selected objects -->
+			<apex:outputPanel id="selectphase">
+				<apex:outputPanel rendered="{!IF(phase=='SELECT',true,false)}">
+					<apex:pageBlock id="ObjectsToConvert" title="{!$Label.llc_bi__convert_product_package_convertable}" rendered="{!hasValidObjects}">
+						<apex:dataTable value="{!sourceobjectsNotConverted}" var="sourceObject1" id="notconverted" rowClasses="odd,even" styleClass="list">
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_product_package_source_name_field}</apex:facet>
+								<apex:outputLink value="/{!sourceObject1.sourceId}">{!sourceObject1.displayName}</apex:outputLink>
+							</apex:column>
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_lifecycle_checkbox_heading}</apex:facet>
+								<apex:inputCheckbox value="{!sourceObject1.includeInConversion}">
+									<apex:actionSupport event="onchange" action="{!actionUpdateSelection}" rerender="continuebutton" />
+								</apex:inputCheckbox>
+							</apex:column>
+						</apex:dataTable>
+						<apex:commandButton value="{!$Label.llc_bi__convert_product_package_select_all}" action="{!actionSelectAll}" reRender="ObjectsToConvert,continuebutton"/>
+						<apex:commandButton id="continuebutton" value="{!$Label.llc_bi__convert_product_package_move_to_detail_button}" action="{!actionMoveToDetailPhase}" rerender="selectphase,detailphase,package" disabled="{!!continueButtonEnabled||productPackage.Name==null||productPackage.Name==''}" rendered="{!IF(phase=='SELECT',true,false)}"/>
+					</apex:pageBlock>
+					 <apex:pageBlock id="convertedpageblock" title="{!$Label.llc_bi__convert_product_package_converted}" rendered="{!hasConvertedObjects}">
+						<apex:dataTable value="{!sourceobjectsConverted}" var="sourceObject2" id="notconverted" rowClasses="odd,even" styleClass="list">
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_product_package_source_name_field}</apex:facet>
+								<apex:outputLink value="/{!sourceObject2.sourceId}">{!sourceObject2.displayName}</apex:outputLink>
+							</apex:column>
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_product_package_dest_name_field}</apex:facet>
+								<apex:outputLink value="/{!sourceObject2.targetId}">{!sourceObject2.targetName}</apex:outputLink>
+							</apex:column>
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_product_package}</apex:facet>
+								<apex:outputLink value="/{!sourceObject2.packageid}">{!sourceObject2.packageName}</apex:outputLink>
+							</apex:column>
+						</apex:dataTable>
+					</apex:pageBlock>
+					 <apex:pageBlock id="unconvertablepageblock" title="{!$Label.llc_bi__convert_product_package_unconvertable}" rendered="{!hasErrorObjects}">
+						<apex:dataTable value="{!sourceobjectsThatCannotBeConverted}" var="sourceObject3" id="notconverted" rowClasses="odd,even" styleClass="list">
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_product_package_source_name_field}</apex:facet>
+								<apex:outputLink value="/{!sourceObject3.sourceId}">{!sourceObject3.displayName}</apex:outputLink>
+							</apex:column>
+							<apex:column >
+								<apex:facet name="header">{!$Label.llc_bi__convert_product_package_convert_problem}</apex:facet>
+								<apex:outputText value="{!sourceObject3.conversionProblem}"/>
+							</apex:column>
+						</apex:dataTable>
+					</apex:pageBlock>
+				</apex:outputPanel>
+			</apex:outputPanel>
+		</apex:actionRegion>
+
+		<!--Detail Phase - Prrovude the user with the ability to specify borrower, relationship and account details for each source object -->
+		<apex:outputPanel id="detailphase">
+			<apex:outputPanel rendered="{!IF(phase=='DETAIL'||phase=='ERROR',true,false)}">
+				<apex:repeat value="{!sourceObjectsSelected}" var="srcController">
+					<apex:inputHidden value="{!srcController.setDestinationFieldValue}" id="setDestinationFieldValue" rendered="{!IF(srcController.isDestinationFieldHidden&&srcController.isDestinationFieldValid,true,false)}" />
+					<apex:inputHidden value="{!srcController.shouldCreateContact}" id="shouldCreateContact" rendered="{!IF(srcController.shouldCreateContact!=null&&srcController.isSourceTypeLead,true,false)}" />
+					<apex:inputHidden value="{!srcController.leadConvertedStatus}" id="leadConvertedStatus" rendered="{!IF(srcController.leadConvertedStatus!=null&&srcController.isSourceTypeLead,true,false)}" />
+					<apex:inputHidden value="{!srcController.accountApiName}" id="accountApiName" rendered="{!IF(srcController.accountApiName!=null&&!srcController.isSourceTypeLead,true,false)}" />
+					<apex:inputHidden value="{!srcController.productApiName}" id="productApiName" rendered="{!IF(srcController.productApiName!=null,true,false)}" />
+					<apex:inputHidden value="{!srcController.productTypeApiName}" id="productTypeApiName" rendered="{!IF(srcController.productTypeApiName!=null,true,false)}" />
+					<apex:inputHidden value="{!srcController.productLineApiName}" id="productLineApiName" rendered="{!IF(srcController.productLineApiName!=null,true,false)}" />
+					<apex:pageBlock id="conversionDetailBlock" title="{!$Label.llc_bi__conversion_details} : {!srcController.sourceObjectName}" rendered="{!IF(srcController.productLine!=null&&srcController.productType!=null&&srcController.product!=null&&!!srcController.canConvert,true,false)}">
+						<apex:panelGrid columns="3" id="conversionGrid">
+							<apex:outputLabel value="{!$Label.llc_bi__new_opportunity_name}" for="convertedProductName" />
+							<apex:inputText value="{!srcController.convertedProductName}" id="convertedProductName" size="30" maxlength="79" title="{!$Label.llc_bi__character_limit}"/>
+							<apex:outputLabel value="{!$Label.llc_bi__new_opportunity_name_hint}" />
+							<apex:outputLabel value="{!$Label.llc_bi__product}"/>
+							<apex:outputText value="{!srcController.translatedProductLine} - {!srcController.translatedProductType} - {!srcController.translatedProduct}" />
+							<apex:outputLabel />
+						</apex:panelGrid>
+						<br/>
+						<apex:pageBlock title="{!$Label.llc_bi__related_entities}" id="relatedEntitiesBlock">
+							<table border="0" cellpadding="0" cellspacing="0" class="list">
+								<tr>
+									<td><apex:outputLabel value="{!$Label.llc_bi__relationship_name}" style="font-weight:bold"/></td>
+									<td><apex:outputLabel value="{!$Label.llc_bi__relationship_type}" style="font-weight:bold"/></td>
+									<td><apex:outputLabel value="{!$Label.llc_bi__borrower_type}" style="font-weight:bold"/></td>
+									<apex:outputText rendered="{!srcController.shouldDisplayLastColumn}">
+										<td></td>
+									</apex:outputText>
+								</tr>
+								<apex:repeat value="{!srcController.relatedEntities}" var="entity">
+									<apex:variable var="excludeIndividual" value="{!entity.isIndividual&&!entity.doCreate}"/>
+									<apex:variable var="includeIndividual" value="{!entity.isIndividual&&entity.doCreate}"/>
+									<apex:outputText rendered="{!entity.doCreate||entity.isIndividual}">
+										<tr>
+											<td>
+												<apex:inputText value="{!entity.name}" id="relatedEntityNameEditable" rendered="{!!entity.useExistingAccount}"/>
+												<apex:outputText value="{!entity.name}" id="relatedEntityNameNotEditable" rendered="{!entity.useExistingAccount}"/>
+											</td>
+											<td>
+												<apex:outputText value="{!entity.translatedAccountType}" rendered="{!entity.isIndividual||entity.useExistingAccount}"/>
+												<apex:selectList value="{!entity.accountType}" size="1" rendered="{!!entity.isIndividual&&!entity.useExistingAccount}">
+													<apex:selectOptions value="{!srcController.accountTypes}" />
+												</apex:selectList>
+											</td>
+											<td>
+												<apex:outputText value="{!$Label.llc_bi__excluded_from_loan}" rendered="{!excludeIndividual&&!entity.useExistingAccount}"/>
+												<apex:selectList value="{!entity.borrowerType}" rendered="{!!excludeIndividual}" multiselect="false" size="1">
+													<apex:selectOptions value="{!srcController.borrowerTypes}"/>
+												</apex:selectList>
+											</td>
+											<apex:outputText rendered="{!srcController.shouldDisplayLastColumn}">
+												<td>
+													<apex:commandLink value="{!$Label.llc_bi__remove_individual_entity}" rendered="{!includeIndividual}" rerender="relatedEntitiesBlock">
+														<apex:param name="removeIndividualEntity" assignTo="{!entity.doCreate}" value="false" />
+													</apex:commandLink>
+													<apex:commandLink value="{!$Label.llc_bi__create_individual_entity}" rendered="{!excludeIndividual}" rerender="relatedEntitiesBlock">
+														<apex:param name="createIndividualEntity" assignTo="{!entity.doCreate}" value="true" />
+													</apex:commandLink>
+													<apex:commandLink value="{!$Label.llc_bi__remove_business_entity}" rendered="{!!entity.isIndividual}" rerender="relatedEntitiesBlock">
+														<apex:param name="removeBusinessEntity" assignTo="{!entity.doCreate}" value="false" />
+													</apex:commandLink>
+												</td>
+											</apex:outputText>
+										</tr>
+									</apex:outputText>
+									<apex:outputText rendered="{!!entity.doCreate && !entity.isIndividual && !entity.useExistingAccount}">
+										<tr>
+											<td colspan="3">
+												<apex:outputText value="{!$Label.llc_bi__business_not_converted}"/>
+											</td>
+											<td>
+												<apex:commandLink value="{!$Label.llc_bi__create_business_entity}" rerender="relatedEntitiesBlock">
+													<apex:param name="createBusinessEntity" assignTo="{!entity.doCreate}" value="true" />
+												</apex:commandLink>
+											</td>
+										</tr>
+									</apex:outputText>
+									<apex:outputText rendered="{!entity.hasSimilarAccounts && !entity.useExistingAccount && (entity.doCreate || entity.isIndividual)}">
+										<tr>
+											<td colspan="4" style="padding: 15px 15px 15px 15px">
+												<apex:outputLabel value="{!$Label.llc_bi__select_similar_business_relationship}" rendered="{!!entity.isIndividual}" />
+												<apex:outputLabel value="{!$Label.llc_bi__select_similar_individual_relationship}" rendered="{!entity.isIndividual}" />
+												<apex:pageBlockTable id="mergeTable" value="{!entity.accountList}" var="mergeAccount" styleClass="picklist" >
+													<apex:column styleClass="{!IF((mergeAccount.id==entity.selectedAccountId),'cellSelected','')}">
+														<apex:outputPanel rendered="{!mergeAccount.id==entity.selectedAccountId}">
+															<input type="radio" checked="false" />
+														</apex:outputPanel>
+														<apex:outputPanel rendered="{!mergeAccount.id!=entity.selectedAccountId}">
+															<input type="radio" />
+														</apex:outputPanel>
+													</apex:column>
+													<apex:column styleClass="{!IF((mergeAccount.id==entity.selectedAccountId),'cellSelected','')}">
+														<apex:outputText value="{!mergeAccount.name}"/>
+													</apex:column>
+													<apex:column styleClass="{!IF((mergeAccount.id==entity.selectedAccountId),'cellSelected','')}">
+														<apex:outputText value="{!mergeAccount.type}"/>
+													</apex:column>
+													<apex:column styleClass="{!IF((mergeAccount.id==entity.selectedAccountId),'cellSelected','')}">
+														<apex:outputField value="{!mergeAccount.account[IForce.Account.TaxIdentificationNumberFieldDescribe.Name]}"
+															rendered="{!mergeAccount.account != null && mergeAccount.account[IForce.Account.TaxIdentificationNumberFieldDescribe.Name] != null}"/>
+														<apex:outputField value="{!mergeAccount.contact[IForce.Contact.SSNFieldDescribe.Name]}"
+															rendered="{!mergeAccount.contact != null && mergeAccount.contact[IForce.Contact.SSNFieldDescribe.Name] != null}"/>
+													</apex:column>
+													<apex:actionSupport event="onRowClick" rerender="mergeTable">
+														<apex:param name="entityMergeId" assignTo="{!entity.selectedAccountId}" value="{!mergeAccount.id}" />
+													</apex:actionSupport>
+												</apex:pageBlockTable>
+											</td>
+										</tr>
+									</apex:outputText>
+								</apex:repeat>
+							</table>
+						</apex:pageBlock>
+					</apex:pageBlock>
+					<apex:pageBlock title="{!$Label.llc_bi__conversion_details} : {!srcController.sourceObjectName}" rendered="{!IF(srcController.productLine==null||srcController.productType==null||srcController.product==null||!srcController.canConvert,true,false)}">
+						<apex:outputLink value="/{!returnObjectId}">{!$Label.llc_bi__click_to_go_back}</apex:outputLink>
+					</apex:pageBlock>
+				</apex:repeat>
+				<apex:pageBlock rendered="true" id="buttons">
+					<apex:commandButton value="{!$Label.llc_bi__convert_product_package_move_to_selection_button}" action="{!actionMoveToSelectionPhase}" rerender="selectphase,detailphase,package"/>
+					<apex:commandButton value="{!$Label.llc_bi__button_continue_with_conversion}" action="{!doConversionStart}" onclick="Utils.blockUI();" reRender="errormessages,selectphase,detailphase,package,continueconversion,blockthescreen"/>
+					<apex:outputPanel id="continueconversion" rendered="{!conversionInProgress}">
+						<apex:actionFunction name="continueconversion" id="conversioninprogress" rendered="{!conversionInProgress}" action="{!doConversionContinue}" reRender="errormessages,selectphase,detailphase,package,continueconversion"/>
+						<script>continueconversion();</script>
+					</apex:outputPanel>
+				</apex:pageBlock>
+			</apex:outputPanel>
+		</apex:outputPanel>
+	</apex:form>
+</apex:page>

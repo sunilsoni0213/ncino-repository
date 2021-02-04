@@ -1,0 +1,68 @@
+<apex:component controller="MaintenanceChecklistController">
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.4.6/angular.min.js')}" />
+    <script type="text/javascript">
+    (function(){
+        angular.module('maintenanceChecklistApp')
+            .service('dataService',['$q', function($q){
+
+            return {
+                getChecklist : getChecklist,
+                addChecklist : addChecklist,
+                deleteChecklist : deleteChecklist
+            }
+
+            function getChecklist() {
+                var deferred = $q.defer();
+
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.MaintenanceChecklistController.retrieveChecklist}',
+                    function(result, event) {
+                        setDeferred(deferred, result, event);
+                    },
+                    {escape: false}
+                );
+
+                return deferred.promise;
+            }
+
+            function addChecklist(newChecklist) {
+                var deferred = $q.defer();
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.MaintenanceChecklistController.addChecklist}',
+                    newChecklist,
+                    function(result, event) {
+                        setDeferred(deferred, result, event);
+                    },
+                    {escape: false}
+                );
+
+                return deferred.promise;
+            }
+
+            function deleteChecklist(removalChecklist) {
+                var deferred = $q.defer();
+
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.MaintenanceChecklistController.deleteChecklist}',
+                    removalChecklist,
+                    function(result, event) {
+                        setDeferred(deferred, result, event);
+                    },
+                    {escape: false}
+                );
+
+                return deferred.promise;
+            }
+
+            function setDeferred(deferred, result, event) {
+                if(event.status) {
+                    deferred.resolve(result, event);
+                } else {
+                    deferred.reject(event.message);
+                }
+            }
+        }]);
+    })();
+
+    </script>
+</apex:component>

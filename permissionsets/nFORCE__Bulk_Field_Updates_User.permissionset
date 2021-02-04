@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants a user the ability to view and use Bulk Field Updates if configured.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Bulk Field Updates User Access</label>
+</PermissionSet>

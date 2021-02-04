@@ -1,0 +1,3 @@
+<apex:page showHeader="true" sidebar="true" id="scenarioPage" standardController="Opportunity">
+        <c:Proforma recordId="{!Opportunity.Id}"/>
+</apex:page>

@@ -1,0 +1,51 @@
+<apex:page standardController="Account" extensions="LLC_BI.AccountIndividualContactController,LLC_BI.IForceController">
+
+    <apex:form >
+        <apex:pageBlock mode="edit" rendered="{!contact != null}">
+
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Edit" action="{!edit}" id="editButton" rendered="{!!isEditing}" />
+                <apex:commandButton value="Save" action="{!save}" id="saveButton" rendered="{!isEditing}" />
+                <apex:commandButton value="Cancel" action="{!cancel}" id="cancelButton" rendered="{!isEditing}" />
+            </apex:pageBlockButtons>
+
+            <apex:outputPanel >
+                <p>Viewing&nbsp;<apex:outputLink value="{!contactURL}" target="_blank">{!contact.Name}'s</apex:outputLink> Contact Details:</p>
+            </apex:outputPanel>
+
+            <apex:pageBlockSection columns="2" rendered="{!!isEditing}" >
+                 <apex:outputField value="{!contact[IForce.Contact.SSNFieldDescribe.Name]}" label="{!$Label.llc_bi__social_security_number}" />
+                 <apex:outputField value="{!contact.HomePhone}" />
+                 <apex:outputField value="{!contact.Birthdate}" label="{!$Label.llc_bi__date_of_birth}" />
+                 <apex:outputField value="{!contact.LLC_BI__Home_Address__c}" />
+                 <apex:outputField value="{!contact.Phone}" label="{!$Label.llc_bi__office_phone}" />
+                 <apex:outputField value="{!contact.LLC_BI__Home_City__c}" />
+                 <apex:outputField value="{!contact.MobilePhone}" label="{!$Label.llc_bi__mobile_phone}" />
+                 <apex:outputField value="{!contact.LLC_BI__Home_State__c}" />
+                 <apex:outputField value="{!contact.Fax}" id="contact_fax" />
+                 <apex:outputField value="{!contact.LLC_BI__Home_Zipcode__c}" />
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection columns="2" rendered="{!isEditing}" >
+                 <apex:inputField value="{!contact[IForce.Contact.SSNFieldDescribe.Name]}" label="{!$Label.llc_bi__social_security_number}" />
+                 <apex:inputField value="{!contact.HomePhone}" />
+                 <apex:inputField value="{!contact.Birthdate}" label="{!$Label.llc_bi__date_of_birth}" />
+                 <apex:inputField value="{!contact.LLC_BI__Home_Address__c}" />
+                 <apex:inputField value="{!contact.Phone}" label="{!$Label.llc_bi__office_phone}" />
+                 <apex:inputField value="{!contact.LLC_BI__Home_City__c}" />
+                 <apex:inputField value="{!contact.MobilePhone}" label="{!$Label.llc_bi__mobile_phone}" />
+                 <apex:inputField value="{!contact.LLC_BI__Home_State__c}" />
+                 <apex:inputField value="{!contact.Fax}" id="contact_fax" />
+                 <apex:inputField value="{!contact.LLC_BI__Home_Zipcode__c}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+
+    <apex:pageBlock mode="maindetail" rendered="{!contact == null}" >
+        <apex:outputPanel >
+            <apex:outputText value="{!$Label.llc_bi__account_no_primary_contact_found}" />
+        </apex:outputPanel>
+    </apex:pageBlock>
+
+</apex:page>

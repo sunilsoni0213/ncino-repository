@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows a user to show/hide groups.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>LLC_BI__Spread_Statement_Record_Total__c.LLC_BI__Include_In_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Spreads - Show/Hide Groups</label>
+</PermissionSet>

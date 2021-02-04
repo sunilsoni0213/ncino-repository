@@ -1,0 +1,104 @@
+<apex:page showHeader="true" sidebar="true" controller="nFORMS.FormAvailableFieldsController" readOnly="true">
+	<c:Includes />
+
+	<apex:form >
+		<apex:sectionHeader title="{!$Label.nforms__form_manager_title}" subtitle="{!sectionHeader}" />
+		<apex:outputPanel >
+			<apex:outputLabel value="Available Objects on {!parentLabel}" /> &nbsp;&nbsp;
+			<apex:selectList value="{!picklistSelection}" size="1" required="true">
+				<apex:selectOptions value="{!objectOptions}"/>
+				<apex:actionSupport event="onchange" action="{!updateFieldList}" reRender="objectPanel"/>
+			</apex:selectList>
+		</apex:outputPanel>
+		<br/>
+		<br/>
+		<apex:outputPanel rendered="true" id="objectPanel">
+		<apex:pageBlock title="{!selectedObjectLabel}" mode="detail" rendered="true">
+			<apex:pageBlockButtons >
+				<apex:commandButton value="{!$Label.nforms__form_generator_manage_templates}" action="{!formsManagerRedirect}"/>
+			</apex:pageBlockButtons>
+			<apex:outputPanel rendered="{!parentName != picklistSelection}">
+				<div class="force">
+					<div class="force alert alert-info">
+						<h5>{!$Label.nforms__list_tag_info}</h5><br/>
+						<h5>{{LIST="{!picklistSelection}"}} {{ENDLIST}}</h5>
+					</div>
+				</div>
+			</apex:outputPanel>
+			<apex:outputPanel id="sampleMarkup">
+				<apex:commandLink reRender="sampleMarkup" style="text-decoration:none" rendered="{!showSampleMarkup}">
+					{!$Label.Markup_Examples_Link} &#x25BC;
+					<apex:param name="showSampleMarkup"
+						assignTo="{!showSampleMarkup}" 
+						value="{!NOT(showSampleMarkup)}"/>
+				</apex:commandLink>
+				<apex:commandLink reRender="sampleMarkup" style="text-decoration:none" rendered="{!NOT(showSampleMarkup)}">
+					{!$Label.Markup_Examples_Link} &#x25B2;
+					<apex:param name="showSampleMarkup"
+						assignTo="{!showSampleMarkup}" 
+						value="{!NOT(showSampleMarkup)}"/>
+				</apex:commandLink>
+				<br/><br/>
+				<c:SampleMarkup rendered="{!showSampleMarkup}"/>
+			</apex:outputPanel>
+			<table cellpadding="0" cellspacing="0" class="list">
+				<tr>
+					<th>{!$Label.nforms__label_table_header}</th>
+					<th>{!$Label.nforms__tag_table_header}</th>
+					<th>{!$Label.nforms__type_table_header}</th>
+				</tr>
+				<apex:repeat value="{!fieldList}" var="fieldValue" >
+					<apex:outputPanel layout="none" rendered="{!!fieldValue.isReference}">
+						<tr>
+							<td>{!fieldValue.label}</td>
+							<td>{!fieldValue.tag}</td>
+							<td>{!fieldValue.type}</td>
+						</tr>
+					</apex:outputPanel>
+					<apex:outputPanel layout="none" rendered="{!fieldValue.isReference}">
+						<tr>
+							<td>
+								<apex:commandLink action="{!loadSubFields}"
+									value="{!fieldValue.label}" 
+									rendered="{!fieldValue.isReference}" 
+									reRender="objectPanel">
+									<apex:param name="showRelationship"
+										assignTo="{!fieldValue.showRelationship}" 
+										value="{!!fieldValue.showRelationship}"/>
+									<apex:param name="parentType"
+										value="{!fieldValue.parentType}"/>
+									<apex:param name="objectType"
+										value="{!fieldValue.relationshipType}"/>
+									<apex:param name="relationship"
+										value="{!fieldValue.relationshipName}"/>
+								</apex:commandLink>
+							</td>
+							<td>{!fieldValue.tag}</td>
+							<td>{!fieldValue.type}</td>
+						</tr>
+						<apex:outputText rendered="{!fieldValue.showRelationship}">
+							<tr>
+								<td colspan="3">
+									<table cellpadding="0" cellspacing="0" class="list">
+										<apex:repeat value="{!fieldValue.relationshipFieldList}" var="subField">
+											<apex:outputText rendered="{!NOT(subField.isReference)}">
+												<tr>
+													<td><apex:outputText value="{!subField.label}"/></td>
+													<td><apex:outputText value="{!subField.tag}"/></td>
+													<td><apex:outputText value="{!subField.type}"/></td>
+												</tr>
+											</apex:outputText>
+										</apex:repeat>
+									</table>
+								</td>
+							</tr>
+						</apex:outputText>
+					</apex:outputPanel>
+				</apex:repeat>
+			</table>
+
+			<br/>
+			</apex:pageBlock>
+		</apex:outputPanel>
+	</apex:form>
+</apex:page>

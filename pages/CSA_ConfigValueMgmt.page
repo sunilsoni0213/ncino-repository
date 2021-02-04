@@ -1,0 +1,38 @@
+<apex:page >
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.Config_Value_Mgmt_Config_Value_Summary}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_ConfigValueSummary />
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.Config_Value_Mgmt_Title}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_ConfigValueMgmt />
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

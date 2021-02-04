@@ -1,0 +1,11 @@
+<apex:page standardcontroller="LLC_BI__Risk_Grade_Template__c" showHeader="true" sidebar="true">
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__risk_rating_bundle)}" />
+	<c:Include_Bootstrap />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'lifecycle.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__lifecycle_app)}" />
+	<nFORCE:Run_LifeCycleApp />
+	<nFORCE:Include_Analytics />
+	<nFORCE:IForce_Data />
+
+	<c:Risk_Grade_Template templateId="{!LLC_BI__Risk_Grade_Template__c.Id}" />
+</apex:page>

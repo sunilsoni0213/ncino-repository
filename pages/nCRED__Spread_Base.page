@@ -1,0 +1,93 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false"
+	controller="nCRED.SpreadBaseController" extensions="nFORCE.RemoteActionController">
+	<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'polyfills.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'vendor.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'spread-base.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nCRED__vf_includes, 'spread-base.css')}" />
+
+	<apex:slds />
+
+	<nFORCE:LifeCycle_Functions />
+	<c:Spread_Functions />
+	<c:Spreads_Labels />
+	<c:Rent_Roll_Labels />
+	<c:Spread_Footnotes_Labels />
+	<c:Spread_Global_Analysis_Labels />
+	<c:Spread_Debt_Schedule_Labels />
+	<c:Sensitivity_Analysis_Labels />
+	<nFORCE:Internationalize />
+	<script type="text/javascript">
+		var Utils = LifeCycle;
+		LifeCycle.blockUI = function(){};
+		LifeCycle.unblockUI = function(){};
+		LifeCycle.Service.buffer = false;
+	</script>
+	<c:Spread_Base bundles="{!bundles}"
+		entities="{!entities}"
+		contextId="{!contextId}"
+		mode="{!$CurrentPage.parameters.mode}"
+		autoclose="{!$CurrentPage.parameters.autoclose}"
+		enableRMA="{!rmaEnabled}"
+		rmaURL="{!rmaAwsURL}"
+		rmaYEAR="{!rmaAwsYEAR}"    
+		rmaKey="{!rmaAwsToken}"
+		scope="{!scope}"
+		accountId="{!accountId}"
+		collateralId="{!collateralId}"/>
+
+	<div id="global_batch_progress" class="progress" style="
+		display: none;
+		z-index: 9001;
+		background-color: grey;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+	">
+		<div style="
+			z-index: 9000;
+			position: fixed;
+			top: 50%;
+			left: 5%;
+			width: 90%;
+			text-align: center;
+			font-size: 3em;
+			color: white;
+			margin-top: -25px;
+		">
+			<span class="percent-legend">{!$Label.Preparing_Data} </span><span class="progress-text">0%</span>
+		</div>
+		<div class="progress" style="
+			z-index: 9000;
+			position: fixed;
+			top: 50%;
+			left: 5%;
+			width: 90%;
+			height: 4em;
+			background: none;
+			border: solid white 2px;
+			box-shadow: none;
+			margin-top: 25px;
+		">
+			<div class="progress-bar progress-bar-striped active" style="
+			width: 0;
+			box-shadow: none;
+			background: white;
+			"></div>
+		</div>
+		<div style="
+			z-index: 9000;
+			position: fixed;
+			top: 50%;
+			left: 5%;
+			width: 90%;
+			text-align: center;
+			font-size: 3em;
+			color: white;
+			margin-top: 75px;
+		">
+			<span id="progress-eta-legend">{!$Label.Estimated_Time_Remaining} </span><span class="progress-eta">{!$Label.Estimating}</span>
+		</div>
+	</div>
+</apex:page>

@@ -1,0 +1,3 @@
+<apex:page standardStyleSheets="false" sidebar="false" showHeader="false">
+	<div class="alert alert-danger">{!$Label.nforce__invalid_route_configuration}</div>
+</apex:page>

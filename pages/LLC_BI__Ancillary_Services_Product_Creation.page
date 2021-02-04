@@ -1,0 +1,4 @@
+<apex:page >
+	<c:AncillaryServicesPCConfiguration />
+	<c:AncillaryServices />
+</apex:page>

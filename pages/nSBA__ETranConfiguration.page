@@ -1,0 +1,42 @@
+<apex:page controller="nSBA.EtranConfigurationController">
+	<nDESIGN:Includes enableLifeCycleApp="false" enableBS3Namespace="true"/>
+	<div class="force">
+		<div  class="well well-sm">
+			<h4>{!$Label.Etran_Configuration}</h4>
+		</div>
+		<apex:form id="configuration">
+			<div>
+				<apex:outputPanel layout="none" styleClass="messages">
+					<div class="{!messageClass}">
+					<apex:messages />
+					</div>
+				</apex:outputPanel>
+			</div>
+			<apex:pageBlock >
+					<div class="container" >
+							<div class="row">
+								<div class="col-sm-3">{!$Label.Etran_Endpoint}</div>
+								<div class="col-sm-9"><apex:inputText size="50" value="{!etranEndpoint}"/></div>
+							</div>
+							<div class="row" style="padding-top:10px">
+								<div class="col-sm-3">{!$Label.nsba__etran_username}</div>
+								<div class="col-sm-9"><apex:inputText size="50" value="{!etranUsername}"/></div>
+							</div>
+							<div class="row" style="padding-top:10px">
+								<div class="col-sm-3">{!$Label.nsba__etran_password}</div>
+								<div class="col-sm-9"><apex:inputText size="50" value="{!etranPassword}"/></div>
+							</div>
+							<div class="row" style="padding-top:10px">
+								<div class="col-sm-3">{!$Label.nsba__etran_email}</div>
+								<div class="col-sm-9"><apex:inputText size="50" value="{!etranEmail}"/></div>
+							</div>
+					</div>
+				<apex:pageBlockButtons location="bottom">
+					<apex:commandButton styleClass="btn btn-primary"
+					value="{!$Label.nsba__save_configuration}" action="{!save}"/>
+				</apex:pageBlockButtons>
+			</apex:pageBlock>
+		</apex:form>
+	</div>
+
+</apex:page>

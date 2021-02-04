@@ -1,0 +1,150 @@
+<apex:page docType="html-5.0"
+	sidebar="false"
+	showHeader="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+	>
+
+	<html class="portal-html" lang="en"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</head>
+		<body class="slds" ng-app="onlineAppApp" ng-cloak="true">
+			<route>
+				<div ng-controller="AncillaryServicesController as asc"
+					ng-init="asc.loadAncillaryServices(false)">
+					<form name="onlineFormForm" novalidate="true">
+						<div class="portal-form-section slds-m-vertical--medium"
+							n-style="pso-section-inner">
+							<div class="slds-grid slds-grid--align-center slds-p-horizontal--medium slds-p-bottom--small"
+								ng-if="asc.ancillaryServices == null">
+								<stencil
+									class="slds-size--1-of-1 slds-m-top--large"
+									has-mobile-stencil="true"
+									animation-path="{!URLFOR($Resource.Online_Application, 'animations/SearchStencil.json')}">
+								</stencil>
+							</div>
+							<div class="slds-grid slds-wrap slds-size--1-of-1 slds-m-top--large slds-p-left--medium slds-p-right--medium"
+								ng-show="asc.ancillaryServices && asc.ancillaryServices.length > 0">
+								<div class="slds-grid slds-wrap portal-detail-row slds-size--1-of-1 slds-grid--vertical-align-center
+									slds-p-top--medium slds-m-bottom--medium slds-align--absolute-center
+									portal-white-bg"
+									n-style="pso-detail-card"
+									ng-repeat="ancillaryService in ::asc.ancillaryServices"
+									ng-cloak="true"
+									ng-init="asc.retrieveAncillaryServiceScreen(ancillaryService)">
+									<div class="slds-size--1-of-1 slds-large-size--3-of-12
+										slds-align--absolute-center slds-align-middle slds-p-left--medium
+										slds-p-bottom--medium slds-grid--vertical">
+										<img class="portal-asc-image" ng-src="{{ancillaryService.product.image  == null ?
+											'{!URLFOR($Resource.Global_Resources,"images/ancillary_default_image.png")}':
+											ancillaryService.product.image}}" alt="ancillaryService.product.name"/>
+										<h3 class="portal-full-width-center slds-text-heading--small slds-p-top--small"
+											ng-class="{'portal-center-text': (isMediumOrBigger)}"
+											resizer="true">
+											<span ng-bind="::ancillaryService.product.name"></span>
+										</h3>
+									</div>
+									<div class="slds-size--1-of-1 slds-large-size--6-of-12
+										slds-p-left--medium slds-p-right--medium slds-p-bottom--medium">
+										<p class="portal-formatted-content"
+											ng-bind-html="asc.toTrusted(ancillaryService.product.description)">
+										</p>
+									</div>
+									<div class="slds-size--1-of-1 slds-large-size--3-of-12
+										slds-align-middle slds-text-align--center"
+										resizer="true"
+										ng-class="{'slds-p-bottom--medium': (isLarge)}">
+										<button class="slds-button slds-button--neutral card-bottom-button"
+											aria-live="assertive"
+											resizer="true"
+											ng-class="{'slds-size--1-of-1': (!isLarge),
+												'slds-m-right--medium': (isLarge),
+												'slds-button--brand ': ancillaryService.isSelected}"
+											n-style="pso-button-secondary {{ancillaryService.isSelected ? 'pso-button-active' : ''}}"
+											ng-click="asc.selectAncillaryService(ancillaryService);">
+											<span ng-if="!ancillaryService.isSelected">
+												<svg aria-hidden="true" class="slds-button__icon--stateful slds-button__icon--left">
+													<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+														'/assets/icons/utility-sprite/svg/symbols.svg#add')}">
+													</use>
+												</svg>
+												{!$Label.Ancillary_Services_Button_Add}
+											</span>
+											<span ng-if="ancillaryService.isSelected">
+												<svg aria-hidden="true"
+													class="slds-button__icon--stateful slds-button__icon--left"
+													n-style="pso-button-selected-checkmark">
+													<use xlink:href="{!URLFOR($Resource.nFORCE__SLDS0102,
+														'/assets/icons/utility-sprite/svg/symbols.svg#check')}">
+													</use>
+												</svg>
+												{!$Label.Ancillary_Services_Button_Selected_State}
+											</span>
+										</button>
+									</div>
+									<div class="slds-size--1-of-1 slds-p-left--medium slds-p-right--medium slds-p-bottom--medium"
+										ng-if="ancillaryService.isSelected &&
+											ancillaryService.product.ancillaryServicesScreen.sections.length > 0"
+										ng-class="{'animated fadeIn' : (ancillaryService.isSelected &&
+											ancillaryService.product.ancillaryServicesScreen.sections.length > 0)}">
+										<hr n-style="pso-hr" />
+										<div
+											ng-repeat="section in ::ancillaryService.product.ancillaryServicesScreen.sections"
+											ng-if="!section.parentSectionId || section.meetsDisplayCriteria">
+											<h3 ng-if="section.portalHeaderText"
+												class="slds-text-heading--small slds-m-top--large"
+												n-style="pso-smallheader" resizer="true"
+												ng-class="{'slds-m-left--small': !(isMediumOrBigger)}"
+												ng-bind="::section.portalHeaderText">
+											</h3>
+											<h3 ng-if="section.portalSubheaderText" class="slds-form-element__label"
+												n-style="pso-form-label" resizer="true"
+												ng-class="{'slds-m-left--small': !(isMediumOrBigger)}"
+												ng-bind="::section.portalSubheaderText">
+											</h3>
+											<div class="slds-grid slds-wrap portal-ancillary-services-field">
+												<input-field
+													ng-repeat="field in ::section.fieldSet.fields"
+													class="slds-size--1-of-1 slds-medium-size--1-of-{{::field.sldsColSize || 1}}
+														slds-large-size--1-of-{{::field.sldsColSize || 1}}"
+													screen="ancillaryService.product.ancillaryServicesScreen"
+													section="section"
+													field="field"
+													should-validate="asc.onlineFormSubmitted"
+													form="onlineFormForm"
+													set-lookup-validity="vm.setLookupValidity()">
+												</input-field>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slds-grid slds-wrap">
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+								<button class="slds-button slds-button--brand slds-size--1-of-1 portal-button-initial"
+									ng-click="asc.saveAncillaryServices()"
+									ng-disabled="!onlineFormForm.$valid || asc.isSaving || asc.ancillaryServices == null || !asc.screensReady"
+									n-style="pso-button-primary">
+									{!$Label.Next_Button}
+								</button>
+							</div>
+							<div class="slds-col--padded slds-size--1-of-1 slds-m-top--small">
+								<button class="slds-button slds-size--1-of-1 portal-button-initial"
+									n-style="pso-action-link"
+									ng-disabled="asc.isSaving"
+									ng-click="asc.saveAncillaryServicesAndExit()">
+									{!$Label.Save_Button}
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</route>
+		</body>
+	</html>
+</apex:page>

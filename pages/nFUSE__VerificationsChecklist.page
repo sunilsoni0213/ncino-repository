@@ -1,0 +1,58 @@
+<apex:page controller="nFUSE.VerificationsChecklistController" showHeader="false" sidebar="false" docType="html-5.0">
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/common.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFUSE__ux, 'css/verifications.css')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<c:RequireAuthorization isAuthorized="{!$Permission.nFUSE__Credit_Verifications_Workflow}" errorMessage="{!$Label.nfuse__no_credit_permission}">
+		<c:TransactionMonitor elementId="ctrl-scope" handler="reportItemPushTopicUpdate"/>
+		<c:VerificationsApp >
+			<div ng-controller="verificationsController" id="ctrl-scope">
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<div style="padding: 12px" class="font-md">
+									<div ng-if="state=='Checklist'">
+										<p class="narrative-header">{!$Label.Verifications_Checklist_Header}</p>
+										<p class="narrative">{!$Label.Verifications_Checklist_Detail}</p>
+										<p class="narrative-bold">{!$Label.Verifications_Checklist_Detail_2}</p>
+									</div>
+									<div ng-if="state=='Results'">
+										<p class="narrative-header">{!$Label.Verifications_Checklist_Header}</p>
+										<p class="narrative">{!$Label.Verifications_Checklist_Results}</p>
+										<p class="narrative-bold">{!$Label.Verifications_Checklist_Results_2}</p>
+									</div>
+								</div>
+								<report-grid
+									items="verificationItems"
+									run-report="runReport"
+									state="state"/>
+								<div style="padding: 12px; border-top: 1px solid #DDDDDD;">
+									<button ng-if="state=='Checklist'" type="button" class="btn btn-primary space-sm" ng-click="runSelectedReports()">
+										{!$Label.Verifications_Checklist_RunReports}
+									</button>
+								</div>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+				<report-modal
+					is-displayed="isModalDisplayed"
+					reports="reportsToReview"
+					run-reports="runSelectedReports"/>
+			</div>
+		</c:VerificationsApp>
+		<script type="text/javascript">
+			(function() {
+				'use strict';
+				var app = angular.module('app');
+				app.constant('identifier', '{!identifier}');
+				app.constant('remoting', {
+					'getAvailableReportItems': '{!$RemoteAction.VerificationsChecklistController.getAvailableReportItems}',
+					'getReportItemByTransaction': '{!$RemoteAction.VerificationsChecklistController.getReportItemByTransaction}',
+					'runReports': '{!$RemoteAction.VerificationsChecklistController.runReports}'
+				});
+			})();
+		</script>
+	</c:RequireAuthorization>
+	<c:VerificationsTopbar nextHref="{!nextHref}"/>
+</apex:page>

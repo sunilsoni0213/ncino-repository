@@ -1,0 +1,6 @@
+<apex:page standardController="LLC_BI__Loan__c"  tabStyle="Account">
+
+  <div class="alert alert-info" role="alert">{!$Label.nsba__account_debt_alert}</div>
+  <apex:include pageName="nFORCE__KoRelatedListChild" />
+
+</apex:page>

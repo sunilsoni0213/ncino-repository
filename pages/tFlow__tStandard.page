@@ -1,0 +1,30 @@
+<apex:page >
+	<c:Includes />
+	
+	<div class="ncino">
+		<div class="top-banner">
+			<div class="left">
+				<apex:insert name="logo"/>
+			</div>
+			<div class="right">
+				<apex:insert name="banner"/>
+			</div>
+		</div>
+		
+		<div class="workspace">
+			<div class="left"><br />
+				<div class="menu force">
+					<apex:insert name="menu"/>
+				</div>
+			</div>
+			<div class="right">
+				<div class="tabs">
+					<apex:insert name="tabs"/>
+				</div>
+				<div class="body">
+					<apex:insert name="body"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</apex:page>

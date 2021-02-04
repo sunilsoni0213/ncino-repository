@@ -1,0 +1,152 @@
+<apex:page controller="LLC_BI.VF_ProductController" action="{!Init}">
+
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<span>{!$Label.llc_bi__loan_add_new_loan}</span>
+		</apex:define>
+		<apex:define name="right"></apex:define>
+	</apex:composition>
+
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<apex:outputPanel styleClass="force messages" id="pageMessage">
+						<apex:messages styleClass="alert alert-danger" />
+					</apex:outputPanel>
+					<apex:form styleClass="form-horizontal" id="formPanel">
+
+						<!-- Product Name -->
+						<div class="form-group">
+							<label for="ProductName" class="col-sm-1 control-label">{!$Label.New_Loan_Name}</label>
+							<div class="col-sm-3">
+								<apex:inputText id="ProductName" value="{!newProductName}"
+									styleClass="form-control requiredInput" required="true"
+									onchange="markDirty(jQuery(event.currentTarget))" />
+							</div>
+						</div>
+
+						<!-- Loan - Business Borrower Type -->
+						<div class="form-group">
+							<label for="borrowerType" class="col-sm-1 control-label">
+								{!$Label.Lead_Relationship_Borrower_Type} </label>
+							<div class="col-sm-3">
+								<apex:selectList value="{!typeOfBorrower}" multiselect="false"
+									size="1" id="borrowerType"
+									styleClass="form-control requiredInput" style="height:34px;"
+									onchange="markDirty(jQuery(event.currentTarget))">
+									<apex:selectOptions value="{!borrowerTypes}" />
+								</apex:selectList>
+							</div>
+						</div>
+
+						<!-- Loan Amount -->
+						<div class="form-group">
+							<label for="LoanAmount" class="col-sm-1 control-label">{!$Label.Loan_Amount}</label>
+							<div class="col-sm-3">
+								<apex:inputText id="LoanAmount" value="{!loanAmountString}"
+									styleClass="form-control"
+									onchange="markDirty(jQuery(event.currentTarget))" />
+							</div>
+						</div>
+
+						<apex:actionRegion >
+
+							<apex:variable var="isChangeProduct" value="{!LoanId!=null}" />
+
+							<!-- Product Line -->
+							<div class="form-group">
+								<label for="productLine"
+									class="col-lg-1 col-sm-2 control-label dropdown-label">{!$Label.Product_Line}</label>
+								<div class="col-sm-3">
+									<apex:selectList value="{!ProductLineId}" multiselect="false"
+										size="1" id="productLine"
+										styleClass="form-control requiredInput product-list"
+										style="height:34px;">
+										<apex:selectOptions value="{!ProductLinesList}" />
+										<apex:actionSupport event="onchange" rerender="PTypeList,PList"
+											oncomplete="markDirty(
+												jQuery(event.currentTarget)
+													.parents('.form-horizontal')
+													.find('select.product-list'))" />
+									</apex:selectList>
+								</div>
+								<div class="col-sm-4"></div>
+							</div>
+
+							<!-- Product Type -->
+							<apex:outputPanel id="PTypeList" layout="none">
+								<div class="form-group">
+									<label for="productType"
+										class="col-lg-1 col-sm-2 control-label dropdown-label">{!$Label.Product_Type}</label>
+									<div class="col-sm-3">
+										<apex:selectList value="{!ProductTypeId}" multiselect="false"
+											size="1" id="productType"
+											styleClass="form-control requiredInput product-list"
+											style="height:34px;">
+											<apex:selectOptions value="{!ProductTypeList}" />
+											<apex:actionSupport event="onchange" rerender="PList"
+												oncomplete="markDirty(
+												jQuery(event.currentTarget)
+													.parents('.form-horizontal')
+													.find('select.product-list'))" />
+										</apex:selectList>
+									</div>
+									<div class="col-sm-4"></div>
+								</div>
+							</apex:outputPanel>
+
+							<!-- Product -->
+							<apex:outputPanel id="PList" layout="none">
+								<div class="form-group">
+									<label for="product"
+										class="col-lg-1 col-sm-2 control-label dropdown-label">{!$Label.Product}</label>
+									<div class="col-sm-3">
+										<apex:selectList value="{!ProductId}" multiselect="false"
+											size="1" id="product"
+											styleClass="form-control requiredInput product-list"
+											style="height:34px;"
+											onchange="markDirty(
+												jQuery(event.currentTarget)
+													.parents('.form-horizontal')
+													.find('select.product-list'))">
+											<apex:selectOptions value="{!ProductList}" />
+										</apex:selectList>
+									</div>
+									<div class="col-sm-4"></div>
+								</div>
+							</apex:outputPanel>
+
+						</apex:actionRegion>
+
+						<apex:commandButton action="{!createProductWrapper}"
+							styleClass="btn btn-primary btn-form-submit"
+							value="{!$Label.llc_bi__button_create_new_loan}"
+							id="new-loan-button"
+							reRender="pageMessage, formPanel"
+							onClick="this.onclick=function(){this.disabled = true;return false;}"
+							oncomplete="handleRedirect('{!newObjectId}', '{!returnUrl}', event)"/>
+
+						<apex:commandLink action="{!cancel}" value="{!$Label.llc_bi__button_cancel}"
+							id="cancel-button" immediate="true"
+							html-formnovalidate="formnovalidate" />
+					</apex:form>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+	<script type="text/javascript">
+		function markDirty(elements) {
+			elements.addClass('dirtyInput');
+		}
+
+		function handleRedirect(ret, retUrl) {
+			if (ret !== null && ret !== '') {
+				LifeCycle.Navigator.navigateToSObject(ret);
+			} else if (retUrl !== null && retUrl !== '' ) {
+				LifeCycle.Navigator.navigateToURL(retUrl);
+			}
+		}
+	</script>
+</apex:page>

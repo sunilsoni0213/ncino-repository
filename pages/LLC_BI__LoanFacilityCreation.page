@@ -1,0 +1,8 @@
+<apex:page id="LoanFacilityCreation">
+	<c:NewFacilityConfiguration />
+
+	<div id="ncNewProduct" class="slds">
+		<c:ncNewProductPartials />
+		<new-product></new-product>
+	</div>
+</apex:page>

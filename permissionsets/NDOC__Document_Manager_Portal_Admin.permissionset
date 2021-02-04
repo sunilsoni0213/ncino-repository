@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users to see and access the Portal Options link in Document Manager for the Loan, Relationship, and Deposit Views. Without this permission, the Portal Options link is not visible.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Document Manager Portal Admin</label>
+</PermissionSet>

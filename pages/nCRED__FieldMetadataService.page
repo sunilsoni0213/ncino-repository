@@ -1,0 +1,6 @@
+<apex:page controller="nCRED.FieldMetadataService"
+  contentType="application/json"
+  readOnly="true"
+  cache="true"
+  expires="600"
+>{!pageResponse}</apex:page>

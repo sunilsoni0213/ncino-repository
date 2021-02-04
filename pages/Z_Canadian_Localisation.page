@@ -1,0 +1,18 @@
+<apex:page >
+  <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="Canada Eh" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                 <c:Z_Canadian_Localisation />   
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

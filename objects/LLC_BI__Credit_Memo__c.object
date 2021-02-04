@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Credit_Memo_Lightning_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Credit Memo Object, stores the templates used for the credit memo records, as well as the credit memo records for the loans within nCino</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>CSA_Credit_Memo_List_View</fullName>
+        <description>CSA Credit Memo Config</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__FScreen__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Object_API_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Disabled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSA Credit Memo List View</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSA_Credit_Memo_New_Edit</fullName>
+        <description>CSA Credit Memo New</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Object_API_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Disabled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSA Credit Memo New/Edit</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CSA_Credit_Memo_View</fullName>
+        <description>CSA Credit Memo Wizard</description>
+        <displayedFields>
+            <field>LLC_BI__FScreen__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Object_API_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Disabled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CSA Credit Memo View</label>
+    </fieldSets>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is populated by an administrator. The value of this field is displayed on the Credit Memo selection page and should be used to help the user choose the appropriate template.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__FScreen__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated when the credit memo is created from template. This field is a lookup to the Force framework Screen record, which is a parent of Screen Sections that make up the credit memo.</description>
+        <externalId>false</externalId>
+        <label>Force Screen</label>
+        <referenceTo>nFORCE__Screen__c</referenceTo>
+        <relationshipLabel>Credit Memos</relationshipLabel>
+        <relationshipName>Credit_Memos</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It defaults to false and can be updated by administrator. When set to true, the disabled credit memo template will not be shown on the Credit Memo selection page. This field should only be used for credit memo records that are templates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disabled credit memo templates will not be shown on the Credit Memo selection page.</inlineHelpText>
+        <label>Is Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Template__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It defaults to false and when set to to true, it indicates the record is a template. When set to true, the credit memo will appear as a template option on the Credit Memo selection page.</description>
+        <externalId>false</externalId>
+        <label>Is Template</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Linked_Placeholder_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. When a Credit Memo Version is saved to Document Manager, the Id of the selected placeholder is populated into this field via Apex. It is used to display the most recently used placeholder in the Save Version modal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Id of the most recently used placeholder in the Save Version modal. When populated, the modal displays the name of this placeholder as default.</inlineHelpText>
+        <label>Linked Placeholder Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Object_API_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It defaults to empty. This field should be used by administrator to designate which objects a template credit memo should be available for. The administrator should add the API name of the object which will add the template option to the Credit Memo selection page when accessed from that object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of the object this credit memo is used on.</inlineHelpText>
+        <label>Object API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Screen__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is no longer used.</description>
+        <externalId>false</externalId>
+        <label>Screen</label>
+        <referenceTo>nDESIGN__Screen__c</referenceTo>
+        <relationshipLabel>Credit Memos</relationshipLabel>
+        <relationshipName>Credit_Memos</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Credit Memo</label>
+    <listViews>
+        <fullName>All_Credit_Memos</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__FScreen__c</columns>
+        <columns>LLC_BI__Is_Template__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Credit Memos</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Credit_Memo_Template_View</fullName>
+        <columns>NAME</columns>
+        <columns>LLC_BI__FScreen__c</columns>
+        <columns>LLC_BI__Is_Template__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__Is_Template__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Credit Memo Template View</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Credit Memo Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Credit Memos</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>LLC_BI__Is_Template__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>LLC_BI__FScreen_Required</fullName>
+        <active>false</active>
+        <description>FScreen is required.</description>
+        <errorConditionFormula>ISBLANK( LLC_BI__FScreen__c )</errorConditionFormula>
+        <errorMessage>FScreen is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Screen_Required</fullName>
+        <active>false</active>
+        <description>Screen is required.</description>
+        <errorConditionFormula>ISBLANK( LLC_BI__Screen__c )</errorConditionFormula>
+        <errorMessage>Screen is required.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

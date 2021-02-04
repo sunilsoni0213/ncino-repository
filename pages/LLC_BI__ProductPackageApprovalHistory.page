@@ -1,0 +1,18 @@
+<apex:page controller="LLC_BI.ProductPackageApprovalHistoryController" readOnly="true" applyBodyTag="false"
+	applyHtmlTag="false" standardStylesheets="false"
+	sidebar="false" showHeader="false" contentType="text/html" docType="html-5.0" apiVersion="36.0"
+	cache="true" expires="100" showChat="false" showQuickActionVfHeader="false">
+	<tree-grid
+		template-url="{!$Page.ncTreeGridHtml}"
+		no-records-found-label="{$Label.No_Records_Approval_History}"
+		get-tree-data-ra="{!$RemoteAction.ProductPackageApprovalHistoryController.getTreeGridData}"
+		context-id="{{::vm.dialog.params.rowId}}"
+		max-depth="1"
+		hide-collapse-expand-icon="true" />
+	<script language="javascript">
+ 		jQuery("#loading-modal").modal("hide").on('hidden.bs.modal', function() {
+ 			jQuery('body').removeClass('modal-open');
+ 			jQuery('.modal-backdrop').remove();
+ 		});
+ 	</script>
+</apex:page>

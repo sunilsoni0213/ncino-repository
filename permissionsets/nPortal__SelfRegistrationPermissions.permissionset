@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>nPortal__SelfRegistrationController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>nPortal__UserWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SelfRegistrationPermissions</label>
+    <pageAccesses>
+        <apexPage>nPortal__SelfRegistration</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+</PermissionSet>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This field is required. Column definitions for knockout apps.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LLC_BI__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Designates the category in which this column will be used.</description>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Data_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. Data Type for the KO App Column.  Used to control the input type displayed for the column data.</description>
+        <externalId>false</externalId>
+        <label>Data Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Header__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. Header text for KO app column.</description>
+        <externalId>false</externalId>
+        <label>Header</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__KO_App__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. Specifies the KO App in which this column will be used.</description>
+        <externalId>false</externalId>
+        <label>KO App</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Sort_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. Index controlling the order in which the column will be displayed in relation to other columns</description>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>KO App Column Definition</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,49 @@
+<apex:page showHeader="true" sidebar="true"
+	standardController="LLC_BI__Loan__c"
+	extensions="nCBC.LoanCreditReportHistoryController"
+	action="{!noHistoryRedirect}"
+	docType="html-5.0">
+	<c:Includes />
+
+	<div id="credit-report">
+		<apex:outputPanel styleClass="force">
+			<div class="row-fluid">
+				<apex:form >
+					<div class="force container-fluid">
+							<div class="pull-right">
+								<apex:commandButton action="{!goBackToLoan}" styleClass="btn btn-mini btn-primary" value="{!$Label.ncbc__go_back}" id="btnBack" />&nbsp;
+								<apex:commandButton action="{!goToBorrowerSelection}" styleClass="btn btn-mini btn-primary" value="{!$Label.ncbc__new_request}" id="btnNewRequest" />
+							</div>
+							<br />
+						<hr class="divider" />
+					</div>
+					<apex:repeat value="{!loanCreditReports}" var="viewModel" id="bl">
+						<h4>{!viewModel.Acct.Name} - {!viewModel.PrimaryContact.Name}</h4>
+						<table class="table table-hover">
+							<thead>
+								<tr class="single-row">
+									<th>{!$Label.ncbc__action}</th>
+									<th>{!$Label.ncbc__credit_date_created}</th>
+									<th>{!$Label.ncbc__credit_created_by}</th>
+									<th>{!$Label.ncbc__credit_report_name}</th>
+								</tr>
+							</thead>
+							<apex:repeat value="{!viewModel.Reports}" var="report" id="bl1">
+								<tr>
+									<td>
+										<apex:outputLink value="{!$Page.nCBC__CBCCreditReport}?id={!report.Id}&pt=single&brid={!report.Id}&rt=loan&rtid={!LLC_BI__Loan__c.Id}&sfdc.override=1" styleClass="btn btn-mini btn-primary">
+											{!$Label.ncbc__view_credit_report}
+										</apex:outputLink>
+									</td>
+									<td><apex:outputText value="{!report.CreatedDate}"/></td>
+									<td><apex:outputText value="{!report.CreatedBy.Name}"/></td>
+									<td><apex:outputText value="{!report.Name}"/></td>
+								</tr>
+							</apex:repeat>
+						</table>
+					</apex:repeat>
+				</apex:form>
+			</div>
+		</apex:outputPanel>
+	</div>
+</apex:page>

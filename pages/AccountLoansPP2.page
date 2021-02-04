@@ -1,0 +1,73 @@
+<apex:page standardcontroller="Account" extensions="AccountLoansPP" tabStyle="LLC_BI__Loan__c" >
+    <apex:sectionHeader title="Step 2 of 2" subtitle="{!productPackageName}" />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <apex:slds />
+<div class="slds-scope">
+    <apex:form id="entitiesPageBlock">
+                <div class="slds-page-header">
+                    <header>
+                        <svg aria-hidden="true" class="slds-icon slds-icon--medium slds-icon-standard-client slds-icon-text-default">
+                                <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#client')}"></use>
+                        </svg>
+                            Entities
+                    </header>
+                </div>
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="loans2" title="Add Entities" >
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th>
+                                    Relationship
+                                </th>
+                                <th>
+                                    Borrower Type
+                                </th>
+                                <th>
+                                    Contingent Type
+                                </th>
+                                <th>
+                                    Contingent %
+                                </th>
+                                <th>
+                                    Authorization To Pull Credit
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!entList}" var="e">
+                                <tr class="slds-text-title_caps">
+                                    <td>
+                                        <apex:inputField value="{!e.LLC_BI__Account__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!e.LLC_BI__Borrower_Type__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!e.LLC_BI__Contingent_Type__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!e.LLC_BI__Ownership__c}" required="true"/>
+                                    </td>
+                                    <td>
+                                        <apex:inputField value="{!e.Authorization_To_Pull_Credit__c}"/>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                <table id="addRemoveGrid">
+                    <div class="slds-align_absolute-center slds-p-top_large">
+                    <apex:actionFunction name="addEntityRow" action="{!addEntityRow}"/>
+                            <button type="button" class="slds-button_neutral" onclick="addEntityRow();">Add Entity</button>&nbsp; &nbsp;
+                        <apex:actionFunction name="removeEntity" action="{!removeLastEntityRow}"/>
+                            <button type="button" class="slds-button_neutral" onclick="removeEntity();">Remove Entity</button>&nbsp; &nbsp;
+                        <apex:actionFunction name="finish" action="{!createLoansAndEntities}"/>
+                            <button type="button" class="slds-button_neutral" onclick="finish();">Finish</button>&nbsp; &nbsp;
+                        <apex:actionFunction name="cancel" action="/{!Id}"/>
+                            <button type="button" class="slds-button_neutral" onclick="cancel();">Cancel</button>
+                    </div> 
+                </table> 
+    </apex:form>
+    </div>
+</html>
+</apex:page>

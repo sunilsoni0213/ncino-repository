@@ -1,0 +1,35 @@
+<apex:page standardController="LLC_BI__Product_Package__c" extensions="LLC_BI.ProdPkgUiFacilitiesAllController"
+			  sidebar="false" showHeader="false">
+	<nFORCE:Includes />
+	<nFORCE:Include_Design_System flavor="bs3"/>
+	<nFORCE:ncTreeGridIncludes />
+
+	<c:ProductPackageLoanFacilityConfiguration />
+
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			{!$Label[tableTitleLabelName]}
+		</apex:define>
+		<apex:define name="right"/>
+	</apex:composition>
+
+	<div>
+		<div class="slds">
+			<apex:composition template="nFORCE__Template_View_1_Column">
+				<apex:define name="column-content">
+					<apex:composition template="nFORCE__Template_View_Container">
+						<apex:define name="content">
+							<div id="ncFacilities">
+								<c:ProductPackageLoanFacilityPartials />
+								<loan-facilities
+									context-id="{!Product_Package__c.Id}">
+								</loan-facilities>
+							</div>
+						</apex:define>
+					</apex:composition>
+				</apex:define>
+			</apex:composition>
+		</div>
+	</div>
+
+</apex:page>

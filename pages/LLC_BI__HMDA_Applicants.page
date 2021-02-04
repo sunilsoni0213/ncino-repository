@@ -1,0 +1,101 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController">
+<apex:include pageName="nFORCE__Error_Message_Handler"/>
+	<apex:variable var="GUID" value="{!screenSections[0].Id}{!guid}"/>
+	<apex:variable var="APP_NAME" value="LayoutBody{!GUID}" />
+	<nFORCE:KoVirtualBinding code="with: $root.{!APP_NAME}"/>
+
+		<div data-bind="visible: app.performingAjax">
+			<apex:composition template="nFORCE__Template_UI_Loading"/>
+		</div>
+
+		<nFORCE:KoVirtualBinding code="if: screenResource" />
+			<nFORCE:KoVirtualBinding code="with: screenResource().children()[0]" />
+				<div data-bind="ifnot: selectedChild">
+					<apex:composition template="nFORCE__Template_Heading">
+						<apex:define name="left">
+							<span data-bind="text: $parent.sectionName" />
+						</apex:define>
+						<apex:define name="right">
+						</apex:define>
+					</apex:composition>
+					<apex:composition template="nFORCE__Template_View_1_Column">
+						<apex:define name="column-content">
+							<apex:composition template="nFORCE__Template_View_Container">
+								<apex:define name="content">
+
+							<c:KoTableChildrenSelectableTemplate isSelectable="true"
+								columnBinding="if: $index() <= 1" />
+
+								</apex:define>
+							</apex:composition>
+						</apex:define>
+					</apex:composition>
+				</div>
+
+				<nFORCE:KoVirtualBinding code="if: selectedChild" />
+					<div class="row">
+						<div class="col-xs-12">
+							<apex:composition template="nFORCE__Template_Heading">
+								<apex:define name="left">
+									<span data-bind="text: selectedChild().propertyList()[0].value" />
+								</apex:define>
+							</apex:composition>
+						</div>
+					</div>
+					<apex:composition template="nFORCE__Template_View_1_Column">
+						<apex:define name="column-content">
+							<apex:composition template="nFORCE__Template_View_Container">
+								<apex:define name="content">
+
+							<nFORCE:KoVirtualBinding code="with: selectedChild" />
+							<div class="alert alert-info" role="alert">{!$Label.llc_bi__hmda_demographic_disclaimer}</div>
+								<div class="row" data-bind="foreach: propertyList">
+									<div class="col-sm-12" data-bind="if: $index() > 0">
+										<div class="row">
+											<div class="col-sm-6">
+												<c:KoVirtualBinding code="template: { name: 'grid-edit-content-template', data: $data }"
+													close="true" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<button
+									data-bind=
+										"click: function(){ $parents[1].save( $parent, null, true ); $parent.selectedChild(null); },
+										visible: !$parents[1].isLocked() && $parents[1].isEditing()"
+									class="btn btn-primary">{!$Label.Save}</button>
+								<button
+									data-bind="click: function(){ $parent.selectedChild(null); $parents[1].cancel(); },
+									visible: !$parents[1].isLocked() && $parents[1].isEditing()"
+									class="btn btn-link">{!$Label.Cancel}</button>
+							<nFORCE:KoVirtualBinding close="true" />
+
+								</apex:define>
+							</apex:composition>
+						</apex:define>
+					</apex:composition>
+				<nFORCE:KoVirtualBinding close="true" />
+			<nFORCE:KoVirtualBinding close="true" />
+		<nFORCE:KoVirtualBinding close="true"/>
+	<nFORCE:KoVirtualBinding close="true"/>
+
+	<nFORCE:RegisterLayoutDesignerApp sObjectJSON="{!contextObjectJSON}"
+		guid="{!GUID}"
+		sectionId="{!screenSections[0].id}"
+		appName="{!APP_NAME}"/>
+
+	<nFORCE:KoFieldLabelTemplate />
+	<nFORCE:KoFieldOutputTemplate />
+	<c:KoFieldInputTemplate />
+	<nFORCE:KoGridCellTemplate />
+	<c:KoGridEditContentTemplate />
+	<nFORCE:KoGridCellContentTemplate />
+	<nFORCE:KoListHeadingTemplate />
+	<nFORCE:KoGridHeadingTemplate />
+	<nFORCE:KoListButtonTemplate />
+	<nFORCE:KoListChildrenTemplate count="1" />
+	<nFORCE:KoListChildrenTemplate count="3" />
+
+	<nFORCE:KoHeadingTemplate />
+
+</apex:page>

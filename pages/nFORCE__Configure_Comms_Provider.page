@@ -1,0 +1,9 @@
+<apex:page controller="nFORCE.CommunicatorsListConfigController" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">
+	<apex:form styleClass="container-fluid">
+		<apex:repeat value="{!providers}" var="p">
+			<apex:outputPanel layout="none" styleClass="row">
+				<c:Configure_Comms_Provider uniqueName="{!p.Name}" />
+			</apex:outputPanel>
+		</apex:repeat>
+	</apex:form>
+</apex:page>

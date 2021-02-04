@@ -1,0 +1,5 @@
+<apex:page standardController="Lead">
+    <apex:form >
+        <c:ProductWidget recordIdX="{!Lead.Id}"/>
+    </apex:form>
+</apex:page>

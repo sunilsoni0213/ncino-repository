@@ -1,0 +1,22 @@
+<apex:page showHeader="false" sidebar="false" >
+	<nFORCE:Internationalize />
+	<nFORCE:ncFilterIncludes />
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncPubsubIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaPricing, 'application/App.js')}"/>
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaPricing, 'application/Bootstrap.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaPricing, 'components/ProformaPricing.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaPricing, 'services/ProformaPricingRemoting.service.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProformaPricing, 'directives/equalizeHeight.js')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProformaPricing, 'css/Style.css')}"/>
+	<c:ProformaPricingConfiguration />
+
+	<div id="ncProformaPricing" class="slds">
+		<c:ProformaPricingPartial />
+		<proforma-pricing />
+	</div>
+
+</apex:page>

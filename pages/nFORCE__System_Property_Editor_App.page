@@ -1,0 +1,11 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" sidebar="false">
+	<c:Include_AngularJS />
+	<c:Include_AngularJS_Animate />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSystemPropertyEditor, 'application/Bootstrap.js')}" />
+
+	<apex:repeat value="{!screenSections}" var="section">
+		<div class="slds" id="ncSystemPropertyEditor">
+			<c:ncSystemPropertyEditor guid="{!section.id}{!guid}" sectionId="{!section.id}" />
+		</div>
+	</apex:repeat>
+</apex:page>

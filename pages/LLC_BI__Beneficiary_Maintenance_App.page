@@ -1,0 +1,10 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="LLC_BI.BeneficiaryMaintenanceAppController,nFORCE.ScreenController">
+
+	<c:Beneficiary />
+
+	<c:BeneficiaryMaintenanceConfiguration nextHref="{!nextHref.url}"
+		contextId="{!contextObjectId}"
+		sectionId="{!screenSections[0].Id}"
+		anchor="{!anchorText}"/>
+</apex:page>

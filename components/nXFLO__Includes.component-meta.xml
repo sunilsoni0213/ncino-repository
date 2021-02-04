@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>29.0</apiVersion>
+    <description>Includes scripts and style sheets.</description>
+    <label>Includes</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>68</minorNumber>
+        <namespace>LLC_BI</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>24</minorNumber>
+        <namespace>nDESIGN</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>22</minorNumber>
+        <namespace>nXBI</namespace>
+    </packageVersions>
+</ApexComponent>

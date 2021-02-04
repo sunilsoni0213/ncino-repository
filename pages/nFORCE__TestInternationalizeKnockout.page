@@ -1,0 +1,101 @@
+<apex:page >
+	<c:Internationalize />
+
+	<c:Include_jQuery />
+	<c:Include_jQuery_FormatCurrency />
+	<c:Include_jQuery_Custom />
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap-datepicker.min.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap-datepicker.min.js')}" />
+
+	<c:Include_MomentJS />
+	<!-- Webpacked utils bundle. -->
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/utils-bundle.js')}" />
+
+	<!-- Webpacked Knockout bundle. -->
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/knockout-bundle.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__knockout_internationlize, 'customKnockoutBindings.js')}" />
+
+	<c:Include_Bootstrap />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__bootstrap, '/css/bootstrap-font.css')}" />
+
+	<style>
+		.alert-danger{
+			background-color: #f07474;
+		}
+		.fieldLabel {
+			color: #4a4a56;
+			font-size: 91%;
+			font-weight: bold;
+			padding-left: 5rem;
+			padding-right: 1rem;
+			text-align: right;
+		}
+		tr {
+			height: 25px;
+		}
+	</style>
+
+	<script>
+		document.addEventListener( 'DOMContentLoaded', function( event ) {
+			var intl = window.LifeCycle.Internationalize;
+			
+			window.tikModel = {
+				userLocale: intl.getLocale(),
+				countryEnglish: intl.getCountryEnglish(),
+				countryNative: intl.getCountryNative(),
+				currencySymbol: intl.getCurrencySymbol(),
+				currencyTest: ko.observable('987.23').extend({ notify: 'always' }),
+				decimalTest: ko.observable('2.343').extend({notify: 'always'}),
+				datepickerTest: ko.observable(new Date()).extend({notify: 'always'})
+			};
+			
+			ko.applyBindings(tikModel);
+		});
+	</script>
+
+
+	<apex:pageBlock >
+		<apex:pageBlockSection title="Internationalized Formatting Examples using Knockout" columns="1">
+			<div>
+				<table>
+					<tr>
+						<td class="fieldLabel">Current Locale</td>
+						<td><span data-bind="text: userLocale" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Country (English)</td>
+						<td><span data-bind="text: countryEnglish" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Country (Native)</td>
+						<td><span data-bind="text: countryNative" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Currency Symbol</td>
+						<td><span data-bind="text: currencySymbol" /></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Currency Number</td>
+						<td>
+							<input data-bind="currencyInput: currencyTest, opts: {scale: 2, isRequired: true}" />
+						</td>
+						<td><button onclick="console.log(window.tikModel.currencyTest())">Show Currency in Console</button></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Decimal Number</td>
+						<td><input data-bind="decimalInput: decimalTest, opts: {scale: 2, isRequired: true}" /></td>
+						<td><button onclick="console.log(window.tikModel.decimalTest())">Show Decimal in Console</button></td>
+					</tr>
+					<tr>
+						<td class="fieldLabel">Date Picker (text)</td>
+						<td><input data-bind="dateInput: datepickerTest" type="text" /></td>
+						<td><button onclick="console.log(window.tikModel.datepickerTest())">Show Date in Console</button></td>
+					</tr>
+				</table>
+			</div>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+
+</apex:page>

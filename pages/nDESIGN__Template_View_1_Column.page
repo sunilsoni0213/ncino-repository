@@ -1,0 +1,15 @@
+<apex:page >
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-single">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 col-wrapper">
+							<apex:insert name="column-content"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</apex:page>
