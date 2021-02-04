@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Holding --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Holding --></value>
+    </caseValues>
+    <fieldSets>
+        <label>UI garantie - Holdings</label>
+        <name>collateral_UI_Holdings</name>
+    </fieldSets>
+    <fields>
+        <label>Collatéral</label>
+        <name>Collateral__c</name>
+        <relationshipLabel><!-- Holdings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label>Nombre de partages</label>
+        <name>Number_of_Shares__c</name>
+    </fields>
+    <fields>
+        <label>Prix ​​de l&apos;action</label>
+        <name>Stock_Price__c</name>
+    </fields>
+    <fields>
+        <label>Symbole boursier</label>
+        <name>Ticker_Symbol__c</name>
+    </fields>
+    <fields>
+        <label>Valeur totale prêtables</label>
+        <name>Total_Lendable_Value__c</name>
+    </fields>
+    <fields>
+        <label>Valeur totale</label>
+        <name>Total_Value__c</name>
+    </fields>
+    <fields>
+        <label>Yahoo Finance Lien</label>
+        <name>Yahoo_Finance_Link__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Holding Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

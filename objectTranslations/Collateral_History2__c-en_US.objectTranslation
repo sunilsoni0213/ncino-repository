@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Collateral Valuation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Collateral Valuations</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- collateral UI - History --></label>
+        <name>collateral_UI_History</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Appraisal Date --></label>
+        <name>Appraisal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment Method --></label>
+        <name>Assessment_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Block --></label>
+        <name>Block__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collateral Value --></label>
+        <name>Collateral_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collateral --></label>
+        <name>Collateral__c</name>
+        <relationshipLabel><!-- Collateral Valuations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <help><!-- For Real Estate; based on Collateral Value - Land Value --></help>
+        <label><!-- Insurance Requirement --></label>
+        <name>Insurance_Requirement__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this is real estate, what is the value of the land? This is used for insurance requirement calculations. --></help>
+        <label><!-- Adjustment to Value --></label>
+        <name>Land_Value_If_Real_Estate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Listed for Sale? --></label>
+        <name>Listed_for_Sale__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Units --></label>
+        <name>Number_of_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parcel Number --></label>
+        <name>Parcel_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Sale? --></label>
+        <name>Pending_Sale__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Tax ID --></label>
+        <name>Property_Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Type --></label>
+        <name>Property_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>As Complete</masterLabel>
+            <translation><!-- As Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>As Is</masterLabel>
+            <translation><!-- As Is --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>As Stabalized</masterLabel>
+            <translation><!-- As Stabalized --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street Address --></label>
+        <name>Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor --></label>
+        <name>Vendor__c</name>
+        <relationshipLabel><!-- Collateral Valuations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Year Built --></label>
+        <name>Year_Built__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Collateral History Layout</layout>
+        <sections>
+            <label><!-- Other Details --></label>
+            <section>Other Details</section>
+        </sections>
+        <sections>
+            <label><!-- Property Information --></label>
+            <section>Property Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Form_Generation --></label>
+        <name>Form_Generation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generate_Forms --></label>
+        <name>Generate_Forms</name>
+    </webLinks>
+</CustomObjectTranslation>

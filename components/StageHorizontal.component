@@ -1,0 +1,101 @@
+<apex:component controller="StageHorizontalController" allowDML="true">
+    <apex:attribute name="objectName" type="String" description="Name of the object record."/>
+
+    <apex:outputPanel layout="none" rendered="{!ISNULL($CurrentPage.parameters.app)}">
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'jquery/js/jquery.min.js')}" />
+    </apex:outputPanel>
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'jquery/js/jquery-ui.min.js')}" />
+
+    <apex:outputPanel layout="none" rendered="{!hide && !ISNULL($CurrentPage.parameters.app)}">
+        'No Data Available'
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!hide && ISNULL($CurrentPage.parameters.app)}">
+        <apex:form >
+            <apex:pageblock >
+                <apex:pageMessages ></apex:pageMessages>
+            </apex:pageblock>
+        </apex:form>
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="none" rendered="{!!hide}">
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'highcharts/highCharts.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'highcharts/chartExporting.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'highcharts/DataJS.js')}" />
+
+        <script type="text/javascript">
+            var j$ = jQuery.noConflict();
+
+            j$(function() {
+                j$('#container').highcharts(
+                        {
+                            data : {
+                                table : document.getElementById('datatable')
+                            },
+                            chart : {
+                                type : 'bar'
+                            },
+                            title : {
+                                text : ''
+                            },
+                            xAxis : {
+                                labels : {
+                                    enabled : false
+                                }
+                            },
+                            yAxis : {
+                                allowDecimals : false,
+                                title : {
+                                    text : 'Number Of Days'
+                                },
+                            },
+                            legend : {
+                                verticalAlign : 'top',
+                                backgroundColor : '#FFFFFF',
+                                reversed : true,
+                                x : 0,
+                                y : 0
+                            },
+                            tooltip : {
+                                formatter : function() {
+                                    return '<b>' + this.point.name + '</b>:'
+                                            + this.point.y + '<br/><b>' + 'Stage:'
+                                            + '</b>' + this.series.name;
+                                }
+                            },
+                            plotOptions : {
+                                series : {
+                                    stacking : 'normal'
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            }
+                        });
+            });
+        </script>
+
+        <div id="container" style="height: 155px; margin: 0 auto"></div>
+        <div style="">
+            <table id="datatable" style="display:none;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <apex:repeat var="r" value="{!stagesList}">
+                            <th>{!r['name']}</th>
+                        </apex:repeat>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Number Of Days</th>
+                        <apex:repeat var="r" value="{!stagesList}">
+                            <td>{!r['duration']}</td>
+                        </apex:repeat>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </apex:outputPanel>
+</apex:component>

@@ -1,0 +1,8 @@
+<apex:page standardController="LLC_BI__Collateral__c">
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div><apex:relatedList subject="{!LLC_BI__Collateral__c}" list="CombinedAttachments" /></div>
+        </apex:define>
+        <apex:define name="right" />
+    </apex:composition>
+</apex:page>

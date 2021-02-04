@@ -1,0 +1,23 @@
+<design:component>
+	<design:attribute
+		name="label"
+		label="Label"
+		required="true"
+		description="The label of the section." />
+    <design:attribute
+		name="pageName"
+		label="Page Name"
+		required="true"
+		description="The name of the page." />
+    <design:attribute
+		name="namespace"
+		label="Page Namespace"
+		required="false"
+		description="The namespace assocaited with the page. Enter 'c' for pages without a namespace." />
+	<design:attribute
+		name="height"
+		default="300"
+		required="true"
+		label="Height (in pixels)"
+		description="The visualforce URL of the page. For example 'https://mydomain--llc-bi.visualforce.com/apex/Loan'." />
+</design:component>

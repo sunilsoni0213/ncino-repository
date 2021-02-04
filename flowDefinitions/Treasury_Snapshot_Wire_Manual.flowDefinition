@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>Flow to get the screen section for the Wire Outgoing Manual</description>
+    <masterLabel>Treasury Snapshot Wire Manual</masterLabel>
+</FlowDefinition>

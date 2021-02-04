@@ -1,0 +1,26 @@
+<apex:page standardcontroller="Account" extensions="AnswerComparisonController" showheader="false">
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    </head>
+    <table class="table table-striped table-bordered table-hover table-sm">
+        <tr>
+            <th>Question</th> <th>Most Recent Response</th> <th>Previous Response</th>
+        </tr>
+        <apex:repeat var="newans" value="{!newanswers}">
+            <tr>
+                <td>{!newans.nFORCE__question__r.nFORCE__Label__c}</td>
+                <td>{!newans.nFORCE__option__r.nFORCE__Label__c}</td>
+                <apex:repeat var="archans" value="{!archanswers}">
+                    <apex:outputPanel rendered="{!IF(archans.nFORCE__Question__c == newans.nFORCE__Question__c, true, false)}">
+                        <apex:outputPanel rendered="{!IF(archans.nFORCE__option__r.nFORCE__Label__c != newans.nFORCE__option__r.nFORCE__Label__c, true, false)}">
+                            <td class="warning">{!archans.nFORCE__option__r.nFORCE__Label__c}</td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!IF(archans.nFORCE__option__r.nFORCE__Label__c == newans.nFORCE__option__r.nFORCE__Label__c, true, false)}">
+                            <td>{!archans.nFORCE__option__r.nFORCE__Label__c}</td>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:repeat>
+            </tr>
+        </apex:repeat>
+    </table>
+</apex:page>

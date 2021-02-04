@@ -1,0 +1,65 @@
+<apex:page controller="DynamicInitialize">
+    <apex:include pageName="InitDemo"/>
+    Loading resources dynamically based on visible code in ORG ...
+    <br/>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--apex:form >
+    <apex:commandButton onclick="loadResource();" value="Load Resources" id="theButton" rerender="nothing"/>
+    </apex:form>
+    <apex:outputPanel id="nothing">
+    </apex:outputPanel!-->
+
+    <script type="text/javascript">
+        window.requestedResources = [];
+
+        function loadResource(){
+            console.log("Process Files:");
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.DynamicInitialize.getResources}',
+                function(result, event){
+                    if(event.status){
+                        for (resource of result) {
+                            retrieveResource(resource);
+                        }
+                        //$(window).load(function () {
+                        //    alert('Loading is done.');
+                        //});
+                        return true;
+                    } else{
+                        console.log("failed");
+                        return false;
+                    }
+                },
+                {buffer: false}
+            );
+        }
+
+        function retrieveResource(resource) {
+            if (typeof window.requestedResources[resource.hashcode] === 'undefined') {
+                window.requestedResources[resource.hashcode] = true;
+
+                if (resource.type == "CSS") {
+                    console.log('Requested: CSS '+resource.hashcode + " " + resource.url);
+                    var element = document.createElement('link');
+                    element.setAttribute("rel", "stylesheet");
+                    element.setAttribute("type", "text/css");
+                    element.setAttribute("href", resource.url);
+                    document.getElementsByTagName("head")[0].appendChild(element);
+                }
+                else {
+                    console.log('Requested: SCRIPT '+resource.hashcode + " " + resource.url);
+                    var element = document.createElement('script');
+                    element.setAttribute("type", "text/javascript");
+                    element.setAttribute("src", resource.url);
+                    document.getElementsByTagName("head")[0].appendChild(element);
+                }
+            }
+            else
+                console.log('Skipped:'+resource.hashcode + " " + resource.url);
+        }
+
+        loadResource();
+
+
+    </script>
+</apex:page>

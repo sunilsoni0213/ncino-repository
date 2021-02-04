@@ -1,0 +1,84 @@
+<apex:component >
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.4.6/angular.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.maintenanceChecklistController)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncino_ui_module)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncino_ui_message_handler)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0122,
+        'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'selectize/selectize.bootstrap3.css')}" />
+    <span ng-app="maintenanceChecklistApp" ng-controller="MaintenanceChecklistController">
+        <div class="force slds" ng-cloak="ng-cloak">
+            <!--<apex:composition template="nFORCE__Template_View_1_Column">
+                <apex:define name="column-content">-->
+                    <form class="slds-form--inline" id="formId">
+                        <div id="checklistEntry">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="name">Checklist Item Description</label>
+                                <div class="slds-form-element__control">
+                                    <input class="slds-input requiredInput" 
+                                        placeholder="Description" 
+                                        type="text" 
+                                        ng-model="newChecklistItem.{!$ObjectType.Task.fields.Subject.Name}"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="email">Duration (days)</label>
+                                <div class="slds-form-element__control">
+                                    <input class="slds-input requiredInput" 
+                                        type="number"
+                                        min="1"
+                                        ng-model="newChecklistItem.{!$ObjectType.Task.fields.LLC_BI__Estimated_Time__c.Name}"/>
+                                </div>
+                            </div>
+                            <button class="slds-button btn-default slds-button--icon-x-small" ng-click="addChecklistItem()" rerender="checklistEntry">
+                                <apex:image width="20" height="20" value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/icons/utility/add_60.png')}">
+                                </apex:image>
+                            </button>
+                        </div>
+                        <div class="row rowMargin col-md-12">
+                            <label>New Checklist Items</label>
+                            <table class="slds-table slds-table">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="nc in subjectList">
+                                    <tr>
+                                        <td>{{nc}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="slds-container--right slds-container--small">
+                                <button class="slds-button slds-button--brand" ng-click="addChecklist()">Save</button><br/>
+                            </div>
+                        </div>
+                        <hr />
+                        <label>Maintenance Checklist Tasks</label>
+                        <div class="row rowMargin col-md-12">
+                            <table class="slds-table slds-table">
+                                <thead>
+                                    <tr class="slds-text-heading--label">
+                                        <th>{!$ObjectType.Task.fields.Subject.Label}</th>
+                                        <th>{!$ObjectType.Task.fields.LLC_BI__Estimated_Time__c.Label}</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="ct in checklistItems">
+                                    <tr>
+                                        <td>{{ct['{!$ObjectType.Task.fields.Subject.Name}']}}</td>
+                                        <td>{{ct['{!$ObjectType.Task.fields.LLC_BI__Estimated_Time__c.Name}']}}</td>
+                                        <td>Edit</td>
+                                        <td>Delete</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                <!--</apex:define>
+            </apex:composition>-->
+        </div>
+    </span>
+</apex:component>

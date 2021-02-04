@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Lead Ind and Rev to Determine Assignment</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>peter.s@autorabitncinodemo.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Industry</field>
+                <operation>equals</operation>
+                <value>Agriculture</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.AnnualRevenue</field>
+                <operation>lessThan</operation>
+                <value>2000000</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>peter.s@autorabitncinodemo.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Industry</field>
+                <operation>equals</operation>
+                <value>Agriculture</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.AnnualRevenue</field>
+                <operation>lessThan</operation>
+                <value>2000000</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>peter.s@autorabitncinodemo.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Industry</field>
+                <operation>equals</operation>
+                <value>Food &amp; Beverage</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

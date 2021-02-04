@@ -1,0 +1,130 @@
+<!--Loan Path to provide visual indicator for the process of the Loan -->
+<!--Page docType Should Be Set To html-5.0 For Proper Rendering -->
+<apex:page standardController="LLC_BI__Loan__c" extensions="LoanGetPicklist" docType="html-5.0">
+<!-- *************** Lightning Design System Source ******************* -->
+<apex:stylesheet value="{!URLFOR($Resource.SLDS102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- The below style is an addition to LDS so a combo of 
+of the islost class with a subsequent imcomplete class results 
+in the beforehand (to incomplete) pseudo-element coloring red
+VERY IMPORTANT-->
+ <style type="text/css">
+        
+.nCinoProtoRob .slds-tabs--path  .slds-is-lost +.slds-is-incomplete:before  {
+      background-color: #C23934;
+      }
+
+    </style>
+
+    
+<!-- HTML Tag with xmlns attribute Important to Render SLDS Icons scoping cloass: nCinoProtoRob is the scoping class-->
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+    <div class="nCinoProtoRob">
+        <div class="slds-grid">
+            <div class="slds-tabs--path" role="application">
+<!--Loan Path Content UL-->
+                <ul class="slds-tabs--path__nav" role="tablist" id="TheLis">
+                    
+                </ul>
+            </div>
+         </div>
+    </div>   
+</html>  
+      
+  <script>
+  var j$ = jQuery.noConflict();
+//Object Picklist Values From Controler
+      var picArr = {!opts};
+      var picArrLen = picArr.length;
+//Current Record Picklist Value
+      var CurrentStg = '{!LLC_BI__Loan__c.LLC_BI__Stage__c}';
+      var RecType = '{!LLC_BI__Loan__c.RecordType}';
+      var RecTypeName = '{!LLC_BI__Loan__c.RecordType.Name}';
+//Checking The Current Picklist Value Against All The Picklist Values
+      var CurrentStgPos = picArr.indexOf(CurrentStg);
+      var theiLis = '';
+//Setup variables to calculate days to closing and for Closing past due in red     
+      var daysTillClose = '{!LLC_BI__Loan__c.Days_Until_Anticipated_Closing__c}';
+      var daysCount = '{!LLC_BI__Loan__c.Days_Until_Anticipated_Closing__c}';
+      var daysTillCloseConstant = '';
+      var closingPastDueColor = '';
+      var closingPastDueFontColor ='';
+      var closingOverdue = '';
+//If days till close is greater than zero
+//setup the string and fill the constant for comparison later, if not, clear it
+      if(daysTillClose > 0){
+          daysTillClose = ' ('+ daysTillClose + ' days)';
+          daysTillCloseConstant = daysTillClose;
+      } else {
+          daysTillClose = '';
+      }
+   
+//Creating the Loan Path Content based on the Record's Picklist Value 
+      for(var i=0; i<picArrLen; i++){
+//Setup mechanism for setting or clearing the days till closing or
+//shading Closing red for past due
+//or just clearing days till closing if on other stages or on closing or
+//past the closing stage. 
+//All this does is reset/set chevrons using the LDS CSS classes
+        if (picArr[i] != 'Closing') {
+              daysTillClose = '';
+              var closingPastDueColor = '';
+              var closingPastDueFontColor ='';
+              closingOverdue = 'slds-tabs--path__item slds-is-incomplete';
+          } 
+          else {
+              daysTillClose = daysTillCloseConstant;
+              closingOverdue = 'slds-tabs--path__item slds-is-incomplete';
+              if(daysCount < 0){
+                  closingOverdue = 'slds-tabs--path__item slds-is-lost';
+              }
+          }
+  
+// HTML Content For Completed Stages           
+          if(CurrentStgPos > i){
+               theiLis += '<li title="' + picArr[i]+daysTillClose +'"class="slds-tabs--path__item slds-is-current" style="background-color:#4bca81;" role="presentation">'+
+        '<a class="slds-tabs--path__link" id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">'+
+          '<span class="slds-tabs--path__stage">'+
+            '<svg aria-hidden="true" class="slds-icon slds-icon--x-small"><use xlink:href="{!$Resource.SLDS102}/assets/icons/utility-sprite/svg/symbols.svg#check"></use></svg></span>'+
+            '<span class="slds-tabs--path__title">'+picArr[i]+ daysTillClose +'</span></a></li>' 
+                
+          }
+// HTML Content For Current Stage  
+            else if(CurrentStgPos == i){
+// HTML Content If Current Stage is Last Stage             
+              if(i == picArrLen-1){
+                  theiLis += '<li title="' + picArr[i]+daysTillClose +'"class="slds-tabs--path__item slds-is-current" style="background-color:#4bca81;" role="presentation">'+
+        '<a class="slds-tabs--path__link" id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">'+
+          '<span class="slds-tabs--path__stage">'+
+            '<svg aria-hidden="true" class="slds-icon slds-icon--x-small"><use xlink:href="{!$Resource.SLDS102}/assets/icons/utility-sprite/svg/symbols.svg#check"></use></svg></span>'+
+            '<span class="slds-tabs--path__title">'+picArr[i]+daysTillClose +'</span></a></li>' 
+              } 
+// HTML Content If Current Stage is Not Last Stage
+              else{
+                  
+                  theiLis += '<li title="' + picArr[i]+daysTillClose +'"class="slds-tabs--path__item slds-is-current" role="presentation">'+
+        '<a class="slds-tabs--path__link" id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">'+
+          '<span class="slds-tabs--path__stage">'+
+            '<svg aria-hidden="true" class="slds-icon slds-icon--x-small"><use xlink:href="{!$Resource.SLDS102}/assets/icons/utility-sprite/svg/symbols.svg#check"></use></svg></span>'+
+            '<span class="slds-tabs--path__title">'+picArr[i]+daysTillClose + '</span></a></li>' 
+                  
+              }
+              
+          }
+// HTML Content For Next Stages
+             else if(CurrentStgPos < i){
+              
+          theiLis += '<li title="' + picArr[i]+daysTillClose +'"class="'+ closingOverdue +'" '+ closingPastDueColor +' role="presentation">'+
+        '<a class="slds-tabs--path__link" id="tabs-path-1" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="#void" aria-live="assertive">'+
+          '<span class="slds-tabs--path__stage">'+
+            '<svg aria-hidden="true" class="slds-icon slds-icon--x-small"><use xlink:href="{!$Resource.SLDS102}/assets/icons/utility-sprite/svg/symbols.svg#check"></use></svg></span>'+
+            '<span class="slds-tabs--path__title" ' +closingPastDueFontColor + '>'+picArr[i]+daysTillClose + '</span></a></li>' 
+            }
+      }
+      
+//Adding The Created Loan Path Content To Loan Path Body    
+   j$('#TheLis').html(theiLis);
+           
+  </script> 
+</apex:page>

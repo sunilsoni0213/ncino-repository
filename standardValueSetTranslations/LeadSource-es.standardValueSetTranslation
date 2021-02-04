@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Advertisement</masterLabel>
+        <translation>Anuncio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Broker</masterLabel>
+        <translation><!-- Broker --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Employee Referral</masterLabel>
+        <translation>Recomendación de empleados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>External Referral</masterLabel>
+        <translation>Referencia externa</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partner</masterLabel>
+        <translation>Compañero</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Public Relations</masterLabel>
+        <translation>Relaciones públicas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Seminar - Internal</masterLabel>
+        <translation>Seminario - Interna</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Seminar - Partner</masterLabel>
+        <translation>Seminario - Socio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Trade Show</masterLabel>
+        <translation>Feria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web</masterLabel>
+        <translation><!-- Web --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Word of mouth</masterLabel>
+        <translation>Boca a boca</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

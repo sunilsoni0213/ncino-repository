@@ -1,0 +1,29 @@
+<apex:component layout="none" controller="csaClaimSystemInstallerController">
+    <nFORCE:ncDataProvidersIncludes />
+    <nFORCE:ncUIIncludes />
+
+    <apex:includeScript value="{!URLFOR($Resource.csaClaimingSystemInstaller, 'application/App.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaClaimingSystemInstaller, 'application/Bootstrap.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaClaimingSystemInstaller, 'controllers/ClaimSystemInstallerController.controller.js')}"/>
+
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            angular.module('csaClaimingSystemInstaller').config(function (configProvider, labelProvider) {
+                configProvider.set({
+                    actions: {
+                        check: '{!$RemoteAction.csaClaimSystemInstallerController.checkInstall}',
+                        install: '{!$RemoteAction.csaClaimSystemInstallerController.install}',
+                        uninstall: '{!$RemoteAction.csaClaimSystemInstallerController.uninstall}'
+                    }
+                });
+                labelProvider.setLabels({
+                  success: {
+                      install: '{!$Label.CS_Install_Success}',
+                      uninstall: '{!$Label.CS_Uninstall_Success}'
+                  }
+                });
+            });
+        })();
+    </script>
+</apex:component>

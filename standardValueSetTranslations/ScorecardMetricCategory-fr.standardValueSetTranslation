@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Adoption</masterLabel>
+        <translation><!-- Adoption --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Field Enablement</masterLabel>
+        <translation>champ Enablement</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Marketing</masterLabel>
+        <translation>Commercialisation</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales</masterLabel>
+        <translation>Ventes</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Support</masterLabel>
+        <translation>Soutien</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

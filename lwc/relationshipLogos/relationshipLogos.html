@@ -1,0 +1,76 @@
+<template>
+    <div class="component">
+      <div class="slds-page-header">
+              <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                  <div class="slds-media">
+                    <div class="slds-media__figure">
+                      <span class="slds-icon_container slds-icon-standard-account" title="Customers">
+                              <lightning-icon icon-name="standard:account" alternative-text="Approved" 
+                              class="slds-icon slds-page-header__icon"></lightning-icon>
+                        <span class="slds-assistive-text">Customers</span>
+                      </span>
+                    </div>
+                    <div class="slds-media__body">
+                      <div class="slds-page-header__name">
+                        <div class="slds-page-header__name-title">
+                          <h1>
+                            <span class="slds-page-header__title slds-truncate" title="Customers">Customers</span>
+                          </h1>
+                        </div>
+                      </div>
+                      <p class="slds-page-header__name-meta"></p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+  
+      <div class="slds-p-around_small">
+          <div class="slds-grid slds-wrap">
+              <template for:each={customerLogos.data} for:item="customer">
+                  <div key={customer.Id} class="slds-col slds-size_1-of-6 slds-p-around_small" >
+                    <lightning-formatted-rich-text value={customer.Logo__c}  name={customer.Id} onclick={navigateTo}></lightning-formatted-rich-text><br/>
+                  </div>
+              </template>
+          </div>
+      </div>    
+  
+      <div class="slds-page-header">
+              <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                  <div class="slds-media">
+                    <div class="slds-media__figure">
+                      <span class="slds-icon_container slds-icon-standard-opportunity" title="Prospects">
+                              <lightning-icon icon-name="standard:opportunity" alternative-text="Approved" 
+                                  class="slds-icon slds-page-header__icon"></lightning-icon>
+                        <span class="slds-assistive-text">prospects</span>
+                      </span>
+                    </div>
+                    <div class="slds-media__body">
+                      <div class="slds-page-header__name">
+                        <div class="slds-page-header__name-title">
+                          <h1>
+                            <span class="slds-page-header__title slds-truncate" title="Prospects">Prospects</span>
+                          </h1>
+                        </div>
+                      </div>
+                      <p class="slds-page-header__name-meta"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+  
+      <div class="slds-p-around_small">
+              <div class="slds-grid slds-wrap">
+                  <template for:each={prospectLogos.data} for:item="prospect">
+                      <div key={prospect.Id} class="slds-col slds-size_1-of-6 slds-p-around_small">
+                          <lightning-formatted-rich-text value={prospect.Logo__c} name={prospect.Id} 
+                          onclick={navigateTo}></lightning-formatted-rich-text>
+                      </div>
+                  </template>
+              </div>
+      </div>    
+    </div>
+  </template>

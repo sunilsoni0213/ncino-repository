@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Agency</fullName>
+        <default>false</default>
+        <label>Agency</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Parent</fullName>
+        <default>false</default>
+        <label>Parent</label>
+        <reverseRole>Child</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Company</fullName>
+        <default>false</default>
+        <label>Company</label>
+        <reverseRole>Officer</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Child</fullName>
+        <default>false</default>
+        <label>Child</label>
+        <reverseRole>Parent</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Officer</fullName>
+        <default>false</default>
+        <label>Officer</label>
+        <reverseRole>Company</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Sibling</fullName>
+        <default>false</default>
+        <label>Sibling</label>
+        <reverseRole>Sibling</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Spouse / Partner</fullName>
+        <default>false</default>
+        <label>Spouse / Partner</label>
+        <reverseRole>Spouse / Partner</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Affiliated Company</fullName>
+        <default>false</default>
+        <label>Affiliated Company</label>
+        <reverseRole>Affiliated Company</reverseRole>
+    </standardValue>
+</StandardValueSet>

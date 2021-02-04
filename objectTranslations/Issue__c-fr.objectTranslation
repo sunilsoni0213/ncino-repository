@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Issue --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Issue --></value>
+    </caseValues>
+    <fields>
+        <label>Assigné à</label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel>Problèmes</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Catégorie</label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Configuration</masterLabel>
+            <translation><!-- Configuration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Validation</masterLabel>
+            <translation>La validation des données</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error Message</masterLabel>
+            <translation>Message d&apos;erreur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Question</masterLabel>
+            <translation>Question de l&apos;utilisateur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Suggestion/Feedback</masterLabel>
+            <translation>Suggestion d&apos;utilisateur / Commentaires</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Compteur de commentaire</label>
+        <name>Comment_Count__c</name>
+    </fields>
+    <fields>
+        <label>La description</label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label>Date d&apos;achèvement estimée</label>
+        <name>Estimated_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label>Priorité d&apos;émission</label>
+        <name>Issue_Priority__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation>Critique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation>Haute</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation>Faible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation>Moyen</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>demande Statut</label>
+        <name>Issue_Status__c</name>
+        <picklistValues>
+            <masterLabel>Business Decision Needed</masterLabel>
+            <translation>Décision d&apos;affaires Needed</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Resolved</masterLabel>
+            <translation>Fermé - Résolu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow-On Phase</masterLabel>
+            <translation>Suivi de la phase</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nouveau</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Retest</masterLabel>
+            <translation>Prêt pour retest</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Client</masterLabel>
+            <translation>Travailler - Client</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - nCino</masterLabel>
+            <translation>Travail - nCino</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Ouvert Âge d&apos;émission</label>
+        <name>Open_Issue_Age__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Issue Number --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

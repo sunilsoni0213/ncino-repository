@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Collateral Valuation --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Collateral Valuation --></value>
+    </caseValues>
+    <fieldSets>
+        <label>UI garantie - Histoire</label>
+        <name>collateral_UI_History</name>
+    </fieldSets>
+    <fields>
+        <label>date de l&apos;évaluation</label>
+        <name>Appraisal_Date__c</name>
+    </fields>
+    <fields>
+        <label>Procédé d&apos;évaluation</label>
+        <name>Assessment_Method__c</name>
+    </fields>
+    <fields>
+        <label>Bloc</label>
+        <name>Block__c</name>
+    </fields>
+    <fields>
+        <label>Ville</label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label>Valeur garantie</label>
+        <name>Collateral_Value__c</name>
+    </fields>
+    <fields>
+        <label>Collatéral</label>
+        <name>Collateral__c</name>
+        <relationshipLabel>Les évaluations collatérales</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Comté</label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <help>Pour Immobilier; basé sur la valeur garantie - Valeur des terres</help>
+        <label>Obligation d&apos;assurance</label>
+        <name>Insurance_Requirement__c</name>
+    </fields>
+    <fields>
+        <help>Si cela est bien immobilier, quelle est la valeur de la terre? Il est utilisé pour le calcul des besoins en assurance.</help>
+        <label>Ajustement à la valeur</label>
+        <name>Land_Value_If_Real_Estate__c</name>
+    </fields>
+    <fields>
+        <label>Mis en vente?</label>
+        <name>Listed_for_Sale__c</name>
+    </fields>
+    <fields>
+        <label>Remarques</label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label>Nombre d&apos;unités</label>
+        <name>Number_of_Units__c</name>
+    </fields>
+    <fields>
+        <label>Numéro de colis</label>
+        <name>Parcel_Number__c</name>
+    </fields>
+    <fields>
+        <label>Vente en cours?</label>
+        <name>Pending_Sale__c</name>
+    </fields>
+    <fields>
+        <label>Propriété d&apos;identification fiscale</label>
+        <name>Property_Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label>Type de propriété</label>
+        <name>Property_Type__c</name>
+    </fields>
+    <fields>
+        <label>Etat</label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label>Statut</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>As Complete</masterLabel>
+            <translation>COMPLETS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>As Is</masterLabel>
+            <translation>Comme si</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>As Stabalized</masterLabel>
+            <translation>comme soient stabilisées</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Adresse de rue</label>
+        <name>Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label>Vendeur</label>
+        <name>Vendor__c</name>
+        <relationshipLabel>Les évaluations collatérales</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Année de construction</label>
+        <name>Year_Built__c</name>
+    </fields>
+    <fields>
+        <label>Code postal</label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <layouts>
+        <layout>Collateral History Layout</layout>
+        <sections>
+            <label>Autres détails</label>
+            <section>Other Details</section>
+        </sections>
+        <sections>
+            <label>Informations sur la propriété</label>
+            <section>Property Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Collateral History Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+    <webLinks>
+        <label>Formulaire de génération</label>
+        <name>Form_Generation</name>
+    </webLinks>
+    <webLinks>
+        <label>générer des formulaires</label>
+        <name>Generate_Forms</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,143 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">   
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">   
+
+<head>
+  <title>Salesforce Lightning Design System Trailhead Module</title>
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS0121, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+</head>    
+
+<body>    
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">    
+
+    <!-- MASTHEAD -->
+    <p class="slds-text-heading--label slds-m-bottom--small">
+      nCino Features List
+    </p>
+    <!-- / MASTHEAD -->
+    
+    <!-- HEADER -->
+    <div class="slds-page-header" role="banner">
+      <div class="slds-grid">
+        <div class="slds-col slds-has-flexi-truncate">
+          <p class="slds-text-heading--label">Home</p>
+          <div class="slds-grid">
+            <div class="slds-grid slds-type-focus slds-no-space">
+              <h1 class="slds-text-heading--medium slds-truncate" title="My Leads (truncates)">nCino Features</h1>
+              <button class="slds-button slds-button--icon-bare slds-shrink-none slds-align-middle slds-m-left--x-small">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">View More</span>
+              </button>
+            </div>
+            <!--<button class="slds-button slds-button--icon-more slds-shrink-none slds-m-left--large" aria-haspopup="true">
+              <svg aria-hidden="true" class="slds-button__icon">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+              </svg>
+              <span class="slds-assistive-text">Settings</span>
+              <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+              </svg>
+            </button>
+            <button class="slds-button slds-button--brand slds-button-space-left slds-m-right--medium slds-shrink-none slds-align-middle slds-hide" aria-hidden="true">Save</button>-->
+          </div>
+        </div>
+        <!--<div class="slds-col slds-no-flex slds-align-bottom">
+          <div class="slds-grid">
+            <div class="slds-button-space-left">
+              <button class="slds-button slds-button--icon-more" aria-haspopup="true">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"></use>
+                </svg>
+                <span class="slds-assistive-text">Table</span>
+                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="slds-button-group slds-button-space-left" role="group">
+              <button class="slds-button slds-button--icon-border slds-not-selected">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chart"></use>
+                </svg>
+                <span class="slds-assistive-text">Chart</span>
+              </button>
+              <button class="slds-button slds-button--icon-border slds-not-selected">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+                </svg>
+                <span class="slds-assistive-text">Filter List</span>
+              </button>
+              <button class="slds-button slds-button--icon-more">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#sort"></use>
+                </svg>
+                <span class="slds-assistive-text">Sort</span>
+                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--x-small">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">More</span>
+              </button>
+            </div>
+            <div class="slds-button-group" role="group">
+              <button class="slds-button slds-button--neutral">New Lead</button>
+              <div class="slds-button--last">
+                <button class="slds-button slds-button--icon-border-filled">
+                  <svg aria-hidden="true" class="slds-button__icon">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">More Actions</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </div>
+      <p class="slds-text-body--small slds-m-top--x-small">10 items • Sorted by Name</p>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp">    
+
+      <!-- SECTION - FEATURES -->
+      <button class="slds-button slds-button--neutral">Create
+  <svg aria-hidden="true" class="slds-button__icon slds-button__icon--right">
+    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+  </svg>
+</button>
+      <div class="slds-media slds-tile slds-hint-parent">
+          <div class="slds-media__figure">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-groups">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#groups"></use>
+            </svg>
+          </div>
+          <div class="slds-media__body">
+            <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+              <p class="slds-tile__title slds-truncate"><a href="#">Salesforce UX</a></p>
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small slds-shrink-none">
+                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">Show More</span>
+              </button>
+            </div>
+            <div class="slds-tile__detail slds-text-body--small">
+              <p class="slds-truncate">26 Members</p>
+            </div>
+          </div>
+        </div>
+      <!-- / END SECTION - FEATURES -->    
+
+    </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->    
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->    
+
+</body>
+</html>
+</apex:page>

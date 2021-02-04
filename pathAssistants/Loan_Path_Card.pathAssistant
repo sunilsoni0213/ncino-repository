@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>LLC_BI__Loan__c</entityName>
+    <fieldName>LLC_BI__Stage__c</fieldName>
+    <masterLabel>Loan Path - Card</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;OBJECTIVES&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Identify Approvers and Route and Request for Adjudication&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;RELATIONSHIP MANAGER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Nothing this stage&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;UNDERWRITER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Identify Approvers&lt;/li&gt;&lt;li&gt;​Route Request for Approval &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;CLOSER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Nothing this stage &lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Approval / Loan Committee</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;OBJECTIVES&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Complete Post-Close and Complete Booking Activities&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;RELATIONSHIP MANAGER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Nothing this stage&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;UNDERWRITER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Satisfy Any Outstanding Conditions Required to Book &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;CLOSER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Complete Post-Close Activities &lt;/li&gt;&lt;li&gt;Complete Booking Activities &lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Booked</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;OBJECTIVES&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Initiate Request and Obtain Internal and Client Agreement to Proceed&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;RELATIONSHIP MANAGER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;On-Board Client&lt;/li&gt;&lt;li&gt;Perform KYC / Other Compliance Checks&lt;/li&gt;&lt;li&gt;​Identify Clients and Products Structure &lt;/li&gt;&lt;li&gt;Collect Required Documents for Underwriting &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;UNDERWRITER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Perform Preliminary Spreads &lt;/li&gt;&lt;li&gt;Perform Preliminary Risk Grade &lt;/li&gt;&lt;li&gt;Pull Credit Bureau (if applicable) &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;CLOSER&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Nothing this stage &lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Qualification / Application</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Loan_Card</recordTypeName>
+</PathAssistant>

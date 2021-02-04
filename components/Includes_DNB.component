@@ -1,0 +1,13 @@
+<apex:component >
+    <!-- jQuery -->
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'jquery/js/jquery.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'jquery.custom.js')}" />
+
+    <!-- Bootstrap -->
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'bootstrap/js/bootstrap.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'bootstrap/css/bootstrap.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'bootstrap/css/bootstrap-responsive.css')}" />
+
+    <!-- Custom CSS -->
+    <apex:stylesheet value="{!$Resource.custom_css_dnb}" /> 
+</apex:component>

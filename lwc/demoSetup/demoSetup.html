@@ -1,0 +1,83 @@
+<template>
+    <div class="container">
+        <div class="slds-grid demo-setup-grid">
+
+            <!-- Left Panel -->
+            <div class="slds-col slds-size_1-of-3 left-panel">
+                <div class="slds-p-around_x-large fixed-section">
+                    <!-- Heading -->
+                    <div class="left-panel-heading slds-text-align_center">
+                        <span>{heading}</span>
+                    </div>
+                    <!-- Sub-heading -->
+                    <div class="slds-p-around_large slds-m-top_small slds-text-align_center slds-text-body_regular">
+                        <span class="light-font-weight">
+                            {subHeading}
+                        </span>
+                    </div>
+                    <!-- Step count -->
+                    <div class="slds-text-align_center step-count">
+                        <span>
+                            {stepsComplete}
+                        </span>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="slds-m-top_large">
+                        <div 
+                            class="slds-progress-bar" 
+                            aria-valuemin="0" 
+                            aria-valuemax="100" 
+                            aria-valuenow={percentComplete}
+                            onclick={fireConfettiCannons}
+                            role="progressbar"
+                        >
+                            <span class="slds-progress-bar__value" style={percentWidth}>
+                                <span class="slds-assistive-text">{percentProgress}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="slds-col slds-size_2-of-3 slds-p-around_xx-large right-panel">
+                <div style="display: flex;">
+                    <div class="slds-progress slds-progress_vertical">
+                        <ol class="slds-progress__list">
+                            <!-- Each step card -->
+                            <template iterator:step={steps}>
+                                <c-setup-step
+                                    key={step.value.stepNumber}
+                                    step-number={step.value.stepNumber}
+                                    active={step.value.active}
+                                    step-type={step.value.stepType}
+                                    step-title={step.value.stepTitle}
+                                    step-status={step.value.stepStatus}
+                                    step-description={step.value.stepDescription}
+                                    step-hyperlink={step.value.stepHyperlink}
+                                    step-depends-on={step.value.stepDependsOn}
+                                    error-message={step.value.errorMessage}
+                                    modal-path={step.value.modalPath}
+                                    automation-class={step.value.automationClass}
+                                    available={step.value.available}
+                                    first-step={step.first}
+                                    last-step={step.last}
+                                    onstatechange={handleStateChange}>
+                                </c-setup-step>
+                            </template>
+                        </ol>
+                    </div>
+                    <div class="refresh-button">
+                        <lightning-button-icon
+                            icon-name="utility:refresh"  
+                            alternative-text="Refresh"
+                            variant="border-filled"
+                            onclick={handleRefresh}
+                            title="Refresh">
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

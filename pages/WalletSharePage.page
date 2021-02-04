@@ -1,0 +1,44 @@
+<apex:page standardController="Account" extensions="WalletShareController" showHeader="false" sidebar="false">
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap3/js/bootstrap.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap3/css/bootstrap-force.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bootstrap3.custom.css')}" />
+
+    <div class="force">
+        <div class="col-sm-12">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xs-12">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-xs-12 content-heading">
+                              <div class="visible-md visible-lg pull-left content-heading-left" style="color: #fff;font-size: 14px;">WALLET SHARE</div>
+                              <div class="visible-md visible-lg pull-right content-heading-right"></div>
+                              <div class="visible-xs visible-sm pull-left content-heading-left" style="color: #fff;font-size: 14px;">WALLET SHARE</div>
+                              <div class="visible-xs visible-sm pull-right content-heading-right"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <apex:composition template="nFORCE__Template_View_1_Column">
+                <apex:define name="column-content">
+                    <div class="col-md-6">
+                        <analytics:reportChart reportId="{!report1}"
+                            filter="{column:'FK_ACC_ID', operator:'equals', value:'{!accountId}'}"
+                            cacheResults="false"
+                            size="small">
+                        </analytics:reportChart>
+                    </div>
+                    <div class="col-md-6">
+                        <analytics:reportChart reportId="{!report2}"
+                            filter="{column:'FK_ACC_ID', operator:'equals', value:'{!accountId}'}"
+                            cacheResults="false"
+                            size="small">
+                        </analytics:reportChart>
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </div>
+    </div>
+</apex:page>

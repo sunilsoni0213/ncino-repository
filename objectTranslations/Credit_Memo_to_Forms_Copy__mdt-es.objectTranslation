@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Credit Memo to Forms Copy --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Credit Memo to Forms Copy --></value>
+    </caseValues>
+    <fields>
+        <label>Roles Viewer</label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label>Punto y coma lista de funciones que se l</label>
+        <name>Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <label>OCR es Disponible</label>
+        <name>Object_API_Name__c</name>
+    </fields>
+    <fields>
+        <label>OCR Document Type</label>
+        <name>Screen_Section_Name__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

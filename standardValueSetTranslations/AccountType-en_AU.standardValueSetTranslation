@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Charity</masterLabel>
+        <translation><!-- Charity --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Corporation</masterLabel>
+        <translation>Pty</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Estate</masterLabel>
+        <translation><!-- Estate --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Financial Institution</masterLabel>
+        <translation><!-- Financial Institution --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Household</masterLabel>
+        <translation><!-- Household --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Individual</masterLabel>
+        <translation><!-- Individual --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Institutional Investor</masterLabel>
+        <translation><!-- Institutional Investor --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Limited Liability Company</masterLabel>
+        <translation>Pty. Ltd</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Limited Partnership</masterLabel>
+        <translation><!-- Limited Partnership --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Municipality</masterLabel>
+        <translation>Government Body</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partnership</masterLabel>
+        <translation>Registered Co-operative</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sole Proprietorship</masterLabel>
+        <translation>Sole Trader</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Trust</masterLabel>
+        <translation><!-- Trust --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

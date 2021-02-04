@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects</value>
+    </caseValues>
+    <fields>
+        <help><!-- Total Number of Configuration Tasks Completed --></help>
+        <label><!-- Configuration Tasks Completed --></label>
+        <name>Configuration_Tasks_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Description --></label>
+        <name>Project_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a formula field that summarizes the total days devoted to configuration. --></help>
+        <label><!-- Total Configuration Days --></label>
+        <name>Total_Configuration_Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a formula field that summarizes the total number of hours devoted to configuration. --></help>
+        <label><!-- Total Configuration Hours --></label>
+        <name>Total_Configuration_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a formula field that summarizes the total days devoted to validation --></help>
+        <label><!-- Total Validation Days --></label>
+        <name>Total_Validation_Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a formula field that summarizes the total number of hours devoted to Validation Tests --></help>
+        <label><!-- Total Validation Hours --></label>
+        <name>Total_Validation_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Number of Validation Tests Completed --></help>
+        <label><!-- Validation Tests Completed --></label>
+        <name>Validation_Tests_Completed__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,105 @@
+<messaging:emailTemplate subject="Welcome" recipientType="User" relatedToType="Contact">
+    <messaging:htmlEmailBody >
+        <html>
+            <body>
+                <table style="width: 100%;">
+                    <tr>
+                        <td align="center">
+                            <table>
+                                <tr>
+                                    <td align="center">
+                                        <apex:image url="{!$Resource.nSightFinancial}"
+                                            style="height: 70px; max-height: 70px;"
+                                        />
+                                      </td>
+                                </tr>
+                            </table>
+                            <div style="width: 400px; font-family: 'Salesforce Sans', Arial, sans-serif; text-align: left;">
+                                <div style="background-color: #f2f5f8; color: #162c52; padding: 20px 30px 20px 30px;">
+                                    <h3>
+                                        <strong style="font-weight: 300;">
+                                            Hi,
+                                        </strong>
+                                    </h3>
+                                    <p>
+                                        It's time to log in to your customer experience.
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td align="center">
+                                                <a style="width: 100%; background-color: #1EBFC1; color: #FFFFFF; padding-left: 16px; padding-right: 16px; border: 1px solid #1EBFC1; border-radius: 4px; line-height: 34px; display: inline-block; text-decoration: none;"
+                                                    href="{!$Network.NetworkUrlForUserEmails}">
+                                                    Log In to Get Started
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p>
+                                        If you have trouble with the button, use this link:
+                                    </p>
+                                    <p>
+                                        <a href="{!$Network.NetworkUrlForUserEmails}">
+                                                 {!$Network.NetworkUrlForUserEmails}
+                                        </a>
+                                    </p>
+                                    <p>
+                                        If you have any questions or concerns, give us a call at {!$Organization.Phone}.
+                                    </p>
+                                    <p>
+                                        Thanks!<br />
+                                        The Team at {!$Organization.Name}
+                                    </p>
+                                </div>
+                            </div>
+                            <table style="width: 400px; background-color: #dce1eb; color: #5e7190; padding: 20px; font-size: 8pt;">
+                                <tr>
+                                    <td>
+                                              {!$Organization.Name}
+                                    </td>
+                                    <td align="right">
+                                              {!$Label.Email_Reply}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                              {!$Organization.Street}
+                                    </td>
+                                    <td align="right">
+                                              {!$Organization.Phone}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    {!$Organization.City}, {!$Organization.State} {!$Organization.PostalCode}
+                                    </td>
+                                    <td align="right">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+
+    <messaging:plainTextEmailBody >
+Hi,
+
+It's time to log in to {!$Organization.Name}.
+
+{!$Network.NetworkUrlForUserEmails}
+
+If you have any questions or concerns, give us a call at {!$Organization.Phone}.
+
+Thanks!
+The Team at {!$Organization.Name}
+
+{!$Organization.Name}
+{!$Organization.Street}
+{!$Organization.City}, {!$Organization.State} {!$Organization.PostalCode}
+
+{!$Organization.Phone}
+    </messaging:plainTextEmailBody>
+</messaging:emailTemplate>

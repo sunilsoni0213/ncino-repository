@@ -1,0 +1,59 @@
+<apex:component layout="none" controller="csaLoanClaimSystemController">
+    <nFORCE:Includes enableFontAwesome="true" enableLifeCycleApp="true"/>
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+
+    <nFORCE:ncDataProvidersIncludes />
+    <nFORCE:ncUIIncludes />
+    <nFORCE:Include_Chosen />
+    <nFORCE:Include_Design_System flavor="vf"/>
+    <nFORCE:Include_Navigator />
+    <c:csaClaimUtilityIncludes />
+    <nFORCE:ncModal />
+
+    <apex:stylesheet value="{!URLFOR($Resource.csaLoanClaimSystem, 'assets/css/Styles.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaLoanClaimSystem, 'application/App.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaLoanClaimSystem, 'application/Bootstrap.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.csaLoanClaimSystem, 'controllers/LoanClaimSystem.controller.js')}"/>
+
+    <script type="text/javascript">
+    (function () {
+        'use strict';
+        angular.module('csaLoanClaimSystem').config(function (configProvider, labelProvider) {
+            configProvider.set({
+                images: {
+                    moneyBagImage: '{!URLFOR($Resource.nFORCE__design_system, "assets/icons/custom/custom17_60.png")}'
+                },
+                actions: {
+                    getUsers: '{!$RemoteAction.csaLoanClaimSystemController.getUsers}',
+                    getRoles: '{!$RemoteAction.csaLoanClaimSystemController.getRoles}',
+                    getLoans: '{!$RemoteAction.csaLoanClaimSystemController.getLoans}',
+                    claimLoans: '{!$RemoteAction.csaLoanClaimSystemController.claimLoans}',
+                    getHeaders: '{!$RemoteAction.csaLoanClaimSystemController.getHeaders}',
+                    getFieldValueName: '{!$RemoteAction.csaLoanClaimSystemController.getFieldValueName}'
+                },
+                parameters: {
+                    currentUser: '{!$User.Id}',
+                    returnURL: '{!$CurrentPage.parameters.retURL}'
+                }
+            });
+            labelProvider.setLabels({
+                claim_loan_title: '{!$Label.LCS_Title}',
+                claim_loan_subtitle: '{!$Label.LCS_SubTitle}',
+                select_user_role: '{!$Label.CS_Select_User_Role}',
+                select_user: '{!$Label.CS_Select_User}',
+                select_role: '{!$Label.CS_Select_Role}',
+                selected_Loans: '{!$Label.LCS_Selected_Loans}',
+                cancel: '{!$Label.CS_Cancel}',
+                claim: '{!$Label.CS_Claim}',
+                select_a_role: '{!$Label.CS_Select_a_Role}',
+                select_a_user: '{!$Label.CS_Select_a_User}',
+                loading_message: '{!$Label.LCS_Loading_Message}',
+                redirectMessage: '{!$Label.LCS_Redirect_Message}',
+                queueMissMatchMessage: '{!$Label.LCS_Queue_Miss_Match}',
+                noRowsFound: '{!$Label.LCS_No_Rows_Found}',
+                noLoansError: '{!$Label.LCS_No_Loans_Error}'
+            });
+        });
+    })();
+    </script>
+</apex:component>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>commentaire Aperçu</label>
+        <name>Comment_Preview__c</name>
+    </fields>
+    <fields>
+        <label>date d&apos;achèvement</label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label>Groupe d&apos;affectation</label>
+        <name>LLC_BI__Assignment_Group__c</name>
+    </fields>
+    <fields>
+        <help>Entrez le temps estimé pour terminer une tâche</help>
+        <label>Temps estimé</label>
+        <name>LLC_BI__Estimated_Time__c</name>
+    </fields>
+    <fields>
+        <label>Groupe d&apos;affectation</label>
+        <name>LLC_BI__Group__c</name>
+        <relationshipLabel>Activités</relationshipLabel>
+    </fields>
+    <fields>
+        <label>entretien Catégorie</label>
+        <name>LLC_BI__Maintenance_Type__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation>Ajouter</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change</masterLabel>
+            <translation>Changement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove</masterLabel>
+            <translation>Retirer</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Tâche parent</label>
+        <name>LLC_BI__Parent_Task__c</name>
+    </fields>
+    <fields>
+        <label>Type d&apos;entretien</label>
+        <name>LLC_BI__SubType__c</name>
+        <picklistValues>
+            <masterLabel>Add Authorized User</masterLabel>
+            <translation>Ajouter utilisateur autorisé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Address Change</masterLabel>
+            <translation>Changement d&apos;adresse</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Account Update</masterLabel>
+            <translation>Mise à jour du compte de facturation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Address</masterLabel>
+            <translation>Changement d&apos;adresse</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Close Out Service</masterLabel>
+            <translation>Fermez service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Limit Change</masterLabel>
+            <translation>Changement de limite de crédit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Earnings Credit Adjustment</masterLabel>
+            <translation>Ajustement des bénéfices de crédit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Security Token Request</masterLabel>
+            <translation>Demander un nouveau jeton de sécurité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order New Equipment</masterLabel>
+            <translation>Nouvel Ordre Équipement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary Credit Limit Increase</masterLabel>
+            <translation>Augmenter la limite de crédit temporaire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>est-modèle</label>
+        <name>LLC_BI__isTemplate__c</name>
+    </fields>
+</CustomObjectTranslation>

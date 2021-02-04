@@ -1,0 +1,13 @@
+<apex:component layout="none" allowdml="true" controller="CSA_OverviewReportUpdateController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Overview_Resource, 'Javascript.js')}" />
+
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <div class="force messages success" id="successMessage" />
+            <div class="force messages error" id="errorMessage" />
+            <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Overview_Update_Report_Links}" action="{!overviewUpdate}"
+                                rerender="theform" status="loading" />
+        </apex:form>
+    </div>
+</apex:component>

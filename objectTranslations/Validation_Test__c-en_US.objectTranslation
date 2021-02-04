@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Validation Test</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Validation Tests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Result --></label>
+        <name>Actual_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <lookupFilter>
+            <errorMessage><!-- Validation Test must be assigned to an Active User --></errorMessage>
+        </lookupFilter>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Validation Tests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Browser --></label>
+        <name>Browser__c</name>
+        <picklistValues>
+            <masterLabel>Chrome</masterLabel>
+            <translation><!-- Chrome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firefox</masterLabel>
+            <translation><!-- Firefox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 10</masterLabel>
+            <translation><!-- Internet Explorer 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 11</masterLabel>
+            <translation><!-- Internet Explorer 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 8</masterLabel>
+            <translation><!-- Internet Explorer 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 9</masterLabel>
+            <translation><!-- Internet Explorer 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safari</masterLabel>
+            <translation><!-- Safari --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Action --></label>
+        <name>Business_Action__c</name>
+    </fields>
+    <fields>
+        <help><!-- This validation test should be completed by the date listed --></help>
+        <label><!-- Complete By Date --></label>
+        <name>Complete_By_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Completed --></label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Result --></label>
+        <name>Expected_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours to Complete --></label>
+        <name>Hours_to_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percent Complete --></label>
+        <name>Percent_Complete__c</name>
+        <picklistValues>
+            <masterLabel>10 %</masterLabel>
+            <translation><!-- 10 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100 %</masterLabel>
+            <translation><!-- 100 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 %</masterLabel>
+            <translation><!-- 20 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 %</masterLabel>
+            <translation><!-- 30 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40 %</masterLabel>
+            <translation><!-- 40 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50 %</masterLabel>
+            <translation><!-- 50 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 %</masterLabel>
+            <translation><!-- 60 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70 %</masterLabel>
+            <translation><!-- 70 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80 %</masterLabel>
+            <translation><!-- 80 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 %</masterLabel>
+            <translation><!-- 90 % --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Validation Tests --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field should be checked when the Validation Test has been completely satisfied --></help>
+        <label><!-- Validation Complete --></label>
+        <name>Validation_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validation Status --></label>
+        <name>Validation_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation><!-- Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Client Action</masterLabel>
+            <translation><!-- Pending Client Action --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working</masterLabel>
+            <translation><!-- Working --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Validation Test Description --></label>
+        <name>Validation_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- lookupKey --></label>
+        <name>lookupKey__c</name>
+    </fields>
+    <layouts>
+        <layout>Validatin Test Layout</layout>
+        <sections>
+            <label><!-- Test Case Details --></label>
+            <section>Test Case Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must enter the approximate amount of time it took to complete this test before saving the record as complete --></errorMessage>
+        <name>Hours_to_Complete_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If a Validation Test is in the &apos;Working&apos; Status, please assign a completion percentage --></errorMessage>
+        <name>Working_Requires_Percent_Complete</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,164 @@
+<template>
+    <div class={firstOrLastStep}>
+        <li class={stepStyle}>
+            <!-- Progress indicator -->
+            <button class="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon">
+                <div class="slds-icon-utility-record slds-icon_container">
+                    <svg class={svgStyle}>
+                        <use xlink:href={svgPath}></use>
+                    </svg>
+                </div>
+            </button>
+            <!-- Step card -->
+            <div class="slds-progress__item_content slds-grid slds-grid_align-spread">
+                <article class="slds-card slds-is-relative">
+
+                    <template if:true={stepIsRunning}>
+                        <div class="slds-spinner_container step-spinner">
+                            <div role="status" class="slds-spinner slds-spinner_small">
+                                <span class="slds-assistive-text">{labels.running}</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                            </div>
+                            <div class="step-spinner-text">{labels.running}</div>
+                        </div>
+                    </template>
+
+                    <div class="slds-card__header slds-p-top_medium slds-p-left_medium slds-p-right_medium slds-m-bottom_medium slds-grid">
+                        <header class="slds-media card-body-padding slds-has-flexi-truncate">
+                            <!-- Left icon -->
+                            <div class="slds-media__figure slds-text-align_center" style="width: 44px;">
+                                <lightning-icon 
+                                    icon-name={stepIconName} 
+                                    size="medium"
+                                    class={stepIconStyle}>
+                                </lightning-icon>
+                                <div class="icon-sub-heading">{stepIconText}</div>
+                            </div>
+                            <!-- Steps text -->
+                            <div class={stepBodyStyle}>
+                                <div class="step-title slds-m-bottom_xx-small">
+                                    {stepTitle}
+                                </div>
+                                <div>
+                                    <div class="step-description">{stepDescription}</div>
+                                    <!-- Error toast -->
+                                    <template if:true={hasError}>
+                                        <div class="slds-notify slds-notify_alert slds-theme_error step-error slds-m-top_small">
+                                            <div>
+                                                {errorMessageForTemplate}
+                                                <template if:false={showMoreError}>
+                                                    <div>
+                                                        <a onclick={appendErrorMsg}>{labels.showErrorDetails}</a>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                            <!-- Step button -->
+                            <div class="step-button-column">
+                                <div class="slds-text-align_right">
+                                    <!-- Hyperlink button -->
+                                    <template if:true={hasHyperlink}>
+                                        <lightning-button-icon 
+                                            icon-name="utility:new_window"
+                                            size="medium"
+                                            variant="bare"
+                                            alternative-text="View More"
+                                            disabled={isButtonDisabled}
+                                            onclick={handleHyperLinkClick}>
+                                        </lightning-button-icon>
+                                    </template>
+                                </div>
+                                
+                                <!-- Run button -->
+                                <div class="step-button">
+                                    <template if:false={hasError}>
+                                        <lightning-button 
+                                            label={actionBtnLabel}
+                                            title={actionBtnLabel}
+                                            icon-name={actionBtnIcon}
+                                            variant={actionBtnVariant}
+                                            onclick={handleStepButtonClick}
+                                            disabled={isButtonDisabled}>
+                                        </lightning-button>
+                                    </template>
+
+                                    <!-- Error state -->
+                                    <template if:true={hasError}>
+                                        <lightning-button-group>
+                                            <lightning-button
+                                                label={actionMenuBtnLabel}
+                                                icon-name={actionMenuBtnIcon}
+                                                variant={actionBtnVariant}
+                                                onclick={handleErrorStateStepButtonClick}>
+                                            </lightning-button>
+                                            <lightning-button-menu 
+                                                alternative-text="Show menu"
+                                                menu-alignment="right"
+                                            >
+                                                <lightning-menu-item 
+                                                    label={labels.skip}
+                                                    onclick={handleSkipClick}>
+                                                </lightning-menu-item>
+                                            </lightning-button-menu>
+                                        </lightning-button-group>
+                                    </template>
+                                </div>
+
+                                <!-- Manual confirm prompt -->
+                                <template if:true={showPrompt}>
+                                    <section 
+                                        role="alertdialog"
+                                        tabindex="0"
+                                        class="slds-modal slds-fade-in-open slds-modal_prompt" 
+                                    >
+                                        <div class="slds-modal__container">
+                                            <header class="slds-modal__header slds-theme_error">
+                                                <h2 class="slds-text-heading_medium">{labels.attention}</h2>
+                                            </header>
+                                            <div class="slds-modal__content slds-p-around_medium">
+                                                <p>{labels.manualConfirm}</p>
+                                            </div>
+                                            <footer class="slds-modal__footer slds-theme_default">
+                                                <button 
+                                                    class="slds-button slds-button_neutral" 
+                                                    onclick={handlePromptAccept}
+                                                >
+                                                    {labels.accept}
+                                                </button>
+                                            </footer>
+                                        </div>
+                                    </section>
+                                    <div class="slds-backdrop slds-backdrop_open"></div>
+                                </template>
+                            </div>
+                        </header>
+                    </div>
+                </article>
+            </div>
+        </li>
+    </div>
+
+    <c-modal class="oauth-modal">
+        {labels.modalBody}
+        <div slot="footer">
+            <div class="flex-center">
+                <lightning-button
+                    label="OK"
+                    variant="neutral"
+                    onclick={handleModalOkClick}
+                ></lightning-button>
+                <div class="slds-m-right_small"></div>
+                <lightning-button
+                    label="Error"
+                    variant="destructive-text"
+                    onclick={handleModalErrorClick}
+                ></lightning-button>
+            </div>
+        </div>
+    </c-modal>
+    
+</template>

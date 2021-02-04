@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Overview Properties</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Overview Properties</value>
+    </caseValues>
+    <fields>
+        <label><!-- Category Name --></label>
+        <name>Category_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Active --></label>
+        <name>Is_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>Report_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Name --></label>
+        <name>Report_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage / Status / Product Line Name --></label>
+        <name>Stage_Status_Product_Line_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

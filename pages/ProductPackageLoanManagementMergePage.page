@@ -1,0 +1,84 @@
+<!-- PAGE 1 -->
+<apex:page controller="ProductPackageLoanManagementController" tabStyle="LLC_BI__Loan__c">
+
+    <apex:sectionHeader title="Step 1 of 3" subtitle="{!productPackageName}" />
+    <!--  <LLC_BI:Includes includeCss="true"/> -->
+    <apex:pageMessages />
+
+    <apex:form >
+
+        <!-- Main conversion pageblock -->
+        <apex:pageBlock id="pageBlock" title="Loan Page Block Title">
+            <!--
+            <apex:pageBlockSection columns="1"  id="loansPageBlock" title="Page Block Section Title">
+                <apex:pageBlockTable value="{!loanList}" var="l">
+                    <apex:column headerValue="Loan Name" id="loanName">
+                        <apex:inputField value="{!l.Name}" required="true"/>
+                    </apex:column>
+                    <apex:column headerValue="Product Line" id="productLine">
+                        <apex:inputField value="{!l.LLC_BI__Product_Line__c}" required="true"/>
+                    </apex:column>
+                    <apex:column headerValue="Product Type" id="productType">
+                        <apex:inputField value="{!l.LLC_BI__Product_Type__c}" required="true"/>
+                    </apex:column>
+                    <apex:column headerValue="Product" id="product">
+                        <apex:inputField value="{!l.LLC_BI__Product__c}" required="true"/>
+                    </apex:column>
+                    <apex:column headerValue="Amount" id="amount">
+                        <apex:inputField value="{!l.LLC_BI__Amount__c}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+                <apex:panelGrid columns="2" id="addRemoveGrid"> 
+                    <apex:commandButton value="Add Loan" 
+                        action="{!addLoanRow}" 
+                        reRender="loansPageBlock"/> 
+                    <apex:commandButton value="Remove Loan" 
+                        action="{!removeLastLoanRow}" 
+                        reRender="loansPageBlock"/>
+                </apex:panelGrid>
+                <apex:outputPanel id="entitiesDetailPanel">
+                    <apex:outputPanel rendered="{!loanCheckedFlag}" id="entitiesPanel">
+                        <apex:pageBlockSection columns="1"  id="entitiesPageBlock" title="Entities" rendered="{!loanCheckedFlag}">
+                            <apex:pageBlockTable value="{!entList}" var="e">
+                                <apex:column headerValue="Select">
+                                    <apex:inputCheckbox value="{!entityCheckedFlag}">
+                                        <apex:actionSupport event="onchange" action="{!loanIsSelected}"/>
+                                    </apex:inputCheckbox>
+                                </apex:column>
+                                <apex:column headerValue="Relationship" id="relationshipName">
+                                    <apex:inputField value="{!e.LLC_BI__Account__c}"/>
+                                </apex:column>
+                                <apex:column headerValue="Borrower Type" id="borrowerType">
+                                    <apex:inputField value="{!e.LLC_BI__Borrower_Type__c}"/>
+                                </apex:column>
+                                <apex:column headerValue="Contingent Type" id="contingentType">
+                                    <apex:inputField value="{!e.LLC_BI__Contingent_Type__c}"/>
+                                </apex:column>
+                                <apex:column headerValue="Ownership %" id="ownership">
+                                    <apex:inputField value="{!e.LLC_BI__Ownership__c}"/>
+                                </apex:column>
+                            </apex:pageBlockTable>
+                            <apex:panelGrid columns="2" id="addRemoveGrid"> 
+                                <apex:commandButton value="Add Entity" 
+                                    action="{!addEntityRow}" 
+                                    reRender="entitiesPageBlock"/> 
+                                <apex:commandButton value="Remove Entity" 
+                                    action="{!removeLastEntityRow}" 
+                                    reRender="entitiesPageBlock"/>
+                            </apex:panelGrid> 
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>
+                </apex:outputPanel> 
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!step2}" 
+                value="Next"/> 
+            -
+            <a href="/{!objId}">Cancel</a>
+            -->
+        </apex:pageBlock>   
+    
+        <!-- <apex:pageBlock title="{!$Label.COTL_Conversion_Details}" rendered="{!IF(productLine==null||productType==null||product==null,true,false)}">
+            <apex:outputLink value="/{!objId}">{!$Label.COTL_Click_To_Go_Back}</apex:outputLink>
+        </apex:pageBlock>   --> 
+    </apex:form>
+</apex:page>

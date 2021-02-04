@@ -1,0 +1,8 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="VF_LifecycleController" >
+    
+    Current Stage: {!currentStage}
+    <apex:repeat value="{!Lifecycle}" var="l">
+        l.StageName <img src="{!l.url}" /><br />
+    </apex:repeat>
+    
+</apex:page>

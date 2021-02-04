@@ -1,0 +1,6 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.ScreenController" showHeader="false" standardStylesheets="false">
+    <nFORCE:ncDataSnapshot comparableSectionId="{!screenSections[0].Id}"
+        contextId="{!contextObjectId}"
+        guid="my-guid"
+    />
+</apex:page>

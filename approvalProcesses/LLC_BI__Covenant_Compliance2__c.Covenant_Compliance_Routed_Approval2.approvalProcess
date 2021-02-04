@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>LLC_BI__Evaluation_Date__c</field>
+        <field>LLC_BI__Evaluated_By__c</field>
+        <field>LLC_BI__Approval_Date__c</field>
+        <field>LLC_BI__Approved_By__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Evaluator Approval</label>
+        <name>Evaluator_Approval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>demomastertest.2j708bheislu@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>SCO Approval</label>
+        <name>SCO_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND( 
+LLC_BI__Historic_Financial_Indicator__c &lt; LLC_BI__Covenant__r.LLC_BI__Financial_Indicator_Value__c, 
+OR( 
+TEXT(LLC_BI__Status__c) = &apos;Waived&apos;, 
+TEXT(LLC_BI__Status__c) = &apos;Pending&apos; 
+) 
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Approval_Date_Today2</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Approved_By_Pierre</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Covenant_Compliance_Exception_Date_t</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Status_Exception</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Cov_Compliance_Excepti1on_Date_Today</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Cove_Compliance_status_rejection2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>true</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Status_Pending2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Covenant Compliance - Routed Approval</label>
+    <processOrder>2</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

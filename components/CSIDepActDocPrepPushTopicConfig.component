@@ -1,0 +1,120 @@
+<apex:component id="CSIDepActDocPrepPushTopicConfig"
+		controller="CSIDepActDocPrepCompletionController">
+	<script type="text/javascript">
+
+		// Warn if user attempts to navigate away from docviewer
+		var isNavAlertRequired = {!!errorsPresent};
+		window.addEventListener('beforeunload', function (e) {
+			if((isNavAlertRequired == null || isNavAlertRequired)
+				&& document.getElementById('DocViewer').src.indexOf('DocPrepFiling') == -1) {
+				(e || window.event).returnValue = '{!JSENCODE($Label.nFUSE__DocPrep_Navigate_Away_Message)}';
+				return '{!JSENCODE($Label.nFUSE__DocPrep_Navigate_Away_Message)}';
+			}
+			isNavAlertRequired = true;
+		});
+
+		function processLogUpdate(message) {
+			var messageProviderStatus = message.data.sobject.nFUSE__Vendor_Status__c;
+			var messageTranStatus = message.data.sobject.nFUSE__Transaction_Status__c;
+			var logId = message.data.sobject.Id;
+
+			if(logId == '{!JSENCODE(transactionLogId)}'){
+				if(messageProviderStatus == '{!JSENCODE(filingStatus)}'){
+					isNavAlertRequired = true;
+					storingDocuments();
+					LifeCycle.blockUI();
+
+				} else if(messageProviderStatus == '{!JSENCODE(completeStatus)}'){
+					updateSession('Success');
+					isNavAlertRequired = false;
+					self.location = '{!landingHref}';
+
+				} else if(messageTranStatus.toLowerCase().indexOf('error') > -1 ||
+					messageTranStatus.toLowerCase().indexOf('fail') > -1){
+					isNavAlertRequired = false;
+					LifeCycle.unblockUI();
+					var result = updateSession('Error');
+					document.getElementById('InProgress').style.display = 'none';
+					document.getElementById('StoringDocs').style.display = 'none';
+					document.getElementById('Error').style.display = 'block';
+				}
+			}
+		}
+		function blockUI(){
+			LifeCycle.blockUI();
+		}
+
+		function storingDocuments(){
+			document.getElementById('InProgress').style.display = 'none';
+			document.getElementById('StoringDocs').style.display = 'block';
+			isNavAlertRequired = true;
+		}
+
+		function retryGenerateDocs(){
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.CSIDepActDocPrepCompletionController.retryGenerateDocs}',
+				"{!JSENCODE(currentApp)}",
+				"{!JSENCODE(sessionId)}",
+				"{!JSENCODE(contextId)}",
+				function(result, event){
+					if(event.status){
+						blockUI();
+						updateSession('Success');
+						window.location.href = result;
+					} else{
+						return false;
+					}
+				},
+				{escape: false}
+			)
+		}
+
+		function reSubmitDocuments(){
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.CSIDepActDocPrepCompletionController.reSubmitDocuments}',
+				"{!JSENCODE(transactionExternalId)}",
+				"{!JSENCODE(contextId)}",
+				"{!JSENCODE(csiSessionId)}",
+				function(result, event){
+					if(event.status){
+						blockUI();
+						rerenderInProgress();
+						return true;
+					} else {
+						return false;
+					}
+				},
+				{escape: true}
+			);
+		}
+
+		function updateSession(status){
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.CSIDepActDocPrepCompletionController.updateSession}',
+				"{!JSENCODE(contextId)}",
+				"{!JSENCODE(sessionId)}",
+				status,
+				function(result, event){
+					if(event.status){
+						return true;
+					} else{
+						return false;
+					}
+				},
+				{escape: true}
+			);
+		}
+
+		window.onload = (function(){
+			if ('{!JSENCODE(vendorStatus)}' == '{!JSENCODE(completeStatus)}') {
+				LifeCycle.blockUI();
+				updateSession('Success');
+				storingDocuments();
+				window.location.href = '{!landingHref}';
+			} else if('{!JSENCODE(vendorStatus)}' == '{!JSENCODE(filingStatus)}'){
+				LifeCycle.blockUI();
+				storingDocuments();
+			}
+		});
+	</script>
+</apex:component>

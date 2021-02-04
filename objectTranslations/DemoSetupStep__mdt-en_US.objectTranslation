@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Demo Setup Step</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Demo Setup Steps</value>
+    </caseValues>
+    <fields>
+        <help><!-- Checked for active steps.  This field can be used to temporarily deactivate a step. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name of the apex class used to automate this step.  The automation class is only used for automatic steps and for automation steps it is required. --></help>
+        <label><!-- Automation Class --></label>
+        <name>AutomationClass__c</name>
+    </fields>
+    <fields>
+        <help><!-- The unique parameter used to determine which modal to display.  This value is used in the setupStep.js event handler.  Please note that this must match exactly with the code.  This field is optional unless Modal is selected as the step type. --></help>
+        <label><!-- Modal Path --></label>
+        <name>ModalPath__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this field is not blank, then the step number indicated MUST be completed before this step will be enabled.  Be sure you&apos;ve indicated a step that exists and is active. --></help>
+        <label><!-- Step Depends On --></label>
+        <name>StepDependsOn__c</name>
+    </fields>
+    <fields>
+        <help><!-- For manual steps, this field should be the step by step instructions the user needs to take to complete the step.  For automated steps this text is optional, but it is often helpful to include the manual steps anyway. --></help>
+        <label><!-- Step Description --></label>
+        <name>StepDescription__c</name>
+    </fields>
+    <fields>
+        <help><!-- If included, a hyperlink icon will appear for the step and open a new tab to the location indicated. This field is optional, but recommended for any manual steps.  Valid URLs can be full URLs or relative URLs.  Partial URLs are assumed to be within SFDC. --></help>
+        <label><!-- Step Hyperlink --></label>
+        <name>StepHyperlink__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is used for sorting on the screen.  Lower numbers appear before higher numbers.  This is also used for enforcing step dependencies. --></help>
+        <label><!-- Step Number --></label>
+        <name>StepNumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- The title of the step, shown on the Demo Setup screen. --></help>
+        <label><!-- Step Title --></label>
+        <name>StepTitle__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatic indicates a fully automated step, requiring an Automation Class.  Manual is a manual step without a confirmation.  Manual-Confirmation is a fully manual step that will ask the user to confirm the step. --></help>
+        <label><!-- Step Type --></label>
+        <name>StepType__c</name>
+        <picklistValues>
+            <masterLabel>Automatic</masterLabel>
+            <translation><!-- Automatic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation><!-- Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual-Confirm</masterLabel>
+            <translation><!-- Manual-Confirm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modal</masterLabel>
+            <translation><!-- Modal --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Demo Setup Step Layout</layout>
+        <sections>
+            <label><!-- Step Details --></label>
+            <section>Step Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

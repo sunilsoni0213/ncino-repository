@@ -1,0 +1,28 @@
+<apex:component layout="none" controller="CSA_PSCOverviewController">
+    <apex:outputpanel layout="block" styleclass="force slds" id="productTypeList">
+        <div class="table-responsive">
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <apex:repeat value="{!productTypeFieldSetList}" var="f">
+                            <th>
+                                <apex:outputtext value="{!f.Label}" />
+                            </th>
+                        </apex:repeat>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!productTypes}" var="pt">
+                        <tr>
+                            <apex:repeat value="{!productTypeFieldSetList}" var="f">
+                                <td>
+                                    <apex:outputfield value="{!pt[f.fieldPath]}" />
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </div>
+    </apex:outputpanel>
+</apex:component>

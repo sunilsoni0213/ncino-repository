@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configuration Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configuration Tasks</value>
+    </caseValues>
+    <fields>
+        <help><!-- Please select the role of the person responsible for completing this configuration task. --></help>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <picklistValues>
+            <masterLabel>Bank Name Here - PM</masterLabel>
+            <translation><!-- Bank Name Here - PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino Data Team</masterLabel>
+            <translation><!-- nCino Data Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino IS</masterLabel>
+            <translation><!-- nCino IS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino PM</masterLabel>
+            <translation><!-- nCino PM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This picklist is dependent upon the Configuration Phase. --></help>
+        <label><!-- Config Category --></label>
+        <name>Config_Category__c</name>
+        <picklistValues>
+            <masterLabel>Approval Processes</masterLabel>
+            <translation><!-- Approval Processes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Specifications</masterLabel>
+            <translation><!-- Business Specifications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Configuration QA</masterLabel>
+            <translation><!-- Configuration QA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Reports</masterLabel>
+            <translation><!-- Credit Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Config</masterLabel>
+            <translation><!-- Custom Config --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Load</masterLabel>
+            <translation><!-- Data Load --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data QA</masterLabel>
+            <translation><!-- Data QA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discovery &amp; Requirements</masterLabel>
+            <translation><!-- Discovery &amp; Requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go-Live</masterLabel>
+            <translation><!-- Go-Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Install Base Organization &amp; nCino Application</masterLabel>
+            <translation><!-- Install Base Organization &amp; nCino Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laser Pro / FLO Document Preparation</masterLabel>
+            <translation><!-- Laser Pro / FLO Document Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List Views</masterLabel>
+            <translation><!-- List Views --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loan Process</masterLabel>
+            <translation><!-- Loan Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous / Other</masterLabel>
+            <translation><!-- Miscellaneous / Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organizational Configuration</masterLabel>
+            <translation><!-- Organizational Configuration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Page Layout &amp; Field Updates/Additions</masterLabel>
+            <translation><!-- Page Layout &amp; Field Updates/Additions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pilot Team Training</masterLabel>
+            <translation><!-- Pilot Team Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post-Training Updates</masterLabel>
+            <translation><!-- Post-Training Updates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Pilot Testing</masterLabel>
+            <translation><!-- Pre-Pilot Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product &amp; Document Catalogs</masterLabel>
+            <translation><!-- Product &amp; Document Catalogs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Initiation</masterLabel>
+            <translation><!-- Project Initiation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queue Management</masterLabel>
+            <translation><!-- Queue Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationship Statistics</masterLabel>
+            <translation><!-- Relationship Statistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reports &amp; Dashboards</masterLabel>
+            <translation><!-- Reports &amp; Dashboards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Rating</masterLabel>
+            <translation><!-- Risk Rating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search &amp; Lookup Filters</masterLabel>
+            <translation><!-- Search &amp; Lookup Filters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spreads &amp; Spreading Templates</masterLabel>
+            <translation><!-- Spreads &amp; Spreading Templates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validation Rules</masterLabel>
+            <translation><!-- Validation Rules --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow &amp; Alerts</masterLabel>
+            <translation><!-- Workflow &amp; Alerts --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- These are the different phases of an nCino configuration. --></help>
+        <label><!-- Config Phase --></label>
+        <name>Config_Phase__c</name>
+        <picklistValues>
+            <masterLabel>1 - Define</masterLabel>
+            <translation><!-- 1 - Define --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Integrate</masterLabel>
+            <translation><!-- 2 - Integrate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Discover</masterLabel>
+            <translation><!-- 3 - Discover --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Configure</masterLabel>
+            <translation><!-- 4 - Configure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Validate</masterLabel>
+            <translation><!-- 5 - Validate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 - Deploy</masterLabel>
+            <translation><!-- 6 - Deploy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Config Status --></label>
+        <name>Config_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation><!-- Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Client Action</masterLabel>
+            <translation><!-- Pending Client Action --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working</masterLabel>
+            <translation><!-- Working --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter the Date when a configuration task was completed. --></help>
+        <label><!-- Date Completed --></label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the number of hours it took to complete this configuration task.  Partial hours should be entered as a decimal (i.e., 15 minutes should be entered as .25). --></help>
+        <label><!-- Hours to Complete --></label>
+        <name>Hours_to_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percent Complete --></label>
+        <name>Percent_Complete__c</name>
+        <picklistValues>
+            <masterLabel>10 %</masterLabel>
+            <translation><!-- 10 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100 %</masterLabel>
+            <translation><!-- 100 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 %</masterLabel>
+            <translation><!-- 20 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 %</masterLabel>
+            <translation><!-- 30 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40 %</masterLabel>
+            <translation><!-- 40 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50 %</masterLabel>
+            <translation><!-- 50 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 %</masterLabel>
+            <translation><!-- 60 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70 %</masterLabel>
+            <translation><!-- 70 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80 %</masterLabel>
+            <translation><!-- 80 % --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 %</masterLabel>
+            <translation><!-- 90 % --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter the Project Name related to this configuration task. --></help>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Configuration Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Please enter any relevant configuration notes. --></help>
+        <label><!-- Status Notes / Comments --></label>
+        <name>Status_Notes_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Marking a task as complete will automatically update the completion date and set percent complete to 100%. --></help>
+        <label><!-- Task Complete --></label>
+        <name>Task_Complete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter a description of the configuration task to be tested &amp; completed. --></help>
+        <label><!-- Task Detail --></label>
+        <name>Task_Detail__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used as a Unique Identifier when loading configuration tasks with the nCino Logbook. --></help>
+        <label><!-- lookupKey --></label>
+        <name>lookupKey__c</name>
+    </fields>
+    <nameFieldLabel>Config Number</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must enter the approximate amount of time it took to complete this task before saving the record as complete --></errorMessage>
+        <name>Hours_to_Complete_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If a Configuraiton Task is in the &apos;Working&apos; Status, please assign a completion percentage --></errorMessage>
+        <name>Working_Requires_Percent_Complete</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,82 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LoanStageDurationController">
+
+
+<apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" />
+<apex:includeScript value="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" />
+<apex:includeScript value="{!URLFOR($Resource.highCharts)}"  />
+<apex:includeScript value="{!URLFOR($Resource.chartExporting)}"  />
+<apex:includeScript value="{!URLFOR($Resource.DataJS)}"/>
+
+
+<script type="text/javascript">
+
+    var j$ = jQuery.noConflict();
+
+j$(function () {
+    j$('#container').highcharts({
+        data: {
+            table: document.getElementById('datatable')
+        },
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            labels: {
+                   enabled: false
+             }
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Number of Days'
+            }
+        },
+        legend: {
+            verticalAlign: 'top',
+            backgroundColor: '#FFFFFF',
+            reversed: true,
+            x: 0,
+            y: 0
+        },
+        tooltip: {
+            formatter: function() {
+                return '<b>'+ this.point.name +'</b>:'+
+                    this.point.y + '<br/><b>' + 'Stage:' + '</b>' + this.series.name;
+            }
+        },
+        plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            }
+    });
+});
+</script>
+<div id="container" style="height: 155px; margin: 0 auto"></div>
+    <div style="">
+        <table id="datatable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <apex:repeat var="r" value="{!stagesList}">
+                        <th>{!r['LLC_BI__StageName__c']}</th>
+                    </apex:repeat>
+            
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Number of Days</th>
+                    <apex:repeat var="r" value="{!stagesList}">
+                        <td>{!r['stage']}</td>
+                    </apex:repeat>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</apex:page>

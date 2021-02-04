@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Dear&nbsp;</span>{!LLC_BI__Loan__c.OwnerFullName}<span style="font-size: 12pt;">,</span></font><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><span class="Apple-tab-span" style="white-space: pre;">	</span>We're happy to inform you that your credit application has been approved! The loan terms to be extended are as follows:</div><div style="font-size: 12pt;"><font face="arial"><ul><li>Loan Amount:&nbsp;{!LLC_BI__Loan__c.LLC_BI__Amount__c}</li><li>Interest Rate: 11%</li><li>Loan Term: 60 Months</li></ul></font></div><div style="font-size: 12pt;"><span class="Apple-tab-span" style="white-space: pre;">	</span>A representative from Your Financial Institution will be in touch soon with additional information.&nbsp;</div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;">Best Regards,</div><div style="font-size: 12pt;">Your Financial Institution</div>]]></td>
+</tr>
+</table>

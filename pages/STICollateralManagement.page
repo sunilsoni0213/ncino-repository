@@ -1,0 +1,256 @@
+<apex:page standardController="LLC_BI__Loan_Collateral2__c"
+    recordSetVar="loans"
+    extensions="STICollateralManagementController"
+    tabStyle="LLC_BI__Loan__c"
+    showHeader="true"
+    sidebar="true">
+
+    <LLC_BI:Includes />
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'datatables/DataTables-1.9.1/media/js/jquery.dataTables.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'selectize/selectize.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'datatables/DataTables-1.9.1/extras/BootStrap/datatables.bootstrap.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'datatables/DataTables-1.9.1/extras/BootStrap/datatables.bootstrap.paging.js')}" /> 
+
+    <apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'selectize/selectize.bootstrap2.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nDESIGN__llc_web_ui, 'datatables/DataTables-1.9.1/extras/BootStrap/dataTables.bootstrap.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.LLC_BI__collateral_management_css, 'collateral_management_css.css')}"/>
+
+    <apex:outputPanel >
+        <apex:sectionHeader title="Collateral Management Title"
+            subtitle="{!loanName}">
+
+            <div class="bPageTitle">
+                <div
+                    class="ptBreadcrumb">&nbsp;«
+                    <a href="/{!loanID}">Back To&nbsp;{!loanName}</a>
+                </div>
+            </div>
+        </apex:sectionHeader>
+    </apex:outputPanel>
+
+    <apex:form id="form">
+        <div class="force">
+
+            <apex:outputPanel styleClass="force messages" id="messages">
+                <apex:messages styleClass="alert alert-error" />
+            </apex:outputPanel>
+
+
+            <apex:pageBlock mode="maindetail" rendered="{!collateralSearch}">
+
+                <apex:outputPanel styleClass="form-search row-fluid">
+                    <h3>Find Collateral</h3><hr/>
+                    <apex:inputText value="{!searchText}"
+                        styleClass="search-query"
+                        html-placeholder="Collateral Search Placeholder"
+                        id="searchInput"
+                        onkeypress="return searchOnEnter(event);"/>
+                    <span>
+                        <apex:commandButton action="{!executeSearch}"
+                            value="Go"
+                            styleClass="btn-primary searchButton"
+                            rerender="tablePanel, messages"/>
+                    </span>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="tablePanel">
+
+                    <apex:outputPanel rendered="{!searchResults.size == 0}" id="noResultsPanel">
+                        <br/>
+                        <h4 id="noResultsLabel">No Search Results</h4>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!searchResults != null && searchResults.size > 0}">
+                    
+                    <apex:dataTable value="{!searchResults}"
+                        var="result"
+                        styleClass="table table-striped table-bordered collateral-search-table"
+                        id="searchTable">
+
+                        <apex:column >
+                            <apex:commandButton action="{!selectCollateral}"
+                            value="Select"
+                            styleClass="btn btn-small"
+                            reRender="messages,table">
+                                <apex:param name="collateralId" value="{!result.Id}"/>
+                            </apex:commandButton>
+                        </apex:column>
+
+                        <apex:column headervalue="{!$ObjectType.LLC_BI__Collateral_Type__c.fields.Name.Label}" width="20%">
+                            <apex:outputLink value="/{!result}">{!result.LLC_BI__Collateral_Type__r.Name}</apex:outputLink>
+                        </apex:column>
+
+                        <apex:column headerValue="{!$ObjectType.LLC_BI__Collateral__c.fields.LLC_BI__Value__c.Label}" width="20%">
+                            <apex:outputText value="{!result.LLC_BI__Value__c}"/>
+                        </apex:column>
+
+                        <apex:column headerValue="{!$ObjectType.LLC_BI__Collateral__c.fields.LLC_BI__Street_Address__c.Label}" width="20%">
+                            <apex:outputField value="{!result.LLC_BI__Street_Address__c}"/>
+                        </apex:column>  
+
+
+                        <apex:column headerValue="{!$ObjectType.LLC_BI__Collateral__c.fields.LLC_BI__VIN__c.Label}" width="20%">
+                            <apex:outputField value="{!result.LLC_BI__VIN__c}"/>
+                        </apex:column>
+
+                        <apex:column headerValue="{!$ObjectType.LLC_BI__Collateral__c.fields.LLC_BI__Appraisal_Date__c.Label}" width="20%">
+                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                <apex:param value="{!result.LLC_BI__Appraisal_Date__c}"/>
+                            </apex:outputText>
+                        </apex:column>
+
+                    </apex:dataTable>
+
+                    <script>
+                        $ = jQuery;
+                        (function($) {
+                            var table = jQuery(".collateral-search-table").dataTable({
+
+                                "sDom": "<'row'<'pull-right'l><'span8'f>r>t<'row'<'span8'i><'pull-right'p>>",
+
+                                "bFilter": false,
+
+                                "aoColumnDefs": [
+                                    { "bSortable": false, "aTargets": [0] },
+                                    { "type": "appraisal-date", "aTargets": [5] },
+                                ],
+
+                                "sPaginationType": "bootstrap"
+
+                            });
+
+                            table.fnSort([ [1, 'asc'], [2, 'asc'] ]);
+
+
+                            jQuery.fn.dataTable.ext.type.order['appraisal-date-pre'] = function ( dateParam ) {
+                                var data = table.fnGetData();
+
+                                var dates = [];
+                                for(var i=0;i<data.length;i++){
+                                    var dateSplit = data[i][4].split('/');
+                                    var y = dateSplit[0];
+                                    var m = dateSplit[1];
+                                    var d = dateSplit[2];
+                                    dates.push(new Date(y, m, d, 0, 0, 0, 0).getTime());
+                                }
+                                dates.sort(function(a, b){
+                                        return a>b ? -1 : a<b ? 1 : 0;
+                                });
+                            };
+                        })(jQuery);
+                    </script>
+                    
+                    </apex:outputPanel>
+
+                    <div>
+                        <br/>
+                        <!-- rendered="{!searchResults != null}" -->
+                        <apex:commandButton action="{!addNewCollateral}"
+                        value="Create New Collateral"
+                        styleClass="btn btn-primary createNewCollateral"
+                        reRender="form"/>
+                    </div>
+
+                </apex:outputPanel>
+            </apex:pageBlock>
+
+            <apex:outputPanel id="main" styleClass="collateralManagement">
+
+                <apex:outputPanel rendered="{!collateralType}">
+                    <h4>Collateral Type (type only)</h4>
+                    <hr/>
+                    <div class="selectizeList">
+                        <apex:selectList size="1" multiselect="false" styleClass="combobox" value="{!collateralTypeId}">
+                            <apex:actionSupport event="onchange" action="{!renderCollateral}" rerender="add"/>
+                            <apex:selectOptions value="{!CollateralTypeOptions}"/>
+                        </apex:selectList>
+                    </div>
+                    <h4>Collateral Type (combined list)</h4>
+                    <div class="selectizeList">
+                        <apex:selectList size="1" multiselect="false" styleClass="combobox" value="{!collateralTypeId}">
+                            <apex:actionSupport event="onchange" action="{!renderCollateral}" rerender="add"/>
+                            <apex:selectOptions value="{!CollateralTypes}"/>
+                        </apex:selectList>
+                    </div>
+                    <script>
+                        jQuery('.combobox').selectize({ placeholder: "Select One" });
+                    </script>
+                </apex:outputPanel>
+
+                <apex:outputPanel id="add">
+                    <apex:outputPanel rendered="{!collateral}" id="collateral">
+                        <h4>Collateral Details</h4>
+                        <hr/>
+                        <apex:pageBlock mode="maindetail">
+                            <apex:pageBlockSection id="table" columns="2" collapsible="false">
+                                <apex:repeat value="{!fields}"
+                                    var="f">
+                                    <apex:inputField value="{!collateralObject[f.fieldPath]}" label="{!f.label}"/>
+                                </apex:repeat>
+                            </apex:pageBlockSection>
+
+                            <apex:pageBlockButtons location="bottom">
+                                    <apex:commandButton value="Save" 
+                                        action="{!saveCollateral}"
+                                        rerender="messages"
+                                        styleClass="btn btn-small btn-primary"/>
+                                    <apex:commandButton value="Cancel" 
+                                        action="{!restart}"
+                                        styleClass="btn btn-small"/>
+                            </apex:pageBlockButtons>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!loanCollateral}">
+                        <h4>Pledge Details</h4>
+                        <hr/>
+                        <apex:pageBlock mode="maindetail">
+                            <apex:pageBlockSection id="table" columns="2" collapsible="false">
+                                <apex:repeat value="{!fields}"
+                                    var="f">
+                                    <apex:inputField value="{!loanCollateralObject[f.fieldPath]}"
+                                        label="{!f.label}"
+                                        rendered="{!f.label != 'Advance Rate'}"/>
+                                    <apex:inputField value="{!collateralObject['LLC_BI__Advance_Rate__c']}"
+                                        label="{!f.label}"
+                                        rendered="{!f.label == 'Advance Rate'}"/>
+                                </apex:repeat>
+                                <apex:inputField value="{!accountCollateralObject['LLC_BI__Account__c']}"
+                                        label="{!$ObjectType.LLC_BI__Account_Collateral__c.fields.LLC_BI__Account__c.Label}"
+                                        required="false"/>
+                            </apex:pageBlockSection>
+                            <apex:pageBlockButtons location="bottom">
+                                    <apex:commandButton value="Save" 
+                                        action="{!saveLoanCollateral}"
+                                        rerender="messages"
+                                        styleClass="btn btn-small btn-primary"/>
+                                    <apex:commandButton value="Cancel" 
+                                        action="{!restart}"
+                                        styleClass="btn btn-small"/>
+                            </apex:pageBlockButtons>
+                        </apex:pageBlock>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </div>
+    </apex:form>
+    <script>
+        function setFocusOnLoad() {}
+
+        var searchButton = jQuery(".searchButton");
+        function searchOnEnter(e){
+            var key = 0;
+            if(window.event){
+                key = e.keyCode;
+            } else if(e.which){
+                key = e.which;
+            }
+            if(key == 13){
+                searchButton.click();
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</apex:page>

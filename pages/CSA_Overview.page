@@ -1,0 +1,6 @@
+<apex:page readonly="true">
+    <nFORCE:Includes enablebootstrap3="true" enablefontawesome="true" enablebs3namespace="true" />
+    <nFORCE:Include_Design_System flavor="vf" />
+    <nFORCE:Include_Design_System flavor="bs3" />
+    <c:CSA_Overview />
+</apex:page>

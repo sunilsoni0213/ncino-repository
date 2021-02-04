@@ -1,0 +1,8 @@
+<apex:page >
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.4.6/angular.min.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.SLDS100,
+		'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<c:MaintenanceChecklistDataService />
+	<apex:includeScript value="{!URLFOR($Resource.maintenanceChecklistApp)}"/>
+	<c:MaintenanceChecklist />
+</apex:page>

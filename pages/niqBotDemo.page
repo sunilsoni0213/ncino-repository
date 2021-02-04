@@ -1,0 +1,250 @@
+<apex:page id="NiBotDemo" controller="NIQRemoter2" showHeader="false" sidebar="false" >
+    <head>
+        <title>nCino Bot</title>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" href="https://ncino.box.com/shared/static/4ga598kbifupkxczuw8cjgcudr1nc58k.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+        <style>
+        </style>
+        
+        <script type="text/javascript">
+            var scoreToggle = 0;
+            function showScorecardDetails() {
+                if(!scoreToggle) {
+                    scoreToggle = 1;
+                    $('#scorecard').removeClass('hideScorecard').addClass('showScorecard');
+                    $('#scorecard-title').removeClass('scorefadeout').addClass("scorefadein");
+                    $('#scorecard-details').css('visibility', 'visible');
+                    $('#scorecard-details').removeClass('scorefadeout').addClass("scorefadein");
+                } else {
+                    scoreToggle = 0;
+                    $('#scorecard').removeClass('showScorecard').addClass('hideScorecard');
+                    $('#scorecard-title').removeClass('scorefadein').addClass("scorefadeout");
+                    $('#scorecard-details').removeClass('scorefadein').addClass("scorefadeout");
+                    $('#scorecard-details').css('visibility', 'hidden');
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <div id="convos" class="convo-bucket">
+    <div class="niq-logo">
+        <!-- <img id="niq-persona" src="https://ncino.box.com/shared/static/ciss9q6jfvt9xv5uomwdvewelryf7yng.png" width="118" /> -->
+    </div>
+        <div id="conversation">
+        </div>
+    </div>
+    <form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
+        <input type="text" id="wisdom" class="special" size="80" value="" placeholder="Ask NIQ Anything ..." autocomplete="off" />
+    </form>
+        
+    <script type="text/javascript">
+        // set the focus to the input box
+        document.getElementById("wisdom").focus();
+        //showThinking();
+        //setTimeout(function () {
+        //    $('.niThinking').fadeOut().remove();
+        //    $('#conversation').append(loRec);
+        //}, 2000);
+        // Initialize the Amazon Cognito credentials provider
+        AWS.config.region = 'us-east-1'; // Region
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            // Provide your Pool Id here
+            IdentityPoolId: 'us-east-1:700e0c24-1f77-4e0d-8ea9-aeb78c042149',
+        });
+        var lexruntime = new AWS.LexRuntime();
+        var lexUserId = 'chatbot-demo' + Date.now()+Math.random()*100;
+        var sessionAttributes = {};
+        var nparams = "{\r\n    \"Authorization\": \""+Math.random()+"\",\r\n    \"botAlias\": \"niqdemo\",\r\n    \"botName\": \"NIQDEMO\",\r\n    \"inputText\": \"hey\",\r\n    \"userId\": \""+Math.random()+"\",\r\n   \"sessionAttributes\": {\r\n        \"Price\": \"25\"\r\n    },\r\n    \"logLevel\": \"FULL\"\r\n }\r\n \r\n ";
+        var settings = {
+         "async": true,
+         "crossDomain": true,
+         "url": "https://niq-sales.hosted.ncino.com/Test/nIQBasicResponse-sales",
+         "method": "POST",
+         "headers": {
+           "Content-Type": "application/json",
+           "Host": "niq-sales.hosted.ncino.com/Test/nIQBasicResponse-sales",
+           "Access-Control-Request-Origin": "niq-sales.hosted.ncino.com/Test/nIQBasicResponse-sales",
+           "X-Amz-Date": "20181211T024735Z",
+           "Authorization": "AWS4-HMAC-SHA256 Credential=undefined/20181211/us-east-1/execute-api/aws4_request, SignedHeaders=cache-control;content-length;content-type;host;x-amz-date, Signature=3ffaa7a9daf8093ad75d5a40a3696ca9d011e5419931b5c4ac738a12419df820",
+           "cache-control": "no-cache"
+         },
+         "processData": false,
+         "data": nparams
+        }
+        /*$.ajax(settings).done(function (response) {
+         console.log('Testing formed request*** ' + response);
+        });*/
+        function pushChat() {
+            // if there is text to be sent...
+            var wisdomText = document.getElementById('wisdom');
+            if (wisdomText && wisdomText.value && wisdomText.value.trim().length > 0) {
+                // disable input to show we're sending it
+                var wisdom = wisdomText.value.trim();
+                wisdomText.value = '...';
+                wisdomText.locked = true;
+                // send it to the Lex runtime
+                var params = {
+                    botAlias: 'niqdemo',
+                    botName: 'NIQDEMO',
+                    inputText: wisdom,
+                    userId: lexUserId,
+                    sessionAttributes: sessionAttributes,
+                };
+                showRequest(wisdom);
+                
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.NIQRemoter2.talk}',
+                    wisdom,
+                    function(result, event) {
+                        if (event.status) {
+                            // capture the sessionAttributes for the next cycle
+                            //sessionAttributes = data.sessionAttributes;
+                            // show response and/or error/dialog status
+                            showThinking();
+                            setTimeout(function () {
+                                $('.niThinking').fadeOut().remove();
+                                showResponse(JSON.parse(result));
+                            }, Math.floor(Math.random()*(1400-800+1)+800) );
+    
+                        }
+                        else {
+                            console.log(event.message);
+                            showError('Error:  ' + event.message + ' (see console for details)');
+                        }
+                        // re-enable input
+                        wisdomText.value = '';
+                        wisdomText.locked = false;
+                    },
+                    {escape: false}
+                );
+                    /*lexruntime.postText(params, function(err, data) {
+                    if (err) {
+                        console.log(err, err.stack);
+                        showError('Error:  ' + err.message + ' (see console for details)')
+                    }
+                    if (data) {
+                        // capture the sessionAttributes for the next cycle
+                        sessionAttributes = data.sessionAttributes;
+                        // show response and/or error/dialog status
+                        showThinking();
+                        setTimeout(function () {
+                            $('.niThinking').fadeOut().remove();
+                            showResponse(data);
+                        }, Math.floor(Math.random()*(1400-800+1)+800) );
+                    }
+                    // re-enable input
+                    wisdomText.value = '';
+                    wisdomText.locked = false;
+                });*/
+            }
+            // we always cancel form submission
+            return false;
+        }
+        function showThinking() {
+            //var spinnerSpan = document.createElement("span");
+            //spinnerSpan.className = "spinme-left";
+            //var spinnerDiv = document.createElement('div');
+            //spinnerDiv.className = "spinner";
+            var spinnerHTML = '<div class="niThinking"><span class="spinme-left"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></span></div>';
+            $('#conversation').append(spinnerHTML);
+        }
+        function showRequest(daText) {
+            var conversationDiv = document.getElementById('conversation');
+            var requestDiv = document.createElement("div");
+            requestDiv.className = 'u-chatBubble animated fadeInUp';
+            var requestParagraph = document.createElement('p');
+            requestParagraph.appendChild(document.createTextNode(daText))
+            requestDiv.appendChild(requestParagraph);
+            conversationDiv.append(requestDiv);
+            //conversationDiv.scrollTop = conversationDiv.scrollHeight;
+            window.scrollBy(0, 1000);
+        }
+        
+        function showError(daText) {
+            var conversationDiv = document.getElementById('conversation');
+            var errorPara = document.createElement("p");
+            errorPara.className = 'niError';
+            errorPara.appendChild(document.createTextNode(daText));
+            conversationDiv.append(errorPara);
+            conversationDiv.scrollTop = conversationDiv.scrollHeight;
+        }
+        function showLink(daText){
+        }
+     function showResponse(lexResponse) {
+            console.log(lexResponse);
+            var conversationDiv = document.getElementById('conversation');
+            var bubbleDiv = document.createElement("div");
+            var responseDiv = document.createElement("div");
+            var responseDiv8Ball;
+            var showCardsOptions = false;
+            responseDiv.className = "niq-chatBubbleHolder animated fadeIn";
+            bubbleDiv.className = "niq-chatBubble";
+            if (lexResponse.message) {
+                console.log(lexResponse.message);
+                if(lexResponse['intentName'] == 'Go_ToLoan_Demo'){
+                    var nmessage = '<div class="niq-chatBubbleHolder animated fadeIn"><div class="niq-chatBubble"><p>Got it! I have found {!loanName}.</p></div></div>';
+                    $('#conversation').append(nmessage);
+                    var nmessage = '<div class="niResponse8ball animated bounceInLeft"><ul><li><a href="/lightning/r/LLC_BI__Loan__c/{!navigationId}/view" target="_Parent">Go to Loan</a></li></ul></div>';
+                    $('#conversation').append(nmessage);
+                }else if(lexResponse['intentName'] == 'Prediction_Demo'){
+                    var loRec = '<div class="insightCard negative shadow-l animated bounceInLeft"><div class="scorecard negative shadow-l" id="scorecard"><img src="https://ncino.box.com/shared/static/tkp6opft1esc3ax67ovbkepkeoensayp.png" width="12" height="12" onClick="showScorecardDetails();" /><h5 id="scorecard-title">Scorecard</h5><ul id="scorecard-details"><li><span><i class="far fa-clock"></i> Target Close Date: {!targetCloseDate}</span></li><li class="spacer"><span><i class="far fa-clock"></i> Projected Close Date: {!projectedCloseDate}</span></li><li><i class="fas fa-bolt"></i> This loan is better than the average due to less Collateral.</li><li><i class="fas fa-bolt"></i> There are more loans in process than usual.</li></ul></div><h4><span>Hmmm</span>, we may miss the close date by</h4><div class="prediction"><i class="far fa-clock predict-icon"></i><h3>9</h3><div>Days</div></div><div class="circle shadow-l"><i class="fas fa-times"></i></div><div class="recommended-action shadow-s" id="nba"><a href="/flow/einpoc1/MoveCloseDateOut?retURL=https://neinsteinpoc-dev-ed.lightning.force.com/lightning/r/LLC_BI__Loan__c/a255w000005Vbh6QAC/view">Push Close Date</a></div><div class="circle shadow-l"><i class="far fa-heart"></i></div></div>';
+                    $('#conversation').append(loRec);
+                }else if(lexResponse['intentName'] == 'ANSR_LTVException_Demo'){
+                    var nmessage = '<div style="float: left; clear: both; margin-left: 30%;"><img src="https://ncino.box.com/shared/static/1pxcyrpvdme7ne6s3jgpta7ryh80p6ml.svg" width="146" height="43"></div><div class="niq-chatBubbleHolder animated fadeIn"><div class="niq-chatBubble"><p>'+ lexResponse.message +'</p></div></div>';
+                    $('#conversation').append(nmessage);
+                    var nmessage = '<div class="niResponse8ball animated bounceInLeft"><ul><li><a href="#"><img src="https://emojis.slackmojis.com/emojis/images/1450319444/29/thankyou.gif?1450319444" width="21"/> Thanks!</a></li><li><a href="#"><img src="https://emojis.slackmojis.com/emojis/images/1464135001/460/fb-sad.gif?1464135001" width="18"/> Not helpful.</a></li></ul></div>';
+                    $('#conversation').append(nmessage);
+                }else if(lexResponse['intentName'] == 'Sales_maxLTV'){
+                    var nmessage = '<div style="float: left; clear: both; margin-left: 30%;"><img src="https://ncino.box.com/shared/static/1pxcyrpvdme7ne6s3jgpta7ryh80p6ml.svg" width="146" height="43"></div><div class="niq-chatBubbleHolder animated fadeIn"><div class="niq-chatBubble"><p>'+ lexResponse.message +'</p></div></div>';
+                    $('#conversation').append(nmessage);
+                    var nmessage = '<div class="niResponse8ball animated bounceInLeft"><ul><li><a href="#"><img src="https://emojis.slackmojis.com/emojis/images/1450319444/29/thankyou.gif?1450319444" width="21"/> Thanks!</a></li><li><a href="#"><img src="https://emojis.slackmojis.com/emojis/images/1464135001/460/fb-sad.gif?1464135001" width="18"/> Not helpful.</a></li></ul></div>';
+                    $('#conversation').append(nmessage);
+                }
+                else{
+                    var responseParagraph = document.createElement('p');
+                    var textResponse = document.createTextNode(lexResponse.message);
+                    responseParagraph.appendChild(textResponse);
+                    responseDiv.appendChild(bubbleDiv).appendChild(responseParagraph);
+                }
+                if(typeof lexResponse['responseCard'] != 'undefined' &&
+                        typeof lexResponse['responseCard']['genericAttachments'] != 'undefined' &&
+                        typeof lexResponse['responseCard']['genericAttachments'][0]['buttons'] != 'undefined'){
+                    responseDiv8Ball = document.createElement("div");
+                    responseDiv8Ball.className = 'niResponse8ball animated bounceInLeft';
+                    var buttons = lexResponse['responseCard']['genericAttachments'][0]['buttons'];
+                    var responseUnorderedList = document.createElement('ul');
+                    for (var key in buttons){
+                        showCardsOptions = true;
+                        var button = buttons[key];
+                        
+                        var listItem = document.createElement('li');
+                        var a = document.createElement('a');
+                        var linkText = document.createTextNode(button['text']);
+                        a.appendChild(linkText);
+                        a.title = button['text'];
+                        a.href = button['value'];
+                        a.target = '_blank';
+                        
+                        if(a.title === 'undefined') {
+                        } else {
+                            listItem.appendChild(a);
+                            responseUnorderedList.appendChild(listItem);
+                        }
+                    }
+                    responseDiv8Ball.appendChild(responseUnorderedList);
+                }
+            }
+            conversationDiv.append(responseDiv);
+            if(showCardsOptions){
+                conversationDiv.append(responseDiv8Ball);
+            }
+            window.scrollBy(0, 1000);
+        }
+    </script>
+    </body>
+</apex:page>

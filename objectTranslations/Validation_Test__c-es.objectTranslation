@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Validation Test --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Validation Test --></value>
+    </caseValues>
+    <fields>
+        <label>PROPIEDAD</label>
+        <name>Actual_Result__c</name>
+    </fields>
+    <fields>
+        <label>Es el uso de garantía comercial o reside</label>
+        <lookupFilter>
+            <errorMessage>Prueba de validación debe ser asignado a un usuario activo</errorMessage>
+        </lookupFilter>
+        <name>Assigned_To__c</name>
+        <relationshipLabel>Las pruebas de validación</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Residencial</label>
+        <name>Browser__c</name>
+        <picklistValues>
+            <masterLabel>Chrome</masterLabel>
+            <translation>Cromo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firefox</masterLabel>
+            <translation><!-- Firefox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 10</masterLabel>
+            <translation><!-- Internet Explorer 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 11</masterLabel>
+            <translation><!-- Internet Explorer 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 8</masterLabel>
+            <translation><!-- Internet Explorer 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 9</masterLabel>
+            <translation><!-- Internet Explorer 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safari</masterLabel>
+            <translation><!-- Safari --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>¿Qué tipo de determinación de la inundac</label>
+        <name>Business_Action__c</name>
+    </fields>
+    <fields>
+        <help>Esta prueba de validación debe ser completado por la fecha indicada</help>
+        <label>Determinación zona de inundación con Cen</label>
+        <name>Complete_By_Date__c</name>
+    </fields>
+    <fields>
+        <label>¿Le gustaría incluir una copia mapa?</label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label>No</label>
+        <name>Expected_Result__c</name>
+    </fields>
+    <fields>
+        <label>Sí</label>
+        <name>Hours_to_Complete__c</name>
+    </fields>
+    <fields>
+        <label>la zona (zonas que contienen las letras</label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label>Programa Ordinario</label>
+        <name>Object__c</name>
+    </fields>
+    <fields>
+        <label>SOLICITUD</label>
+        <name>Percent_Complete__c</name>
+        <picklistValues>
+            <masterLabel>10 %</masterLabel>
+            <translation>10%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100 %</masterLabel>
+            <translation>100%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 %</masterLabel>
+            <translation>20%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 %</masterLabel>
+            <translation>30%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40 %</masterLabel>
+            <translation>40%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50 %</masterLabel>
+            <translation>50%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 %</masterLabel>
+            <translation>60%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70 %</masterLabel>
+            <translation>70%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80 %</masterLabel>
+            <translation>80%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 %</masterLabel>
+            <translation>90%</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>RequestDatetime</label>
+        <name>Project__c</name>
+        <relationshipLabel>Las pruebas de validación</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Este campo debe comprobarse con la prueba de validación ha sido completamente satisfecho</help>
+        <label>la prioridad de solicitud</label>
+        <name>Validation_Complete__c</name>
+    </fields>
+    <fields>
+        <label>Cadena de respuesta =</label>
+        <name>Validation_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation>Completar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>Sostener</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nuevo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Client Action</masterLabel>
+            <translation>A la espera de Acción de cliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working</masterLabel>
+            <translation>Trabajando</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>S010</label>
+        <name>Validation_Test__c</name>
+    </fields>
+    <fields>
+        <label>Es de construcción / Casa móvil en pelig</label>
+        <name>lookupKey__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>Validatin Test Layout</layout>
+        <sections>
+            <label>Prueba detalles del caso</label>
+            <section>Test Case Details</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- VTest- --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>Debe introducir la cantidad aproximada de tiempo que se tardó en completar esta prueba antes de guardar el registro lo más completo</errorMessage>
+        <name>Hours_to_Complete_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Si una prueba de validación se encuentra en el estado de &apos;Trabajo&apos;, asigne un porcentaje de finalización</errorMessage>
+        <name>Working_Requires_Percent_Complete</name>
+    </validationRules>
+</CustomObjectTranslation>

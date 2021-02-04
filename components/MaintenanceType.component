@@ -1,0 +1,41 @@
+<apex:component >
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.4.6/angular.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.maintenanceTypeController)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncino_ui_module)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncino_ui_message_handler)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0122,
+        'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'selectize/selectize.bootstrap2.css')}" />
+    <span ng-app="maintenanceTypeApp" ng-controller="MaintenanceTypeController">
+            <div class="force slds" ng-cloak="ng-cloak">
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <apex:composition template="nFORCE__Template_View_1_Column">
+                            <apex:define name="column-content">
+                                <apex:composition template="nFORCE__Template_View_Container">
+                                    <apex:define name="content">
+                                        <div class="col-md-5" id="typeId">
+                                            <div class="slds-form-element__control">
+                                                <textarea id="sample2" ng-model="newTypes" class="slds-textarea" placeholder="Add Types  (one per line)"></textarea>
+                                            </div>
+                                            <div class="row rowMargin">
+                                                <div class="col-md-12">
+                                                  <button type="button" class="btn btn-primary" ng-click="upsertTypes()" rerender="typeId">Add Maintenance Types</button>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <label>Maintenance Types</label><br/>
+                                            <div ng-repeat="type in types" value="{{type}}">
+                                                {{type}}
+                                            </div>
+                                        </div>
+                                    </apex:define>
+                                </apex:composition>
+                            </apex:define>
+                        </apex:composition>
+                    </div>
+                </div>
+            </div>
+    </span>
+</apex:component>

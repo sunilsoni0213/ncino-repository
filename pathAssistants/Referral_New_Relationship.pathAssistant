@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>nRE__Referral__c</entityName>
+    <fieldName>nRE__Referral_Status__c</fieldName>
+    <masterLabel>Referral - New Relationship</masterLabel>
+    <recordTypeName>Referral_New_Relationship</recordTypeName>
+</PathAssistant>

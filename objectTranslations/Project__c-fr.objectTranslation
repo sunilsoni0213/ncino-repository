@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Project --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Project --></value>
+    </caseValues>
+    <fields>
+        <help>Nombre total de tâches Configuration terminée</help>
+        <label>Tâches de configuration Achevé</label>
+        <name>Configuration_Tasks_Completed__c</name>
+    </fields>
+    <fields>
+        <label>Description du projet</label>
+        <name>Project_Description__c</name>
+    </fields>
+    <fields>
+        <help>Ceci est un champ de formule qui résume toutes les journées consacrées à la configuration.</help>
+        <label>Nombre total de jours de configuration</label>
+        <name>Total_Configuration_Days__c</name>
+    </fields>
+    <fields>
+        <help>Ceci est un champ de formule qui résume le nombre total d&apos;heures consacrées à la configuration.</help>
+        <label>Total des heures de configuration</label>
+        <name>Total_Configuration_Hours__c</name>
+    </fields>
+    <fields>
+        <help>Ceci est un champ de formule qui résume le total des jours consacrés à la validation</help>
+        <label>Nombre total de jours de validation</label>
+        <name>Total_Validation_Days__c</name>
+    </fields>
+    <fields>
+        <help>Ceci est un champ de formule qui résume le nombre total d&apos;heures consacrées à des tests de validation</help>
+        <label>Total des heures de validation</label>
+        <name>Total_Validation_Hours__c</name>
+    </fields>
+    <fields>
+        <help>Nombre total de tests de validation terminée</help>
+        <label>Tests de validation Achevé</label>
+        <name>Validation_Tests_Completed__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Project --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- CSI_Comm_DocPrep --></label>
+        <name>CSiDP__CSI_Comm_DocPrep</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Portal_Registration_Fields_Config --></label>
+        <name>Portal_Registration_Fields_Config</name>
+    </fieldSets>
+    <fieldSets>
+        <label>PrecisionLender Prix</label>
+        <name>PrecisionLender_Pricing</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Expere_Comm_DocPrep --></label>
+        <name>WKEDP__Expere_Comm_DocPrep</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Interface utilisateur de recherche Champs</label>
+        <name>nFORCE__UI_Lookup_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- -D Portal Registration Fields --></label>
+        <name>nPortal__Portal_Registration_Fields</name>
+    </fieldSets>
+    <fields>
+        <label><!-- AutoRemoveManagedLicense --></label>
+        <name>AutoRemoveManagedLicense__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the person is a demo user and will show in the &quot;Demo Personas&quot; component in the utility bar.  This can be changed on the user page or through the gear icon in the Demo Personas component. --></help>
+        <label><!-- Demo User --></label>
+        <name>DemoUser__c</name>
+    </fields>
+    <fields>
+        <help>Sélectionnez l&apos;état qui a émis la licence hypothécaire.</help>
+        <label>État de licence hypothécaire</label>
+        <name>LLC_BI__Mortgage_License_State__c</name>
+    </fields>
+    <fields>
+        <help>Entrez le numéro unique de licence hypothécaire de l&apos;utilisateur.</help>
+        <label>Licence hypothécaire</label>
+        <name>LLC_BI__Mortgage_License__c</name>
+    </fields>
+    <fields>
+        <help>Entrez le numéro unique de système national de licence hypothécaire (LNM) de l&apos;utilisateur.</help>
+        <label>LNM</label>
+        <name>LLC_BI__NMLS__c</name>
+    </fields>
+    <fields>
+        <label>officier Numéro</label>
+        <name>LLC_BI__Officer_Number__c</name>
+    </fields>
+    <fields>
+        <label>Sécurisé Autorité individuelle de prêt</label>
+        <name>LLC_BI__Secured_Individual_Lending_Authority__c</name>
+    </fields>
+    <fields>
+        <label>Non garanties Autorité des prêts individ</label>
+        <name>LLC_BI__Unsecured_Individual_Lending_Authority__c</name>
+    </fields>
+    <fields>
+        <label>nCino utilisateur</label>
+        <name>LLC_BI__nCino_User__c</name>
+    </fields>
+    <fields>
+        <help>Cela peut être utilisé pour identifier l&apos;agent de crédit ID ou tout autre code unique utilisé en interne.</help>
+        <label>ID de prêt</label>
+        <name>Lending_ID__c</name>
+    </fields>
+    <fields>
+        <label>Secteur d&apos;activité</label>
+        <name>Line_of_Business__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Finance</masterLabel>
+            <translation>global Finance</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small Business Banking</masterLabel>
+            <translation>Bancaires aux petites entreprises</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wealth</masterLabel>
+            <translation>Richesse</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Critères pour PB locale</label>
+        <name>Locale_Criteria_for_PB__c</name>
+        <picklistValues>
+            <masterLabel>English Australian</masterLabel>
+            <translation>Anglais Australian</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English Canadian</masterLabel>
+            <translation>Anglais canadien</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English U.K</masterLabel>
+            <translation>Angleščina U.K</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English U.S</masterLabel>
+            <translation>Anglais U.S</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Le gestionnaire de gestionnaire</label>
+        <name>Managers_Manager__c</name>
+        <relationshipLabel>Utilisateurs</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Direction primaire</label>
+        <name>Primary_Branch__c</name>
+        <picklistValues>
+            <masterLabel>AACT</masterLabel>
+            <translation><!-- AACT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asheville</masterLabel>
+            <translation><!-- Asheville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benton Harbor</masterLabel>
+            <translation><!-- Benton Harbor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Berrien Springs</masterLabel>
+            <translation><!-- Berrien Springs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bible Way</masterLabel>
+            <translation>Way Bible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buchanan</masterLabel>
+            <translation><!-- Buchanan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double R</masterLabel>
+            <translation><!-- Double R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fletcher</masterLabel>
+            <translation><!-- Fletcher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Griffith</masterLabel>
+            <translation><!-- Griffith --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gwinner</masterLabel>
+            <translation><!-- Gwinner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holland North</masterLabel>
+            <translation>Hollande du Nord</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holland South</masterLabel>
+            <translation>Hollande du Sud</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jenny Lind</masterLabel>
+            <translation><!-- Jenny Lind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marion East</masterLabel>
+            <translation>Marion Est</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marion West</masterLabel>
+            <translation>Marion Ouest</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mortgage Call Center</masterLabel>
+            <translation><!-- Mortgage Call Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Niles North</masterLabel>
+            <translation>Nord niles</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Niles South</masterLabel>
+            <translation>Sud niles</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northwest</masterLabel>
+            <translation>Nord Ouest</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reed Highschool</masterLabel>
+            <translation><!-- Reed Highschool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rogers Ave</masterLabel>
+            <translation><!-- Rogers Ave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sparks</masterLabel>
+            <translation><!-- Sparks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>St. Joseph</masterLabel>
+            <translation>Saint-Joseph</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Statesville</masterLabel>
+            <translation><!-- Statesville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stevensville</masterLabel>
+            <translation><!-- Stevensville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Online</masterLabel>
+            <translation><!-- United Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Van Buren</masterLabel>
+            <translation><!-- Van Buren --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Région primaire</label>
+        <name>Primary_Region__c</name>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N Michigan</masterLabel>
+            <translation><!-- N Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation>Caroline du Nord</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S Michigan/Ohio/Indiana</masterLabel>
+            <translation>S Michigan / Ohio / Indiana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Online</masterLabel>
+            <translation><!-- United Online --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Sécurisé Autorité individuelle de prêt</label>
+        <name>Secured_Individual_Lending_Authority__c</name>
+    </fields>
+    <fields>
+        <label>Identifier modèle</label>
+        <name>Template_Identifier__c</name>
+    </fields>
+    <fields>
+        <label>Non garanties Autorité des prêts individ</label>
+        <name>Unsecured_Individual_Lending_Authority__c</name>
+    </fields>
+    <fields>
+        <help>Il sera utilisé pour maintenir la signature de l&apos;utilisateur pour la génération de formulaires.</help>
+        <label>Signature utilisateur digitalisée</label>
+        <name>User_Digitized_Signature__c</name>
+    </fields>
+    <fields>
+        <help>Cochez la case pour indiquer ce compte utilisateur est utilisé pour importation d&apos;enregistrements via Informatica ou API.</help>
+        <label>nCino données Utilisateur2</label>
+        <name>nBIDCA__nCino_Data_User2__c</name>
+    </fields>
+    <fields>
+        <label>Bridger Mot de passe</label>
+        <name>nBRIDGER__Bridger_Password__c</name>
+    </fields>
+    <fields>
+        <label>Nom d&apos;utilisateur Bridger</label>
+        <name>nBRIDGER__Bridger_Username__c</name>
+    </fields>
+    <fields>
+        <label>A atteint la limite de propriété</label>
+        <name>nPortal__Has_Reached_Ownership_Limit__c</name>
+    </fields>
+    <fields>
+        <label>Est le portail client titulaire du compt</label>
+        <name>nPortal__Is_Customer_Portal_Account_Owner_User__c</name>
+    </fields>
+    <fields>
+        <help>Ce long champ de texte est automatiquement lors de la désactivation d&apos;un portail client utilisateur. Il est utilisé pour capturer tous les documents auxquels l&apos;utilisateur Portal avait partage l&apos;accès.</help>
+        <label>Portail client Histoire Partage</label>
+        <name>nPortal__Sharing_History__c</name>
+    </fields>
+    <fields>
+        <label>Créés par l&apos;utilisateur Engagement clien</label>
+        <name>nPortal__User_Created_Customer_Engagement_PW__c</name>
+    </fields>
+    <fields>
+        <label>Le sexe</label>
+        <name>nSBA__Gender__c</name>
+        <picklistValues>
+            <masterLabel>“F”, “M”, “U”</masterLabel>
+            <translation>« F », « M », « U »</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Indique si le prêteur est autorisé à faire des prêts en dehors de la leur zone d&apos;opérations.</help>
+        <label>prêtables Région</label>
+        <name>nSBA__Lendable_Region__c</name>
+    </fields>
+    <fields>
+        <label>Prêteur Numéro d&apos;identification fiscale</label>
+        <name>nSBA__Lender_Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label>Prêteur SBA FIRS</label>
+        <name>nSBA__SBA_Lender_FIRS__c</name>
+    </fields>
+    <fields>
+        <help>Ceci est le numéro LNM du prêteur.</help>
+        <label>Nombre LNM</label>
+        <name>nmls_number__c</name>
+    </fields>
+    <layouts>
+        <layout>Community Member Layout</layout>
+        <layoutType>CommunityMemberLayout</layoutType>
+        <sections>
+            <label>Informations de base</label>
+            <section>Basic Information</section>
+        </sections>
+        <sections>
+            <label>Paramètres Chatter</label>
+            <section>Chatter Settings</section>
+        </sections>
+        <sections>
+            <label>Paramètres linguistiques et régionaux</label>
+            <section>Language And Locale Settings</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>User Layout</layout>
+        <sections>
+            <label><!-- Demo Setup --></label>
+            <section>Demo Setup</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

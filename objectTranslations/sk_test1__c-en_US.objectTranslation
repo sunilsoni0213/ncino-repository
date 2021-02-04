@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>sk test1</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>sk test1</value>
+    </caseValues>
+    <fields>
+        <label><!-- sk check --></label>
+        <name>sk_check__c</name>
+    </fields>
+    <fields>
+        <label><!-- sk picklist --></label>
+        <name>sk_picklist__c</name>
+        <picklistValues>
+            <masterLabel>CI</masterLabel>
+            <translation><!-- CI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VC</masterLabel>
+            <translation><!-- VC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino</masterLabel>
+            <translation><!-- nCino --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- sk text --></label>
+        <name>sk_text__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

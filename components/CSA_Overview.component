@@ -1,0 +1,128 @@
+<apex:component controller="CSA_OverviewController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Overview_Resource, 'Javascript.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.CSA_Overview_Resource, 'Stylesheet.css')}" />
+
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <apex:variable var="outerCount" value="{!1}" />
+            <apex:variable var="innerCountPart1" value="{!1}" />
+            <apex:variable var="innerCountPart2" value="{!1}" />
+            <div class="slds-text-heading--large">
+                <apex:outputtext value="{!$Label.Overview_nCino_Overview}" />
+            </div>
+            <div class="row">
+                <div class="col-xs-1">
+                    <div class="slds-text-heading--small padding-addition-20">
+                        <apex:outputtext value="{!$Label.Overview_Filter_Options}" />
+                    </div>
+                </div>
+                <div class="form-horizontal col-xs-4">
+                    <div class="form-group">
+                        <div class="col-xs-4 content-label">
+                            <div class="content-label">
+                                <label class="form-static-control input-sm">
+                                    <apex:outputtext value="{!$Label.Overview_Branches}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-body">
+                            <apex:selectlist size="1" multiselect="false" value="{!selectedBranch}" styleclass="form-control">
+                                <apex:selectoptions value="{!branchesPicklist}" />
+                            </apex:selectlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-xs-4">
+                    <div class="form-group">
+                        <div class="col-xs-4 content-label">
+                            <div class="content-label">
+                                <label class="form-static-control input-sm">
+                                    <apex:outputtext value="{!$Label.Overview_Loan_Team_Members}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-body">
+                            <apex:selectlist size="1" multiselect="false" value="{!selectedLoanTeamMember}" styleclass="form-control">
+                                <apex:selectoptions value="{!loanTeamMembersPicklist}" />
+                            </apex:selectlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-offset-2 col-xs-1">
+                    <div class="padding-addition-17">
+                        <apex:commandbutton value="{!$Label.Overview_Apply_Filter}" action="{!applyFilter}" styleclass="btn btn-primary" 
+                                            rerender="theform" status="loading" />
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <apex:outputpanel rendered="{!CheckMapSize}" layout="block">
+                <div class="force slds messages error" id="errorMessage">
+                    <label style="cursor: default; padding:15px;" class="alert alert-danger">
+                        <apex:outputtext value="{!$Label.Overview_Error_No_Config}" escape="false" />
+                    </label>
+                </div>
+            </apex:outputpanel>
+
+            <apex:repeat value="{!overviewList}" var="o">
+                <h3 class="slds-section-title--divider font-increase-17">
+                    <apex:outputtext value="{!o}" />
+                </h3>
+                <div class="slds-path-coach">
+                    <div class="slds-grid">
+                        <div class="slds-tabs--path side-padding" role="application">
+                            <ul class="slds-tabs--path__nav" role="tablist" id="line{!outerCount}">
+                                <apex:repeat value="{!overviewList[o]}" var="oList">
+                                    <li class="slds-tabs--path__item {!oList.classActive2}" role="presentation">
+                                        <a class="slds-tabs--path__link" href="#contentpath{!outerCount}{!innerCountPart1}"
+                                            aria-controls="content-path-{!outerCount}{!innerCountPart1}" role="tab" data-toggle="tab"
+                                            onclick="selectedTab(this);">
+                                            <apex:outputtext value="({!oList.stageCount}) {!oList.stageName}" styleclass="slds-tabs--path__title" />
+                                        </a>
+                                    </li>
+                                    <apex:variable var="innerCountPart1" value="{!innerCountPart1 + 1}" />
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <apex:repeat value="{!overviewList[o]}" var="oList">
+                            <div id="contentpath{!outerCount}{!innerCountPart2}" class="tab-pane fade {!oList.classActive}"
+                                    role="tabpanel" aria-labelledby="tab-path-{!outerCount}{!innerCountPart2}">
+                                <div class="slds-grid slds-grid--align-spread">
+                                    <div class="slds-coach__keys slds-size--1-of-2 m--left-x-large">
+                                        <div class="slds-grid slds-grid--align-spread">
+                                            <h2 class="slds-text-heading--label slds-p-bottom--small">
+                                                <apex:outputlink value="{!oList.reportId}">
+                                                    {!oList.stageName}
+                                                </apex:outputlink>
+                                            </h2>
+                                            <span class="slds-text-body--small">
+                                                <apex:outputtext value="{!oList.stageCount}" styleclass="label label-primary" />
+                                            </span>
+                                        </div>
+                                        <dl class="coach__list slds-dl--horizontal">
+                                            <apex:repeat value="{!oList.statusList}" var="sList">
+                                                <dt class="slds-coach__item slds-dl--horizontal__label">
+                                                    <apex:outputtext value="{!sList.statusName}" />
+                                                </dt>
+                                                <dd class="slds-coach__value slds-dl--horizontal__detail">
+                                                    <apex:outputtext value="{!sList.statusCount}" />
+                                                </dd>
+                                            </apex:repeat>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <apex:variable var="innerCountPart2" value="{!innerCountPart2 + 1}" />
+                        </apex:repeat>
+                    </div>
+                </div>
+                <apex:variable var="outerCount" value="{!outerCount + 1}" />
+                <br/>
+            </apex:repeat>
+        </apex:form>
+    </div>
+</apex:component>

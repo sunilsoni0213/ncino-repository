@@ -1,0 +1,9 @@
+<apex:page standardStylesheets="false" tabStyle="LLC_BI__Loan__c">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageBlockButtons >
+            <apex:commandLink value="Document Preparation" styleClass="btn" style="text-decoration: none" action="https://c.na14.content.force.com/servlet/servlet.FileDownload?file=0155w000003YOD0" immediate="true" target="_blank" />
+            </apex:pageBlockButtons>
+        </apex:pageblock>
+   </apex:form>
+</apex:page>

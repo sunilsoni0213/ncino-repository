@@ -1,0 +1,140 @@
+<apex:component allowdml="true" controller="CSA_PSCConfigurationController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Javascript.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Stylesheet.css')}" />
+
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <div class="force messages success" id="successMessage" />
+            <div class="force messages error" id="errorMessage" />
+            <div class="force messages warning" id="warningMessage" />
+            <div class="row">
+                <div class="form-horizontal col-md-4">
+                    <div class="form-group">
+                        <div class="col-xs-4">
+                            <div class="content-label">
+                                <label class="form-static-control input-sm">
+                                    <abbr class="slds-required" title="required">*</abbr>
+                                    <apex:outputtext value="{!$Label.PSC_Config_Tool_Select_Stages}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-body">
+                            <apex:selectlist size="12" multiselect="true" styleclass="form-control" value="{!selectedStages}">
+                                <apex:selectoptions value="{!stagePicklist}" />
+                            </apex:selectlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-4">
+                    <div class="form-group">
+                        <div class="col-xs-4">
+                            <div class="content-label">
+                                <label class="form-static-control input-sm">
+                                    <abbr class="slds-required" title="required">*</abbr>
+                                    <apex:outputtext value="{!$Label.PSC_Config_Tool_Select_Status}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-body">
+                            <apex:selectlist size="12" multiselect="true" styleclass="form-control" value="{!selectedStatus}">
+                                <apex:selectoptions value="{!statusPicklist}" />
+                            </apex:selectlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-4">
+                    <div class="form-group">
+                        <div class="col-xs-4">
+                            <div class="content-label">
+                                <label class="form-static-control input-sm">
+                                    <abbr class="slds-required" title="required">*</abbr>
+                                    <apex:outputtext value="{!$Label.PSC_Config_Tool_Select_Usage}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-body">
+                            <label class="slds-checkbox" style="cursor:pointer">
+                                <apex:inputcheckbox value="{!isClosed}" styleclass="slds-hide" />
+                                <span class="slds-checkbox--faux"></span>
+                                <apex:outputtext value="{!$Label.PSC_Config_Tool_Is_Closed}" styleclass="slds-form-element__label" style="padding-left:5px;" />
+                            </label>
+                            <label class="slds-checkbox" style="cursor:pointer">
+                                <apex:inputcheckbox value="{!isBooked}" styleclass="slds-hide" />
+                                <span class="slds-checkbox--faux"></span>
+                                <apex:outputtext value="{!$Label.PSC_Config_Tool_Is_Booked}" styleclass="slds-form-element__label" style="padding-left:5px;" />
+                            </label>
+                            <label class="slds-checkbox" style="cursor:pointer">
+                                <apex:inputcheckbox value="{!isReadyToTransmit}" styleclass="slds-hide" />
+                                <span class="slds-checkbox--faux"></span>
+                                <apex:outputtext value="{!$Label.PSC_Config_Tool_Is_Ready_to_Transmit}" styleclass="slds-form-element__label" style="padding-left:5px;" />
+                            </label>
+                            <label class="slds-checkbox" style="cursor:pointer">
+                                <apex:inputcheckbox value="{!isExcluded}" styleclass="slds-hide" />
+                                <span class="slds-checkbox--faux"></span>
+                                <apex:outputtext value="{!$Label.PSC_Config_Tool_Is_Excluded_from_Stage_Duration}" styleclass="slds-form-element__label" style="padding-left:5px;" />
+                            </label>
+                            <label class="control-label" style="text-align:left !important">
+                                <apex:outputtext value="{!$Label.PSC_Config_Tool_External_Stage_Name}" />
+                            </label>
+                            <apex:selectlist size="1" multiselect="false" styleclass="form-control" value="{!selectedExternalStages}">
+                                <apex:selectoptions value="{!externalStagePicklist}" />
+                            </apex:selectlist>
+                            <label class="control-label" style="text-align:left !important">
+                                <apex:outputtext value="{!$Label.PSC_Config_Tool_External_Stage_Order}" />
+                            </label>
+                            <apex:input value="{!externalStageOrder}" type="number" styleclass="form-control input-sm"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal col-md-12">
+                    <div class="form-group">
+                        <div class="col-xs-4">
+                            <div class="content-label">
+                                <label class="form-static-control input-sm">
+                                    <abbr class="slds-required" title="required">*</abbr>
+                                    <apex:outputtext value="{!$Label.PSC_Config_Tool_Select_Product_Types}" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 content-body">
+                            <apex:selectlist size="6" multiselect="true" styleclass="form-control" value="{!selectedProductTypes}">
+                                <apex:selectoptions value="{!productTypePicklist}" />
+                            </apex:selectlist>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.PSC_Config_Tool_Save}" action="{!productStateConfigSave}" 
+                                            rerender="theform, productTypeList, overview" status="loading" />
+                        <apex:commandbutton styleclass="btn btn-link" value="{!$Label.PSC_Config_Tool_Clear}" action="{!clear}" 
+                                            rerender="theform" status="loading" />
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                jQuery(function() {
+                    if('{!successMessage}' != '') {
+                        jQuery('#successMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-success">{!successMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-success").remove();
+			            },5000);
+                    }
+
+                    if('{!warningMessage}' != '') {
+                        jQuery('#successMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-warning">{!warningMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-warning").remove();
+			            },5000);
+                    }
+
+                    if('{!errorMessage}' != '') {
+                        jQuery('#errorMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-danger">{!errorMessage}</label>');
+                    }
+                });
+            </script>
+        </apex:form>
+    </div>
+</apex:component>

@@ -1,0 +1,58 @@
+<apex:page doctype="html-5.0">
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.PSC_Config_Tool_Product_State_Config_Summary}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_PSCOverview />
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.PSC_Config_Tool_PSC_Configuration}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_PSCConfiguration />
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <div>
+                <apex:outputtext value="{!$Label.PSC_Config_Tool_Product_Types_List}" />
+            </div>
+        </apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div class="col-md-12">
+                        <c:CSA_PSCProductTypes />
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

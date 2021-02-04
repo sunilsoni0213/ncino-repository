@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>
+		The component displays a Visualforce page on a lightning record page.
+	</aura:description>
+</aura:documentation>

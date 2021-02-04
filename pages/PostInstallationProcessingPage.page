@@ -1,0 +1,22 @@
+<apex:page controller="TreasuryToolPostInstallController" sidebar="false">
+    <apex:form id="form" >
+        <apex:sectionHeader title="{!$Label.Treasury_Tool_PostInstall_Page_Title}"
+        	subtitle="{!$Label.Treasury_Tool_PostInstall_Page_Subtitle}" />
+        <apex:pageMessages id="messages"/>
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom">
+            	<apex:commandButton value="{!$Label.Treasury_Tool_Configuration_Installation_Button}" action="{!performInstall}" rendered="{!isInstalled==false}" />
+            	<apex:commandButton value="{!$Label.Treasury_Tool_Configuration_Uninstallation_Button}" action="{!performUninstall}" rendered="{!isInstalled==true}" />
+            	<apex:commandButton value="{!$Label.Treasury_Tool_Finish_Installation_Button}" action="{!finishInstallation}" />
+            </apex:pageBlockButtons>
+			<apex:outputPanel >
+				<apex:outputText value="{!$Label.Treasury_Tool_Configuration_Description}" />
+			</apex:outputPanel>
+		</apex:pageBlock>
+	</apex:form>
+	
+	<!-- Included to package help label. Do not remove -->
+	<apex:outputPanel rendered="false">
+		<apex:outputText value="{!$Label.Treasury_Tool_Help}"/>
+	</apex:outputPanel>
+</apex:page>

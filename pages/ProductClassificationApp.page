@@ -1,0 +1,104 @@
+<apex:page id="ProductClassificationApp" standardcontroller="Account" extensions="ProductClassificationAppController" showHeader="false" >
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.5.7/angular.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.nFORCE__design_system, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.ncProductClassification,
+            'application/App.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.ncProductClassification,
+            'application/Bootstrap.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.ncProductClassification,
+            'controllers/AppController.js')}" />
+
+    <nFORCE:ncUIIncludes />
+    <nFORCE:ncDataProvidersIncludes />
+    <apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders, 'providers/RemotingManagerProvider.js')}" />
+
+    <div id="ncProductClassification" ng-controller="AppController" ng-cloak="cloak" class="slds">
+    
+<apex:composition template="nFORCE__Template_View_1_Column">
+   <apex:define name="column-content">
+      <apex:composition template="nFORCE__Template_View_Container">
+         <apex:define name="content">
+            <div class="container-fluid">
+
+        <div class="slds-text-heading--medium slds-page-header" role="banner">
+            Customer Needs Evaluation
+        </div>
+
+        <div class="slds-p-horizontal--medium slds-p-top--medium ">
+            <div class="slds-text-heading--medium">
+                Has
+            </div>
+            <div class="text-body--default slds-m-bottom--x-small slds-p-top--small">
+                I can use help text in areas like this to give my relationship managers talking points or offer valuable insight into this relationship.
+            </div>
+            <div class="slds-grid slds-wrap slds-grid--pull-padded ">
+                <div ng-repeat="product in existing" class="slds-has-dividers--around-space slds-p-horizontal--small slds-size--1-of-2 slds-large-size--1-of-4 slds-p-top--small" >
+                    <div class="slds-item slds-tile slds-tile--board slds-grid site-box-shadow" style="box-shadow:0px 4px 4px 0px rgba(0,0,0,.16);">
+                        <div class="slds-tile__detail slds-text-body--small slds-size--3-of-4 slds-p-top--small ">
+                            <p class="slds-text-heading--small slds-text-align--left slds-p-left--small ">{{product}}</p>
+                        </div>
+                        <div class="slds-size--1-of-4 slds-p-right--small">
+                            <span class="slds-icon_container slds-icon-action-description slds-icon_container--circle slds-icon--large" >
+                               <img
+                                       src="{!URLFOR($Resource.nFORCE__design_system, $Label.Needs_Assessment_Has_Icon)}"
+                                       styleClass="slds-button__icon--stateful slds-button__icon--right" />
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-p-horizontal--medium slds-p-top--medium ">
+            <div class="slds-text-heading--medium">
+                Needs
+            </div>
+            <div class="text-body--default slds-m-bottom--x-small slds-p-top--small">
+                I can use help text in areas like this to give my relationship managers talking points or offer valuable insight into this relationship.
+            </div>
+            <div class="slds-grid slds-wrap slds-grid--pull-padded ">
+                <div ng-repeat="product in needed" class="slds-has-dividers--around-space slds-p-horizontal--small slds-size--1-of-2 slds-large-size--1-of-4 slds-p-top--small">
+                    <div class="slds-item slds-tile slds-tile--board slds-grid site-box-shadow" style="box-shadow:0px 4px 4px 0px rgba(0,0,0,.16);">
+                        <div class="slds-tile__detail slds-text-body--small slds-size--3-of-4 slds-p-top--small ">
+                            <p class="slds-text-heading--small slds-text-align--left slds-p-left--small ">{{product}}</p>
+                        </div>
+                        <div class="slds-size--1-of-4 slds-p-right--small">
+                            <span class="slds-icon_container slds-icon-action-priority slds-icon_container--circle slds-icon--large ">
+                               <img
+                                       src="{!URLFOR($Resource.nFORCE__design_system, $Label.Needs_Assessment_Needs_Icon)}"
+                                       styleClass="slds-button__icon--stateful slds-button__icon--right" />
+                            
+                            
+                            
+                            </span>
+                            
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+         </apex:define>
+      </apex:composition>
+   </apex:define>
+</apex:composition>
+
+    
+    </div>
+
+    <script>
+        (function(){
+            'use strict';
+            angular.module('ncDataProviders')
+            .config(function(configProvider){
+                configProvider.setHtmlEncoded({
+                    classificationBuckets: '{!ClassificationBuckets}'
+                });
+            })
+        })();
+    </script>
+</apex:page>

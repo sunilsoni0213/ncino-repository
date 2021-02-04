@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Los votantes tarjeta de registro extranj</label>
+        <name>Comment_Preview__c</name>
+    </fields>
+    <fields>
+        <label>Forma W7 registros médicos ID verifica</label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label>Registros médicos (válidos sólo para dep</label>
+        <name>LLC_BI__Assignment_Group__c</name>
+    </fields>
+    <fields>
+        <help>Introducir el tiempo estimado para completar una tarea</help>
+        <label>Formar W7 DNI tarjeta verifica</label>
+        <name>LLC_BI__Estimated_Time__c</name>
+    </fields>
+    <fields>
+        <label>Verifica formar W7 pasaporte</label>
+        <name>LLC_BI__Group__c</name>
+        <relationshipLabel>Ocupaciones</relationshipLabel>
+    </fields>
+    <fields>
+        <label>El primer nombre de la cuenta del nombre</label>
+        <name>LLC_BI__Maintenance_Type__c</name>
+        <picklistValues>
+            <masterLabel>Add</masterLabel>
+            <translation>Añadir</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change</masterLabel>
+            <translation>Cambio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove</masterLabel>
+            <translation>retirar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Formar W7 Anterior IRSN</label>
+        <name>LLC_BI__Parent_Task__c</name>
+    </fields>
+    <fields>
+        <label>número IRSN del tenedor individual si un</label>
+        <name>LLC_BI__SubType__c</name>
+        <picklistValues>
+            <masterLabel>Add Authorized User</masterLabel>
+            <translation>Añadir Usuario Autorizado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Address Change</masterLabel>
+            <translation>Cambio de dirección</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing Account Update</masterLabel>
+            <translation>Actualizar cuenta de facturación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Address</masterLabel>
+            <translation>Cambiar dirección</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Close Out Service</masterLabel>
+            <translation>Cierre del Servicio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Limit Change</masterLabel>
+            <translation>Cambio Límite de Crédito</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Earnings Credit Adjustment</masterLabel>
+            <translation>Ajuste de las ganancias de crédito</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Security Token Request</masterLabel>
+            <translation>Solicitar una nueva token de seguridad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order New Equipment</masterLabel>
+            <translation>Nuevo Orden Equipo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary Credit Limit Increase</masterLabel>
+            <translation>Aumentar el límite de crédito temporal</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Forma W7 anterior Nombre</label>
+        <name>LLC_BI__isTemplate__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Customer Portal Branding --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Customer Portal Branding --></value>
+    </caseValues>
+    <fields>
+        <help>Cela change la couleur du texte à l&apos;intérieur du corps de l&apos;application. \ R \ n « déterminons votre admissibilité »</help>
+        <label>Corps en-tête d&apos;application (bleu clair)</label>
+        <name>Application_Body_Header__c</name>
+    </fields>
+    <fields>
+        <help>Cela change de l&apos;image dans le portail client qui affiche derrière le texte de bienvenue.</help>
+        <label>Portail client Hero image</label>
+        <name>BackgroundId__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur du bouton principal, vous voyez tout en naviguant à travers l&apos;application et le portail client.</help>
+        <label>Couleur Bouton primaire (Violet)</label>
+        <name>Button_Color__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur de fond pour l&apos;en-tête des choses comme les en-têtes de produits du marché, vos articles-do-tête, etc.</help>
+        <label>Carte en-tête de couleur d&apos;arrière-plan</label>
+        <name>Card_Header_Background_Color__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur du texte sur des choses comme marché et vos articles-do-têtes.</help>
+        <label>Carte-tête Couleur du texte (Rouge)</label>
+        <name>Card_Header_Text_Color__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur du texte des liens pour tableau de bord, comptes, marché et nom d&apos;utilisateur dans le topbar dans portail client</help>
+        <label>Tableau de bord Link Text (Jaune)</label>
+        <name>Dashboard_Link_Text__c</name>
+    </fields>
+    <fields>
+        <help>Change l&apos;en-tête principale sur le Portail Client Dashboard.</help>
+        <label>Tableau de bord Topbar tête (vert)</label>
+        <name>Dashboard_Topbar_Header__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur de toutes les icônes en application de portail et en ligne, y compris la section principale de l&apos;application et des tuiles.</help>
+        <label>Couleur de l&apos;icône (rouge)</label>
+        <name>Icon_Color__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur pour les points de navigation et barre à chaque fois que la scène est active.</help>
+        <label>Barre de navigation couleur (vert)</label>
+        <name>Navigation_Bar_Color__c</name>
+    </fields>
+    <fields>
+        <help>Modifie la couleur du texte pour les étapes de la navigation.</help>
+        <label>Navigation Couleur Texte (Vert)</label>
+        <name>Navigation_Text_Color__c</name>
+    </fields>
+    <fields>
+        <help>Cela change l&apos;image qui se trouve en haut de tous les écrans d&apos;application en ligne.</help>
+        <label>Demande en ligne Hero image</label>
+        <name>Online_Application_Hero_Image__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur principale du texte d&apos;en-tête sur tous les écrans d&apos;application en ligne.</help>
+        <label>Demande en ligne Topbar Texte (jaune)</label>
+        <name>Online_Application_Topbar_Header_Text__c</name>
+    </fields>
+    <fields>
+        <help>Cela change la couleur du bouton secondaire (si une section a un deuxième bouton dessus). \ R \ n « Appliquer cette entreprise » bouton sur votre itinéraire d&apos;affaires.</help>
+        <label>Couleur Bouton secondaire (Bleu)</label>
+        <name>Secondary_Button_Color__c</name>
+    </fields>
+    <fields>
+        <help>Cela modifie le texte d&apos;en-tête pour les carreaux (foire aux questions, l&apos;équipe prêt, Besoin d&apos;aide) dans le portail client et demande en ligne</help>
+        <label>Carrelage Texte en-tête (vert)</label>
+        <name>Tile_Header_Text__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Customer Portal Branding Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+    <webLinks>
+        <label>générer l&apos;image de marque</label>
+        <name>Generate_Branding</name>
+    </webLinks>
+</CustomObjectTranslation>

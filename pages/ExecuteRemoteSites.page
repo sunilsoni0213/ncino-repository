@@ -1,0 +1,22 @@
+<apex:page >
+	<apex:includeScript value="/soap/ajax/21.0/connection.js"/>
+	<apex:includeScript value="/soap/ajax/21.0/apex.js"/>
+    <script type="text/javascript">
+    	function testRemote(){
+            sforce.connection.sessionId = '{!$Api.Session_ID}';
+    		try {
+ 			var id = sforce.apex.execute("MetadataAPIUtility","createRemoteSiteSettings",{});
+                alert(id);
+                } catch(e) {
+  				alert(e)
+				}
+            }
+  
+   </script>
+    <div>
+        <br/>
+        <button onclick="testRemote();">
+            Configure Remote Sites
+        </button>
+    </div>
+</apex:page>

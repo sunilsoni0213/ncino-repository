@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to track records related to the configuration of nCino.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <description>Please select the role of the person responsible for completing this configuration task.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select the role of the person responsible for completing this configuration task.</inlineHelpText>
+        <label>Assigned To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>nCino PM</fullName>
+                    <default>false</default>
+                    <label>nCino PM</label>
+                </value>
+                <value>
+                    <fullName>nCino IS</fullName>
+                    <default>false</default>
+                    <label>nCino IS</label>
+                </value>
+                <value>
+                    <fullName>nCino Data Team</fullName>
+                    <default>false</default>
+                    <label>nCino Data Team</label>
+                </value>
+                <value>
+                    <fullName>Bank Name Here - PM</fullName>
+                    <default>false</default>
+                    <label>Bank Name Here - PM</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Config_Category__c</fullName>
+        <description>This picklist is dependent upon the Configuration Phase.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This picklist is dependent upon the Configuration Phase.</inlineHelpText>
+        <label>Config Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Config_Phase__c</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Approval Processes</fullName>
+                    <default>false</default>
+                    <label>Approval Processes</label>
+                </value>
+                <value>
+                    <fullName>Business Specifications</fullName>
+                    <default>false</default>
+                    <label>Business Specifications</label>
+                </value>
+                <value>
+                    <fullName>Configuration QA</fullName>
+                    <default>false</default>
+                    <label>Configuration QA</label>
+                </value>
+                <value>
+                    <fullName>Credit Reports</fullName>
+                    <default>false</default>
+                    <label>Credit Reports</label>
+                </value>
+                <value>
+                    <fullName>Custom Config</fullName>
+                    <default>false</default>
+                    <label>Custom Config</label>
+                </value>
+                <value>
+                    <fullName>Data Load</fullName>
+                    <default>false</default>
+                    <label>Data Load</label>
+                </value>
+                <value>
+                    <fullName>Data QA</fullName>
+                    <default>false</default>
+                    <label>Data QA</label>
+                </value>
+                <value>
+                    <fullName>Discovery &amp; Requirements</fullName>
+                    <default>false</default>
+                    <label>Discovery &amp; Requirements</label>
+                </value>
+                <value>
+                    <fullName>Go-Live</fullName>
+                    <default>false</default>
+                    <label>Go-Live</label>
+                </value>
+                <value>
+                    <fullName>Install Base Organization &amp; nCino Application</fullName>
+                    <default>false</default>
+                    <label>Install Base Organization &amp; nCino Application</label>
+                </value>
+                <value>
+                    <fullName>Laser Pro / FLO Document Preparation</fullName>
+                    <default>false</default>
+                    <label>Laser Pro / FLO Document Preparation</label>
+                </value>
+                <value>
+                    <fullName>List Views</fullName>
+                    <default>false</default>
+                    <label>List Views</label>
+                </value>
+                <value>
+                    <fullName>Loan Process</fullName>
+                    <default>false</default>
+                    <label>Loan Process</label>
+                </value>
+                <value>
+                    <fullName>Miscellaneous / Other</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous / Other</label>
+                </value>
+                <value>
+                    <fullName>Organizational Configuration</fullName>
+                    <default>false</default>
+                    <label>Organizational Configuration</label>
+                </value>
+                <value>
+                    <fullName>Page Layout &amp; Field Updates/Additions</fullName>
+                    <default>false</default>
+                    <label>Page Layout &amp; Field Updates/Additions</label>
+                </value>
+                <value>
+                    <fullName>Pilot Team Training</fullName>
+                    <default>false</default>
+                    <label>Pilot Team Training</label>
+                </value>
+                <value>
+                    <fullName>Post-Training Updates</fullName>
+                    <default>false</default>
+                    <label>Post-Training Updates</label>
+                </value>
+                <value>
+                    <fullName>Pre-Pilot Testing</fullName>
+                    <default>false</default>
+                    <label>Pre-Pilot Testing</label>
+                </value>
+                <value>
+                    <fullName>Product &amp; Document Catalogs</fullName>
+                    <default>false</default>
+                    <label>Product &amp; Document Catalogs</label>
+                </value>
+                <value>
+                    <fullName>Project Initiation</fullName>
+                    <default>false</default>
+                    <label>Project Initiation</label>
+                </value>
+                <value>
+                    <fullName>Queue Management</fullName>
+                    <default>false</default>
+                    <label>Queue Management</label>
+                </value>
+                <value>
+                    <fullName>Relationship Statistics</fullName>
+                    <default>false</default>
+                    <label>Relationship Statistics</label>
+                </value>
+                <value>
+                    <fullName>Reports &amp; Dashboards</fullName>
+                    <default>false</default>
+                    <label>Reports &amp; Dashboards</label>
+                </value>
+                <value>
+                    <fullName>Risk Rating</fullName>
+                    <default>false</default>
+                    <label>Risk Rating</label>
+                </value>
+                <value>
+                    <fullName>Search &amp; Lookup Filters</fullName>
+                    <default>false</default>
+                    <label>Search &amp; Lookup Filters</label>
+                </value>
+                <value>
+                    <fullName>Spreads &amp; Spreading Templates</fullName>
+                    <default>false</default>
+                    <label>Spreads &amp; Spreading Templates</label>
+                </value>
+                <value>
+                    <fullName>Validation Rules</fullName>
+                    <default>false</default>
+                    <label>Validation Rules</label>
+                </value>
+                <value>
+                    <fullName>Workflow &amp; Alerts</fullName>
+                    <default>false</default>
+                    <label>Workflow &amp; Alerts</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>1 - Define</controllingFieldValue>
+                <valueName>Miscellaneous / Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2 - Integrate</controllingFieldValue>
+                <valueName>Business Specifications</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2 - Integrate</controllingFieldValue>
+                <valueName>Discovery &amp; Requirements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>2 - Integrate</controllingFieldValue>
+                <valueName>Project Initiation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Approval Processes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Credit Reports</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Custom Config</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Data Load</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Install Base Organization &amp; nCino Application</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Laser Pro / FLO Document Preparation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>List Views</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Loan Process</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Organizational Configuration</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Page Layout &amp; Field Updates/Additions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Product &amp; Document Catalogs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Queue Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Relationship Statistics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Reports &amp; Dashboards</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Risk Rating</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Search &amp; Lookup Filters</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Spreads &amp; Spreading Templates</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Validation Rules</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>3 - Discover</controllingFieldValue>
+                <valueName>Workflow &amp; Alerts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>4 - Configure</controllingFieldValue>
+                <valueName>Configuration QA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>4 - Configure</controllingFieldValue>
+                <valueName>Data QA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>4 - Configure</controllingFieldValue>
+                <valueName>Pre-Pilot Testing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>5 - Validate</controllingFieldValue>
+                <valueName>Pilot Team Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>5 - Validate</controllingFieldValue>
+                <valueName>Post-Training Updates</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>6 - Deploy</controllingFieldValue>
+                <valueName>Go-Live</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Config_Phase__c</fullName>
+        <description>These are the different phases of an nCino configuration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>These are the different phases of an nCino configuration.</inlineHelpText>
+        <label>Config Phase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Define</fullName>
+                    <default>false</default>
+                    <label>1 - Define</label>
+                </value>
+                <value>
+                    <fullName>2 - Integrate</fullName>
+                    <default>false</default>
+                    <label>2 - Integrate</label>
+                </value>
+                <value>
+                    <fullName>3 - Discover</fullName>
+                    <default>false</default>
+                    <label>3 - Discover</label>
+                </value>
+                <value>
+                    <fullName>4 - Configure</fullName>
+                    <default>false</default>
+                    <label>4 - Configure</label>
+                </value>
+                <value>
+                    <fullName>5 - Validate</fullName>
+                    <default>false</default>
+                    <label>5 - Validate</label>
+                </value>
+                <value>
+                    <fullName>6 - Deploy</fullName>
+                    <default>false</default>
+                    <label>6 - Deploy</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Config_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Config Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Working</fullName>
+                    <default>false</default>
+                    <label>Working</label>
+                </value>
+                <value>
+                    <fullName>Pending Client Action</fullName>
+                    <default>false</default>
+                    <label>Pending Client Action</label>
+                </value>
+                <value>
+                    <fullName>Hold</fullName>
+                    <default>false</default>
+                    <label>Hold</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Date_Completed__c</fullName>
+        <description>Enter the Date when a configuration task was completed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Date when a configuration task was completed.</inlineHelpText>
+        <label>Date Completed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Hours_to_Complete__c</fullName>
+        <description>Used to track the time it takes to complete a configuration task.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the number of hours it took to complete this configuration task.  Partial hours should be entered as a decimal (i.e., 15 minutes should be entered as .25).</inlineHelpText>
+        <label>Hours to Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent_Complete__c</fullName>
+        <externalId>false</externalId>
+        <label>Percent Complete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>10 %</fullName>
+                    <default>false</default>
+                    <label>10 %</label>
+                </value>
+                <value>
+                    <fullName>20 %</fullName>
+                    <default>false</default>
+                    <label>20 %</label>
+                </value>
+                <value>
+                    <fullName>30 %</fullName>
+                    <default>false</default>
+                    <label>30 %</label>
+                </value>
+                <value>
+                    <fullName>40 %</fullName>
+                    <default>false</default>
+                    <label>40 %</label>
+                </value>
+                <value>
+                    <fullName>50 %</fullName>
+                    <default>false</default>
+                    <label>50 %</label>
+                </value>
+                <value>
+                    <fullName>60 %</fullName>
+                    <default>false</default>
+                    <label>60 %</label>
+                </value>
+                <value>
+                    <fullName>70 %</fullName>
+                    <default>false</default>
+                    <label>70 %</label>
+                </value>
+                <value>
+                    <fullName>80 %</fullName>
+                    <default>false</default>
+                    <label>80 %</label>
+                </value>
+                <value>
+                    <fullName>90 %</fullName>
+                    <default>false</default>
+                    <label>90 %</label>
+                </value>
+                <value>
+                    <fullName>100 %</fullName>
+                    <default>false</default>
+                    <label>100 %</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <description>Enter the Project Name related to this configuration task.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Project Name related to this configuration task.</inlineHelpText>
+        <label>Project</label>
+        <referenceTo>Project__c</referenceTo>
+        <relationshipLabel>Configuration Tasks</relationshipLabel>
+        <relationshipName>Configuration_Tasks</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Status_Notes_Comments__c</fullName>
+        <description>Please enter any relevant configuration notes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter any relevant configuration notes.</inlineHelpText>
+        <label>Status Notes / Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Task_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Marking a task as complete will automatically update the completion date and set percent complete to 100%.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Marking a task as complete will automatically update the completion date and set percent complete to 100%.</inlineHelpText>
+        <label>Task Complete</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Task_Detail__c</fullName>
+        <description>Please enter a description of the configuration task to be tested &amp; completed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a description of the configuration task to be tested &amp; completed.</inlineHelpText>
+        <label>Task Detail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>lookupKey__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Used as a Unique Identifier when loading configuration tasks with the nCino Logbook.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used as a Unique Identifier when loading configuration tasks with the nCino Logbook.</inlineHelpText>
+        <label>lookupKey</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Configuration Task</label>
+    <nameField>
+        <displayFormat>Config-{00000}</displayFormat>
+        <label>Config Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Configuration Tasks</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Config_Phase__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Config_Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Task_Detail__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Assigned_To__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date_Completed__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Hours_to_Complete__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status_Notes_Comments__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Config_Phase__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Config_Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Task_Detail__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Assigned_To__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date_Completed__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Hours_to_Complete__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status_Notes_Comments__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Config_Phase__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Config_Category__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Task_Detail__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Assigned_To__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date_Completed__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Hours_to_Complete__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status_Notes_Comments__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Config_Phase__c</searchFilterFields>
+        <searchFilterFields>Config_Category__c</searchFilterFields>
+        <searchFilterFields>Task_Detail__c</searchFilterFields>
+        <searchFilterFields>Assigned_To__c</searchFilterFields>
+        <searchFilterFields>Date_Completed__c</searchFilterFields>
+        <searchFilterFields>Hours_to_Complete__c</searchFilterFields>
+        <searchResultsAdditionalFields>Config_Phase__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Config_Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Task_Detail__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assigned_To__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_Completed__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Hours_to_Complete__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status_Notes_Comments__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Hours_to_Complete_Required</fullName>
+        <active>true</active>
+        <description>You must enter the approximate amount of time it took to complete this task before saving the record as complete</description>
+        <errorConditionFormula>AND(
+ISBLANK(Hours_to_Complete__c),
+Task_Complete__c = True)</errorConditionFormula>
+        <errorDisplayField>Hours_to_Complete__c</errorDisplayField>
+        <errorMessage>You must enter the approximate amount of time it took to complete this task before saving the record as complete</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Working_Requires_Percent_Complete</fullName>
+        <active>true</active>
+        <description>If a Configuraiton Task is in the &apos;Working&apos; Status, please assign a completion percentage</description>
+        <errorConditionFormula>AND( 
+ISPICKVAL(Config_Status__c , &apos;Working&apos;), 
+ISPICKVAL(Percent_Complete__c , &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>Percent_Complete__c</errorDisplayField>
+        <errorMessage>If a Configuraiton Task is in the &apos;Working&apos; Status, please assign a completion percentage</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

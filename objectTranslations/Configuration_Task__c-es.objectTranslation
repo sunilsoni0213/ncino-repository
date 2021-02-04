@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Configuration Task --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Configuration Task --></value>
+    </caseValues>
+    <fields>
+        <help>Por favor, seleccione el papel de la persona responsable de completar esta tarea de configuración.</help>
+        <label>Formulario 1919 Firma Fecha</label>
+        <name>Assigned_To__c</name>
+        <picklistValues>
+            <masterLabel>Bank Name Here - PM</masterLabel>
+            <translation>Nombre del banco aquí - PM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino Data Team</masterLabel>
+            <translation>Equipo de datos de nCino</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino IS</masterLabel>
+            <translation>nCino ES</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>nCino PM</masterLabel>
+            <translation><!-- nCino PM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Esta lista de expedición depende de la fase de configuración.</help>
+        <label>Fecha de la Firma Formulario 413</label>
+        <name>Config_Category__c</name>
+        <picklistValues>
+            <masterLabel>Approval Processes</masterLabel>
+            <translation>Los procesos de aprobación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Specifications</masterLabel>
+            <translation>Especificaciones de negocio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Configuration QA</masterLabel>
+            <translation>QA configuración</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Reports</masterLabel>
+            <translation>Los informes de crédito</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Config</masterLabel>
+            <translation>configuración personalizada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Load</masterLabel>
+            <translation>carga de datos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data QA</masterLabel>
+            <translation>Los datos de control de calidad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discovery &amp; Requirements</masterLabel>
+            <translation>Descubrimiento y Requisitos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go-Live</masterLabel>
+            <translation>Ir a vivir</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Install Base Organization &amp; nCino Application</masterLabel>
+            <translation>Instalar Organización Base y Aplicación nCino</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laser Pro / FLO Document Preparation</masterLabel>
+            <translation>Laser Pro / FLO preparación de documentos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List Views</masterLabel>
+            <translation>Vistas de lista</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loan Process</masterLabel>
+            <translation>El proceso de préstamo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous / Other</masterLabel>
+            <translation>Varios / Otros</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organizational Configuration</masterLabel>
+            <translation>Configuración de la organización</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Page Layout &amp; Field Updates/Additions</masterLabel>
+            <translation>Diseño de página y actualizaciones Campo / Adiciones</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pilot Team Training</masterLabel>
+            <translation>Formación de pilotos del equipo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post-Training Updates</masterLabel>
+            <translation>PoSCAPACITACIóN Actualizaciones</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Pilot Testing</masterLabel>
+            <translation>Pre-Prueba Piloto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product &amp; Document Catalogs</masterLabel>
+            <translation>Documento de productos y Catálogos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Initiation</masterLabel>
+            <translation>La iniciación del proyecto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queue Management</masterLabel>
+            <translation>Gestión de colas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relationship Statistics</masterLabel>
+            <translation>relación Estadística</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reports &amp; Dashboards</masterLabel>
+            <translation>Informes y cuadros de mando</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Rating</masterLabel>
+            <translation>Calificación de riesgo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search &amp; Lookup Filters</masterLabel>
+            <translation>Búsqueda y Filtros de búsqueda</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spreads &amp; Spreading Templates</masterLabel>
+            <translation>Los diferenciales y plantillas Spreading</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validation Rules</masterLabel>
+            <translation>Las reglas de validación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow &amp; Alerts</masterLabel>
+            <translation>Flujo de trabajo y Alertas</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Estas son las diferentes fases de una configuración nCino.</help>
+        <label>Fecha de la Firma Formulario 413 por el</label>
+        <name>Config_Phase__c</name>
+        <picklistValues>
+            <masterLabel>1 - Define</masterLabel>
+            <translation>1 - Definir</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Integrate</masterLabel>
+            <translation>2 - Integrar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Discover</masterLabel>
+            <translation>3 - Descubrir</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Configure</masterLabel>
+            <translation>4 - Configurar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Validate</masterLabel>
+            <translation>5 - Validar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 - Deploy</masterLabel>
+            <translation>6 - Implementar</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Incluir otro individuo en este estado fi</label>
+        <name>Config_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation>Completar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation>Sostener</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nuevo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Client Action</masterLabel>
+            <translation>A la espera de Acción de cliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working</masterLabel>
+            <translation>Trabajando</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Introduzca la fecha en que se completó una tarea de configuración.</help>
+        <label>contactos</label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <help>Por favor, introduzca el número de horas que se tardó en completar esta tarea de configuración. horas parciales deben introducirse como un decimal (es decir, 15 minutos deben introducirse como 0,25).</help>
+        <label>volver cónyuge</label>
+        <name>Hours_to_Complete__c</name>
+    </fields>
+    <fields>
+        <label>contactos</label>
+        <name>Percent_Complete__c</name>
+        <picklistValues>
+            <masterLabel>10 %</masterLabel>
+            <translation>10%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100 %</masterLabel>
+            <translation>100%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 %</masterLabel>
+            <translation>20%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 %</masterLabel>
+            <translation>30%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40 %</masterLabel>
+            <translation>40%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50 %</masterLabel>
+            <translation>50%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 %</masterLabel>
+            <translation>60%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70 %</masterLabel>
+            <translation>70%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80 %</masterLabel>
+            <translation>80%</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 %</masterLabel>
+            <translation>90%</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Introduzca el nombre del proyecto en relación con esta tarea de configuración.</help>
+        <label>Formar G845 Firma Fecha</label>
+        <name>Project__c</name>
+        <relationshipLabel>Tareas de configuración</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Por favor, introduzca las notas de configuración relevantes.</help>
+        <label>Inicio Código de País</label>
+        <name>Status_Notes_Comments__c</name>
+    </fields>
+    <fields>
+        <help>Marcado de una tarea como completada se actualizará automáticamente la fecha de finalización y establecer el porcentaje completado al 100%.</help>
+        <label>El código postal de Asuntos Exteriores d</label>
+        <name>Task_Complete__c</name>
+    </fields>
+    <fields>
+        <help>Por favor, introduzca una descripción de la tarea de configuración a ensayar y completó.</help>
+        <label>El Nombre de Asuntos Exteriores Estado /</label>
+        <name>Task_Detail__c</name>
+    </fields>
+    <fields>
+        <help>Se utiliza como un identificador único al cargar las tareas de configuración con el nCino Libro de registro.</help>
+        <label>Formulario Oficial G845 Prestamista</label>
+        <name>lookupKey__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Config Number --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>Debe introducir la cantidad aproximada de tiempo que se tardó en completar esta tarea antes de guardar el registro lo más completo</errorMessage>
+        <name>Hours_to_Complete_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Si un configuraiton de tareas se encuentra en el estado de &apos;Trabajo&apos;, asigne un porcentaje de finalización</errorMessage>
+        <name>Working_Requires_Percent_Complete</name>
+    </validationRules>
+</CustomObjectTranslation>

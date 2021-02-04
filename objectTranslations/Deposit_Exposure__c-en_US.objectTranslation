@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Deposit Exposure</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Deposit Exposure</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parameters --></label>
+        <name>Additional_Parameters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship Types --></label>
+        <name>Relationship_Types__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stages --></label>
+        <name>Stages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Statuses --></label>
+        <name>Statuses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Balance --></label>
+        <name>Use_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Ownership --></label>
+        <name>Use_Ownership__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

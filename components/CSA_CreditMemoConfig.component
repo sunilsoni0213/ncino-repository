@@ -1,0 +1,301 @@
+<apex:component layout="none" allowdml="true" controller="CSA_CreditMemoConfigController">
+    <apex:includescript value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Javascript.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Stylesheet.css')}" />
+
+    <div class="force slds">
+        <apex:form id="theform">
+            <apex:actionstatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+            <div class="force messages success" id="successMessage" />
+            <div class="force messages error" id="errorMessage" />
+            <apex:outputpanel rendered="{!showHome}">
+                <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Credit_memo_Wizard_Add_New}" action="{!creditMemoNew}" 
+                                    rerender="theform" status="loading" />
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <apex:repeat value="{!creditMemoListFieldSet}" var="f">
+                                    <th>
+                                        <apex:outputtext value="{!f.label}" />
+                                    </th>
+                                </apex:repeat>
+                                <th>
+                                    <apex:outputtext value="{!$Label.Credit_Memo_Wizard_Actions}" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!creditMemoTempaltes}" var="c">
+                                <tr>
+                                    <apex:repeat value="{!creditMemoListFieldSet}" var="f">
+                                        <td>
+                                            <div class="slds-truncate">
+                                                <apex:outputfield value="{!c[f.fieldPath]}" />
+                                            </div>
+                                        </td>
+                                    </apex:repeat>
+                                    <td>
+                                        <apex:commandbutton styleclass="btn btn-xs btn-link" value="{!$Label.Credit_Memo_Wizard_Delete}" 
+                                                            action="{!creditMemoDelete}" rerender="theform" status="loading" 
+                                                            onclick="if(!confirm('{!$Label.Credit_Memo_Wizard_Confirm_Msg}')){return false;}">
+                                            <apex:param name="creditMemoId" value="{!c.Id}" assignto="{!creditMemoId}" />
+                                        </apex:commandbutton>
+                                        <apex:commandbutton styleclass="btn btn-xs btn-link" value="{!$Label.Credit_Memo_Wizard_Edit}" 
+                                                            action="{!creditMemoViewEdit}" rerender="theform" status="loading">
+                                            <apex:param name="creditMemoId" value="{!c.Id}" assignto="{!creditMemoId}" />
+                                        </apex:commandbutton>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </apex:outputpanel>
+
+            <apex:outputpanel rendered="{!showCreditMemoNew || showCreditMemoEdit}">
+                <apex:repeat value="{!creditMemoNewEditFieldSet}" var="f">
+                    <div class="form-horizontal col-md-6">
+                        <div class="form-group">
+                            <div class="col-sm-4 content-label">
+                                <div class="content-label">
+                                    <label class="form-control-static input-sm">
+                                        <apex:outputtext value="{!f.Label}" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 content-body">
+                                <apex:outputpanel rendered="{!f.type == 'string'}">
+                                    <apex:inputfield value="{!creditMemo[f.fieldPath]}" styleclass="input-sm form-control" />
+                                </apex:outputpanel>
+                                <apex:outputpanel rendered="{!f.type == 'textarea'}">
+                                    <apex:inputfield value="{!creditMemo[f.fieldPath]}" styleclass="form-control" />
+                                </apex:outputpanel>
+                                <apex:outputpanel rendered="{!f.type == 'boolean'}">
+                                    <apex:inputfield value="{!creditMemo[f.fieldPath]}" styleclass="input-sm checkbox-inline" />
+                                </apex:outputpanel>
+                            </div>
+                        </div>
+                    </div>
+                </apex:repeat>
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Credit_Memo_Wizard_Save}" action="{!creditMemoSaveNew}"
+                                            rerender="theform" status="loading" rendered="{!showCreditMemoNew}" />
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Credit_Memo_Wizard_Save}" action="{!creditMemoSaveEdit}"
+                                            rerender="theform" status="loading" rendered="{!showCreditMemoEdit}" />
+                        <apex:commandbutton styleclass="btn btn-link" value="{!$Label.Credit_Memo_Wizard_Back}" action="{!back}"
+                                            rerender="theform" status="loading" rendered="{!showCreditMemoNew}" />
+                        <apex:commandbutton styleclass="btn btn-link" value="{!$Label.Credit_Memo_Wizard_Back}" action="{!backSecondary}"
+                                            rerender="theform" status="loading" rendered="{!showCreditMemoEdit}" />
+                    </div>
+                </div>
+            </apex:outputpanel>
+
+            <apex:outputpanel rendered="{!showCreditMemoView}">
+                <div>
+                    <span style="font-size:1.5em; text-decoration:underline;">
+                        <apex:outputfield value="{!creditMemo.Name}" />
+                    </span>
+                    <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Credit_Memo_Wizard_Edit}" action="{!creditMemoEdit}" 
+                                        rerender="theform" status="loading" />
+                </div>
+                <div class="row">
+                    <apex:repeat value="{!creditMemoViewFieldSet}" var="f">
+                        <div class="form-horizontal col-md-3">
+                            <div class="form-group">
+                                <div class="col-xs-4 content-label">
+                                    <label>
+                                        <apex:outputtext value="{!f.Label}"/>
+                                    </label>
+                                </div>
+                                <div class="col-xs-6 content-body">
+                                    <apex:outputfield value="{!creditMemo[f.fieldPath]}" />
+                                </div>
+                            </div>
+                        </div>
+                    </apex:repeat>
+                </div>
+                <style>
+                    .table-responsive {
+                        overflow: auto !important;
+                    }
+                </style>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <apex:repeat value="{!screenSectionListFieldSet}" var="f">
+                                    <th>
+                                        <apex:outputtext value="{!f.Label}" />
+                                    </th>
+                                </apex:repeat>
+                                <th>
+                                    <apex:outputtext value="{!$Label.Credit_Memo_Wizard_Num_Section_Config}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$Label.Credit_Memo_Wizard_Num_Section_Attachments}" />
+                                </th>
+                                <th>
+                                    <apex:outputtext value="{!$Label.Credit_Memo_Wizard_Actions}" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!screenSections}" var="ss">
+                                <tr>
+                                    <apex:repeat value="{!screenSectionListFieldSet}" var="f">
+                                        <td>
+                                            <apex:outputfield value="{!ss.screenSection[f.fieldPath]}" />
+                                        </td>
+                                    </apex:repeat>
+                                    <td>
+                                        <apex:outputtext value="{!ss.numSectionConfig}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputtext value="{!ss.numSectionAttachment}" />
+                                    </td>
+                                    <td>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Credit_Memo_Wizard_Delete}" 
+                                                            action="{!screenSectionDelete}" rerender="theform" status="loading" 
+                                                            onclick="if(!confirm('{!$Label.Credit_Memo_Wizard_Confirm_Msg}')){return false;}">
+                                            <apex:param name="screenSectionid" value="{!ss.screenSection.Id}" assignto="{!screenSectionid}" />
+                                        </apex:commandbutton>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="{!$Label.Credit_Memo_Wizard_Edit}" 
+                                                            action="{!screenSectionEdit}" rerender="theform" status="loading">
+                                            <apex:param name="screenSectionid" value="{!ss.screenSection.Id}" assignto="{!screenSectionid}" />
+                                        </apex:commandbutton>
+                                        <div class="btn-group dropdown">
+                                            <button type="button" class="btn btn-link btn-xs dropdown-toggle" data-toggle="dropdown" 
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                <apex:outputtext value="{!$Label.Credit_Memo_Wizard_Actions}" />
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <apex:outputpanel layout="none" rendered="{!!ss.screenSection.nFORCE__Headless__c}">
+                                                    <li>
+                                                        <apex:commandlink value="Add" action="{!screenSectionNew}" rerender="theform" status="loading">
+                                                            <apex:param name="displayOrder" value="{!ss.screenSection.nFORCE__Display_Order__c}" 
+                                                                        assignto="{!displayOrder}" />
+                                                            <apex:param name="isHeadless" value="False" assignto="{!isHeadless}" />
+                                                        </apex:commandlink>
+                                                    </li>
+                                                </apex:outputpanel>
+                                                <li>
+                                                    <apex:commandlink value="Add Headless" action="{!screenSectionNew}" rerender="theform" status="loading">
+                                                        <apex:param name="displayOrder" value="{!ss.screenSection.nFORCE__Display_Order__c}" 
+                                                                    assignto="{!displayOrder}" />
+                                                        <apex:param name="isHeadless" value="True" assignto="{!isHeadless}" />
+                                                    </apex:commandlink>
+                                                </li>
+                                                <li>
+                                                    <apex:commandlink value="Build Layout" action="{!buildLayoutLink}" rerender="theform" status="loading">
+                                                        <apex:param name="screenSectionid" value="{!ss.screenSection.Id}" assignto="{!screenSectionid}" />
+                                                    </apex:commandlink>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                            <apex:outputpanel layout="none" rendered="{!screenSections.size == 0}">
+                                <tr>
+                                    <td colspan="{!screenSectionListFieldSet.size + 2}">
+                                        <apex:outputtext value="{!$Label.Credit_Memo_Wizard_No_Rows}" />
+                                    </td>
+                                    <td>
+                                        <apex:commandbutton styleclass="btn btn-link btn-xs" value="Add" action="{!screenSectionNew}"
+                                                            rerender="theform" status="loading">
+                                            <apex:param name="isHeadless" value="False" assignto="{!isHeadless}" />
+                                            <apex:param name="displayOrder" value="" assignTo="{!displayOrder}"/>
+                                        </apex:commandbutton>
+                                    </td>
+                                </tr>
+                            </apex:outputpanel>
+                        </tbody>
+                    </table>
+                </div>
+                <apex:commandbutton styleclass="btn btn-link" value="{!$Label.Credit_Memo_Wizard_Back}" action="{!back}" 
+                                    rerender="theform" status="loading" />
+            </apex:outputpanel>
+
+            <apex:outputpanel rendered="{!showScreenSectionNew || showScreenSectionEdit}">
+                <div class="row">
+                    <apex:repeat value="{!screenSectionNewEditFieldSet}" var="f">
+                        <div class="form-horizontal col-md-6">
+                            <div class="form-group">
+                                <div class="col-sm-4 content-label">
+                                    <div class="content-label">
+                                        <label class="form-control-static input-sm">
+                                            <apex:outputtext value="{!f.Label}" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 content-body">
+                                    <apex:outputpanel rendered="{!f.type == 'string'}">
+                                        <apex:inputfield value="{!screenSection[f.fieldPath]}" styleclass="input-sm form-control" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel rendered="{!f.type == 'textarea'}">
+                                        <apex:inputfield value="{!screenSection[f.fieldPath]}" styleclass="form-control" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel rendered="{!f.type == 'boolean'}">
+                                        <apex:inputfield value="{!screenSection[f.fieldPath]}" styleclass="input-sm checkbox-inline" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel rendered="{!f.type == 'picklist'}">
+                                        <apex:inputfield value="{!screenSection[f.fieldPath]}" styleclass="input-sm form-control" />
+                                    </apex:outputpanel>
+                                    <apex:outputpanel rendered="{!f.type == 'double'}">
+                                        <apex:inputfield value="{!screenSection[f.fieldPath]}" styleclass="input-sm form-control" />
+                                    </apex:outputpanel>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:repeat>
+                    <apex:outputpanel layout="block" styleclass="form-horizontal col-md-6" rendered="{!showScreenSectionNew}">
+                        <div class="form-group">
+                            <div class="col-sm-4 content-label">
+                                <div class="content-label">
+                                    <label class="form-control-static input-sm">
+                                        <apex:outputtext value="Widget" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 content-body">
+                                <apex:selectlist size="1" styleclass="input-sm form-control" value="{!WidgetType}">
+                                    <apex:selectoptions value="{!widgetOptions}" />
+                                </apex:selectlist>
+                            </div>
+                        </div>
+                    </apex:outputpanel>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Credit_Memo_Wizard_Save}" action="{!screenSectionSaveNew}"
+                                            rerender="theform" status="loading" rendered="{!showScreenSectionNew}" />
+                        <apex:commandbutton styleclass="btn btn-primary" value="{!$Label.Credit_Memo_Wizard_Save}" action="{!screenSectionSaveEdit}"
+                                            rerender="theform" status="loading" rendered="{!showScreenSectionEdit}" />
+                        <apex:commandbutton styleclass="btn btn-link" value="{!$Label.Credit_Memo_Wizard_Back}" action="{!backSecondary}"
+                                            rerender="theform" status="loading" />
+                    </div>
+                </div>
+            </apex:outputpanel>
+
+            <script type="text/javascript">
+                jQuery(function() {
+                    if('{!successMessage}' != '') {
+                        jQuery('#successMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-success">{!successMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-success").remove();
+			            },5000);
+                    }
+
+                    if('{!errorMessage}' != '') {
+                        jQuery('#errorMessage').append('<label style="cursor: default; padding:15px;" class="alert alert-danger">{!errorMessage}</label>');
+                        setTimeout(function() {
+				            jQuery(".alert-danger").remove();
+			            },10000);
+                    }
+                });
+            </script>
+        </apex:form>
+    </div>
+</apex:component>

@@ -1,0 +1,76 @@
+<apex:component layout="none" controller="CSA_PSCOverviewController">
+    <apex:outputpanel layout="block" styleclass="force slds" id="overview">
+        <div class="row">
+            <div class="form-horizontal col-md-2">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.PSC_Overview_Product_Types}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!NumProductTypes}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal col-md-2">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.PSC_Overview_Product_State_Config_Booked}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!NumBookedConfig}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal col-md-2">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.PSC_Overview_Product_State_Config_Closed}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!NumClosedConfig}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal col-md-2">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.PSC_Overview_Product_State_Config_Excluded}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!NumExcludedConfig}" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal col-md-2">
+                <div class="form-group">
+                    <div class="col-xs-4 content-label">
+                        <div class="content-label">
+                            <label class="form-control-static input-sm">
+                                <apex:outputtext value="{!$Label.PSC_Overview_Product_State_Config_Transmit}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 content-body">
+                        <apex:outputtext styleclass="form-control-static" value="{!NumTransmitConfig}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:outputpanel>
+</apex:component>

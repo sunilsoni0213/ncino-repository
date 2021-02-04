@@ -1,0 +1,10 @@
+<apex:component layout="none" allowDML="true">
+ 
+ <script type="text/javascript">
+     function click_me(){
+        alert("Documents are being generated. Please click continue to move to the Document Manager.");
+     }
+ </script>
+ <a href="" class="btn btn-primary" onclick="click_me();">Document Prep</a>
+ 
+</apex:component>

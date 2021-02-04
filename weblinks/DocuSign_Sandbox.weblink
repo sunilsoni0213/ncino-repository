@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>DocuSign Sandbox</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/34.0/connection.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/soap/ajax/34.0/apex.js&apos;)} 
+var win = window.open(&apos;https://appdemo.docusign.com/home&apos;, &apos;_blank&apos;);
+win.focus();</url>
+</CustomPageWebLink>

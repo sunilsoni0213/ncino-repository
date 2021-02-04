@@ -1,0 +1,60 @@
+<apex:component >
+   <apex:attribute name="leftBtnText" type="String" required="false"
+         description="Left button text" />
+   <apex:attribute name="rightBtnText" type="String" required="false"
+         description="Right button Text" />
+   <apex:attribute name="leftBtnLink" type="String" required="false"
+         description="Left button link location" />
+   <apex:attribute name="rightBtnLink" type="String" required="false"
+         description="Right button link location" />
+   <apex:attribute name="leftBtnStyle" type="String" required="false"
+         description="Left button style" default="btn btn-secondary" />
+   <apex:attribute name="rightBtnStyle" type="String" required="false"
+         description="Right button style" default="btn btn-primary" />
+   <apex:attribute name="headerText" type="String" required="false"
+         description="Header text" />
+   <apex:attribute name="descriptionText" type="String" required="false"
+         description="Description Text" />
+
+   <style>
+   .force h3{
+      display:block;
+      font-family: 'Salesforce Sans';
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      margin-right: 1.5rem;
+      margin-bottom: 0rem;
+      margin-left: 0;
+   }
+   .force p{
+      color: rgb(22, 50, 92);
+      font-family: 'Salesforce Sans';
+      line-height: 1.375;
+      margin-top: .75rem;
+      margin-right: 1.5rem;
+      margin-bottom: .75rem;
+   }
+   </style>
+
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12">
+            <h3>{!headerText}</h3>
+            <p>{!descriptionText}</p>
+            <form class="form-vertical">
+               <div class="form-group">
+                  <p>
+                     <apex:variable var="leftBtn" rendered="{!leftBtnText != null}" value="leftBtn">
+                        <a href="{!leftBtnLink}" class="btn btn-primary" style="font-size: larger;">{!leftBtnText}</a>
+                     </apex:variable>
+                     <apex:variable var="rightBtn" rendered="{!rightBtnText != null}" value="rightBtn" >
+                        <a ng-hide="{!rightBtnText} == null" href="{!rightBtnLink}" class="{!rightBtnStyle}">{!rightBtnText}</a>
+                     </apex:variable>
+                  </p>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</apex:component>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Treasury Service Attribute --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Treasury Service Attribute --></value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- LBXGrid --></label>
+        <name>LBXGrid</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Tab Acción LBX</label>
+        <name>LBX_Action_Tab</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Escáner de Acción Tab_Add</label>
+        <name>Scanner_Action_Tab_Add</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Escáner de Acción Tab_Update</label>
+        <name>Scanner_Action_Tab_Update</name>
+    </fieldSets>
+    <fieldSets>
+        <label>escáner de cuadrícula</label>
+        <name>Scanner_Grid</name>
+    </fieldSets>
+    <fields>
+        <label>p.ej. C, R</label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label>Programa de emergencia</label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label>URL de punto final:</label>
+        <name>Internal_Lockbox_Code__c</name>
+    </fields>
+    <fields>
+        <label>Contraseña:</label>
+        <name>Lockbox_Location__c</name>
+    </fields>
+    <fields>
+        <label>Comentario estándar:</label>
+        <name>Lockbox_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation>Activo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation>Inactivo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Nombre de usuario:</label>
+        <name>One_to_Many_Type__c</name>
+        <picklistValues>
+            <masterLabel>Lockbox Location</masterLabel>
+            <translation>Lockbox Localización</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scanner Details</masterLabel>
+            <translation>Detalles del escáner</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Por favor, introduzca la dirección URL d</label>
+        <name>Scanner_Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label>Por favor, introduzca la contraseña para</label>
+        <name>Scanner_Model__c</name>
+        <picklistValues>
+            <masterLabel>CR-120</masterLabel>
+            <translation><!-- CR-120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CR-150</masterLabel>
+            <translation><!-- CR-150 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CR-190i II</masterLabel>
+            <translation><!-- CR-190i II --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CheXpress CX30</masterLabel>
+            <translation><!-- CheXpress CX30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EC7500i series scanners</masterLabel>
+            <translation>escáneres de la serie EC7500i</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TellerScan TS240</masterLabel>
+            <translation>Placa de escaneo TS240</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TellerScan TS500</masterLabel>
+            <translation><!-- TellerScan TS500 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Por favor, introduzca en el arriendo un</label>
+        <name>Scanner_Name__c</name>
+    </fields>
+    <fields>
+        <label>Por favor, introduzca al contrato de un</label>
+        <name>Scanner_Notes__c</name>
+    </fields>
+    <fields>
+        <label>Por favor, introduzca el nombre de usuar</label>
+        <name>Scanner_Serial_Number__c</name>
+    </fields>
+    <fields>
+        <label>seguro federal contra inundaciones no es</label>
+        <name>Scanner_Type__c</name>
+        <picklistValues>
+            <masterLabel>High Volume</masterLabel>
+            <translation>Alto volumen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low Volume</masterLabel>
+            <translation>Volumen bajo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>comunidad no participa en el NFIP.</label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation>Hawai</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation>Luisiana</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation>Misisipí</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation>Misuri</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation>nueva Hampshire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation>Nuevo Mexico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation>Nueva York</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation>Carolina del Norte</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation>Dakota del Norte</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation>Oregón</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation>Pensilvania</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation>Carolina del Sur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation>Dakota del Sur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation>Tennesse</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation>Virginia del Oeste</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Federal de Seguros de Inundación disponi</label>
+        <name>Treasury_Service__c</name>
+        <relationshipLabel>Servicio Tesoro Atributos</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Inundación Cert ID</label>
+        <name>ZIP__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Treasury Service Attributes Name --></nameFieldLabel>
+</CustomObjectTranslation>

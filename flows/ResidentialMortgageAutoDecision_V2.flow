@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Sets auto-approval result in output.</description>
+        <name>Return_Auto_Approve</name>
+        <label>Return Auto-Approve</label>
+        <locationX>816</locationX>
+        <locationY>1065</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ResultAutoApprove</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets credit score auto-decline result in output.</description>
+        <name>Return_Credit_Score_Decline</name>
+        <label>Return Credit Score Decline</label>
+        <locationX>1093</locationX>
+        <locationY>620</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ResultAutoDecline</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResultDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DescriptionCreditScoreDecline</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets loan amount calculation auto-decline result in output.</description>
+        <name>Return_Loan_Amount_Calculation_Decline</name>
+        <label>Return Loan Amount Calculation Decline</label>
+        <locationX>418</locationX>
+        <locationY>420</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ResultAutoDecline</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResultDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DescriptionLoanAmountCalculationDecline</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets TDS auto-decline result in output.</description>
+        <name>Return_TDS_Decline</name>
+        <label>Return TDS Decline</label>
+        <locationX>1099</locationX>
+        <locationY>855</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ResultAutoDecline</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResultDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DescriptionTDSDecline</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets the product line to mortgage.</description>
+        <name>Set_Mortgage_Product_Line</name>
+        <label>Set Mortgage Product Line</label>
+        <locationX>192</locationX>
+        <locationY>231</locationY>
+        <assignmentItems>
+            <assignToReference>ProductLine</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Mortgage</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loan_Amount_Updated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Stores the value of the highest credit score.</description>
+        <name>Store_Best_Borrower_Score</name>
+        <label>Store Best Borrower Score</label>
+        <locationX>1096</locationX>
+        <locationY>403</locationY>
+        <assignmentItems>
+            <assignToReference>BestBorrowerCreditScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentAccountCreditScore</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Best_Credit_Score</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Stores value of auto-approve status.</description>
+        <name>ResultAutoApprove</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Approved</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Stores auto-decline status value.</description>
+        <name>ResultAutoDecline</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Declined</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>A status during a loan amount up to indicate that the loan amount calcation is missing for the specified product type.</description>
+        <name>ResultCalculationMissing</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Calculation Missing</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>A status during a credit pull to indicate missing account information is requested.</description>
+        <name>ResultInformationRequested</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Information Request Initiated</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>A status during a credit pull to indicate missing account information is required.</description>
+        <name>ResultInformationRequired</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Information Required</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Indicates that a manual review is required on a credit pull.</description>
+        <name>ResultManualReviewRequired</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Manual Review Required</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Determine if credit score is high enough to be approved.</description>
+        <name>Credit_Score_Greater_Than_600</name>
+        <label>Credit Score &gt; 600</label>
+        <locationX>809</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>Return_Credit_Score_Decline</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Credit_Score_Greater_Than_600_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BestBorrowerCreditScore</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>600.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>TDS_Less_Than_45</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines which borrower has the highest credit score.</description>
+        <name>Is_Best_Borrower</name>
+        <label>Is Best Borrower</label>
+        <locationX>1089</locationX>
+        <locationY>236</locationY>
+        <defaultConnector>
+            <targetReference>Get_Best_Credit_Score</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Is_Best_Borrower_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CurrentAccountCreditScore</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>BestBorrowerCreditScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Store_Best_Borrower_Score</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if the result of the loan amount update was successful.</description>
+        <name>Loan_Amount_Updated</name>
+        <label>Loan Amount Updated?</label>
+        <locationX>410</locationX>
+        <locationY>233</locationY>
+        <defaultConnector>
+            <targetReference>Get_Borrowers_Info</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes</defaultConnectorLabel>
+        <rules>
+            <name>Loan_Amount_Updated_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Result</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ResultCalculationMissing</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Return_Loan_Amount_Calculation_Decline</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if the result of the credit pull needs to be reviewed.</description>
+        <name>Review_Borrower_Score_Result</name>
+        <label>Review Score Result</label>
+        <locationX>1090</locationX>
+        <locationY>51</locationY>
+        <defaultConnector>
+            <targetReference>Is_Best_Borrower</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue</defaultConnectorLabel>
+        <rules>
+            <name>Retrieve_Borrower_Score_Result_Exit</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Result</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ResultInformationRequired</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Result</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ResultInformationRequested</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Best_Credit_Score</targetReference>
+            </connector>
+            <label>Exit</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if TDS value is high enough.</description>
+        <name>TDS_Less_Than_45</name>
+        <label>TDS &lt; 45%</label>
+        <locationX>809</locationX>
+        <locationY>858</locationY>
+        <defaultConnector>
+            <targetReference>Return_TDS_Decline</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>TDS_Less_Than_45_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_debt_to_income</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Return_Auto_Approve</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <description>Creates an approval message.</description>
+        <name>DescriptionApproved</name>
+        <dataType>String</dataType>
+        <expression>{!Loan.Name} &amp; &quot; has completed decisioning and is approved. Review all the details here and &apos;submit for approval&apos; to continue with the auto-approval process.&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Creates declined message due to credit score.</description>
+        <name>DescriptionCreditScoreDecline</name>
+        <dataType>String</dataType>
+        <expression>{!Loan.Name} &amp; &quot; has completed decisioning and is declined due to the credit score being at or below 600.&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Creates declined message due to loan amount calculation.</description>
+        <name>DescriptionLoanAmountCalculationDecline</name>
+        <dataType>String</dataType>
+        <expression>{!Loan.Name} &amp; &quot; has completed decisioning and is declined due to a missing loan amount calculation for the specified product type (&quot; &amp; TEXT({!Loan.00Nd0000006OC0w__NotFound}) &amp; &quot;).&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Creates decline message due to TDS.</description>
+        <name>DescriptionTDSDecline</name>
+        <dataType>String</dataType>
+        <expression>{!Loan.Name} &amp; &quot; has completed decisioning and is declined due to a TDS value at or above 45%.&quot;</expression>
+    </formulas>
+    <interviewLabel>ResidentialMortgageAutoDecision V2 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ResidentialMortgageAutoDecision V2</label>
+    <loops>
+        <description>Determine which borrower has the best credit score.</description>
+        <name>Get_Best_Credit_Score</name>
+        <label>Get Best Credit Score</label>
+        <locationX>816</locationX>
+        <locationY>232</locationY>
+        <assignNextValueToReference>CurrentAccount</assignNextValueToReference>
+        <collectionReference>BorrowerAccounts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Get_Borrower_Score</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Credit_Score_Greater_Than_600</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get specified loan information.</description>
+        <name>Load_Loan_Data</name>
+        <label>Load Loan Data</label>
+        <locationX>192</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Mortgage_Product_Line</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>LoanId</elementReference>
+            </value>
+        </filters>
+        <object>LLC_BI__Loan__c</object>
+        <outputReference>Loan</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>LLC_BI__Debt_To_Income_Ratio__c</queriedFields>
+        <queriedFields>LLC_BI__Product_Type__c</queriedFields>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Load_Loan_Data</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Retrieves the borrower&apos;s credit score.</description>
+        <name>Get_Borrower_Score</name>
+        <label>Get Borrower Score</label>
+        <locationX>815</locationX>
+        <locationY>42</locationY>
+        <connector>
+            <targetReference>Review_Borrower_Score_Result</targetReference>
+        </connector>
+        <flowName>RMOR__GetIndividualCreditScore</flowName>
+        <inputAssignments>
+            <name>Account</name>
+            <value>
+                <elementReference>CurrentAccount</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>CurrentAccountCreditScore</assignToReference>
+            <name>CreditScore</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Result</assignToReference>
+            <name>Result</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ResultDescription</assignToReference>
+            <name>ResultDescription</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <description>Looks up borrowers for the current loan.</description>
+        <name>Get_Borrowers_Info</name>
+        <label>Get Borrowers Info</label>
+        <locationX>663</locationX>
+        <locationY>232</locationY>
+        <connector>
+            <targetReference>Get_Best_Credit_Score</targetReference>
+        </connector>
+        <flowName>RMOR__LoanGetAccounts</flowName>
+        <inputAssignments>
+            <name>includeBorrowers</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>includeCoBorrowers</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>LoanId</name>
+            <value>
+                <elementReference>LoanId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>BorrowerAccounts</assignToReference>
+            <name>Accounts</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <description>Stores the highest borrower credit score.</description>
+        <name>BestBorrowerCreditScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Account details of borrowers on the loan.</description>
+        <name>BorrowerAccounts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>A single account being iterated over.</description>
+        <name>CurrentAccount</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>Stores the credit score of the account being iterated over.</description>
+        <name>CurrentAccountCreditScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>The record details for a specified loan.</description>
+        <name>Loan</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Loan__c</objectType>
+    </variables>
+    <variables>
+        <description>Loan Context Id</description>
+        <name>LoanId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the name of the product line for the flow.</description>
+        <name>ProductLine</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the result of a credit check.</description>
+        <name>Result</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <elementReference>ResultManualReviewRequired</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores description of the credit score result.</description>
+        <name>ResultDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_debt_to_income</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+        <value>
+            <elementReference>Loan.LLC_BI__Debt_To_Income_Ratio__c</elementReference>
+        </value>
+    </variables>
+</Flow>

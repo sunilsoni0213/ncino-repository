@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>Customer Success Administration Config Link to VF page to run installers</description>
+    <displayType>link</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Customer Success Admin Config</masterLabel>
+    <openType>noSidebar</openType>
+    <page>CSA_CustomerSuccessAdminConfiguration</page>
+    <protected>true</protected>
+</CustomPageWebLink>

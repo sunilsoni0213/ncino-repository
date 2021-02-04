@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>LLC_BI__Smart_Checklists_Edit_Assignee_Requirements</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>LLC_BI__Smart_Checklists_Waive_Task_Requirements</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Smart Checklist</label>
+</PermissionSet>

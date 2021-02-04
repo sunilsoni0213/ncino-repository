@@ -1,0 +1,161 @@
+<apex:page showHeader="false" sidebar="false" standardController="Account" standardStylesheets="false" extensions="NewProductViewController">
+    
+    <nDESIGN:Includes enableBootstrap3="true"/>
+
+    <style type="text/css">
+        body{
+            font-size:12px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('a').removeAttr('onfocus');
+            jQuery('a').removeAttr('onmouseover');
+            jQuery('a').removeAttr('onblur');
+            jQuery('a').removeAttr('onmouseout');
+            
+            jQuery('a').attr('target', '_parent');
+            jQuery('#loansbutton').removeAttr('target');
+            jQuery('#depositsbutton').removeAttr('target');
+            jQuery('#treasurybutton').removeAttr('target');
+
+            jQuery('#deposits').hide();
+            jQuery('#treasury').hide();
+
+            jQuery('#loansbutton').click(function() {
+                jQuery('#deposits').hide();
+                jQuery('#loans').show();
+                jQuery('#treasury').hide();
+                jQuery('#loansbutton').addClass('active');
+                jQuery('#depositsbutton').removeClass('active');
+                jQuery('#treasurybutton').removeClass('active');
+            });
+
+            jQuery('#depositsbutton').click(function() {
+                jQuery('#deposits').show();
+                jQuery('#loans').hide();
+                jQuery('#treasury').hide();
+                jQuery('#loansbutton').removeClass('active');
+                jQuery('#depositsbutton').addClass('active');
+                jQuery('#treasurybutton').removeClass('active');
+            });
+
+            jQuery('#treasurybutton').click(function() {
+                jQuery('#deposits').hide();
+                jQuery('#loans').hide();
+                jQuery('#treasury').show();
+                jQuery('#loansbutton').removeClass('active');
+                jQuery('#depositsbutton').removeClass('active');
+                jQuery('#treasurybutton').addClass('active');
+            });
+        });
+    </script>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <apex:form >
+                <div role="group">
+                    <apex:outputLink styleClass="btn btn-info btn-sm" value="{!newLoanLink}" rendered="{!showNewLoan == 'true'}" target="_Parent">
+                        New Loan Product
+                    </apex:outputLink>
+                    &nbsp;
+                    <apex:outputLink styleClass="btn btn-info btn-sm" value="{!newDepositLink}" rendered="{!showNewDeposit == 'true'}" target="_Parent">
+                        New Deposit Product
+                    </apex:outputLink>
+                    &nbsp;
+                    <apex:outputLink styleClass="btn btn-info btn-sm" value="{!NewTreasuryLink}" rendered="{!showNewTreasury == 'true'}" target="_Parent">
+                        New Treasury Product
+                    </apex:outputLink>
+                    <!-- <apex:outputLink styleClass="btn btn-success btn-sm" value="{!newEntityInvolvementLink}" rendered="{!showNewEntity == 'true'}" target="_Parent"> 
+                        New Entity Involvement
+                    </apex:outputLink> -->
+                </div>
+            </apex:form>
+            <br/>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#" id="loansbutton" class="btn btn-default btn-sm active">Loans</a>
+                    <a href="#" id="depositsbutton" class="btn btn-default btn-sm">Deposits</a>
+                    <a href="#" id="treasurybutton" class="btn btn-default btn-sm">Treasury</a>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table table-hover table-striped" id="loans">
+                        <thead>
+                            <tr>
+                                <apex:repeat value="{!LoanFields}" var="lf">
+                                    <th>
+                                        <apex:outputLabel value="{!lf.Label}"/>
+                                    </th>
+                                </apex:repeat>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!loans}" var="l">
+                                <tr>
+                                    <apex:repeat value="{!LoanFields}" var="lf">
+                                        <td>
+                                            <apex:outputField value="{!l[lf.fieldPath]}"/>
+                                        </td>
+                                    </apex:repeat>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-hover table-striped" id="deposits">
+                        <thead>
+                            <tr>
+                                <apex:repeat value="{!DepositFields}" var="df">
+                                    <th>
+                                        <apex:outputLabel value="{!df.Label}"/>
+                                    </th>
+                                </apex:repeat>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!deposits}" var="d">
+                                <tr>
+                                    <apex:repeat value="{!DepositFields}" var="df">
+                                        <td>
+                                            <apex:outputField value="{!d[df.fieldPath]}"/>
+                                        </td>
+                                    </apex:repeat>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-hover table-striped" id="treasury">
+                        <thead>
+                            <tr>
+                                <apex:repeat value="{!TreasuryFields}" var="t">
+                                    <th>
+                                        <apex:outputLabel value="{!t.Label}"/>
+                                    </th>
+                                </apex:repeat>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!treasury}" var="tf">
+                                <tr>
+                                    <apex:repeat value="{!TreasuryFields}" var="ty">
+                                        <td>
+                                            <apex:outputField value="{!tf[ty.fieldPath]}"/>
+                                        </td>
+                                    </apex:repeat>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</apex:page>

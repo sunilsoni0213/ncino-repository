@@ -1,0 +1,10 @@
+<apex:component layout="none" allowDML="true" controller="zcanadianlocalisationController">
+ <apex:form id="theform"> 
+ <a href="/flow/ZCanada" target="_Parent" class="btn btn-primary" >Mmm… I can’t start my day without my morning double-double and jelly filled dutchie. Click here to localise your org gah you look great today</a>
+ 
+ 
+ <!-- <apex:commandbutton styleclass="btn btn-primary" action="{!executeFlow1}" value="Update Demo Loans" rerender="theform" /> -->
+ </apex:form>
+ 
+ 
+</apex:component>

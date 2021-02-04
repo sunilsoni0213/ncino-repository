@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Chief_Credit_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Credit</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Credit_Analyst</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Admin</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Officer</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Loan_Team_Leader</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>LLC_BI__Amount__c</field>
+        <field>LLC_BI__Product_Line__c</field>
+        <field>LLC_BI__Product_Type__c</field>
+        <field>LLC_BI__Product__c</field>
+        <field>LLC_BI__InterestRate__c</field>
+        <field>LLC_BI__Stage__c</field>
+        <field>LLC_BI__Status__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>demomastertest.2j708bheislu@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>katie.wahl.w6eiuhmipu8b@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>peter.s@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>pilar.daniels.pgjtctwwmzrn@autorabitncinodemo.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Loan Committee Approval Required</label>
+        <name>Loan_Committee_Approval_Required</name>
+    </approvalStep>
+    <description>Approval process when a loan meets the following conditions:  
+(1) Total Exposure &gt; $3,000,000 or
+(2) Loan Amount &gt; $2,000,000 or
+(3) Unsecured Loan Amount &gt; $400,000 or
+(4) Risk Grade is &gt;= 6 or 
+(5) Employee Loan = TRUE
+(6) Reg O = TRUE</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND (
+OR (
+LLC_BI__Account__r.Total_Exposure__c &gt; 3000000,
+LLC_BI__Amount__c &gt; 2000000,
+Unsecured_Amount__c &gt; 400000,
+LLC_BI__Employee_Loan__c = TRUE,
+LLC_BI__Reg_O_Loan__c = TRUE,
+ISPICKVAL (LLC_BI__Risk_Grade__c , &apos;6&apos;),
+ISPICKVAL (LLC_BI__Risk_Grade__c , &apos;7&apos;)),
+ISPICKVAL (LLC_BI__Stage__c , &apos;Underwriting&apos;),
+ISPICKVAL (LLC_BI__Status__c , &apos;Open&apos;))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Loan_Approval_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Credit_Approval_Date_Today</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Last_Approval_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Proposal</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_is_Review_Ready_upon_approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Loan_Last_Approval_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Rejection_Email_Notification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Loan_Stage_Approval_Loan_Committee</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Loan Committee Approval Required</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Managers_Manager__c</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>3</processOrder>
+    <recallActions>
+        <action>
+            <name>Loan_Last_Approval_Status_Removed</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Loan_Stage_Underwriting</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

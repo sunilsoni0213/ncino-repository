@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Issue --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Issue --></value>
+    </caseValues>
+    <fields>
+        <label>Índice de Estrés AP - WGHT</label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel>Cuestiones</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Efectivo Bal Año 1</label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Configuration</masterLabel>
+            <translation>Configuración</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Validation</masterLabel>
+            <translation>Validación de datos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error Message</masterLabel>
+            <translation>Mensaje de error</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Question</masterLabel>
+            <translation>Cuestión de usuario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Suggestion/Feedback</masterLabel>
+            <translation>Sugerencia de usuario / Comentarios</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Efectivo Bal Año 2</label>
+        <name>Comment_Count__c</name>
+    </fields>
+    <fields>
+        <label>Efectivo Bal Año 3</label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label>La cobertura de flujo de efectivo</label>
+        <name>Estimated_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label>La cobertura de flujo de efectivo (G)</label>
+        <name>Issue_Priority__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation>Crítico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation>Alto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation>Bajo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation>Medio</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Flujo de Caja Cobertura - WGHT</label>
+        <name>Issue_Status__c</name>
+        <picklistValues>
+            <masterLabel>Business Decision Needed</masterLabel>
+            <translation>Decisión negocio necesarios</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Resolved</masterLabel>
+            <translation>Cerrado - Resuelta</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow-On Phase</masterLabel>
+            <translation>Fase de seguimiento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nuevo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Retest</masterLabel>
+            <translation>Listo para Retest</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Client</masterLabel>
+            <translation>Trabajando - Cliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - nCino</masterLabel>
+            <translation>Trabajo - nCino</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>comentarios</label>
+        <name>Open_Issue_Age__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Issue Number --></nameFieldLabel>
+</CustomObjectTranslation>

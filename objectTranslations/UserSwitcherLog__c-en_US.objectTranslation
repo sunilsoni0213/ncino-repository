@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>User Switcher Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>User Switcher Logs</value>
+    </caseValues>
+    <fields>
+        <help><!-- The date and time the login happened. --></help>
+        <label><!-- Login DateTime --></label>
+        <name>LoginDateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- The status of the login.  Complete means the user was logged in.  Pending means the user will be logged in - this is a temporary state. --></help>
+        <label><!-- Login Status --></label>
+        <name>LoginStatus__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Original User --></label>
+        <name>OriginalUser__c</name>
+        <relationshipLabel><!-- User Switcher Logs (Original User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The user who is doing the action, this is generally the user who originally logged into the org. --></help>
+        <label><!-- Source User --></label>
+        <name>SourceUser__c</name>
+        <relationshipLabel><!-- User Switcher Logs (Source User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The user being logged in as. --></help>
+        <label><!-- Target User --></label>
+        <name>TargetUser__c</name>
+        <relationshipLabel><!-- User Switcher Logs (Target User) --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

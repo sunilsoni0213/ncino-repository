@@ -1,0 +1,333 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="VF_ProcessHomepageController" standardStyleSheets="false">
+    <style type="text/css"> 
+    a img { border: none; }
+    a, a:hover{
+    outline:none;
+    }
+    .hidden{
+    display:none;
+    }
+    .clearDiv{
+        clear:both;
+    }
+    .center{
+        display:block;
+        margin:0px auto;
+    }
+    .floatleft{
+        float:left;
+    }
+    .floatright{
+        float:right;
+    }
+     
+    .padding{
+        padding:10px;
+    }
+    .spacer{
+        height:20px;
+        display:block;
+        }
+    .smspacer{
+        height:12px;
+        display:block;
+        }
+        
+    .marginleft{
+        margin-left:20px;
+    }
+    .marginright{
+        margin-right:20px;
+    }
+    .rounded6{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    overflow:hidden;
+    }
+     
+    .rounded4{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow:hidden;
+    }
+     
+     
+    .shadow{
+    text-shadow: 1px 1px 1px #767676;
+    filter: dropshadow(color=#767676, offx=1, offy=1); 
+    }
+     
+    .ltgrey{
+    background-color:#f8f8f8;
+    }
+    .border{
+        border: 1px solid #ebebeb;
+    }
+     
+    #sfhome {
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height:520px;
+        width:700px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        background-image: url({!$Resource.icon_circle_back});
+    }
+     
+    .sficon{
+        width:100px;
+        min-height:125px;
+        background-repeat: no-repeat;
+        background-position: center 0px;
+        margin: 0px;
+        padding: 0px;
+        overflow: visible;
+        position: absolute;
+        z-index: 10;
+        text-align:center;
+        
+    }
+     
+    .sficon.qualification{
+    background-image: url({!$Resource.icon_qualify});
+    left: 300px;
+    top: 30px;
+     
+    }
+    .sficon.credit-analysis{
+    background-image: url({!$Resource.icon_credit_analysis});
+    right: 150px;
+    top: 80px;
+     
+    }
+     
+    .sficon.proposal{
+    background-image: url({!$Resource.icon_proposal});
+    right: 100px;
+    top: 225px;
+     
+    }
+     
+    .sficon.loan-committee{
+    background-image: url({!$Resource.icon_loan_committee});
+    right: 150px;
+    top: 370px;
+    }
+     
+    .sficon.lender-processing{
+    background-image: url({!$Resource.icon_lender_processing});
+    left: 300px;
+    top: 420px;
+     
+    }
+     
+    .sficon.doc-prep{
+    background-image: url({!$Resource.icon_doc_prep});
+    left: 160px;
+    top: 370px;
+     
+    }
+     
+    .sficon.doc-review{
+    background-image: url({!$Resource.icon_doc_review});
+    left: 100px;
+    top: 225px;
+     
+    }
+     
+     
+    .sficon.closing{
+    background-image: url({!$Resource.icon_closing});
+    left: 150px;
+    top: 80px;
+     
+    }
+    .sficon .sfnumber{
+        width:44px;
+        height:43px;
+        line-height:44px;
+        background-image: url({!$Resource.icon_number_circle});
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        margin: 0px;
+        padding: 0px;
+        overflow: visible;
+        position: relative;
+        z-index: 11;
+        color:#fff;
+        font-size:11px;
+        font-weight:bold;
+        letter-spacing:-.1pt;
+        text-align:center;
+        display:block;
+        
+        left: -6px;
+        top: -16px;
+        
+    }
+     
+    .sficon h4 a{
+    font-size:12px;
+    line-height:12px;
+    color:#202020;
+    display:block;
+    position:relative;
+    top:18px;
+    text-decoration:none;
+    margin:0px;
+    padding:0px;
+     
+    }
+    #sftotals{
+    width:680px;
+    font-family: Arial, Helvetica, sans-serif;  
+    }
+    #sftotals ul{
+    display:block;
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    }
+    #sftotals li{
+    float:left;
+    margin:0px;
+    padding:0px;
+    width:225px;
+    }
+     
+    #sftotals li a.sftotal{
+        display:block;
+        width:172px;
+        height:30px;
+        background-repeat: no-repeat;
+        background-position: 6px 6px;
+        margin:0px;
+        padding-top: 4px;
+        padding-right: 10px;
+        padding-bottom: 4px;
+        padding-left: 38px;
+        color:#202020;
+        text-decoration:none;
+        font-weight:bold;
+        line-height:30px;
+    }
+    #sftotals li a.sftotal span{
+        float:right;
+        font-size:21px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: -0.3pt; 
+    }
+    #sftotals li a.won{
+        background-image: url({!$Resource.icon_good});
+        background-color:#f4ffe5;
+    }
+    #sftotals li a.won span{
+        color:#006666;
+    }
+     
+    #sftotals li a.lost{
+        background-image: url({!$Resource.icon_bad});
+        background-color:#f6dfd7;
+    }
+    #sftotals li a.lost span{
+        color:#c20308;
+    }
+     
+    #sftotals li a.hold{
+        background-image: url({!$Resource.icon_hold});
+        background-color:#fdf1d1;
+    }
+    #sftotals li a.hold span{
+        color:#e5911f;
+    }
+    </style> 
+     
+     
+    <div id="sfhome" class="rounded6 ltgrey border"> 
+     
+    <div class="sficon qualification floatleft"> 
+    <div class="sfnumber">{!Qualification}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000FXtC3">Qualification /<br />Application</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+    <div class="sficon credit-analysis floatright"> 
+    <div class="sfnumber">{!CreditAnalysis}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjN">Underwriting</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+     
+    <div class="sficon proposal floatright"> 
+    <div class="sfnumber">{!Proposal}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjO">Proposal</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+    <div class="sficon loan-committee floatright"> 
+    <div class="sfnumber">{!LoanCommittee}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjP">Approval /<br />Loan Committee</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+    <div class="clearDiv"></div> 
+     
+     
+    <div class="sficon lender-processing floatleft"> 
+    <div class="sfnumber">{!Processing}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjQ">Processing</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+    <div class="sficon doc-prep floatleft"> 
+    <div class="sfnumber">{!DocPrep}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjR">Doc Prep</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+    <div class="clearDiv"></div> 
+     
+    <div class="sficon doc-review floatleft"> 
+    <div class="sfnumber">{!DocReview}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjS">Doc Review</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+    <div class="sficon closing floatleft"> 
+    <div class="sfnumber">{!Closing}</div> 
+    <h4><a href="/a0U?fcf=00B5w00000DadjT">Closing</a></h4> 
+    <div class="clearDiv"></div> 
+    </div> 
+    <!-- IND ICON --> 
+     
+     
+     
+     
+    <div class="clearDiv"></div> 
+    </div> <!--SF HOMEPAGE --> 
+     
+    <div class="clearDiv spacer"></div> 
+     
+    <div id="sftotals" class="rounded6 ltgrey border padding"> 
+    <ul> 
+    <li><a href="/a0U?fcf=00B5w00000DadjU" class="sftotal won rounded4">Booked<span>{!Won}</span></a></li> 
+    <li><a href="/a0U?fcf=00B5w00000DadjV" class="sftotal lost rounded4">Lost<span>{!Lost}</span></a></li> 
+    <li><a href="/a0U?fcf=00B5w00000DadjW" class="sftotal hold rounded4">Hold<span>{!Hold}</span></a></li> 
+    </ul> 
+     
+     
+    <div class="clearDiv"></div> 
+    </div> 
+
+</apex:page>

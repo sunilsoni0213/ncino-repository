@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>Quick_Search</links>
+    <links>RMA2</links>
+    <links>NAICS</links>
+    <links>nCino2</links>
+    <links>DocuSign_Sandbox</links>
+    <links>CSA_Overview</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

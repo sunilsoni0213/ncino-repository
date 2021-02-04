@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Holding --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Holding --></value>
+    </caseValues>
+    <fieldSets>
+        <label>garantía de interfaz de usuario - Holdings</label>
+        <name>collateral_UI_Holdings</name>
+    </fieldSets>
+    <fields>
+        <label>ERD</label>
+        <name>Collateral__c</name>
+        <relationshipLabel>Valores en cartera</relationshipLabel>
+    </fields>
+    <fields>
+        <label>La frecuencia de archivos Edición</label>
+        <name>Number_of_Shares__c</name>
+    </fields>
+    <fields>
+        <label>Depósito de fondos</label>
+        <name>Stock_Price__c</name>
+    </fields>
+    <fields>
+        <label>Nombre del lugar</label>
+        <name>Ticker_Symbol__c</name>
+    </fields>
+    <fields>
+        <label>Cuenta principal</label>
+        <name>Total_Lendable_Value__c</name>
+    </fields>
+    <fields>
+        <label>Compruebe si la cuenta maestra para Zero</label>
+        <name>Total_Value__c</name>
+    </fields>
+    <fields>
+        <label>Depósito diario Cantidad Máxima</label>
+        <name>Yahoo_Finance_Link__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Holding Name --></nameFieldLabel>
+</CustomObjectTranslation>

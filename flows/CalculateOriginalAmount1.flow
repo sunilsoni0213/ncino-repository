@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Sets update error result in output.</description>
+        <name>Return_Update_Error</name>
+        <label>Return Update Error</label>
+        <locationX>920</locationX>
+        <locationY>53</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ResultMissingProductTypeCalculation</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResultDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DescriptionUpdateError</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets update success result in output.</description>
+        <name>Return_Update_Success</name>
+        <label>Return Update Success</label>
+        <locationX>561</locationX>
+        <locationY>871</locationY>
+        <assignmentItems>
+            <assignToReference>Result</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ResultOriginalAmountUpdated</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ResultDescription</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DescriptionUpdateComplete</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <description>Indicates that an original amount calculation has not been added for the specified product type.</description>
+        <name>ResultMissingProductTypeCalculation</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Calculation Missing</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Stores value of update status.</description>
+        <name>ResultOriginalAmountUpdated</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Original Amount Updated</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Determine the Product Type of the Loan</description>
+        <name>Get_Product_Type</name>
+        <label>Get Product Type</label>
+        <locationX>553</locationX>
+        <locationY>52</locationY>
+        <defaultConnector>
+            <targetReference>Return_Update_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Missing Product Type</defaultConnectorLabel>
+        <rules>
+            <name>Product_Type_Is_Purchase</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>EMEA - Purchase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>APAC - Purchase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CAN - Purchase</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Mortgage_Record_Purchase</targetReference>
+            </connector>
+            <label>Is Purchase?</label>
+        </rules>
+        <rules>
+            <name>Product_Type_Is_Cash_Out</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>EMEA - Refinance</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CAN - Refinance</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>APAC</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Mortgage_Record_Cash_Out</targetReference>
+            </connector>
+            <label>Is Cash Out?</label>
+        </rules>
+        <rules>
+            <name>Product_Type_Is_Rate_Term</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LoanRecord.LLC_BI__Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rate/Term</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Original_Amount_Rate_Term</targetReference>
+            </connector>
+            <label>Is Rate/Term?</label>
+        </rules>
+    </decisions>
+    <description>Utilized in place of the managed flow in order to enable editing of formulas in spins - ww</description>
+    <formulas>
+        <description>Creates a successful update message.</description>
+        <name>DescriptionUpdateComplete</name>
+        <dataType>String</dataType>
+        <expression>&quot;The original loan amount for loan &quot; &amp; {!LoanRecord.Name} &amp; &quot; has been updated.&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Creates error message due to missing original amount calculation.</description>
+        <name>DescriptionUpdateError</name>
+        <dataType>String</dataType>
+        <expression>&quot;The original loan amount for loan &quot; &amp; {!LoanRecord.Name} &amp; &quot; could not be updated due the missing calculation for product type &quot; &amp; TEXT({!LoanRecord.00Nd0000006OC0w__NotFound}) &amp; &quot;.&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the original loan amount for the Cash Out product type.</description>
+        <name>OriginalAmountCashOut</name>
+        <dataType>Currency</dataType>
+        <expression>{!LoanRecord.00Nd0000006OBzq__NotFound} + {!MortgageRecord.00N0W000008oJIp__NotFound}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the original loan amount for the Purchase product type.</description>
+        <name>OriginalAmountPurchase</name>
+        <dataType>Currency</dataType>
+        <expression>{!MortgageRecord.00N0W000008oJIr__NotFound} - BLANKVALUE({!MortgageRecord.00N0W000008oJIq__NotFound},0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the original loan amount for the Rate/Term product type.</description>
+        <name>OriginalAmountRateTerm</name>
+        <dataType>Currency</dataType>
+        <expression>BLANKVALUE({!LoanRecord.00Nd0000006OBzq__NotFound},0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>CalculateOriginalAmount1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CalculateOriginalAmount1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieves Loan fields needed for calculating the original amount.</description>
+        <name>Get_Loan_Record</name>
+        <label>Get Loan Record</label>
+        <locationX>275</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Product_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loanId</elementReference>
+            </value>
+        </filters>
+        <object>LLC_BI__Loan__c</object>
+        <outputReference>LoanRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>LLC_BI__Product_Type__c</queriedFields>
+        <queriedFields>LLC_BI__AmountOutstanding__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieve mortgage details needed to calculate the original amount for a Cash Out Product Type</description>
+        <name>Get_Mortgage_Record_Cash_Out</name>
+        <label>Get Mortgage Record (Cash Out)</label>
+        <locationX>822</locationX>
+        <locationY>504</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Original_Amount_Cash_Out</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LLC_BI__Loan__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loanId</elementReference>
+            </value>
+        </filters>
+        <object>LLC_BI__Mortgage__c</object>
+        <outputReference>MortgageRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>LLC_BI__Desired_Cash_Out_Amount_2__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieve mortgage details needed to calculate the original amount for a Purchase Product Type</description>
+        <name>Get_Mortgage_Record_Purchase</name>
+        <label>Get Mortgage Record (Purchase)</label>
+        <locationX>290</locationX>
+        <locationY>499</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Original_Amount_Purchase</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LLC_BI__Loan__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loanId</elementReference>
+            </value>
+        </filters>
+        <object>LLC_BI__Mortgage__c</object>
+        <outputReference>MortgageRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>LLC_BI__Purchase_Price_2__c</queriedFields>
+        <queriedFields>LLC_BI__Down_Payment_2__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates the original amount based on the Cash Out formula.</description>
+        <name>Update_Original_Amount_Cash_Out</name>
+        <label>Update Original Amount (Cash Out)</label>
+        <locationX>822</locationX>
+        <locationY>686</locationY>
+        <connector>
+            <targetReference>Return_Update_Success</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loanId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>LLC_BI__Amount__c</field>
+            <value>
+                <elementReference>OriginalAmountCashOut</elementReference>
+            </value>
+        </inputAssignments>
+        <object>LLC_BI__Loan__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the original amount based on the Purchase formula.</description>
+        <name>Update_Original_Amount_Purchase</name>
+        <label>Update Original Amount (Purchase)</label>
+        <locationX>290</locationX>
+        <locationY>673</locationY>
+        <connector>
+            <targetReference>Return_Update_Success</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loanId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>LLC_BI__Amount__c</field>
+            <value>
+                <elementReference>OriginalAmountPurchase</elementReference>
+            </value>
+        </inputAssignments>
+        <object>LLC_BI__Loan__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the original amount based on the Rate/Term formula.</description>
+        <name>Update_Original_Amount_Rate_Term</name>
+        <label>Update Original Amount (Rate/Term)</label>
+        <locationX>561</locationX>
+        <locationY>602</locationY>
+        <connector>
+            <targetReference>Return_Update_Success</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loanId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>LLC_BI__Amount__c</field>
+            <value>
+                <elementReference>OriginalAmountRateTerm</elementReference>
+            </value>
+        </inputAssignments>
+        <object>LLC_BI__Loan__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Loan_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Input Id for a Loan record</description>
+        <name>loanId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>A loan record to be updated.</description>
+        <name>LoanRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Loan__c</objectType>
+    </variables>
+    <variables>
+        <description>Stores the mortgage record related to the loan to be updated</description>
+        <name>MortgageRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LLC_BI__Mortgage__c</objectType>
+    </variables>
+    <variables>
+        <description>Stores the result of updating the original amount of a loan.</description>
+        <name>Result</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Stores detailed description of the result of updating the original amount on a loan.</description>
+        <name>ResultDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

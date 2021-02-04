@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <label>Voir le rapport d&apos;influence de la campagne</label>
+        <name>LLC_BI__ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label>Voir tous les membres de la campagne</label>
+        <name>ViewAllCampaignMembers</name>
+    </webLinks>
+    <webLinks>
+        <label>Voir le rapport d&apos;influence de la campagne</label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label>Voir le rapport d&apos;influence de la campagne</label>
+        <name>nFORMS__ViewCampaignInfluenceReport</name>
+    </webLinks>
+</CustomObjectTranslation>

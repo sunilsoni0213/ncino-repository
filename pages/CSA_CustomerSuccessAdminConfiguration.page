@@ -1,0 +1,16 @@
+<apex:page >
+    <nFORCE:Includes enablebootstrap3="true" enablefontawesome="true" enablebs3namespace="true" />
+    <nFORCE:Include_Design_System flavor="vf" />
+    <nFORCE:Include_Design_System flavor="bs3" />
+    <apex:includescript value="{!URLFOR($Resource.CSA_Customer_Success_Admin, 'Javascript.js')}" />
+
+    <div class="force slds messages success" id="successMessage" />
+    <div class="force slds messages error" id="errorMessage" />
+
+    <br />
+    <c:CSA_CustomerSuccessAdminConfig />
+    <br />
+    <c:CSA_ConfigValueMgmtConfiguration />
+    <br />
+    <c:CSA_PSCMgmtConfig />
+</apex:page>

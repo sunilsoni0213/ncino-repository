@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Loan Path Admin --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Loan Path Admin --></value>
+    </caseValues>
+    <fields>
+        <label>Plus proche</label>
+        <name>Closer__c</name>
+    </fields>
+    <fields>
+        <label>Les champs importants</label>
+        <name>Important_Fields__c</name>
+    </fields>
+    <fields>
+        <label>Guide du processus de prêt</label>
+        <name>Loan_Process_Guide__c</name>
+    </fields>
+    <fields>
+        <label>prêt étape</label>
+        <name>Loan_Stage__c</name>
+    </fields>
+    <fields>
+        <label>Objectifs</label>
+        <name>Objectives__c</name>
+    </fields>
+    <fields>
+        <label>Ordre</label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label>Type d&apos;enregistrement</label>
+        <name>Record_Type__c</name>
+    </fields>
+    <fields>
+        <label>Gestionnaire de relation</label>
+        <name>Relationship_Manager__c</name>
+    </fields>
+    <fields>
+        <label>Souscripteur</label>
+        <name>Underwriter__c</name>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Loan Path Admin Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

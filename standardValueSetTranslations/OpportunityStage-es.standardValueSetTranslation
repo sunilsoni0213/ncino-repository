@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Closed Lost</masterLabel>
+        <translation>cerrado perdido</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed Won</masterLabel>
+        <translation>cerrado Won</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Id. Decision Makers</masterLabel>
+        <translation>Carné de identidad. Tomadores de decisiones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Initiate Transfer</masterLabel>
+        <translation>iniciar la transferencia de</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Needs Analysis</masterLabel>
+        <translation>Necesita analisis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Negotiation/Review</masterLabel>
+        <translation>Negociación / Revisión</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Perception Analysis</masterLabel>
+        <translation>Análisis de la percepción</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Proposal/Price Quote</masterLabel>
+        <translation>La propuesta / Cotización</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prospecting</masterLabel>
+        <translation>Prospección</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Qualification</masterLabel>
+        <translation>Calificación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Value Proposition</masterLabel>
+        <translation>Propuesta de valor</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

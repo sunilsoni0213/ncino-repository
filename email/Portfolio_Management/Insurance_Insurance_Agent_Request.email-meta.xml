@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This can be used to notify agent of policy update requests.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>nCino_Standard_Email_Letterhead</letterhead>
+    <name>Insurance - Insurance Agent Request</name>
+    <style>freeForm</style>
+    <subject>Policy Update Request</subject>
+    <textOnly>To: {!Insurance__c.Collateral_Insurance_Agent__c}
+Company Name: {!Insurance__c.Collateral_Insurance_Company__c}
+
+Policy Number:  {!Insurance__c.Collateral_Insurance_Policy_Number__c}
+
+Collateral Address:
+{!LLC_BI__Collateral__c.LLC_BI__Full_Address__c}
+
+I can use email templates like this to notify agents of policy expiration where we need updated policies. I can also use this if my loss payee address changes and I need to immediately notify thousands of agents. I can merge fields from other places in the system so that I don&apos;t have to rekey information.
+There are a lot of use cases for mass email templates.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

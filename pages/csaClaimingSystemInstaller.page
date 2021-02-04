@@ -1,0 +1,34 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:csaClaimingSystemInstallerIncludes />
+
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            {!$Label.CS_Installer_Title}
+        </apex:define>
+        <apex:define name="right" />
+    </apex:composition>
+
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <div id="csaClaimingSystemInstaller" ng-controller="ClaimSystemInstallerController as vm">
+                        <p>{!$Label.CS_Installer_Description}</p>
+                        <p>
+                            <button ng-if="!vm.isInstalled"
+                                    class="btn btn-secondary"
+                                    ng-click="vm.install()">
+                                {!$Label.CS_Installer_Button_Install_Title}
+                            </button>
+                            <button ng-if="vm.isInstalled"
+                                    class="btn btn-secondary"
+                                    ng-click="vm.uninstall()">
+                                {!$Label.CS_Installer_Button_Uninstall_Title}
+                            </button>
+                        </p>
+                    </div>
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -1,0 +1,31 @@
+<template>
+    <!-- Chatter photo -->
+    <template if:true={hasPhoto}>
+        <img 
+            class="slds-avatar slds-avatar_circle slds-avatar_large slds-gray-border" 
+            src={photo}
+        >
+    </template>
+
+    <!-- Initials if no photo -->
+    <template if:false={hasPhoto}>
+        <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+            <abbr 
+                class={abbrClassString}
+                title={user.name}
+            >
+                {initials}
+            </abbr>
+        </span>
+    </template>
+
+    <!-- Name and Job Title -->
+    <div class="inline-block align-middle slds-m-left_x-small slds-is-relative">
+        <p class="slds-truncate max-width" title={user.name}>
+            {user.name}
+        </p>
+        <p class="slds-truncate max-width sub-heading" title={user.title}>
+            {user.title}
+        </p>
+    </div>
+</template>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>nIQ Answer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>nIQ Answers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Answer --></label>
+        <name>Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours Saved --></label>
+        <name>Hours_Saved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minutes To Be Saved --></label>
+        <name>Minutes_Saved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Helpful --></label>
+        <name>Not_Helpful__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolved % --></label>
+        <name>Resolved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Success --></label>
+        <name>Success__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

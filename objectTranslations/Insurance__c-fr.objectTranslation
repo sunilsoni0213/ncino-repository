@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Insurance --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Insurance --></value>
+    </caseValues>
+    <fieldSets>
+        <label>UI garantie - Assurance</label>
+        <name>collateral_UI_Insurance</name>
+    </fieldSets>
+    <fields>
+        <help>Je peux stocker l&apos;adresse e-mail de contact de l&apos;agent ici.</help>
+        <label>Agent Adresse e-mail</label>
+        <name>Agent_Email_Address__c</name>
+    </fields>
+    <fields>
+        <label>Agent d&apos;assurance garantie</label>
+        <name>Collateral_Insurance_Agent__c</name>
+    </fields>
+    <fields>
+        <label>Assurance garantie Ville</label>
+        <name>Collateral_Insurance_City__c</name>
+    </fields>
+    <fields>
+        <label>Compagnie d&apos;assurance garantie</label>
+        <name>Collateral_Insurance_Company__c</name>
+    </fields>
+    <fields>
+        <label>Téléphone Assurance garantie</label>
+        <name>Collateral_Insurance_Phone__c</name>
+    </fields>
+    <fields>
+        <help>La date de cette fin politique.</help>
+        <label>Politique d&apos;assurance garantie Date de f</label>
+        <name>Collateral_Insurance_Policy_Expiration_D__c</name>
+    </fields>
+    <fields>
+        <label>Politique d&apos;assurance garantie Date d&apos;ém</label>
+        <name>Collateral_Insurance_Policy_Issue_Date__c</name>
+    </fields>
+    <fields>
+        <label>Numéro de la police d&apos;assurance garantie</label>
+        <name>Collateral_Insurance_Policy_Number__c</name>
+    </fields>
+    <fields>
+        <label>Politique d&apos;assurance garantie Valeur</label>
+        <name>Collateral_Insurance_Policy_Value__c</name>
+    </fields>
+    <fields>
+        <label>État d&apos;assurance garantie</label>
+        <name>Collateral_Insurance_State__c</name>
+        <picklistValues>
+            <masterLabel>AK</masterLabel>
+            <translation>Alaska</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation>Alabama</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation>AVEC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation>LA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation>Californie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation><!-- CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT</masterLabel>
+            <translation><!-- CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation>Géorgie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI</masterLabel>
+            <translation>SALUT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IA</masterLabel>
+            <translation><!-- IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation><!-- ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation>DANS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KS</masterLabel>
+            <translation><!-- KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation><!-- KY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation>MARYLAND</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation>MOI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI</masterLabel>
+            <translation><!-- MI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation><!-- MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation><!-- MO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation>MME</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation>Caroline du Nord</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND</masterLabel>
+            <translation>Dakota du Nord</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation><!-- NE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NH</masterLabel>
+            <translation>New Hampshire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ</masterLabel>
+            <translation>New Jersey</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NM</masterLabel>
+            <translation><!-- NM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NV</masterLabel>
+            <translation>Nevada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation>New York</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OH</masterLabel>
+            <translation><!-- OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation>D&apos;accord</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OR</masterLabel>
+            <translation>OU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation>Pennsylvanie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RI</masterLabel>
+            <translation><!-- RI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation>Caroline du Sud</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation>Dakota du Sud</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation><!-- TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation>OUT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation>Virginie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VT</masterLabel>
+            <translation>Vermont</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation>Washington</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI</masterLabel>
+            <translation>Wisconsin</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WV</masterLabel>
+            <translation>Virginie-Occidentale</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WY</masterLabel>
+            <translation>Wyoming</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Rue des garanties d&apos;assurance</label>
+        <name>Collateral_Insurance_Street__c</name>
+    </fields>
+    <fields>
+        <label>Zip assurance garantie</label>
+        <name>Collateral_Insurance_Zip__c</name>
+    </fields>
+    <fields>
+        <label>Collatéral</label>
+        <name>Collateral__c</name>
+        <relationshipLabel>Assurances</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Nombre de jours la politique a expiré.</help>
+        <label>Jours politiques antérieures d&apos;expiratio</label>
+        <name>Days_Past_Policy_Expiration__c</name>
+    </fields>
+    <fields>
+        <help>Nombre de jours avant expiration de la police.</help>
+        <label>Jours avant l&apos;expiration de la politique</label>
+        <name>Days_Until_Policy_Expiration__c</name>
+    </fields>
+    <fields>
+        <label>Type d&apos;assurance</label>
+        <name>Type_of_Insurance__c</name>
+        <picklistValues>
+            <masterLabel>Auto</masterLabel>
+            <translation><!-- Auto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fire</masterLabel>
+            <translation>Feu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flood</masterLabel>
+            <translation>Inonder</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liability</masterLabel>
+            <translation>Responsabilité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wind / Hail</masterLabel>
+            <translation>Vent / Je vous salue</translation>
+        </picklistValues>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Insurance Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+    <webLinks>
+        <label>Les formulaires génération</label>
+        <name>Forms_Generation</name>
+    </webLinks>
+    <webLinks>
+        <label>générer des formulaires</label>
+        <name>Generate_Forms</name>
+    </webLinks>
+</CustomObjectTranslation>

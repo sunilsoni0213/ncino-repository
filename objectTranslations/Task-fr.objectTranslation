@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label>entretien existant</label>
+        <name>LLC_BI__Existing_Maintenance</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Maintenance UI --></label>
+        <name>LLC_BI__Maintenance_UI</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Tâches de l&apos;interface utilisateur</label>
+        <name>LLC_BI__UI_Tasks</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Comment Preview --></label>
+        <name>Comment_Preview__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Group --></label>
+        <name>LLC_BI__Assignment_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter estimated time to complete a task --></help>
+        <label><!-- Estimated Time --></label>
+        <name>LLC_BI__Estimated_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Group --></label>
+        <name>LLC_BI__Group__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Maintenance Category --></label>
+        <name>LLC_BI__Maintenance_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Task --></label>
+        <name>LLC_BI__Parent_Task__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maintenance Type --></label>
+        <name>LLC_BI__SubType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Template --></label>
+        <name>LLC_BI__isTemplate__c</name>
+    </fields>
+    <recordTypes>
+        <label>Tâche de maintenance</label>
+        <name>LLC_BI__Maintenance_Task</name>
+    </recordTypes>
+</CustomObjectTranslation>

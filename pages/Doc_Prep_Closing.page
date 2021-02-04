@@ -1,0 +1,73 @@
+<apex:page controller="nFORCE.TemplateController">
+    <script>
+    angular.module('ncDocPrepContinue', ['ncPubsub'])
+		.controller('DocPrepContinueController', ['$scope', 'pubsub', '$timeout',
+			function ($scope, pubsub, $timeout) {
+				var vm = this;
+				vm.$onInit = function () {
+								pubsub.publish('PRIMARY_BUTTON_SET', {
+									rendered: false});
+				};
+                $scope.clickedTheButton = function(){
+                	window.location.href = '{!nextHref}';   
+                }; 
+			}
+		]);
+    angular.element(document).ready(function() {
+		angular.bootstrap(document.getElementById('ncDocPrepContinue'), ['ncDocPrepContinue']);
+	});
+    </script>
+    <span id="ncDocPrepContinue" ng-controller="DocPrepContinueController">
+    <apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<span>Manage Documents</span>
+		</apex:define>
+	</apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+                    
+                        Select a provider to begin: 
+                    
+                    <div class="content-body slds-p-left--x-small slds-p-right--x-small" style="width: 250px; display: inline-block;">   
+                        <select class="form-control">
+                            <option>
+                                CSI Comm DocPrep
+                            </option>
+                        </select>
+                    </div>
+                    <button class="slds-button slds-button--neutral">
+                        Select
+                    </button>
+                    <hr/>
+                    <div>
+                    	Click Start Document Preparation to begin the document preparation process. Previously generated documents are displayed below. Documents that can be edited have a Continue action.
+                    </div>
+                    <button class="slds-button slds-button--brand slds-m-top--large" ng-click="clickedTheButton()">
+                        Start Document Preparation
+                    </button>
+                    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-m-top--large">
+                      <thead>
+                        <tr class="slds-text-title_caps">
+                          <th>
+                            <div>Status</div>
+                          </th>
+                          <th>
+                            <div>Comments</div>
+                          </th>
+                          <th>
+                            <div>Date</div>
+                          </th>
+                          <th>
+                            <div>Team Member</div>
+                          </th>
+                        </tr>
+                      </thead>
+                    </table>
+            	</apex:define>
+        	</apex:composition>
+        </apex:define>
+    </apex:composition></span>
+                   
+</apex:page>

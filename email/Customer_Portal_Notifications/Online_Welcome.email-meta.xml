@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>38.0</apiVersion>
+    <available>true</available>
+    <description>New Email Template for Online Application</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Online_Welcome</name>
+    <style>none</style>
+    <subject>Welcome</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

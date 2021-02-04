@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This action deletes the existing pricing options related to the loan if there are any, and generates the proposed pricing option for the loan.</description>
+        <name>Generate_Proposed_Pricing_Option</name>
+        <label>Generate Proposed Pricing Option</label>
+        <locationX>362</locationX>
+        <locationY>50</locationY>
+        <actionName>nRetail__GenerateProposedPricingOption</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Set_Workflow_Orchestration_Step</targetReference>
+        </connector>
+        <inputParameters>
+            <name>loanId</name>
+            <value>
+                <elementReference>WorkflowOrhestrationRecord.nFORCE__Context_Id__c</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <description>The workflow orchestration step triggers this flow and generates a proposed pricing option for the loan.</description>
+    <interviewLabel>Flow_Sherman_Calculation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Generate_Proposed_Pricing_Option</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>This action retrieves the workflow orchestration record for this flow.</description>
+        <name>Get_Workflow_Orchestration_Record</name>
+        <label>Get Workflow Orchestration Record</label>
+        <locationX>196</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Generate_Proposed_Pricing_Option</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>StepObjId</elementReference>
+            </value>
+        </filters>
+        <object>nFORCE__Workflow_Orchestration__c</object>
+        <outputReference>WorkflowOrhestrationRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>nFORCE__Context_Id__c</queriedFields>
+        <queriedFields>nFORCE__Orchestration_Step__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>This action sets a new workflow orchestration step.</description>
+        <name>Set_Workflow_Orchestration_Step</name>
+        <label>Set Workflow Orchestration Step</label>
+        <locationX>537</locationX>
+        <locationY>50</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WorkflowOrhestrationRecord.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>nFORCE__Orchestration_Step__c</field>
+            <value>
+                <elementReference>ShermanCalculationAndCreateProposedDebt</elementReference>
+            </value>
+        </inputAssignments>
+        <object>nFORCE__Workflow_Orchestration__c</object>
+    </recordUpdates>
+    <startElementReference>Get_Workflow_Orchestration_Record</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Next Workflow Orchestration Step</description>
+        <name>ShermanCalculationAndCreateProposedDebt</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Sherman Calculation And Create Proposed Debt</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>StepObjId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>WorkflowOrhestrationRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>nFORCE__Workflow_Orchestration__c</objectType>
+    </variables>
+</Flow>

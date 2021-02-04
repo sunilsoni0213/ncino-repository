@@ -1,0 +1,24 @@
+<apex:page standardController="LLC_BI__Underwriting_Summary__c" extensions="UnderwritingSummaryGlanceClass">
+    <apex:panelgrid columns="4" id="theGrid">
+        <analytics:reportChart reportId="00O5w000009dBq6"
+                               filter="{column:'LLC_BI__Underwriting_Bundle__c.LLC_BI__Relationship__c.Name', operator:'equals', value:'{!UnderwritingSummaryName}'}"
+                               size="small"
+                               hideonerror="true">
+        </analytics:reportChart>
+        <analytics:reportChart reportId="00O5w000009dBq3"
+                               filter="{column:'LLC_BI__Underwriting_Bundle__c.LLC_BI__Relationship__c.Name', operator:'equals', value:'{!UnderwritingSummaryName}'}"                          
+                               size="small"
+                               hideonerror="true">
+        </analytics:reportChart>
+        <analytics:reportChart reportId="00O5w000009dBq4"
+                               filter="{column:'LLC_BI__Underwriting_Bundle__c.LLC_BI__Relationship__c.Name', operator:'equals', value:'{!UnderwritingSummaryName}'}"
+                               size="small"
+                               hideonerror="true">
+        </analytics:reportChart>
+        <analytics:reportChart reportId="00O5w000009dBq5"
+                               filter="{column:'LLC_BI__Underwriting_Bundle__c.LLC_BI__Relationship__c.Name', operator:'equals', value:'{!UnderwritingSummaryName}'}"
+                               size="small"
+                               hideonerror="true">
+        </analytics:reportChart> 
+    </apex:panelgrid>
+</apex:page>

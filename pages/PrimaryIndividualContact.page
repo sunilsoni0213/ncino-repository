@@ -1,0 +1,160 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false" standardStylesheets="true" extensions="PrimaryIndividualContactController">
+    
+   <style>
+    .panel-reid {
+        border-color: #F5F6F9;
+    }
+    .panel-reid > .panel-heading {
+        color: #F5F6F9;
+        background-color: #F5F6F9;
+        border-color: #F5F6F9;
+    }
+    </style>    
+    <nDESIGN:Includes enableBootstrap3="true" enableBS3Namespace="true" enableFontAwesome="true"/>
+
+
+    <apex:form id="theform">
+    <div class="force">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-reid">
+                    <div class="panel-heading clearfix">
+                        <h4 class="pull-left">
+                            <apex:outputPanel rendered="{!showContact || showEdit}">
+                                <u>
+                                    <apex:outputLink value="/{!contact.Id}" style="color:Black;">{!contact.Name}</apex:outputLink>
+                                </u> 
+                                <apex:outputText value="Contact Details:"/>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!showNoPrimary}">
+                                <apex:outputText value="Make A Contact Primary"/>
+                            </apex:outputPanel>
+                        </h4>
+                        <div class="pull-right">
+                            <apex:actionStatus id="loading" >
+                                <apex:facet name="start" >
+                                    <i class="fa fa-refresh fa-spin fa-lg"></i>&nbsp;&nbsp;&nbsp;                                  
+                                </apex:facet>
+                            </apex:actionStatus>
+                            <div class="btn-group">
+                                <apex:commandButton value="Save" styleClass="btn btn-success btn-sm" action="{!theSavePrimaryConatact}" rendered="{!showEdit}" reRender="theform" status="loading"/>
+                                <apex:commandButton value="Save" styleClass="btn btn-success btn-sm" action="{!theSaveNewPrimary}" rendered="{!showNoPrimary}" reRender="theform" status="loading"/>
+                                <apex:commandButton value="Edit" styleClass="btn btn-primary btn-sm" action="{!theEdit}" rendered="{!showContact}" reRender="theform" status="loading"/>
+                                <apex:commandButton value="Cancel" styleClass="btn btn-danger btn-sm" action="{!theCancel}" rendered="{!showNoPrimary || showEdit}" reRender="theform" status="loading"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="max-height:250px;overflow:auto;">
+                        <div class="col-sm-offset-2 col-sm-6">
+                            <apex:messages />
+                        </div>
+                        <apex:outputPanel rendered="{!showContact}">
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tbody>
+                                        <apex:repeat value="{!Column1Fields}" var="f">
+                                            <tr>
+                                                <td class="text-right">
+                                                    <apex:outputLabel value="{!f.Label}"/>:
+                                                </td>
+                                                <td>
+                                                    <apex:outputField value="{!contact[f.FieldPath]}"/>
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tbody>
+                                        <apex:repeat value="{!Column2Fields}" var="f">
+                                            <tr>
+                                                <td class="text-right">
+                                                    <apex:outputLabel value="{!f.Label}"/>:
+                                                </td>
+                                                <td>
+                                                    <apex:outputField value="{!contact[f.FieldPath]}"/>
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </apex:outputPanel>
+
+                        <apex:outputPanel rendered="{!showEdit}">
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tbody>
+                                        <apex:repeat value="{!Column1Fields}" var="f">
+                                            <tr>
+                                                <td class="text-right">
+                                                    <apex:outputLabel value="{!f.Label}"/>:
+                                                </td>
+                                                <td>
+                                                    <apex:inputField value="{!contact[f.FieldPath]}" styleClass="form-control"/>
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tbody>
+                                        <apex:repeat value="{!Column2Fields}" var="f">
+                                            <tr>
+                                                <td class="text-right">
+                                                    <apex:outputLabel value="{!f.Label}"/>:
+                                                </td>
+                                                <td>
+                                                    <apex:inputField value="{!contact[f.FieldPath]}" styleClass="form-control"/>
+                                                </td>
+                                            </tr>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </apex:outputPanel>
+
+                        <apex:outputPanel rendered="{!showNoPrimary}">
+                            <table class="table">
+                                <thead>
+                                    <tr class="text-center">
+                                        <td>
+                                            <apex:outputLabel value="Name"/>
+                                        </td>
+                                        <td>
+                                            <apex:outputLabel value="Primary Contact"/>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:outputPanel rendered="{!noPrimary.size = 0}">
+                                        <tr class="text-center">
+                                            <td colspan="2">
+                                                <b><apex:outputText value="No Contacts exist for this Relationship"/></b>
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <apex:repeat value="{!noPrimary}" var="np" rendered="{!noPrimary.size > 0}">
+                                        <tr class="text-center">
+                                            <td>
+                                                <apex:outputField value="{!np.Name}"/>
+                                            </td>
+                                            <td>
+                                                <apex:inputField value="{!np.LLC_BI__Primary_Contact__c}"/>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+Hi {!Receiving_User.FirstName},
+
+Welcome to {!Community_Name}! To get started, go to {!$Setup.Customer_Portal__c.Community_Url__c}
+
+I can add additional information here to make my user understand the purpose of this correspondence.
+
+Username: {!Receiving_User.Username}
+            
+Thanks,
+{!Organization.Name}

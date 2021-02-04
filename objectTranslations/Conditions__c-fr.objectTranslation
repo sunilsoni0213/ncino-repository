@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Conditions --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Conditions --></value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Conditions --></label>
+        <name>Conditions</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Conditions Snapshot</label>
+        <name>Snapshot_Conditions</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Condition Precedent/Subsequent --></label>
+        <name>Condition_Precedent_Subsequent__c</name>
+        <picklistValues>
+            <masterLabel>Condition Precedent</masterLabel>
+            <translation><!-- Condition Precedent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Condition Subsequent</masterLabel>
+            <translation><!-- Condition Subsequent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Condition Specifics --></label>
+        <name>Condition_Specifics__c</name>
+        <picklistValues>
+            <masterLabel>A certificate signed by two directors of the Borrower certifying among other matters required by the Financier, its solvency and constituent documents and no Material Adverse Effect has occurred</masterLabel>
+            <translation><!-- A certificate signed by two directors of the Borrower certifying among other matters required by the Financier, its solvency and constituent documents and no Material Adverse Effect has occurred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A certified budget including 3-year historic &amp; forecast statement of financial position, statement of financial performance &amp; cashflow statement financial model, detailing discretionary &amp; non-discretionary Capital Expenditure for the next number of years</masterLabel>
+            <translation><!-- A certified budget including 3-year historic &amp; forecast statement of financial position, statement of financial performance &amp; cashflow statement financial model, detailing discretionary &amp; non-discretionary Capital Expenditure for the next number of years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A copy of the Borrower’s most recent audited financial reports</masterLabel>
+            <translation><!-- A copy of the Borrower’s most recent audited financial reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A copy of the Sale and Purchase agreement and any relevant document associated with a purchase, takeover or merger in respect of the [assets/shares] Target</masterLabel>
+            <translation><!-- A copy of the Sale and Purchase agreement and any relevant document associated with a purchase, takeover or merger in respect of the [assets/shares] Target --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A copy of the corporate structure of the Borrower and its subsidiaries</masterLabel>
+            <translation><!-- A copy of the corporate structure of the Borrower and its subsidiaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A valuation in respect of each real property (if any)</masterLabel>
+            <translation><!-- A valuation in respect of each real property (if any) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All fees and expenses, including all applicable taxes (including stamp duty) which are due</masterLabel>
+            <translation><!-- All fees and expenses, including all applicable taxes (including stamp duty) which are due --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All necessary authorisations for the drawdown have been obtained</masterLabel>
+            <translation><!-- All necessary authorisations for the drawdown have been obtained --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All necessary corporate and regulatory approvals and consents have been obtained and remain in full force and effect</masterLabel>
+            <translation><!-- All necessary corporate and regulatory approvals and consents have been obtained and remain in full force and effect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Certified copies of all Material Contracts</masterLabel>
+            <translation><!-- Certified copies of all Material Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmation that the establishment fee specified in Item 3 of Schedule 1 (Variables Schedule) was paid on or before the date specified in Item 3 of Schedule 1 (Variables Schedule</masterLabel>
+            <translation><!-- Confirmation that the establishment fee specified in Item 3 of Schedule 1 (Variables Schedule) was paid on or before the date specified in Item 3 of Schedule 1 (Variables Schedule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate benefit and that there is no breach of Chapter 2E or Part 2J.3 of the Corporations Act</masterLabel>
+            <translation><!-- Corporate benefit and that there is no breach of Chapter 2E or Part 2J.3 of the Corporations Act --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Due diligence reports prepared by a relevant expert in relation to the acquisition, including (but not limited to): accounting, tax, legal, technical, environment and marketing</masterLabel>
+            <translation><!-- Due diligence reports prepared by a relevant expert in relation to the acquisition, including (but not limited to): accounting, tax, legal, technical, environment and marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duly executed by the Obligors and where appropriate in a registrable form</masterLabel>
+            <translation><!-- Duly executed by the Obligors and where appropriate in a registrable form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Each Guarantor will formally acknowledge each is aware of the terms and conditions of finance either by being party to the Facility Agreement or the execution of a separate document.</masterLabel>
+            <translation><!-- Each Guarantor will formally acknowledge each is aware of the terms and conditions of finance either by being party to the Facility Agreement or the execution of a separate document. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Each shareholder agreement (if any)</masterLabel>
+            <translation><!-- Each shareholder agreement (if any) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evidence that satisfactory keyman insurance has been taken out in respect of all Key Management</masterLabel>
+            <translation><!-- Evidence that satisfactory keyman insurance has been taken out in respect of all Key Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>From the Financier’s counsel in relation to the Transaction Documentation</masterLabel>
+            <translation><!-- From the Financier’s counsel in relation to the Transaction Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Event of Default, Event of Review or potential Event of Default is subsisting or will result from the provision of the drawdown funds</masterLabel>
+            <translation><!-- No Event of Default, Event of Review or potential Event of Default is subsisting or will result from the provision of the drawdown funds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receipt of drawdown / rollover notices no later than 3 business days prior to the drawdown / rollover date</masterLabel>
+            <translation><!-- Receipt of drawdown / rollover notices no later than 3 business days prior to the drawdown / rollover date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Representations and Warranties are true and correct</masterLabel>
+            <translation><!-- Representations and Warranties are true and correct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfactory Title Insurance</masterLabel>
+            <translation>Assurance Titre satisfaisant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The Financier is noted on insurance documents as first mortgagee over all assets and undertakings of the Obligors.</masterLabel>
+            <translation><!-- The Financier is noted on insurance documents as first mortgagee over all assets and undertakings of the Obligors. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The Financier is satisfied as to its &apos;know your customer&apos; or similar identification and verification checks and procedures</masterLabel>
+            <translation><!-- The Financier is satisfied as to its &apos;know your customer&apos; or similar identification and verification checks and procedures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The hedging policies of the Borrower (including in respect of interest rate and foreign exchange) which must be to the satisfaction of the Financier</masterLabel>
+            <translation><!-- The hedging policies of the Borrower (including in respect of interest rate and foreign exchange) which must be to the satisfaction of the Financier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The results of all searches, enquires and requisitions on the Financier&apos;s behalf with respect to each Obligor and the Secured Property, including all searches of the Personal Property Securities Register in respect of the Secured Property &amp; each Obligor.</masterLabel>
+            <translation><!-- The results of all searches, enquires and requisitions on the Financier&apos;s behalf with respect to each Obligor and the Secured Property, including all searches of the Personal Property Securities Register in respect of the Secured Property &amp; each Obligor. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Title to mortgaged property</masterLabel>
+            <translation><!-- Title to mortgaged property --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Type de condition</label>
+        <name>Condition_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accounts</masterLabel>
+            <translation><!-- Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approvals</masterLabel>
+            <translation><!-- Approvals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorisations</masterLabel>
+            <translation><!-- Authorisations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget</masterLabel>
+            <translation><!-- Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contracts</masterLabel>
+            <translation><!-- Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Benefit</masterLabel>
+            <translation><!-- Corporate Benefit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Structure</masterLabel>
+            <translation><!-- Corporate Structure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draw Notice</masterLabel>
+            <translation><!-- Draw Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Due Diligence</masterLabel>
+            <translation><!-- Due Diligence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Establishment Fee</masterLabel>
+            <translation><!-- Establishment Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fees and Expenses</masterLabel>
+            <translation><!-- Fees and Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guarantors Acknowledgement</masterLabel>
+            <translation><!-- Guarantors Acknowledgement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hedging</masterLabel>
+            <translation><!-- Hedging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KYC</masterLabel>
+            <translation><!-- KYC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keyman Insurance</masterLabel>
+            <translation><!-- Keyman Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Opinion</masterLabel>
+            <translation><!-- Legal Opinion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Default</masterLabel>
+            <translation><!-- No Default --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Representations and Warranties</masterLabel>
+            <translation><!-- Representations and Warranties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sale and Purchase Agreement</masterLabel>
+            <translation><!-- Sale and Purchase Agreement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Searches</masterLabel>
+            <translation><!-- Searches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shareholder Loan Agreement</masterLabel>
+            <translation><!-- Shareholder Loan Agreement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Title</masterLabel>
+            <translation><!-- Title --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transaction Documents</masterLabel>
+            <translation><!-- Transaction Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valuations</masterLabel>
+            <translation><!-- Valuations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verification Certificate</masterLabel>
+            <translation><!-- Verification Certificate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Conditions Due In: --></label>
+        <name>Conditions_Due_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conditions Overdue --></label>
+        <name>Conditions_Overdue__c</name>
+    </fields>
+    <fields>
+        <label>Date satisfait</label>
+        <name>Date_Satisfied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date2__c</name>
+    </fields>
+    <fields>
+        <label>Date d&apos;échéance</label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label>Prêt</label>
+        <name>Loan_Lookup__c</name>
+        <relationshipLabel><!-- Conditions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label>Statut</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Not Satisfied</masterLabel>
+            <translation>Pas satisfait</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation>Satisfait</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived</masterLabel>
+            <translation><!-- Waived --></translation>
+        </picklistValues>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <nameFieldLabel><!-- Conditions Name --></nameFieldLabel>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

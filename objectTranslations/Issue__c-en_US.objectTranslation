@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Issue</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Issues</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Issues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Configuration</masterLabel>
+            <translation><!-- Configuration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Validation</masterLabel>
+            <translation><!-- Data Validation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error Message</masterLabel>
+            <translation><!-- Error Message --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Question</masterLabel>
+            <translation><!-- User Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Suggestion/Feedback</masterLabel>
+            <translation><!-- User Suggestion/Feedback --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comment Count --></label>
+        <name>Comment_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Completed Date --></label>
+        <name>Estimated_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Priority --></label>
+        <name>Issue_Priority__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation><!-- Critical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Issue Status --></label>
+        <name>Issue_Status__c</name>
+        <picklistValues>
+            <masterLabel>Business Decision Needed</masterLabel>
+            <translation><!-- Business Decision Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed - Resolved</masterLabel>
+            <translation><!-- Closed - Resolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow-On Phase</masterLabel>
+            <translation><!-- Follow-On Phase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Retest</masterLabel>
+            <translation><!-- Ready for Retest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - Client</masterLabel>
+            <translation><!-- Working - Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working - nCino</masterLabel>
+            <translation><!-- Working - nCino --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Open Issue Age --></label>
+        <name>Open_Issue_Age__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

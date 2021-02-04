@@ -1,0 +1,64 @@
+<apex:page controller="nFORCE.TemplateController">
+    <nFORCE:ncPubsubIncludes />
+    <apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left">
+			<span>Generating Documents</span>
+		</apex:define>
+	</apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+                    <div class="slds-box slds-theme--info slds-grid">
+            
+                        <div class="slds-size--1-of-6">
+                           
+                            <div style="position:relative; top: 50%;">
+                            
+                               <div class="slds-spinner_container">
+                                    <div class="slds-spinner--inverse slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                                        <div class="slds-spinner__dot-a"></div>
+                                        <div class="slds-spinner__dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size--5-of-6">
+                            <div class="slds-text-heading--medium">
+                                YOUR DOCUMENTS ARE BEING GENERATED.
+                            </div>
+                            <div class="slds-text-heading--small">
+                                THIS MAY TAKE UP TO A MINUTE.
+                                <br/>
+                                <br/>
+                                This of all the wonderful things happening right now - taking all of the information you have entered into nCino and incorporating it into documents for your customers. That's probably lots of data and lots of documents.
+                                <br/>
+                                <br/>
+                                Don't navigate away from this page, we would hate for you to have to start all over.
+                            </div>
+                        </div>
+                    </div>
+            	</apex:define>
+        	</apex:composition>
+        </apex:define>
+    </apex:composition>
+     <script>
+    angular.module('ncDocPrepContinue', ['ncPubsub'])
+		.controller('DocPrepContinueController', ['$scope', 'pubsub', '$timeout',
+			function ($scope, pubsub, $timeout) {
+				var vm = this;
+				vm.$onInit = function () {
+								pubsub.publish('PRIMARY_BUTTON_SET', {
+									rendered: false});
+                                    $timeout(function () {
+                                    	window.location.href = '{!nextHref}';
+                                    }, 10000);
+				};
+			}
+		]);
+    angular.element(document).ready(function() {
+		angular.bootstrap(document.getElementById('ncDocPrepContinue'), ['ncDocPrepContinue']);
+	});
+    </script>
+    <span id="ncDocPrepContinue" ng-controller="DocPrepContinueController"></span>
+</apex:page>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bedfordshire</fullName>
+        <default>false</default>
+        <label>Bedfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Buckinghamshire</fullName>
+        <default>false</default>
+        <label>Buckinghamshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Cambridgeshire</fullName>
+        <default>false</default>
+        <label>Cambridgeshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheshire</fullName>
+        <default>false</default>
+        <label>Cheshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleveland</fullName>
+        <default>false</default>
+        <label>Cleveland</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornwall</fullName>
+        <default>false</default>
+        <label>Cornwall</label>
+    </customValue>
+    <customValue>
+        <fullName>Cumbria</fullName>
+        <default>false</default>
+        <label>Cumbria</label>
+    </customValue>
+    <customValue>
+        <fullName>Derbyshire</fullName>
+        <default>false</default>
+        <label>Derbyshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Devon</fullName>
+        <default>false</default>
+        <label>Devon</label>
+    </customValue>
+    <customValue>
+        <fullName>Dorset</fullName>
+        <default>false</default>
+        <label>Dorset</label>
+    </customValue>
+    <customValue>
+        <fullName>Durham</fullName>
+        <default>false</default>
+        <label>Durham</label>
+    </customValue>
+    <customValue>
+        <fullName>East Sussex</fullName>
+        <default>false</default>
+        <label>East Sussex</label>
+    </customValue>
+    <customValue>
+        <fullName>Essex</fullName>
+        <default>false</default>
+        <label>Essex</label>
+    </customValue>
+    <customValue>
+        <fullName>Gloucestershire</fullName>
+        <default>false</default>
+        <label>Gloucestershire</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater London</fullName>
+        <default>false</default>
+        <label>Greater London</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Manchester</fullName>
+        <default>false</default>
+        <label>Greater Manchester</label>
+    </customValue>
+    <customValue>
+        <fullName>Hampshire</fullName>
+        <default>false</default>
+        <label>Hampshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Hertfordshire</fullName>
+        <default>false</default>
+        <label>Hertfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Kent</fullName>
+        <default>false</default>
+        <label>Kent</label>
+    </customValue>
+    <customValue>
+        <fullName>Lancashire</fullName>
+        <default>false</default>
+        <label>Lancashire</label>
+    </customValue>
+    <customValue>
+        <fullName>Leicestershire</fullName>
+        <default>false</default>
+        <label>Leicestershire</label>
+    </customValue>
+    <customValue>
+        <fullName>Lincolnshire</fullName>
+        <default>false</default>
+        <label>Lincolnshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Merseyside</fullName>
+        <default>false</default>
+        <label>Merseyside</label>
+    </customValue>
+    <customValue>
+        <fullName>Norfolk</fullName>
+        <default>false</default>
+        <label>Norfolk</label>
+    </customValue>
+    <customValue>
+        <fullName>North Yorkshire</fullName>
+        <default>false</default>
+        <label>North Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Northamptonshire</fullName>
+        <default>false</default>
+        <label>Northamptonshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Northumberland</fullName>
+        <default>false</default>
+        <label>Northumberland</label>
+    </customValue>
+    <customValue>
+        <fullName>Nottinghamshire</fullName>
+        <default>false</default>
+        <label>Nottinghamshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Oxfordshire</fullName>
+        <default>false</default>
+        <label>Oxfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Shropshire</fullName>
+        <default>false</default>
+        <label>Shropshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Somerset</fullName>
+        <default>false</default>
+        <label>Somerset</label>
+    </customValue>
+    <customValue>
+        <fullName>South Yorkshire</fullName>
+        <default>false</default>
+        <label>South Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Staffordshire</fullName>
+        <default>false</default>
+        <label>Staffordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Suffolk</fullName>
+        <default>false</default>
+        <label>Suffolk</label>
+    </customValue>
+    <customValue>
+        <fullName>Surrey</fullName>
+        <default>false</default>
+        <label>Surrey</label>
+    </customValue>
+    <customValue>
+        <fullName>Tyne and Wear</fullName>
+        <default>false</default>
+        <label>Tyne and Wear</label>
+    </customValue>
+    <customValue>
+        <fullName>Warwickshire</fullName>
+        <default>false</default>
+        <label>Warwickshire</label>
+    </customValue>
+    <customValue>
+        <fullName>West Berkshire</fullName>
+        <default>false</default>
+        <label>West Berkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>West Midlands</fullName>
+        <default>false</default>
+        <label>West Midlands</label>
+    </customValue>
+    <customValue>
+        <fullName>West Sussex</fullName>
+        <default>false</default>
+        <label>West Sussex</label>
+    </customValue>
+    <customValue>
+        <fullName>West Yorkshire</fullName>
+        <default>false</default>
+        <label>West Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Wiltshire</fullName>
+        <default>false</default>
+        <label>Wiltshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Worcestershire</fullName>
+        <default>false</default>
+        <label>Worcestershire</label>
+    </customValue>
+    <customValue>
+        <fullName>Flintshire</fullName>
+        <default>false</default>
+        <label>Flintshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Glamorgan</fullName>
+        <default>false</default>
+        <label>Glamorgan</label>
+    </customValue>
+    <customValue>
+        <fullName>Merionethshire</fullName>
+        <default>false</default>
+        <label>Merionethshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Monmouthshire</fullName>
+        <default>false</default>
+        <label>Monmouthshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Montgomeryshire</fullName>
+        <default>false</default>
+        <label>Montgomeryshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Pembrokeshire</fullName>
+        <default>false</default>
+        <label>Pembrokeshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Radnorshire</fullName>
+        <default>false</default>
+        <label>Radnorshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Anglesey</fullName>
+        <default>false</default>
+        <label>Anglesey</label>
+    </customValue>
+    <customValue>
+        <fullName>Breconshire</fullName>
+        <default>false</default>
+        <label>Breconshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Caernarvonshire</fullName>
+        <default>false</default>
+        <label>Caernarvonshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Cardiganshire</fullName>
+        <default>false</default>
+        <label>Cardiganshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Carmarthenshire</fullName>
+        <default>false</default>
+        <label>Carmarthenshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Denbighshire</fullName>
+        <default>false</default>
+        <label>Denbighshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Aberdeen City</fullName>
+        <default>false</default>
+        <label>Aberdeen City</label>
+    </customValue>
+    <customValue>
+        <fullName>Aberdeenshire</fullName>
+        <default>false</default>
+        <label>Aberdeenshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Angus</fullName>
+        <default>false</default>
+        <label>Angus</label>
+    </customValue>
+    <customValue>
+        <fullName>Argyll and Bute</fullName>
+        <default>false</default>
+        <label>Argyll and Bute</label>
+    </customValue>
+    <customValue>
+        <fullName>City of Edinburgh</fullName>
+        <default>false</default>
+        <label>City of Edinburgh</label>
+    </customValue>
+    <customValue>
+        <fullName>Clackmannanshire</fullName>
+        <default>false</default>
+        <label>Clackmannanshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Dumfries and Galloway</fullName>
+        <default>false</default>
+        <label>Dumfries and Galloway</label>
+    </customValue>
+    <customValue>
+        <fullName>Dundee City</fullName>
+        <default>false</default>
+        <label>Dundee City</label>
+    </customValue>
+    <customValue>
+        <fullName>East Ayrshire</fullName>
+        <default>false</default>
+        <label>East Ayrshire</label>
+    </customValue>
+    <customValue>
+        <fullName>East Dunbartonshire</fullName>
+        <default>false</default>
+        <label>East Dunbartonshire</label>
+    </customValue>
+    <customValue>
+        <fullName>East Lothian</fullName>
+        <default>false</default>
+        <label>East Lothian</label>
+    </customValue>
+    <customValue>
+        <fullName>East Renfrewshire</fullName>
+        <default>false</default>
+        <label>East Renfrewshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Eilean Siar</fullName>
+        <default>false</default>
+        <label>Eilean Siar</label>
+    </customValue>
+    <customValue>
+        <fullName>Falkirk</fullName>
+        <default>false</default>
+        <label>Falkirk</label>
+    </customValue>
+    <customValue>
+        <fullName>Fife</fullName>
+        <default>false</default>
+        <label>Fife</label>
+    </customValue>
+    <customValue>
+        <fullName>Glasgow City</fullName>
+        <default>false</default>
+        <label>Glasgow City</label>
+    </customValue>
+    <customValue>
+        <fullName>Highland</fullName>
+        <default>false</default>
+        <label>Highland</label>
+    </customValue>
+    <customValue>
+        <fullName>Inverclyde</fullName>
+        <default>false</default>
+        <label>Inverclyde</label>
+    </customValue>
+    <customValue>
+        <fullName>Midlothian</fullName>
+        <default>false</default>
+        <label>Midlothian</label>
+    </customValue>
+    <customValue>
+        <fullName>Moray</fullName>
+        <default>false</default>
+        <label>Moray</label>
+    </customValue>
+    <customValue>
+        <fullName>North Ayrshire</fullName>
+        <default>false</default>
+        <label>North Ayrshire</label>
+    </customValue>
+    <customValue>
+        <fullName>North Lanarkshire</fullName>
+        <default>false</default>
+        <label>North Lanarkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Orkney Islands</fullName>
+        <default>false</default>
+        <label>Orkney Islands</label>
+    </customValue>
+    <customValue>
+        <fullName>Perth and Kinross</fullName>
+        <default>false</default>
+        <label>Perth and Kinross</label>
+    </customValue>
+    <customValue>
+        <fullName>Renfrewshire</fullName>
+        <default>false</default>
+        <label>Renfrewshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Scottish Borders</fullName>
+        <default>false</default>
+        <label>Scottish Borders</label>
+    </customValue>
+    <customValue>
+        <fullName>Shetland Islands</fullName>
+        <default>false</default>
+        <label>Shetland Islands</label>
+    </customValue>
+    <customValue>
+        <fullName>South Ayrshire</fullName>
+        <default>false</default>
+        <label>South Ayrshire</label>
+    </customValue>
+    <customValue>
+        <fullName>South Lanarkshire</fullName>
+        <default>false</default>
+        <label>South Lanarkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Stirling</fullName>
+        <default>false</default>
+        <label>Stirling</label>
+    </customValue>
+    <customValue>
+        <fullName>West Dunbartonshire</fullName>
+        <default>false</default>
+        <label>West Dunbartonshire</label>
+    </customValue>
+    <customValue>
+        <fullName>West Lothian</fullName>
+        <default>false</default>
+        <label>West Lothian</label>
+    </customValue>
+    <customValue>
+        <fullName>Antrim</fullName>
+        <default>false</default>
+        <label>Antrim</label>
+    </customValue>
+    <customValue>
+        <fullName>Armagh</fullName>
+        <default>false</default>
+        <label>Armagh</label>
+    </customValue>
+    <customValue>
+        <fullName>Down</fullName>
+        <default>false</default>
+        <label>Down</label>
+    </customValue>
+    <customValue>
+        <fullName>Fermanagh</fullName>
+        <default>false</default>
+        <label>Fermanagh</label>
+    </customValue>
+    <customValue>
+        <fullName>Derry and Londonderry</fullName>
+        <default>false</default>
+        <label>Derry and Londonderry</label>
+    </customValue>
+    <customValue>
+        <fullName>Tyrone</fullName>
+        <default>false</default>
+        <label>Tyrone</label>
+    </customValue>
+    <description>List of the all the counties in the United Kingdom</description>
+    <masterLabel>UK Counties</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

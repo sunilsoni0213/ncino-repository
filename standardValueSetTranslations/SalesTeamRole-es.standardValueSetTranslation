@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Account Manager</masterLabel>
+        <translation>Gerente de cuentas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Channel Manager</masterLabel>
+        <translation>Gerente de Canal</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Executive Sponsor</masterLabel>
+        <translation>Patrocinador ejecutivo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Lead Qualifier</masterLabel>
+        <translation>Calificador plomo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pre-Sales Consultant</masterLabel>
+        <translation>Consultor de Pre-Venta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales Manager</masterLabel>
+        <translation>Gerente de ventas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales Rep</masterLabel>
+        <translation>representante de ventas</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

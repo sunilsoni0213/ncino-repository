@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Project --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Project --></value>
+    </caseValues>
+    <fields>
+        <help>Número total de tareas de la configuración Completado</help>
+        <label>E036</label>
+        <name>Configuration_Tasks_Completed__c</name>
+    </fields>
+    <fields>
+        <label>No autorizado para el agente o el Número</label>
+        <name>Project_Description__c</name>
+    </fields>
+    <fields>
+        <help>Este es un campo de fórmula que resume el total de días dedicados a la configuración.</help>
+        <label>E037</label>
+        <name>Total_Configuration_Days__c</name>
+    </fields>
+    <fields>
+        <help>Este es un campo de fórmula que resume el número total de horas dedicadas a la configuración.</help>
+        <label>Por favor notifique al administrador del</label>
+        <name>Total_Configuration_Hours__c</name>
+    </fields>
+    <fields>
+        <help>Este es un campo de fórmula que resume los días total dedicado a la validación</help>
+        <label>Por favor notifique al administrador del</label>
+        <name>Total_Validation_Days__c</name>
+    </fields>
+    <fields>
+        <help>Este es un campo de fórmula que resume el número total de horas dedicadas a las pruebas de validación</help>
+        <label>Por favor notifique al administrador del</label>
+        <name>Total_Validation_Hours__c</name>
+    </fields>
+    <fields>
+        <help>Número total de las pruebas de validación Completado</help>
+        <label>Por favor notifique al administrador del</label>
+        <name>Validation_Tests_Completed__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Project --></nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,55 @@
+<apex:page controller="RulesEngineConfigController">
+    <apex:includeScript value="{!URLFOR($Resource.jsforce)}" />
+    <script>
+    console.log('{!baseUrl}');
+        var conn = new jsforce.Connection({ accessToken: '{!$Api.Session_Id}' });
+        var fullName = 'Portal_OAuth66';
+        var consumerSecret = '{!secretGUID}';
+        var metadata = [{
+            contactEmail: 'test@test.com',
+            description: 'Portal OAuth',
+            fullName: fullName, 
+            label: fullName,
+            oauthConfig: {
+                callbackUrl: '{!baseUrl}' + '{!callbackUrl}',
+                consumerSecret: consumerSecret,
+                scopes: [
+                    'Full',
+                    'RefreshToken'
+                ]
+        }
+    }];
+
+    conn.metadata.create('ConnectedApp', metadata, function (err, results) {
+        if (err) {
+            return console.error(err);
+        } else {
+            console.log(results);}
+        conn.metadata.read('ConnectedApp', fullName, function (err, metadata) {
+            if (err) {
+                return console.error(err);
+            }
+
+            console.log('consumer key: ' + metadata.oauthConfig.consumerKey);
+            console.log('consumer secret: ' + consumerSecret);
+            console.log('secret 2: ' + '{!secretGUID}');
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.RulesEngineConfigController.setSystemProperties}',
+                metadata.oauthConfig.consumerKey,
+                consumerSecret,
+                function(result, event){
+                    if(event.status){
+                        console.log('success');
+                        window.location.href = '{!baseUrl}' + '/apex/llc_bi__admin?app=admin.ruleengineadmin'
+                    } else{
+                        console.log(event.message);
+                    }
+                },
+                {escape: true}
+            );
+        });
+        
+    });
+    </script>
+    
+</apex:page>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Email Hard Bounce</masterLabel>
+        <translation>Correo electrónico de rebote duro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Open</masterLabel>
+        <translation>Abrir correo electrónico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Opt-in</masterLabel>
+        <translation><!-- Email Opt-in --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Preferences Open</masterLabel>
+        <translation>Preferencias de correo electrónico abierto</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Send</masterLabel>
+        <translation>Enviar correo electrónico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Soft Bounce</masterLabel>
+        <translation>Correo electrónico rebote suave</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Spam Complaint</masterLabel>
+        <translation>Queja spam por correo electrónico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email Unsubscribe</masterLabel>
+        <translation>Darse de baja de correo electrónico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Form Submit Error</masterLabel>
+        <translation>Presentar formar error</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Form Submit Success</masterLabel>
+        <translation>Presentar formar éxito</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Form View</masterLabel>
+        <translation>Vista formulario</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Landing Page Form Submit Error</masterLabel>
+        <translation>Formulario de aterrizaje Página Enviar error</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Landing Page Form Submit Success</masterLabel>
+        <translation>Formulario de aterrizaje Página Enviar éxito</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Landing Page View</masterLabel>
+        <translation>Ver la página de destino</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Link Click</masterLabel>
+        <translation>Haga clic en enlace</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

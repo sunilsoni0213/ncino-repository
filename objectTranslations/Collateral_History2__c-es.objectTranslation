@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Collateral Valuation --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Collateral Valuation --></value>
+    </caseValues>
+    <fieldSets>
+        <label>garantía de interfaz de usuario - Historia</label>
+        <name>collateral_UI_History</name>
+    </fieldSets>
+    <fields>
+        <label>Verificación de antecedentes</label>
+        <name>Appraisal_Date__c</name>
+    </fields>
+    <fields>
+        <label>Ciudad natal</label>
+        <name>Assessment_Method__c</name>
+    </fields>
+    <fields>
+        <label>La ciudad en la que nació la persona pre</label>
+        <name>Block__c</name>
+    </fields>
+    <fields>
+        <label>País de nacimiento</label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label>El país donde nació la persona prestatar</label>
+        <name>Collateral_Value__c</name>
+    </fields>
+    <fields>
+        <label>Estado nacimiento</label>
+        <name>Collateral__c</name>
+        <relationshipLabel>Las valoraciones colaterales</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Número de verificación del caso</label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <help>Para los inmuebles; Según el valor del colateral - Valor de la Tierra</help>
+        <label>Es Caer cargo de Faltas individual</label>
+        <name>Insurance_Requirement__c</name>
+    </fields>
+    <fields>
+        <help>Si se trata de bienes raíces, ¿cuál es el valor de la tierra? Esto se utiliza para cálculos de los requisitos de seguro.</help>
+        <label>Indica si esta persona ha sido acusado o</label>
+        <name>Land_Value_If_Real_Estate__c</name>
+    </fields>
+    <fields>
+        <label>Como Aprobado o la fábrica de Co</label>
+        <name>Listed_for_Sale__c</name>
+    </fields>
+    <fields>
+        <label>Provisión impuesto federal sobre la rent</label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label>Los pasivos contingentes provisión para</label>
+        <name>Number_of_Units__c</name>
+    </fields>
+    <fields>
+        <label>Juicios y sentencias</label>
+        <name>Parcel_Number__c</name>
+    </fields>
+    <fields>
+        <label>Juicios y sentencias</label>
+        <name>Pending_Sale__c</name>
+    </fields>
+    <fields>
+        <label>Otras deudas Especial</label>
+        <name>Property_Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label>Otras deudas Especial</label>
+        <name>Property_Type__c</name>
+    </fields>
+    <fields>
+        <label>Indicador condenados</label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label>Indica si esta persona ha sido condenado</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>As Complete</masterLabel>
+            <translation>Como completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>As Is</masterLabel>
+            <translation>Como es</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>As Stabalized</masterLabel>
+            <translation>como stabalized</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Fecha de estado financiero personal</label>
+        <name>Street_Address__c</name>
+    </fields>
+    <fields>
+        <label>Fecha en los estados financieros persona</label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label>Otro documento que contiene Nu Inmigraci</label>
+        <name>Vendor__c</name>
+        <relationshipLabel>Las valoraciones colaterales</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Nombre del competidor que el contacto de</label>
+        <name>Year_Built__c</name>
+    </fields>
+    <fields>
+        <label>Identificación de licencia de conducir</label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>Collateral History Layout</layout>
+        <sections>
+            <label>Otros detalles</label>
+            <section>Other Details</section>
+        </sections>
+        <sections>
+            <label>Información de la propiedad</label>
+            <section>Property Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Collateral History Name --></nameFieldLabel>
+    <webLinks>
+        <label>forma Generación</label>
+        <name>Form_Generation</name>
+    </webLinks>
+    <webLinks>
+        <label>generar formas</label>
+        <name>Generate_Forms</name>
+    </webLinks>
+</CustomObjectTranslation>
